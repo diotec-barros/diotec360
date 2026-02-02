@@ -90,6 +90,35 @@ Financial system with Merkle State Tree. Mathematically proved conservation of 1
 
 ---
 
+## 🌐 Try Aethel Online
+
+**Aethel Studio** - Interactive web playground where you can write and verify Aethel code in your browser.
+
+- **Live Editor**: Monaco Editor (VS Code in browser) with syntax highlighting
+- **Real-time Verification**: See the Judge prove your code instantly
+- **Example Code**: Load pre-built examples (transfer, mint, burn)
+- **Proof Viewer**: Visualize verification results and audit trails
+
+### Local Development
+
+```bash
+# Frontend (Next.js)
+cd frontend
+npm install
+npm run dev
+# Open http://localhost:3000
+
+# Backend API (FastAPI)
+cd api
+pip install -r requirements.txt
+uvicorn main:app --reload
+# API at http://localhost:8000
+```
+
+See [frontend/README.md](frontend/README.md) for detailed setup instructions.
+
+---
+
 ## 📚 Documentation
 
 ### Getting Started
