@@ -12,12 +12,12 @@ app_port: 7860
 [![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/diotec/aethel-judge)
 [![API Status](https://img.shields.io/badge/API-Online-success)](https://diotec-aethel-judge.hf.space)
 [![Tests](https://img.shields.io/badge/tests-6%2F6%20passing-brightgreen)](https://diotec-aethel-judge.hf.space/health)
-[![Frauds Blocked](https://img.shields.io/badge/frauds%20blocked-1-red)](./FIRST_FRAUD_BLOCKED.md)
+[![Frauds Blocked](https://img.shields.io/badge/frauds%20blocked-2-red)](./SECOND_FRAUD_BLOCKED.md)
 [![Math Verified](https://img.shields.io/badge/math-verified-blue)](https://diotec-aethel-judge.hf.space)
 
 Motor de prova matemática para infraestruturas críticas.
 
-> **🚨 BREAKING**: First fraud blocked in production! [Read the story →](./FIRST_FRAUD_BLOCKED.md)
+> **🚨 BREAKING**: Second fraud blocked! Even +1 coin creation detected! [Read the story →](./SECOND_FRAUD_BLOCKED.md)
 
 ## 🌐 Try It Live!
 
