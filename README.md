@@ -7,17 +7,17 @@ sdk: docker
 app_port: 7860
 ---
 
-# Aethel v1.3.1 - The Conservation Guardian
+# Aethel v1.4.0 - The Overflow Sentinel
 
 [![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/diotec/aethel-judge)
 [![API Status](https://img.shields.io/badge/API-Online-success)](https://diotec-aethel-judge.hf.space)
 [![Tests](https://img.shields.io/badge/tests-6%2F6%20passing-brightgreen)](https://diotec-aethel-judge.hf.space/health)
 [![Frauds Blocked](https://img.shields.io/badge/frauds%20blocked-2-red)](./SECOND_FRAUD_BLOCKED.md)
-[![Math Verified](https://img.shields.io/badge/math-verified-blue)](https://diotec-aethel-judge.hf.space)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue)](./V1_4_LAUNCH_COMPLETE.md)
 
-Motor de prova matemática para infraestruturas críticas.
+Motor de prova matemática com defesa em 3 camadas para infraestruturas críticas.
 
-> **🚨 BREAKING**: Second fraud blocked! Even +1 coin creation detected! [Read the story →](./SECOND_FRAUD_BLOCKED.md)
+> **🚨 NEW**: v1.4 Overflow Sentinel! Triple-Layer Defense System! [Read more →](./V1_4_LAUNCH_COMPLETE.md)
 
 ## 🌐 Try It Live!
 
@@ -30,7 +30,18 @@ Motor de prova matemática para infraestruturas críticas.
 
 Aethel é uma linguagem de programação formalmente verificada para sistemas financeiros críticos. Cada linha de código é matematicamente provada antes de ser executada.
 
-## ✨ Features v1.3.1
+## ✨ Features v1.4.0
+
+### 🛡️ Triple-Layer Defense System (v1.4) ⭐ NEW
+- **Layer 1**: Conservation Guardian - Protege contra criação de fundos
+- **Layer 2**: Overflow Sentinel - Protege contra bugs de hardware
+- **Layer 3**: Z3 Theorem Prover - Protege contra contradições lógicas
+
+### 🔢 Overflow Sentinel (v1.4) ⭐ NEW
+- Detecta integer overflow/underflow
+- Limites: 64-bit signed integers (MAX_INT: 2^63-1)
+- Previne bugs de hardware antes da execução
+- Performance: O(n) - < 1ms
 
 ### 🔬 Unified Proof Engine (v1.1.4)
 - Detecção de contradições globais
