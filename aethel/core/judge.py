@@ -36,17 +36,24 @@ class AethelJudge:
         print("🔬 Usando Conservation-Aware Verification (v1.3)")
         
         # STEP 0: Conservation Check (v1.3 - Fast Pre-Check)
-        print("\n💰 Verificando conservação de fundos...")
+        print("\n💰 [CONSERVATION GUARDIAN] Verificando Lei da Conservação...")
         conservation_result = self.conservation_checker.check_intent({
             'verify': data['post_conditions']
         })
         
         if not conservation_result.is_valid:
-            print("  ❌ Violação de conservação detectada!")
+            print("  🚨 VIOLAÇÃO DE CONSERVAÇÃO DETECTADA!")
+            print(f"  📊 Balanço líquido: {conservation_result.net_change}")
+            print(f"  ⚖️  Lei violada: Σ(mudanças) = {conservation_result.net_change} ≠ 0")
             return {
                 'status': 'FAILED',
-                'message': conservation_result.format_error(),
-                'counter_examples': []
+                'message': f'🛡️ CONSERVATION VIOLATION - {conservation_result.format_error()}',
+                'counter_examples': [],
+                'conservation_violation': {
+                    'net_change': conservation_result.net_change,
+                    'changes': conservation_result.changes,
+                    'law': 'Sum-Zero Enforcement'
+                }
             }
         
         if conservation_result.changes:
