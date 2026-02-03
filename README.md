@@ -9,7 +9,18 @@ app_port: 7860
 
 # Aethel v1.3.1 - The Conservation Guardian
 
+[![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/diotec/aethel-judge)
+[![API Status](https://img.shields.io/badge/API-Online-success)](https://diotec-aethel-judge.hf.space)
+[![Tests](https://img.shields.io/badge/tests-6%2F6%20passing-brightgreen)](https://diotec-aethel-judge.hf.space/health)
+
 Motor de prova matemática para infraestruturas críticas.
+
+## 🌐 Try It Live!
+
+- **🎮 Playground**: [Aethel Studio](https://aethel-studio.vercel.app)
+- **🔌 API**: [https://diotec-aethel-judge.hf.space](https://diotec-aethel-judge.hf.space)
+- **📚 API Docs**: [https://diotec-aethel-judge.hf.space/docs](https://diotec-aethel-judge.hf.space/docs)
+- **🤗 HF Space**: [diotec/aethel-judge](https://huggingface.co/spaces/diotec/aethel-judge)
 
 ## 🎯 O Que É Aethel?
 
@@ -136,6 +147,37 @@ Verifica código Aethel e retorna prova matemática.
 - Detecção de contradições globais
 - Validação de conservação automática
 - Zero tolerância a violações
+
+## 🚀 Deployment
+
+### Hugging Face Space (Production)
+
+O Aethel Judge está deployado e disponível publicamente:
+
+```bash
+# Health check
+curl https://diotec-aethel-judge.hf.space/health
+
+# Verify code
+curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+  -H "Content-Type: application/json" \
+  -d '{"code": "intent test() { ... }"}'
+```
+
+### Deploy Your Own
+
+```bash
+# Deploy to Hugging Face
+deploy_to_huggingface.bat
+
+# Test locally with Docker
+test_docker_local.bat
+
+# Run test suite
+python test_huggingface_deployment.py
+```
+
+Veja [HUGGINGFACE_QUICKSTART.md](./HUGGINGFACE_QUICKSTART.md) para instruções detalhadas.
 
 ## 📄 Licença
 
