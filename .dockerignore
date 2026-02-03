@@ -1,10 +1,5 @@
-# Git
-.git
-.gitignore
-.gitattributes
-
 # Python
-__pycache__
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -28,37 +23,52 @@ wheels/
 .installed.cfg
 *.egg
 
-# IDEs
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+test_*.py
+*_test.py
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
-.DS_Store
-Thumbs.db
+# Git
+.git/
+.gitignore
+.gitattributes
 
-# Documentation (não precisa no container)
+# Documentation
 *.md
+!README.md
 docs/
 
-# Frontend (não precisa no backend)
+# Frontend
 frontend/
-web/
+node_modules/
 
-# Tests (não precisa em produção)
-test_*.py
-*_test.py
+# Demo files
+demo_*.py
 
-# Output directories
-output/
+# State files
 .aethel_state/
+.aethel_vault/
+.demo_vault/
+output/
 
-# Environment
+# Deployment files
+.vercel/
+.railway/
+railway.toml
+Procfile
+vercel.json
+
+# Misc
+*.log
+.DS_Store
 .env
 .env.local
-.env.*.local
-
-# Node modules (se existir)
-node_modules/
