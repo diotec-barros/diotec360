@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, Dict, Any, List
 import sys
+import hashlib
 from pathlib import Path
 
 # Add parent directory to path to import aethel modules
@@ -337,6 +338,114 @@ async def get_examples():
         "examples": examples,
         "count": len(examples)
     }
+
+# Mirror endpoints (Instant Preview)
+@app.post("/api/mirror/manifest")
+async def mirror_manifest(request: VerifyRequest):
+    """
+    Creates an instant manifestation of verified code.
+    No build. No deploy. Just pure logic streaming.
+    """
+    try:
+        from aethel.core.mirror import get_mirror
+        from aethel.core.ghost import get_ghost_runner
+        
+        # First, verify the code with Ghost-Runner
+        ast = parser.parse(request.code)
+        if not ast:
+            return {
+                "success": False,
+                "message": "Failed to parse code"
+            }
+        
+        intents = parser.extract_intents(ast)
+        if not intents:
+            return {
+                "success": False,
+                "message": "No intent found"
+            }
+        
+        # Predict with Ghost-Runner
+        ghost = get_ghost_runner()
+        prediction = ghost.predict_outcome(intents[0])
+        
+        # Only manifest if PROVED
+        if prediction.status != "MANIFESTED":
+            return {
+                "success": False,
+                "message": f"Cannot manifest: {prediction.message}",
+                "status": prediction.status
+            }
+        
+        # Create instant manifestation
+        mirror = get_mirror()
+        bundle_hash = hashlib.sha256(request.code.encode()).hexdigest()
+        
+        preview_url = mirror.create_instant_manifestation(
+            bundle_hash=bundle_hash,
+            verified_code=request.code
+        )
+        
+        return {
+            "success": True,
+            "preview_url": preview_url,
+            "manifest_id": preview_url.split('/')[-1],
+            "merkle_root": prediction.result.merkle_root if prediction.result else None,
+            "message": "Reality manifested instantly"
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": str(e)
+        }
+
+@app.get("/api/mirror/preview/{manifest_id}")
+async def mirror_preview(manifest_id: str):
+    """
+    Streams a manifestation to the browser.
+    Returns the data needed to render the app instantly.
+    """
+    try:
+        from aethel.core.mirror import get_mirror
+        
+        mirror = get_mirror()
+        data = mirror.stream_manifestation(manifest_id)
+        
+        if not data:
+            raise HTTPException(status_code=404, detail="Manifestation not found or expired")
+        
+        return {
+            "success": True,
+            **data
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/mirror/stats")
+async def mirror_stats():
+    """
+    Returns statistics about active manifestations.
+    """
+    try:
+        from aethel.core.mirror import get_mirror
+        
+        mirror = get_mirror()
+        stats = mirror.get_stats()
+        
+        return {
+            "success": True,
+            **stats
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": str(e)
+        }
 
 # Ghost-Runner endpoints (Epoch 3)
 @app.post("/api/ghost/predict")
