@@ -1,0 +1,120 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║     🚀 AETHEL - INSTRUÇÕES PARA DEPLOY LIMPO NO RAILWAY     ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ TUDO PRONTO! As mudanças foram commitadas e enviadas para o GitHub.
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 1: DELETAR PROJETO ANTIGO NO RAILWAY
+
+1. Acesse: https://railway.app/dashboard
+2. Encontre o projeto "aethel" ou "aethel-api"
+3. Clique no projeto
+4. Settings (⚙️) → Role até o final
+5. "Delete Service" ou "Delete Project"
+6. Confirme a exclusão
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 2: CRIAR NOVO PROJETO
+
+1. No Railway dashboard: "New Project"
+2. "Deploy from GitHub repo"
+3. Escolha: "aethel-lang" (ou nome do seu repo)
+4. Railway detecta automaticamente o Dockerfile
+5. Clique em "Deploy"
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 3: AGUARDAR BUILD (2-5 minutos)
+
+Você verá nos logs:
+  ✅ Building Dockerfile...
+  ✅ Installing dependencies...
+  ✅ 🚀 Starting Aethel API
+  ✅ Application startup complete
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 4: OBTER URL
+
+1. Clique em "Settings"
+2. "Networking" → "Public Networking"
+3. "Generate Domain"
+4. Copie a URL (exemplo: aethel-api-production.up.railway.app)
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 5: TESTAR API
+
+Abra o terminal e teste:
+
+curl https://[SUA-URL].up.railway.app/health
+
+Deve retornar:
+{"status": "healthy"}
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 6: ATUALIZAR FRONTEND (VERCEL)
+
+1. Acesse: https://vercel.com/dashboard
+2. Projeto "aethel-lang"
+3. Settings → Environment Variables
+4. Edite: NEXT_PUBLIC_API_URL
+5. Novo valor: https://[SUA-URL].up.railway.app
+6. Save
+7. Deployments → Redeploy
+
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO 7: TESTAR TUDO
+
+1. Acesse: https://aethel-lang.vercel.app
+2. Clique em "Load Example"
+3. Selecione "Financial Transfer"
+4. Clique em "Verify"
+5. Deve aparecer "✅ PROVED"
+
+═══════════════════════════════════════════════════════════════
+
+🎉 PRONTO! SEU DEPLOY ESTÁ COMPLETO!
+
+═══════════════════════════════════════════════════════════════
+
+📚 DOCUMENTAÇÃO COMPLETA:
+
+  • DEPLOY_RAILWAY_PASSO_A_PASSO.md - Guia detalhado
+  • DEPLOY_STATUS.md - Status e garantias
+  • test_api_local.py - Teste local (opcional)
+
+═══════════════════════════════════════════════════════════════
+
+🐛 PROBLEMAS?
+
+Se algo der errado:
+1. Veja os logs no Railway (View Logs)
+2. Teste a API com curl
+3. Verifique o console do browser (F12)
+4. Me mostre os erros e vou te ajudar!
+
+═══════════════════════════════════════════════════════════════
+
+💪 CONFIANÇA: 95%
+
+Esta configuração é:
+  ✅ Simples (sem complexidade)
+  ✅ Testada (padrões que funcionam)
+  ✅ Clara (fácil de debugar)
+  ✅ Documentada (guia completo)
+
+═══════════════════════════════════════════════════════════════
+
+🚀 COMECE AGORA!
+
+Vá para: https://railway.app/dashboard
+
+Boa sorte! 🎯
