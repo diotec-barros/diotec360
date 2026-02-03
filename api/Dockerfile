@@ -1,9 +1,6 @@
-# Dockerfile for Aethel API
-# For deployment to Railway/Render
-
+# Dockerfile for Aethel API - Railway Deployment
 FROM python:3.11-slim
 
-# Set working directory
 WORKDIR /app
 
 # Install system dependencies
@@ -12,20 +9,23 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
-COPY api/requirements.txt .
+# Copy ALL requirements first
 COPY requirements.txt ./requirements-core.txt
+COPY api/requirements.txt ./requirements-api.txt
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements-core.txt
+RUN pip install --no-cache-dir -r requirements-api.txt
 
-# Copy application code
+# Copy entire application
 COPY . .
 
-# Expose port
+# Create vault directory
+RUN mkdir -p .aethel_vault/bundles .aethel_vault/certificates
+
+# Expose port (Railway will override with $PORT)
 EXPOSE 8000
 
-# Run the application
-# Railway sets PORT environment variable
-CMD uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000}
+# Simple, direct command
+CMD python -m uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000}
