@@ -1,5 +1,6 @@
 from z3 import *
 import re
+import ast  # v1.2: Para parsing de expressões aritméticas
 
 
 class AethelJudge:
@@ -116,32 +117,35 @@ class AethelJudge:
     def _parse_constraint(self, constraint_str):
         """
         Converte string de constraint para expressão Z3.
+        v1.2: Agora suporta expressões aritméticas!
         
-        Exemplo: "sender_balance >= amount" -> z3.Int('sender_balance') >= z3.Int('amount')
+        Exemplo v1.1: "sender_balance >= amount"
+        Exemplo v1.2: "(balance - 100) >= amount"
+        Exemplo v1.2: "fee == (amount * 5 / 100)"
         """
         try:
             # Remove espaços extras
             constraint_str = constraint_str.strip()
             
-            # Detectar operador
+            # Detectar operador de comparação
             if '>=' in constraint_str:
                 left, right = constraint_str.split('>=')
-                return self._parse_expr(left.strip()) >= self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) >= self._parse_arithmetic_expr(right.strip())
             elif '<=' in constraint_str:
                 left, right = constraint_str.split('<=')
-                return self._parse_expr(left.strip()) <= self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) <= self._parse_arithmetic_expr(right.strip())
             elif '==' in constraint_str:
                 left, right = constraint_str.split('==')
-                return self._parse_expr(left.strip()) == self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) == self._parse_arithmetic_expr(right.strip())
             elif '!=' in constraint_str:
                 left, right = constraint_str.split('!=')
-                return self._parse_expr(left.strip()) != self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) != self._parse_arithmetic_expr(right.strip())
             elif '>' in constraint_str:
                 left, right = constraint_str.split('>')
-                return self._parse_expr(left.strip()) > self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) > self._parse_arithmetic_expr(right.strip())
             elif '<' in constraint_str:
                 left, right = constraint_str.split('<')
-                return self._parse_expr(left.strip()) < self._parse_expr(right.strip())
+                return self._parse_arithmetic_expr(left.strip()) < self._parse_arithmetic_expr(right.strip())
             else:
                 print(f"  ⚠️  Operador não reconhecido em: {constraint_str}")
                 return None
@@ -149,23 +153,81 @@ class AethelJudge:
             print(f"  ⚠️  Erro ao parsear '{constraint_str}': {e}")
             return None
     
-    def _parse_expr(self, expr_str):
+    def _parse_arithmetic_expr(self, expr_str):
         """
-        Converte expressão (variável ou número) para Z3.
+        v1.2: Converte expressão aritmética em Z3.
+        
+        Suporta:
+        - Números: "100" -> 100
+        - Variáveis: "balance" -> Int('balance')
+        - Operações: "(balance + 100)" -> Int('balance') + 100
+        - Complexas: "((amount * rate) / 100)" -> (Int('amount') * Int('rate')) / 100
+        
+        Usa Python's ast para parsing seguro.
         """
         expr_str = expr_str.strip()
         
-        # Se for número
-        if expr_str.isdigit() or (expr_str.startswith('-') and expr_str[1:].isdigit()):
+        # Se for apenas um número
+        if re.match(r'^-?\d+$', expr_str):
             return int(expr_str)
         
-        # Se for variável
-        if expr_str in self.variables:
+        # Se for apenas uma variável
+        if re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*$', expr_str):
+            if expr_str not in self.variables:
+                self.variables[expr_str] = Int(expr_str)
             return self.variables[expr_str]
         
-        # Criar variável se não existir
-        self.variables[expr_str] = Int(expr_str)
-        return self.variables[expr_str]
+        # Expressão aritmética complexa - usar AST
+        try:
+            tree = ast.parse(expr_str, mode='eval')
+            return self._ast_to_z3(tree.body)
+        except Exception as e:
+            print(f"  ⚠️  Erro ao parsear expressão aritmética '{expr_str}': {e}")
+            # Fallback: tentar como variável simples
+            if expr_str not in self.variables:
+                self.variables[expr_str] = Int(expr_str)
+            return self.variables[expr_str]
+    
+    def _ast_to_z3(self, node):
+        """
+        v1.2: Converte AST Python para expressão Z3.
+        
+        Suporta operações aritméticas: +, -, *, /, %
+        """
+        if isinstance(node, ast.BinOp):
+            left = self._ast_to_z3(node.left)
+            right = self._ast_to_z3(node.right)
+            
+            if isinstance(node.op, ast.Add):
+                return left + right
+            elif isinstance(node.op, ast.Sub):
+                return left - right
+            elif isinstance(node.op, ast.Mult):
+                return left * right
+            elif isinstance(node.op, ast.Div):
+                # Z3 usa divisão inteira
+                return left / right
+            elif isinstance(node.op, ast.Mod):
+                return left % right
+            else:
+                raise ValueError(f"Operador não suportado: {type(node.op)}")
+        
+        elif isinstance(node, ast.Name):
+            var_name = node.id
+            if var_name not in self.variables:
+                self.variables[var_name] = Int(var_name)
+            return self.variables[var_name]
+        
+        elif isinstance(node, ast.Constant):
+            # Python 3.8+
+            return node.value
+        
+        elif isinstance(node, ast.Num):
+            # Python 3.7 e anterior
+            return node.n
+        
+        else:
+            raise ValueError(f"Tipo de nó AST não suportado: {type(node)}")
     
     def _format_model(self, model):
         """
