@@ -22,8 +22,8 @@ from aethel.core.state import AethelStateManager
 # Initialize FastAPI app
 app = FastAPI(
     title="Aethel API",
-    description="Backend API for Aethel-Studio playground",
-    version="1.0.0"
+    description="Backend API for Aethel-Studio playground - v1.7.0 Oracle Sanctuary",
+    version="1.7.0"
 )
 
 # Configure CORS
@@ -75,14 +75,22 @@ class ExecuteResponse(BaseModel):
 async def root():
     return {
         "name": "Aethel API",
-        "version": "1.0.0",
+        "version": "1.7.0",
+        "release": "Oracle Sanctuary",
         "status": "operational",
+        "features": [
+            "Formal Verification (Z3)",
+            "Conservation Laws",
+            "Privacy (secret keyword)",
+            "Oracle Integration (external keyword)"
+        ],
         "endpoints": {
             "verify": "/api/verify",
             "compile": "/api/compile",
             "execute": "/api/execute",
             "vault": "/api/vault",
-            "examples": "/api/examples"
+            "examples": "/api/examples",
+            "oracle": "/api/oracle"
         }
     }
 
@@ -279,48 +287,64 @@ async def get_examples():
 }"""
         },
         {
-            "name": "Token Minting",
-            "description": "Authorized token creation",
-            "code": """intent mint(account: Account, amount: Balance) {
+            "name": "DeFi Liquidation (Oracle)",
+            "description": "Price-based liquidation with oracle verification",
+            "code": """intent check_liquidation(
+    borrower: Account,
+    collateral_amount: Balance,
+    external btc_price: Price
+) {
     guard {
-        amount > 0;
-        caller == contract_owner;
-        old_account_balance == account_balance;
-        old_total_supply == total_supply;
-    }
-    
-    solve {
-        priority: security;
-        target: token_contract;
+        btc_price_verified == true;
+        btc_price_fresh == true;
+        collateral_amount > 0;
     }
     
     verify {
-        account_balance == old_account_balance + amount;
-        total_supply == old_total_supply + amount;
+        collateral_value == collateral_amount * btc_price;
+        if (debt > collateral_value * 0.75) {
+            liquidation_allowed == true;
+        }
     }
 }"""
         },
         {
-            "name": "Token Burning",
-            "description": "Destroy tokens with supply reduction",
-            "code": """intent burn(account: Account, amount: Balance) {
+            "name": "Weather Insurance (Oracle)",
+            "description": "Parametric crop insurance with weather data",
+            "code": """intent process_crop_insurance(
+    farmer: Account,
+    external rainfall_mm: Measurement
+) {
     guard {
-        amount > 0;
-        account_balance >= amount;
-        caller == account_owner;
-        old_account_balance == account_balance;
-        old_total_supply == total_supply;
-    }
-    
-    solve {
-        priority: security;
-        target: token_contract;
+        rainfall_verified == true;
+        rainfall_fresh == true;
+        rainfall_mm >= 0;
     }
     
     verify {
-        account_balance == old_account_balance - amount;
-        total_supply == old_total_supply - amount;
-        total_supply >= 0;
+        if (rainfall_mm < threshold) {
+            farmer_balance == old_balance + payout;
+        }
+    }
+}"""
+        },
+        {
+            "name": "Private Compliance (ZKP)",
+            "description": "HIPAA-compliant verification with privacy",
+            "code": """intent verify_insurance_coverage(
+    patient: Person,
+    treatment: Treatment,
+    secret patient_balance: Balance
+) {
+    guard {
+        treatment_cost > 0;
+        insurance_limit > 0;
+    }
+    
+    verify {
+        treatment_cost < insurance_limit;
+        patient_balance >= copay;
+        coverage_approved == true;
     }
 }"""
         }
@@ -527,6 +551,132 @@ async def ghost_can_type(request: dict):
         return {
             "success": False,
             "canType": True,  # Fail open
+            "message": str(e)
+        }
+
+# Oracle endpoints (v1.7.0 - Oracle Sanctuary)
+@app.get("/api/oracle/list")
+async def list_oracles():
+    """
+    List all registered oracles.
+    Returns oracle registry with available data sources.
+    """
+    try:
+        from aethel.core.oracle import get_oracle_registry
+        
+        registry = get_oracle_registry()
+        oracles = registry.list_oracles()
+        
+        return {
+            "success": True,
+            "oracles": oracles,
+            "count": len(oracles)
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": str(e),
+            "oracles": []
+        }
+
+@app.get("/api/oracle/fetch/{oracle_id}")
+async def fetch_oracle_data(oracle_id: str):
+    """
+    Fetch data from a specific oracle.
+    Returns signed proof with timestamp and signature.
+    """
+    try:
+        from aethel.core.oracle import fetch_oracle_data, verify_oracle_proof, OracleStatus
+        
+        # Fetch data
+        proof = fetch_oracle_data(oracle_id)
+        
+        if not proof:
+            raise HTTPException(status_code=404, detail=f"Oracle '{oracle_id}' not found")
+        
+        # Verify proof
+        status = verify_oracle_proof(proof)
+        
+        return {
+            "success": status == OracleStatus.VERIFIED,
+            "oracle_id": proof.oracle_id,
+            "value": proof.value,
+            "timestamp": proof.timestamp,
+            "signature": proof.signature[:32] + "...",  # Truncate for display
+            "status": status.name,
+            "verified": status == OracleStatus.VERIFIED
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        return {
+            "success": False,
+            "message": str(e)
+        }
+
+@app.post("/api/oracle/verify")
+async def verify_oracle(request: dict):
+    """
+    Verify an oracle proof.
+    Checks signature, timestamp, and freshness.
+    """
+    try:
+        from aethel.core.oracle import verify_oracle_proof, OracleProof, OracleStatus
+        
+        # Reconstruct proof from request
+        proof = OracleProof(
+            oracle_id=request.get("oracle_id"),
+            value=request.get("value"),
+            timestamp=request.get("timestamp"),
+            signature=request.get("signature")
+        )
+        
+        # Verify
+        status = verify_oracle_proof(proof)
+        
+        return {
+            "success": status == OracleStatus.VERIFIED,
+            "status": status.name,
+            "verified": status == OracleStatus.VERIFIED,
+            "message": f"Oracle proof {status.name.lower()}"
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "status": "ERROR",
+            "message": str(e)
+        }
+
+@app.get("/api/oracle/stats")
+async def oracle_stats():
+    """
+    Get oracle system statistics.
+    Returns registry info and verification metrics.
+    """
+    try:
+        from aethel.core.oracle import get_oracle_registry
+        
+        registry = get_oracle_registry()
+        oracles = registry.list_oracles()
+        
+        return {
+            "success": True,
+            "total_oracles": len(oracles),
+            "oracle_types": {
+                "price_feeds": len([o for o in oracles if "price" in o.get("description", "").lower()]),
+                "weather": len([o for o in oracles if "weather" in o.get("description", "").lower()]),
+                "custom": len([o for o in oracles if "custom" in o.get("description", "").lower()])
+            },
+            "version": "1.7.0",
+            "philosophy": "Zero trust, pure verification"
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
             "message": str(e)
         }
 
