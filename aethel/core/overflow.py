@@ -102,10 +102,12 @@ class OverflowSentinel:
         Exemplo:
             "balance == old_balance + 1000000000000000000"
             -> [{'var': 'balance', 'op': '+', 'value': 1000000000000000000}]
+        
+        v1.4.1: Agora também extrai operações entre literais (ex: 800 + 100)
         """
         operations = []
         
-        # Padrão: variável == old_variável [+/-/*///%] valor
+        # Padrão 1: variável == old_variável [+/-/*///%] valor
         # Exemplo: balance == old_balance + 100
         pattern = r'(\w+)\s*==\s*(\w+)\s*([+\-*/%])\s*(\d+)'
         matches = re.finditer(pattern, condition)
@@ -121,7 +123,30 @@ class OverflowSentinel:
                 'old_variable': old_var,
                 'operator': operator,
                 'value': value,
-                'full_expr': match.group(0)
+                'full_expr': match.group(0),
+                'type': 'var_op_literal'
+            })
+        
+        # Padrão 2: variável == (literal [+/-/*///%] literal)
+        # Exemplo: balance == (9223372036854775800 + 100)
+        # v1.4.1: CRITICAL - Detecta operações entre literais!
+        # Suporta números negativos: -123
+        pattern2 = r'(\w+)\s*==\s*\(?\s*(-?\d+)\s*([+\-*/%])\s*(-?\d+)\s*\)?'
+        matches2 = re.finditer(pattern2, condition)
+        
+        for match in matches2:
+            var_name = match.group(1)
+            literal1 = int(match.group(2))
+            operator = match.group(3)
+            literal2 = int(match.group(4))
+            
+            operations.append({
+                'variable': var_name,
+                'literal1': literal1,
+                'operator': operator,
+                'literal2': literal2,
+                'full_expr': match.group(0),
+                'type': 'literal_op_literal'
             })
         
         return operations
@@ -130,62 +155,177 @@ class OverflowSentinel:
         """
         Verifica se uma operação específica é segura
         
-        Assume pior caso: variável está no limite antes da operação
+        v1.4.1 CRITICAL FIX: Agora verifica o RESULTADO da operação, não apenas valores individuais
+        
+        Para operações literal-to-literal: calcula o resultado exato
+        Para operações com variáveis: assume pior caso (variável no limite)
         """
         operator = operation['operator']
-        value = operation['value']
+        op_type = operation['type']
         variable = operation['variable']
         
-        # Verificar adição
-        if operator == '+':
-            # Pior caso: variável já está perto do MAX_INT
-            if value > (self.max_int // 2):  # Heurística: valores muito grandes
+        # CASO 1: Operação entre literais (ex: balance == (9223372036854775800 + 100))
+        if op_type == 'literal_op_literal':
+            literal1 = operation['literal1']
+            literal2 = operation['literal2']
+            
+            # Calcular resultado exato
+            try:
+                if operator == '+':
+                    result = literal1 + literal2
+                    if result > self.max_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} + {literal2})",
+                            'variable': variable,
+                            'type': 'OVERFLOW',
+                            'result': f"{result} > {self.max_int}",
+                            'limit': f"MAX_INT = {self.max_int}",
+                            'recommendation': f"Resultado da adição excede MAX_INT por {result - self.max_int}"
+                        }
+                    if result < self.min_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} + {literal2})",
+                            'variable': variable,
+                            'type': 'UNDERFLOW',
+                            'result': f"{result} < {self.min_int}",
+                            'limit': f"MIN_INT = {self.min_int}",
+                            'recommendation': f"Resultado da adição está abaixo de MIN_INT"
+                        }
+                
+                elif operator == '-':
+                    result = literal1 - literal2
+                    if result > self.max_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} - {literal2})",
+                            'variable': variable,
+                            'type': 'OVERFLOW',
+                            'result': f"{result} > {self.max_int}",
+                            'limit': f"MAX_INT = {self.max_int}",
+                            'recommendation': f"Resultado da subtração excede MAX_INT"
+                        }
+                    if result < self.min_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} - {literal2})",
+                            'variable': variable,
+                            'type': 'UNDERFLOW',
+                            'result': f"{result} < {self.min_int}",
+                            'limit': f"MIN_INT = {self.min_int}",
+                            'recommendation': f"Resultado da subtração está abaixo de MIN_INT por {self.min_int - result}"
+                        }
+                
+                elif operator == '*':
+                    result = literal1 * literal2
+                    if result > self.max_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} * {literal2})",
+                            'variable': variable,
+                            'type': 'OVERFLOW',
+                            'result': f"{result} > {self.max_int}",
+                            'limit': f"MAX_INT = {self.max_int}",
+                            'recommendation': f"Resultado da multiplicação excede MAX_INT por {result - self.max_int}"
+                        }
+                    if result < self.min_int:
+                        return {
+                            'operation': f"{variable} = ({literal1} * {literal2})",
+                            'variable': variable,
+                            'type': 'UNDERFLOW',
+                            'result': f"{result} < {self.min_int}",
+                            'limit': f"MIN_INT = {self.min_int}",
+                            'recommendation': f"Resultado da multiplicação está abaixo de MIN_INT"
+                        }
+                
+                elif operator == '/' or operator == '%':
+                    if literal2 == 0:
+                        return {
+                            'operation': f"{variable} = ({literal1} {operator} {literal2})",
+                            'variable': variable,
+                            'type': 'DIVISION_BY_ZERO',
+                            'result': 'UNDEFINED',
+                            'limit': 'N/A',
+                            'recommendation': 'Divisão por zero é matematicamente impossível'
+                        }
+            except:
+                # Se Python overflow (improvável com Python 3), bloquear
                 return {
-                    'operation': f"{variable} = {operation['old_variable']} + {value}",
+                    'operation': f"{variable} = ({literal1} {operator} {literal2})",
                     'variable': variable,
                     'type': 'OVERFLOW',
-                    'result': f"> {self.max_int}",
+                    'result': 'EXCEEDS PYTHON LIMITS',
                     'limit': f"MAX_INT = {self.max_int}",
-                    'recommendation': f"Use valores menores ou verifique limites antes da operação"
+                    'recommendation': 'Operação excede limites computacionais'
                 }
         
-        # Verificar subtração
-        elif operator == '-':
-            # Pior caso: variável já está perto do MIN_INT
-            if value > (abs(self.min_int) // 2):  # Heurística: valores muito grandes
-                return {
-                    'operation': f"{variable} = {operation['old_variable']} - {value}",
-                    'variable': variable,
-                    'type': 'UNDERFLOW',
-                    'result': f"< {self.min_int}",
-                    'limit': f"MIN_INT = {self.min_int}",
-                    'recommendation': f"Use valores menores ou verifique limites antes da operação"
-                }
-        
-        # Verificar multiplicação
-        elif operator == '*':
-            # Multiplicação é perigosa: pode crescer exponencialmente
-            if value > 1000000:  # Heurística: multiplicadores grandes
-                return {
-                    'operation': f"{variable} = {operation['old_variable']} * {value}",
-                    'variable': variable,
-                    'type': 'OVERFLOW',
-                    'result': f"Potencialmente > {self.max_int}",
-                    'limit': f"MAX_INT = {self.max_int}",
-                    'recommendation': f"Multiplicadores grandes podem causar overflow. Adicione verificação de limites."
-                }
-        
-        # Verificar divisão por zero (não é overflow, mas é crítico)
-        elif operator == '/' or operator == '%':
-            if value == 0:
-                return {
-                    'operation': f"{variable} = {operation['old_variable']} {operator} {value}",
-                    'variable': variable,
-                    'type': 'DIVISION_BY_ZERO',
-                    'result': 'UNDEFINED',
-                    'limit': 'N/A',
-                    'recommendation': 'Divisão por zero é matematicamente impossível'
-                }
+        # CASO 2: Operação com variável (ex: balance == old_balance + 100)
+        elif op_type == 'var_op_literal':
+            value = operation['value']
+            old_variable = operation['old_variable']
+            
+            # Verificar adição: assume pior caso (variável já está no MAX_INT)
+            if operator == '+':
+                # Se adicionar value ao MAX_INT causaria overflow?
+                # Matemática: MAX_INT + value > MAX_INT sempre que value > 0
+                # Mas queremos saber: existe algum valor de old_variable onde old_variable + value > MAX_INT?
+                # Resposta: sim, se old_variable > MAX_INT - value
+                # Como não sabemos old_variable, assumimos pior caso: old_variable = MAX_INT
+                worst_case_result = self.max_int + value
+                if worst_case_result > self.max_int:  # Sempre true se value > 0, mas checamos overflow
+                    # Verificar se value é grande o suficiente para ser perigoso
+                    # Se value > 0, sempre há risco (old_variable pode estar perto de MAX_INT)
+                    # Mas para evitar falsos positivos, só alertamos se value é significativo
+                    if value > 1000:  # Threshold: valores > 1000 são considerados perigosos
+                        return {
+                            'operation': f"{variable} = {old_variable} + {value}",
+                            'variable': variable,
+                            'type': 'OVERFLOW_RISK',
+                            'result': f"Pode exceder {self.max_int} se {old_variable} > {self.max_int - value}",
+                            'limit': f"MAX_INT = {self.max_int}",
+                            'recommendation': f"Adicione guard: {old_variable} <= {self.max_int - value}"
+                        }
+            
+            # Verificar subtração: assume pior caso (variável já está no MIN_INT)
+            elif operator == '-':
+                worst_case_result = self.min_int - value
+                if worst_case_result < self.min_int:
+                    if value > 1000:  # Threshold
+                        return {
+                            'operation': f"{variable} = {old_variable} - {value}",
+                            'variable': variable,
+                            'type': 'UNDERFLOW_RISK',
+                            'result': f"Pode ficar abaixo de {self.min_int} se {old_variable} < {self.min_int + value}",
+                            'limit': f"MIN_INT = {self.min_int}",
+                            'recommendation': f"Adicione guard: {old_variable} >= {self.min_int + value}"
+                        }
+            
+            # Verificar multiplicação: perigosa se multiplicador é grande
+            elif operator == '*':
+                # Se old_variable = MAX_INT e value > 1, overflow garantido
+                # Verificar: MAX_INT * value > MAX_INT?
+                if value > 1:
+                    # Calcular: qual o máximo valor de old_variable que não causa overflow?
+                    # old_variable * value <= MAX_INT
+                    # old_variable <= MAX_INT / value
+                    safe_max = self.max_int // value
+                    if safe_max < 1000000:  # Se o limite seguro é muito baixo, é perigoso
+                        return {
+                            'operation': f"{variable} = {old_variable} * {value}",
+                            'variable': variable,
+                            'type': 'OVERFLOW_RISK',
+                            'result': f"Pode exceder {self.max_int} se {old_variable} > {safe_max}",
+                            'limit': f"MAX_INT = {self.max_int}",
+                            'recommendation': f"Adicione guard: {old_variable} <= {safe_max}"
+                        }
+            
+            # Verificar divisão por zero
+            elif operator == '/' or operator == '%':
+                if value == 0:
+                    return {
+                        'operation': f"{variable} = {old_variable} {operator} {value}",
+                        'variable': variable,
+                        'type': 'DIVISION_BY_ZERO',
+                        'result': 'UNDEFINED',
+                        'limit': 'N/A',
+                        'recommendation': 'Divisão por zero é matematicamente impossível'
+                    }
         
         return None
     
