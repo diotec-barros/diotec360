@@ -1,0 +1,45 @@
+# Prediction Market Resolution
+# Uses external oracle to resolve election outcome
+
+intent resolve_election_market(
+    market_id: Market,
+    external election_winner: Candidate
+) {
+    guard {
+        # Oracle data must be verified
+        election_result_verified == true;
+        election_result_official == true;
+        
+        # Market must be open for resolution
+        market_resolution_time < now;
+        market_resolved == false;
+        
+        # Snapshot state
+        old_market_pool == market_pool;
+        old_total_stakes == total_stakes;
+    }
+    
+    solve {
+        priority: security;
+        oracle: official_electoral_commission;
+        target: prediction_market;
+    }
+    
+    verify {
+        # Set winning outcome
+        winning_candidate == election_winner;
+        market_resolved == true;
+        
+        # Calculate payouts for correct predictors
+        # (Simplified - in reality would iterate over all predictors)
+        correct_predictions_total > 0;
+        payout_ratio == market_pool / correct_predictions_total;
+        
+        # Conservation: all funds distributed
+        distributed_payouts == market_pool;
+        market_pool == 0;
+        
+        # Total supply unchanged
+        total_supply == old_total_supply;
+    }
+}

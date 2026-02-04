@@ -1,18 +1,18 @@
-# Gramática Aethel v1.6.2 - "Ghost Protocol Expansion"
-# Suporte a: operadores aritméticos, números literais, comentários, SECRET keyword
+# Gramática Aethel v1.7.0 - "Oracle Sanctuary"
+# Suporte a: operadores aritméticos, números literais, comentários, SECRET keyword, EXTERNAL keyword
 aethel_grammar = """
     start: intent_def+
     
     intent_def: "intent" NAME "(" params ")" "{" guard_block solve_block verify_block "}"
     
     params: (param ("," param)*)?
-    param: ["secret"] NAME ":" NAME
+    param: ["secret"] ["external"] NAME ":" NAME
     
     guard_block: "guard" "{" (condition ";")+ "}"
     solve_block: "solve" "{" (setting ";")+ "}"
     verify_block: "verify" "{" (condition ";")+ "}"
     
-    condition: ["secret"] expr OPERATOR expr
+    condition: ["secret"] ["external"] expr OPERATOR expr
     setting: NAME ":" NAME
     
     ?expr: term

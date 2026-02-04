@@ -1,0 +1,45 @@
+# Parametric Weather Insurance
+# Automatically pays out if rainfall below threshold
+
+intent process_crop_insurance(
+    farmer: Account,
+    policy_id: Policy,
+    coverage_amount: Balance,
+    external rainfall_mm: Measurement
+) {
+    guard {
+        # Oracle data must be verified
+        rainfall_verified == true;
+        rainfall_fresh == true;
+        
+        # Policy must be active
+        policy_active == true;
+        policy_coverage > 0;
+        
+        # Rainfall threshold from policy
+        rainfall_threshold == 100;  # mm per month
+        
+        # Snapshot state
+        old_farmer_balance == farmer_balance;
+        old_insurance_pool == insurance_pool;
+    }
+    
+    solve {
+        priority: security;
+        oracle: weather_api;
+        target: insurance_contract;
+    }
+    
+    verify {
+        # If rainfall below threshold, trigger payout
+        if (rainfall_mm < rainfall_threshold) {
+            payout_triggered == true;
+            farmer_balance == old_farmer_balance + coverage_amount;
+            insurance_pool == old_insurance_pool - coverage_amount;
+        }
+        
+        # Conservation: money moves from pool to farmer
+        total_supply == old_total_supply;
+        farmer_balance + insurance_pool == old_farmer_balance + old_insurance_pool;
+    }
+}

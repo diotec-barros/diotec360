@@ -1,0 +1,46 @@
+# DeFi Liquidation with Oracle Price Feed
+# Uses Chainlink BTC/USD price to determine if position should be liquidated
+
+intent check_liquidation(
+    borrower: Account,
+    collateral_amount: Balance,
+    debt_amount: Balance,
+    external btc_price: Price
+) {
+    guard {
+        # Oracle data must be verified
+        btc_price_verified == true;
+        btc_price_fresh == true;
+        
+        # Position must exist
+        collateral_amount > 0;
+        debt_amount > 0;
+        
+        # Snapshot state
+        old_borrower_collateral == collateral_amount;
+        old_borrower_debt == debt_amount;
+    }
+    
+    solve {
+        priority: security;
+        oracle: chainlink_btc_usd;
+        target: defi_protocol;
+    }
+    
+    verify {
+        # Calculate collateral value in USD
+        collateral_value_usd == collateral_amount * btc_price;
+        
+        # Liquidation threshold is 75% of collateral value
+        liquidation_threshold == collateral_value_usd * 0.75;
+        
+        # If debt exceeds threshold, liquidation is valid
+        if (debt_amount > liquidation_threshold) {
+            liquidation_allowed == true;
+            borrower_liquidated == true;
+        }
+        
+        # Conservation: collateral transferred to liquidator
+        total_collateral == old_total_collateral;
+    }
+}
