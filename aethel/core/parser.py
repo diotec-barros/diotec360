@@ -1,5 +1,41 @@
 from lark import Lark
 from aethel.core.grammar import aethel_grammar
+from aethel.core.synchrony import Transaction
+from typing import List, Dict, Any
+
+
+class AtomicBatchNode:
+    """AST node representing an atomic_batch block in Aethel code."""
+    
+    def __init__(self, name: str, intents: Dict[str, Any]):
+        self.name = name
+        self.intents = intents
+        self.location = None  # Source code location (optional)
+    
+    def to_transactions(self) -> List[Transaction]:
+        """
+        Convert intents to executable transactions.
+        
+        Returns:
+            List of Transaction objects
+        """
+        transactions = []
+        
+        for intent_name, intent_data in self.intents.items():
+            # Create transaction from intent
+            # Note: This is a simplified conversion
+            # In production, would need full intent execution logic
+            tx = Transaction(
+                id=f"{self.name}_{intent_name}",
+                intent_name=intent_name,
+                accounts={},  # Would be populated from intent params
+                operations=[],  # Would be populated from intent logic
+                verify_conditions=intent_data.get("post_conditions", []),
+                oracle_proofs=[]
+            )
+            transactions.append(tx)
+        
+        return transactions
 
 
 class AethelParser:
@@ -7,22 +43,84 @@ class AethelParser:
         self.parser = Lark(aethel_grammar, parser='lalr')
     
     def parse(self, code):
+        """
+        Parse Aethel code and return intents or atomic_batch nodes.
+        
+        Args:
+            code: Aethel source code
+            
+        Returns:
+            Dict of intents or AtomicBatchNode
+        """
         tree = self.parser.parse(code)
-        return self.transform_to_intent_map(tree)
+        return self.transform_tree(tree)
+    
+    def transform_tree(self, tree):
+        """
+        Transform parse tree to intents or atomic_batch nodes.
+        
+        Args:
+            tree: Lark parse tree
+            
+        Returns:
+            Dict of intents or list containing AtomicBatchNode
+        """
+        result = {}
+        atomic_batches = []
+        
+        for node in tree.children:
+            if node.data == 'intent_def':
+                # Regular intent definition
+                intent_name = node.children[0].value
+                result[intent_name] = self._transform_intent(node)
+            
+            elif node.data == 'atomic_batch':
+                # Atomic batch definition
+                batch_name = node.children[0].value
+                batch_intents = {}
+                
+                # Extract all intents within the batch
+                for intent_node in node.children[1:]:
+                    if intent_node.data == 'intent_def':
+                        intent_name = intent_node.children[0].value
+                        
+                        # Check for duplicate intent names
+                        if intent_name in batch_intents:
+                            raise ValueError(
+                                f"Duplicate intent name '{intent_name}' in atomic_batch '{batch_name}'"
+                            )
+                        
+                        batch_intents[intent_name] = self._transform_intent(intent_node)
+                
+                # Create AtomicBatchNode
+                atomic_batch = AtomicBatchNode(batch_name, batch_intents)
+                atomic_batches.append(atomic_batch)
+        
+        # Return atomic batches if present, otherwise return intents
+        if atomic_batches:
+            return atomic_batches
+        else:
+            return result
+    
+    def _transform_intent(self, intent_node):
+        """Transform intent node to intent dict"""
+        return {
+            "params": self._get_params(intent_node.children[1]),
+            "constraints": self._get_block(intent_node.children[2]),  # Guard
+            "ai_instructions": self._get_settings(intent_node.children[3]),  # Solve
+            "post_conditions": self._get_block(intent_node.children[4])  # Verify
+        }
     
     def transform_to_intent_map(self, tree):
-        # Aqui convertemos a árvore bruta em um mapa de intenção
-        # que a IA e o Verificador podem entender.
-        intents = {}
-        for intent in tree.children:
-            name = intent.children[0].value
-            intents[name] = {
-                "params": self._get_params(intent.children[1]),
-                "constraints": self._get_block(intent.children[2]), # Guard
-                "ai_instructions": self._get_settings(intent.children[3]), # Solve
-                "post_conditions": self._get_block(intent.children[4]) # Verify
-            }
-        return intents
+        """Legacy method for backward compatibility"""
+        result = self.transform_tree(tree)
+        
+        # If result is atomic batches, extract intents
+        if isinstance(result, list) and result and isinstance(result[0], AtomicBatchNode):
+            # Return intents from first batch
+            return result[0].intents
+        
+        return result
     
     def _get_params(self, node):
         """

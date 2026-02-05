@@ -4,9 +4,9 @@ Aethel - The First Programming Language That Refuses "Maybe"
 A proof system that generates code as a byproduct of mathematical certainty.
 """
 
-__version__ = "0.6.0"
-__epoch__ = 0
-__status__ = "PROVED"
+__version__ = "1.8.0"
+__epoch__ = 1
+__status__ = "SYNCHRONY_PROTOCOL"
 
 from aethel.core.parser import AethelParser
 from aethel.core.judge import AethelJudge

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\conflict_detector.py
+# hypothesis_version: 6.151.5
+
+['1.8.0', 'Aethel Team', 'ConflictDetector', 'RAW', 'ResolutionStrategy', 'WAR', 'WAW', 'conflict_groups', 'enforce_order', 'execution_order', 'resolution_method', 'total']

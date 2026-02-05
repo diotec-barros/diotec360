@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\oracle.py
+# hypothesis_version: 6.151.5
+
+[75.5, 100.0, 2500.75, 45000.5, 300, 3600, 7200, '0x', '=', 'INVALID_SIGNATURE', 'ORACLE_NOT_FOUND', 'STALE_DATA', 'TIMEOUT', 'VERIFIED', '__main__', 'btc', 'chainlink', 'chainlink_btc_usd', 'chainlink_eth_usd', 'custom', 'ecdsa_secp256k1', 'endpoint', 'eth', 'max_staleness', 'oracle_id', 'proof_type', 'provider', 'public_key', 'signature', 'signature_algorithm', 'simulated_ecdsa', 'timestamp', 'update_frequency', 'value', 'weather', 'weather_api']

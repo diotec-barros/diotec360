@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\parser.py
+# hypothesis_version: 6.151.5
+
+['NAME', 'NUMBER', 'add', 'ai_instructions', 'constraints', 'data', 'divide', 'expression', 'is_secret', 'lalr', 'left', 'modulo', 'multiply', 'name', 'operator', 'params', 'post_conditions', 'right', 'subtract', 'type']

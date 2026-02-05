@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\zkp_simulator.py
+# hypothesis_version: 6.151.5
+
+[1000, '\n⚠️  DISCLAIMER:', '1.6.0-simulator', '<', '=', '==', '>=', 'INVALID', 'READY', 'SIMULATED', 'UNSUPPORTED', '__main__', 'amount > 0', 'commitment_hash', 'disclaimer', 'guards', 'message', 'private_constraints', 'public_constraints', 'secret', 'secret_variables', 'status', 'verification_time_ms', 'verify', 'version', 'zkp_ready']

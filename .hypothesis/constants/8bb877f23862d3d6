@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\conservation.py
+# hypothesis_version: 6.151.5
+
+[1e-10, 0.05, '(', ')', '*', '+', '-', '/', '==', 'OracleProof', 'inf', 'old_', 'verify', '─']

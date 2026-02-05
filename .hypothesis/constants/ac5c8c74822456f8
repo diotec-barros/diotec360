@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel_judge.py
+# hypothesis_version: 6.151.5
+
+['!=', '-', '<', '<=', '==', '>', '>=', 'FAILED', 'PROVED', 'condition', 'constraints', 'counter_example', 'counter_examples', 'message', 'post_conditions', 'status']

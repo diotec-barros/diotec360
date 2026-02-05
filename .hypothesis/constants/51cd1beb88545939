@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\sentinel_monitor.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.02, 0.1, 0.7, 1.0, 3.0, 120.0, 120, 1000, 1024, 3600, 'accepted', 'activation', 'anomaly_rate', 'anomaly_score', 'avg_cpu_ms', 'avg_memory_mb', 'avg_z3_ms', 'baseline', 'cpu_time_ms', 'cpu_time_start', 'crisis_mode_active', 'deactivation', 'end_time', 'failure_rate', 'layer_results', 'memory_delta_mb', 'memory_start_mb', 'rejected', 'start_time', 'std_dev_cpu', 'std_dev_memory', 'std_dev_z3', 'time_window_seconds', 'transaction_count', 'tx_id', 'window_size', 'z3_duration_ms', 'z3_end_time', 'z3_start_time']

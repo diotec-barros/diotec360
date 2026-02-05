@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\vault_distributed.py
+# hypothesis_version: 6.151.5
+
+['*.ae_bundle', '*.cert.json', ',', '.aethel_vault', '1.0', '4.12.0+', ':', 'Aethel_Judge_v0.6', 'Certificate valid', 'Missing signature', 'PROVED', 'Signature mismatch', 'ast', 'available_bundles', 'bundle_created_at', 'bundle_signature', 'bundle_version', 'bundles', 'certificate', 'certificates', 'certified_functions', 'code', 'counter_examples', 'created_at', 'full_hash', 'function_hash', 'immutable', 'imported', 'imported_at', 'imported_from', 'intent_name', 'judge_version', 'logic_hash', 'merkle_root', 'message', 'metadata', 'r', 'signature', 'status', 'timestamp', 'total_functions', 'vault_path', 'verification', 'version', 'w', 'z3_version']

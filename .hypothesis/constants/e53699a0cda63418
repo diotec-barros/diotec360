@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\__init__.py
+# hypothesis_version: 6.151.5
+
+['0.6.0', 'AethelBridge', 'AethelJudge', 'AethelKernel', 'AethelParser', 'AethelVault', 'AethelWeaver', 'PROVED']

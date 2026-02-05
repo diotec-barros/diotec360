@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\wasm_compiler.py
+# hypothesis_version: 6.151.5
+
+['    i32.const 1', '    return', '  (memory 1)', '  )', '(module', ')', ':', '==', '>', '>=', 'WAT code is safe', '_balance', 'account_balance', 'amount', 'ast', 'call_indirect', 'check_balance', 'constraints', 'i32', 'id', 'import', 'intent_name', 'memory.grow', 'minimum', 'params', 'post_conditions', 'receiver_balance', 'sender_balance', 'transfer', 'type', 'unreachable', 'vote', 'votes', 'w']

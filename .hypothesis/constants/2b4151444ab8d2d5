@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\overflow.py
+# hypothesis_version: 6.151.5
+
+[1000, 1000000, '%', '*', '+', '-', '/', 'DIVISION_BY_ZERO', 'EXPLICIT_OVERFLOW', 'EXPLICIT_UNDERFLOW', 'N/A', 'OVERFLOW', 'OVERFLOW_RISK', 'UNDEFINED', 'UNDERFLOW', 'UNDERFLOW_RISK', 'full_expr', 'limit', 'literal1', 'literal2', 'literal_op_literal', 'old_variable', 'operation', 'operator', 'recommendation', 'result', 'type', 'value', 'var_op_literal', 'variable', 'verify']

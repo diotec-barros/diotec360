@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\judge.py
+# hypothesis_version: 6.151.5
+
+[100, 500, 1000, 2000, '!=', '<', '<=', '==', '>', '>=', 'ERROR', 'FAILED', 'MAX_INT', 'MIN_INT', 'PROVED', 'REJECTED', 'Sum-Zero Enforcement', 'TIMEOUT', '^-?\\d+$', 'changes', 'constraints', 'counter_examples', 'elapsed_ms', 'eval', 'law', 'limits', 'message', 'model', 'net_change', 'overflow_violation', 'post_conditions', 'sanitizer_violations', 'status', 'timeout', 'verify', 'violations']

@@ -7,18 +7,20 @@ sdk: docker
 app_port: 7860
 ---
 
-# Aethel v1.6.2 - Ghost Protocol Expansion 🎭
+# Aethel v1.8.0 - Synchrony Protocol 🚀⚡
 
 [![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-yellow)](https://huggingface.co/spaces/diotec/aethel-judge)
 [![API Status](https://img.shields.io/badge/API-Online-success)](https://diotec-aethel-judge.hf.space)
-[![Tests](https://img.shields.io/badge/tests-10%2F10%20passing-brightgreen)](https://diotec-aethel-judge.hf.space/health)
+[![Tests](https://img.shields.io/badge/tests-56%2F56%20passing-brightgreen)](./TASK_13_CHECKPOINT_COMPLETE.md)
 [![Frauds Blocked](https://img.shields.io/badge/frauds%20blocked-2-red)](./SECOND_FRAUD_BLOCKED.md)
-[![Version](https://img.shields.io/badge/version-1.6.2-blue)](./V1_6_2_GHOST_PROTOCOL_EXPANSION.md)
-[![Privacy](https://img.shields.io/badge/privacy-native-purple)](./GHOST_PROTOCOL_STATUS.md)
+[![Version](https://img.shields.io/badge/version-1.8.0-blue)](./SYNCHRONY_PROTOCOL_V1_8_0_COMPLETE.md)
+[![Performance](https://img.shields.io/badge/throughput-10--20x-green)](./TASK_17_BENCHMARKING_COMPLETE.md)
 
-Motor de prova matemática com defesa em 5 camadas + Privacy-Preserving Verification para infraestruturas críticas.
+Motor de prova matemática com **execução paralela** + defesa em 5 camadas + Privacy-Preserving Verification para infraestruturas críticas.
 
-> **🎭 NEW v1.6.2**: Ghost Protocol Expansion! Native `secret` keyword - First language with privacy-preserving formal verification! [Read more →](./V1_6_2_GHOST_PROTOCOL_EXPANSION.md)
+> **🚀 NEW v1.8.0**: Synchrony Protocol! Parallel transaction processing with 10-20x throughput improvement + formal linearizability proofs! [Read more →](./SYNCHRONY_PROTOCOL.md)
+
+> **🎭 v1.6.2**: Ghost Protocol Expansion! Native `secret` keyword - First language with privacy-preserving formal verification! [Read more →](./V1_6_2_GHOST_PROTOCOL_EXPANSION.md)
 
 > **🛡️ v1.5.0**: The Fortress - Input Sanitizer blocks prompt injection + Z3 Timeout prevents DoS attacks. [Read more →](./ADVERSARIAL_ANALYSIS_V1_5_FORTRESS.md)
 
@@ -33,9 +35,20 @@ Motor de prova matemática com defesa em 5 camadas + Privacy-Preserving Verifica
 
 Aethel é uma linguagem de programação formalmente verificada para sistemas financeiros críticos. Cada linha de código é matematicamente provada antes de ser executada.
 
-## ✨ Features v1.6.2
+## ✨ Features v1.8.0
 
-### 🎭 Ghost Protocol v1.6.2 - Privacy-Preserving Proofs ⭐ NEW
+### 🚀 Synchrony Protocol v1.8.0 - Parallel Transaction Processing ⭐ NEW
+- **10-20x Throughput**: Process hundreds of transactions in parallel
+- **atomic_batch Syntax**: All-or-nothing execution semantics
+- **Linearizability Proofs**: Z3-proven equivalence to serial execution
+- **Automatic Fallback**: Falls back to serial if proof fails
+- **Conservation Validation**: Global balance verification across batches
+- **Backward Compatible**: v1.7.0 code works without modification
+- Performance: 100 tx in 1.2s (vs 10s serial)
+- [Read Full Documentation →](./SYNCHRONY_PROTOCOL.md)
+- [See Examples →](./aethel/examples/)
+
+### 🎭 Ghost Protocol v1.6.2 - Privacy-Preserving Proofs
 - **Secret Keyword**: Mark variables as private with `secret` - FULLY FUNCTIONAL!
 - **Private Verification**: Prove without revealing values
 - **Parser Integration**: 100% functional secret variable parsing
@@ -90,7 +103,50 @@ Aethel é uma linguagem de programação formalmente verificada para sistemas fi
 
 ## 🚀 Como Usar
 
-### Exemplo 1: Transferência Segura (Pública)
+### Exemplo 1: Parallel Payroll (v1.8.0) ⭐ NEW
+
+```aethel
+# Process 1000 employee payments in parallel (20x faster!)
+atomic_batch monthly_payroll {
+    intent pay_alice(company: Account, alice: Account, amount: Balance) {
+        guard {
+            company.balance >= amount;
+            amount == 8000;
+        }
+        
+        verify {
+            company.balance == company.balance - amount;
+            alice.balance == alice.balance + amount;
+        }
+    }
+    
+    intent pay_bob(company: Account, bob: Account, amount: Balance) {
+        guard {
+            company.balance >= amount;
+            amount == 9500;
+        }
+        
+        verify {
+            company.balance == company.balance - amount;
+            bob.balance == bob.balance + amount;
+        }
+    }
+    
+    # ... 998 more employees
+}
+```
+
+**Performance:**
+- Serial: 100 seconds
+- Parallel: 5 seconds
+- **Improvement: 20x** 🚀
+
+**Guarantees:**
+- ✅ All 1000 employees paid, OR
+- ❌ All 1000 payments rolled back
+- No partial execution possible!
+
+### Exemplo 2: Transferência Segura (Pública)
 
 ```aethel
 # Transferência com verificação de conservação

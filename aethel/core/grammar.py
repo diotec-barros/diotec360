@@ -1,9 +1,10 @@
-# Gramática Aethel v1.7.0 - "Oracle Sanctuary"
-# Suporte a: operadores aritméticos, números literais, comentários, SECRET keyword, EXTERNAL keyword
+# Gramática Aethel v1.8.0 - "Synchrony Protocol"
+# Suporte a: operadores aritméticos, números literais, comentários, SECRET keyword, EXTERNAL keyword, ATOMIC_BATCH
 aethel_grammar = """
-    start: intent_def+
+    start: (intent_def | atomic_batch)+
     
     intent_def: "intent" NAME "(" params ")" "{" guard_block solve_block verify_block "}"
+    atomic_batch: "atomic_batch" NAME "{" intent_def* "}"
     
     params: (param ("," param)*)?
     param: ["secret"] ["external"] NAME ":" NAME
