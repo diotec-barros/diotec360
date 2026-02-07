@@ -11,8 +11,8 @@ long_description = readme_file.read_text(encoding='utf-8') if readme_file.exists
 
 setup(
     name="aethel",
-    version="1.8.0",
-    description="The First Programming Language That Refuses 'Maybe' - Now with Parallel Transaction Processing",
+    version="1.9.0",
+    description="The World's First Formally Verified Language with Autonomous Defense - The Age of Facts",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Aethel Team",

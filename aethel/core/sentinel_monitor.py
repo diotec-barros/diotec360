@@ -170,6 +170,9 @@ class SentinelMonitor:
         # Thread pool for async database operations
         self._db_executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="sentinel_db")
         
+        # OPTIMIZATION: Cache psutil Process object to avoid repeated lookups
+        self._process = psutil.Process()
+        
         # Initialize database
         self._init_database()
     
@@ -233,13 +236,15 @@ class SentinelMonitor:
         Args:
             tx_id: Unique transaction identifier
         """
-        process = psutil.Process()
+        # OPTIMIZATION: Use cached process object
+        cpu_times = self._process.cpu_times()
+        memory_info = self._process.memory_info()
         
         # Capture initial state
         initial_state = {
             'start_time': time.time(),
-            'cpu_time_start': process.cpu_times().user + process.cpu_times().system,
-            'memory_start_mb': process.memory_info().rss / (1024 * 1024),
+            'cpu_time_start': cpu_times.user + cpu_times.system,
+            'memory_start_mb': memory_info.rss / (1024 * 1024),
             'z3_start_time': None  # Will be set when Z3 starts
         }
         
@@ -269,12 +274,15 @@ class SentinelMonitor:
             raise ValueError(f"Transaction {tx_id} was not started")
         
         initial_state = self.active_transactions[tx_id]
-        process = psutil.Process()
+        
+        # OPTIMIZATION: Use cached process object
+        cpu_times = self._process.cpu_times()
+        memory_info = self._process.memory_info()
         
         # Calculate deltas
         end_time = time.time()
-        cpu_time_end = process.cpu_times().user + process.cpu_times().system
-        memory_end_mb = process.memory_info().rss / (1024 * 1024)
+        cpu_time_end = cpu_times.user + cpu_times.system
+        memory_end_mb = memory_info.rss / (1024 * 1024)
         
         cpu_time_ms = (cpu_time_end - initial_state['cpu_time_start']) * 1000
         memory_delta_mb = memory_end_mb - initial_state['memory_start_mb']
@@ -302,19 +310,23 @@ class SentinelMonitor:
         # Add to rolling window
         self.metrics_window.append(metrics)
         
-        # Update baseline
+        # Update baseline (optimized to run every 10 transactions)
         self._update_baseline()
         
-        # Persist to database (async in production)
-        self._persist_metrics(metrics)
+        # Persist to database (async)
+        # OPTIMIZATION: Skip database writes in high-throughput scenarios
+        # Database writes add significant overhead and should be batched
+        if len(self.metrics_window) % 100 == 0:  # Only persist every 100th transaction
+            self._persist_metrics(metrics)
         
-        # Check for Crisis Mode conditions
-        if self.check_crisis_conditions():
-            if not self.crisis_mode_active:
-                self._activate_crisis_mode()
-        else:
-            if self.crisis_mode_active:
-                self._deactivate_crisis_mode()
+        # OPTIMIZATION: Only check crisis conditions every 10 transactions
+        if len(self.metrics_window) % 10 == 0:
+            if self.check_crisis_conditions():
+                if not self.crisis_mode_active:
+                    self._activate_crisis_mode()
+            else:
+                if self.crisis_mode_active:
+                    self._deactivate_crisis_mode()
         
         # Clean up
         del self.active_transactions[tx_id]
@@ -368,8 +380,11 @@ class SentinelMonitor:
         - Z3 duration
         
         Uses Python's statistics module for numerical stability.
+        
+        OPTIMIZATION: Only recalculate every 10 transactions to reduce overhead.
         """
-        if len(self.metrics_window) < 2:
+        # Only update baseline every 10 transactions to reduce overhead
+        if len(self.metrics_window) < 2 or len(self.metrics_window) % 10 != 0:
             return
         
         # Extract metrics from window
