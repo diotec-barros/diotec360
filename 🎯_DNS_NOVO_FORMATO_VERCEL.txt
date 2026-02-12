@@ -1,0 +1,117 @@
+═══════════════════════════════════════════════════════════════
+🎯 CONFIGURAR DNS - NOVO FORMATO VERCEL
+═══════════════════════════════════════════════════════════════
+
+INFORMAÇÃO IMPORTANTE DO VERCEL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O Vercel está expandindo o range de IPs e recomenda usar o NOVO
+formato de DNS (mas o antigo ainda funciona).
+
+NOVO FORMATO (RECOMENDADO):
+┌─────────────────────────────────────────────────────────────┐
+│ Type:  CNAME                                                │
+│ Name:  aethel                                               │
+│ Value: 17e1ff235b937bbb.vercel-dns-017.com.                 │
+│ TTL:   Auto (ou 3600)                                       │
+└─────────────────────────────────────────────────────────────┘
+
+⚠️ IMPORTANTE: Copie EXATAMENTE como está acima!
+   • Inclua o ponto final: .vercel-dns-017.com.
+   • Ou sem ponto: 17e1ff235b937bbb.vercel-dns-017.com
+
+FORMATO ANTIGO (AINDA FUNCIONA):
+┌─────────────────────────────────────────────────────────────┐
+│ Type:  CNAME                                                │
+│ Name:  aethel                                               │
+│ Value: cname.vercel-dns.com                                 │
+└─────────────────────────────────────────────────────────────┘
+
+AÇÃO AGORA (3 PASSOS):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ ABRIR PAINEL DNS
+────────────────────────────────────────────────────────────────
+Acesse onde você gerencia diotec360.com:
+
+• Cloudflare → https://dash.cloudflare.com
+• GoDaddy → https://dcc.godaddy.com/manage/dns
+• Namecheap → https://ap.www.namecheap.com/domains/list
+• Hostinger → https://hpanel.hostinger.com
+• Registro.br → https://registro.br
+
+2️⃣ ADICIONAR REGISTRO CNAME (NOVO FORMATO)
+────────────────────────────────────────────────────────────────
+Clique em "Add Record" ou "Adicionar Registro":
+
+┌─────────────────────────────────────────────────────────────┐
+│ Type:   CNAME                                               │
+│ Name:   aethel                                              │
+│ Value:  17e1ff235b937bbb.vercel-dns-017.com                 │
+│ TTL:    Auto (ou 3600)                                      │
+└─────────────────────────────────────────────────────────────┘
+
+⚠️ COPIE EXATAMENTE:
+• Nome = apenas "aethel" (SEM .diotec360.com)
+• Value = "17e1ff235b937bbb.vercel-dns-017.com"
+• Alguns provedores pedem ponto final: "17e1ff235b937bbb.vercel-dns-017.com."
+• Se Cloudflare: Desative proxy (nuvem cinza, não laranja)
+
+3️⃣ SALVAR E AGUARDAR
+────────────────────────────────────────────────────────────────
+• Clique em "Save" ou "Salvar"
+• Aguarde 5-30 minutos para propagação
+• Volte ao Vercel Dashboard
+• Status mudará de "DNS Change Recommended" → "Valid"
+
+VERIFICAR PROPAGAÇÃO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após adicionar o CNAME, teste no CMD:
+
+nslookup aethel.diotec360.com
+
+Deve retornar algo como:
+Name:    17e1ff235b937bbb.vercel-dns-017.com
+Address: [IP do Vercel]
+
+Ou use ferramentas online:
+• https://dnschecker.org/#CNAME/aethel.diotec360.com
+• https://www.whatsmydns.net/#CNAME/aethel.diotec360.com
+
+TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Provedor não aceita o novo formato:
+   → Use o formato antigo: cname.vercel-dns.com
+   → Funciona perfeitamente também!
+
+❌ Erro "Invalid CNAME":
+   → Tente adicionar ponto final: 17e1ff235b937bbb.vercel-dns-017.com.
+   → Ou remova o ponto final se já tiver
+
+❌ Se Cloudflare, proxy ativado (nuvem laranja):
+   → Clique na nuvem para desativar (cinza)
+   → Salve novamente
+
+RESULTADO ESPERADO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após DNS validar (5-30 min):
+✅ Vercel emite certificado SSL automaticamente
+✅ https://aethel.diotec360.com fica acessível
+✅ Frontend conecta com api.diotec360.com
+✅ Triangle of Truth completo!
+
+ARQUITETURA FINAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Frontend:  https://aethel.diotec360.com (Vercel)
+           ↓ conecta com ↓
+API Node2: https://api.diotec360.com (Sovereign - Vercel)
+API Node1: https://diotec-aethel-judge.hf.space (Hugging Face)
+API Node3: https://backup.diotec360.com (Backup - Vercel)
+
+═══════════════════════════════════════════════════════════════
+Configure o CNAME agora e me avise quando terminar! 🚀
+═══════════════════════════════════════════════════════════════

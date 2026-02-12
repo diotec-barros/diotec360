@@ -154,16 +154,16 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-950 text-white">
+    <div className="flex h-screen bg-gray-950 text-white overflow-hidden">
       {/* Layer Sidebar */}
       <LayerSidebar onLayerChange={setActiveLayer} />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col h-screen overflow-hidden">
         {/* Header */}
         <header className="border-b border-gray-800 bg-gray-900">
-          <div className="flex items-center justify-between px-6 py-4">
-            <div className="flex items-center gap-4">
+          <div className="flex items-center justify-between gap-4 px-6 py-4">
+            <div className="flex items-center gap-4 min-w-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Aethel Apex
               </h1>
@@ -183,7 +183,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-wrap justify-end">
               {/* Architect Chat Trigger */}
               <button
                 onClick={() => setChatOpen(true)}
@@ -239,12 +239,12 @@ export default function Home() {
         />
 
         {/* Editor & Proof Viewer */}
-        <div className="flex-1 flex overflow-hidden">
+        <div className="flex-1 flex overflow-hidden min-h-0">
           {/* Editor Panel */}
           <div className="flex-1 border-r border-gray-800 flex flex-col relative">
-            <div className="px-4 py-2 bg-gray-900 border-b border-gray-800 flex items-center justify-between">
+            <div className="px-4 py-2 bg-gray-900 border-b border-gray-800 flex items-center justify-between gap-4">
               <h2 className="text-sm font-semibold text-gray-400">CODE EDITOR</h2>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 min-w-0">
                 {/* Sovereign Identity */}
                 <SovereignIdentity code={code} />
                 {ghostMode && (
@@ -267,7 +267,7 @@ export default function Home() {
             <div className="px-4 py-2 bg-gray-900 border-b border-gray-800">
               <h2 className="text-sm font-semibold text-gray-400">PROOF VIEWER</h2>
             </div>
-            <div className="flex-1 overflow-auto p-4 space-y-4">
+            <div className="flex-1 overflow-auto p-4 space-y-4 min-h-0">
               <ProofViewer result={result} isVerifying={isVerifying} />
               
               {/* Sentinel Radar */}

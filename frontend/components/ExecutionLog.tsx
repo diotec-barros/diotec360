@@ -83,12 +83,13 @@ export default function ExecutionLog({ entries, isOpen, onToggle }: ExecutionLog
 
   return (
     <div className={`
-      fixed bottom-0 left-20 right-0 bg-gray-900 border-t border-gray-800
-      transition-all duration-300 ease-in-out z-30
+      shrink-0 w-full border-t border-gray-800
+      bg-black/95 supports-[backdrop-filter]:bg-black/80 supports-[backdrop-filter]:backdrop-blur
+      transition-[height] duration-300 ease-in-out z-50
       ${isOpen ? 'h-80' : 'h-12'}
     `}>
       {/* Header */}
-      <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800 bg-gray-900">
+      <div className="flex items-center justify-between px-6 py-3 border-b border-gray-800 bg-black">
         <div className="flex items-center gap-4">
           <button
             onClick={onToggle}

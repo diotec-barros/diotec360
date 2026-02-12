@@ -1,0 +1,128 @@
+═══════════════════════════════════════════════════════════════
+🌐 ASSOCIAR DOMÍNIO AETHEL.DIOTEC360.COM AO VERCEL
+═══════════════════════════════════════════════════════════════
+
+OBJETIVO: Conectar o domínio aethel.diotec360.com ao frontend no Vercel
+
+PASSO 1: ACESSAR VERCEL DASHBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Acesse: https://vercel.com/dashboard
+2. Faça login na sua conta Vercel
+3. Localize o projeto do frontend (provavelmente "aethel-frontend" ou similar)
+4. Clique no projeto para abrir
+
+PASSO 2: ADICIONAR DOMÍNIO CUSTOMIZADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. No projeto, clique na aba "Settings" (Configurações)
+2. No menu lateral, clique em "Domains" (Domínios)
+3. Clique no botão "Add" ou "Add Domain"
+4. Digite: aethel.diotec360.com
+5. Clique em "Add" ou "Continue"
+
+PASSO 3: CONFIGURAR DNS (OPÇÃO A - CNAME RECOMENDADO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Vercel vai mostrar as configurações DNS necessárias.
+
+Configuração CNAME (RECOMENDADO):
+┌─────────────────────────────────────────────────────────────┐
+│ Type:  CNAME                                                │
+│ Name:  aethel                                               │
+│ Value: cname.vercel-dns.com                                 │
+│ TTL:   Auto ou 3600                                         │
+└─────────────────────────────────────────────────────────────┘
+
+PASSO 4: ADICIONAR REGISTRO NO PAINEL DNS DIOTEC360.COM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Acesse o painel DNS onde você gerencia diotec360.com
+   (pode ser Cloudflare, GoDaddy, Namecheap, etc.)
+
+2. Adicione um novo registro CNAME:
+   - Type: CNAME
+   - Name: aethel
+   - Target/Value: cname.vercel-dns.com
+   - TTL: Auto ou 3600 segundos
+
+3. Salve as alterações
+
+PASSO 5: VERIFICAR NO VERCEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Volte para o Vercel Dashboard
+2. Na página de Domains, clique em "Verify" ou "Refresh"
+3. Aguarde a verificação (pode levar alguns minutos)
+4. Quando verificado, o status mudará para "Valid" ou "Active"
+
+PASSO 6: AGUARDAR PROPAGAÇÃO DNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Propagação DNS pode levar de 5 minutos a 48 horas
+- Geralmente leva 15-30 minutos
+- Você pode verificar em: https://dnschecker.org
+
+PASSO 7: CONFIGURAR SSL/TLS (AUTOMÁTICO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Vercel configura SSL automaticamente via Let's Encrypt
+✅ Certificado será emitido assim que o DNS for verificado
+✅ HTTPS será habilitado automaticamente
+
+PASSO 8: TESTAR O DOMÍNIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Após a propagação, teste:
+
+1. Acesse: https://aethel.diotec360.com
+2. Verifique se o frontend carrega corretamente
+3. Teste a conexão com a API: https://api.diotec360.com
+
+VERIFICAÇÃO RÁPIDA DNS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+No terminal, execute:
+
+nslookup aethel.diotec360.com
+
+Deve retornar o IP do Vercel.
+
+TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Domain not verified":
+   → Aguarde mais tempo (até 48h)
+   → Verifique se o CNAME está correto no DNS
+   → Tente remover e adicionar o domínio novamente
+
+❌ "SSL Certificate Error":
+   → Aguarde a emissão do certificado (pode levar 1h)
+   → Vercel emite automaticamente via Let's Encrypt
+
+❌ "404 Not Found":
+   → Verifique se o deploy foi bem-sucedido
+   → Verifique se as variáveis de ambiente estão configuradas
+
+ARQUITETURA FINAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Frontend:  https://aethel.diotec360.com (Vercel)
+           ↓
+API Node2: https://api.diotec360.com (Vercel - Sovereign)
+API Node1: https://diotec-aethel-judge.hf.space (Hugging Face)
+API Node3: https://backup.diotec360.com (Vercel Backup)
+
+PRÓXIMOS PASSOS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✅ Adicionar domínio no Vercel
+2. ✅ Configurar CNAME no DNS
+3. ⏳ Aguardar verificação
+4. ⏳ Aguardar propagação DNS
+5. ⏳ Aguardar emissão SSL
+6. 🧪 Testar https://aethel.diotec360.com
+
+═══════════════════════════════════════════════════════════════
+Dionísio, siga estes passos no Vercel Dashboard! 🌐
+═══════════════════════════════════════════════════════════════
