@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getExamples, type Example } from '@/lib/api';
 import { ChevronDown, RefreshCw } from 'lucide-react';
 
@@ -13,10 +13,26 @@ export default function ExampleSelector({ onSelect }: ExampleSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     loadExamples();
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleMouseDown = (e: MouseEvent) => {
+      const el = containerRef.current;
+      if (!el) return;
+      if (e.target instanceof Node && !el.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleMouseDown);
+    return () => document.removeEventListener('mousedown', handleMouseDown);
+  }, [isOpen]);
 
   const loadExamples = async (forceRefresh = false) => {
     setLoading(true);
@@ -46,7 +62,7 @@ export default function ExampleSelector({ onSelect }: ExampleSelectorProps) {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="flex flex-col items-stretch">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
@@ -56,56 +72,50 @@ export default function ExampleSelector({ onSelect }: ExampleSelectorProps) {
       </button>
 
       {isOpen && (
-        <>
-          <div
-            className="fixed inset-0 z-10"
-            onClick={() => setIsOpen(false)}
-          />
-          <div className="absolute right-0 mt-2 w-80 bg-gray-800 border border-gray-700 rounded-lg shadow-xl z-20 overflow-hidden">
-            {loading ? (
-              <div className="p-4 text-center text-gray-400">Loading examples...</div>
-            ) : examples.length === 0 ? (
-              <div className="p-4 text-center">
-                <div className="text-gray-400 mb-2">No examples available</div>
+        <div className="mt-2 w-80 bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
+          {loading ? (
+            <div className="p-4 text-center text-gray-400">Loading examples...</div>
+          ) : examples.length === 0 ? (
+            <div className="p-4 text-center">
+              <div className="text-gray-400 mb-2">No examples available</div>
+              <button
+                onClick={handleRefresh}
+                disabled={refreshing}
+                className="flex items-center gap-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded text-sm mx-auto"
+              >
+                <RefreshCw className={`w-3 h-3 ${refreshing ? 'animate-spin' : ''}`} />
+                {refreshing ? 'Refreshing...' : 'Refresh'}
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="p-2 border-b border-gray-700 flex items-center justify-between bg-gray-900">
+                <span className="text-xs text-gray-400">{examples.length} examples</span>
                 <button
                   onClick={handleRefresh}
                   disabled={refreshing}
-                  className="flex items-center gap-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded text-sm mx-auto"
+                  className="flex items-center gap-1 px-2 py-1 hover:bg-gray-700 rounded text-xs text-gray-300"
+                  title="Refresh examples from backend"
                 >
                   <RefreshCw className={`w-3 h-3 ${refreshing ? 'animate-spin' : ''}`} />
-                  {refreshing ? 'Refreshing...' : 'Refresh'}
+                  Refresh
                 </button>
               </div>
-            ) : (
-              <>
-                <div className="p-2 border-b border-gray-700 flex items-center justify-between bg-gray-750">
-                  <span className="text-xs text-gray-400">{examples.length} examples</span>
+              <div className="max-h-96 overflow-y-auto">
+                {examples.map((example, index) => (
                   <button
-                    onClick={handleRefresh}
-                    disabled={refreshing}
-                    className="flex items-center gap-1 px-2 py-1 hover:bg-gray-600 rounded text-xs text-gray-300"
-                    title="Refresh examples from backend"
+                    key={index}
+                    onClick={() => handleSelect(example)}
+                    className="w-full text-left p-4 hover:bg-gray-700 transition-colors border-b border-gray-700 last:border-b-0"
                   >
-                    <RefreshCw className={`w-3 h-3 ${refreshing ? 'animate-spin' : ''}`} />
-                    Refresh
+                    <div className="font-semibold text-white mb-1">{example.name}</div>
+                    <div className="text-sm text-gray-400">{example.description}</div>
                   </button>
-                </div>
-                <div className="max-h-96 overflow-y-auto">
-                  {examples.map((example, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleSelect(example)}
-                      className="w-full text-left p-4 hover:bg-gray-700 transition-colors border-b border-gray-700 last:border-b-0"
-                    >
-                      <div className="font-semibold text-white mb-1">{example.name}</div>
-                      <div className="text-sm text-gray-400">{example.description}</div>
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-        </>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       )}
     </div>
   );

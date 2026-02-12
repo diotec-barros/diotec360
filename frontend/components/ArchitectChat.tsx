@@ -117,29 +117,29 @@ export default function ArchitectChat({ isOpen, onClose, onCodeGenerated }: Arch
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-black/50 backdrop-blur-sm">
-      <div className="w-full max-w-3xl bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden animate-in slide-in-from-top duration-300">
-        {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-700 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-green-600 flex items-center justify-center">
-              <span className="text-xl">🤖</span>
-            </div>
-            <div>
-              <h2 className="text-lg font-semibold text-white">Aethel Architect</h2>
-              <p className="text-sm text-gray-400">AI-Powered Code Generation</p>
-            </div>
+    <div className="h-full w-full bg-gray-900 border border-gray-800 overflow-hidden flex flex-col">
+      {/* Header */}
+      <div className="flex items-center justify-between px-5 py-4 border-b border-gray-800 bg-black">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-10 h-10 rounded-xl bg-green-600 flex items-center justify-center shrink-0">
+            <span className="text-xl">🤖</span>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
-          >
-            <X className="w-5 h-5 text-gray-400" />
-          </button>
+          <div className="min-w-0">
+            <h2 className="text-base font-semibold text-white truncate">Aethel Architect</h2>
+            <p className="text-xs text-gray-400 truncate">AI-Powered Code Generation</p>
+          </div>
         </div>
+        <button
+          onClick={onClose}
+          className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+          aria-label="Close Architect"
+        >
+          <X className="w-5 h-5 text-gray-400" />
+        </button>
+      </div>
 
-        {/* Messages */}
-        <div className="h-96 overflow-y-auto p-6 space-y-4">
+      {/* Messages */}
+      <div className="flex-1 min-h-0 overflow-y-auto p-5 space-y-4">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -188,33 +188,32 @@ export default function ArchitectChat({ isOpen, onClose, onCodeGenerated }: Arch
           )}
           
           <div ref={messagesEndRef} />
-        </div>
+      </div>
 
-        {/* Input */}
-        <div className="px-6 py-4 border-t border-gray-700 bg-gray-800/50">
-          <div className="flex items-center gap-3">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Describe what you want to build..."
-              className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-xl border border-gray-700 focus:border-green-500 focus:outline-none transition-colors"
-              disabled={isGenerating}
-            />
-            <button
-              onClick={handleSend}
-              disabled={!input.trim() || isGenerating}
-              className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-xl transition-colors flex items-center gap-2"
-            >
-              <Send className="w-4 h-4" />
-              Send
-            </button>
-          </div>
-          <p className="text-xs text-gray-500 mt-2">
-            Press <kbd className="px-2 py-1 bg-gray-700 rounded">CMD+K</kbd> to open • <kbd className="px-2 py-1 bg-gray-700 rounded">ESC</kbd> to close
-          </p>
+      {/* Input */}
+      <div className="px-5 py-4 border-t border-gray-800 bg-black">
+        <div className="flex items-center gap-3">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+            placeholder="Describe what you want to build..."
+            className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-xl border border-gray-700 focus:border-green-500 focus:outline-none transition-colors"
+            disabled={isGenerating}
+          />
+          <button
+            onClick={handleSend}
+            disabled={!input.trim() || isGenerating}
+            className="px-5 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-700 disabled:cursor-not-allowed text-white rounded-xl transition-colors flex items-center gap-2"
+          >
+            <Send className="w-4 h-4" />
+            Send
+          </button>
         </div>
+        <p className="text-xs text-gray-500 mt-2">
+          Press <kbd className="px-2 py-1 bg-gray-800 rounded">CMD+K</kbd> to open • <kbd className="px-2 py-1 bg-gray-800 rounded">ESC</kbd> to close
+        </p>
       </div>
     </div>
   );

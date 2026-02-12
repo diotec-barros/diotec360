@@ -183,10 +183,10 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="flex items-center gap-3 flex-wrap justify-end">
+            <div className="flex items-center gap-4 flex-wrap justify-end">
               {/* Architect Chat Trigger */}
               <button
-                onClick={() => setChatOpen(true)}
+                onClick={() => setChatOpen(!chatOpen)}
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
                 title="Open Architect (CMD+K)"
               >
@@ -194,7 +194,9 @@ export default function Home() {
                 <span className="text-sm font-semibold">Architect</span>
               </button>
 
-              <ExampleSelector onSelect={handleExampleSelect} />
+              <div className="ml-1">
+                <ExampleSelector onSelect={handleExampleSelect} />
+              </div>
               
               <button
                 onClick={handleVerify}
@@ -228,63 +230,68 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Architect Chat Modal */}
-        <ArchitectChat
-          isOpen={chatOpen}
-          onClose={() => setChatOpen(false)}
-          onCodeGenerated={(generatedCode) => {
-            setCode(generatedCode);
-            setResult(null);
-          }}
-        />
-
         {/* Editor & Proof Viewer */}
         <div className="flex-1 flex overflow-hidden min-h-0">
-          {/* Editor Panel */}
-          <div className="flex-1 border-r border-gray-800 flex flex-col relative">
-            <div className="px-4 py-2 bg-gray-900 border-b border-gray-800 flex items-center justify-between gap-4">
-              <h2 className="text-sm font-semibold text-gray-400">CODE EDITOR</h2>
-              <div className="flex items-center gap-3 min-w-0">
-                {/* Sovereign Identity */}
-                <SovereignIdentity code={code} />
-                {ghostMode && (
-                  <div className="flex items-center gap-2 text-xs text-purple-400">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-                    Ghost Protocol Active
-                  </div>
+          <div className="flex-1 flex overflow-hidden min-h-0">
+            {/* Editor Panel */}
+            <div className="flex-1 border-r border-gray-800 flex flex-col relative">
+              <div className="px-4 py-2 bg-gray-900 border-b border-gray-800 flex items-center justify-between gap-4">
+                <h2 className="text-sm font-semibold text-gray-400">CODE EDITOR</h2>
+                <div className="flex items-center gap-3 min-w-0">
+                  {/* Sovereign Identity */}
+                  <SovereignIdentity code={code} />
+                  {ghostMode && (
+                    <div className="flex items-center gap-2 text-xs text-purple-400">
+                      <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
+                      Ghost Protocol Active
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="flex-1 relative">
+                <Editor value={code} onChange={(value) => setCode(value || '')} />
+                {/* Ghost Visualizer Overlay */}
+                {ghostMode && <GhostVisualizer code={code} />}
+              </div>
+            </div>
+
+            {/* Proof Viewer Panel */}
+            <div className="flex-1 flex flex-col bg-gray-900">
+              <div className="px-4 py-2 bg-gray-900 border-b border-gray-800">
+                <h2 className="text-sm font-semibold text-gray-400">PROOF VIEWER</h2>
+              </div>
+              <div className="flex-1 overflow-auto p-4 space-y-4 min-h-0">
+                <ProofViewer result={result} isVerifying={isVerifying} />
+                
+                {/* Sentinel Radar */}
+                {activeLayer === 'sentinel' && (
+                  <SentinelRadar
+                    isActive={isVerifying || sentinelStatus !== 'idle'}
+                    threatLevel={threatLevel}
+                    status={sentinelStatus}
+                  />
+                )}
+
+                {/* Oracle Atlas */}
+                {activeLayer === 'oracle' && (
+                  <OracleAtlas activeSources={activeOracles} />
                 )}
               </div>
             </div>
-            <div className="flex-1 relative">
-              <Editor value={code} onChange={(value) => setCode(value || '')} />
-              {/* Ghost Visualizer Overlay */}
-              {ghostMode && <GhostVisualizer code={code} />}
-            </div>
           </div>
 
-          {/* Proof Viewer Panel */}
-          <div className="flex-1 flex flex-col bg-gray-900">
-            <div className="px-4 py-2 bg-gray-900 border-b border-gray-800">
-              <h2 className="text-sm font-semibold text-gray-400">PROOF VIEWER</h2>
+          {chatOpen && (
+            <div className="w-[420px] shrink-0 bg-gray-900 border-l border-gray-800 overflow-hidden">
+              <ArchitectChat
+                isOpen={chatOpen}
+                onClose={() => setChatOpen(false)}
+                onCodeGenerated={(generatedCode) => {
+                  setCode(generatedCode);
+                  setResult(null);
+                }}
+              />
             </div>
-            <div className="flex-1 overflow-auto p-4 space-y-4 min-h-0">
-              <ProofViewer result={result} isVerifying={isVerifying} />
-              
-              {/* Sentinel Radar */}
-              {activeLayer === 'sentinel' && (
-                <SentinelRadar
-                  isActive={isVerifying || sentinelStatus !== 'idle'}
-                  threatLevel={threatLevel}
-                  status={sentinelStatus}
-                />
-              )}
-
-              {/* Oracle Atlas */}
-              {activeLayer === 'oracle' && (
-                <OracleAtlas activeSources={activeOracles} />
-              )}
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Execution Log Drawer */}
