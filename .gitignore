@@ -8,12 +8,21 @@ env/
 venv/
 ENV/
 
-# Environment variables (SECURITY)
+# Environment Variables (SENSITIVE - Never commit!)
 .env
-.env.*
-!.env.example
-!.env.*.example
-!.env.*.template
+.env.local
+.env.*.local
+.env.node1.huggingface
+.env.node1.local
+.env.node2.diotec360
+.env.node2.local
+.env.node3.backup
+.env.node3.local
+.env.nodeA
+.env.nodeB
+.env.nodeB.template
+
+
 
 # Aethel
 output/*.rs

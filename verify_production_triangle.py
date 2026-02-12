@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Production Triangle Verification Script
+Production Triangle Verification Script (3 Nodes)
 Verifies all 3 production nodes are synchronized
 """
 
@@ -9,11 +9,11 @@ import sys
 import time
 from typing import Dict, List, Tuple
 
-# Production node URLs
+# Production node URLs (Triangle of Truth - Sovereign Architecture)
 NODES = [
     ("Node 1 (Hugging Face)", "https://diotec-aethel-judge.hf.space"),
-    ("Node 2 (Railway API)", "https://api.diotec360.com"),
-    ("Node 3 (Backup)", "https://backup.diotec360.com")
+    ("Node 2 (Sovereign API)", "https://api.diotec360.com"),
+    ("Node 3 (Vercel Backup)", "https://backup.diotec360.com")
 ]
 
 def check_node_health(name: str, url: str) -> Tuple[bool, str]:
@@ -49,7 +49,7 @@ def get_sync_status(name: str, url: str) -> Dict:
         return {"error": str(e)}
 
 def verify_triangle():
-    """Verify the Production Triangle of Truth"""
+    """Verify the Production Triangle of Truth (3 Nodes)"""
     
     print("=" * 70)
     print("🔺 PRODUCTION TRIANGLE OF TRUTH - VERIFICATION")
@@ -104,7 +104,7 @@ def verify_triangle():
     
     # Check synchronization
     if len(set(merkle_roots)) == 1 and len(merkle_roots) == 3:
-        print("\n✅ ALL NODES SYNCHRONIZED")
+        print("\n✅ ALL 3 NODES SYNCHRONIZED")
         print(f"📊 Shared Merkle Root: {merkle_roots[0]}")
     else:
         print("\n❌ NODES ARE NOT SYNCHRONIZED")
@@ -169,7 +169,7 @@ def verify_triangle():
 def main():
     """Main entry point"""
     print()
-    print("Starting Production Triangle Verification...")
+    print("Starting Production Dual Node Verification...")
     print()
     
     success = verify_triangle()
@@ -179,7 +179,7 @@ def main():
         print("✅ VERIFICATION SUCCESSFUL")
         print("=" * 70)
         print()
-        print("The Triangle of Truth is operational and synchronized.")
+        print("The Triangle of Truth (3 nodes) is operational and synchronized.")
         print("All nodes are healthy and communicating correctly.")
         print()
         sys.exit(0)
