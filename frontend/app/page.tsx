@@ -164,12 +164,14 @@ export default function Home() {
         <header className="border-b border-gray-800 bg-gray-900">
           <div className="flex items-center justify-between gap-4 px-6 py-4">
             <div className="flex items-center gap-4 min-w-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Aethel Apex
-              </h1>
-              <span className="text-sm text-gray-400">
-                Command Center v2.0
-              </span>
+              <div className="flex flex-col leading-tight min-w-0">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent truncate">
+                  Aethel Plataforma
+                </h1>
+                <span className="text-xs text-gray-400 truncate">
+                  Enterprise Verification Console
+                </span>
+              </div>
               {/* Layer Indicator */}
               <div className="flex items-center gap-2 px-3 py-1 bg-gray-800 rounded-lg">
                 <div className={`w-2 h-2 rounded-full ${
@@ -191,7 +193,7 @@ export default function Home() {
                 title="Open Architect (CMD+K)"
               >
                 <Command className="w-4 h-4" />
-                <span className="text-sm font-semibold">Architect</span>
+                <span className="text-sm font-semibold">AI Chat</span>
               </button>
 
               <div className="ml-1">
