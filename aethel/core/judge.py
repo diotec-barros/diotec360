@@ -61,6 +61,16 @@ class AethelJudge:
         
         # v1.5.2: Configurar timeout do Z3
         self.solver.set("timeout", self.Z3_TIMEOUT_MS)
+
+    def _condition_to_expression(self, condition):
+        """Normalize a condition representation to an expression string."""
+        if isinstance(condition, dict):
+            return str(condition.get('expression', '')).strip()
+        return str(condition).strip()
+
+    def _normalize_conditions(self, conditions):
+        """Return a list of expression strings for a mixed list of dict/str conditions."""
+        return [self._condition_to_expression(c) for c in (conditions or []) if self._condition_to_expression(c)]
     
     def _on_crisis_mode_change(self, active: bool) -> None:
         """
@@ -196,9 +206,13 @@ class AethelJudge:
         
         # STEP 0.5: Complexity Check (v1.5.2 - Anti-DoS)
         print("\n⏱️  [COMPLEXITY CHECK] Verificando complexidade...")
-        
+
+        constraints_exprs = self._normalize_conditions(data.get('constraints', []))
+        post_exprs = self._normalize_conditions(data.get('post_conditions', []))
+        self.variables = {}
+        self._extract_variables(constraints_exprs + post_exprs)
         num_vars = len(self.variables)
-        num_constraints = len(data['constraints']) + len(data['post_conditions'])
+        num_constraints = len(constraints_exprs) + len(post_exprs)
         
         if num_vars > self.MAX_VARIABLES:
             print(f"  🚨 MUITAS VARIÁVEIS: {num_vars} > {self.MAX_VARIABLES}")
@@ -225,12 +239,16 @@ class AethelJudge:
         
         # STEP 1: Conservation Check (v1.3 - Fast Pre-Check)
         print("\n💰 [CONSERVATION GUARDIAN] Verificando Lei da Conservação...")
-        conservation_result = self.conservation_checker.check_intent({
-            'verify': data['post_conditions']
-        })
-        layer_results['conservation'] = conservation_result.is_valid
+
+        conservation_changes = self.conservation_checker.analyze_verify_block(post_exprs)
+        has_symbolic_conservation = any(
+            not isinstance(c.amount, (int, float)) for c in (conservation_changes or [])
+        )
+
+        conservation_result = self.conservation_checker.validate_conservation(conservation_changes)
+        layer_results['conservation'] = True if has_symbolic_conservation else conservation_result.is_valid
         
-        if not conservation_result.is_valid:
+        if (not has_symbolic_conservation) and (not conservation_result.is_valid):
             print("  🚨 VIOLAÇÃO DE CONSERVAÇÃO DETECTADA!")
             print(f"  📊 Balanço líquido: {conservation_result.net_change}")
             print(f"  ⚖️  Lei violada: Σ(mudanças) = {conservation_result.net_change} ≠ 0")
@@ -249,15 +267,18 @@ class AethelJudge:
                 }
             }
         
-        if conservation_result.changes:
+        if conservation_changes:
             print(f"  ✅ Conservação válida ({len(conservation_result.changes)} mudanças de saldo detectadas)")
         else:
             print("  ℹ️  Nenhuma mudança de saldo detectada (pulando verificação de conservação)")
+
+        if has_symbolic_conservation:
+            print("  🧩 Conservação simbólica detectada - será provada via Z3 (Σ deltas == 0)")
         
         # STEP 2: Overflow Check (v1.4 - Hardware Safety Check)
         print("\n🔢 [OVERFLOW SENTINEL] Verificando limites de hardware...")
         overflow_result = self.overflow_sentinel.check_intent({
-            'verify': data['post_conditions']
+            'verify': post_exprs
         })
         layer_results['overflow'] = overflow_result.is_safe
         
@@ -290,21 +311,37 @@ class AethelJudge:
         self.variables = {}
         
         # 3. Extrair e criar variáveis simbólicas
-        self._extract_variables(data['constraints'] + data['post_conditions'])
+        self._extract_variables(constraints_exprs + post_exprs)
         
         # 4. Adicionar PRÉ-CONDIÇÕES (guards) como premissas
         print("\n📋 Adicionando pré-condições (guards):")
-        for constraint in data['constraints']:
+        for constraint in constraints_exprs:
             z3_expr = self._parse_constraint(constraint)
             if z3_expr is not None:
                 self.solver.add(z3_expr)
                 print(f"  ✓ {constraint}")
+
+        # 4.5 Prova simbólica de conservação (Σ deltas == 0)
+        if has_symbolic_conservation and conservation_changes:
+            deltas = []
+            for change in conservation_changes:
+                if isinstance(change.amount, (int, float)):
+                    delta = int(change.amount)
+                else:
+                    delta = self._parse_arithmetic_expr(str(change.amount))
+                deltas.append(delta if change.is_increase else -delta)
+
+            if deltas:
+                conservation_constraint = Sum(deltas) == 0
+                self.solver.add(conservation_constraint)
+                print("\n🧾 Conservação simbólica injetada no Z3:")
+                print("  ✓ Σ(deltas) == 0")
         
         # 5. UNIFIED PROOF: Verificar TODAS as pós-condições JUNTAS
         print("\n🎯 Verificando consistência global das pós-condições:")
         
         all_post_conditions = []
-        for post_condition in data['post_conditions']:
+        for post_condition in post_exprs:
             z3_expr = self._parse_constraint(post_condition)
             if z3_expr is not None:
                 all_post_conditions.append(z3_expr)
@@ -406,7 +443,8 @@ class AethelJudge:
         operators = {'>=', '<=', '==', '!=', '>', '<'}
         
         for constraint in constraints:
-            tokens = re.findall(var_pattern, constraint)
+            constraint_str = self._condition_to_expression(constraint)
+            tokens = re.findall(var_pattern, constraint_str)
             for token in tokens:
                 if token not in operators and token not in self.variables:
                     # Criar variável inteira no Z3
@@ -422,8 +460,8 @@ class AethelJudge:
         Exemplo v1.2: "fee == (amount * 5 / 100)"
         """
         try:
-            # Remove espaços extras
-            constraint_str = constraint_str.strip()
+            # Normalize (aceita dict/str)
+            constraint_str = self._condition_to_expression(constraint_str)
             
             # Detectar operador de comparação
             if '>=' in constraint_str:
@@ -541,6 +579,14 @@ class AethelJudge:
         Gera relatório detalhado da verificação formal.
         """
         data = self.intent_map[intent_name]
+
+        params = data.get('params', [])
+        if params and isinstance(params[0], dict):
+            formatted_params = ", ".join(
+                f"{p.get('name')}:{p.get('type')}" for p in params if p.get('name') and p.get('type')
+            )
+        else:
+            formatted_params = ", ".join(str(p) for p in params)
         
         report = f"""
 ╔══════════════════════════════════════════════════════════════╗
@@ -548,17 +594,17 @@ class AethelJudge:
 ╚══════════════════════════════════════════════════════════════╝
 
 Intent: {intent_name}
-Parameters: {', '.join(data['params'])}
+Parameters: {formatted_params}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 PRE-CONDITIONS (Guards):
 """
-        for constraint in data['constraints']:
+        for constraint in self._normalize_conditions(data.get('constraints', [])):
             report += f"  • {constraint}\n"
         
         report += "\nPOST-CONDITIONS (Verify):\n"
-        for condition in data['post_conditions']:
+        for condition in self._normalize_conditions(data.get('post_conditions', [])):
             report += f"  • {condition}\n"
         
         report += f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"

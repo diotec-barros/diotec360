@@ -1,5 +1,5 @@
 import json
-from aethel_parser import AethelParser
+from aethel.core.parser import AethelParser
 
 
 # --- TESTE DO PARSER ---

@@ -1,6 +1,46 @@
 // API client for Aethel backend
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const LATTICE_NODES_RAW = process.env.NEXT_PUBLIC_LATTICE_NODES || '';
+
+function getCandidateBaseUrls(): string[] {
+  const nodes = LATTICE_NODES_RAW
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => s.replace(/\/$/, ''));
+
+  const primary = API_URL.replace(/\/$/, '');
+
+  const seen = new Set<string>();
+  const out: string[] = [];
+
+  for (const u of [primary, ...nodes]) {
+    if (!seen.has(u)) {
+      seen.add(u);
+      out.push(u);
+    }
+  }
+
+  return out;
+}
+
+async function fetchWithFallback(path: string, init: RequestInit): Promise<Response> {
+  const bases = getCandidateBaseUrls();
+  let lastError: unknown = null;
+
+  for (const base of bases) {
+    try {
+      const resp = await fetch(`${base}${path}`, init);
+      if (resp.ok) return resp;
+      lastError = new Error(`HTTP error! status: ${resp.status}`);
+    } catch (e) {
+      lastError = e;
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error('All lattice nodes failed');
+}
 
 export interface VerifyRequest {
   code: string;
@@ -21,7 +61,7 @@ export interface Example {
 
 export async function verifyCode(code: string): Promise<VerifyResponse> {
   try {
-    const response = await fetch(`${API_URL}/api/verify`, {
+    const response = await fetchWithFallback(`/api/verify`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +87,7 @@ export async function getExamples(): Promise<Example[]> {
   try {
     // Add cache-busting timestamp to force fresh data
     const timestamp = new Date().getTime();
-    const response = await fetch(`${API_URL}/api/examples?_t=${timestamp}`, {
+    const response = await fetchWithFallback(`/api/examples?_t=${timestamp}`, {
       cache: 'no-store', // Disable caching
       headers: {
         'Cache-Control': 'no-cache',
@@ -71,7 +111,7 @@ export async function getExamples(): Promise<Example[]> {
 
 export async function compileCode(code: string): Promise<any> {
   try {
-    const response = await fetch(`${API_URL}/api/compile`, {
+    const response = await fetchWithFallback(`/api/compile`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

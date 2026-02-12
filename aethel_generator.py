@@ -1,8 +1,8 @@
 import os
 from datetime import datetime
-from aethel_parser import AethelParser
-from aethel_bridge import AethelBridge
-from aethel_judge import AethelJudge
+from aethel.core.parser import AethelParser
+from aethel.core.bridge import AethelBridge
+from aethel.core.judge import AethelJudge
 
 
 class AethelGenerator:

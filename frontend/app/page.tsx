@@ -164,7 +164,7 @@ export default function Home() {
         <header className="border-b border-gray-800 bg-gray-900">
           <div className="flex items-center justify-between px-6 py-4">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Aethel Apex
               </h1>
               <span className="text-sm text-gray-400">

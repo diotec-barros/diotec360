@@ -1,0 +1,111 @@
+INFO:     Started server process [7532]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Vault inicializado em: C:\Users\DIOTEC\AETHEL\.aethel_vault
+Funcoes no cofre: 10
+
+======================================================================
+[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
+======================================================================
+[STARTUP] Environment variables reloaded
+
+======================================================================
+AETHEL PERSISTENCE LAYER v2.1.0 - INITIALIZING
+======================================================================
+
+[MERKLE DB] Snapshot loaded: .aethel_state\snapshot.json
+[MERKLE DB] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_state
+   Root: 5df3daee3a0ca23c388a16c3db2c2388...
+[VAULT DB] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_vault
+   Bundles: 10
+[AUDITOR] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_sentinel\telemetry.db
+
+======================================================================
+PERSISTENCE LAYER READY
+======================================================================
+
+[STARTUP] Persistence layer initialized
+[STARTUP] Lattice streams initialized
+[STARTUP] P2P enabled, attempting to start...
+[LATTICE_P2P] waiting for peer_id... attempt 20/200
+[LATTICE_P2P] waiting for peer_id... attempt 40/200
+[LATTICE_P2P] waiting for peer_id... attempt 60/200
+[LATTICE_P2P] waiting for peer_id... attempt 80/200
+[LATTICE_P2P] waiting for peer_id... attempt 100/200
+[LATTICE_P2P] waiting for peer_id... attempt 120/200
+[LATTICE_P2P] waiting for peer_id... attempt 140/200
+[LATTICE_P2P] waiting for peer_id... attempt 160/200
+[LATTICE_P2P] waiting for peer_id... attempt 180/200
+[LATTICE_P2P] timeout: p2p_start_timeout (trio_token=True, peer_id=None)
+[STARTUP] [WARN] P2P failed to start: p2p_start_timeout (trio_token=True, peer_id=None)
+[STARTUP] Activating HTTP Sync fallback (Secondary Lung)
+[STARTUP] [LUNG] HTTP Sync Heartbeat activated
+======================================================================
+[ROCKET] LATTICE READY - Hybrid Sync Active
+======================================================================
+
+[HTTP_SYNC] No peer nodes configured, heartbeat disabled
+INFO:     127.0.0.1:51278 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51279 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51280 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51282 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51283 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51285 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51286 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51287 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51291 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51292 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51294 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51295 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51296 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51297 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51298 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51299 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51300 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51301 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51304 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51306 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51307 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51308 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51309 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51310 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51312 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51314 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51315 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51320 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51321 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51323 - "GET /api/lattice/p2p/identity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /api/lattice/p2p/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "POST /api/lattice/sync/switch?mode=http HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /api/lattice/p2p/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "POST /api/lattice/sync/switch?mode=auto HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /api/persistence/integrity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /api/lattice/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51427 - "POST /api/lattice/sync/switch?mode=p2p HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51646 - "GET /api/lattice/p2p/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53083 - "GET /api/health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53124 - "GET /api/health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53134 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53147 - "GET /lattice/state HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53170 - "GET /api/lattice/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /api/lattice/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53183 - "GET /api/lattice/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54461 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54489 - "GET /api/lattice/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54914 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54931 - "GET /api/lattice/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55011 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55019 - "GET /api/lattice/p2p/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55029 - "POST /api/lattice/sync/switch?mode=http HTTP/1.1" 200 OK
+[HTTP_SYNC] No peer nodes configured, heartbeat disabled
+INFO:     127.0.0.1:55031 - "POST /api/lattice/sync/switch?mode=auto HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55047 - "GET /api/lattice/state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55107 - "GET /api/lattice/p2p/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55232 - "GET /api/lattice/state HTTP/1.1" 200 OK
+^C

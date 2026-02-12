@@ -1,5 +1,5 @@
-# Gramática Aethel v1.8.0 - "Synchrony Protocol"
-# Suporte a: operadores aritméticos, números literais, comentários, SECRET keyword, EXTERNAL keyword, ATOMIC_BATCH
+# Gramática Aethel v1.8.1 - "Synchrony Protocol"
+# Suporte a: operadores aritméticos, números literais (inteiros e decimais), comentários, SECRET keyword, EXTERNAL keyword, ATOMIC_BATCH
 aethel_grammar = """
     start: (intent_def | atomic_batch)+
     
@@ -32,7 +32,7 @@ aethel_grammar = """
          | NUMBER
     
     OPERATOR: ">=" | "<=" | "==" | "!=" | ">" | "<"
-    NUMBER: /-?[0-9]+/
+    NUMBER: /-?[0-9]+(\\.[0-9]+)?/  # ✅ ATUALIZADO: Suporte a números decimais
     NAME: /[a-zA-Z_][a-zA-Z0-9_]*/
     COMMENT: /#[^\\n]*/
     

@@ -17,6 +17,7 @@ import sqlite3
 import hashlib
 import json
 import time
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
@@ -70,12 +71,12 @@ class AethelAuditor:
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         
-        self.conn = sqlite3.connect(str(self.db_path), check_same_thread=False)
+        self.conn = sqlite3.connect(self.db_path)
         self.conn.row_factory = sqlite3.Row  # Enable dict-like access
         
         self._create_tables()
         
-        print(f"💾 [AUDITOR] Initialized at: {self.db_path.absolute()}")
+        print(f"[AUDITOR] Initialized at: {self.db_path.absolute()}")
     
     def _create_tables(self):
         """Create audit tables if they don't exist"""
@@ -329,7 +330,7 @@ class MerkleStateDB:
         # Load from disk if exists
         self._load_snapshot()
         
-        print(f"🌳 [MERKLE DB] Initialized at: {self.db_path.absolute()}")
+        print(f"[MERKLE DB] Initialized at: {self.db_path.absolute()}")
         if self.merkle_root:
             print(f"   Root: {self.merkle_root[:32]}...")
     
@@ -386,7 +387,7 @@ class MerkleStateDB:
         with open(self.snapshot_path, 'w') as f:
             json.dump(snapshot, f, indent=2)
         
-        print(f"💾 [MERKLE DB] Snapshot saved: {self.snapshot_path}")
+        print(f"[MERKLE DB] Snapshot saved: {self.snapshot_path}")
     
     def _load_snapshot(self):
         """Load state snapshot from disk"""
@@ -399,7 +400,7 @@ class MerkleStateDB:
             
             # Check if snapshot has new format
             if 'state' not in snapshot:
-                print(f"⚠️ [MERKLE DB] Old snapshot format detected, skipping load")
+                print(f"[MERKLE DB] Old snapshot format detected, skipping load")
                 return
             
             self.state = snapshot['state']
@@ -407,11 +408,11 @@ class MerkleStateDB:
             
             # Verify integrity
             if not self.verify_integrity():
-                raise ValueError("⚠️ DATABASE CORRUPTION DETECTED! Merkle root mismatch.")
+                raise ValueError("DATABASE CORRUPTION DETECTED! Merkle root mismatch.")
             
-            print(f"📂 [MERKLE DB] Snapshot loaded: {self.snapshot_path}")
+            print(f"[MERKLE DB] Snapshot loaded: {self.snapshot_path}")
         except (json.JSONDecodeError, KeyError) as e:
-            print(f"⚠️ [MERKLE DB] Failed to load snapshot: {e}, starting fresh")
+            print(f"[MERKLE DB] Failed to load snapshot: {e}, starting fresh")
 
 
 class ContentAddressableVault:
@@ -437,7 +438,7 @@ class ContentAddressableVault:
         # Load index
         self.index = self._load_index()
         
-        print(f"📦 [VAULT DB] Initialized at: {self.vault_path.absolute()}")
+        print(f"[VAULT DB] Initialized at: {self.vault_path.absolute()}")
         print(f"   Bundles: {len(self.index)}")
     
     def store_bundle(self, code: str, metadata: Dict[str, Any]) -> str:
@@ -456,7 +457,7 @@ class ContentAddressableVault:
         
         # Check if already exists
         if content_hash in self.index:
-            print(f"📦 [VAULT DB] Bundle already exists: {content_hash[:16]}...")
+            print(f"[VAULT DB] Bundle already exists: {content_hash[:16]}...")
             return content_hash
         
         # Store bundle
@@ -480,7 +481,7 @@ class ContentAddressableVault:
         }
         self._save_index()
         
-        print(f"📦 [VAULT DB] Bundle stored: {content_hash[:16]}...")
+        print(f"[VAULT DB] Bundle stored: {content_hash[:16]}...")
         
         return content_hash
     
@@ -552,7 +553,7 @@ class AethelPersistenceLayer:
         audit_path: str = ".aethel_sentinel/telemetry.db"
     ):
         print("\n" + "="*70)
-        print("💾 AETHEL PERSISTENCE LAYER v2.1.0 - INITIALIZING")
+        print("AETHEL PERSISTENCE LAYER v2.1.0 - INITIALIZING")
         print("="*70 + "\n")
         
         self.merkle_db = MerkleStateDB(state_path)
@@ -560,7 +561,7 @@ class AethelPersistenceLayer:
         self.auditor = AethelAuditor(audit_path)
         
         print("\n" + "="*70)
-        print("✅ PERSISTENCE LAYER READY")
+        print("PERSISTENCE LAYER READY")
         print("="*70 + "\n")
     
     def save_execution(
@@ -637,7 +638,7 @@ class AethelPersistenceLayer:
     def close(self):
         """Close all database connections"""
         self.auditor.close()
-        print("\n💾 [PERSISTENCE] All databases closed")
+        print("\n[PERSISTENCE] All databases closed")
 
 
 # Global instance (singleton pattern)
@@ -649,6 +650,13 @@ def get_persistence_layer() -> AethelPersistenceLayer:
     global _persistence_layer
     
     if _persistence_layer is None:
-        _persistence_layer = AethelPersistenceLayer()
+        state_path = os.getenv("AETHEL_STATE_PATH", ".aethel_state")
+        vault_path = os.getenv("AETHEL_VAULT_PATH", ".aethel_vault")
+        audit_path = os.getenv("AETHEL_AUDIT_PATH", ".aethel_sentinel/telemetry.db")
+        _persistence_layer = AethelPersistenceLayer(
+            state_path=state_path,
+            vault_path=vault_path,
+            audit_path=audit_path,
+        )
     
     return _persistence_layer

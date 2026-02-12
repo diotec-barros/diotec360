@@ -156,6 +156,11 @@ class ConservationChecker:
     def __init__(self, slippage_tolerance: float = 0.05):
         self.cache = {}  # Cache for repeated analyses
         self.slippage_validator = SlippageValidator(tolerance=slippage_tolerance)
+
+    def _condition_to_expression(self, condition: Union[str, Dict]) -> str:
+        if isinstance(condition, dict):
+            return str(condition.get('expression', '')).strip()
+        return str(condition).strip()
     
     def check_intent(self, intent_data: dict) -> ConservationResult:
         """
@@ -184,7 +189,7 @@ class ConservationChecker:
         # Validate conservation law
         return self.validate_conservation(changes)
     
-    def analyze_verify_block(self, verify_block: List[str]) -> List[BalanceChange]:
+    def analyze_verify_block(self, verify_block: List[Union[str, Dict]]) -> List[BalanceChange]:
         """
         Extract all balance changes from a verify block.
         
@@ -197,7 +202,11 @@ class ConservationChecker:
         changes = []
         
         for line_num, condition in enumerate(verify_block, start=1):
-            change = self._extract_balance_change(condition, line_num)
+            condition_str = self._condition_to_expression(condition)
+            if not condition_str:
+                continue
+
+            change = self._extract_balance_change(condition_str, line_num)
             if change:
                 changes.append(change)
         
@@ -236,8 +245,8 @@ class ConservationChecker:
         if '+' in right:
             op_parts = right.split('+')
             if len(op_parts) == 2:
-                old_var = op_parts[0].strip()
-                amount_str = op_parts[1].strip()
+                old_var = op_parts[0].strip().strip('()').strip()
+                amount_str = op_parts[1].strip().strip('()').strip()
                 
                 # Verify old_ prefix
                 if old_var.startswith('old_'):
@@ -267,8 +276,8 @@ class ConservationChecker:
             # Split on - but be careful with negative numbers
             op_idx = right.rfind('-')  # Find last - (rightmost)
             if op_idx > 0:  # Not at start (not a negative number)
-                old_var = right[:op_idx].strip()
-                amount_str = right[op_idx+1:].strip()
+                old_var = right[:op_idx].strip().strip('()').strip()
+                amount_str = right[op_idx+1:].strip().strip('()').strip()
                 
                 # Verify old_ prefix
                 if old_var.startswith('old_'):

@@ -15,9 +15,9 @@ def main():
     # Get port from environment, default to 8000
     port = int(os.environ.get("PORT", 8000))
     
-    print(f"🚀 Starting Aethel API on port {port}")
-    print(f"📂 Working directory: {os.getcwd()}")
-    print(f"🐍 Python path: {sys.path[0]}")
+    print(f"Starting Aethel API on port {port}")
+    print(f"Working directory: {os.getcwd()}")
+    print(f"Python path: {sys.path[0]}")
     
     # Import uvicorn
     import uvicorn

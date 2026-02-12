@@ -1,7 +1,7 @@
-from aethel_parser import AethelParser
-from aethel_judge import AethelJudge
-from aethel_bridge import AethelBridge
-from aethel_vault_distributed import AethelDistributedVault
+from aethel.core.parser import AethelParser
+from aethel.core.judge import AethelJudge
+from aethel.core.bridge import AethelBridge
+from aethel.core.vault_distributed import AethelDistributedVault
 from datetime import datetime
 import os
 
@@ -361,6 +361,20 @@ class AethelKernel:
     
     Ok(())
 }"""
+
+    def _condition_to_expression(self, condition):
+        if isinstance(condition, dict):
+            return str(condition.get('expression', '')).strip()
+        return str(condition).strip()
+
+    def _format_params(self, params):
+        if not params:
+            return ""
+        if isinstance(params, list) and params and isinstance(params[0], dict):
+            return ", ".join(
+                f"{p.get('name')}:{p.get('type')}" for p in params if p.get('name') and p.get('type')
+            )
+        return ", ".join(str(p) for p in params)
     
     def _generate_success_report(self, intent_name, ast, verification_result, attempts, history):
         """Gera relatório de compilação bem-sucedida"""
@@ -372,7 +386,7 @@ class AethelKernel:
 ╚══════════════════════════════════════════════════════════════╝
 
 Intent: {intent_name}
-Parameters: {', '.join(data['params'])}
+Parameters: {self._format_params(data.get('params', []))}
 Status: ✅ SUCCESS
 Attempts: {attempts}
 Timestamp: {datetime.now().isoformat()}
@@ -384,11 +398,11 @@ CONSTRAINTS VERIFIED:
 Pre-conditions (Guards):
 """
         for constraint in data['constraints']:
-            report += f"  ✓ {constraint}\n"
+            report += f"  ✓ {self._condition_to_expression(constraint)}\n"
         
         report += "\nPost-conditions (Verify):\n"
         for condition in data['post_conditions']:
-            report += f"  ✓ {condition}\n"
+            report += f"  ✓ {self._condition_to_expression(condition)}\n"
         
         report += f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         report += f"\nFORMAL VERIFICATION: {verification_result['status']}\n"

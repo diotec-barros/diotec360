@@ -42,9 +42,17 @@ class AethelVault:
         Isso permite que funções logicamente idênticas sejam reconhecidas
         mesmo com nomes diferentes.
         """
+        def _cond_to_expr(cond):
+            if isinstance(cond, dict):
+                return str(cond.get('expression', '')).strip()
+            return str(cond).strip()
+
+        constraints = [_cond_to_expr(c) for c in intent_data.get('constraints', []) if _cond_to_expr(c)]
+        post_conditions = [_cond_to_expr(c) for c in intent_data.get('post_conditions', []) if _cond_to_expr(c)]
+
         logic_structure = {
-            'constraints': sorted(intent_data.get('constraints', [])),
-            'post_conditions': sorted(intent_data.get('post_conditions', [])),
+            'constraints': sorted(constraints),
+            'post_conditions': sorted(post_conditions),
             'ai_instructions': intent_data.get('ai_instructions', {})
         }
         
@@ -123,7 +131,7 @@ class AethelVault:
         
         matches = []
         for full_hash, info in self.index.items():
-            if info['logic_hash'] == target_logic_hash:
+            if info.get('logic_hash') == target_logic_hash:
                 matches.append(full_hash)
         
         return matches
@@ -158,7 +166,9 @@ class AethelVault:
         # Agrupar por logic_hash para encontrar duplicatas lógicas
         logic_groups = {}
         for full_hash, info in self.index.items():
-            logic_hash = info['logic_hash']
+            logic_hash = info.get('logic_hash')
+            if not logic_hash:
+                continue
             if logic_hash not in logic_groups:
                 logic_groups[logic_hash] = []
             logic_groups[logic_hash].append(full_hash)
@@ -244,8 +254,8 @@ STORED FUNCTIONS:
         for full_hash, info in self.index.items():
             report += f"\n  📦 {info['intent_name']}\n"
             report += f"     Hash: {full_hash[:16]}...{full_hash[-8:]}\n"
-            report += f"     Status: {info['status']}\n"
-            report += f"     Created: {info['created_at']}\n"
+            report += f"     Status: {info.get('status', 'UNKNOWN')}\n"
+            report += f"     Created: {info.get('created_at', 'UNKNOWN')}\n"
         
         report += "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
         report += "\n🔐 All functions are IMMUTABLE and MATHEMATICALLY PROVED\n"

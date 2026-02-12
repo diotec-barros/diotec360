@@ -51,6 +51,9 @@ class GhostIdentity:
     def __init__(self):
         self.ring_size_min = 3  # Minimum anonymity set
         self.ring_size_max = 100  # Maximum for performance
+        self.ghost_id = None  # Unique ghost identifier
+        self.real_identity = None  # Protected real identity
+        self.purpose = None  # Purpose of ghost identity
     
     def create_ring_signature(
         self,
@@ -368,3 +371,35 @@ class GhostIdentityIntegration:
         
         self.used_key_images.add(proof.signature.key_image)
         return True
+
+
+# Helper function for easy Ghost Identity creation
+def create_ghost_identity(real_identity: str, purpose: str = "general") -> 'GhostIdentity':
+    """
+    Create a Ghost Identity for privacy protection.
+    
+    This is a simplified helper that creates a Ghost Identity instance
+    without requiring the full ring signature setup.
+    
+    Args:
+        real_identity: The real identity to protect
+        purpose: Purpose of the ghost identity
+    
+    Returns:
+        GhostIdentity instance with generated ghost_id
+    """
+    import hashlib
+    import secrets
+    
+    # Generate a unique ghost ID
+    ghost_data = f"{real_identity}:{purpose}:{secrets.token_hex(16)}"
+    ghost_id = hashlib.sha256(ghost_data.encode()).hexdigest()
+    
+    # Create a simple GhostIdentity instance
+    # In production, this would involve full cryptographic setup
+    ghost = GhostIdentity()
+    ghost.ghost_id = ghost_id
+    ghost.real_identity = real_identity
+    ghost.purpose = purpose
+    
+    return ghost

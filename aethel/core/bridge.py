@@ -2,6 +2,20 @@ class AethelBridge:
     def __init__(self, intent_map):
         self.intent_map = intent_map
         self.error_feedback = []  # Histórico de erros para feedback loop
+
+    def _condition_to_expression(self, condition):
+        if isinstance(condition, dict):
+            return str(condition.get('expression', '')).strip()
+        return str(condition).strip()
+
+    def _format_params(self, params):
+        if not params:
+            return ""
+        if isinstance(params, list) and params and isinstance(params[0], dict):
+            return ", ".join(
+                f"{p.get('name')}:{p.get('type')}" for p in params if p.get('name') and p.get('type')
+            )
+        return ", ".join(str(p) for p in params)
     
     def generate_generation_prompt(self, intent_name):
         """
@@ -14,7 +28,7 @@ class AethelBridge:
         prompt = f"""[ROLE: AETHEL_KERNEL_GENERATOR]
 [TARGET_LANGUAGE: RUST]
 [INTENT: {intent_name}]
-[PARAMETERS: {', '.join(data['params'])}]
+[PARAMETERS: {self._format_params(data.get('params', []))}]
 
 [STRICT_CONSTRAINTS]:
 As condições abaixo DEVEM ser validadas antes da execução:
@@ -46,7 +60,7 @@ As condições abaixo DEVEM ser validadas antes da execução:
         return prompt
     
     def _format_constraints(self, constraints):
-        return '\n'.join([f"  - {c}" for c in constraints])
+        return '\n'.join([f"  - {self._condition_to_expression(c)}" for c in (constraints or []) if self._condition_to_expression(c)])
     
     def _format_instructions(self, instructions):
         return '\n'.join([f"  - {k}: {v}" for k, v in instructions.items()])

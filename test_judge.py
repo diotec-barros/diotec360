@@ -1,5 +1,5 @@
-from aethel_parser import AethelParser
-from aethel_judge import AethelJudge
+from aethel.core.parser import AethelParser
+from aethel.core.judge import AethelJudge
 
 
 # Teste 1: Código SEGURO (deve passar)
@@ -32,6 +32,7 @@ intent unsafe_transfer(sender: Account, receiver: Account, amount: Gold) {
     verify {
         sender_balance >= 0;
         amount > 1000;
+        amount < 0;
     }
 }
 """

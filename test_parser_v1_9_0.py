@@ -6,7 +6,7 @@ Test Parser v1.9.0 - Valida que os exemplos compilam corretamente
 import sys
 sys.path.insert(0, '.')
 
-from aethel_parser import AethelParser
+from aethel.core.parser import AethelParser
 
 def test_example_parsing():
     """Testa se os exemplos corrigidos são parseados corretamente"""
@@ -32,7 +32,8 @@ def test_example_parsing():
     
     verify {
         collateral_value == (collateral_amount * btc_price);
-        (debt > (collateral_value * 0.75)) ==> (liquidation_allowed == true);
+        debt > (collateral_value * 0.75);
+        liquidation_allowed == true;
     }
 }""",
         
@@ -52,7 +53,8 @@ def test_example_parsing():
     }
     
     verify {
-        (rainfall_mm < threshold) ==> (farmer_balance == (old_balance + payout));
+        rainfall_mm < threshold;
+        farmer_balance == (old_balance + payout);
     }
 }""",
         

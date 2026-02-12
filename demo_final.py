@@ -10,7 +10,7 @@ print()
 
 # Teste 1: Parser
 print("[1/4] PARSER - Lendo codigo Aethel...")
-from aethel_parser import AethelParser
+from aethel.core.parser import AethelParser
 
 code = """
 intent power_check(battery: Level, altitude: Meters) {
@@ -37,7 +37,7 @@ print()
 
 # Teste 2: Judge
 print("[2/4] JUDGE - Verificacao formal com Z3...")
-from aethel_judge import AethelJudge
+from aethel.core.judge import AethelJudge
 
 judge = AethelJudge(ast)
 result = judge.verify_logic("power_check")
@@ -47,7 +47,7 @@ print()
 
 # Teste 3: Vault
 print("[3/4] VAULT - Armazenamento imutavel...")
-from aethel_vault import AethelVault
+from aethel.core.vault import AethelVault
 
 vault = AethelVault(".demo_vault")
 function_hash = vault.store(
@@ -62,7 +62,7 @@ print()
 
 # Teste 4: Weaver
 print("[4/4] WEAVER - Adaptacao ao hardware...")
-from aethel_weaver import AethelWeaver
+from aethel.core.weaver import AethelWeaver
 
 weaver = AethelWeaver(vault)
 env = weaver.probe_environment()

@@ -9,7 +9,12 @@ from pydantic import BaseModel
 from typing import Optional, Dict, Any, List
 import sys
 import hashlib
+import os
+import time
 from pathlib import Path
+from dotenv import load_dotenv
+import asyncio
+import httpx
 
 # Add parent directory to path to import aethel modules
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -19,12 +24,13 @@ from aethel.core.judge import AethelJudge
 from aethel.core.vault import AethelVault
 from aethel.core.state import AethelStateManager
 from aethel.core.persistence import get_persistence_layer
+from aethel.nexo.p2p_streams import get_lattice_streams
 
 # Initialize FastAPI app
 app = FastAPI(
     title="Aethel API",
-    description="Backend API for Aethel-Studio playground - v1.7.0 Oracle Sanctuary",
-    version="1.7.0"
+    description="Backend API for Aethel-Studio playground - v3.0.3 Hybrid Sync",
+    version="3.0.3"
 )
 
 # Configure CORS
@@ -39,8 +45,15 @@ app.add_middleware(
 # Initialize Aethel components
 parser = AethelParser()
 vault = AethelVault()
-persistence = get_persistence_layer()  # v2.1.0: Persistence Layer
+persistence = None  # Will be initialized in startup
+lattice_streams = None  # Will be initialized in startup
 # Judge will be initialized per-request with the parsed intent_map
+
+# Hybrid Sync state
+http_sync_task = None
+http_sync_enabled = False
+p2p_heartbeat_task = None
+p2p_peerless_timer = None  # Timer para detectar falta de peers
 
 # Request/Response models
 class VerifyRequest(BaseModel):
@@ -100,6 +113,282 @@ async def root():
 async def health():
     return {"status": "healthy"}
 
+
+def _parse_lattice_nodes() -> List[str]:
+    raw = os.getenv("AETHEL_LATTICE_NODES", "").strip()
+    if not raw:
+        return []
+    nodes = []
+    for item in raw.split(","):
+        url = item.strip()
+        if url:
+            nodes.append(url.rstrip("/"))
+    return nodes
+
+
+@app.get("/api/lattice/nodes")
+async def lattice_nodes():
+    return {
+        "success": True,
+        "nodes": _parse_lattice_nodes(),
+        "count": len(_parse_lattice_nodes()),
+    }
+
+
+@app.get("/api/lattice/state")
+async def lattice_state():
+    return {
+        "success": True,
+        "merkle_root": persistence.merkle_db.get_root(),
+        "state": persistence.merkle_db.state,
+        "state_size": len(persistence.merkle_db.state),
+    }
+
+
+def _get_p2p_peer_count() -> int:
+    """
+    Get current P2P peer count.
+    In production, this would query the actual P2P network.
+    For now, returns simulated count.
+    """
+    if not lattice_streams or not lattice_streams.started:
+        return 0
+    
+    # Placeholder - in production would use: lattice_streams.get_peer_count()
+    # For simulation, check if we have bootstrap peers configured
+    if lattice_streams.config.bootstrap_peers:
+        # Simulate having 1 peer if bootstrap peers are configured
+        return 1
+    return 0
+
+
+@app.get("/api/lattice/p2p/status")
+async def lattice_p2p_status():
+    peer_count = _get_p2p_peer_count()
+    
+    return {
+        "success": True,
+        "enabled": lattice_streams.config.enabled if lattice_streams else False,
+        "started": lattice_streams.started if lattice_streams else False,
+        "libp2p_available": lattice_streams.libp2p_available if lattice_streams else False,
+        "error": lattice_streams.start_error if lattice_streams else None,
+        "topic": lattice_streams.config.topic if lattice_streams else None,
+        "listen_multiaddrs": lattice_streams.config.listen_multiaddrs if lattice_streams else [],
+        "bootstrap_peers": lattice_streams.config.bootstrap_peers if lattice_streams else [],
+        "peer_count": peer_count,
+        "has_peers": peer_count > 0,
+        "http_sync_enabled": http_sync_enabled,
+        "sync_mode": "P2P" if (lattice_streams and lattice_streams.started and peer_count > 0) else ("HTTP" if http_sync_enabled else "NONE"),
+        "heartbeat_active": p2p_heartbeat_task is not None
+    }
+
+
+@app.get("/api/lattice/p2p/identity")
+async def lattice_p2p_identity():
+    return {
+        "success": True,
+        "peer_id": lattice_streams.peer_id if lattice_streams else None,
+        "listen_addrs": lattice_streams.listen_addrs if lattice_streams else [],
+    }
+
+
+@app.post("/api/lattice/sync/switch")
+async def switch_sync_mode(mode: str = "auto"):
+    """
+    Switch sync mode manually (for testing)
+    Modes: "p2p", "http", "auto"
+    """
+    global http_sync_enabled, http_sync_task
+    
+    if mode == "p2p":
+        # Try to use P2P only
+        if http_sync_task:
+            http_sync_task.cancel()
+            http_sync_task = None
+        http_sync_enabled = False
+        return {"success": True, "mode": "P2P", "message": "Switched to P2P-only mode"}
+    
+    elif mode == "http":
+        # Force HTTP fallback
+        if not http_sync_enabled:
+            http_sync_enabled = True
+            http_sync_task = asyncio.create_task(_http_sync_heartbeat())
+        return {"success": True, "mode": "HTTP", "message": "Switched to HTTP fallback mode"}
+    
+    elif mode == "auto":
+        # Let system decide (default behavior)
+        peer_count = _get_p2p_peer_count()
+        if peer_count > 0:
+            # Has peers, use P2P
+            if http_sync_task:
+                http_sync_task.cancel()
+                http_sync_task = None
+            http_sync_enabled = False
+            return {"success": True, "mode": "P2P", "message": "Auto-switched to P2P (has peers)"}
+        else:
+            # No peers, use HTTP
+            if not http_sync_enabled:
+                http_sync_enabled = True
+                http_sync_task = asyncio.create_task(_http_sync_heartbeat())
+            return {"success": True, "mode": "HTTP", "message": "Auto-switched to HTTP (no peers)"}
+    
+    return {"success": False, "message": f"Invalid mode: {mode}. Use 'p2p', 'http', or 'auto'"}
+
+
+@app.on_event("startup")
+async def _lattice_startup() -> None:
+    global persistence, lattice_streams, http_sync_task, http_sync_enabled
+    
+    print("\n" + "="*70)
+    print("[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL")
+    print("="*70)
+    
+    # Reload environment variables (critical for .env loading)
+    load_dotenv(override=True)
+    print("[STARTUP] Environment variables reloaded")
+    
+    # Initialize persistence layer
+    persistence = get_persistence_layer()
+    print("[STARTUP] Persistence layer initialized")
+    
+    # Initialize lattice streams
+    lattice_streams = get_lattice_streams(persistence)
+    print("[STARTUP] Lattice streams initialized")
+    
+    # Try to start P2P (Primary Lung)
+    if lattice_streams.config.enabled:
+        print("[STARTUP] P2P enabled, attempting to start...")
+        success, message = await lattice_streams.start()
+        
+        if success:
+            print(f"[STARTUP] [OK] P2P started successfully: {message}")
+            print(f"[STARTUP] peer_id: {lattice_streams.peer_id}")
+            
+            # Start P2P heartbeat monitor (detects peerless condition)
+            global p2p_heartbeat_task
+            p2p_heartbeat_task = asyncio.create_task(_p2p_heartbeat_monitor())
+            print("[STARTUP] [SYNC] P2P Heartbeat Monitor activated")
+        else:
+            print(f"[STARTUP] [WARN] P2P failed to start: {message}")
+            print("[STARTUP] Activating HTTP Sync fallback (Secondary Lung)")
+            http_sync_enabled = True
+    else:
+        print("[STARTUP] P2P disabled, using HTTP Sync only")
+        http_sync_enabled = True
+    
+    # Start HTTP Sync Heartbeat if needed
+    if http_sync_enabled:
+        http_sync_task = asyncio.create_task(_http_sync_heartbeat())
+        print("[STARTUP] [LUNG] HTTP Sync Heartbeat activated")
+    
+    print("="*70)
+    print("[ROCKET] LATTICE READY - Hybrid Sync Active")
+    print("="*70 + "\n")
+
+
+async def _p2p_heartbeat_monitor():
+    """
+    P2P Heartbeat Monitor - Detects peerless condition
+    If P2P has no peers for 60 seconds, activates HTTP fallback
+    """
+    global http_sync_enabled, http_sync_task, p2p_peerless_timer
+    
+    print("[P2P_HEARTBEAT] Monitoring P2P peer connectivity...")
+    
+    peerless_start_time = None
+    last_peer_count = 0
+    
+    while True:
+        try:
+            await asyncio.sleep(5)  # Check every 5 seconds
+            
+            if not lattice_streams or not lattice_streams.started:
+                print("[P2P_HEARTBEAT] P2P not running, stopping monitor")
+                break
+            
+            # Get current peer count
+            peer_count = _get_p2p_peer_count()
+            has_peers = peer_count > 0
+            
+            if has_peers:
+                # Reset timer if we have peers
+                if peerless_start_time is not None:
+                    print("[P2P_HEARTBEAT] [OK] Peers found, resetting peerless timer")
+                    peerless_start_time = None
+                last_peer_count = peer_count
+            else:
+                # No peers detected
+                if peerless_start_time is None:
+                    peerless_start_time = time.time()
+                    print(f"[P2P_HEARTBEAT] [WARN] No peers detected, starting 60s timer")
+                else:
+                    elapsed = time.time() - peerless_start_time
+                    remaining = 60 - elapsed
+                    
+                    if elapsed >= 60:
+                        # 60 seconds without peers - activate HTTP fallback
+                        print("[P2P_HEARTBEAT] [ALERT] 60 seconds without peers - Activating HTTP Fallback")
+                        
+                        if not http_sync_enabled:
+                            http_sync_enabled = True
+                            http_sync_task = asyncio.create_task(_http_sync_heartbeat())
+                            print("[P2P_HEARTBEAT] [LUNG] HTTP Sync Fallback activated")
+                        
+                        # Reset timer after activation
+                        peerless_start_time = None
+                    elif int(remaining) % 15 == 0:  # Log every 15 seconds
+                        print(f"[P2P_HEARTBEAT] [TIMER] {remaining:.0f}s remaining before HTTP fallback")
+            
+        except asyncio.CancelledError:
+            print("[P2P_HEARTBEAT] Monitor stopped")
+            break
+        except Exception as e:
+            print(f"[P2P_HEARTBEAT] Error: {e}")
+            await asyncio.sleep(10)
+
+
+async def _http_sync_heartbeat():
+    """
+    HTTP Sync Fallback - Secondary Lung
+    Polls peer nodes via HTTP when P2P is unavailable
+    """
+    lattice_nodes = os.getenv("AETHEL_LATTICE_NODES", "").strip()
+    if not lattice_nodes:
+        print("[HTTP_SYNC] No peer nodes configured, heartbeat disabled")
+        return
+    
+    peer_urls = [url.strip() for url in lattice_nodes.split(",") if url.strip()]
+    print(f"[HTTP_SYNC] Monitoring {len(peer_urls)} peer node(s)")
+    
+    async with httpx.AsyncClient(timeout=5.0) as client:
+        while True:
+            try:
+                await asyncio.sleep(10)  # Check every 10 seconds
+                
+                for peer_url in peer_urls:
+                    try:
+                        response = await client.get(f"{peer_url}/api/lattice/state")
+                        if response.status_code == 200:
+                            peer_state = response.json()
+                            peer_root = peer_state.get("merkle_root")
+                            local_root = persistence.merkle_db.get_root()
+                            
+                            if peer_root and peer_root != local_root:
+                                print(f"[HTTP_SYNC] [LUNG] State divergence detected from {peer_url}")
+                                print(f"[HTTP_SYNC]   Local:  {local_root}")
+                                print(f"[HTTP_SYNC]   Peer:   {peer_root}")
+                                # In production, trigger state reconciliation here
+                    except Exception as e:
+                        # Silent failure for individual peers
+                        pass
+                        
+            except asyncio.CancelledError:
+                print("[HTTP_SYNC] Heartbeat stopped")
+                break
+            except Exception as e:
+                print(f"[HTTP_SYNC] Error: {e}")
+                await asyncio.sleep(30)  # Back off on error
+
 # Verification endpoint
 @app.post("/api/verify", response_model=VerifyResponse)
 async def verify_code(request: VerifyRequest):
@@ -142,6 +431,15 @@ async def verify_code(request: VerifyRequest):
                 
                 if status != 'PROVED':
                     all_proved = False
+                else:
+                    if lattice_streams.config.enabled:
+                        try:
+                            await lattice_streams.publish_proof_event({
+                                "intent": intent_name,
+                                "status": status,
+                            })
+                        except Exception:
+                            pass
             except Exception as e:
                 results.append({
                     "name": intent_name,
@@ -736,7 +1034,7 @@ async def check_integrity():
                 "is_valid": False,
                 "status": "CORRUPTED",
                 "merkle_root": current_root,
-                "message": "🚨 DATABASE CORRUPTION DETECTED - System in Panic Mode"
+                "message": "[ALERT] DATABASE CORRUPTION DETECTED - System in Panic Mode"
             }
         
         return {
@@ -744,7 +1042,7 @@ async def check_integrity():
             "is_valid": True,
             "status": "VALID",
             "merkle_root": current_root,
-            "message": "✅ Integrity verified - All systems operational"
+            "message": "[OK] Integrity verified - All systems operational"
         }
         
     except Exception as e:

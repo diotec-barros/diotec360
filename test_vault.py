@@ -90,7 +90,7 @@ if result3['status'] == 'SUCCESS':
     print(f"\n✅ Função armazenada com hash: {result3['vault_hash'][:16]}...")
     
     # Verificar se a lógica é reconhecida como similar
-    from aethel_parser import AethelParser
+    from aethel.core.parser import AethelParser
     parser = AethelParser()
     ast3 = parser.parse(code3)
     

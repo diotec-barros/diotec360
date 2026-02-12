@@ -74,6 +74,14 @@ class OverflowSentinel:
         violations = []
         
         for condition in post_conditions:
+            if isinstance(condition, dict):
+                condition = str(condition.get('expression', '')).strip()
+            else:
+                condition = str(condition).strip()
+
+            if not condition:
+                continue
+
             # Detectar operações aritméticas
             operations = self._extract_operations(condition)
             

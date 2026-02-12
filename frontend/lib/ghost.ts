@@ -6,6 +6,46 @@
  */
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const LATTICE_NODES_RAW = process.env.NEXT_PUBLIC_LATTICE_NODES || '';
+
+function getCandidateBaseUrls(): string[] {
+  const nodes = LATTICE_NODES_RAW
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => s.replace(/\/$/, ''));
+
+  const primary = API_URL.replace(/\/$/, '');
+
+  const seen = new Set<string>();
+  const out: string[] = [];
+
+  for (const u of [primary, ...nodes]) {
+    if (!seen.has(u)) {
+      seen.add(u);
+      out.push(u);
+    }
+  }
+
+  return out;
+}
+
+async function fetchWithFallback(path: string, init: RequestInit): Promise<Response> {
+  const bases = getCandidateBaseUrls();
+  let lastError: unknown = null;
+
+  for (const base of bases) {
+    try {
+      const resp = await fetch(`${base}${path}`, init);
+      if (resp.ok) return resp;
+      lastError = new Error(`HTTP error! status: ${resp.status}`);
+    } catch (e) {
+      lastError = e;
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error('All lattice nodes failed');
+}
 
 export interface GhostState {
   variables: Record<string, any> | null;
@@ -45,7 +85,7 @@ export class GhostUI {
     return new Promise((resolve) => {
       this.debounceTimer = setTimeout(async () => {
         try {
-          const response = await fetch(`${API_URL}/api/ghost/predict`, {
+          const response = await fetchWithFallback(`/api/ghost/predict`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -85,7 +125,7 @@ export class GhostUI {
    */
   async canTypeNextChar(code: string, nextChar: string): Promise<boolean> {
     try {
-      const response = await fetch(`${API_URL}/api/ghost/can-type`, {
+      const response = await fetchWithFallback(`/api/ghost/can-type`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ Audits all .ae files and reports syntax errors
 import os
 import sys
 from pathlib import Path
-from aethel_parser import AethelParser
+from aethel.core.parser import AethelParser
 
 def validate_example(file_path: Path) -> tuple[bool, str]:
     """Validate a single .ae file"""
