@@ -72,7 +72,7 @@ export default function ExampleSelector({ onSelect }: ExampleSelectorProps) {
       </button>
 
       {isOpen && (
-        <div className="mt-2 w-80 bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
+        <div className="mt-2 w-full bg-gray-800 border border-gray-700 rounded-lg shadow-xl overflow-hidden">
           {loading ? (
             <div className="p-4 text-center text-gray-400">Loading examples...</div>
           ) : examples.length === 0 ? (

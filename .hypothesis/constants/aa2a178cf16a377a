@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\semantic_sanitizer.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.3, 0.4, 0.7, 0.8, 0.9, 1.0, 10.0, 100.0, 100, 500, 1000, '1.9.0', 'Infinite Loop Trojan', 'Infinite Recursion', 'Memory Exhaustion', 'Recursive Bomb', 'Resource Exhaustion', 'TrojanPattern', 'Unbounded Loop', 'added_at', 'all_nodes', 'attack_type', 'code_snippet', 'detected_patterns', 'detection_method', 'entropy_score', 'entropy_threshold', 'function_def', 'functions', 'infinite_recursion', 'is_safe', 'last_updated', 'log_attack', 'loops', 'pattern', 'pattern_db_path', 'pattern_id', 'pattern_name', 'patterns', 'r', 'reason', 'recursive', 'resource_exhaustion', 'semantic_sanitizer', 'severity', 'severity_threshold', 'time', 'timestamp', 'total_patterns', 'trojan', 'trojan_001', 'trojan_002', 'trojan_003', 'unbounded_loop', 'version', 'w', 'while_loop']

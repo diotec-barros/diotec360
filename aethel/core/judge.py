@@ -2,6 +2,7 @@ from z3 import *
 import re
 import ast  # v1.2: Para parsing de expressões aritméticas
 import time  # v1.5: Para medir tempo de execução
+import os  # v2.1: For environment variables
 from .conservation import ConservationChecker  # v1.3: Conservation Checker
 from .overflow import OverflowSentinel  # v1.4: Overflow Sentinel
 from .sanitizer import AethelSanitizer  # v1.5: Input Sanitizer
@@ -11,11 +12,29 @@ from .semantic_sanitizer import SemanticSanitizer  # v1.9: Semantic Sanitizer
 from .adaptive_rigor import AdaptiveRigor  # v1.9: Adaptive Rigor
 from .gauntlet_report import GauntletReport  # v1.9: Gauntlet Report
 
+# v2.1: MOE Intelligence Layer imports
+try:
+    from ..moe.orchestrator import MOEOrchestrator
+    from ..moe.z3_expert import Z3Expert
+    from ..moe.sentinel_expert import SentinelExpert
+    from ..moe.guardian_expert import GuardianExpert
+    MOE_AVAILABLE = True
+except ImportError:
+    MOE_AVAILABLE = False
+
 
 class AethelJudge:
     """
     O Juiz - Verificador Matemático que garante correção formal do código gerado.
     Usa Z3 Solver para provar que o código respeita as constraints.
+    
+    v2.1.0: MOE Intelligence Layer Integration
+    - MOE Layer: Multi-Expert Consensus (Z3, Sentinel, Guardian experts)
+    - MOE executes BEFORE existing layers
+    - MOE approval → proceed to existing layers
+    - MOE rejection → skip existing layers and reject immediately
+    - MOE failure → fallback to existing layers
+    - MOE enable/disable flag for emergency rollback
     
     v1.9.0: Autonomous Sentinel Integration
     - Layer -1: Semantic Sanitizer (intent analysis, pre-Layer 0)
@@ -40,7 +59,14 @@ class AethelJudge:
     MAX_VARIABLES = 100
     MAX_CONSTRAINTS = 500
     
-    def __init__(self, intent_map):
+    def __init__(self, intent_map, enable_moe: bool = None):
+        """
+        Initialize Aethel Judge.
+        
+        Args:
+            intent_map: Dictionary mapping intent names to their specifications
+            enable_moe: Enable MOE Intelligence Layer (default: read from AETHEL_ENABLE_MOE env var)
+        """
         self.intent_map = intent_map
         self.solver = Solver()
         self.variables = {}
@@ -61,6 +87,79 @@ class AethelJudge:
         
         # v1.5.2: Configurar timeout do Z3
         self.solver.set("timeout", self.Z3_TIMEOUT_MS)
+        
+        # v2.1.0: Initialize MOE Intelligence Layer
+        if enable_moe is None:
+            # Read from environment variable (default: False for backward compatibility)
+            enable_moe = os.environ.get('AETHEL_ENABLE_MOE', 'false').lower() == 'true'
+        
+        self.moe_enabled = enable_moe and MOE_AVAILABLE
+        self.moe_orchestrator = None
+        
+        if self.moe_enabled:
+            self._initialize_moe()
+    
+    def _initialize_moe(self) -> None:
+        """
+        Initialize MOE Intelligence Layer with all experts.
+        
+        Creates and registers:
+        - Z3 Expert (mathematical logic specialist)
+        - Sentinel Expert (security specialist)
+        - Guardian Expert (financial specialist)
+        """
+        try:
+            # Create MOE Orchestrator
+            self.moe_orchestrator = MOEOrchestrator(
+                max_workers=3,
+                expert_timeout=30,
+                telemetry_db_path=".aethel_moe/telemetry.db",
+                cache_ttl_seconds=300,
+                enable_cache=True
+            )
+            
+            # Register Z3 Expert
+            z3_expert = Z3Expert()
+            self.moe_orchestrator.register_expert(z3_expert)
+            
+            # Register Sentinel Expert
+            sentinel_expert = SentinelExpert()
+            self.moe_orchestrator.register_expert(sentinel_expert)
+            
+            # Register Guardian Expert
+            guardian_expert = GuardianExpert()
+            self.moe_orchestrator.register_expert(guardian_expert)
+            
+            print("[JUDGE] ✅ MOE Intelligence Layer initialized with 3 experts")
+            
+        except Exception as e:
+            print(f"[JUDGE] ⚠️  MOE initialization failed: {e}")
+            self.moe_enabled = False
+            self.moe_orchestrator = None
+    
+    def enable_moe(self) -> bool:
+        """
+        Enable MOE Intelligence Layer.
+        
+        Returns:
+            True if MOE was successfully enabled, False otherwise
+        """
+        if not MOE_AVAILABLE:
+            print("[JUDGE] ⚠️  MOE not available (missing dependencies)")
+            return False
+        
+        if not self.moe_orchestrator:
+            self._initialize_moe()
+        
+        self.moe_enabled = self.moe_orchestrator is not None
+        return self.moe_enabled
+    
+    def disable_moe(self) -> None:
+        """
+        Disable MOE Intelligence Layer (emergency rollback).
+        """
+        self.moe_enabled = False
+        print("[JUDGE] ⚠️  MOE Intelligence Layer disabled")
 
     def _condition_to_expression(self, condition):
         """Normalize a condition representation to an expression string."""
@@ -90,7 +189,11 @@ class AethelJudge:
         """
         Verifica se a lógica da intenção é matematicamente consistente.
         
-        Estratégia v1.9 - AUTONOMOUS SENTINEL (6 LAYERS):
+        Estratégia v2.1 - MOE INTELLIGENCE LAYER + AUTONOMOUS SENTINEL:
+        MOE. [v2.1] MOE Intelligence Layer (multi-expert consensus)
+             - If MOE approves → proceed to existing layers
+             - If MOE rejects → skip existing layers and reject immediately
+             - If MOE fails → fallback to existing layers
         -1. [v1.9] Semantic Sanitizer (intent analysis, AST patterns)
         0. [v1.5.1] Sanitiza input (anti-injection, O(n))
         1. [v1.3] Verifica conservação de fundos (fast pre-check, O(n))
@@ -100,11 +203,13 @@ class AethelJudge:
         5. Se Z3 encontrar modelo = PROVA (existe realidade consistente)
         6. Se Z3 não encontrar = FALHA (contradição global detectada)
         
+        New v2.1.0: MOE Intelligence Layer (multi-expert consensus)
         New v1.9.0: Sentinel Monitor + Semantic Sanitizer
         New v1.5.1: Sanitização de input (anti-injection)
         New v1.5.2: Z3 Timeout (anti-DoS)
         
-        Defesa em 6 Camadas:
+        Defesa em 7 Camadas:
+        - MOE Layer: Multi-Expert Consensus (Z3, Sentinel, Guardian)
         - Layer -1: Semantic Sanitizer - Protege contra intenção maliciosa
         - Layer 0: Input Sanitizer - Protege contra injeção de código
         - Layer 1: Conservation Guardian (Σ = 0) - Protege contra criação de fundos
@@ -125,7 +230,91 @@ class AethelJudge:
         layer_results = {}
         
         print(f"\n⚖️  Iniciando verificação formal de '{intent_name}'...")
-        print("🛡️  Usando Autonomous Sentinel (v1.9)")
+        
+        # ============================================================
+        # MOE LAYER: Multi-Expert Consensus (v2.1.0)
+        # ============================================================
+        if self.moe_enabled and self.moe_orchestrator:
+            print("🏛️  Usando MOE Intelligence Layer (v2.1)")
+            print("    MOE Layer: Multi-Expert Consensus")
+            print("    - Z3 Expert (mathematical logic)")
+            print("    - Sentinel Expert (security analysis)")
+            print("    - Guardian Expert (financial verification)")
+            
+            try:
+                # Convert intent data to string for MOE verification
+                intent_str = str(data)
+                
+                # Execute MOE verification
+                print("\n🏛️  [MOE LAYER] Executando verificação multi-expert...")
+                moe_start_time = time.time()
+                moe_result = self.moe_orchestrator.verify_transaction(intent_str, tx_id)
+                moe_latency_ms = (time.time() - moe_start_time) * 1000
+                
+                layer_results['moe'] = moe_result.consensus == "APPROVED"
+                
+                # Display MOE results
+                print(f"\n🏛️  MOE Consensus: {moe_result.consensus}")
+                print(f"    Overall Confidence: {moe_result.overall_confidence:.2%}")
+                print(f"    Total Latency: {moe_latency_ms:.0f}ms")
+                print(f"    Activated Experts: {', '.join(moe_result.activated_experts)}")
+                
+                for verdict in moe_result.expert_verdicts:
+                    status_icon = "✅" if verdict.verdict == "APPROVE" else "❌"
+                    print(f"    {status_icon} {verdict.expert_name}: {verdict.verdict} ({verdict.confidence:.2%}, {verdict.latency_ms:.0f}ms)")
+                    if verdict.reason:
+                        print(f"       Reason: {verdict.reason}")
+                
+                # Handle MOE verdict
+                if moe_result.consensus == "REJECTED":
+                    # MOE rejected - skip existing layers and reject immediately
+                    print("\n🏛️  MOE REJECTION - Skipping existing layers")
+                    
+                    # END TRANSACTION: Record metrics before returning
+                    self.sentinel_monitor.end_transaction(tx_id, layer_results)
+                    
+                    return {
+                        'status': 'REJECTED',
+                        'message': f'🏛️ MOE REJECTION - {moe_result.expert_verdicts[0].reason if moe_result.expert_verdicts else "Expert consensus rejected"}',
+                        'counter_examples': [],
+                        'moe_result': {
+                            'consensus': moe_result.consensus,
+                            'overall_confidence': moe_result.overall_confidence,
+                            'expert_verdicts': [
+                                {
+                                    'expert_name': v.expert_name,
+                                    'verdict': v.verdict,
+                                    'confidence': v.confidence,
+                                    'latency_ms': v.latency_ms,
+                                    'reason': v.reason
+                                }
+                                for v in moe_result.expert_verdicts
+                            ],
+                            'total_latency_ms': moe_latency_ms
+                        }
+                    }
+                
+                elif moe_result.consensus == "APPROVED":
+                    # MOE approved - proceed to existing layers for additional verification
+                    print("\n🏛️  MOE APPROVAL - Proceeding to existing layers for additional verification")
+                    # Continue to existing layers below
+                
+                elif moe_result.consensus == "UNCERTAIN":
+                    # MOE uncertain - proceed to existing layers as fallback
+                    print("\n🏛️  MOE UNCERTAIN - Proceeding to existing layers as fallback")
+                    # Continue to existing layers below
+                
+            except Exception as e:
+                # MOE failure - fallback to existing layers
+                print(f"\n🏛️  ⚠️  MOE FAILURE: {e}")
+                print("    Falling back to existing layers (v1.9.0)")
+                layer_results['moe'] = False
+                # Continue to existing layers below
+        
+        # ============================================================
+        # EXISTING LAYERS (v1.9.0 - Autonomous Sentinel)
+        # ============================================================
+        print("\n🛡️  Usando Autonomous Sentinel (v1.9)")
         print("    Layer -1: Semantic Sanitizer (intent analysis)")
         print("    Layer 0: Input Sanitizer (anti-injection)")
         print("    Layer 1: Conservation Guardian")

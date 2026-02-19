@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\sentinel_expert.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.05, 0.5, 0.6, 0.7, 0.75, 0.8, 0.95, 1.0, 100, 1000, 'APPROVE', 'REJECT', 'Sentinel_Expert', 'analysis_phase', 'detected_patterns', 'entropy_score', 'error', 'error_type', 'overflow', 'overflow_detection', 'semantic', 'semantic_analysis', 'timeout', 'timeout_ms', 'verify', 'verify\\s*\\{([^}]+)\\}', 'violations']

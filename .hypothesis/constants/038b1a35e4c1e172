@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\orchestrator.py
+# hypothesis_version: 6.151.5
+
+[0.0, 300, 1000, 3600, 'MOE_Orchestrator', 'REJECT', 'REJECTED', 'average_latency_ms', 'enabled', 'error', 'error_type', 'expert_stats', 'expert_timeout', 'experts', 'gating_network_stats', 'hit_rate', 'hits', 'max_workers', 'misses', 'orchestrator_stats', 'registered_experts', 'size', 'time_window_seconds', 'timeout', 'total_verifications', 'ttl_seconds', 'utf-8']
