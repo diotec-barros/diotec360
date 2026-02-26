@@ -408,9 +408,9 @@ class SovereignPersistence(AethelPersistenceLayer):
     
     def __init__(
         self,
-        state_path: str = ".aethel_state",
-        vault_path: str = ".aethel_vault",
-        audit_path: str = ".aethel_sentinel/telemetry.db"
+        state_path: str = ".diotec360_state",
+        vault_path: str = ".diotec360_vault",
+        audit_path: str = ".diotec360_sentinel/telemetry.db"
     ):
         # Initialize base persistence
         super().__init__(state_path, vault_path, audit_path)
@@ -691,9 +691,9 @@ def get_sovereign_persistence() -> SovereignPersistence:
     global _sovereign_persistence
     
     if _sovereign_persistence is None:
-        state_path = os.getenv("AETHEL_STATE_PATH", ".aethel_state")
-        vault_path = os.getenv("AETHEL_VAULT_PATH", ".aethel_vault")
-        audit_path = os.getenv("AETHEL_AUDIT_PATH", ".aethel_sentinel/telemetry.db")
+        state_path = os.getenv("AETHEL_STATE_PATH", ".diotec360_state")
+        vault_path = os.getenv("AETHEL_VAULT_PATH", ".diotec360_vault")
+        audit_path = os.getenv("AETHEL_AUDIT_PATH", ".diotec360_sentinel/telemetry.db")
         _sovereign_persistence = SovereignPersistence(
             state_path=state_path,
             vault_path=vault_path,

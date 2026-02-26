@@ -223,7 +223,7 @@ class StateCorruptionPanic(IntegrityPanic):
             "IMMEDIATE ACTION REQUIRED:\n"
             "1. Check if state.json was accidentally deleted or moved\n"
             "2. Restore from Genesis Vault backup:\n"
-            "   - Locate latest backup in .aethel_vault/\n"
+            "   - Locate latest backup in .diotec360_vault/\n"
             "   - Run: python -m aethel.genesis.restore --backup <backup_id>\n"
             "3. If no backup exists and this is a new installation:\n"
             "   - Run: python -m aethel.genesis.init\n"
@@ -697,8 +697,8 @@ def log_integrity_panic(
     panic: IntegrityPanic,
     logger=None,
     write_forensic_report: bool = True,
-    forensic_dir: str = ".aethel_state",
-    audit_db_path: str = ".aethel_sentinel/telemetry.db"
+    forensic_dir: str = ".diotec360_state",
+    audit_db_path: str = ".diotec360_sentinel/telemetry.db"
 ) -> Optional[str]:
     """
     Log an IntegrityPanic to the audit trail and optionally write forensic report.
@@ -852,7 +852,7 @@ def _write_to_audit_trail(panic: IntegrityPanic, db_path: str):
 
 
 def query_integrity_panics(
-    db_path: str = ".aethel_sentinel/telemetry.db",
+    db_path: str = ".diotec360_sentinel/telemetry.db",
     violation_type: Optional[str] = None,
     exception_class: Optional[str] = None,
     since_timestamp: Optional[float] = None,
@@ -915,7 +915,7 @@ def query_integrity_panics(
 
 
 def get_integrity_panic_stats(
-    db_path: str = ".aethel_sentinel/telemetry.db"
+    db_path: str = ".diotec360_sentinel/telemetry.db"
 ) -> Dict[str, Any]:
     """
     Get statistics about integrity panics for monitoring dashboards.

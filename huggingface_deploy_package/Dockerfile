@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
+# Create required directories with root permissions BEFORE switching to user
+RUN mkdir -p .diotec360_vault .diotec360_state .diotec360_moe .diotec360_sentinel .diotec360_vigilance .diotec360_lattice .diotec360_audit && \
+    chmod -R 777 .diotec360_vault .diotec360_state .diotec360_moe .diotec360_sentinel .diotec360_vigilance .diotec360_lattice .diotec360_audit
+
 # Configure Hugging Face security user
 RUN useradd -m -u 1000 user
 USER user

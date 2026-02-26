@@ -352,7 +352,7 @@ class AethelStateManager:
     - Crash recovery
     """
     
-    def __init__(self, state_dir: str = ".aethel_state"):
+    def __init__(self, state_dir: str = ".diotec360_state"):
         self.state_dir = Path(state_dir)
         self.state_dir.mkdir(exist_ok=True)
         

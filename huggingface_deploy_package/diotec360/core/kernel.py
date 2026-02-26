@@ -28,7 +28,7 @@ class AethelKernel:
     Gerencia o ping-pong entre IA e Z3 até atingir prova matemática.
     """
     
-    def __init__(self, ai_provider="anthropic", vault_path=".aethel_vault"):
+    def __init__(self, ai_provider="anthropic", vault_path=".diotec360_vault"):
         self.parser = AethelParser()
         self.vault = AethelVault(vault_path)
         self.ai_provider = ai_provider

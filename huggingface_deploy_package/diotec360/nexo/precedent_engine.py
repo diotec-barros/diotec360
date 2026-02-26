@@ -7,7 +7,7 @@ Design goals:
 - Works offline (local vault), but can later be mirrored to GunDB.
 - Query by intent/tags/tokens with simple ranking.
 
-Storage format: `.aethel_vault/precedents.json`
+Storage format: `.diotec360_vault/precedents.json`
 {
   "v": 1,
   "items": {
@@ -67,7 +67,7 @@ class PrecedentQuery:
 
 
 class PrecedentEngine:
-    def __init__(self, vault_path: str = ".aethel_vault"):
+    def __init__(self, vault_path: str = ".diotec360_vault"):
         self.vault_path = Path(vault_path)
         self.vault_path.mkdir(parents=True, exist_ok=True)
         self.path = self.vault_path / "precedents.json"

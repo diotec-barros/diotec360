@@ -77,3 +77,25 @@ temp/
 *.tar.gz
 *.zip
 *.rar
+
+# Local state directories (will be created in container)
+.diotec360_vault/
+.diotec360_state/
+.diotec360_moe/
+.diotec360_sentinel/
+.diotec360_vigilance/
+.diotec360_lattice/
+.diotec360_audit/
+.demo_vault/
+.demo_audit/
+.demo_state/
+.diotec360_state_nodeA/
+.diotec360_state_nodeB/
+.diotec360_vault_nodeA/
+.diotec360_vault_nodeB/
+.diotec360_sentinel_nodeA/
+.diotec360_sentinel_nodeB/
+.diotec360_sentinel_demo/
+
+# Frontend
+frontend/

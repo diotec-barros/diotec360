@@ -147,7 +147,7 @@ class CognitiveMemorySystem:
     5. **Prunable**: Old memories can be archived
     """
     
-    def __init__(self, db_path: str = ".aethel_vigilance/cognitive_memory.db",
+    def __init__(self, db_path: str = ".diotec360_vigilance/cognitive_memory.db",
                  persistence_layer: Optional[AethelPersistenceLayer] = None):
         """
         Initialize the Cognitive Memory System.

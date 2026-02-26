@@ -78,8 +78,8 @@ class StateStore:
         self.persistence = persistence_layer
         
         # Initialize Atomic Commit Layer for RVC-003 mitigation
-        state_dir = Path(".aethel_state")
-        wal_dir = Path(".aethel_state/wal")
+        state_dir = Path(".diotec360_state")
+        wal_dir = Path(".diotec360_state/wal")
         self.atomic_commit = AtomicCommitLayer(
             state_dir=state_dir,
             wal_dir=wal_dir,

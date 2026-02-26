@@ -169,7 +169,7 @@ class SentinelMonitor:
     - Biological immune systems (self/non-self discrimination)
     """
     
-    def __init__(self, db_path: str = ".aethel_sentinel/telemetry.db"):
+    def __init__(self, db_path: str = ".diotec360_sentinel/telemetry.db"):
         """
         Initialize the Sentinel Monitor.
         

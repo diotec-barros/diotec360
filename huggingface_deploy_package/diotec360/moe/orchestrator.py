@@ -82,7 +82,7 @@ class MOEOrchestrator:
         self,
         max_workers: int = 3,
         expert_timeout: int = 30,
-        telemetry_db_path: str = ".aethel_moe/telemetry.db",
+        telemetry_db_path: str = ".diotec360_moe/telemetry.db",
         cache_ttl_seconds: int = 300,
         enable_cache: bool = True
     ):

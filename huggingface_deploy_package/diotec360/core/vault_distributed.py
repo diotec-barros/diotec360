@@ -40,7 +40,7 @@ class AethelDistributedVault(AethelVault):
     - Merkle tree organization (future)
     """
     
-    def __init__(self, vault_path=".aethel_vault"):
+    def __init__(self, vault_path=".diotec360_vault"):
         super().__init__(vault_path)
         self.certificates_path = self.vault_path / "certificates"
         self.certificates_path.mkdir(exist_ok=True)

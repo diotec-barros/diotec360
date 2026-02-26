@@ -202,7 +202,7 @@ class StateSynchronizer:
     def __init__(
         self,
         node_id: str,
-        storage_path: str = ".aethel_lattice/state.db",
+        storage_path: str = ".diotec360_lattice/state.db",
         genesis_hash: Optional[str] = None
     ):
         """
@@ -815,7 +815,7 @@ def get_state_synchronizer(
         
         _state_synchronizer = StateSynchronizer(
             node_id=node_id,
-            storage_path=storage_path or ".aethel_lattice/state.db",
+            storage_path=storage_path or ".diotec360_lattice/state.db",
             genesis_hash=genesis_hash
         )
     

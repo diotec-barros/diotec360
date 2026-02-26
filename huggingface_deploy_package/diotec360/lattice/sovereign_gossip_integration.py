@@ -79,11 +79,11 @@ class SovereignGossipIntegration:
         
         Args:
             node_id: Unique identifier for this node
-            identity_path: Path to store node identity (default: .aethel_state/identity)
+            identity_path: Path to store node identity (default: .diotec360_state/identity)
             get_peers_func: Function that returns list of peer addresses
         """
         self.node_id = node_id
-        self.identity_path = Path(identity_path or ".aethel_state/identity")
+        self.identity_path = Path(identity_path or ".diotec360_state/identity")
         self.identity_path.mkdir(parents=True, exist_ok=True)
         
         self.get_peers_func = get_peers_func or (lambda: [])

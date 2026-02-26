@@ -29,7 +29,7 @@ class AethelVault:
     Uma vez provada, uma função é imutável e eterna.
     """
     
-    def __init__(self, vault_path=".aethel_vault"):
+    def __init__(self, vault_path=".diotec360_vault"):
         self.vault_path = Path(vault_path)
         self.vault_path.mkdir(exist_ok=True)
         

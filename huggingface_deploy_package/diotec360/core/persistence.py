@@ -83,7 +83,7 @@ class AethelAuditor:
     because it's append-only and doesn't affect state correctness.
     """
     
-    def __init__(self, db_path: str = ".aethel_sentinel/telemetry.db"):
+    def __init__(self, db_path: str = ".diotec360_sentinel/telemetry.db"):
         self.db_path = Path(db_path)
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         
@@ -332,7 +332,7 @@ class MerkleStateDB:
     outside the system, the root hash breaks and the system detects tampering.
     """
     
-    def __init__(self, db_path: str = ".aethel_state"):
+    def __init__(self, db_path: str = ".diotec360_state"):
         self.db_path = Path(db_path)
         self.db_path.mkdir(parents=True, exist_ok=True)
         
@@ -442,7 +442,7 @@ class ContentAddressableVault:
     the same code that was proved last year.
     """
     
-    def __init__(self, vault_path: str = ".aethel_vault"):
+    def __init__(self, vault_path: str = ".diotec360_vault"):
         self.vault_path = Path(vault_path)
         self.vault_path.mkdir(parents=True, exist_ok=True)
         
@@ -564,9 +564,9 @@ class AethelPersistenceLayer:
     
     def __init__(
         self,
-        state_path: str = ".aethel_state",
-        vault_path: str = ".aethel_vault",
-        audit_path: str = ".aethel_sentinel/telemetry.db"
+        state_path: str = ".diotec360_state",
+        vault_path: str = ".diotec360_vault",
+        audit_path: str = ".diotec360_sentinel/telemetry.db"
     ):
         print("\n" + "="*70)
         print("AETHEL PERSISTENCE LAYER v2.1.0 - INITIALIZING")
@@ -666,9 +666,9 @@ def get_persistence_layer() -> AethelPersistenceLayer:
     global _persistence_layer
     
     if _persistence_layer is None:
-        state_path = os.getenv("AETHEL_STATE_PATH", ".aethel_state")
-        vault_path = os.getenv("AETHEL_VAULT_PATH", ".aethel_vault")
-        audit_path = os.getenv("AETHEL_AUDIT_PATH", ".aethel_sentinel/telemetry.db")
+        state_path = os.getenv("AETHEL_STATE_PATH", ".diotec360_state")
+        vault_path = os.getenv("AETHEL_VAULT_PATH", ".diotec360_vault")
+        audit_path = os.getenv("AETHEL_AUDIT_PATH", ".diotec360_sentinel/telemetry.db")
         _persistence_layer = AethelPersistenceLayer(
             state_path=state_path,
             vault_path=vault_path,

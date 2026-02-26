@@ -47,7 +47,7 @@ class ExpertTelemetry:
     - Anomaly detection
     """
     
-    def __init__(self, db_path: str = ".aethel_moe/telemetry.db"):
+    def __init__(self, db_path: str = ".diotec360_moe/telemetry.db"):
         """
         Initialize telemetry system.
         
@@ -419,7 +419,7 @@ class ExpertTelemetry:
 _telemetry_instance: Optional[ExpertTelemetry] = None
 
 
-def get_expert_telemetry(db_path: str = ".aethel_moe/telemetry.db") -> ExpertTelemetry:
+def get_expert_telemetry(db_path: str = ".diotec360_moe/telemetry.db") -> ExpertTelemetry:
     """
     Get singleton instance of ExpertTelemetry.
     

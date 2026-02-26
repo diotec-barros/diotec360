@@ -110,7 +110,7 @@ class ExpertTrainingSystem:
     - Automatic model promotion
     """
     
-    def __init__(self, db_path: str = ".aethel_moe/training.db"):
+    def __init__(self, db_path: str = ".diotec360_moe/training.db"):
         """
         Initialize training system.
         
@@ -1036,7 +1036,7 @@ _training_system_instance: Optional[ExpertTrainingSystem] = None
 _ab_testing_instance: Optional[ABTestingFramework] = None
 
 
-def get_training_system(db_path: str = ".aethel_moe/training.db") -> ExpertTrainingSystem:
+def get_training_system(db_path: str = ".diotec360_moe/training.db") -> ExpertTrainingSystem:
     """
     Get singleton instance of ExpertTrainingSystem.
     

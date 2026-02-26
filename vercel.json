@@ -12,11 +12,30 @@
       "dest": "api/main.py"
     }
   ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://app.diotec360.com"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
   "env": {
     "DIOTEC360_P2P_ENABLED": "false",
-    "DIOTEC360_LATTICE_NODES": "https://diotec-diotec360-judge.hf.space,https://aethel.diotec360.com",
-    "DIOTEC360_NODE_NAME": "node3-backup",
-    "DIOTEC360_NODE_ROLE": "genesis-backup",
+    "DIOTEC360_LATTICE_NODES": "https://diotec-360-diotec-360-ia-judge.hf.space,https://api.diotec360.com",
+    "DIOTEC360_NODE_NAME": "api-production",
+    "DIOTEC360_NODE_ROLE": "genesis",
     "DIOTEC360_HEARTBEAT_INTERVAL": "5",
     "DIOTEC360_HTTP_POLL_INTERVAL": "10",
     "DIOTEC360_PEERLESS_TIMEOUT": "60",

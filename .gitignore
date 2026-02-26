@@ -49,3 +49,6 @@ aethel-judge/
 # OS
 .DS_Store
 Thumbs.db
+
+# Hugging Face deployment clone
+diotec-360-ia-judge/
