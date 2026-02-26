@@ -18,7 +18,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://app.diotec360.com"
+          "value": "https://app.diotec360.com,https://diotec360.com,https://www.diotec360.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -40,6 +40,11 @@
     "DIOTEC360_HTTP_POLL_INTERVAL": "10",
     "DIOTEC360_PEERLESS_TIMEOUT": "60",
     "DIOTEC360_ENVIRONMENT": "production",
-    "DIOTEC360_LOG_LEVEL": "INFO"
+    "DIOTEC360_LOG_LEVEL": "INFO",
+    "ALPHA_VANTAGE_API_KEY": "O3TC4CQU6GJWBNVL",
+    "PAYPAL_MODE": "live",
+    "PAYPAL_CLIENT_ID": "",
+    "PAYPAL_CLIENT_SECRET": "",
+    "PAYPAL_WEBHOOK_ID": ""
   }
 }
