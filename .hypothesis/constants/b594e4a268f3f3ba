@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\gauntlet_report.py
+# hypothesis_version: 6.151.5
+
+[0.0, 100, '=', 'AttackRecord', 'Attacks by Category:', 'attack_type', 'average_severity', 'balance', 'blocked_by_layer', 'buffer', 'by_category', 'by_detection_method', 'category', 'code_snippet', 'conservation', 'data/gauntlet.db', 'denial', 'detection_method', 'dos', 'export_time', 'injection', 'malware', 'metadata', 'overflow', 'records', 'severity', 'sql', 'timestamp', 'total_attacks', 'total_records', 'trojan', 'unknown', 'w']

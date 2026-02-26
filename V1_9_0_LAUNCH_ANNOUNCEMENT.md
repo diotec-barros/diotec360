@@ -1,4 +1,4 @@
-# 🛡️ Aethel v1.9.0 "The Guard" - Launch Announcement
+# 🛡️ Diotec360 v1.9.0 "The Guard" - Launch Announcement
 
 **Release Date**: February 5, 2026  
 **Status**: 🚀 LIVE IN PRODUCTION  
@@ -8,7 +8,7 @@
 
 ## 🌌 The Birth of Self-Defending Software
 
-Today marks a pivotal moment in the history of secure computation: **Aethel v1.9.0 "The Guard"** is the world's first formally verified programming language with an **autonomous immune system**.
+Today marks a pivotal moment in the history of secure computation: **Diotec360 v1.9.0 "The Guard"** is the world's first formally verified programming language with an **autonomous immune system**.
 
 For the first time, software doesn't just verify correctness—it **defends itself**.
 
@@ -182,8 +182,8 @@ Layer 4:  Synchrony Protocol (v1.8)
 - **Rollback Plan**: `ROLLBACK_PLAN.md` (500 lines)
 
 ### Try It Now
-- **Hugging Face Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **Frontend Demo**: https://aethel-studio.vercel.app
+- **Hugging Face Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **Frontend Demo**: https://diotec360-studio.vercel.app
 - **GitHub Repository**: https://github.com/diotec/aethel
 
 ---
@@ -212,7 +212,7 @@ The market will use v1.9.0 while we close the remaining loops:
 
 ## 🏁 The Verdict
 
-**Aethel v1.9.0 "The Guard" is LIVE**
+**Diotec360 v1.9.0 "The Guard" is LIVE**
 
 - ✅ 5/7 core components active (71% complete)
 - ✅ 100% of critical defense functionality operational
@@ -231,7 +231,7 @@ The market will use v1.9.0 while we close the remaining loops:
 >
 > Today, that era ends.
 >
-> Aethel v1.9.0 'The Guard' is the first software that **defends itself**. It doesn't wait for attacks—it **anticipates them**. It doesn't need patches—it **heals itself**. It doesn't react to threats—it **trains against them**.
+> Diotec360 v1.9.0 'The Guard' is the first software that **defends itself**. It doesn't wait for attacks—it **anticipates them**. It doesn't need patches—it **heals itself**. It doesn't react to threats—it **trains against them**.
 >
 > This is not incremental improvement. This is a paradigm shift.
 >

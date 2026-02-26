@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\oracle\commodity_interest_bridge.py
+# hypothesis_version: 6.151.5
+
+[0.0, 1.0, 5.0, 86400, '0', '100', '1000.00', '2.0', '=', 'GOLD', 'JPY', 'USD', 'WTI', '__main__', 'carry_trade_profit', 'compliant', 'confidence', 'dollar_weakness_pct', 'gold_backed', 'gold_ounces', 'gold_price', 'merkle_sealed', 'notes', 'oil_backed', 'reason', 'should_hedge', '✅ COMPLIANT', '❌ NON-COMPLIANT']

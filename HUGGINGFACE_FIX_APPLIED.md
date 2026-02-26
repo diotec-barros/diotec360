@@ -3,15 +3,15 @@
 ## ❌ Problema Encontrado
 
 ```
-ModuleNotFoundError: No module named 'aethel_parser'
+ModuleNotFoundError: No module named 'DIOTEC360_parser'
 ```
 
 O arquivo `aethel/core/kernel.py` estava usando imports antigos:
 ```python
-from aethel_parser import AethelParser  # ❌ Errado
-from aethel_judge import AethelJudge    # ❌ Errado
-from aethel_bridge import AethelBridge  # ❌ Errado
-from aethel_vault import AethelVault    # ❌ Errado
+from DIOTEC360_parser import AethelParser  # ❌ Errado
+from DIOTEC360_judge import AethelJudge    # ❌ Errado
+from DIOTEC360_bridge import AethelBridge  # ❌ Errado
+from DIOTEC360_vault import AethelVault    # ❌ Errado
 ```
 
 ## ✅ Solução Aplicada
@@ -39,7 +39,7 @@ Fix: Corrigir imports no kernel.py para usar aethel.core
 
 ## 🔗 Acompanhe o Build
 
-https://huggingface.co/spaces/diotec/aethel-judge
+https://huggingface.co/spaces/diotec/diotec360-judge
 
 Vá na aba "Logs" para ver o progresso do rebuild.
 
@@ -54,7 +54,7 @@ Após o rebuild completar:
 
 1. **Verificar Status**
    ```bash
-   curl https://diotec-aethel-judge.hf.space/health
+   curl https://diotec-diotec360-judge.hf.space/health
    ```
 
 2. **Testar API**
@@ -79,7 +79,7 @@ INFO:     Uvicorn running on http://0.0.0.0:7860
 
 ### API Funcionando:
 ```bash
-$ curl https://diotec-aethel-judge.hf.space/health
+$ curl https://diotec-diotec360-judge.hf.space/health
 {"status":"healthy"}
 ```
 

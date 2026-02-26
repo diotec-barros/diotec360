@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
-Teste de números decimais na gramática Aethel.
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Teste de números decimais na gramática Diotec360.
 """
 
 import sys
@@ -9,9 +25,9 @@ import os
 sys.path.append('.')
 
 try:
-    from aethel.core.grammar import aethel_grammar
+    from diotec360.core.grammar import DIOTEC360_grammar
     from lark import Lark
-    from aethel.core.parser import AethelParser
+    from diotec360.core.parser import DIOTEC360Parser
     
     print("✅ Módulos importados com sucesso")
     
@@ -72,7 +88,7 @@ try:
     print("\nTestando gramática atual (sem suporte a decimais):")
     print("=" * 60)
     
-    parser = Lark(aethel_grammar, parser='lalr')
+    parser = Lark(DIOTEC360_grammar, parser='lalr')
     
     for test in test_cases:
         print(f"\n{test['name']}:")
@@ -93,7 +109,7 @@ try:
     import re
     
     # Encontrar a linha NUMBER na gramática
-    lines = aethel_grammar.split('\n')
+    lines = DIOTEC360_grammar.split('\n')
     for line in lines:
         if 'NUMBER:' in line:
             print(f"Linha encontrada: {line.strip()}")

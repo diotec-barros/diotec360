@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 End-to-End Integration Test: Learning Cycle
 
 This test verifies the complete learning cycle:
@@ -14,10 +30,10 @@ This validates the autonomous learning capability of the Sentinel.
 import pytest
 import tempfile
 import time
-from aethel.core.semantic_sanitizer import SemanticSanitizer
-from aethel.core.self_healing import SelfHealingEngine
-from aethel.core.adversarial_vaccine import AdversarialVaccine
-from aethel.core.gauntlet_report import GauntletReport, AttackRecord
+from diotec360.core.semantic_sanitizer import SemanticSanitizer
+from diotec360.core.self_healing import SelfHealingEngine
+from diotec360.core.adversarial_vaccine import AdversarialVaccine
+from diotec360.core.gauntlet_report import GauntletReport, AttackRecord
 
 
 class TestLearningCycleIntegration:

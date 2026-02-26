@@ -1,12 +1,28 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Aethel v2.2.0 - Sovereign Identity Demo
 Demonstrates cryptographic signatures for transaction authentication
 
 Philosophy: "The private key is the soul. It never leaves the sanctuary."
 """
 
-from aethel.core.crypto import get_aethel_crypt
-from aethel.core.state import AethelStateManager
+from diotec360.core.crypto import get_aethel_crypt
+from diotec360.core.state import AethelStateManager
 import json
 
 

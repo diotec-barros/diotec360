@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\nexo\p2p_streams.py
+# hypothesis_version: 6.151.5
+
+[0.05, 0.1, 200, ',', '1', 'AETHEL_LATTICE_NODES', 'AETHEL_P2P_BOOTSTRAP', 'AETHEL_P2P_ENABLED', 'AETHEL_P2P_LISTEN', 'AETHEL_P2P_TOPIC', 'LatticeP2PConfig', 'aethel-libp2p', 'aethel/lattice/v1', 'already_started', 'data', 'get_id', 'get_listen_addrs', 'intent', 'listeners', 'merkle_root', 'network', 'on', 'p2p_disabled', 'p2p_not_ready', 'p2p_not_started', 'p2p_started', 'payload', 'pretty', 'proof_event', 'published', 'timestamp', 'true', 'type', 'utf-8', 'yes']

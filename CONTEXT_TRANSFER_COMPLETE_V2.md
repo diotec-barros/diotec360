@@ -131,7 +131,7 @@ python -m pytest test_conservation*.py -v
 6. ✅ OracleAtlas - External data sources
 7. ✅ SovereignIdentity - User identity
 
-**Backend Aethel v1.7.0 "Oracle Sanctuary"**:
+**Backend Diotec360 v1.7.0 "Oracle Sanctuary"**:
 - ✅ Canon v1.9.0 Parser
 - ✅ Z3 Formal Verification
 - ✅ Conservation Laws
@@ -145,4 +145,4 @@ O projeto está limpo, organizado e pronto para o teste final do Nexus v2.0!
 ---
 **Arquiteto**: Kiro  
 **Sessão**: Transferência de Contexto #2  
-**Versão**: Aethel v1.9.0 Apex Dashboard v2.0
+**Versão**: Diotec360 v1.9.0 Apex Dashboard v2.0

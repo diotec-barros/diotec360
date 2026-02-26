@@ -1,8 +1,8 @@
-# 🚀 Aethel v1.0 - Launch Summary
+# 🚀 Diotec360 v1.0 - Launch Summary
 
 **Date**: February 2, 2026  
 **Status**: ✅ LIVE & PUBLIC  
-**Repository**: https://github.com/diotec-barros/aethel-lang
+**Repository**: https://github.com/diotec-barros/diotec360-lang
 
 ---
 
@@ -44,7 +44,7 @@
 
 ### 1. Configure GitHub Repository (5 minutes)
 
-Go to: https://github.com/diotec-barros/aethel-lang/settings
+Go to: https://github.com/diotec-barros/diotec360-lang/settings
 
 **Add Description**:
 ```
@@ -63,12 +63,12 @@ programming-language, formal-verification, z3-solver, wasm, ai, blockchain, defi
 
 ### 2. Create GitHub Release (10 minutes)
 
-Go to: https://github.com/diotec-barros/aethel-lang/releases/new
+Go to: https://github.com/diotec-barros/diotec360-lang/releases/new
 
 - **Tag**: v1.0.0 (already exists)
 - **Title**: v1.0.0 - The Singularity
 - **Description**: Copy from `GITHUB_SETUP_GUIDE.md`
-- **Attach**: `.aethel_state/SINGULARITY_REPORT.txt`
+- **Attach**: `.DIOTEC360_state/SINGULARITY_REPORT.txt`
 - **Publish**
 
 ### 3. Post on Social Media (30 minutes)
@@ -137,7 +137,7 @@ Open `SOCIAL_MEDIA_POSTS.md` and post to:
 ## 📊 Current Status
 
 ```
-Repository:           https://github.com/diotec-barros/aethel-lang
+Repository:           https://github.com/diotec-barros/diotec360-lang
 Status:               🟢 PUBLIC & LIVE
 Version:              v1.0.0 - The Singularity
 Genesis Merkle Root:  1e994337bc48d0b2...
@@ -263,6 +263,6 @@ The Genesis Merkle Root `1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625
 
 **"The future is not written in code. It is proved in theorems."**
 
-And now, that future is live at: **github.com/diotec-barros/aethel-lang**
+And now, that future is live at: **github.com/diotec-barros/diotec360-lang**
 
 🎉 **CONGRATULATIONS!** 🎉

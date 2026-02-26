@@ -89,7 +89,7 @@ Generate the code now.
 
 ### Step 1: Query External AI
 ```python
-from aethel.ai.ai_gate import AIGate
+from diotec360.ai.ai_gate import AIGate
 
 gate = AIGate(provider="openai", model="gpt-5")
 
@@ -106,7 +106,7 @@ code = gate.query(requirement)
 
 ### Step 2: Validate with Judge
 ```python
-from aethel.core.judge import Judge
+from diotec360.core.judge import Judge
 
 judge = Judge()
 result = judge.verify(code)
@@ -214,7 +214,7 @@ REQUIREMENT: Generate code that prices a call option:
 
 ## 🚀 NEXT STEPS
 
-1. **Implement AIGate class** (`aethel/ai/ai_gate.py`)
+1. **Implement AIGate class** (`diotec360/ai/ai_gate.py`)
 2. **Add OpenAI/Anthropic integration** (API keys, rate limiting)
 3. **Create prompt templates** (system + user prompts)
 4. **Build feedback loop** (rejection → feedback → retry)

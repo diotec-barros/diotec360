@@ -1,5 +1,5 @@
 ═══════════════════════════════════════════════════════════════════════════
-  🎯 RESPOSTA RÁPIDA PARA DIONÍSIO - AETHEL V1.9.0
+  🎯 RESPOSTA RÁPIDA PARA DIONÍSIO - Diotec360 v1.9.0
 ═══════════════════════════════════════════════════════════════════════════
 
 📋 QUESTÃO 1: AS 6 MURALHAS + SIMBIONTE
@@ -261,7 +261,7 @@ PRÓXIMO PASSO:
 
 MENSAGEM FINAL:
 "Enquanto o mundo dorme em incerteza,
- a Aethel vigia em certeza matemática.
+ a Diotec360 vigia em certeza matemática.
  
  O silêncio do erro é a música da Aethel."
 

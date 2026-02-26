@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 DEMO: Revenue Pulse - Automated Version
 ========================================
 
@@ -14,9 +30,9 @@ import time
 import random
 from decimal import Decimal
 
-from aethel.core.judge_billing_bridge import get_judge_billing_bridge
-from aethel.core.billing import get_billing_kernel, BillingTier, OperationType
-from aethel.core.revenue_pulse import get_revenue_pulse
+from diotec360.core.judge_billing_bridge import get_judge_billing_bridge
+from diotec360.core.billing import get_billing_kernel, BillingTier, OperationType
+from diotec360.core.revenue_pulse import get_revenue_pulse
 
 
 def main():

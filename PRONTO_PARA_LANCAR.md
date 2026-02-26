@@ -1,4 +1,4 @@
-# ✅ AETHEL v1.9.0 "APEX" - PRONTO PARA LANÇAR
+# ✅ Diotec360 v1.9.0 "APEX" - PRONTO PARA LANÇAR
 
 **Data**: 7 de Fevereiro de 2026  
 **Status**: 🟢 CERTIFICADO E PRONTO
@@ -66,7 +66,7 @@ Execute estes comandos:
 # 2. Commit e Tag
 git add .
 git commit -m "Release v1.9.0 Apex - Autonomous Sentinel + StdLib v2.0"
-git tag -a v1.9.0 -m "Aethel v1.9.0 Apex"
+git tag -a v1.9.0 -m "Diotec360 v1.9.0 Apex"
 git push origin main
 git push origin v1.9.0
 
@@ -77,7 +77,7 @@ python -m build
 python -m twine upload dist/aethel-1.9.0*
 
 # 5. GitHub Release (via web)
-# https://github.com/aethel-lang/aethel-core/releases/new
+# https://github.com/diotec360-lang/aethel-core/releases/new
 ```
 
 ---

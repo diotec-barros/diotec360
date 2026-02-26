@@ -1,4 +1,4 @@
-# 🎭 Aethel v1.6.0 - Ghost Protocol Summary
+# 🎭 Diotec360 v1.6.0 - Ghost Protocol Summary
 
 **Release Date**: February 4, 2026  
 **Status**: ✅ CORE COMPLETE | 🔄 INTEGRATION IN PROGRESS

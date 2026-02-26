@@ -60,7 +60,7 @@ Um sistema que permite:
 └─────────────────────────────────────────────────────────────┘
                             ↕
 ┌─────────────────────────────────────────────────────────────┐
-│              Aethel Virtual Card Gateway                    │
+│              Diotec360 virtual Card Gateway                    │
 │  • Gera cartão virtual temporário                           │
 │  • Define limites e validade                                │
 │  • Valida com Judge (conservação)                           │
@@ -217,7 +217,7 @@ Aethel: Bloqueia transação (merchant não autorizado)
 1. Cliente solicita via WhatsApp
    "Crie cartão virtual de $50 para Netflix"
 
-2. Aethel valida com Judge
+2. Diotec360 valida com Judge
    - Saldo disponível? ✅
    - Limite respeitado? ✅
    - Conservação garantida? ✅
@@ -251,7 +251,7 @@ Aethel: Bloqueia transação (merchant não autorizado)
    - Limite disponível? ✅
    - Merchant autorizado? ✅
 
-3. Aethel valida com Judge
+3. Diotec360 valida com Judge
    - Conservação mantida? ✅
    - Limites respeitados? ✅
    - Regras cumpridas? ✅

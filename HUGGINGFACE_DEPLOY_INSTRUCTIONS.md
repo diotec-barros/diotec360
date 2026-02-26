@@ -49,7 +49,7 @@ Os seguintes arquivos foram criados e estão prontos para upload:
 2. Clique no menu de **3 pontinhos** (ao lado de "Settings" no topo)
 3. Escolha **"Embed this Space"**
 4. Copie o **"Direct URL"**
-   - Será algo como: `https://diotec-aethel-judge.hf.space`
+   - Será algo como: `https://diotec-diotec360-judge.hf.space`
 
 ### PASSO 5: Atualizar Frontend na Vercel
 

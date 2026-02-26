@@ -1,6 +1,21 @@
 #!/bin/bash
+# Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#!/bin/bash
 # ========================================
-# Aethel v3.0.5 - Node 2 Deployment
+# Diotec360 v3.0.5 - Node 2 Deployment
 # Target: diotec360.com Primary Server
 # ========================================
 
@@ -8,7 +23,7 @@ set -e  # Exit on error
 
 echo ""
 echo "========================================"
-echo "  AETHEL v3.0.5 - NODE 2 DEPLOYMENT"
+echo "  Diotec360 v3.0.5 - NODE 2 DEPLOYMENT"
 echo "  Target: diotec360.com"
 echo "========================================"
 echo ""
@@ -28,7 +43,7 @@ ssh $SERVER "mkdir -p $DEPLOY_DIR"
 echo ""
 echo "[3/8] Uploading application files..."
 rsync -avz --exclude='.git' --exclude='node_modules' --exclude='__pycache__' \
-  aethel/ $SERVER:$DEPLOY_DIR/aethel/
+  aethel/ $SERVER:$DEPLOY_DIR/diotec360/
 rsync -avz --exclude='.git' --exclude='node_modules' --exclude='__pycache__' \
   api/ $SERVER:$DEPLOY_DIR/api/
 
@@ -39,8 +54,8 @@ scp .env.node2.diotec360 $SERVER:$DEPLOY_DIR/.env
 
 echo ""
 echo "[5/8] Uploading genesis state..."
-rsync -avz .aethel_vault/ $SERVER:$DEPLOY_DIR/.aethel_vault/
-rsync -avz .aethel_state/ $SERVER:$DEPLOY_DIR/.aethel_state/
+rsync -avz .DIOTEC360_vault/ $SERVER:$DEPLOY_DIR/.DIOTEC360_vault/
+rsync -avz .DIOTEC360_state/ $SERVER:$DEPLOY_DIR/.DIOTEC360_state/
 
 echo ""
 echo "[6/8] Installing dependencies..."
@@ -50,7 +65,7 @@ echo ""
 echo "[7/8] Creating systemd service..."
 ssh $SERVER "sudo tee /etc/systemd/system/$SERVICE_NAME.service > /dev/null << 'EOF'
 [Unit]
-Description=Aethel Lattice Node 2
+Description=DIOTEC360 LATTICE Node 2
 After=network.target
 
 [Service]

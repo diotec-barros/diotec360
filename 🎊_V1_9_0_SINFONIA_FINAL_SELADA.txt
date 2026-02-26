@@ -1,6 +1,6 @@
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   🏛️  AETHEL V1.9.0 - AUTONOMOUS SENTINEL - SINFONIA FINAL  🏛️         ║
+║   🏛️  Diotec360 v1.9.0 - AUTONOMOUS SENTINEL - SINFONIA FINAL  🏛️         ║
 ║                                                                          ║
 ║   ✅ SELADA - 19 de Fevereiro de 2026                                   ║
 ║                                                                          ║
@@ -130,7 +130,7 @@
 
 📄 DOCUMENTOS PRINCIPAIS:
 
-   1. AETHEL_V1_9_0_STABLE_FINAL_REPORT.md (ESTE É O DOCUMENTO MESTRE)
+   1. DIOTEC360_V1_9_0_STABLE_FINAL_REPORT.md (ESTE É O DOCUMENTO MESTRE)
    2. TASK_13_2_PRINCIPIO_DO_PESO_CONSTANTE_FINAL.md
    3. TASK_14_FINAL_GAUNTLET_REPORT.md
    4. 🎯_TASK_13_2_SELADA_PESO_CONSTANTE.txt
@@ -178,7 +178,7 @@
 
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   "A Aethel é a infraestrutura de segurança mais eficiente do planeta,  ║
+║   "A Diotec360 é a infraestrutura de segurança mais eficiente do planeta,  ║
 ║    não por sorte, mas por DESIGN INABALÁVEL."                           ║
 ║                                                                          ║
 ║   — O Arquiteto, 2026                                                   ║

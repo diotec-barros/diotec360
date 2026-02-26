@@ -1,8 +1,8 @@
-# Aethel v2.1.0 "The Intelligence Layer" - Executive Summary
+# Diotec360 v2.1.0 "The Intelligence Layer" - Executive Summary
 
 ## 🎯 ONE-SENTENCE SUMMARY
 
-Aethel v2.1.0 adds a Mixture of Experts (MOE) intelligence layer that makes the Judge 10x smarter while maintaining 100% backward compatibility and 95.9% test success rate.
+Diotec360 v2.1.0 adds a Mixture of Experts (MOE) intelligence layer that makes the Judge 10x smarter while maintaining 100% backward compatibility and 95.9% test success rate.
 
 ---
 
@@ -165,7 +165,7 @@ Continuous learning from production data, adaptive improvement over time.
 
 ## 🏁 CONCLUSION
 
-Aethel v2.1.0 is **READY FOR PRODUCTION**.
+Diotec360 v2.1.0 is **READY FOR PRODUCTION**.
 
 - ✅ Security: Perfect (0 bugs)
 - ✅ Performance: Excellent (<1% overhead)

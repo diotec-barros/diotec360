@@ -18,7 +18,7 @@ Mantendo a arquitetura Triangle testada localmente:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel)                                   │
@@ -28,7 +28,7 @@ Mantendo a arquitetura Triangle testada localmente:
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
 │  │  ├─ URL: https://hf.diotec360.com                   │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
 │  │  └─ Local: porta 8001                               │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Diotec360 (Principal)                   │
@@ -52,7 +52,7 @@ Mantendo a arquitetura Triangle testada localmente:
 
 | Nome | Tipo | Valor | TTL | Função |
 |------|------|-------|-----|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | 60 | Node 1 (HF) |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | Node 1 (HF) |
 | `node2` | A | `[IP do servidor]` | 60 | Node 2 (Local) |
 | `backup` | CNAME | `cname.vercel-dns.com` | 60 | Node 3 (Vercel) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | Frontend |
@@ -68,7 +68,7 @@ Mantendo a arquitetura Triangle testada localmente:
 deploy_node1_huggingface.bat
 
 # Aguarde build (5-10 min)
-# Teste: curl https://diotec-aethel-judge.hf.space/health
+# Teste: curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 ---
@@ -106,7 +106,7 @@ python verify_production_triangle.py
 
 **Configure DNS no Vercel:**
 
-1. `hf.diotec360.com` → CNAME → `diotec-aethel-judge.hf.space`
+1. `hf.diotec360.com` → CNAME → `diotec-diotec360-judge.hf.space`
 2. `node2.diotec360.com` → A → `[IP do seu servidor]`
 3. `backup.diotec360.com` → CNAME → `cname.vercel-dns.com`
 

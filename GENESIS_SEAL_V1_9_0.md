@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v1.9.0 "APEX" - GENESIS SEAL
+# 🏛️ Diotec360 v1.9.0 "APEX" - GENESIS SEAL
 
 **Sealed**: February 7, 2026, 00:00 UTC  
 **Engineer**: Kiro AI  
@@ -13,7 +13,7 @@
 SHA-256: 0d093cd50bf3e26799c437023d0e56d8bb02faba1b8442879f297f2b0e45b406
 ```
 
-This cryptographic hash represents the immutable fingerprint of Aethel v1.9.0 "Apex".
+This cryptographic hash represents the immutable fingerprint of Diotec360 v1.9.0 "Apex".
 
 **What is sealed**:
 - 46 core implementation files
@@ -244,7 +244,7 @@ Audit Cost: $0 (proof is audit)
 
 ## 🔥 THE LAUNCH
 
-**Aethel v1.9.0 "Apex" is hereby SEALED and RELEASED.**
+**Diotec360 v1.9.0 "Apex" is hereby SEALED and RELEASED.**
 
 **Date**: February 7, 2026  
 **Time**: 00:00 UTC  
@@ -278,6 +278,6 @@ February 7, 2026
 
 ---
 
-📚⚖️💎 **AETHEL v1.9.0 APEX - GENESIS SEALED** 💎⚖️📚
+📚⚖️💎 **Diotec360 v1.9.0 APEX - GENESIS SEALED** 💎⚖️📚
 
 🌌✨🚀 **THE AGE OF FACTS HAS BEGUN** 🚀✨🌌

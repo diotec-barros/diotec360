@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\byzantine_node.py
+# hypothesis_version: 6.151.5
+
+[b'corrupted', b'fake_block_1', b'fake_block_2', 1.0, 100, 1000, 'conflicting_votes', 'consensus', 'digest', 'double_signing', 'invalid_proofs', 'random_corruption', 'sequence', 'silent', 'verification', 'view', 'wrong_sequence', 'wrong_view']

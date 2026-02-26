@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Property-Based Tests for Ghost Identity Integration with Consensus
 
 Tests Property 22: Zero-Knowledge Privacy Preservation
@@ -13,20 +29,20 @@ import pytest
 from hypothesis import given, settings, strategies as st
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
-from aethel.core.ghost_identity import GhostIdentity
-from aethel.consensus.ghost_consensus import (
+from diotec360.core.ghost_identity import GhostIdentity
+from diotec360.consensus.ghost_consensus import (
     GhostConsensusIntegration,
     GhostConsensusConfig
 )
-from aethel.consensus.data_models import (
+from diotec360.consensus.data_models import (
     ConsensusMessage,
     PrepareMessage,
     CommitMessage,
     MessageType,
     ProofBlock
 )
-from aethel.consensus.consensus_engine import ConsensusEngine
-from aethel.consensus.mock_network import MockP2PNetwork
+from diotec360.consensus.consensus_engine import ConsensusEngine
+from diotec360.consensus.mock_network import MockP2PNetwork
 
 
 class TestGhostConsensusIntegration:

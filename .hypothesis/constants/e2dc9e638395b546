@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\oracle\interest_rate_oracle.py
+# hypothesis_version: 6.151.5
+
+[0.5, 86400, '0.10', '4.35', '4.50', '5.25', '5.50', '=', 'AUD', 'Bank of Japan (BoJ)', 'EUR', 'GBP', 'JPY', 'USD', '__main__', 'authenticity_seal', 'central_bank', 'currency', 'demo', 'fallback_reference', 'rate', 'source', 'timestamp']

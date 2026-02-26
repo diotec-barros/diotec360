@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\adversarial_vaccine.py
+# hypothesis_version: 6.151.5
+
+[0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 1000, '\n# comment', '0', '1', '1==1', 'True', 'adversarial_vaccine', 'architect_generated', 'blocked', 'blocked_by', 'code', 'deep_recursion', 'def f(): f()\nf()', 'dos', 'i', 'infinite_recursion', 'j', 'mutation', 'n', 'name', 'novel', 'original', 'pass', 'reached_judge', 'recursion', 'semantic_sanitizer', 'severity', 'template', 'trojan', 'type', 'unbounded_loop', 'while 1: continue', 'while True: pass', 'x']

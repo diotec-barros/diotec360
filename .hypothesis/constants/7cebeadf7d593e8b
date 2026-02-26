@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\lattice\p2p_node.py
+# hypothesis_version: 6.151.5
+
+[0.0, 5.0, 30.0, 200, 300, 1000, 8080, '0.0.0.0', 'GossipMessage', 'PeerInfo', 'accepted', 'duplicate', 'error', 'gossip_rounds', 'health_checks', 'healthy', 'merkle_root', 'message_id', 'message_type', 'messages_dropped', 'messages_received', 'messages_sent', 'metrics', 'node', 'node_id', 'origin_peer', 'payload', 'peer_announce', 'peer_count', 'peer_id', 'peers_discovered', 'seen_by', 'state_update', 'state_version', 'status', 'stopped', 'timestamp', 'ttl', 'type', 'uptime', 'url']

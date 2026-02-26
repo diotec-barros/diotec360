@@ -18,7 +18,7 @@ Hoje, o Kiro tentou ativar o P2P e o libp2p não respondeu como esperado. Em qua
 - ❌ Retornado erro fatal
 - ❌ Requerido intervenção manual
 
-**Na Aethel v3.0.4, o sistema disse:**
+**Na Diotec360 v3.0.4, o sistema disse:**
 
 > "O P2P falhou, mas eu não vou morrer."
 

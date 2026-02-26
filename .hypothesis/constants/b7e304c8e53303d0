@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\lattice\gossip.py
+# hypothesis_version: 6.151.5
+
+[0.5, 100, 200, 1000, ',', ':', 'GossipMessage', 'cached_messages', 'duplicates_filtered', 'expected_public_key', 'known_nodes', 'message_id', 'message_ids', 'message_type', 'messages_forwarded', 'messages_received', 'messages_sent', 'origin_node', 'payload', 'pending_messages', 'public_key', 'received_public_key', 'seen_by', 'sender_id', 'signature', 'signature_failures', 'timestamp', 'ttl']

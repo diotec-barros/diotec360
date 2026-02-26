@@ -518,6 +518,6 @@ We have demonstrated that:
 **Version**: 1.0  
 **Status**: PROVED
 
-**Contact**: team@aethel-lang.org  
-**Website**: https://aethel-lang.org  
-**GitHub**: https://github.com/aethel-lang/aethel-core
+**Contact**: team@diotec360-lang.org  
+**Website**: https://diotec360-lang.org  
+**GitHub**: https://github.com/diotec360-lang/aethel-core

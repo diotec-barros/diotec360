@@ -7,7 +7,7 @@ STATUS ATUAL:
 
 ✅ Domínio adicionado: aethel.diotec360.com
 ⚠️ Status: DNS Change Recommended
-📍 Projeto: aethel-lang.vercel.app
+📍 Projeto: diotec360-lang.vercel.app
 🎯 Ambiente: Production
 
 PRÓXIMO PASSO: CONFIGURAR DNS
@@ -127,7 +127,7 @@ ARQUITETURA COMPLETA:
 Frontend:  https://aethel.diotec360.com (Vercel)
            ↓ conecta com ↓
 API Node2: https://api.diotec360.com (Sovereign - Vercel)
-API Node1: https://diotec-aethel-judge.hf.space (Hugging Face)
+API Node1: https://diotec-diotec360-judge.hf.space (Hugging Face)
 API Node3: https://backup.diotec360.com (Backup - Vercel)
 
 ═══════════════════════════════════════════════════════════════

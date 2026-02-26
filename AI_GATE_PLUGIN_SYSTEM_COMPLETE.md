@@ -44,7 +44,7 @@
 - `aethel/plugins/llm_plugin.py` - LLM plugin
 - `aethel/plugins/rl_plugin.py` - RL plugin
 - `demo_plugin_system.py` - Complete demo
-- `AETHEL_PLUGIN_SYSTEM_SPEC.md` - Full specification
+- `DIOTEC360_PLUGIN_SYSTEM_SPEC.md` - Full specification
 
 **Commercial Value**: $100M ARR by 2028
 
@@ -115,7 +115,7 @@
 └───────┼──────────────────────────────────────┘
         │
 ┌───────▼──────────────────────────────────────┐
-│         AETHEL CORE                          │
+│         Diotec360 core                          │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
 │  │  Judge   │  │ Sentinel │  │  Weaver  │  │
 │  │   (Z3)   │  │ (Monitor)│  │  (WASM)  │  │
@@ -263,7 +263,7 @@ def transfer(amount):
 
 ### Documentation
 - ✅ AI-Gate specification (AI_GATE_SPEC.md)
-- ✅ Plugin System specification (AETHEL_PLUGIN_SYSTEM_SPEC.md)
+- ✅ Plugin System specification (DIOTEC360_PLUGIN_SYSTEM_SPEC.md)
 - ✅ This completion report
 
 ### Demos

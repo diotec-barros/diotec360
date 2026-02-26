@@ -274,7 +274,7 @@ Reentry Calculation: bf00ccd3dc40ce43...cdf8b611
 
 ---
 
-## Comparison: Aethel vs. Traditional Approaches
+## Comparison: Diotec360 vs. Traditional Approaches
 
 ### Traditional Development (C++/Rust)
 ```

@@ -50,7 +50,7 @@
     ✅ Demo 1: Generate Sovereign Identity
        ├─ ED25519 keypair generated in 363.83ms
        ├─ Public key: fbfb0f50188011951b5dd85cb24c054d...
-       └─ Account address: aethel_da41696b7a4e91050da1201536b912b7c736f89a
+       └─ Account address: DIOTEC360_da41696b7a4e91050da1201536b912b7c736f89a
     
     ✅ Demo 2: Create Unsigned Transaction
        ├─ Transaction created WITHOUT signature
@@ -184,17 +184,17 @@
     
     Use in Production:
     
-        from aethel.core.crypto import get_aethel_crypt
+        from aethel.core.crypto import get_DIOTEC360_crypt
         from aethel.core.judge import AethelJudge
         
         # Generate keypair for user
-        crypto = get_aethel_crypt()
+        crypto = get_DIOTEC360_crypt()
         keypair = crypto.generate_keypair()
         
         # Create signed transaction
         transaction_data = {
             'sender': crypto.derive_address(keypair.public_key_hex),
-            'receiver': 'aethel_treasury',
+            'receiver': 'DIOTEC360_treasury',
             'amount': 1000000,
             'public_key': keypair.public_key_hex
         }

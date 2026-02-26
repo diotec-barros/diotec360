@@ -43,7 +43,7 @@
 
 ### 2. API Endpoints ✅
 
-**Base URL**: https://diotec-aethel-judge.hf.space
+**Base URL**: https://diotec-diotec360-judge.hf.space
 
 **Novos Endpoints**:
 - `GET /api/oracle/list` - Lista oracles ✅
@@ -73,14 +73,14 @@ Layer 5: Oracle Verifier (external data) ⭐ NEW v1.7.0
 
 ## 📊 COMMITS REALIZADOS
 
-### Repositório Principal (aethel-lang)
+### Repositório Principal (diotec360-lang)
 ```
 c82ea81 - HOTFIX: Fix oracle/stats + improve test compatibility
 b7dacd4 - Deploy documentation and status reports
 8637cf4 - Oracle implementation + tests + docs
 ```
 
-### Repositório HF Space (aethel-judge)
+### Repositório HF Space (diotec360-judge)
 ```
 805329a - HOTFIX: Fix oracle/stats endpoint bug
 e8d8664 - HOTFIX: Export oracle module in __init__.py
@@ -96,7 +96,7 @@ cef179b - Add oracle.py + grammar.py
 
 ### Teste 1: Version Check
 ```bash
-curl https://diotec-aethel-judge.hf.space/
+curl https://diotec-diotec360-judge.hf.space/
 ```
 
 **Resultado**:
@@ -112,7 +112,7 @@ curl https://diotec-aethel-judge.hf.space/
 
 ### Teste 2: Oracle List
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/oracle/list
+curl https://diotec-diotec360-judge.hf.space/api/oracle/list
 ```
 
 **Resultado**:
@@ -131,7 +131,7 @@ curl https://diotec-aethel-judge.hf.space/api/oracle/list
 
 ### Teste 3: Oracle Fetch
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 ```
 
 **Resultado**:
@@ -148,7 +148,7 @@ curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 
 ### Teste 4: Oracle Stats
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/oracle/stats
+curl https://diotec-diotec360-judge.hf.space/api/oracle/stats
 ```
 
 **Resultado**:
@@ -333,7 +333,7 @@ O Santuário está aberto. Os Oráculos falam. A matemática verifica o mundo ex
 
 ---
 
-**Backend**: https://diotec-aethel-judge.hf.space  
+**Backend**: https://diotec-diotec360-judge.hf.space  
 **Version**: 1.7.0 "Oracle Sanctuary"  
 **Status**: 🟢 100% OPERATIONAL  
 **Filosofia**: "Zero trust, pure verification"  

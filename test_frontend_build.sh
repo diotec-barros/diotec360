@@ -1,4 +1,19 @@
 #!/bin/bash
+# Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#!/bin/bash
 # Script para testar se o frontend compila corretamente
 
 echo "========================================="
@@ -158,7 +173,7 @@ echo "4. Teste a responsividade em diferentes tamanhos de tela"
 echo ""
 echo "Para deploy em produção:"
 echo "1. Configure Vercel (frontend) e Railway (backend)"
-echo "2. Configure domínio aethel-lang.org"
+echo "2. Configure domínio diotec360-lang.org"
 echo "3. Configure Stripe para pagamentos"
 echo ""
 echo "✅ Frontend pronto para os próximos passos!"

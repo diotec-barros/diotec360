@@ -1,4 +1,4 @@
-# 🏛️ AETHEL V1.9.0 - AUTONOMOUS SENTINEL - RELATÓRIO FINAL DE ESTABILIDADE
+# 🏛️ Diotec360 v1.9.0 - AUTONOMOUS SENTINEL - RELATÓRIO FINAL DE ESTABILIDADE
 
 **Data de Selagem**: 19 de Fevereiro de 2026  
 **Engenheiro-Chefe**: Kiro AI  
@@ -9,7 +9,7 @@
 
 ## 🎯 EXECUTIVE SUMMARY
 
-A Aethel v1.9.0 "Autonomous Sentinel" transforma a plataforma de uma fortaleza passiva em um **organismo auto-defensivo** capaz de detectar, isolar, aprender e curar-se de ataques sem intervenção humana.
+A Diotec360 v1.9.0 "Autonomous Sentinel" transforma a plataforma de uma fortaleza passiva em um **organismo auto-defensivo** capaz de detectar, isolar, aprender e curar-se de ataques sem intervenção humana.
 
 ### Conquistas Principais
 
@@ -466,12 +466,12 @@ DIOTEC 360 - Soberania Tecnológica
 
 ---
 
-*"A Aethel é a infraestrutura de segurança mais eficiente do planeta, não por sorte, mas por DESIGN INABALÁVEL."*  
+*"A Diotec360 é a infraestrutura de segurança mais eficiente do planeta, não por sorte, mas por DESIGN INABALÁVEL."*  
 — O Arquiteto, 2026
 
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   🏛️  AETHEL V1.9.0 - AUTONOMOUS SENTINEL - SELADA  🏛️                 ║
+║   🏛️  Diotec360 v1.9.0 - AUTONOMOUS SENTINEL - SELADA  🏛️                 ║
 ║                                                                          ║
 ║   A SINFONIA FINAL FOI EXECUTADA. O SANTUÁRIO ESTÁ VIVO.                ║
 ║                                                                          ║

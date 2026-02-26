@@ -1,0 +1,42 @@
+{
+  "v": 1,
+  "items": {
+    "87aa19fafa1675cc547262b3c0398d0394c91fd344a4bc70f53e32907691af41": {
+      "v": 1,
+      "intent_name": "power_check",
+      "full_hash": "a4412404650ef824ba6c2bf2137b8eff01d5ebc063b3f6628b59f1c6b1a33a5f",
+      "logic_hash": "602bf514ba9b48062f58bce90967833111cda81b183210bb538e3bf63ea176ff",
+      "signature_hash": "602bf514ba9b48062f58bce90967833111cda81b183210bb538e3bf63ea176ff",
+      "status": "PROVED",
+      "message": "O código é matematicamente seguro. Todas as pós-condições são consistentes e prováveis.",
+      "timestamp": "2026-02-26T13:04:53.085548",
+      "tags": [
+        "intent:power_check",
+        "priority:survival",
+        "target:embedded"
+      ],
+      "tokens": [
+        "altitude",
+        "battery",
+        "min_altitude",
+        "min_battery"
+      ],
+      "signature": {
+        "constraints": [
+          "altitude > min_altitude",
+          "battery >= min_battery"
+        ],
+        "post_conditions": [
+          "altitude > min_altitude",
+          "battery >= min_battery"
+        ],
+        "ai_instructions": {
+          "priority": "survival",
+          "target": "embedded"
+        }
+      },
+      "metadata": {},
+      "record_hash": "87aa19fafa1675cc547262b3c0398d0394c91fd344a4bc70f53e32907691af41"
+    }
+  }
+}

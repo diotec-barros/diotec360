@@ -32,8 +32,8 @@
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
 │  │  ├─ URL Externa: https://api.diotec360.com          │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │  │  └─ Porta: 8000                                     │
 │  │                                                      │
 │  └─ 🔵 Node 2: Local (Principal)                       │
@@ -53,7 +53,7 @@
 
 | Nome | Tipo | Valor | TTL | Função |
 |------|------|-------|-----|--------|
-| `api` | CNAME | `diotec-aethel-judge.hf.space` | 60 | Node 1 (HF) |
+| `api` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | Node 1 (HF) |
 | `node2` | A | `[IP do servidor local]` | 60 | Node 2 (Local) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | Frontend |
 
@@ -81,28 +81,28 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ### Node 1 - Hugging Face (.env.node1.huggingface)
 ```env
 # P2P Configuration - DISABLED (HTTP-Only Resilience Mode)
-AETHEL_P2P_ENABLED=false
+DIOTEC360_P2P_ENABLED=false
 
 # HTTP Sync Fallback Node
-AETHEL_LATTICE_NODES=https://node2.diotec360.com
+DIOTEC360_LATTICE_NODES=https://node2.diotec360.com
 
 # Storage Directories
-AETHEL_STATE_DIR=.aethel_state
-AETHEL_VAULT_DIR=.aethel_vault
-AETHEL_SENTINEL_DIR=.aethel_sentinel
+DIOTEC360_STATE_DIR=.DIOTEC360_state
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel
 
 # Heartbeat Configuration
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_PEERLESS_TIMEOUT=60
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_PEERLESS_TIMEOUT=60
+DIOTEC360_HTTP_POLL_INTERVAL=10
 
 # Node Identity
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-public
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-public
 
 # Production Settings
-AETHEL_ENVIRONMENT=production
-AETHEL_LOG_LEVEL=INFO
+DIOTEC360_ENVIRONMENT=production
+DIOTEC360_LOG_LEVEL=INFO
 ```
 
 ---
@@ -110,28 +110,28 @@ AETHEL_LOG_LEVEL=INFO
 ### Node 2 - Local (.env.node2.local)
 ```env
 # P2P Configuration - DISABLED (HTTP-Only Resilience Mode)
-AETHEL_P2P_ENABLED=false
+DIOTEC360_P2P_ENABLED=false
 
 # HTTP Sync Fallback Node
-AETHEL_LATTICE_NODES=https://api.diotec360.com
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com
 
 # Storage Directories
-AETHEL_STATE_DIR=.aethel_state
-AETHEL_VAULT_DIR=.aethel_vault
-AETHEL_SENTINEL_DIR=.aethel_sentinel
+DIOTEC360_STATE_DIR=.DIOTEC360_state
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel
 
 # Heartbeat Configuration
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_PEERLESS_TIMEOUT=60
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_PEERLESS_TIMEOUT=60
+DIOTEC360_HTTP_POLL_INTERVAL=10
 
 # Node Identity
-AETHEL_NODE_NAME=node2-local
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_NODE_NAME=node2-local
+DIOTEC360_NODE_ROLE=genesis-primary
 
 # Production Settings
-AETHEL_ENVIRONMENT=production
-AETHEL_LOG_LEVEL=INFO
+DIOTEC360_ENVIRONMENT=production
+DIOTEC360_LOG_LEVEL=INFO
 ```
 
 ---
@@ -144,7 +144,7 @@ AETHEL_LOG_LEVEL=INFO
 ```
 Nome: api
 Tipo: CNAME
-Valor: diotec-aethel-judge.hf.space
+Valor: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -170,7 +170,7 @@ backup.diotec360.com (não será mais usado)
 deploy_node1_huggingface.bat
 
 # Aguarde build (5-10 min)
-# Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+# Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 
 # Teste
 curl https://api.diotec360.com/health
@@ -256,7 +256,7 @@ PHASE 2: STATE SYNCHRONIZATION
 1. **Adicione o registro DNS para Hugging Face:**
    - Nome: `api`
    - Tipo: CNAME
-   - Valor: `diotec-aethel-judge.hf.space`
+   - Valor: `diotec-diotec360-judge.hf.space`
    - TTL: 60
 
 2. **Adicione o registro DNS para Node 2:**

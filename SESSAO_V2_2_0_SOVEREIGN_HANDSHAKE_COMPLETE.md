@@ -74,7 +74,7 @@ O próximo passo era:
 ```
 Geração de Keypair: 363.83ms
 Chave Pública: fbfb0f50188011951b5dd85cb24c054d...
-Endereço: aethel_da41696b7a4e91050da1201536b912b7c736f89a
+Endereço: DIOTEC360_da41696b7a4e91050da1201536b912b7c736f89a
 ```
 
 ### Assinatura de Transação
@@ -170,7 +170,7 @@ aethel/core/sovereign_persistence.py            (memória imortal)
 ### 1. Trading Forex via WhatsApp
 ```python
 # Dionísio assina ordem de trade do WhatsApp
-crypto = get_aethel_crypt()
+crypto = get_DIOTEC360_crypt()
 keypair = crypto.generate_keypair()
 
 ordem_trade = {
@@ -350,7 +350,7 @@ python demo_sovereign_handshake.py
 
 ## 🎉 CONCLUSÃO
 
-Aethel v2.2.0 "Sovereign Handshake" está COMPLETO.
+Diotec360 v2.2.0 "Sovereign Handshake" está COMPLETO.
 
 **Conquistas Principais**:
 ✅ Sistema de validação dupla (assinatura + matemática)  

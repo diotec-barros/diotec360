@@ -2,7 +2,7 @@
 
 **Data:** 2026-02-12  
 **Subdomínio:** hf.diotec360.com  
-**Destino:** Hugging Face Space (diotec-aethel-judge.hf.space)
+**Destino:** Hugging Face Space (diotec-diotec360-judge.hf.space)
 
 ---
 
@@ -31,7 +31,7 @@
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -59,7 +59,7 @@ TTL: 60
 nslookup hf.diotec360.com
 
 # Esperado:
-# Name: diotec-aethel-judge.hf.space
+# Name: diotec-diotec360-judge.hf.space
 # Address: [IP do Hugging Face]
 ```
 
@@ -95,8 +95,8 @@ curl https://hf.diotec360.com/health
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
 │  │  ├─ URL: https://hf.diotec360.com                   │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │  │  └─ Porta: 8000                                     │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Local Principal                         │
@@ -129,7 +129,7 @@ Status: ✅ Configurado
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 Status: ⏳ Pendente
 ```
@@ -204,7 +204,7 @@ Status: ⏳ Aguardando IP
 1. https://vercel.com/dashboard
 2. Selecione `diotec360.com`
 3. DNS → Add Record
-4. Type: `CNAME`, Name: `hf`, Value: `diotec-aethel-judge.hf.space`
+4. Type: `CNAME`, Name: `hf`, Value: `diotec-diotec360-judge.hf.space`
 5. Save
 
 **Depois teste:**

@@ -12,7 +12,7 @@
 
 📄 DOCUMENTOS CRIADOS:
 
-   1. AETHEL_EXECUTIVE_PITCH.md
+   1. DIOTEC360_EXECUTIVE_PITCH.md
       → Pitch completo para Conselho de Administração
       → Demonstra como prevenir o hack de $2B
       → ROI de 3200% no primeiro ano

@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Property-based tests for Conservation Validator in Proof-of-Proof consensus.
 
 This module tests the conservation validation logic for the consensus protocol,
@@ -14,12 +30,12 @@ import time
 from hypothesis import given, strategies as st, settings, assume
 from typing import Dict, Any, List
 
-from aethel.consensus.conservation_validator import (
+from diotec360.consensus.conservation_validator import (
     ConservationValidator,
     ConservationValidationResult
 )
-from aethel.consensus.data_models import StateTransition, StateChange
-from aethel.consensus.test_strategies import (
+from diotec360.consensus.data_models import StateTransition, StateChange
+from diotec360.consensus.test_strategies import (
     node_ids,
     hashes,
     timestamps,

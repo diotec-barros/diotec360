@@ -19,12 +19,12 @@ Todos os arquivos de configuração foram atualizados para usar `hf.diotec360.co
 
 2. **Node 2** (`.env.node2.local`)
    ```env
-   AETHEL_LATTICE_NODES=https://hf.diotec360.com
+   DIOTEC360_LATTICE_NODES=https://hf.diotec360.com
    ```
 
 3. **Node 3** (`.env.node3.backup`)
    ```env
-   AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
+   DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
    ```
 
 4. **Script de Verificação** (`verify_production_triangle.py`)
@@ -41,7 +41,7 @@ Todos os arquivos de configuração foram atualizados para usar `hf.diotec360.co
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -72,7 +72,7 @@ Frontend: https://aethel.diotec360.com/
 
 | Subdomínio | Tipo | Destino | Status |
 |------------|------|---------|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | ⏳ PENDENTE |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | ⏳ PENDENTE |
 | `node2` | A | `[IP servidor]` | ✅ OK |
 | `backup` | CNAME | `cname.vercel-dns.com` | ✅ OK |
 | `aethel` | CNAME | `cname.vercel-dns.com` | ✅ OK |
@@ -119,7 +119,7 @@ python verify_production_triangle.py
 ## ✨ BENEFÍCIOS
 
 **Antes:**
-- Frontend → `https://diotec-aethel-judge.hf.space`
+- Frontend → `https://diotec-diotec360-judge.hf.space`
 - URL longa e genérica do Hugging Face
 
 **Depois:**

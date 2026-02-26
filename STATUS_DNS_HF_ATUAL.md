@@ -12,7 +12,7 @@
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 Age: 2 minutos
 ```
@@ -49,7 +49,7 @@ Erro: SSL/TLS - Não foi possível estabelecer relação de confiança
 
 ### Opção 1: URL Direta do HF ⭐ RECOMENDADO
 ```
-https://diotec-aethel-judge.hf.space
+https://diotec-diotec360-judge.hf.space
 ```
 
 **Prós:**
@@ -81,7 +81,7 @@ https://hf.diotec360.com (via proxy)
 
 ### Opção 3: Subdomínio para Node 2 ✅ ALTERNATIVA
 ```
-Node 1: https://diotec-aethel-judge.hf.space
+Node 1: https://diotec-diotec360-judge.hf.space
 Node 2: https://api.diotec360.com (seu servidor)
 ```
 

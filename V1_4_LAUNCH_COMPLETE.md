@@ -1,4 +1,4 @@
-# 🎊 AETHEL v1.4.0 - THE OVERFLOW SENTINEL
+# 🎊 Diotec360 v1.4.0 - THE OVERFLOW SENTINEL
 
 ## 📅 Data de Lançamento: 3 de Fevereiro de 2026, 23:30 UTC
 
@@ -10,7 +10,7 @@ A Aethel agora possui o sistema de defesa mais robusto do mundo para código fin
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│           AETHEL v1.4 - TRIPLE-LAYER DEFENSE            │
+│           Diotec360 v1.4 - TRIPLE-LAYER DEFENSE            │
 ├─────────────────────────────────────────────────────────┤
 │                                                          │
 │  Layer 1: Conservation Guardian (v1.3)                  │
@@ -221,30 +221,30 @@ Com fast pre-checks (v1.4):
 1. **The DAO Hack** (Ethereum, 2016)
    - Perda: $60 milhões
    - Causa: Reentrancy + Overflow
-   - Aethel v1.4: ❌ BLOQUEADO
+   - Diotec360 v1.4: ❌ BLOQUEADO
 
 2. **BatchOverflow** (BEC Token, 2018)
    - Perda: $1 bilhão em market cap
    - Causa: Integer overflow
-   - Aethel v1.4: ❌ BLOQUEADO
+   - Diotec360 v1.4: ❌ BLOQUEADO
 
 3. **ProxyOverflow** (SMT Token, 2018)
    - Perda: Tokens infinitos criados
    - Causa: Multiplicação overflow
-   - Aethel v1.4: ❌ BLOQUEADO
+   - Diotec360 v1.4: ❌ BLOQUEADO
 
 ---
 
 ## 🚀 DEPLOY STATUS
 
 ### Hugging Face Space
-- **URL**: https://huggingface.co/spaces/diotec/aethel-judge
+- **URL**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Commit**: `c317215`
 - **Status**: ✅ Building (~3-5 min)
 - **Version**: v1.4.0
 
 ### GitHub Repository
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 - **Commit**: `ef716a9`
 - **Status**: ✅ Pushed
 - **Version**: v1.4.0
@@ -275,7 +275,7 @@ Com fast pre-checks (v1.4):
 
 ### 1. Aguarde o Build
 
-Vá para: https://huggingface.co/spaces/diotec/aethel-judge
+Vá para: https://huggingface.co/spaces/diotec/diotec360-judge
 
 Aguarde o badge ficar verde (~3-5 min)
 
@@ -354,7 +354,7 @@ Você verá:
 
 ## 💬 CITAÇÃO
 
-> "Um sistema que protege contra fraudes mas quebra por bugs de hardware não é seguro. A Aethel v1.4 protege contra ambos: a matemática garante a lógica, e a Sentinela garante o hardware."
+> "Um sistema que protege contra fraudes mas quebra por bugs de hardware não é seguro. A Diotec360 v1.4 protege contra ambos: a matemática garante a lógica, e a Sentinela garante o hardware."
 > 
 > — Filosofia do Triple-Layer Defense
 
@@ -364,7 +364,7 @@ Você verá:
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║              AETHEL v1.4.0 LAUNCHED! 🚀                  ║
+║              Diotec360 v1.4.0 LAUNCHED! 🚀                  ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
 ║  Triple-Layer Defense:        ✅ ACTIVE                 ║

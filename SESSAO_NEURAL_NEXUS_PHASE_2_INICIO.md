@@ -44,7 +44,7 @@ Neural Nexus que compara respostas de múltiplas IAs e destila a "verdade provad
    ```
 
 2. ✅ Response Type Detection
-   - AETHEL_CODE
+   - DIOTEC360_CODE
    - PYTHON_CODE
    - MATHEMATICAL
    - LOGICAL

@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.2.0 - "THE ARITHMETIC AWAKENING" - LANÇADO!
+# 🚀 Diotec360 v1.2.0 - "THE ARITHMETIC AWAKENING" - LANÇADO!
 
 **Data**: 3 de Fevereiro de 2026  
 **Hora**: 17:00 BRT  
@@ -432,7 +432,7 @@ Provado matematicamente! 🎯
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║         🚀 AETHEL v1.2.0 - LANÇADO! 🚀                      ║
+║         🚀 Diotec360 v1.2.0 - LANÇADO! 🚀                      ║
 ║                                                              ║
 ║              "The Arithmetic Awakening"                      ║
 ║                                                              ║

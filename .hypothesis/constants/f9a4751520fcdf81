@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\thread_cpu_accounting.py
+# hypothesis_version: 6.151.5
+
+[0.0, 100.0, 1000.0, 10000.0, 1000000.0, 1000, 'c', 'cpu_usage', 'darwin', 'dwHighDateTime', 'dwLowDateTime', 'flags', 'linux', 'policy', 'run_state', 'sleep_time', 'suspend_count', 'system_time_sec', 'system_time_usec', 'tv_nsec', 'tv_sec', 'user_time_sec', 'user_time_usec', 'win32']

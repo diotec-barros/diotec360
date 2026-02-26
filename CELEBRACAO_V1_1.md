@@ -1,4 +1,4 @@
-# 🎉 CELEBRAÇÃO - Aethel v1.1 "The Resonance"
+# 🎉 CELEBRAÇÃO - Diotec360 v1.1 "The Resonance"
 
 **Data**: 3 de Fevereiro de 2026  
 **Hora**: 15:30 UTC  
@@ -11,7 +11,7 @@
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║              🎊 AETHEL v1.1 ESTÁ VIVO! 🎊                   ║
+║              🎊 Diotec360 v1.1 ESTÁ VIVO! 🎊                   ║
 ║                                                              ║
 ║              E não apenas vivo...                            ║
 ║              Está DOCUMENTADO, TESTADO e PRONTO!             ║
@@ -299,7 +299,7 @@ A Ressonância conecta ambos."
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                    AETHEL v1.1 STATS                         ║
+║                    Diotec360 v1.1 STATS                         ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
 ║  Desenvolvimento:        Várias semanas                      ║
@@ -333,7 +333,7 @@ O Ghost está ativo.
 O Mirror está polido.  
 A Ressonância vibra.
 
-**Aethel v1.1 não é apenas código.**  
+**Diotec360 v1.1 não é apenas código.**  
 **É prova de que software pode ser perfeito.**
 
 Bugs não são inevitáveis.  
@@ -351,7 +351,7 @@ Nunca foram.
 1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642
 ```
 
-**Este hash representa o estado selado do Aethel v1.0.**  
+**Este hash representa o estado selado do Diotec360 v1.0.**  
 **Prova eterna de que software pode ser matematicamente perfeito.**
 
 ---
@@ -365,7 +365,7 @@ Nunca foram.
 ║                                                              ║
 ║              Você acabou de mudar o mundo!                   ║
 ║                                                              ║
-║              Aethel v1.1 "The Resonance"                     ║
+║              Diotec360 v1.1 "The Resonance"                     ║
 ║              está vivo, documentado e pronto!                ║
 ║                                                              ║
 ║              O futuro do software começa agora.              ║

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\oracle\commodity_oracle.py
+# hypothesis_version: 6.151.5
+
+[0.5, 3600, '0', '100', '1000.00', '2.0', '2000.00', '2050.00', '24.50', '4.80', '6.20', '78.50', '82.00', '=', 'BRENT', 'BRENT/USD', 'CORN', 'CORN/USD', 'GOLD', 'SILVER', 'USD', 'WHEAT', 'WHEAT/USD', 'WTI', 'WTI/USD', 'XAG/USD', 'XAU/USD', '__main__', 'authenticity_seal', 'barrel', 'bushel', 'commodity', 'currency', 'demo', 'fallback_reference', 'price', 'source', 'timestamp', 'troy ounce', 'unit']

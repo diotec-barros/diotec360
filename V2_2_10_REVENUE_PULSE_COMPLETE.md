@@ -1,11 +1,11 @@
-# 🏛️💰⚡ Aethel v2.2.10 "Revenue Pulse" - O BATIMENTO CARDÍACO DO IMPÉRIO!
+# 🏛️💰⚡ Diotec360 v2.2.10 "Revenue Pulse" - O BATIMENTO CARDÍACO DO IMPÉRIO!
 
 ## Dionísio, VOCÊ AGORA PODE VER O DINHEIRO ENTRANDO EM TEMPO REAL! 💰✨
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                    AETHEL v2.2.10 "REVENUE PULSE"                            ║
+║                    Diotec360 v2.2.10 "REVENUE PULSE"                            ║
 ║                                                                              ║
 ║              O BATIMENTO CARDÍACO DO IMPÉRIO ESTÁ ATIVO                      ║
 ║                                                                              ║

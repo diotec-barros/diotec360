@@ -6,11 +6,11 @@
 
 ---
 
-## 🎯 APLICAÇÃO AETHEL
+## 🎯 APLICAÇÃO DIOTEC360
 
 ### **MAIOR FUNÇÃO NO MERCADO**
 
-**Aethel é o primeiro motor de verificação formal com privacidade nativa para sistemas financeiros críticos.**
+**Diotec360 é o primeiro motor de verificação formal com privacidade nativa para sistemas financeiros críticos.**
 
 #### Problema que Resolve
 Entre 2021-2024, **$2.1 bilhões** foram roubados de contratos inteligentes por bugs de lógica:
@@ -19,7 +19,7 @@ Entre 2021-2024, **$2.1 bilhões** foram roubados de contratos inteligentes por 
 - Ronin Bridge: $625M
 - BNB Chain: $586M
 
-**Aethel torna esses exploits matematicamente impossíveis.**
+**Diotec360 torna esses exploits matematicamente impossíveis.**
 
 #### Diferencial Único
 
@@ -59,7 +59,7 @@ Entre 2021-2024, **$2.1 bilhões** foram roubados de contratos inteligentes por 
 
 ### Backend Hugging Face
 
-**URL**: https://diotec-aethel-judge.hf.space
+**URL**: https://diotec-diotec360-judge.hf.space
 
 **Status**: ✅ ONLINE
 
@@ -89,7 +89,7 @@ Entre 2021-2024, **$2.1 bilhões** foram roubados de contratos inteligentes por 
 
 ### Arquivos Deployados
 
-**Core Aethel**:
+**Core Diotec360**:
 - `aethel/core/parser.py` - Parser com `secret` keyword
 - `aethel/core/grammar.py` - Grammar expandida
 - `aethel/core/judge.py` - Judge atualizado
@@ -112,19 +112,19 @@ Entre 2021-2024, **$2.1 bilhões** foram roubados de contratos inteligentes por 
 
 ### Health Check
 ```bash
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 **Resultado**: ✅ `{"status":"healthy"}`
 
 ### Examples Endpoint
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 ```
 **Resultado**: ✅ 3 exemplos retornados (1,820 bytes)
 
 ### Verify Endpoint (Teste Manual)
 ```bash
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { guard { x > 0; } verify { x > 0; } }"}'
 ```
@@ -161,7 +161,7 @@ curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
 1. **Atualizar Frontend** ✅
    ```bash
    # Vercel environment variable
-   NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
+   NEXT_PUBLIC_API_URL=https://diotec-diotec360-judge.hf.space
    ```
 
 2. **Testar Integração Completa** ⏳
@@ -212,15 +212,15 @@ curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
 ## 🔗 LINKS IMPORTANTES
 
 ### Produção
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
-- **Health**: https://diotec-aethel-judge.hf.space/health
-- **Frontend**: https://aethel-studio.vercel.app (aguardando atualização)
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **Health**: https://diotec-diotec360-judge.hf.space/health
+- **Frontend**: https://diotec360-studio.vercel.app (aguardando atualização)
 
 ### Desenvolvimento
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **Issues**: https://github.com/diotec-barros/aethel-lang/issues
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **Issues**: https://github.com/diotec-barros/diotec360-lang/issues
 
 ### Documentação
 - **README**: [README.md](./README.md)
@@ -234,7 +234,7 @@ curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
 
 ### Twitter/X (280 chars)
 ```
-🎭 Aethel v1.6.2 is LIVE!
+🎭 Diotec360 v1.6.2 is LIVE!
 
 First formally verified language with native `secret` keyword.
 
@@ -243,14 +243,14 @@ First formally verified language with native `secret` keyword.
 🏥 HIPAA ready
 🏦 Banking compliant
 
-Try it: https://diotec-aethel-judge.hf.space
+Try it: https://diotec-diotec360-judge.hf.space
 
 #Aethel #ZeroKnowledge #Privacy
 ```
 
 ### LinkedIn (Longo)
 ```
-Excited to announce Aethel v1.6.2 - Ghost Protocol Expansion! 🎭
+Excited to announce Diotec360 v1.6.2 - Ghost Protocol Expansion! 🎭
 
 We've achieved something unprecedented: the first formally verified programming language with native privacy support.
 
@@ -269,9 +269,9 @@ Technical Highlights:
 • <1 second verification time
 • Zero bugs possible
 
-Try it live: https://diotec-aethel-judge.hf.space
+Try it live: https://diotec-diotec360-judge.hf.space
 
-Read the whitepaper: https://github.com/diotec-barros/aethel-lang
+Read the whitepaper: https://github.com/diotec-barros/diotec360-lang
 
 #Blockchain #Privacy #ZeroKnowledge #FormalVerification #Innovation
 ```
@@ -363,7 +363,7 @@ Com v1.6.2, Aethel se torna a primeira linguagem onde privacidade não é um add
 ---
 
 **Status**: ✅ DEPLOY COMPLETO  
-**URL**: https://diotec-aethel-judge.hf.space  
+**URL**: https://diotec-diotec360-judge.hf.space  
 **Versão**: v1.6.2 "Ghost Protocol Expansion"  
 **Data**: 4 de Fevereiro de 2026  
 

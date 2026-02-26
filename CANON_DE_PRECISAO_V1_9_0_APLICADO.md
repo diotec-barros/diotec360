@@ -247,7 +247,7 @@ A linguagem é tão rigorosa que **não permite que você mesmo cometa erros de 
 
 ## 🛡️ Certificação
 
-Este documento certifica que todos os exemplos da Aethel v1.9.0 estão em conformidade com o **Cânone de Precisão**, garantindo:
+Este documento certifica que todos os exemplos da Diotec360 v1.9.0 estão em conformidade com o **Cânone de Precisão**, garantindo:
 
 - ✅ Bloco `solve` obrigatório em todos os `intent`
 - ✅ Declaração explícita de ambiente de execução

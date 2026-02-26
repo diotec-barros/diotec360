@@ -1,4 +1,4 @@
-# 🎉 DEPLOY COMPLETO - Aethel v1.1 "The Resonance"
+# 🎉 DEPLOY COMPLETO - Diotec360 v1.1 "The Resonance"
 
 **Data**: 3 de Fevereiro de 2026, 14:53  
 **Status**: ✅ LIVE & OPERATIONAL
@@ -10,7 +10,7 @@
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║           🎉 AETHEL v1.1 "THE RESONANCE" IS LIVE! 🎉        ║
+║           🎉 Diotec360 v1.1 "THE RESONANCE" IS LIVE! 🎉        ║
 ║                                                              ║
 ║              Backend + Frontend = OPERATIONAL                ║
 ║                                                              ║
@@ -73,7 +73,7 @@ Machine:   2 cores, 8 GB
 Backend:   https://api.diotec360.com
 Frontend:  https://[seu-projeto].vercel.app
            (ou https://aethel.diotec360.com se configurado)
-GitHub:    https://github.com/diotec-barros/aethel-lang
+GitHub:    https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---
@@ -261,7 +261,7 @@ Frontend:
 ## 🎉 ACHIEVEMENT UNLOCKED!
 
 ```
-🏆 Aethel v1.1 "The Resonance" Deployed
+🏆 Diotec360 v1.1 "The Resonance" Deployed
 🏆 Ghost-Runner: LIVE
 🏆 Mirror: LIVE
 🏆 Backend: OPERATIONAL
@@ -319,7 +319,7 @@ READY FOR WORLD MANIFESTATION
 **O Mirror está polido.**  
 **A Ressonância começou.**
 
-**Aethel v1.1 está vivo e pronto para o mundo!** 🌍✨
+**Diotec360 v1.1 está vivo e pronto para o mundo!** 🌍✨
 
 ---
 

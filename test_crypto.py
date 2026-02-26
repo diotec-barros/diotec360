@@ -1,8 +1,24 @@
 """
-Test Aethel Cryptographic Engine
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 """
 
-from aethel.core.crypto import AethelCrypt, get_aethel_crypt
+"""
+Test Diotec360 Cryptographic Engine
+"""
+
+from diotec360.core.crypto import DIOTEC360Crypt, get_DIOTEC360_crypt
 import json
 
 
@@ -10,7 +26,7 @@ def test_keypair_generation():
     """Test ED25519 key pair generation"""
     print("\n🔐 TEST 1: Key Pair Generation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     assert keypair.private_key is not None
@@ -25,7 +41,7 @@ def test_message_signing():
     """Test message signing"""
     print("\n🖋️ TEST 2: Message Signing")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     message = "transfer:alice->bob:100"
@@ -42,7 +58,7 @@ def test_signature_verification():
     """Test signature verification"""
     print("\n✅ TEST 3: Signature Verification")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     message = "transfer:alice->bob:100"
@@ -82,13 +98,13 @@ def test_address_derivation():
     """Test address derivation from public key"""
     print("\n🏠 TEST 4: Address Derivation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     address = crypto.derive_address(keypair.public_key_hex)
     
-    assert address.startswith("aethel_")
-    assert len(address) == 47  # "aethel_" + 40 hex chars
+    assert address.startswith("DIOTEC360_")
+    assert len(address) == 47  # "DIOTEC360_" + 40 hex chars
     
     print(f"   ✅ Public Key: {keypair.public_key_hex[:16]}...")
     print(f"   ✅ Address: {address}")
@@ -99,7 +115,7 @@ def test_signed_intent():
     """Test creating signed intent"""
     print("\n📝 TEST 5: Signed Intent Creation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     intent_data = {
@@ -134,7 +150,7 @@ def test_security_properties():
     """Test security properties"""
     print("\n🛡️ TEST 6: Security Properties")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     
     # Property 1: Different keys produce different signatures
     keypair1 = crypto.generate_keypair()
@@ -160,7 +176,7 @@ def test_security_properties():
 
 if __name__ == "__main__":
     print("\n" + "="*70)
-    print("🔐 TESTING AETHEL CRYPTOGRAPHIC ENGINE v2.2.0")
+    print("🔐 TESTING Diotec360 CRYPTOGRAPHIC ENGINE v2.2.0")
     print("="*70)
     
     test_keypair_generation()

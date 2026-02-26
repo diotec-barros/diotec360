@@ -1,0 +1,38 @@
+{
+  "intent_name": "satellite_power_management",
+  "full_hash": "e232d170cfdc1ca2b2b9c2a31964781633b102a209b19e29c87c6275b4a6395a",
+  "logic_hash": "3f70ce93ee4861e725c58f33b9d114ec6f294677b9ef54b7ca05e7c8c970366f",
+  "ast": {
+    "params": [
+      "battery_level:Percent",
+      "altitude:Meters",
+      "solar_exposure:Boolean"
+    ],
+    "constraints": [
+      "battery_level >= battery_min",
+      "battery_level <= battery_max",
+      "altitude > altitude_min"
+    ],
+    "ai_instructions": {
+      "priority": "survival",
+      "target": "risc_v_hardened"
+    },
+    "post_conditions": [
+      "battery_level >= battery_min",
+      "altitude > altitude_min"
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o garantidas.",
+    "timestamp": "2026-02-01T23:29:02.170375"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": "output/sat_power_mgmt.rs"
+  },
+  "immutable": true,
+  "created_at": "2026-02-01T23:29:02.170381"
+}

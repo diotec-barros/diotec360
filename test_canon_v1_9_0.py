@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Test Canon de Precisão v1.9.0
 Valida que todos os exemplos estão em conformidade
 """
@@ -82,7 +98,7 @@ def test_examples_compliance():
     print('=' * 60)
     
     try:
-        with open('aethel/examples/defi_liquidation_conservation.ae', 'r', encoding='utf-8') as f:
+        with open('Diotec360/examples/defi_liquidation_conservation.ae', 'r', encoding='utf-8') as f:
             ae_content = f.read()
         
         has_solve = 'solve {' in ae_content

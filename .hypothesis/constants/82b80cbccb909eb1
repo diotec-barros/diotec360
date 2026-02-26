@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_clock.py
+# hypothesis_version: 6.151.5
+
+[1000, 'BrowserContext', 'clockFastForward', 'clockInstall', 'clockPauseAt', 'clockResume', 'clockRunFor', 'clockSetFixedTime', 'clockSetSystemTime', 'ticksNumber', 'ticksString', 'timeNumber', 'timeString']

@@ -1,4 +1,4 @@
-# 📚 ÍNDICE DE DOCUMENTOS - Deploy Aethel v1.1
+# 📚 ÍNDICE DE DOCUMENTOS - Deploy Diotec360 v1.1
 
 **Criado**: 3 de Fevereiro de 2026  
 **Propósito**: Guia completo para deploy e lançamento

@@ -41,7 +41,7 @@
 #### 2️⃣ CRIAR NOVO PROJETO
 - "New Project"
 - "Deploy from GitHub repo"
-- Escolha: "aethel-lang"
+- Escolha: "diotec360-lang"
 - Deploy!
 
 #### 3️⃣ AGUARDAR BUILD (2-5 min)

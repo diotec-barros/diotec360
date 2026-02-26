@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demo: Conservation-Aware Oracle Integration
 
 Demonstrates the complete flow of validating conservation
@@ -9,12 +25,12 @@ Version: 1.7.1
 Date: February 4, 2026
 """
 
-from aethel.core.conservation import (
+from diotec360.core.conservation import (
     ConservationChecker,
     BalanceChange,
     SlippageValidator
 )
-from aethel.core.oracle import (
+from diotec360.core.oracle import (
     get_oracle_simulator,
     get_oracle_registry,
     verify_oracle_proof,

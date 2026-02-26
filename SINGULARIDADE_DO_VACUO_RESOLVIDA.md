@@ -321,7 +321,7 @@ Quando você pergunta "Esta linha é verdadeira?", você está fazendo uma pergu
 
 Quando você pergunta "Todas as linhas são verdadeiras juntas?", você está fazendo uma pergunta sobre **semântica**.
 
-**Aethel v1.1.4 agora entende a diferença.**
+**Diotec360 v1.1.4 agora entende a diferença.**
 
 ---
 
@@ -359,6 +359,6 @@ Quando você pergunta "Todas as linhas são verdadeiras juntas?", você está fa
 
 **[SINGULARIDADE RESOLVIDA]**  
 **[UNIFIED PROOF ENGINE: ACTIVE]**  
-**[AETHEL v1.1.4: DEPLOYED]**
+**[Diotec360 v1.1.4: DEPLOYED]**
 
 🔥 **O vácuo foi preenchido com verdade matemática!** 🔥

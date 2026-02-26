@@ -25,7 +25,7 @@ Backend:  https://api.diotec360.com (Hugging Face)
    ```
    Type: CNAME
    Name: api
-   Value: diotec-aethel-judge.hf.space
+   Value: diotec-diotec360-judge.hf.space
    TTL: 60
    ```
 

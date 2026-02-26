@@ -3,7 +3,7 @@ REM Quick Test Commands for Triangle of Truth
 REM Run these commands to verify the deployment
 
 echo ========================================
-echo AETHEL TRIANGLE OF TRUTH - QUICK TESTS
+echo DIOTEC360 TRIANGLE OF TRUTH - QUICK TESTS
 echo ========================================
 echo.
 
@@ -13,7 +13,7 @@ echo.
 echo.
 
 echo [2/5] Testing Node 1 (Hugging Face)...
-curl -s https://diotec-aethel-judge.hf.space/health
+curl -s https://diotec-diotec360-judge.hf.space/health
 echo.
 echo.
 

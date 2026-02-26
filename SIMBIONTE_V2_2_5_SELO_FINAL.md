@@ -13,7 +13,7 @@
 
 **Status:** VERIFICADO E LIMPO
 
-Arquivos legados `aethel_parser.py` e `aethel_judge.py` **NÃO ENCONTRADOS** na raiz.
+Arquivos legados `DIOTEC360_parser.py` e `DIOTEC360_judge.py` **NÃO ENCONTRADOS** na raiz.
 
 **Conclusão:** O motor unificado v1.9.1 está estável e os fantasmas já foram eliminados em sessões anteriores. O caminho está limpo!
 

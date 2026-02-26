@@ -9,7 +9,7 @@
 │ PROJECT STATUS                                                               │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Version:        Aethel v0.7                                                 │
+│  Version:        Diotec360 v0.7                                                 │
 │  Epoch:          1 - The Great Expansion                                     │
 │  Status:         🟢 PROVED & DISTRIBUTED                                     │
 │  Date:           2026-02-01                                                  │
@@ -119,12 +119,12 @@
 │                                                                              │
 │  aethel --version                    # v0.7.0 (Epoch 1)                      │
 │  aethel build <file>                 # Compile with verification             │
-│  aethel verify <file>                # Verify without building               │
-│  aethel vault list                   # List functions                        │
-│  aethel vault stats                  # Show statistics                       │
-│  aethel vault export <hash>          # Export bundle                         │
-│  aethel vault import <bundle>        # Import bundle                         │
-│  aethel vault sync                   # Show sync status                      │
+│  Diotec360 verify <file>                # Verify without building               │
+│  Diotec360 vault list                   # List functions                        │
+│  Diotec360 vault stats                  # Show statistics                       │
+│  Diotec360 vault export <hash>          # Export bundle                         │
+│  Diotec360 vault import <bundle>        # Import bundle                         │
+│  Diotec360 vault sync                   # Show sync status                      │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
 
@@ -203,7 +203,7 @@
 ║  And now, it is shared across the world.                                     ║
 ║                                                                              ║
 ║  Status: 🟢 COMPLETE & OPERATIONAL                                           ║
-║  Version: Aethel v0.7                                                        ║
+║  Version: Diotec360 v0.7                                                        ║
 ║  Epoch: 1 - The Great Expansion                                              ║
 ║  Date: 2026-02-01                                                            ║
 ║                                                                              ║

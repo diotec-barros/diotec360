@@ -1,4 +1,4 @@
-# Aethel Validator Node Operator Guide
+# Diotec360 validator Node Operator Guide
 
 ## Introduction
 
@@ -107,7 +107,7 @@ python scripts/node_status.py
 You should see output like:
 
 ```
-✓ Aethel Validator Node Started
+✓ Diotec360 validator Node Started
   Node ID: node_abc123
   Stake: 1,000 AETHEL
   Peers: 12 connected
@@ -359,7 +359,7 @@ node:
 **Problem**: Verification accuracy < 95%
 
 **Solution**:
-1. Update to latest Aethel version:
+1. Update to latest Diotec360 version:
    ```bash
    git pull origin main
    pip install -r requirements.txt --upgrade
@@ -661,7 +661,7 @@ Run validators in HA configuration:
 - **Documentation**: https://docs.aethel.network
 - **Discord**: https://discord.gg/aethel
 - **Forum**: https://forum.aethel.network
-- **GitHub Issues**: https://github.com/your-org/aethel/issues
+- **GitHub Issues**: https://github.com/your-org/diotec360/issues
 
 ### Reporting Issues
 
@@ -688,7 +688,7 @@ See `CONTRIBUTING.md` for guidelines.
 
 ## Conclusion
 
-Running an Aethel validator node is a rewarding way to participate in the network while earning tokens. By following this guide, you'll:
+Running an Diotec360 validator node is a rewarding way to participate in the network while earning tokens. By following this guide, you'll:
 
 - ✅ Set up a secure validator node
 - ✅ Stake tokens and participate in consensus
@@ -696,7 +696,7 @@ Running an Aethel validator node is a rewarding way to participate in the networ
 - ✅ Monitor your node's performance
 - ✅ Troubleshoot common issues
 
-Welcome to the Aethel validator community! 🚀
+Welcome to the Diotec360 validator community! 🚀
 
 ## Appendix: Command Reference
 

@@ -92,7 +92,7 @@ O teste falha na primeira execução (baseline=37ms, overhead=21%) mas passa no 
 | Médio (100 linhas)        | 500ms          | 5ms                 | 1.0%       |
 | Complexo (1000 linhas)    | 5000ms         | 5ms                 | 0.1%       |
 
-**Insight Comercial**: Quanto mais complexo o contrato, MENOR o overhead percentual. A Aethel é a única plataforma onde a segurança fica MAIS BARATA à medida que você escala.
+**Insight Comercial**: Quanto mais complexo o contrato, MENOR o overhead percentual. A Diotec360 é a única plataforma onde a segurança fica MAIS BARATA à medida que você escala.
 
 ---
 
@@ -182,7 +182,7 @@ Se Baseline = 500ms → Overhead_% = 1%
 Se Baseline = 5000ms → Overhead_% = 0.1%
 ```
 
-**Veredito Final**: A Aethel é a infraestrutura de segurança mais eficiente do planeta, não por sorte, mas por **design inabalável**.
+**Veredito Final**: A Diotec360 é a infraestrutura de segurança mais eficiente do planeta, não por sorte, mas por **design inabalável**.
 
 ---
 

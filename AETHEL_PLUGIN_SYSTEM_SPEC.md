@@ -30,7 +30,7 @@ class AethelPlugin:
         pass
     
     def verify_action(self, action: Action) -> ProofResult:
-        """Aethel verifies the action mathematically"""
+        """Diotec360 verifies the action mathematically"""
         pass
     
     def execute_action(self, action: Action) -> Result:
@@ -92,7 +92,7 @@ class RLPlugin(AethelPlugin):
         )
     
     def verify_action(self, action: Action) -> ProofResult:
-        # Aethel verifies constraints
+        # Diotec360 verifies constraints
         checks = [
             self.conservation.verify(action),  # Money conservation
             self.sentinel.check_overflow(action),  # No overflow
@@ -257,7 +257,7 @@ class AethelPluginRegistry:
         # Step 1: AI proposes action
         action = plugin.propose_action(context)
         
-        # Step 2: Aethel verifies
+        # Step 2: Diotec360 verifies
         proof = plugin.verify_action(action)
         
         if not proof.valid:

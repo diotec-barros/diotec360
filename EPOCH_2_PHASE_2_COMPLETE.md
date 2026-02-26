@@ -8,7 +8,7 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 Date: 2026-02-02
-Version: Aethel v0.9
+Version: Diotec360 v0.9
 Epoch: 2 - The Sovereign Infrastructure
 Phase: 2 - WASM Catalyst
 Status: ✅ OPERATIONAL
@@ -515,7 +515,7 @@ Phase 2 of Epoch 2 successfully created **The WASM Catalyst** - a complete pipel
 ║  ✅ 100% Test Coverage                                       ║
 ║                                                              ║
 ║  Status: OPERATIONAL                                         ║
-║  Version: Aethel v0.9                                        ║
+║  Version: Diotec360 v0.9                                        ║
 ║  Date: 2026-02-02                                            ║
 ╚══════════════════════════════════════════════════════════════╝
 ```

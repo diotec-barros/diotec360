@@ -10,7 +10,7 @@ Successfully integrated the MOE Intelligence Layer with the existing AethelJudge
 
 **Changes Made:**
 - Added MOE imports with graceful fallback if dependencies missing
-- Modified `__init__` to accept `enable_moe` parameter (defaults to `AETHEL_ENABLE_MOE` env var)
+- Modified `__init__` to accept `enable_moe` parameter (defaults to `DIOTEC360_ENABLE_MOE` env var)
 - Implemented `_initialize_moe()` to create and register all three experts:
   - Z3 Expert (mathematical logic specialist)
   - Sentinel Expert (security specialist)
@@ -36,7 +36,7 @@ Successfully integrated the MOE Intelligence Layer with the existing AethelJudge
 
 **Key Features:**
 - MOE enable/disable flag for emergency rollback
-- Environment variable support (`AETHEL_ENABLE_MOE=true`)
+- Environment variable support (`DIOTEC360_ENABLE_MOE=true`)
 - Graceful fallback on MOE failure
 - Full telemetry integration
 - Backward compatible API
@@ -104,7 +104,7 @@ All v1.9.0 tests pass with MOE enabled ✅
 - **Validation:** Test `test_moe_failure_fallback_to_existing_layers` passes
 
 ### Requirement 12.5: Gradual MOE rollout support ✅
-- **Implementation:** Environment variable `AETHEL_ENABLE_MOE` controls activation
+- **Implementation:** Environment variable `DIOTEC360_ENABLE_MOE` controls activation
 - **Validation:** Test `test_moe_environment_variable` passes
 
 ### Requirement 12.6: Backward compatibility maintained ✅
@@ -165,21 +165,21 @@ All v1.9.0 tests pass with MOE enabled ✅
 ### Phase 1: Shadow Mode (Recommended)
 ```bash
 # MOE runs but doesn't affect verdicts
-export AETHEL_ENABLE_MOE=false
+export DIOTEC360_ENABLE_MOE=false
 # Deploy and collect telemetry
 ```
 
 ### Phase 2: Soft Launch
 ```bash
 # Enable MOE for gradual rollout
-export AETHEL_ENABLE_MOE=true
+export DIOTEC360_ENABLE_MOE=true
 # Monitor for 10% → 50% → 100% traffic
 ```
 
 ### Phase 3: Full Activation
 ```bash
 # MOE becomes primary verification path
-export AETHEL_ENABLE_MOE=true
+export DIOTEC360_ENABLE_MOE=true
 # Existing layers remain as fallback
 ```
 
@@ -189,14 +189,14 @@ export AETHEL_ENABLE_MOE=true
 judge.disable_moe()
 
 # Or environment variable
-export AETHEL_ENABLE_MOE=false
+export DIOTEC360_ENABLE_MOE=false
 ```
 
 ## Usage Examples
 
 ### Enable MOE via Environment Variable
 ```bash
-export AETHEL_ENABLE_MOE=true
+export DIOTEC360_ENABLE_MOE=true
 python demo_moe.py
 ```
 

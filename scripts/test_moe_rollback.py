@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 MOE Rollback Testing Script
 
 Verify that MOE rollback was successful and system is operating
@@ -51,7 +67,7 @@ class MOERollbackTester:
             with open(env_file, 'r') as f:
                 content = f.read()
             
-            if 'AETHEL_MOE_ENABLED=false' in content:
+            if 'DIOTEC360_MOE_ENABLED=false' in content:
                 self.log("PASS: MOE disabled in .env", "PASS")
                 return True
             else:
@@ -68,10 +84,10 @@ class MOERollbackTester:
         
         try:
             # Try to import existing layers
-            from aethel.core.judge import Judge
-            from aethel.core.semantic_sanitizer import SemanticSanitizer
-            from aethel.core.conservation import ConservationChecker
-            from aethel.core.overflow import OverflowDetector
+            from diotec360.core.judge import Judge
+            from diotec360.core.semantic_sanitizer import SemanticSanitizer
+            from diotec360.core.conservation import ConservationChecker
+            from diotec360.core.overflow import OverflowDetector
             
             self.log("PASS: All v1.9.0 layers importable", "PASS")
             
@@ -94,7 +110,7 @@ class MOERollbackTester:
             # In a real implementation, this would check if MOE is actually running
             
             # For now, just verify MOE modules exist but aren't active
-            from aethel.moe.orchestrator import MOEOrchestrator
+            from diotec360.moe.orchestrator import MOEOrchestrator
             
             self.log("PASS: MOE modules exist (but should not be active)", "PASS")
             return True
@@ -111,7 +127,7 @@ class MOERollbackTester:
         self.log("Testing backward compatibility...", "INFO")
         
         try:
-            from aethel.core.judge import Judge
+            from diotec360.core.judge import Judge
             
             judge = Judge()
             
@@ -140,7 +156,7 @@ class MOERollbackTester:
             with open(env_file, 'r') as f:
                 content = f.read()
             
-            if 'AETHEL_MOE_ENABLED=false' in content:
+            if 'DIOTEC360_MOE_ENABLED=false' in content:
                 self.log("PASS: MOE overhead removed (MOE disabled)", "PASS")
                 return True
             else:
@@ -233,9 +249,9 @@ class MOERollbackTester:
             print("❌ Some tests failed. Review failures above.")
             print()
             print("Troubleshooting:")
-            print("1. Verify .env file has AETHEL_MOE_ENABLED=false")
-            print("2. Restart application: systemctl restart aethel-judge")
-            print("3. Check logs: tail -f logs/aethel.log")
+            print("1. Verify .env file has DIOTEC360_MOE_ENABLED=false")
+            print("2. Restart application: systemctl restart diotec360-judge")
+            print("3. Check logs: tail -f logs/diotec360.log")
             return False
 
 

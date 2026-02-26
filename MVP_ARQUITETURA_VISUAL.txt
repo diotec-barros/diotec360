@@ -157,7 +157,7 @@ CAMADA 4: ASSINATURAS WHATSAPP
 💾 ARMAZENAMENTO DE DADOS
 ================================================================================
 
-COGNITIVE MEMORY (.aethel_vigilance/cognitive_memory.db)
+COGNITIVE MEMORY (.DIOTEC360_vigilance/cognitive_memory.db)
    ├─ reasoning_trace: Como a IA decidiu
    ├─ validated_pattern: Ataques bloqueados
    ├─ market_data: Histórico de preços ← NOVO!
@@ -165,15 +165,15 @@ COGNITIVE MEMORY (.aethel_vigilance/cognitive_memory.db)
    ├─ rule_learned: Regras auto-geradas
    └─ transaction_outcome: Resultados de trades
 
-PERSISTENCE LAYER (.aethel_state/)
+PERSISTENCE LAYER (.DIOTEC360_state/)
    ├─ snapshot.json: Estado atual do sistema
    └─ Merkle roots: Selos de integridade
 
-VAULT (.aethel_vault/)
+VAULT (.DIOTEC360_vault/)
    ├─ Bundles: Provas matemáticas
    └─ Certificates: Certificados de validação
 
-SENTINEL (.aethel_sentinel/)
+SENTINEL (.DIOTEC360_sentinel/)
    └─ telemetry.db: Logs de monitoramento
 
 ================================================================================

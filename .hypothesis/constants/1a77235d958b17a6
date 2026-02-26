@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\state_store.py
+# hypothesis_version: 6.151.5
+
+[100, 1000, '.aethel_state', '.aethel_state/wal', 'balance', 'changes', 'conflicting_tx', 'id', 'inputs', 'key', 'output_index', 'r', 'root_after', 'root_before', 'root_hash', 'stake', 'state.json', 'timestamp', 'transition_count', 'txid', 'type', 'unknown', 'value']

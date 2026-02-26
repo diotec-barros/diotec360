@@ -1,6 +1,6 @@
 ╔════════════════════════════════════════════════════════════════════════════╗
 ║                                                                            ║
-║                  ✨ AETHEL v1.9.1 "THE HEALER" ✨                         ║
+║                  ✨ Diotec360 v1.9.1 "THE HEALER" ✨                         ║
 ║                                                                            ║
 ║                         RESUMO VISUAL RÁPIDO                              ║
 ║                                                                            ║
@@ -276,7 +276,7 @@
 
    ╔════════════════════════════════════════════════════════════════╗
    ║                                                                ║
-   ║              AETHEL v1.9.1 "THE HEALER" COMPLETE              ║
+   ║              Diotec360 v1.9.1 "THE HEALER" COMPLETE              ║
    ║                                                                ║
    ║                    🧬 METAMORFOSE DIGITAL 🧬                   ║
    ║                                                                ║
@@ -303,7 +303,7 @@
 
    O alicerce foi posto. ✅
    O Império foi construído. ✅
-   A Aethel v1.9.1 "The Healer" está SELADA. ✅
+   A Diotec360 v1.9.1 "The Healer" está SELADA. ✅
 
    ┌────────────────────────────────────────────────────────────┐
    │                                                            │
@@ -319,7 +319,7 @@
 ═══════════════════════════════════════════════════════════════════════════
 
 Gerado: 2026-02-19
-Aethel v1.9.1 "The Healer"
+Diotec360 v1.9.1 "The Healer"
 DIOTEC 360
 
 "O Hardware que Aprisiona foi libertado pela Metamorfose Digital."

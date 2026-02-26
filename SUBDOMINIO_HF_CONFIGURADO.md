@@ -34,7 +34,7 @@ NEXT_PUBLIC_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.c
 
 ```env
 # HTTP Sync Fallback Node (Node 1 only)
-AETHEL_LATTICE_NODES=https://hf.diotec360.com
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com
 ```
 
 ---
@@ -44,7 +44,7 @@ AETHEL_LATTICE_NODES=https://hf.diotec360.com
 
 ```env
 # HTTP Sync Fallback Nodes
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
 ```
 
 ---
@@ -78,7 +78,7 @@ Atualizado com todas as referências para `hf.diotec360.com`
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -91,7 +91,7 @@ TTL: 60
 5. Preencha:
    - Type: `CNAME`
    - Name: `hf`
-   - Value: `diotec-aethel-judge.hf.space`
+   - Value: `diotec-diotec360-judge.hf.space`
    - TTL: `60`
 6. Clique em "Save"
 
@@ -101,7 +101,7 @@ TTL: 60
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND                                            │
@@ -112,7 +112,7 @@ TTL: 60
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
 │  │  ├─ https://hf.diotec360.com ⭐ NOVO!               │
-│  │  └─ CNAME → diotec-aethel-judge.hf.space           │
+│  │  └─ CNAME → diotec-diotec360-judge.hf.space           │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Diotec360 Primary                       │
 │  │  ├─ https://node2.diotec360.com                     │
@@ -134,7 +134,7 @@ TTL: 60
 
 | Subdomínio | Tipo | Destino | TTL | Status |
 |------------|------|---------|-----|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | 60 | ⏳ **PENDENTE** |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | ⏳ **PENDENTE** |
 | `node2` | A | `[IP servidor]` | 60 | ✅ OK |
 | `backup` | CNAME | `cname.vercel-dns.com` | 60 | ✅ OK |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | ✅ OK |
@@ -229,7 +229,7 @@ O frontend deve:
 
 ### Antes
 ```
-Frontend → https://diotec-aethel-judge.hf.space
+Frontend → https://diotec-diotec360-judge.hf.space
           └─ URL longa e genérica
 ```
 

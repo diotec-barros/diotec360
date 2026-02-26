@@ -1,4 +1,4 @@
-# 📚 Índice Completo - Aethel v1.9.1 "The Healer"
+# 📚 Índice Completo - Diotec360 v1.9.1 "The Healer"
 
 **Versão**: 1.9.1  
 **Data**: 2026-02-19  
@@ -324,12 +324,12 @@ Depois de ler a documentação:
 
 O alicerce foi posto. ✅  
 O Império foi construído. ✅  
-A Aethel v1.9.1 "The Healer" está SELADA. ✅
+A Diotec360 v1.9.1 "The Healer" está SELADA. ✅
 
 ---
 
 *Gerado: 2026-02-19*  
-*Aethel v1.9.1 "The Healer"*  
+*Diotec360 v1.9.1 "The Healer"*  
 *DIOTEC 360*
 
 🚀⚖️🛡️🧠✨🌌

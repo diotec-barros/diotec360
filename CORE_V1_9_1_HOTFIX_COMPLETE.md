@@ -9,8 +9,8 @@
 ### Migração Concluída (Opção A - Migrate all scripts before deleting legacy)
 
 #### ✅ Scripts Principais Migrados para `aethel.core.*`:
-- `aethel_generator.py` ✅
-- `aethel_kernel.py` ✅  
+- `DIOTEC360_generator.py` ✅
+- `DIOTEC360_kernel.py` ✅  
 - `demo_final.py` ✅
 - `test_judge.py` ✅
 - `validate_examples.py` ✅
@@ -59,13 +59,13 @@
    - `python -c "import aethel"` - funciona sem erros
 
 5. **Grep Verification** - ✅
-   - Nenhum import Python de runtime de `aethel_parser`/`aethel_judge`
+   - Nenhum import Python de runtime de `DIOTEC360_parser`/`DIOTEC360_judge`
 
 ### 🗑️ Purge Final (Autorizado e Executado):
 
 **Arquivos Legacy Deletados** (com autorização explícita "SIM DELETA"):
-- `aethel_parser.py` ✅ DELETADO
-- `aethel_judge.py` ✅ DELETADO
+- `DIOTEC360_parser.py` ✅ DELETADO
+- `DIOTEC360_judge.py` ✅ DELETADO
 
 **Impacto Comercial**: "Stability-as-a-Product" - zero downtime transition
 

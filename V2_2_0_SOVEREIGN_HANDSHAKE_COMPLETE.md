@@ -1,4 +1,4 @@
-# Aethel v2.2.0 "Sovereign Handshake" - INTEGRATION COMPLETE ✅
+# Diotec360 v2.2.0 "Sovereign Handshake" - INTEGRATION COMPLETE ✅
 
 **Version**: v2.2.0  
 **Codename**: "The Sovereign Handshake"  
@@ -10,7 +10,7 @@
 
 ## 🎯 Executive Summary
 
-Aethel v2.2.0 "Sovereign Handshake" completes the integration of cryptographic identity with mathematical verification. The Judge now validates BOTH:
+Diotec360 v2.2.0 "Sovereign Handshake" completes the integration of cryptographic identity with mathematical verification. The Judge now validates BOTH:
 
 1. **Mathematical Correctness** (Z3 Theorem Prover): WHAT the transaction does
 2. **Signature Authenticity** (ED25519): WHO signed the transaction
@@ -58,7 +58,7 @@ This integration creates the world's first system where:
 ```
 Keypair Generation: 363.83ms
 Public Key: fbfb0f50188011951b5dd85cb24c054d...
-Account Address: aethel_da41696b7a4e91050da1201536b912b7c736f89a
+Account Address: DIOTEC360_da41696b7a4e91050da1201536b912b7c736f89a
 ```
 
 ### Demo 2: Create Unsigned Transaction ✅
@@ -150,7 +150,7 @@ Signature VALID after crash recovery!
 ### 1. WhatsApp Forex Trading
 ```python
 # Dionísio signs trade order from WhatsApp
-crypto = get_aethel_crypt()
+crypto = get_DIOTEC360_crypt()
 keypair = crypto.generate_keypair()
 
 trade_order = {
@@ -227,18 +227,18 @@ python demo_sovereign_handshake.py
 
 ### Use in Production
 ```python
-from aethel.core.crypto import get_aethel_crypt
+from aethel.core.crypto import get_DIOTEC360_crypt
 from aethel.core.judge import AethelJudge
 from aethel.core.sovereign_persistence import get_sovereign_persistence
 
 # Generate keypair for user
-crypto = get_aethel_crypt()
+crypto = get_DIOTEC360_crypt()
 keypair = crypto.generate_keypair()
 
 # Create signed transaction
 transaction_data = {
     'sender': crypto.derive_address(keypair.public_key_hex),
-    'receiver': 'aethel_treasury',
+    'receiver': 'DIOTEC360_treasury',
     'amount': 1000000,
     'public_key': keypair.public_key_hex
 }
@@ -408,7 +408,7 @@ Copyright © 2026 DIOTEC 360. All rights reserved.
 
 ## 🎉 Conclusion
 
-Aethel v2.2.0 "Sovereign Handshake" is COMPLETE.
+Diotec360 v2.2.0 "Sovereign Handshake" is COMPLETE.
 
 **Key Achievements**:
 ✅ Dual validation system (signature + mathematics)  

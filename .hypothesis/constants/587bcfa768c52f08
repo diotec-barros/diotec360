@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\memory.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.8, 1.0, 100, 1000, ' AND confidence >= ?', ' AND memory_type = ?', ' AND source = ?', ',', '?', 'CognitiveMemory', 'ai', 'ai_decision', 'by_source', 'by_type', 'conclusion', 'confidence', 'content', 'conversation', 'forex', 'market', 'market_data', 'memory_id', 'memory_type', 'merkle_root', 'metadata', 'oracle', 'price', 'prompt', 'reasoning', 'reasoning_trace', 'rule_learned', 'source', 'symbol', 'tags', 'timestamp', 'top_tags', 'total_memories', 'transaction_outcome', 'type', 'validated', 'validated_pattern']

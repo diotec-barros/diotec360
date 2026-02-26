@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.3.0 - "THE CONSERVATION GUARDIAN" - LANÇADO!
+# 🚀 Diotec360 v1.3.0 - "THE CONSERVATION GUARDIAN" - LANÇADO!
 
 **Data**: 3 de Fevereiro de 2026  
 **Hora**: 18:30 BRT  
@@ -442,7 +442,7 @@ Precisamos provar que ele respeita as leis da física financeira."
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║         🚀 AETHEL v1.3.0 - LANÇADO! 🚀                      ║
+║         🚀 Diotec360 v1.3.0 - LANÇADO! 🚀                      ║
 ║                                                              ║
 ║           "The Conservation Guardian"                        ║
 ║                                                              ║

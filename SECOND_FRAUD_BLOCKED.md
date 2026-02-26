@@ -84,7 +84,7 @@ def transfer(sender, receiver, amount):
 ```
 **Resultado**: Bug em produção! 💸
 
-### Na Aethel v1.3.1
+### Na Diotec360 v1.3.1
 
 ```aethel
 verify {
@@ -208,7 +208,7 @@ O Guardião detecta todas."
 | Rust | ❌ | Nunca | - |
 | Go | ❌ | Nunca | - |
 
-### Aethel v1.3.1
+### Diotec360 v1.3.1
 
 | Feature | Detecta +1? | Quando? | Como? |
 |---------|-------------|---------|-------|

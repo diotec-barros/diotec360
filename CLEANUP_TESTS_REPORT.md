@@ -180,4 +180,4 @@ O projeto agora contém apenas testes funcionais e relevantes. Todos os arquivos
 
 ---
 **Arquiteto**: Kiro  
-**Versão**: Aethel v1.9.0 Apex
+**Versão**: Diotec360 v1.9.0 Apex

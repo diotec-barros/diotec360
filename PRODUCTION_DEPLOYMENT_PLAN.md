@@ -1,7 +1,7 @@
 # 🚀 PRODUCTION DEPLOYMENT PLAN - TRIANGLE OF TRUTH
 
 **Date:** 2026-02-12  
-**Version:** Aethel v3.0.5  
+**Version:** Diotec360 v3.0.5  
 **Status:** READY FOR GLOBAL DEPLOYMENT
 
 ---
@@ -90,20 +90,20 @@ cp ../aethel-project/.dockerignore ./
 cp ../aethel-project/.env.node1.huggingface ./.env
 
 # Create vault directories
-mkdir -p .aethel_vault/bundles
-mkdir -p .aethel_vault/certificates
-mkdir -p .aethel_state
-mkdir -p .aethel_sentinel
+mkdir -p .DIOTEC360_vault/bundles
+mkdir -p .DIOTEC360_vault/certificates
+mkdir -p .DIOTEC360_state
+mkdir -p .DIOTEC360_sentinel
 
 # Copy genesis state
-cp -r ../aethel-project/.aethel_vault/* ./.aethel_vault/
-cp -r ../aethel-project/.aethel_state/* ./.aethel_state/
+cp -r ../aethel-project/.DIOTEC360_vault/* ./.DIOTEC360_vault/
+cp -r ../aethel-project/.DIOTEC360_state/* ./.DIOTEC360_state/
 ```
 
 #### Step 3: Update README.md Frontmatter
 ```yaml
 ---
-title: Aethel Lattice Node 1
+title: DIOTEC360 LATTICE Node 1
 emoji: 🔺
 colorFrom: purple
 colorTo: blue
@@ -124,7 +124,7 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
 #### Step 5: Commit and Push
 ```bash
 git add .
-git commit -m "Deploy Aethel v3.0.5 - Triangle of Truth Node 1"
+git commit -m "Deploy Diotec360 v3.0.5 - Triangle of Truth Node 1"
 git push
 ```
 
@@ -166,8 +166,8 @@ cp .env.node3.backup .env
 pip install -r requirements.txt
 
 # Copy genesis state from Node 2
-scp -r user@api.diotec360.com:/path/to/aethel/.aethel_vault ./
-scp -r user@api.diotec360.com:/path/to/aethel/.aethel_state ./
+scp -r user@api.diotec360.com:/path/to/diotec360/.DIOTEC360_vault ./
+scp -r user@api.diotec360.com:/path/to/diotec360/.DIOTEC360_state ./
 ```
 
 #### Step 3: Start Service

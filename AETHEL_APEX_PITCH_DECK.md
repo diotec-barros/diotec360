@@ -601,8 +601,8 @@ Layer 4:  Synchrony Protocol (Parallel Execution)
 **Contact Information**
 
 **Website**: https://diotec360.com  
-**Demo**: https://aethel-studio.vercel.app  
-**API**: https://diotec-aethel-judge.hf.space  
+**Demo**: https://diotec360-studio.vercel.app  
+**API**: https://diotec-diotec360-judge.hf.space  
 **Email**: hello@diotec360.com  
 **Twitter**: @AethelProtocol  
 **LinkedIn**: /company/aethel-protocol

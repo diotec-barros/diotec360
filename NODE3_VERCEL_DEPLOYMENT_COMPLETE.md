@@ -128,7 +128,7 @@ python verify_production_triangle.py
 🔺 PRODUCTION TRIANGLE OF TRUTH - VERIFICATION
 ============================================================
 
-[TEST] Node 1 (Hugging Face): https://diotec-aethel-judge.hf.space
+[TEST] Node 1 (Hugging Face): https://diotec-diotec360-judge.hf.space
   ✅ Status: healthy
 
 [TEST] Node 2 (diotec360): https://aethel.diotec360.com
@@ -149,14 +149,14 @@ python verify_production_triangle.py
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL v3.0.5 - COMPLETE STACK                  │
+│         Diotec360 v3.0.5 - COMPLETE STACK                  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  FRONTEND (Vercel)                                      │
 │  └─ https://aethel.diotec360.com/                      │
 │                                                         │
 │  BACKEND TRIANGLE (HTTP-Only Resilience)                │
-│  ├─ Node 1: https://diotec-aethel-judge.hf.space      │
+│  ├─ Node 1: https://diotec-diotec360-judge.hf.space      │
 │  ├─ Node 2: https://aethel.diotec360.com              │
 │  └─ Node 3: https://backup.diotec360.com ✨ VERCEL    │
 │                                                         │

@@ -73,7 +73,7 @@ python scripts/test_lattice_connectivity.py
 
 ```
 ========================================
-AETHEL LATTICE CONNECTIVITY TEST
+DIOTEC360 LATTICE CONNECTIVITY TEST
 ========================================
 
 Testing Node 1: http://localhost:8001

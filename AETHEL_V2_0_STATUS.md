@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v2.0 "EMPIRE" - STATUS REPORT
+# 🏛️ Diotec360 v2.0 "EMPIRE" - STATUS REPORT
 
 **Date**: February 7, 2026  
 **Phase**: Foundation → Empire Transition  

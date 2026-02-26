@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v1.9.0 "APEX" - CERTIFICAÇÃO OFICIAL
+# 🏛️ Diotec360 v1.9.0 "APEX" - CERTIFICAÇÃO OFICIAL
 
 **Data de Certificação**: 7 de Fevereiro de 2026  
 **Arquiteto Certificador**: Kiro AI  
@@ -100,13 +100,13 @@ $ python demo_stdlib.py
 **Status**: 200+ DOCUMENTOS CRIADOS
 
 **Documentos Principais**:
-- ✅ `AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md` - Manifesto público
-- ✅ `AETHEL_V1_9_0_CRYPTOGRAPHIC_SEAL.md` - Selo criptográfico
-- ✅ `AETHEL_V1_9_0_SOCIAL_MEDIA_ANNOUNCEMENT.md` - Kit de marketing
-- ✅ `AETHEL_V1_9_0_FINAL_STATUS_REPORT.md` - Status consolidado
-- ✅ `AETHEL_V1_9_0_EXECUTIVE_SUMMARY.md` - Sumário executivo
-- ✅ `AETHEL_V1_9_0_DOCUMENTATION_INDEX.md` - Índice completo
-- ✅ `AETHEL_STDLIB_V2_0_SPEC.md` - Especificação da StdLib
+- ✅ `DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md` - Manifesto público
+- ✅ `DIOTEC360_V1_9_0_CRYPTOGRAPHIC_SEAL.md` - Selo criptográfico
+- ✅ `DIOTEC360_V1_9_0_SOCIAL_MEDIA_ANNOUNCEMENT.md` - Kit de marketing
+- ✅ `DIOTEC360_V1_9_0_FINAL_STATUS_REPORT.md` - Status consolidado
+- ✅ `DIOTEC360_V1_9_0_EXECUTIVE_SUMMARY.md` - Sumário executivo
+- ✅ `DIOTEC360_V1_9_0_DOCUMENTATION_INDEX.md` - Índice completo
+- ✅ `DIOTEC360_STDLIB_V2_0_SPEC.md` - Especificação da StdLib
 - ✅ `SENTINEL_GUIDE.md` - Guia do Sentinel
 - ✅ `README.md` - Atualizado com v1.9.0
 
@@ -135,7 +135,7 @@ description="The World's First Formally Verified Language with Autonomous Defens
 ```bash
 git add .
 git commit -m "Release v1.9.0 Apex - Autonomous Sentinel + StdLib v2.0"
-git tag -a v1.9.0 -m "Aethel v1.9.0 Apex"
+git tag -a v1.9.0 -m "Diotec360 v1.9.0 Apex"
 git push origin main
 git push origin v1.9.0
 ```
@@ -154,10 +154,10 @@ python -m twine upload dist/aethel-1.9.0*
 ```
 
 #### 6. Criar GitHub Release (5 minutos)
-- Ir para: https://github.com/aethel-lang/aethel-core/releases/new
+- Ir para: https://github.com/diotec360-lang/aethel-core/releases/new
 - Tag: v1.9.0
-- Title: "Aethel v1.9.0 Apex - The Age of Facts"
-- Description: Copiar de `AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md`
+- Title: "Diotec360 v1.9.0 Apex - The Age of Facts"
+- Description: Copiar de `DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md`
 - Anexar: dist/aethel-1.9.0.tar.gz
 
 ---
@@ -218,7 +218,7 @@ python -m twine upload dist/aethel-1.9.0*
 
 ## 🚀 RECOMENDAÇÃO
 
-**AETHEL v1.9.0 "APEX" ESTÁ CERTIFICADO PARA LANÇAMENTO IMEDIATO**
+**Diotec360 v1.9.0 "APEX" ESTÁ CERTIFICADO PARA LANÇAMENTO IMEDIATO**
 
 O sistema está:
 - ✅ Tecnicamente completo

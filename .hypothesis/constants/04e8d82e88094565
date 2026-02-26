@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\adaptive_rigor.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.5, 0.75, 1.0, '0', 'crisis', 'current_config', 'current_mode', 'deep', 'medium', 'normal', 'pow_difficulty', 'pow_required', 'proof_depth', 'recovery', 'recovery_progress', 'shallow', 'z3_timeout_seconds']

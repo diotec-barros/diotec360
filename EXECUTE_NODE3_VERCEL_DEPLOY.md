@@ -170,7 +170,7 @@ python verify_production_triangle.py
 🔺 PRODUCTION TRIANGLE OF TRUTH - VERIFICATION
 ============================================================
 
-[TEST] Node 1 (Hugging Face): https://diotec-aethel-judge.hf.space
+[TEST] Node 1 (Hugging Face): https://diotec-diotec360-judge.hf.space
   ✅ Status: healthy
 
 [TEST] Node 2 (diotec360): https://aethel.diotec360.com
@@ -297,7 +297,7 @@ echo === TRIANGLE MONITORING ===
 echo Timestamp: %date% %time%
 echo.
 
-curl -s https://diotec-aethel-judge.hf.space/health
+curl -s https://diotec-diotec360-judge.hf.space/health
 curl -s https://aethel.diotec360.com/health
 curl -s https://backup.diotec360.com/health
 

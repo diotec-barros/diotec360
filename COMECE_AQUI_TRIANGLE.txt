@@ -2,7 +2,7 @@
 ║                                                              ║
 ║         🏛️ TRIÂNGULO DA VERDADE - ATIVAÇÃO RÁPIDA 🏛️         ║
 ║                                                              ║
-║              AETHEL v3.0.4 - HTTP Resilience Mode            ║
+║              Diotec360 v3.0.4 - HTTP Resilience Mode            ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 

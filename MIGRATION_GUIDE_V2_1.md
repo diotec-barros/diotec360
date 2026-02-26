@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide helps you migrate from Aethel v1.9.0 (Autonomous Sentinel) to v2.1.0 (MOE Intelligence Layer). The MOE layer adds multi-expert consensus verification while maintaining full backward compatibility with v1.9.0.
+This guide helps you migrate from Diotec360 v1.9.0 (Autonomous Sentinel) to v2.1.0 (MOE Intelligence Layer). The MOE layer adds multi-expert consensus verification while maintaining full backward compatibility with v1.9.0.
 
 **Key Changes**:
 - New MOE Intelligence Layer (Layer 0) added before existing layers
@@ -262,7 +262,7 @@ def verify(self, intent: str, tx_id: str):
 orchestrator = MOEOrchestrator(
     max_workers=3,              # Parallel expert threads (default: 3)
     expert_timeout=30,          # Expert timeout in seconds (default: 30)
-    telemetry_db_path=".aethel_moe/telemetry.db",  # Telemetry database path
+    telemetry_db_path=".DIOTEC360_moe/telemetry.db",  # Telemetry database path
     cache_ttl_seconds=300,      # Cache TTL in seconds (default: 300 = 5 min)
     enable_cache=True           # Enable verdict caching (default: True)
 )
@@ -294,18 +294,18 @@ consensus_engine = ConsensusEngine(
 
 ```bash
 # Enable MOE
-export AETHEL_MOE_ENABLED=true
+export DIOTEC360_MOE_ENABLED=true
 
 # MOE configuration
-export AETHEL_MOE_MAX_WORKERS=3
-export AETHEL_MOE_EXPERT_TIMEOUT=30
-export AETHEL_MOE_CACHE_TTL=300
+export DIOTEC360_MOE_MAX_WORKERS=3
+export DIOTEC360_MOE_EXPERT_TIMEOUT=30
+export DIOTEC360_MOE_CACHE_TTL=300
 
 # Expert timeouts
-export AETHEL_Z3_TIMEOUT_NORMAL=30
-export AETHEL_Z3_TIMEOUT_CRISIS=5
-export AETHEL_SENTINEL_TIMEOUT_MS=100
-export AETHEL_GUARDIAN_TIMEOUT_MS=50
+export DIOTEC360_Z3_TIMEOUT_NORMAL=30
+export DIOTEC360_Z3_TIMEOUT_CRISIS=5
+export DIOTEC360_SENTINEL_TIMEOUT_MS=100
+export DIOTEC360_GUARDIAN_TIMEOUT_MS=50
 ```
 
 ---
@@ -376,10 +376,10 @@ Export metrics in Prometheus format.
 
 **Response** (text/plain):
 ```
-aethel_moe_expert_latency_ms{expert="Z3_Expert"} 127.5
-aethel_moe_expert_accuracy{expert="Z3_Expert"} 0.999
-aethel_moe_expert_verdicts_total{expert="Z3_Expert",verdict="APPROVE"} 1450
-aethel_moe_expert_verdicts_total{expert="Z3_Expert",verdict="REJECT"} 73
+DIOTEC360_moe_expert_latency_ms{expert="Z3_Expert"} 127.5
+DIOTEC360_moe_expert_accuracy{expert="Z3_Expert"} 0.999
+DIOTEC360_moe_expert_verdicts_total{expert="Z3_Expert",verdict="APPROVE"} 1450
+DIOTEC360_moe_expert_verdicts_total{expert="Z3_Expert",verdict="REJECT"} 73
 ...
 ```
 
@@ -478,7 +478,7 @@ If critical issues arise, disable MOE immediately:
 orchestrator.moe_enabled = False
 
 # Or via environment variable
-export AETHEL_MOE_ENABLED=false
+export DIOTEC360_MOE_ENABLED=false
 ```
 
 **Result**: System reverts to v1.9.0 behavior immediately.
@@ -613,7 +613,7 @@ metrics = orchestrator.export_prometheus_metrics()
 ## Support
 
 For questions or issues:
-- **GitHub Issues**: https://github.com/AethelLang/aethel/issues
+- **GitHub Issues**: https://github.com/AethelLang/diotec360/issues
 - **Discord**: https://discord.gg/aethel
 - **Email**: support@aethel.dev
 

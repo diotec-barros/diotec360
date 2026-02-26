@@ -68,7 +68,7 @@
    │  https://api.diotec360.com              │
    │           ↓                             │
    │  🟢 Node 1 (Hugging Face)               │
-   │  https://diotec-aethel-judge.hf.space  │
+   │  https://diotec-diotec360-judge.hf.space  │
    │           ↓                             │
    │  🟣 Node 3 (Backup)                     │
    │  https://backup.diotec360.com           │

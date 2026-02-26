@@ -12,7 +12,7 @@ As seguintes variáveis serão configuradas no Vercel:
 
 ```env
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ```
 
@@ -48,7 +48,7 @@ Environment: Production
 #### Variável 2: Lattice Nodes (Triangle Resilience)
 ```
 Name: NEXT_PUBLIC_LATTICE_NODES
-Value: https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+Value: https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 Environment: Production
 ```
 
@@ -97,7 +97,7 @@ vercel --prod
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│      AETHEL TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE  │
+│      DIOTEC360 TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel) ✅ DEPLOYED                       │
@@ -108,7 +108,7 @@ vercel --prod
 │  🔺 BACKEND TRIANGLE                                    │
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │                                                      │
 │  ├─ 🔵 Node 2: SOVEREIGN API ⭐                         │
 │  │  └─ https://api.diotec360.com                       │
@@ -133,7 +133,7 @@ https://aethel.diotec360.com/
 
 Abra DevTools (F12) e verifique:
 - ✅ Conexão com `api.diotec360.com`
-- ✅ Fallback para `diotec-aethel-judge.hf.space`
+- ✅ Fallback para `diotec-diotec360-judge.hf.space`
 - ✅ Fallback para `backup.diotec360.com`
 
 ### 3. Testar Funcionalidades

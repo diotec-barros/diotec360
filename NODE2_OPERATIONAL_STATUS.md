@@ -115,7 +115,7 @@ Node 2 ✅              Node 3
 # 1. Criar Hugging Face Space
 # 2. Upload código + .env.node1.huggingface
 # 3. Aguardar startup
-# 4. Testar: curl https://huggingface.co/spaces/diotec/aethel/health
+# 4. Testar: curl https://huggingface.co/spaces/diotec/diotec360/health
 ```
 
 **Deploy Node 3 (Backup)**:

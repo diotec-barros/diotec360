@@ -236,7 +236,7 @@ from aethel.core.batch_processor import BatchProcessor
 
 # Parse Aethel code
 parser = AethelParser()
-ast = parser.parse(aethel_code)
+ast = parser.parse(DIOTEC360_code)
 
 # Execute atomic batch
 processor = BatchProcessor(num_threads=8)

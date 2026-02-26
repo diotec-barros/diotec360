@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Real Lattice Connectivity Test
 Tests P2P and HTTP connectivity between all genesis nodes
 """
@@ -130,7 +146,7 @@ class LatticeConnectivityTester:
     def run_full_test(self):
         """Run complete connectivity test suite"""
         print(f"\n{'='*60}")
-        print("AETHEL REAL LATTICE CONNECTIVITY TEST")
+        print("DIOTEC360 REAL LATTICE CONNECTIVITY TEST")
         print(f"Timestamp: {datetime.now().isoformat()}")
         print(f"Testing {len(self.nodes)} nodes")
         print(f"{'='*60}")

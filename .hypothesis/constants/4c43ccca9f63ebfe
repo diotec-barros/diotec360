@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\vault.py
+# hypothesis_version: 6.151.5
+
+[',', '.aethel_vault', ':', 'ai_instructions', 'ast', 'code', 'constraints', 'created_at', 'expression', 'full_hash', 'immutable', 'index.json', 'intent_name', 'logic_hash', 'logical_duplicates', 'message', 'metadata', 'post_conditions', 'r', 'status', 'timestamp', 'total_functions', 'unique_logic', 'vault_path', 'verification', 'w']

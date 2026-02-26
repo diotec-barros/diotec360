@@ -53,13 +53,13 @@ cp ../.env.node3.backup ./.env
     }
   ],
   "env": {
-    "AETHEL_P2P_ENABLED": "false",
-    "AETHEL_LATTICE_NODES": "https://diotec-aethel-judge.hf.space,https://aethel.diotec360.com",
-    "AETHEL_NODE_NAME": "node3-backup",
-    "AETHEL_NODE_ROLE": "genesis-backup",
-    "AETHEL_HEARTBEAT_INTERVAL": "5",
-    "AETHEL_HTTP_POLL_INTERVAL": "10",
-    "AETHEL_PEERLESS_TIMEOUT": "60"
+    "DIOTEC360_P2P_ENABLED": "false",
+    "DIOTEC360_LATTICE_NODES": "https://diotec-diotec360-judge.hf.space,https://aethel.diotec360.com",
+    "DIOTEC360_NODE_NAME": "node3-backup",
+    "DIOTEC360_NODE_ROLE": "genesis-backup",
+    "DIOTEC360_HEARTBEAT_INTERVAL": "5",
+    "DIOTEC360_HTTP_POLL_INTERVAL": "10",
+    "DIOTEC360_PEERLESS_TIMEOUT": "60"
   }
 }
 ```
@@ -300,7 +300,7 @@ python verify_production_triangle.py
 🔺 PRODUCTION TRIANGLE OF TRUTH - VERIFICATION
 ============================================================
 
-[TEST] Node 1 (Hugging Face): https://diotec-aethel-judge.hf.space
+[TEST] Node 1 (Hugging Face): https://diotec-diotec360-judge.hf.space
   ✅ Healthy
 
 [TEST] Node 2 (diotec360): https://aethel.diotec360.com

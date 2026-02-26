@@ -1,7 +1,7 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                    🔐 AETHEL v2.2.0 - SOVEREIGN IDENTITY 🔐                  ║
+║                    🔐 Diotec360 v2.2.0 - SOVEREIGN IDENTITY 🔐                  ║
 ║                                                                              ║
 ║                           "The Keys of the Empire"                           ║
 ║                                                                              ║
@@ -102,10 +102,10 @@
   • aethel/core/state.py (updated)
 
   Documentation:
-  • TASK_2_2_1_AETHEL_CRYPT_COMPLETE.md
+  • TASK_2_2_1_DIOTEC360_CRYPT_COMPLETE.md
   • TASK_2_2_2_SIGNED_INTENT_PROTOCOL_COMPLETE.md
   • SESSAO_V2_2_0_SOVEREIGN_IDENTITY_COMPLETE.md
-  • AETHEL_V2_2_0_EXECUTIVE_SUMMARY.md
+  • DIOTEC360_V2_2_0_EXECUTIVE_SUMMARY.md
   • MANIFESTO_V2_2_0_SOVEREIGN_IDENTITY.md
   • PROXIMOS_PASSOS_V2_2_3.md
 

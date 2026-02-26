@@ -1,11 +1,11 @@
 @echo off
 REM ============================================================
-REM AETHEL LATTICE TEST - Dual Node Gossip Protocol
+REM DIOTEC360 LATTICE TEST - Dual Node Gossip Protocol
 REM ============================================================
 
 echo.
 echo ========================================
-echo  AETHEL LATTICE - TWIN NODE ACTIVATION
+echo  DIOTEC360 LATTICE - TWIN NODE ACTIVATION
 echo ========================================
 echo.
 
@@ -27,16 +27,16 @@ echo      OK - Dependencias instaladas
 
 echo.
 echo [2/5] Iniciando Node A (porta 8000)...
-set AETHEL_STATE_DIR=.aethel_state_nodeA
-set AETHEL_VAULT_DIR=.aethel_vault_nodeA
-set AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeA
-set AETHEL_P2P_ENABLED=true
-set AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
-set AETHEL_P2P_TOPIC=aethel/lattice/v1
-set AETHEL_P2P_BOOTSTRAP=
-set AETHEL_LATTICE_NODES=
+set DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeA
+set DIOTEC360_VAULT_DIR=.DIOTEC360_vault_nodeA
+set DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_nodeA
+set DIOTEC360_P2P_ENABLED=true
+set DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
+set DIOTEC360_P2P_TOPIC=aethel/lattice/v1
+set DIOTEC360_P2P_BOOTSTRAP=
+set DIOTEC360_LATTICE_NODES=
 
-start "Aethel Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
+start "Diotec360 Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
 
 echo      Aguardando Node A inicializar...
 timeout /t 3 /nobreak >nul
@@ -100,16 +100,16 @@ echo      Bootstrap: %BOOTSTRAP_ADDR%
 
 echo.
 echo [4/5] Iniciando Node B (porta 8001)...
-set AETHEL_STATE_DIR=.aethel_state_nodeB
-set AETHEL_VAULT_DIR=.aethel_vault_nodeB
-set AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeB
-set AETHEL_P2P_ENABLED=true
-set AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9001
-set AETHEL_P2P_TOPIC=aethel/lattice/v1
-set AETHEL_P2P_BOOTSTRAP=%BOOTSTRAP_ADDR%
-set AETHEL_LATTICE_NODES=http://127.0.0.1:8000
+set DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeB
+set DIOTEC360_VAULT_DIR=.DIOTEC360_vault_nodeB
+set DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_nodeB
+set DIOTEC360_P2P_ENABLED=true
+set DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9001
+set DIOTEC360_P2P_TOPIC=aethel/lattice/v1
+set DIOTEC360_P2P_BOOTSTRAP=%BOOTSTRAP_ADDR%
+set DIOTEC360_LATTICE_NODES=http://127.0.0.1:8000
 
-start "Aethel Node B" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8001 > logs\nodeB.log 2>&1"
+start "Diotec360 Node B" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8001 > logs\nodeB.log 2>&1"
 
 echo      Aguardando Node B inicializar...
 timeout /t 3 /nobreak >nul

@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Deploy Sentinel in Soft Launch Mode
 
 Soft Launch: Blocking enabled with high thresholds
@@ -34,77 +50,77 @@ def create_soft_launch_config(output_path: str) -> None:
 # ============================================================================
 # Core Sentinel Settings
 # ============================================================================
-AETHEL_SENTINEL_ENABLED=true
-AETHEL_SENTINEL_MODE=soft_launch
-AETHEL_TELEMETRY_DB_PATH=./data/telemetry.db
+DIOTEC360_SENTINEL_ENABLED=true
+DIOTEC360_SENTINEL_MODE=soft_launch
+DIOTEC360_TELEMETRY_DB_PATH=./data/telemetry.db
 
 # ============================================================================
 # Semantic Sanitizer - ENABLED (High Thresholds)
 # ============================================================================
-AETHEL_SEMANTIC_SANITIZER_ENABLED=true
-AETHEL_SEMANTIC_SANITIZER_BLOCK=true  # Blocking enabled
-AETHEL_PATTERN_DB_PATH=./data/trojan_patterns.json
-AETHEL_ENTROPY_THRESHOLD=0.9  # High threshold (vs 0.8 production)
-AETHEL_SEMANTIC_TIMEOUT_MS=100
+DIOTEC360_SEMANTIC_SANITIZER_ENABLED=true
+DIOTEC360_SEMANTIC_SANITIZER_BLOCK=true  # Blocking enabled
+DIOTEC360_PATTERN_DB_PATH=./data/trojan_patterns.json
+DIOTEC360_ENTROPY_THRESHOLD=0.9  # High threshold (vs 0.8 production)
+DIOTEC360_SEMANTIC_TIMEOUT_MS=100
 
 # ============================================================================
 # Crisis Mode - ENABLED (High Thresholds)
 # ============================================================================
-AETHEL_CRISIS_MODE_ENABLED=true
-AETHEL_CRISIS_ANOMALY_THRESHOLD=0.20  # 20% (vs 10% production)
-AETHEL_CRISIS_REQUEST_THRESHOLD=2000  # 2000 req/s (vs 1000 production)
-AETHEL_CRISIS_COOLDOWN_SECONDS=120
+DIOTEC360_CRISIS_MODE_ENABLED=true
+DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.20  # 20% (vs 10% production)
+DIOTEC360_CRISIS_REQUEST_THRESHOLD=2000  # 2000 req/s (vs 1000 production)
+DIOTEC360_CRISIS_COOLDOWN_SECONDS=120
 
 # ============================================================================
 # Adaptive Rigor - ENABLED
 # ============================================================================
-AETHEL_NORMAL_Z3_TIMEOUT=30
-AETHEL_CRISIS_Z3_TIMEOUT=5
-AETHEL_POW_BASE_DIFFICULTY=4
-AETHEL_POW_MAX_DIFFICULTY=8
+DIOTEC360_NORMAL_Z3_TIMEOUT=30
+DIOTEC360_CRISIS_Z3_TIMEOUT=5
+DIOTEC360_POW_BASE_DIFFICULTY=4
+DIOTEC360_POW_MAX_DIFFICULTY=8
 
 # ============================================================================
 # Quarantine System - ENABLED
 # ============================================================================
-AETHEL_QUARANTINE_ENABLED=true
-AETHEL_QUARANTINE_CAPACITY=100
-AETHEL_QUARANTINE_THRESHOLD=0.8  # High threshold (vs 0.7 production)
+DIOTEC360_QUARANTINE_ENABLED=true
+DIOTEC360_QUARANTINE_CAPACITY=100
+DIOTEC360_QUARANTINE_THRESHOLD=0.8  # High threshold (vs 0.7 production)
 
 # ============================================================================
 # Self-Healing - ENABLED (Manual Approval)
 # ============================================================================
-AETHEL_SELF_HEALING_ENABLED=true
-AETHEL_SELF_HEALING_AUTO_INJECT=false  # Manual approval for first 100 rules
-AETHEL_RULE_EFFECTIVENESS_THRESHOLD=0.7
-AETHEL_HISTORICAL_TX_LIMIT=1000
+DIOTEC360_SELF_HEALING_ENABLED=true
+DIOTEC360_SELF_HEALING_AUTO_INJECT=false  # Manual approval for first 100 rules
+DIOTEC360_RULE_EFFECTIVENESS_THRESHOLD=0.7
+DIOTEC360_HISTORICAL_TX_LIMIT=1000
 
 # ============================================================================
 # Adversarial Vaccine - DISABLED (Enable after soft launch)
 # ============================================================================
-AETHEL_VACCINE_ENABLED=false
-AETHEL_VACCINE_SCHEDULE="0 2 * * *"
-AETHEL_VACCINE_SCENARIOS=1000
+DIOTEC360_VACCINE_ENABLED=false
+DIOTEC360_VACCINE_SCHEDULE="0 2 * * *"
+DIOTEC360_VACCINE_SCENARIOS=1000
 
 # ============================================================================
 # Gauntlet Report - ENABLED
 # ============================================================================
-AETHEL_GAUNTLET_DB_PATH=./data/gauntlet.db
-AETHEL_RETENTION_DAYS=90
+DIOTEC360_GAUNTLET_DB_PATH=./data/gauntlet.db
+DIOTEC360_RETENTION_DAYS=90
 
 # ============================================================================
 # Monitoring and Logging
 # ============================================================================
-AETHEL_LOG_LEVEL=INFO
-AETHEL_METRICS_ENABLED=true
-AETHEL_METRICS_PORT=9090
+DIOTEC360_LOG_LEVEL=INFO
+DIOTEC360_METRICS_ENABLED=true
+DIOTEC360_METRICS_PORT=9090
 
 # ============================================================================
 # Alerting - ENABLED
 # ============================================================================
-AETHEL_ALERT_CRISIS_MODE=true
-AETHEL_ALERT_FALSE_POSITIVE_RATE=true
-AETHEL_ALERT_OVERHEAD=true
-AETHEL_ALERT_QUARANTINE_CAPACITY=true
+DIOTEC360_ALERT_CRISIS_MODE=true
+DIOTEC360_ALERT_FALSE_POSITIVE_RATE=true
+DIOTEC360_ALERT_OVERHEAD=true
+DIOTEC360_ALERT_QUARANTINE_CAPACITY=true
 """
     
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)

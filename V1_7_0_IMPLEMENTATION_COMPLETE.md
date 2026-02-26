@@ -61,7 +61,7 @@ O Oracle Sanctuary foi implementado com sucesso! Aethel agora pode interagir com
 ## 📊 **TEST RESULTS**
 
 ```
-🔮 AETHEL v1.7.0 - ORACLE SANCTUARY TEST SUITE
+🔮 Diotec360 v1.7.0 - ORACLE SANCTUARY TEST SUITE
 ============================================================
 
 ✅ PASS - Oracle Registry
@@ -392,7 +392,7 @@ We now have:
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║              AETHEL v1.7.0 - ORACLE SANCTUARY                ║
+║              Diotec360 v1.7.0 - ORACLE SANCTUARY                ║
 ║                                                              ║
 ║  "Trust the math, verify the world."                        ║
 ╚══════════════════════════════════════════════════════════════╝

@@ -7,7 +7,7 @@
 
 ## 🎯 O QUE FOI FEITO
 
-O Kiro completou a implementação do **núcleo do Aethel Lattice**:
+O Kiro completou a implementação do **núcleo do DIOTEC360 LATTICE**:
 
 1. ✅ **Discovery Service** - A rede pode se ver
 2. ✅ **Gossip Protocol** - A rede pode falar

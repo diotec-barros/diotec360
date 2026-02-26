@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.9.0 "APEX" - PLANO DE AÇÃO IMEDIATO
+# 🚀 Diotec360 v1.9.0 "APEX" - PLANO DE AÇÃO IMEDIATO
 
 **Data**: 7 de Fevereiro de 2026  
 **Status**: TUDO PRONTO - FALTA APENAS LANÇAR  
@@ -58,7 +58,7 @@ The age of 'provably correct' has begun.
 Signed-off-by: Architect + Engineer-Chief Kiro"
 
 # Tag release
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun
 
 This release includes:
 - Autonomous defense system
@@ -100,14 +100,14 @@ git push origin main
 
 ### AÇÃO 3: GitHub Release (5 minutos)
 
-1. Ir para: https://github.com/AethelLang/aethel/releases/new
+1. Ir para: https://github.com/AethelLang/diotec360/releases/new
 2. Tag: `v1.9.0-apex`
-3. Title: `Aethel v1.9.0 "Apex" - The Age of Facts Has Begun`
+3. Title: `Diotec360 v1.9.0 "Apex" - The Age of Facts Has Begun`
 4. Description: Copiar de `RELEASE_NOTES_V1_9_0.md`
 5. Anexar arquivos:
-   - `AETHEL_V1_9_0_LAUNCH_BUNDLE.md`
-   - `AETHEL_V1_9_0_APEX_FINAL_SEAL.md`
-   - `AETHEL_V1_9_0_CRYPTOGRAPHIC_SEAL.md`
+   - `DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md`
+   - `DIOTEC360_V1_9_0_APEX_FINAL_SEAL.md`
+   - `DIOTEC360_V1_9_0_CRYPTOGRAPHIC_SEAL.md`
 6. Marcar como "Latest release"
 7. Publish release
 
@@ -187,7 +187,7 @@ Desenvolvedores podem:
 
 ### Comando 1: Git Release
 ```bash
-git add -A && git commit -m "v1.9.0 Apex - The Foundation is Eternal" && git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex" && git push origin main --tags
+git add -A && git commit -m "v1.9.0 Apex - The Foundation is Eternal" && git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex" && git push origin main --tags
 ```
 
 ### Comando 2: PyPI Release

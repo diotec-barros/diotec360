@@ -1,4 +1,4 @@
-# 🎯 RESUMO EXECUTIVO - Deploy Aethel v1.1
+# 🎯 RESUMO EXECUTIVO - Deploy Diotec360 v1.1
 
 **Data**: 3 de Fevereiro de 2026  
 **Status**: 🟡 AGUARDANDO CONFIGURAÇÃO DE DOMÍNIOS  
@@ -96,7 +96,7 @@ teste_aethel.bat
 ```
 Frontend: https://aethel.diotec360.com
 Backend:  https://api.diotec360.com
-GitHub:   https://github.com/diotec-barros/aethel-lang
+GitHub:   https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---

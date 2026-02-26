@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\proof_verifier.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.0001, 100, 1000, ',', ':', 'PROVED', 'Verification failed', 'average_difficulty', 'cache_hit_rate', 'cache_hits', 'cache_misses', 'constraints', 'cpu_time_ms', 'message', 'post_conditions', 'signature_failures', 'status', 'telemetry', 'total_difficulty', 'valid', 'verification_count']

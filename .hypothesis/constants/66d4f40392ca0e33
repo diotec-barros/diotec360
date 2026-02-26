@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\data_models.py
+# hypothesis_version: 6.151.5
+
+['COMMIT', 'DOUBLE_SIGN', 'INVALID_VERIFICATION', 'NEW_VIEW', 'PREPARE', 'PRE_PREPARE', 'ProofBlock', 'SignedProof', 'VIEW_CHANGE', 'block_id', 'message_type', 'previous_block_hash', 'proof_data', 'proofs', 'proposer_id', 'public_key', 'sender_id', 'sequence', 'signature', 'timestamp', 'use_ghost_identity', 'view']

@@ -23,7 +23,7 @@ python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
 ### 1. Inicialização (primeiros 5 segundos)
 ```
 [STARTUP] Loading environment variables...
-[STARTUP] Initializing Aethel Lattice Streams...
+[STARTUP] Initializing DIOTEC360 LATTICE Streams...
 ```
 
 ### 2. P2P Peer ID (IMPORTANTE - COPIE ESTE ID!)
@@ -72,13 +72,13 @@ Este teste vai:
 Edite `.env.node1.huggingface`:
 ```bash
 # Substitua PEER_ID_2 pelo ID real capturado
-AETHEL_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmSeuPeerIDReal,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
+DIOTEC360_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmSeuPeerIDReal,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
 ```
 
 Edite `.env.node3.backup`:
 ```bash
 # Substitua PEER_ID_2 pelo ID real capturado
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/QmSeuPeerIDReal
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/QmSeuPeerIDReal
 ```
 
 ## PRÓXIMOS PASSOS

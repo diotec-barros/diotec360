@@ -23,7 +23,7 @@
 
 1. No Railway dashboard: "New Project"
 2. "Deploy from GitHub repo"
-3. Escolha: "aethel-lang" (ou nome do seu repo)
+3. Escolha: "diotec360-lang" (ou nome do seu repo)
 4. Railway detecta automaticamente o Dockerfile
 5. Clique em "Deploy"
 
@@ -62,7 +62,7 @@ Deve retornar:
 📋 PASSO 6: ATUALIZAR FRONTEND (VERCEL)
 
 1. Acesse: https://vercel.com/dashboard
-2. Projeto "aethel-lang"
+2. Projeto "diotec360-lang"
 3. Settings → Environment Variables
 4. Edite: NEXT_PUBLIC_API_URL
 5. Novo valor: https://[SUA-URL].up.railway.app
@@ -73,7 +73,7 @@ Deve retornar:
 
 📋 PASSO 7: TESTAR TUDO
 
-1. Acesse: https://aethel-lang.vercel.app
+1. Acesse: https://diotec360-lang.vercel.app
 2. Clique em "Load Example"
 3. Selecione "Financial Transfer"
 4. Clique em "Verify"

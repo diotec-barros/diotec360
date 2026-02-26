@@ -27,10 +27,10 @@ aethel-core/
 │   └── aethel                 # CLI entry point
 ├── examples/                  # High-stakes examples
 │   ├── README.md
-│   ├── aethel_sat.ae          # Satellite controller
+│   ├── DIOTEC360_sat.ae          # Satellite controller
 │   └── mission_simulator.py   # Mission simulation
 ├── output/                    # Generated code output
-├── .aethel_vault/             # Local vault storage
+├── .DIOTEC360_vault/             # Local vault storage
 ├── docs/                      # Project documentation
 │   ├── MANIFESTO.md
 │   ├── ROADMAP.md
@@ -112,10 +112,10 @@ pip install aethel
 aethel build mycode.ae
 
 # Verify without building
-aethel verify mycode.ae
+Diotec360 verify mycode.ae
 
 # List vault contents
-aethel vault list
+Diotec360 vault list
 ```
 
 ### Python API

@@ -1,4 +1,4 @@
-# 🎭 Aethel v1.6.2 - Ghost Protocol Expansion
+# 🎭 Diotec360 v1.6.2 - Ghost Protocol Expansion
 
 **Release Date**: February 4, 2026  
 **Codename**: "Privacy-Preserving Proofs"  
@@ -182,7 +182,7 @@ python test_zkp_v1_6_2.py
 
 **Expected Output**:
 ```
-🎭 AETHEL v1.6.2 - GHOST PROTOCOL EXPANSION TESTS
+🎭 Diotec360 v1.6.2 - GHOST PROTOCOL EXPANSION TESTS
 ==================================================================
 
 ✅ PASSED: ZKP Engine
@@ -302,7 +302,7 @@ Update your frontend to show ZKP status:
 
 **Title**: "Privacy-Preserving Formal Verification with Zero-Knowledge Proofs"
 
-**Abstract**: We present Aethel v1.6.2, the first programming language to combine formal verification with zero-knowledge proofs, enabling privacy-preserving correctness guarantees.
+**Abstract**: We present Diotec360 v1.6.2, the first programming language to combine formal verification with zero-knowledge proofs, enabling privacy-preserving correctness guarantees.
 
 **Contributions**:
 1. Novel syntax for secret variables
@@ -341,7 +341,7 @@ Update your frontend to show ZKP status:
 ### Community
 - **GitHub Issues**: Report bugs, request features
 - **Discussions**: Ask questions, share use cases
-- **Twitter**: @aethel_lang (coming soon)
+- **Twitter**: @DIOTEC360_lang (coming soon)
 
 ---
 

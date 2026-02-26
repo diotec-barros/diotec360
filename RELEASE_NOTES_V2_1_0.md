@@ -1,4 +1,4 @@
-# Aethel v2.1.0 "The MOE Intelligence Layer" - Release Notes
+# Diotec360 v2.1.0 "The MOE Intelligence Layer" - Release Notes
 
 **Release Date**: February 15, 2026  
 **Version**: v2.1.0  
@@ -8,7 +8,7 @@
 
 ## 🏛️ Executive Summary
 
-Aethel v2.1.0 represents a paradigm shift from monolithic AI verification to **distributed expert consensus**. The MOE (Mixture of Experts) Intelligence Layer deploys specialized expert agents that work in parallel, each bringing deep domain expertise to transaction verification.
+Diotec360 v2.1.0 represents a paradigm shift from monolithic AI verification to **distributed expert consensus**. The MOE (Mixture of Experts) Intelligence Layer deploys specialized expert agents that work in parallel, each bringing deep domain expertise to transaction verification.
 
 **Key Innovation**: Transform verification from a "jack of all trades" into a **Maestro** that conducts a symphony of specialists. Each expert is small, focused, and optimized for their domain, resulting in higher accuracy, lower latency, and better explainability.
 
@@ -270,24 +270,24 @@ python scripts/deploy_moe_full_activation.py
 
 ```bash
 # Enable/disable MOE layer
-AETHEL_MOE_ENABLED=true
+DIOTEC360_MOE_ENABLED=true
 
 # Expert timeouts (milliseconds)
-AETHEL_Z3_TIMEOUT_NORMAL=30000
-AETHEL_Z3_TIMEOUT_CRISIS=5000
-AETHEL_SENTINEL_TIMEOUT=100
-AETHEL_GUARDIAN_TIMEOUT=50
+DIOTEC360_Z3_TIMEOUT_NORMAL=30000
+DIOTEC360_Z3_TIMEOUT_CRISIS=5000
+DIOTEC360_SENTINEL_TIMEOUT=100
+DIOTEC360_GUARDIAN_TIMEOUT=50
 
 # Consensus thresholds
-AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
-AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
+DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
 
 # Verdict caching
-AETHEL_VERDICT_CACHE_ENABLED=true
-AETHEL_VERDICT_CACHE_TTL=300  # 5 minutes
+DIOTEC360_VERDICT_CACHE_ENABLED=true
+DIOTEC360_VERDICT_CACHE_TTL=300  # 5 minutes
 
 # Telemetry
-AETHEL_TELEMETRY_DB_PATH=.aethel_moe/telemetry.db
+DIOTEC360_TELEMETRY_DB_PATH=.DIOTEC360_moe/telemetry.db
 ```
 
 ---
@@ -351,7 +351,7 @@ dashboard.complete("APPROVED", overall_confidence=0.98)
 
 ```python
 import os
-os.environ['AETHEL_MOE_ENABLED'] = 'true'
+os.environ['DIOTEC360_MOE_ENABLED'] = 'true'
 
 from aethel.core.judge import Judge
 
@@ -362,7 +362,7 @@ result = judge.verify(intent)
 **Rollback**: Disable MOE at any time:
 
 ```python
-os.environ['AETHEL_MOE_ENABLED'] = 'false'
+os.environ['DIOTEC360_MOE_ENABLED'] = 'false'
 ```
 
 Or use the rollback script:
@@ -414,9 +414,9 @@ Special thanks to:
 
 ## 📞 Support
 
-- **Documentation**: https://github.com/aethel/aethel/tree/main/docs
-- **Issues**: https://github.com/aethel/aethel/issues
-- **Discussions**: https://github.com/aethel/aethel/discussions
+- **Documentation**: https://github.com/diotec360/aethel/tree/main/docs
+- **Issues**: https://github.com/diotec360/aethel/issues
+- **Discussions**: https://github.com/diotec360/aethel/discussions
 
 ---
 

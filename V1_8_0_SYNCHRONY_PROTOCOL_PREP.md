@@ -13,7 +13,7 @@ Com a fronteira selada (Oracle + Conservação), estamos prontos para o maior sa
 
 ### O Problema Atual
 
-**Aethel v1.7.1**: Uma transação por vez (serial)
+**Diotec360 v1.7.1**: Uma transação por vez (serial)
 - ✅ Correto
 - ✅ Seguro
 - ❌ Lento para alta demanda
@@ -22,7 +22,7 @@ Com a fronteira selada (Oracle + Conservação), estamos prontos para o maior sa
 
 ### A Solução: Synchrony Protocol
 
-**Aethel v1.8.0**: Múltiplas transações em paralelo
+**Diotec360 v1.8.0**: Múltiplas transações em paralelo
 - ✅ Correto
 - ✅ Seguro
 - ✅ Rápido (10x throughput)

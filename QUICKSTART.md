@@ -40,7 +40,7 @@ intent transfer_funds(sender: Account, receiver: Account, amount: Gold) {
 ## Compilar e Executar
 
 ```python
-from aethel_kernel import AethelKernel
+from DIOTEC360_kernel import AethelKernel
 
 # Ler código Aethel
 with open('hello.ae', 'r') as f:

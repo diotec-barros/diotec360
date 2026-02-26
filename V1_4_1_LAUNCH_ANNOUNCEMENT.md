@@ -1,4 +1,4 @@
-# 🚀 Aethel v1.4.1 - O Fim do Overflow
+# 🚀 Diotec360 v1.4.1 - O Fim do Overflow
 
 ## A Queda da Divisão por Zero e o Fim do Overflow
 
@@ -20,7 +20,7 @@ Esses bugs não são "erros de programação". São **falhas fundamentais** de c
 
 ## 🛡️ A Solução: Tríplice Muralha de Defesa
 
-Aethel v1.4.1 introduz o primeiro sistema de verificação formal que detecta bugs de hardware **antes de compilar**.
+Diotec360 v1.4.1 introduz o primeiro sistema de verificação formal que detecta bugs de hardware **antes de compilar**.
 
 ### Layer 1: Conservation Guardian
 - Detecta criação ilegal de fundos
@@ -54,7 +54,7 @@ balance = 9223372036854775800 + 100;
 // Resultado: 💸 FUNDOS PERDIDOS
 ```
 
-### Depois (Aethel v1.4.1)
+### Depois (Diotec360 v1.4.1)
 
 ```aethel
 verify {
@@ -106,7 +106,7 @@ verify {
 
 ### Bugs Históricos Que Aethel Previne
 
-| Incidente | Ano | Perda | Causa | Aethel v1.4.1 |
+| Incidente | Ano | Perda | Causa | Diotec360 v1.4.1 |
 |-----------|-----|-------|-------|---------------|
 | USS Yorktown | 1997 | 2h45min à deriva | Divisão por zero | ✅ BLOQUEADO |
 | The DAO Hack | 2016 | $60 milhões | Overflow + Reentrancy | ✅ BLOQUEADO |
@@ -149,7 +149,7 @@ Redefinimos o que significa "código seguro":
 https://aethel.diotec360.com
 
 ### API Pública
-https://diotec-aethel-judge.hf.space/api
+https://diotec-diotec360-judge.hf.space/api
 
 ### Exemplo: Teste o Overflow
 
@@ -265,8 +265,8 @@ Desenvolvedores criam funções provadas (ex: cálculo de juros complexo) → Ou
 - [Technical Summary](./HOTFIX_V1_4_1_SUMMARY.md)
 
 ### Código
-- [GitHub Repository](https://github.com/diotec-barros/aethel-lang)
-- [Hugging Face Space](https://huggingface.co/spaces/diotec/aethel-judge)
+- [GitHub Repository](https://github.com/diotec-barros/diotec360-lang)
+- [Hugging Face Space](https://huggingface.co/spaces/diotec/diotec360-judge)
 
 ### Testes
 - [Unit Tests](./test_overflow_fix.py) - 6/6 passing
@@ -281,7 +281,7 @@ Aethel não é apenas uma linguagem de programação. É uma nova forma de pensa
 **De "funciona na minha máquina" para "provado matematicamente".**
 
 ### Contribua
-- Star no GitHub: https://github.com/diotec-barros/aethel-lang
+- Star no GitHub: https://github.com/diotec-barros/diotec360-lang
 - Teste no playground: https://aethel.diotec360.com
 - Reporte bugs: GitHub Issues
 
@@ -305,7 +305,7 @@ A todos que acreditaram que software pode ser mais do que "provavelmente correto
 
 **🛡️ O hardware está protegido. A matemática está do nosso lado. O futuro é seguro.**
 
-**Aethel v1.4.1 - Onde crashes se tornam erros de compilação.**
+**Diotec360 v1.4.1 - Onde crashes se tornam erros de compilação.**
 
 ---
 

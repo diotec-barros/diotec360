@@ -79,7 +79,7 @@ Clique em **Save** ou **Add**
 
 ### 3.1 No Projeto Vercel
 
-1. Acesse seu projeto "aethel-lang" no Vercel
+1. Acesse seu projeto "diotec360-lang" no Vercel
 2. Vá em **Settings** → **Domains**
 3. Clique em **Add**
 4. Digite: `aethel.diotec360.com`
@@ -100,7 +100,7 @@ Como o domínio já é do Vercel, ele vai:
 
 ### 4.1 No Vercel
 
-1. No projeto "aethel-lang"
+1. No projeto "diotec360-lang"
 2. Vá em **Settings** → **Environment Variables**
 3. Encontre `NEXT_PUBLIC_API_URL`
 4. Clique em **Edit**
@@ -189,7 +189,7 @@ Value: cname.vercel-dns.com  (Vercel adiciona automaticamente)
 - [ ] Save
 
 ### Vercel Frontend
-- [ ] Projeto aethel-lang
+- [ ] Projeto diotec360-lang
 - [ ] Settings → Domains
 - [ ] Add: aethel.diotec360.com
 - [ ] (Vercel configura automaticamente)

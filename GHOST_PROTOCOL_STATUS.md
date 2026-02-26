@@ -63,7 +63,7 @@ intent private_transfer(secret sender_balance: Balance, amount: Balance) {
 
 ```
 ================================
-AETHEL v1.6.2 - GHOST PROTOCOL EXPANSION TESTS
+Diotec360 v1.6.2 - GHOST PROTOCOL EXPANSION TESTS
 ================================
 
 ✅ PASSED: Parser Secret Keyword
@@ -114,7 +114,7 @@ Adicionar badge ZKP (opcional):
 #### 1. "Primeira Linguagem com `secret` Keyword"
 
 **Pitch**:
-> "Aethel v1.6.2 é a primeira linguagem formalmente verificada com suporte nativo a variáveis privadas. Marque qualquer variável como `secret` e o compilador garante que ela nunca será revelada."
+> "Diotec360 v1.6.2 é a primeira linguagem formalmente verificada com suporte nativo a variáveis privadas. Marque qualquer variável como `secret` e o compilador garante que ela nunca será revelada."
 
 **Casos de Uso**:
 - 🏥 **Saúde**: Provar elegibilidade sem revelar diagnóstico
@@ -276,7 +276,7 @@ type aethel\examples\private_compliance.ae
 python -c "from aethel.core.parser import AethelParser; print('Parser OK!')"
 
 # Grammar test
-python -c "from aethel.core.grammar import aethel_grammar; print('Grammar OK!')"
+python -c "from aethel.core.grammar import DIOTEC360_grammar; print('Grammar OK!')"
 ```
 
 ---

@@ -28,6 +28,15 @@ ENV/
 output/*.rs
 .aethel_vault/*.json
 
+# Artifacts / Results
+load_test_results.json
+
+# Sealed / Celebration files
+*_SEALED*.txt
+*_SELADO*.txt
+*CELEBRACAO*.txt
+*COMECE_AQUI*.txt
+
 # Hugging Face Space (repositório separado)
 aethel-judge/
 

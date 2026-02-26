@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Deploy Sentinel in Full Activation Mode
 
 Full Activation: Production thresholds
@@ -34,86 +50,86 @@ def create_production_config(output_path: str) -> None:
 # ============================================================================
 # Core Sentinel Settings
 # ============================================================================
-AETHEL_SENTINEL_ENABLED=true
-AETHEL_SENTINEL_MODE=production
-AETHEL_TELEMETRY_DB_PATH=./data/telemetry.db
+DIOTEC360_SENTINEL_ENABLED=true
+DIOTEC360_SENTINEL_MODE=production
+DIOTEC360_TELEMETRY_DB_PATH=./data/telemetry.db
 
 # ============================================================================
 # Semantic Sanitizer - ENABLED (Production Thresholds)
 # ============================================================================
-AETHEL_SEMANTIC_SANITIZER_ENABLED=true
-AETHEL_SEMANTIC_SANITIZER_BLOCK=true
-AETHEL_PATTERN_DB_PATH=./data/trojan_patterns.json
-AETHEL_ENTROPY_THRESHOLD=0.8  # Production threshold
-AETHEL_SEMANTIC_TIMEOUT_MS=100
+DIOTEC360_SEMANTIC_SANITIZER_ENABLED=true
+DIOTEC360_SEMANTIC_SANITIZER_BLOCK=true
+DIOTEC360_PATTERN_DB_PATH=./data/trojan_patterns.json
+DIOTEC360_ENTROPY_THRESHOLD=0.8  # Production threshold
+DIOTEC360_SEMANTIC_TIMEOUT_MS=100
 
 # ============================================================================
 # Crisis Mode - ENABLED (Production Thresholds)
 # ============================================================================
-AETHEL_CRISIS_MODE_ENABLED=true
-AETHEL_CRISIS_ANOMALY_THRESHOLD=0.10  # 10% anomaly rate
-AETHEL_CRISIS_REQUEST_THRESHOLD=1000  # 1000 req/s
-AETHEL_CRISIS_COOLDOWN_SECONDS=120
+DIOTEC360_CRISIS_MODE_ENABLED=true
+DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.10  # 10% anomaly rate
+DIOTEC360_CRISIS_REQUEST_THRESHOLD=1000  # 1000 req/s
+DIOTEC360_CRISIS_COOLDOWN_SECONDS=120
 
 # ============================================================================
 # Adaptive Rigor - ENABLED
 # ============================================================================
-AETHEL_NORMAL_Z3_TIMEOUT=30
-AETHEL_CRISIS_Z3_TIMEOUT=5
-AETHEL_POW_BASE_DIFFICULTY=4
-AETHEL_POW_MAX_DIFFICULTY=8
+DIOTEC360_NORMAL_Z3_TIMEOUT=30
+DIOTEC360_CRISIS_Z3_TIMEOUT=5
+DIOTEC360_POW_BASE_DIFFICULTY=4
+DIOTEC360_POW_MAX_DIFFICULTY=8
 
 # ============================================================================
 # Quarantine System - ENABLED
 # ============================================================================
-AETHEL_QUARANTINE_ENABLED=true
-AETHEL_QUARANTINE_CAPACITY=100
-AETHEL_QUARANTINE_THRESHOLD=0.7  # Production threshold
+DIOTEC360_QUARANTINE_ENABLED=true
+DIOTEC360_QUARANTINE_CAPACITY=100
+DIOTEC360_QUARANTINE_THRESHOLD=0.7  # Production threshold
 
 # ============================================================================
 # Self-Healing - ENABLED (Auto-Inject)
 # ============================================================================
-AETHEL_SELF_HEALING_ENABLED=true
-AETHEL_SELF_HEALING_AUTO_INJECT=true  # Auto-inject with zero false positives
-AETHEL_RULE_EFFECTIVENESS_THRESHOLD=0.7
-AETHEL_HISTORICAL_TX_LIMIT=1000
+DIOTEC360_SELF_HEALING_ENABLED=true
+DIOTEC360_SELF_HEALING_AUTO_INJECT=true  # Auto-inject with zero false positives
+DIOTEC360_RULE_EFFECTIVENESS_THRESHOLD=0.7
+DIOTEC360_HISTORICAL_TX_LIMIT=1000
 
 # ============================================================================
 # Adversarial Vaccine - ENABLED (Scheduled Training)
 # ============================================================================
-AETHEL_VACCINE_ENABLED=true
-AETHEL_VACCINE_SCHEDULE="0 2 * * *"  # Daily at 2 AM
-AETHEL_VACCINE_SCENARIOS=1000
+DIOTEC360_VACCINE_ENABLED=true
+DIOTEC360_VACCINE_SCHEDULE="0 2 * * *"  # Daily at 2 AM
+DIOTEC360_VACCINE_SCENARIOS=1000
 
 # ============================================================================
 # Gauntlet Report - ENABLED
 # ============================================================================
-AETHEL_GAUNTLET_DB_PATH=./data/gauntlet.db
-AETHEL_RETENTION_DAYS=90
+DIOTEC360_GAUNTLET_DB_PATH=./data/gauntlet.db
+DIOTEC360_RETENTION_DAYS=90
 
 # ============================================================================
 # Monitoring and Logging
 # ============================================================================
-AETHEL_LOG_LEVEL=INFO
-AETHEL_METRICS_ENABLED=true
-AETHEL_METRICS_PORT=9090
+DIOTEC360_LOG_LEVEL=INFO
+DIOTEC360_METRICS_ENABLED=true
+DIOTEC360_METRICS_PORT=9090
 
 # ============================================================================
 # Alerting - ENABLED (All Alerts)
 # ============================================================================
-AETHEL_ALERT_CRISIS_MODE=true
-AETHEL_ALERT_FALSE_POSITIVE_RATE=true
-AETHEL_ALERT_OVERHEAD=true
-AETHEL_ALERT_QUARANTINE_CAPACITY=true
-AETHEL_ALERT_SELF_HEALING_RULE=true
-AETHEL_ALERT_VACCINE_VULNERABILITY=true
+DIOTEC360_ALERT_CRISIS_MODE=true
+DIOTEC360_ALERT_FALSE_POSITIVE_RATE=true
+DIOTEC360_ALERT_OVERHEAD=true
+DIOTEC360_ALERT_QUARANTINE_CAPACITY=true
+DIOTEC360_ALERT_SELF_HEALING_RULE=true
+DIOTEC360_ALERT_VACCINE_VULNERABILITY=true
 
 # ============================================================================
 # Performance Tuning
 # ============================================================================
-AETHEL_PATTERN_CACHE_SIZE=1000
-AETHEL_TELEMETRY_BATCH_SIZE=100
-AETHEL_ASYNC_PERSISTENCE=true
+DIOTEC360_PATTERN_CACHE_SIZE=1000
+DIOTEC360_TELEMETRY_BATCH_SIZE=100
+DIOTEC360_ASYNC_PERSISTENCE=true
 """
     
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)

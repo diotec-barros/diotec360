@@ -45,26 +45,26 @@ Node 2        HTTP        Node 3
 
 **Node 1 (.env.node1.huggingface)**:
 ```bash
-AETHEL_P2P_ENABLED=false  # HTTP-Only Mode
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_P2P_ENABLED=false  # HTTP-Only Mode
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_HTTP_POLL_INTERVAL=10
 ```
 
 **Node 2 (.env.node2.diotec360)**:
 ```bash
-AETHEL_P2P_ENABLED=false  # HTTP-Only Mode
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_P2P_ENABLED=false  # HTTP-Only Mode
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_HTTP_POLL_INTERVAL=10
 ```
 
 **Node 3 (.env.node3.backup)**:
 ```bash
-AETHEL_P2P_ENABLED=false  # HTTP-Only Mode
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_P2P_ENABLED=false  # HTTP-Only Mode
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_HTTP_POLL_INTERVAL=10
 ```
 
 ---

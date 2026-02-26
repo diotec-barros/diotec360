@@ -205,7 +205,7 @@ await node.start()
 
 **Próximo Mês**: Aethel roda em 100+ servidores (rede global)
 
-**Endgame**: Aethel é um **organismo imortal** que não pode ser morto, censurado ou controlado por nenhuma entidade única.
+**Endgame**: Diotec360 é um **organismo imortal** que não pode ser morto, censurado ou controlado por nenhuma entidade única.
 
 ### A Visão Final
 

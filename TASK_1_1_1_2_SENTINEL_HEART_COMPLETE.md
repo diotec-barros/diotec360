@@ -95,7 +95,7 @@ Classe principal que implementa:
 #### **Recursos Avançados**:
 
 - **Rolling Window**: `deque(maxlen=1000)` para O(1) append
-- **SQLite Persistence**: Telemetria persistente em `.aethel_sentinel/telemetry.db`
+- **SQLite Persistence**: Telemetria persistente em `.DIOTEC360_sentinel/telemetry.db`
 - **Crisis Mode Broadcasting**: Listeners notificados automaticamente
 - **Request Rate Tracking**: DoS detection via timestamps
 

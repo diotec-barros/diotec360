@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demonstration: Scalability from 10 to 1000 Nodes
 
 This script demonstrates the consensus protocol's scalability by simulating
@@ -14,8 +30,8 @@ The demonstration tests networks of 10, 50, 100, 500, and 1000 nodes.
 import time
 from typing import Dict, List, Tuple
 
-from aethel.consensus.proof_verifier import ProofVerifier
-from aethel.consensus.data_models import ProofBlock
+from diotec360.consensus.proof_verifier import ProofVerifier
+from diotec360.consensus.data_models import ProofBlock
 
 
 def create_mock_proof(proof_id: str, complexity: int = 5) -> Dict:

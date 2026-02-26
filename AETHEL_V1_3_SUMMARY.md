@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.3.0 - RESUMO EXECUTIVO
+# 🚀 Diotec360 v1.3.0 - RESUMO EXECUTIVO
 
 **Data**: 3 de Fevereiro de 2026  
 **Versão**: v1.3.0 "The Conservation Guardian"  
@@ -244,7 +244,7 @@ Código válido → Conservation Checker → Z3 verifica → ✅ PROVED
 ### Arquivos Criados
 
 1. **V1_3_LAUNCH_COMPLETE.md** - Documentação completa do lançamento
-2. **AETHEL_V1_3_SUMMARY.md** - Este resumo executivo
+2. **DIOTEC360_V1_3_SUMMARY.md** - Este resumo executivo
 3. **.kiro/specs/conservation-checker/requirements.md** - Requisitos detalhados
 4. **.kiro/specs/conservation-checker/design.md** - Design técnico
 

@@ -189,7 +189,7 @@ We built a satellite controller where **error = destruction**:
 ### Phase 2: Enterprise Licensing (2026-2027)
 - **Aethel Enterprise**: Support, training, custom integrations
 - **Aethel Cloud**: Hosted compilation + verification service
-- **Aethel Vault Pro**: Private vault for proprietary code
+- **Diotec360 vault Pro**: Private vault for proprietary code
 
 ### Phase 3: Platform Revenue (2027+)
 - **Marketplace**: Developers sell proved functions
@@ -331,7 +331,7 @@ We built a satellite controller where **error = destruction**:
 - Contact: [email protected]
 
 ### For Developers
-- Try Aethel today: github.com/aethel-lang/aethel-core
+- Try Aethel today: github.com/diotec360-lang/aethel-core
 - Join the community: discord.gg/aethel
 - Contribute to the Global Vault
 

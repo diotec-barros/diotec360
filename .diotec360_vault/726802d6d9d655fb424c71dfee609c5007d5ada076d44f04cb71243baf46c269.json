@@ -1,0 +1,76 @@
+{
+  "intent_name": "concluir_tarefa",
+  "full_hash": "726802d6d9d655fb424c71dfee609c5007d5ada076d44f04cb71243baf46c269",
+  "logic_hash": "be615cfe3e8c4f5571c1605bb04c0fee2be9f628feacfa074359acd3cbe265fe",
+  "ast": {
+    "params": [
+      {
+        "name": "tarefa_id",
+        "type": "String",
+        "is_secret": false
+      },
+      {
+        "name": "tarefa_status",
+        "type": "Integer",
+        "is_secret": false
+      },
+      {
+        "name": "now_ts",
+        "type": "Integer",
+        "is_secret": false
+      },
+      {
+        "name": "deadline_ts",
+        "type": "Integer",
+        "is_secret": false
+      }
+    ],
+    "constraints": [
+      {
+        "expression": "deadline_ts > now_ts",
+        "is_secret": false,
+        "left": "deadline_ts",
+        "operator": ">",
+        "right": "now_ts"
+      },
+      {
+        "expression": "tarefa_status == 2",
+        "is_secret": false,
+        "left": "tarefa_status",
+        "operator": "==",
+        "right": "2"
+      }
+    ],
+    "ai_instructions": {
+      "priority": "productivity",
+      "target": "life_management"
+    },
+    "post_conditions": [
+      {
+        "expression": "tarefa_status == 2",
+        "is_secret": false,
+        "left": "tarefa_status",
+        "operator": "==",
+        "right": "2"
+      },
+      {
+        "expression": "deadline_ts > now_ts",
+        "is_secret": false,
+        "left": "deadline_ts",
+        "operator": ">",
+        "right": "now_ts"
+      }
+    ]
+  },
+  "code": "fn stub(){}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o consistentes e prov\u00e1veis.",
+    "timestamp": "2026-02-26T13:11:01.097568"
+  },
+  "metadata": {
+    "example": "task_flow"
+  },
+  "immutable": true,
+  "created_at": "2026-02-26T13:11:01.097581"
+}

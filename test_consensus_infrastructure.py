@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Tests for consensus protocol infrastructure setup.
 
 This test file verifies that the basic infrastructure for the Proof-of-Proof
@@ -10,7 +26,7 @@ import pytest
 from hypothesis import given, settings
 import hypothesis.strategies as st
 
-from aethel.consensus.data_models import (
+from diotec360.consensus.data_models import (
     ProofBlock,
     ConsensusMessage,
     PrePrepareMessage,
@@ -26,12 +42,12 @@ from aethel.consensus.data_models import (
     PeerInfo,
     MerkleProof,
 )
-from aethel.consensus.mock_network import (
+from diotec360.consensus.mock_network import (
     MockP2PNetwork,
     NetworkConfig,
     create_test_network,
 )
-from aethel.consensus.test_strategies import (
+from diotec360.consensus.test_strategies import (
     proof_blocks,
     state_transitions,
     verification_results,

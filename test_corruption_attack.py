@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 🚨 CORRUPTION ATTACK TEST - The Integrity Sentinel
 Demonstrates that tampering with the database is mathematically impossible.
 
@@ -13,7 +29,7 @@ The Sentinel will detect the corruption and enter Panic Mode.
 import json
 import time
 from pathlib import Path
-from aethel.core.persistence import get_persistence_layer
+from diotec360.core.persistence import get_persistence_layer
 
 
 def test_corruption_attack():
@@ -29,7 +45,7 @@ def test_corruption_attack():
     print("   Method: Direct database file manipulation\n")
     
     # Initialize persistence layer
-    print("🏛️ [STEP 1] Initializing Aethel Sanctuary...")
+    print("🏛️ [STEP 1] Initializing Diotec360 Sanctuary...")
     persistence = get_persistence_layer()
     
     # Create legitimate state
@@ -198,7 +214,7 @@ def test_corruption_attack():
     print("\n💎 THE SANCTUARY IS MATHEMATICALLY UNBREAKABLE")
     print("   'A database that can be altered outside the system")
     print("    is not a database. It's a vulnerability.'")
-    print("   - Aethel Architecture Manifesto")
+    print("   - Diotec360 Architecture Manifesto")
     
     print("\n" + "="*70)
     

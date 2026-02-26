@@ -10,7 +10,7 @@
 
 ### 1. Backend Deploy (100% Completo)
 
-**URL**: https://diotec-aethel-judge.hf.space
+**URL**: https://diotec-diotec360-judge.hf.space
 
 **Commits**:
 - GitHub: `987f1da` - Deploy completo + testes
@@ -51,10 +51,10 @@
 
 **Passos**:
 1. Ir para: https://vercel.com/dashboard
-2. Selecionar projeto: `aethel-studio` (ou similar)
+2. Selecionar projeto: `diotec360-studio` (ou similar)
 3. Settings → Environment Variables
 4. Atualizar: `NEXT_PUBLIC_API_URL`
-5. Valor novo: `https://diotec-aethel-judge.hf.space`
+5. Valor novo: `https://diotec-diotec360-judge.hf.space`
 6. Salvar e Redeploy
 
 **Resultado esperado**: Frontend conecta ao backend em produção
@@ -64,7 +64,7 @@
 **Ação**: Testar frontend + backend
 
 **Passos**:
-1. Abrir: https://aethel-studio.vercel.app (ou seu URL)
+1. Abrir: https://diotec360-studio.vercel.app (ou seu URL)
 2. Clicar "Load Example" → "Financial Transfer"
 3. Clicar "Verify"
 4. Verificar se prova aparece no painel direito
@@ -85,7 +85,7 @@
 
 **Mensagem sugerida** (Twitter):
 ```
-🎭 Aethel v1.6.2 is LIVE!
+🎭 Diotec360 v1.6.2 is LIVE!
 
 First formally verified language with native `secret` keyword.
 
@@ -94,7 +94,7 @@ First formally verified language with native `secret` keyword.
 🏥 HIPAA ready
 🏦 Banking compliant
 
-Try it: https://diotec-aethel-judge.hf.space
+Try it: https://diotec-diotec360-judge.hf.space
 
 #Aethel #ZeroKnowledge #Privacy
 ```
@@ -233,13 +233,13 @@ Try it: https://diotec-aethel-judge.hf.space
 ## 🔗 LINKS ÚTEIS
 
 ### Produção
-- **API**: https://diotec-aethel-judge.hf.space
-- **Frontend**: https://aethel-studio.vercel.app
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Frontend**: https://diotec360-studio.vercel.app
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
 
 ### Desenvolvimento
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Vercel**: https://vercel.com/dashboard
 
 ### Documentação

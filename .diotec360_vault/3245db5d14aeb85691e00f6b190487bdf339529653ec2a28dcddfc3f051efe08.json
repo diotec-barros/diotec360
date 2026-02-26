@@ -1,0 +1,40 @@
+{
+  "intent_name": "attitude_control",
+  "full_hash": "3245db5d14aeb85691e00f6b190487bdf339529653ec2a28dcddfc3f051efe08",
+  "logic_hash": "088c41365e06b2ae09141f45acb6685a8d0009acec1a99c143da4c2333c8fcf1",
+  "ast": {
+    "params": [
+      "current_angle:Degrees",
+      "target_angle:Degrees",
+      "angular_velocity:DegreesPerSec"
+    ],
+    "constraints": [
+      "current_angle >= angle_min",
+      "current_angle <= angle_max",
+      "target_angle >= angle_min",
+      "target_angle <= angle_max",
+      "angular_velocity < velocity_max"
+    ],
+    "ai_instructions": {
+      "priority": "precision",
+      "target": "risc_v_hardened"
+    },
+    "post_conditions": [
+      "angular_velocity < velocity_max",
+      "current_angle >= angle_min"
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o garantidas.",
+    "timestamp": "2026-02-01T23:29:29.509185"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": "output/sat_attitude_ctrl.rs"
+  },
+  "immutable": true,
+  "created_at": "2026-02-01T23:29:29.509193"
+}

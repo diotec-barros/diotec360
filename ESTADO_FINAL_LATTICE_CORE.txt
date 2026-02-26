@@ -164,7 +164,7 @@ COMERCIAL:
                         VEREDITO FINAL
 ═══════════════════════════════════════════════════════════════════════
 
-O núcleo do Aethel Lattice está completo e operacional.
+O núcleo do DIOTEC360 LATTICE está completo e operacional.
 
 A rede agora possui:
   ✅ Visão (Discovery Service)

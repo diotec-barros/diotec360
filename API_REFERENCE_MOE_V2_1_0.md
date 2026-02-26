@@ -35,14 +35,14 @@ Central coordinator that manages expert lifecycle and aggregates results.
 MOEOrchestrator(
     enable_cache: bool = True,
     cache_ttl_seconds: int = 300,
-    telemetry_db_path: str = ".aethel_moe/telemetry.db"
+    telemetry_db_path: str = ".DIOTEC360_moe/telemetry.db"
 )
 ```
 
 **Parameters**:
 - `enable_cache` (bool): Enable verdict caching. Default: `True`
 - `cache_ttl_seconds` (int): Cache TTL in seconds. Default: `300` (5 minutes)
-- `telemetry_db_path` (str): Path to telemetry database. Default: `.aethel_moe/telemetry.db`
+- `telemetry_db_path` (str): Path to telemetry database. Default: `.DIOTEC360_moe/telemetry.db`
 
 #### Methods
 
@@ -608,7 +608,7 @@ Performance tracking system for experts.
 #### Constructor
 
 ```python
-ExpertTelemetry(db_path: str = ".aethel_moe/telemetry.db")
+ExpertTelemetry(db_path: str = ".DIOTEC360_moe/telemetry.db")
 ```
 
 **Parameters**:
@@ -664,7 +664,7 @@ System for collecting ground truth and improving expert accuracy.
 #### Constructor
 
 ```python
-ExpertTrainingSystem(db_path: str = ".aethel_moe/training.db")
+ExpertTrainingSystem(db_path: str = ".DIOTEC360_moe/training.db")
 ```
 
 **Parameters**:
@@ -843,24 +843,24 @@ orchestrator = MOEOrchestrator(telemetry_db_path=None)
 
 ```bash
 # Enable/disable MOE layer
-AETHEL_MOE_ENABLED=true
+DIOTEC360_MOE_ENABLED=true
 
 # Expert timeouts
-AETHEL_Z3_TIMEOUT_NORMAL=30000
-AETHEL_Z3_TIMEOUT_CRISIS=5000
-AETHEL_SENTINEL_TIMEOUT=100
-AETHEL_GUARDIAN_TIMEOUT=50
+DIOTEC360_Z3_TIMEOUT_NORMAL=30000
+DIOTEC360_Z3_TIMEOUT_CRISIS=5000
+DIOTEC360_SENTINEL_TIMEOUT=100
+DIOTEC360_GUARDIAN_TIMEOUT=50
 
 # Consensus thresholds
-AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
-AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
+DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
 
 # Verdict caching
-AETHEL_VERDICT_CACHE_ENABLED=true
-AETHEL_VERDICT_CACHE_TTL=300
+DIOTEC360_VERDICT_CACHE_ENABLED=true
+DIOTEC360_VERDICT_CACHE_TTL=300
 
 # Telemetry
-AETHEL_TELEMETRY_DB_PATH=.aethel_moe/telemetry.db
+DIOTEC360_TELEMETRY_DB_PATH=.DIOTEC360_moe/telemetry.db
 ```
 
 ---

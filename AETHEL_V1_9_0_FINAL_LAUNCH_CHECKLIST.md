@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.9.0 "APEX" - CHECKLIST FINAL DE LANÇAMENTO
+# 🚀 Diotec360 v1.9.0 "APEX" - CHECKLIST FINAL DE LANÇAMENTO
 
 **Data**: 7 de Fevereiro de 2026  
 **Status**: PRONTO PARA LANÇAMENTO  
@@ -64,7 +64,7 @@ git add -A
 # 2. Commit with detailed message
 git commit -m "v1.9.0 Apex - The Foundation is Eternal
 
-🏛️ AETHEL v1.9.0 'APEX' - THE AGE OF FACTS HAS BEGUN
+🏛️ Diotec360 v1.9.0 'APEX' - THE AGE OF FACTS HAS BEGUN
 
 Major Features:
 - Autonomous Sentinel: Self-protecting system with real-time defense
@@ -87,7 +87,7 @@ The age of faith is over. The age of facts has begun.
 Closes #v1.9.0"
 
 # 3. Create annotated tag
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun
 
 Complete autonomous defense system
 Universal AI supervisor
@@ -108,12 +108,12 @@ git push origin main --tags
 **Passos**:
 1. Ir para: https://github.com/[seu-repo]/releases/new
 2. Tag: `v1.9.0-apex`
-3. Title: `Aethel v1.9.0 "Apex" - The Age of Facts Has Begun`
+3. Title: `Diotec360 v1.9.0 "Apex" - The Age of Facts Has Begun`
 4. Description: Copiar de `RELEASE_NOTES_V1_9_0.md`
 5. Anexar arquivos:
-   - `AETHEL_V1_9_0_LAUNCH_BUNDLE.md`
-   - `AETHEL_V1_9_0_APEX_FINAL_SEAL.md`
-   - `AETHEL_V1_9_0_CRYPTOGRAPHIC_SEAL.md`
+   - `DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md`
+   - `DIOTEC360_V1_9_0_APEX_FINAL_SEAL.md`
+   - `DIOTEC360_V1_9_0_CRYPTOGRAPHIC_SEAL.md`
 6. Marcar como "Latest release"
 7. Publish
 
@@ -293,9 +293,9 @@ Copie e execute este script:
 
 ```bash
 #!/bin/bash
-# AETHEL v1.9.0 APEX - LAUNCH SCRIPT
+# Diotec360 v1.9.0 APEX - LAUNCH SCRIPT
 
-echo "🏛️ AETHEL v1.9.0 APEX - LAUNCH SEQUENCE"
+echo "🏛️ Diotec360 v1.9.0 APEX - LAUNCH SEQUENCE"
 echo "========================================"
 echo ""
 
@@ -314,7 +314,7 @@ echo "📦 Step 3: Committing changes..."
 git add -A
 git commit -m "v1.9.0 Apex - The Foundation is Eternal
 
-🏛️ AETHEL v1.9.0 'APEX' - THE AGE OF FACTS HAS BEGUN
+🏛️ Diotec360 v1.9.0 'APEX' - THE AGE OF FACTS HAS BEGUN
 
 Major Features:
 - Autonomous Sentinel: Self-protecting system
@@ -332,7 +332,7 @@ The age of faith is over. The age of facts has begun."
 
 # Step 4: Create tag
 echo "🏷️  Step 4: Creating release tag..."
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun"
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun"
 
 # Step 5: Push
 echo "🚀 Step 5: Pushing to GitHub..."
@@ -379,7 +379,7 @@ echo "🏛️⚖️💎 THE FOUNDATION IS ETERNAL"
    ```bash
    git add setup.py CHANGELOG.md
    git commit -m "v1.9.0 Apex - The Foundation is Eternal"
-   git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex"
+   git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex"
    git push origin main --tags
    ```
 

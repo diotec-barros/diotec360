@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\state.py
+# hypothesis_version: 6.151.5
+
+[b'empty', '.aethel_state', '=', 'CONSERVATION', 'ERROR', 'INFO', 'SUCCESS', 'WARNING', 'account_hash', 'accounts', 'address', 'amount', 'balance', 'create_account', 'hash', 'history_length', 'initial_balance', 'level', 'message', 'new_balance', 'new_nonce', 'new_root', 'nonce', 'old_balance', 'old_nonce', 'old_root', 'operation', 'public_key', 'r', 'receiver', 'root_hash', 'sender', 'snapshot.json', 'success', 'timestamp', 'total_accounts', 'total_supply', 'update_account', 'w', 'wal.log', '•', '⚖️', '⚠️', '✅', '✅ STATE INITIALIZED', '❌', '📋']

@@ -66,7 +66,7 @@ API keys são sempre:
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
 
 # Triangle of Truth - Distributed Resilience
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 
 # Alpha Vantage API Key (for Forex data)
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
@@ -84,7 +84,7 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 [main e7fe332] feat: Sovereign Architecture
 7 files changed, 344 insertions(+), 53 deletions(-)
 
-To https://github.com/diotec-barros/aethel-lang.git
+To https://github.com/diotec-barros/diotec360-lang.git
    02e2767..e7fe332  main -> main
 ```
 
@@ -137,7 +137,7 @@ Settings → Environment Variables
 | Nome | Valor | Ambiente |
 |------|-------|----------|
 | `NEXT_PUBLIC_API_URL` | `https://api.diotec360.com` | Production |
-| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-aethel-judge.hf.space,https://backup.diotec360.com` | Production |
+| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com` | Production |
 | `ALPHA_VANTAGE_API_KEY` | `EFQ0A2ZCKGNHFGTNAQVLOOL9,-1` | Production |
 
 **Depois de adicionar:**
@@ -175,7 +175,7 @@ python verify_production_triangle.py
 ```
 
 **Deve verificar:**
-- ✅ Node 1: `https://diotec-aethel-judge.hf.space`
+- ✅ Node 1: `https://diotec-diotec360-judge.hf.space`
 - ✅ Node 2: `https://api.diotec360.com`
 - ✅ Node 3: `https://backup.diotec360.com`
 
@@ -199,7 +199,7 @@ python verify_production_triangle.py
 │  │     └─ SEU TERRITÓRIO SOBERANO                      │
 │  │                                                      │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │     └─ Infraestrutura Elite Global                 │
 │  │                                                      │
 │  └─ 🟣 Node 3: Vercel Backup                           │

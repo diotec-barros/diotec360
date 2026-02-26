@@ -1,4 +1,4 @@
-# 🏛️⚖️ AETHEL v1.9.0 "APEX" - EXECUTIVE SUMMARY
+# 🏛️⚖️ Diotec360 v1.9.0 "APEX" - EXECUTIVE SUMMARY
 
 **Date**: February 7, 2026  
 **Version**: v1.9.0 "Apex"  
@@ -11,7 +11,7 @@
 
 **Problem**: Software bugs cost the global economy hundreds of billions annually. In finance alone, $2B+ lost to DeFi exploits, millions to trading bot failures, billions to AI hallucinations.
 
-**Solution**: Aethel v1.9.0 "Apex" - The world's first formally verified programming language with autonomous defense. Every line of code is mathematically proven correct before execution.
+**Solution**: Diotec360 v1.9.0 "Apex" - The world's first formally verified programming language with autonomous defense. Every line of code is mathematically proven correct before execution.
 
 **Market**: $100B+ addressable market across financial services, AI safety, and critical infrastructure.
 
@@ -97,7 +97,7 @@ Traditional software operates on faith:
 
 | Product | Target | Pricing | ARR Potential |
 |---------|--------|---------|---------------|
-| **Aethel Core** | Developers | Free (Open Source) | - |
+| **Diotec360 core** | Developers | Free (Open Source) | - |
 | **Trading Invariants** | Trading Firms | $500-2K/month | $1.2M |
 | **AI-Safe Wrapper** | AI Companies | $1K-50K/month | $2.4M |
 | **Voice-to-Verified-Code** | Developers | $200-1K/month | $600K |
@@ -382,8 +382,8 @@ Where medical devices never malfunction.
 ---
 
 **For more information**:
-- Launch Manifesto: [AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md](./AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md)
-- Technical Details: [AETHEL_V1_9_0_APEX_FINAL_SEAL.md](./AETHEL_V1_9_0_APEX_FINAL_SEAL.md)
+- Launch Manifesto: [DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md](./DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md)
+- Technical Details: [DIOTEC360_V1_9_0_APEX_FINAL_SEAL.md](./DIOTEC360_V1_9_0_APEX_FINAL_SEAL.md)
 - Commercial Strategy: [APEX_COMMERCIAL_STRATEGY.md](./APEX_COMMERCIAL_STRATEGY.md)
-- Full Status Report: [AETHEL_V1_9_0_FINAL_STATUS_REPORT.md](./AETHEL_V1_9_0_FINAL_STATUS_REPORT.md)
+- Full Status Report: [DIOTEC360_V1_9_0_FINAL_STATUS_REPORT.md](./DIOTEC360_V1_9_0_FINAL_STATUS_REPORT.md)
 

@@ -82,14 +82,14 @@ O Hugging Face Space está configurado para auto-sync com GitHub.
 3. Rebuild inicia automaticamente
 
 **Opção B: Manual Sync**
-1. Ir para: https://huggingface.co/spaces/diotec/aethel-judge
+1. Ir para: https://huggingface.co/spaces/diotec/diotec360-judge
 2. Clicar em "Files and versions"
 3. Clicar em "Sync from GitHub"
 4. Confirmar sync
 
 ### Passo 3: Verificar Build
 
-1. Ir para: https://huggingface.co/spaces/diotec/aethel-judge
+1. Ir para: https://huggingface.co/spaces/diotec/diotec360-judge
 2. Verificar status do build (canto superior direito)
 3. Aguardar "Running" (verde)
 4. Tempo estimado: 3-5 minutos
@@ -117,19 +117,19 @@ python test_backend_v1_7_0.py
 
 ```bash
 # 1. Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # 2. Version
-curl https://diotec-aethel-judge.hf.space/
+curl https://diotec-diotec360-judge.hf.space/
 
 # 3. Oracle list
-curl https://diotec-aethel-judge.hf.space/api/oracle/list
+curl https://diotec-diotec360-judge.hf.space/api/oracle/list
 
 # 4. Oracle fetch
-curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 
 # 5. Oracle stats
-curl https://diotec-aethel-judge.hf.space/api/oracle/stats
+curl https://diotec-diotec360-judge.hf.space/api/oracle/stats
 ```
 
 ---
@@ -308,7 +308,7 @@ git push origin main
 
 **Twitter/X**:
 ```
-🔮 Aethel v1.7.0 "Oracle Sanctuary" is LIVE!
+🔮 Diotec360 v1.7.0 "Oracle Sanctuary" is LIVE!
 
 First formally verified language with cryptographically verified external data.
 
@@ -317,14 +317,14 @@ First formally verified language with cryptographically verified external data.
 📡 Chainlink ready
 🌍 Real-world data, mathematical guarantees
 
-Try it: https://diotec-aethel-judge.hf.space
+Try it: https://diotec-diotec360-judge.hf.space
 
 #Aethel #Oracle #FormalVerification
 ```
 
 **LinkedIn**:
 ```
-Excited to announce Aethel v1.7.0 "Oracle Sanctuary"!
+Excited to announce Diotec360 v1.7.0 "Oracle Sanctuary"!
 
 We've solved the oracle problem with formal verification:
 - Cryptographic signature verification

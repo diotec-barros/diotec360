@@ -1,0 +1,18 @@
+{
+  "state": {
+    "account:alice": {
+      "balance": 1000,
+      "nonce": 0
+    },
+    "account:bob": {
+      "balance": 500,
+      "nonce": 0
+    },
+    "account:charlie": {
+      "balance": 250,
+      "nonce": 0
+    }
+  },
+  "merkle_root": "5df3daee3a0ca23c388a16c3db2c2388aea63f1c4ed5fa12377fe0fef6bf3ce5",
+  "timestamp": 1771845832.3015296
+}

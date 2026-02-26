@@ -28,7 +28,7 @@ TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE
 │  🔺 BACKEND TRIANGLE                                    │
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │     └─ Infraestrutura Elite Global                 │
 │  │                                                      │
 │  ├─ 🔵 Node 2: SOVEREIGN API ⭐                         │
@@ -81,7 +81,7 @@ TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE
 curl https://api.diotec360.com/health
 
 # Node 1 (Hugging Face)
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Node 3 (Backup)
 curl https://backup.diotec360.com/health

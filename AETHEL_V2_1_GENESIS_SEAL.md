@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v2.1.0 - GENESIS SEAL
+# 🏛️ Diotec360 v2.1.0 - GENESIS SEAL
 
 **"O Silêncio do Disco Rígido Agora é o Som da Certeza"**
 
@@ -16,7 +16,7 @@ GENESIS MERKLE ROOT:
 53737c13c0e5a9cfa8cac7e4ae9488c5ede15fb723066e8a09d036513183f698
 
 SIGNATURE: This root represents the first mathematically proven state
-           of the Aethel Persistence Layer. Every future state will
+           of the DIOTEC360 PERSISTENCE Layer. Every future state will
            be cryptographically linked to this genesis block.
 ```
 
@@ -176,7 +176,7 @@ The Autonomous Sentinel shall guard the integrity of the system with mathematica
 
 ```
 ═══════════════════════════════════════════════════════════════
-                    AETHEL v2.1.0 GENESIS SEAL
+                    Diotec360 v2.1.0 GENESIS SEAL
 ═══════════════════════════════════════════════════════════════
 
 Merkle Root: 53737c13c0e5a9cfa8cac7e4ae9488c5ede15fb723066e8a09d036513183f698
@@ -190,7 +190,7 @@ Witnessed by: The Architect
 Guarded by: The Sentinel
 
 This seal represents the first mathematically proven state of the
-Aethel Persistence Layer. Every future state will be cryptographically
+DIOTEC360 PERSISTENCE Layer. Every future state will be cryptographically
 linked to this genesis block.
 
 The Sanctuary now has a soul.

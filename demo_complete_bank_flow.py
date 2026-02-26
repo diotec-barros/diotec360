@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 DEMO: Complete Bank Flow - From Card Creation to Settlement
 ============================================================
 
@@ -19,12 +35,12 @@ Date: February 11, 2026
 import time
 from datetime import datetime
 
-from aethel.core.virtual_card import (
+from diotec360.core.virtual_card import (
     VirtualCardGateway,
     CardType,
     get_virtual_card_gateway
 )
-from aethel.core.bank_portal import (
+from diotec360.core.bank_portal import (
     BankSettlementPortal,
     get_bank_settlement_portal
 )

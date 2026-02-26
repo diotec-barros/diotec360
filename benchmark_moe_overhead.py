@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Benchmark MOE Orchestration Overhead
 
 This script measures the orchestration overhead of the MOE system
@@ -7,10 +23,10 @@ to verify it meets the <10ms requirement.
 
 import time
 import statistics
-from aethel.moe.orchestrator import MOEOrchestrator
-from aethel.moe.z3_expert import Z3Expert
-from aethel.moe.sentinel_expert import SentinelExpert
-from aethel.moe.guardian_expert import GuardianExpert
+from diotec360.moe.orchestrator import MOEOrchestrator
+from diotec360.moe.z3_expert import Z3Expert
+from diotec360.moe.sentinel_expert import SentinelExpert
+from diotec360.moe.guardian_expert import GuardianExpert
 
 
 def benchmark_orchestration_overhead():

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\formal_verification.py
+# hypothesis_version: 6.151.5
+
+[1.0, '    - Unary: -x, +x', '    100 txs → t₁', '  All paths either:', '  QED ✓', '  Specifically:', '-', '=', 'COUNTEREXAMPLE:', 'FINAL VERDICT', 'PROOF:', 'SUMMARY', '__main__', 'authenticity', 'completeness', 'empty_state', 'integrity', 'invalid_json', 'invalid_signature', 'merkle_mismatch', 'missing_file', 'partial_corruption', 'performance', 'tampered_content', 'unknown_public_key', 'unsigned_message']

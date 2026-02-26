@@ -7,8 +7,8 @@ Your Aethel Judge Space is ready to deploy! Follow these steps:
 ### 1. Clone Your Space Repository
 
 ```bash
-git clone https://huggingface.co/spaces/diotec/aethel-judge
-cd aethel-judge
+git clone https://huggingface.co/spaces/diotec/diotec360-judge
+cd diotec360-judge
 ```
 
 ### 2. Copy Files from Aethel Project
@@ -17,16 +17,16 @@ Copy these essential files to your Space directory:
 
 ```bash
 # Core application files
-cp -r aethel/ aethel-judge/
-cp -r api/ aethel-judge/
-cp requirements.txt aethel-judge/
-cp Dockerfile.huggingface aethel-judge/Dockerfile
-cp README_HF.md aethel-judge/README.md
-cp .dockerignore aethel-judge/
+cp -r aethel/ diotec360-judge/
+cp -r api/ diotec360-judge/
+cp requirements.txt diotec360-judge/
+cp Dockerfile.huggingface diotec360-judge/Dockerfile
+cp README_HF.md diotec360-judge/README.md
+cp .dockerignore diotec360-judge/
 
 # Create vault directories
-mkdir -p aethel-judge/.aethel_vault/bundles
-mkdir -p aethel-judge/.aethel_vault/certificates
+mkdir -p diotec360-judge/.DIOTEC360_vault/bundles
+mkdir -p diotec360-judge/.DIOTEC360_vault/certificates
 ```
 
 ### 3. Configure the Space
@@ -49,7 +49,7 @@ app_port: 7860
 ### 4. Commit and Push
 
 ```bash
-cd aethel-judge
+cd diotec360-judge
 git add .
 git commit -m "Initial deployment of Aethel Judge"
 git push
@@ -60,7 +60,7 @@ git push
 Hugging Face will automatically:
 - Build your Docker image
 - Start the container on port 7860
-- Make your API available at: `https://huggingface.co/spaces/diotec/aethel-judge`
+- Make your API available at: `https://huggingface.co/spaces/diotec/diotec360-judge`
 
 ## 🧪 Test Your Deployment
 
@@ -68,13 +68,13 @@ Once deployed, test the API:
 
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Get examples
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 
 # Verify code
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{
     "code": "intent transfer(sender: Account, receiver: Account, amount: Balance) { guard { sender_balance >= amount; amount > 0; } solve { priority: security; } verify { sender_balance == old_sender_balance - amount; receiver_balance == old_receiver_balance + amount; } }"
@@ -106,7 +106,7 @@ Check the logs for errors. Common issues:
 
 Make sure all Python modules are in the correct structure:
 ```
-aethel-judge/
+diotec360-judge/
 ├── aethel/
 │   ├── core/
 │   │   ├── parser.py

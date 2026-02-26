@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 End-to-end integration tests for Proof-of-Proof consensus protocol - Task 23.1
 
 This test suite validates the complete consensus flow with multiple nodes.
@@ -7,16 +23,16 @@ This test suite validates the complete consensus flow with multiple nodes.
 import pytest
 from typing import Dict
 
-from aethel.consensus.consensus_engine import ConsensusEngine
-from aethel.consensus.proof_verifier import ProofVerifier
-from aethel.consensus.state_store import StateStore
-from aethel.consensus.proof_mempool import ProofMempool
-from aethel.consensus.mock_network import MockP2PNetwork
-from aethel.consensus.data_models import (
+from diotec360.consensus.consensus_engine import ConsensusEngine
+from diotec360.consensus.proof_verifier import ProofVerifier
+from diotec360.consensus.state_store import StateStore
+from diotec360.consensus.proof_mempool import ProofMempool
+from diotec360.consensus.mock_network import MockP2PNetwork
+from diotec360.consensus.data_models import (
     ProofBlock, PrePrepareMessage, PrepareMessage, CommitMessage,
     MessageType, PeerInfo
 )
-from aethel.consensus.monitoring import MetricsCollector
+from diotec360.consensus.monitoring import MetricsCollector
 
 
 def create_test_network(node_count: int, ghost_config=None) -> Dict[str, ConsensusEngine]:
@@ -174,7 +190,7 @@ def test_ten_node_consensus_with_rewards():
     assert result.consensus_reached == True
     assert result.total_difficulty > 0
     
-    from aethel.consensus.reward_distributor import RewardDistributor
+    from diotec360.consensus.reward_distributor import RewardDistributor
     reward_distributor = RewardDistributor(leader.state_store)
     rewards = reward_distributor.calculate_rewards(result)
     

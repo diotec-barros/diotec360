@@ -127,7 +127,7 @@ Expected output:
 3. Ensure nodes can reach each other's IPs
 
 ### HTTP Fallback Not Working?
-1. Check `AETHEL_LATTICE_NODES` is configured
+1. Check `DIOTEC360_LATTICE_NODES` is configured
 2. Verify HTTP endpoints are accessible
 3. Check heartbeat monitor is running
 

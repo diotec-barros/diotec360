@@ -61,7 +61,7 @@ intent StopLossProtection {
 }
 ```
 
-**Aethel Validation**:
+**Diotec360 validation**:
 - Z3 proves the intent is mathematically sound
 - If LLM made a mistake → Reject with explanation
 - If proof succeeds → Show user for approval
@@ -95,7 +95,7 @@ pub fn execute_transfer(amount: u64, fee_percent: u8) -> Result<u64, Error> {
 }
 ```
 
-**Aethel Validation**:
+**Diotec360 validation**:
 - Sentinel checks for vulnerabilities
 - Overflow Guardian verifies bounds
 - Performance benchmarks ensure efficiency
@@ -148,7 +148,7 @@ THREAT DETECTED:
 from aethel import AIGate
 
 # Initialize with your LLM
-gate = AIGate(llm="gpt-4", validator="aethel-judge")
+gate = AIGate(llm="gpt-4", validator="diotec360-judge")
 
 # User request
 user_input = "Transfer $1000 to Alice with 2% fee"
@@ -156,7 +156,7 @@ user_input = "Transfer $1000 to Alice with 2% fee"
 # LLM generates code
 code = gate.translate(user_input)
 
-# Aethel validates
+# Diotec360 validates
 if gate.validate(code):
     result = gate.execute(code)
     print(f"✓ Executed safely: {result}")
@@ -222,7 +222,7 @@ AI-Gate: "✓ Deployed to production. Certificate issued."
 
 **Process**:
 1. Company integrates AI-Gate into their LLM pipeline
-2. All LLM outputs pass through Aethel validation
+2. All LLM outputs pass through Diotec360 validation
 3. Aethel issues certificates for each validated operation
 4. Company shows certificates to regulators/investors
 
@@ -262,7 +262,7 @@ class IntentTranslator:
     def translate(self, natural_language: str) -> str:
         """Convert natural language to Aethel code"""
         
-    def validate(self, aethel_code: str) -> bool:
+    def validate(self, DIOTEC360_code: str) -> bool:
         """Validate code with Z3"""
         
     def explain_error(self, proof_failure: str) -> str:
@@ -279,7 +279,7 @@ user_input = "Send $500 to Bob, but only if my balance stays above $1000"
 # LLM translates
 code = translator.translate(user_input)
 
-# Aethel validates
+# Diotec360 validates
 if translator.validate(code):
     print("✓ Safe to execute")
 else:
@@ -493,13 +493,13 @@ Output only valid Aethel code, no explanations.
 **Step 2: LLM Generation**
 ```python
 response = llm.complete(prompt)
-aethel_code = extract_code(response)
+DIOTEC360_code = extract_code(response)
 ```
 
 **Step 3: Validation**
 ```python
 # Parse code
-ast = aethel_parser.parse(aethel_code)
+ast = DIOTEC360_parser.parse(DIOTEC360_code)
 
 # Generate Z3 constraints
 constraints = judge.generate_constraints(ast)
@@ -508,7 +508,7 @@ constraints = judge.generate_constraints(ast)
 result = z3_solver.check(constraints)
 
 if result == "sat":
-    return {"valid": True, "code": aethel_code}
+    return {"valid": True, "code": DIOTEC360_code}
 else:
     error = explain_unsat(result)
     return {"valid": False, "error": error}
@@ -520,7 +520,7 @@ if not valid:
     # Ask LLM to fix
     fixed_code = llm.complete(f"""
     The following code failed verification:
-    {aethel_code}
+    {DIOTEC360_code}
     
     Error: {error}
     

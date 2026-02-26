@@ -10,7 +10,7 @@
 
 ## 🎯 SESSION SUMMARY
 
-Esta sessão implementou o sistema de **Identidade Soberana** da Aethel v2.2.0, transformando cada usuário em um **Cidadão do Nexus** com chaves criptográficas ED25519.
+Esta sessão implementou o sistema de **Identidade Soberana** da Diotec360 v2.2.0, transformando cada usuário em um **Cidadão do Nexus** com chaves criptográficas ED25519.
 
 **Filosofia Central**: "A chave privada é a alma. Ela nunca deixa o santuário."
 
@@ -301,7 +301,7 @@ Com v2.2.0, diotec360.com agora possui:
 1. `aethel/core/state.py` - Added public key support
 
 ### Documentation (3)
-1. `TASK_2_2_1_AETHEL_CRYPT_COMPLETE.md` - Task 2.2.1 report
+1. `TASK_2_2_1_DIOTEC360_CRYPT_COMPLETE.md` - Task 2.2.1 report
 2. `TASK_2_2_2_SIGNED_INTENT_PROTOCOL_COMPLETE.md` - Task 2.2.2 report
 3. `SESSAO_V2_2_0_SOVEREIGN_IDENTITY_COMPLETE.md` - Session summary (this file)
 

@@ -225,7 +225,7 @@ else:
 
 ## ✅ Final Verdict
 
-**AETHEL v1.9.0 "APEX" IS PRODUCTION READY**
+**Diotec360 v1.9.0 "APEX" IS PRODUCTION READY**
 
 Every test passes. Every showcase works. Every example is functional.  
 The code is clean, documented, and proven.

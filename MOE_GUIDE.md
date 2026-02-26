@@ -237,7 +237,7 @@ from aethel.moe.guardian_expert import GuardianExpert
 orchestrator = MOEOrchestrator(
     max_workers=3,              # Parallel expert threads
     expert_timeout=30,          # Expert timeout (seconds)
-    telemetry_db_path=".aethel_moe/telemetry.db",
+    telemetry_db_path=".DIOTEC360_moe/telemetry.db",
     cache_ttl_seconds=300,      # Cache TTL (5 minutes)
     enable_cache=True           # Enable verdict caching
 )
@@ -408,9 +408,9 @@ for expert_name, stats in telemetry_stats['experts'].items():
 prometheus_metrics = orchestrator.export_prometheus_metrics()
 
 # Example output:
-# aethel_moe_expert_latency_ms{expert="Z3_Expert"} 127.5
-# aethel_moe_expert_accuracy{expert="Z3_Expert"} 0.999
-# aethel_moe_expert_verdicts_total{expert="Z3_Expert",verdict="APPROVE"} 1523
+# DIOTEC360_moe_expert_latency_ms{expert="Z3_Expert"} 127.5
+# DIOTEC360_moe_expert_accuracy{expert="Z3_Expert"} 0.999
+# DIOTEC360_moe_expert_verdicts_total{expert="Z3_Expert",verdict="APPROVE"} 1523
 ```
 
 ---

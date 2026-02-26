@@ -1,0 +1,80 @@
+{
+  "intent_name": "transfer_funds",
+  "full_hash": "85046d55adae1c8178b3c80067fbe2231f5845d01704bdc152d90a0a73bf4f73",
+  "logic_hash": "8987199fd81d27e61e619d60030b7b16149dfc0bb777267166a2e923f3631cf9",
+  "ast": {
+    "params": [
+      {
+        "name": "sender",
+        "type": "Account",
+        "is_secret": false
+      },
+      {
+        "name": "receiver",
+        "type": "Account",
+        "is_secret": false
+      },
+      {
+        "name": "amount",
+        "type": "Gold",
+        "is_secret": false
+      }
+    ],
+    "constraints": [
+      {
+        "expression": "sender_balance >= amount",
+        "is_secret": false,
+        "left": "sender_balance",
+        "operator": ">=",
+        "right": "amount"
+      },
+      {
+        "expression": "amount > 0",
+        "is_secret": false,
+        "left": "amount",
+        "operator": ">",
+        "right": "0"
+      },
+      {
+        "expression": "amount <= 1000",
+        "is_secret": false,
+        "left": "amount",
+        "operator": "<=",
+        "right": "1000"
+      }
+    ],
+    "ai_instructions": {
+      "priority": "security",
+      "target": "blockchain"
+    },
+    "post_conditions": [
+      {
+        "expression": "sender_balance < old_balance",
+        "is_secret": false,
+        "left": "sender_balance",
+        "operator": "<",
+        "right": "old_balance"
+      },
+      {
+        "expression": "receiver_balance > old_receiver_balance",
+        "is_secret": false,
+        "left": "receiver_balance",
+        "operator": ">",
+        "right": "old_receiver_balance"
+      }
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o consistentes e prov\u00e1veis.",
+    "timestamp": "2026-02-11T17:14:19.625868"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": null
+  },
+  "immutable": true,
+  "created_at": "2026-02-11T17:14:19.625874"
+}

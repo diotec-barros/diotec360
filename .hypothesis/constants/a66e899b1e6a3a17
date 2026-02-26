@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\training.py
+# hypothesis_version: 6.151.5
+
+[-0.1, 0.0, 0.001, 0.1, 0.5, 0.999, 1.0, 100, 1000, 3600, ' AND ', ' WHERE ', 'APPROVE', 'REJECT', 'accuracy_improvement', 'current', 'expert_name', 'expert_name = ?', 'metrics', 'new_threshold', 'old_threshold', 'reason', 'timestamp', 'timestamp >= ?', 'version', 'version_a', 'version_b', 'winner']

@@ -27,8 +27,8 @@
 │                                                         │
 │  🔵 BACKEND (Hugging Face)                              │
 │  └─ https://api.diotec360.com                           │
-│     ├─ DNS: CNAME → diotec-aethel-judge.hf.space      │
-│     ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│     ├─ DNS: CNAME → diotec-diotec360-judge.hf.space      │
+│     ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │     └─ Porta: 8000                                     │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
@@ -50,7 +50,7 @@ TTL: 3600
 ```
 Type: CNAME
 Name: api
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -72,7 +72,7 @@ TTL: 60
 1. **Atualizar** o registro `api`:
    - Nome: `api`
    - Tipo: CNAME
-   - Valor: `diotec-aethel-judge.hf.space`
+   - Valor: `diotec-diotec360-judge.hf.space`
    - TTL: 60
 
 2. **Remover** (se existir):
@@ -88,7 +88,7 @@ TTL: 60
 deploy_node1_huggingface.bat
 
 # Aguarde build (5-10 min)
-# Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+# Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 ```
 
 ---
@@ -142,7 +142,7 @@ curl https://aethel.diotec360.com
 3. Vá em "DNS"
 4. Atualize o registro `api`:
    - Tipo: CNAME
-   - Valor: `diotec-aethel-judge.hf.space`
+   - Valor: `diotec-diotec360-judge.hf.space`
 
 **Depois compartilhe o resultado!**
 

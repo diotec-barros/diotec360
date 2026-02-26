@@ -1,5 +1,21 @@
 """
-Teste do Aethel-WhatsApp-Gate
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Teste do Diotec360-WhatsApp-Gate
 
 Testa a integração do WhatsApp Gate com o sistema de memória cognitiva.
 """
@@ -7,12 +23,12 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from aethel.core.whatsapp_gate import WhatsAppGate, create_whatsapp_message
+from diotec360.core.whatsapp_gate import WhatsAppGate, create_whatsapp_message
 
 
 def test_whatsapp_gate_basic():
     """Teste básico do WhatsApp Gate"""
-    print("🧪 Testando Aethel-WhatsApp-Gate...")
+    print("🧪 Testando Diotec360-WhatsApp-Gate...")
     
     # Inicializa WhatsApp Gate
     gate = WhatsAppGate()
@@ -93,7 +109,7 @@ def test_whatsapp_gate_integration():
     """Teste de integração com memória cognitiva"""
     print("\n🧠 Testando integração com memória cognitiva...")
     
-    from aethel.core.memory import get_cognitive_memory
+    from diotec360.core.memory import get_cognitive_memory
     
     gate = WhatsAppGate()
     memory = get_cognitive_memory()
@@ -121,7 +137,7 @@ def test_whatsapp_gate_integration():
 
 if __name__ == "__main__":
     print("="*60)
-    print("🧪 TESTE DO AETHEL-WHATSAPP-GATE")
+    print("🧪 TESTE DO DIOTEC360-WHATSAPP-GATE")
     print("="*60)
     
     try:

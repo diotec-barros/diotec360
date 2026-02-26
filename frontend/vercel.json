@@ -6,7 +6,7 @@
   "devCommand": "npm run dev",
   "env": {
     "NEXT_PUBLIC_API_URL": "https://aethel.diotec360.com",
-    "NEXT_PUBLIC_LATTICE_NODES": "https://diotec-aethel-judge.hf.space,https://backup.diotec360.com"
+    "NEXT_PUBLIC_LATTICE_NODES": "https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com"
   },
   "headers": [
     {

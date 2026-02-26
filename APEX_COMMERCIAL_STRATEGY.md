@@ -10,7 +10,7 @@ Mission: Transform mathematical certainty into $7M ARR
 
 ## EXECUTIVE SUMMARY
 
-Aethel v1.9.0 gave us the **immune system** (Autonomous Sentinel).  
+Diotec360 v1.9.0 gave us the **immune system** (Autonomous Sentinel).  
 Aethel Apex gives us the **economic engine** (Revenue Products).
 
 **The Transformation**:
@@ -238,7 +238,7 @@ Aethel Apex gives us the **economic engine** (Revenue Products).
    - "Exchange Achieves 100% Margin Call Success"
 
 3. **Demo Environment**
-   - Live playground at aethel-studio.vercel.app
+   - Live playground at diotec360-studio.vercel.app
    - Pre-loaded invariant examples
    - Real-time proof visualization
    - Try-before-you-buy experience
@@ -593,7 +593,7 @@ Aethel Apex gives us the **economic engine** (Revenue Products).
 
 **We built the technology. Now we build the business.**
 
-Aethel v1.9.0 gave us the immune system.  
+Diotec360 v1.9.0 gave us the immune system.  
 Aethel Apex gives us the economic engine.
 
 **The transformation is complete**:

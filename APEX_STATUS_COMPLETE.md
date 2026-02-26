@@ -68,7 +68,7 @@
 ### PILAR 3: Pitch Deck & Estratégia ✅ COMPLETO
 
 **Documentação**:
-- ✅ `AETHEL_APEX_PITCH_DECK.md` - Apresentação comercial
+- ✅ `DIOTEC360_APEX_PITCH_DECK.md` - Apresentação comercial
 - ✅ `APEX_COMMERCIAL_STRATEGY.md` - Estratégia completa
 - ✅ `APEX_LAUNCH_ANNOUNCEMENT.md` - Anúncio de lançamento
 

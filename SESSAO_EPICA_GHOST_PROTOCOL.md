@@ -76,7 +76,7 @@ intent private_transfer(secret sender_balance: Balance) {
 - ✅ `private_voting.ae` - Votação secreta
 
 #### 4. Backend Deploy Completo
-- ✅ Hugging Face: https://diotec-aethel-judge.hf.space
+- ✅ Hugging Face: https://diotec-diotec360-judge.hf.space
 - ✅ Testes: 8/8 passando (100%)
 - ✅ API: 100% operacional
 - ✅ Latency: <100ms
@@ -95,7 +95,7 @@ intent private_transfer(secret sender_balance: Balance) {
 
 ### O Que Ninguém Mais Tem
 
-| Feature | Solidity | Aethel v1.6.2 |
+| Feature | Solidity | Diotec360 v1.6.2 |
 |---------|----------|---------------|
 | **Privacy** | Tudo público | Native `secret` keyword |
 | **Verification** | Opcional (Certora) | Obrigatória (Z3) |
@@ -343,13 +343,13 @@ E a matemática garante esse direito. Não um governo. Não uma empresa. **A mat
 ## 🔗 LINKS IMPORTANTES
 
 ### Produção
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
-- **Health**: https://diotec-aethel-judge.hf.space/health
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **Health**: https://diotec-diotec360-judge.hf.space/health
 
 ### Desenvolvimento
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
 
 ### Documentação
 - **ZKP Guide**: [ZKP_GUIDE.md](./ZKP_GUIDE.md)
@@ -362,7 +362,7 @@ E a matemática garante esse direito. Não um governo. Não uma empresa. **A mat
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║           AETHEL v1.6.2 - GHOST PROTOCOL ACTIVATED           ║
+║           Diotec360 v1.6.2 - GHOST PROTOCOL ACTIVATED           ║
 ║                                                              ║
 ║  "Privacy is not a feature. It's a mathematical law."       ║
 ╚══════════════════════════════════════════════════════════════╝

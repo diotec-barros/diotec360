@@ -1,10 +1,10 @@
-# 🏛️ Aethel v2.1.0 - The Persistence Layer
+# 🏛️ Diotec360 v2.1.0 - The Persistence Layer
 
 **"A system that forgets is a system that can be deceived."**
 
 ## 📋 Executive Summary
 
-Aethel v2.1.0 introduces the **Persistence Layer** - a three-tier sovereign memory architecture that transforms Aethel from a "site" into an **Infrastructure of State**.
+Diotec360 v2.1.0 introduces the **Persistence Layer** - a three-tier sovereign memory architecture that transforms Aethel from a "site" into an **Infrastructure of State**.
 
 ### The Problem
 
@@ -366,7 +366,7 @@ This transforms Aethel from a "website" into an **Infrastructure of State** - a 
 ## 📈 Test Results
 
 ```
-🧪 TESTING AETHEL PERSISTENCE LAYER v2.1.0
+🧪 TESTING DIOTEC360 PERSISTENCE LAYER v2.1.0
 
 TEST 1: MERKLE STATE DB (Reality DB)
 ✅ State storage and retrieval
@@ -410,7 +410,7 @@ ALL TESTS PASSED ✅
 
 ## 🏁 Conclusion
 
-Aethel v2.1.0 introduces the **Persistence Layer** - a three-tier sovereign memory architecture that provides:
+Diotec360 v2.1.0 introduces the **Persistence Layer** - a three-tier sovereign memory architecture that provides:
 
 1. **Authenticated State Storage** (Merkle State DB)
 2. **Immutable Code Storage** (Content-Addressable Vault)
@@ -426,14 +426,14 @@ This transforms Aethel from a "site" into an **Infrastructure of State** - a sys
 
 - `aethel/core/persistence.py` - Implementation
 - `test_persistence_layer.py` - Test suite
-- `AETHEL_V2_0_LAUNCH_MANIFESTO.md` - v2.0 vision
-- `AETHEL_V1_9_0_CERTIFICATION.md` - v1.9 foundation
+- `DIOTEC360_V2_0_LAUNCH_MANIFESTO.md` - v2.0 vision
+- `DIOTEC360_V1_9_0_CERTIFICATION.md` - v1.9 foundation
 
 ---
 
 **Status**: ✅ IMPLEMENTED AND TESTED  
 **Version**: 2.1.0  
 **Date**: 2026-02-08  
-**Author**: Aethel Core Team  
+**Author**: Diotec360 core Team  
 
 🏛️ **The future is not just proved. It is remembered.** 💾✨

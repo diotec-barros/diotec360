@@ -65,7 +65,7 @@
 
 ### Ação Imediata:
 
-1. **No Vercel, vá no projeto "aethel-lang"**
+1. **No Vercel, vá no projeto "diotec360-lang"**
 
 2. **Settings → Domains**
 
@@ -85,7 +85,7 @@
 
 ### Ação Imediata:
 
-1. **No projeto "aethel-lang" no Vercel**
+1. **No projeto "diotec360-lang" no Vercel**
 
 2. **Settings → Environment Variables**
 

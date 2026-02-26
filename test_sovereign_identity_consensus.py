@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Property-based tests for Sovereign Identity integration with consensus.
 
 This module tests the integration of Sovereign Identity (v2.2) with the
@@ -10,9 +26,9 @@ import pytest
 from hypothesis import given, settings, strategies as st
 import json
 
-from aethel.consensus.proof_verifier import ProofVerifier
-from aethel.consensus.data_models import SignedProof, ProofBlock
-from aethel.core.crypto import AethelCrypt
+from diotec360.consensus.proof_verifier import ProofVerifier
+from diotec360.consensus.data_models import SignedProof, ProofBlock
+from diotec360.core.crypto import DIOTEC360Crypt
 
 
 # ============================================================================
@@ -39,7 +55,7 @@ def signed_proofs(valid_signature: bool = True, min_complexity: int = 1, max_com
         }
         
         # Generate keypair
-        crypto = AethelCrypt()
+        crypto = DIOTEC360Crypt()
         keypair = crypto.generate_keypair()
         
         # Serialize proof data for signing
@@ -139,7 +155,7 @@ def test_property_23_block_signature_verification(num_valid, num_invalid):
     """
     # Create verifier with signature requirement enabled
     verifier = ProofVerifier(require_signatures=True)
-    crypto = AethelCrypt()
+    crypto = DIOTEC360Crypt()
     
     # Generate valid signed proofs
     valid_proofs = []
@@ -334,7 +350,7 @@ def test_signature_verification_statistics():
     Test that signature verification statistics are correctly tracked.
     """
     verifier = ProofVerifier(require_signatures=True)
-    crypto = AethelCrypt()
+    crypto = DIOTEC360Crypt()
     
     # Create valid proof
     keypair = crypto.generate_keypair()
@@ -376,7 +392,7 @@ def test_signature_verification_with_different_key():
     Test that signatures from different keys are rejected.
     """
     verifier = ProofVerifier(require_signatures=True)
-    crypto = AethelCrypt()
+    crypto = DIOTEC360Crypt()
     
     # Create proof and sign with one key
     keypair1 = crypto.generate_keypair()

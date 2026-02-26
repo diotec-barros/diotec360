@@ -1,4 +1,4 @@
-# 🎭 Aethel v1.6.2 - Implementation Summary
+# 🎭 Diotec360 v1.6.2 - Implementation Summary
 
 **Date**: February 4, 2026  
 **Status**: ✅ PARSER COMPLETE | ⚠️ ZKP SIMULATOR PARTIAL
@@ -153,7 +153,7 @@ intent private_transfer(secret sender_balance: Balance, amount: Balance) {
 
 ### Pitch
 
-> "Aethel v1.6.2 introduces the `secret` keyword - the first step toward privacy-preserving formal verification. While full cryptographic ZKP will come in v1.7.0, the syntax and architecture are production-ready today."
+> "Diotec360 v1.6.2 introduces the `secret` keyword - the first step toward privacy-preserving formal verification. While full cryptographic ZKP will come in v1.7.0, the syntax and architecture are production-ready today."
 
 ---
 

@@ -114,7 +114,7 @@ Comprehensive guide including:
 ### Network Topology
 ```
 ┌─────────────────────────────────────────────────────────┐
-│              AETHEL REAL LATTICE v3.0.4                  │
+│              DIOTEC360 REAL LATTICE v3.0.4                  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────┐  │
@@ -139,17 +139,17 @@ Each node is configured to bootstrap with the other two nodes:
 
 **Node 1 → Node 2, Node 3**
 ```bash
-AETHEL_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/PEER_ID_2,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
+DIOTEC360_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/PEER_ID_2,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
 ```
 
 **Node 2 → Node 1, Node 3**
 ```bash
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
 ```
 
 **Node 3 → Node 1, Node 2**
 ```bash
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/PEER_ID_2
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/PEER_ID_2
 ```
 
 ### HTTP Sync Fallback
@@ -158,17 +158,17 @@ Each node has HTTP fallback to the other two:
 
 **Node 1**:
 ```bash
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
 ```
 
 **Node 2**:
 ```bash
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
 ```
 
 **Node 3**:
 ```bash
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
 ```
 
 ## Validation

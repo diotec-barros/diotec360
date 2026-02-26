@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\consensus_engine.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.5, 0.7, 1.0, 'APPROVE', 'APPROVED', 'REJECT', 'REJECTED', 'UNCERTAIN', 'confidence_threshold', 'unknown']

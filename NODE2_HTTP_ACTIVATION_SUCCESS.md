@@ -21,14 +21,14 @@
 ## 📊 LOGS DE ATIVAÇÃO
 
 ```
-[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
+[SHIELD] DIOTEC360 LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
 [STARTUP] Environment variables reloaded
-[MERKLE DB] Snapshot loaded: .aethel_state\snapshot.json
-[MERKLE DB] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_state
+[MERKLE DB] Snapshot loaded: .DIOTEC360_state\snapshot.json
+[MERKLE DB] Initialized at: C:\Users\DIOTEC\AETHEL\.DIOTEC360_state
    Root: 5df3daee3a0ca23c388a16c3db2c2388...
-[VAULT DB] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_vault
+[VAULT DB] Initialized at: C:\Users\DIOTEC\AETHEL\.DIOTEC360_vault
    Bundles: 10
-[AUDITOR] Initialized at: C:\Users\DIOTEC\AETHEL\.aethel_sentinel\telemetry.db
+[AUDITOR] Initialized at: C:\Users\DIOTEC\AETHEL\.DIOTEC360_sentinel\telemetry.db
 [PERSISTENCE LAYER READY]
 [STARTUP] Persistence layer initialized
 [STARTUP] Lattice streams initialized

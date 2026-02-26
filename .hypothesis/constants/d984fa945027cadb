@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\bot\deterministic_trader.py
+# hypothesis_version: 6.151.5
+
+[0.005, 0.95, 100, 300, '0', '0.0005', '0.001', '10.0', '2.0', 'active_positions', 'buy', 'initial_capital', 'portfolio_value', 'price', 'strategies_active', 'total_trades', 'trading_loop_error']

@@ -1,4 +1,4 @@
-# Aethel v1.0 - Current Status
+# Diotec360 v1.0 - Current Status
 
 **Date**: February 2, 2026  
 **Status**: 🟢 CORE COMPLETE | 🔄 WEB DEPLOYMENT IN PROGRESS
@@ -54,7 +54,7 @@
    - Go to https://railway.app
    - Sign in with GitHub
    - "New Project" → "Deploy from GitHub repo"
-   - Select `aethel-lang`
+   - Select `diotec360-lang`
    - Railway auto-detects Dockerfile
    - Deploy! 🚀
 
@@ -72,7 +72,7 @@
 
 1. **Create Next.js App**:
    ```bash
-   cd aethel-lang
+   cd diotec360-lang
    npx create-next-app@latest frontend --typescript --tailwind --app
    ```
 
@@ -107,7 +107,7 @@
 ## 📊 Project Metrics
 
 ```
-Repository:           github.com/diotec-barros/aethel-lang
+Repository:           github.com/diotec-barros/diotec360-lang
 Status:               🟢 PUBLIC & LIVE
 Version:              v1.0.0 - The Singularity
 Total Files:          110+
@@ -210,11 +210,11 @@ Issues:               [Check GitHub]
 ### Deployment
 - **Backend**: Railway (https://railway.app) or Render (https://render.com)
 - **Frontend**: Vercel (https://vercel.com)
-- **Repository**: https://github.com/diotec-barros/aethel-lang
+- **Repository**: https://github.com/diotec-barros/diotec360-lang
 
 ### Community
-- **Issues**: https://github.com/diotec-barros/aethel-lang/issues
-- **Discussions**: https://github.com/diotec-barros/aethel-lang/discussions
+- **Issues**: https://github.com/diotec-barros/diotec360-lang/issues
+- **Discussions**: https://github.com/diotec-barros/diotec360-lang/discussions
 - **Social**: Use `SOCIAL_MEDIA_POSTS.md` for content
 
 ---
@@ -227,7 +227,7 @@ Issues:               [Check GitHub]
 # 1. Go to https://railway.app
 # 2. Sign in with GitHub
 # 3. New Project → Deploy from GitHub
-# 4. Select aethel-lang
+# 4. Select diotec360-lang
 # 5. Done!
 ```
 
@@ -265,12 +265,12 @@ Issues:               [Check GitHub]
 
 **Genesis Merkle Root**: `1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642`
 
-This hash represents the sealed state of Aethel v1.0 - proof that software can be perfect.
+This hash represents the sealed state of Diotec360 v1.0 - proof that software can be perfect.
 
 ---
 
 **Status**: 🟢 READY FOR WORLD  
 **Next Action**: Deploy backend to Railway (10 minutes)  
-**URL**: https://github.com/diotec-barros/aethel-lang
+**URL**: https://github.com/diotec-barros/diotec360-lang
 
 **The future is not written in code. It is proved in theorems.**

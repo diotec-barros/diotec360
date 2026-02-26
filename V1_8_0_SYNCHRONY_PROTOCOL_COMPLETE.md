@@ -1,4 +1,4 @@
-# 🎉 AETHEL v1.8.0 "SYNCHRONY PROTOCOL" - COMPLETE
+# 🎉 Diotec360 v1.8.0 "SYNCHRONY PROTOCOL" - COMPLETE
 
 **Date**: February 4, 2026  
 **Status**: ✅ **PRODUCTION READY**  
@@ -324,7 +324,7 @@ atomic_batch payroll {
 1. **PyPI**: `pip install aethel==1.8.0`
 2. **GitHub**: Release tag `v1.8.0`
 3. **Docker**: `docker pull aethel/aethel:1.8.0`
-4. **Documentation**: docs.aethel-lang.org
+4. **Documentation**: docs.diotec360-lang.org
 
 ---
 
@@ -403,16 +403,16 @@ Special thanks to the entire Aethel team for their dedication, expertise, and co
 
 ### Community
 
-- **GitHub**: https://github.com/aethel-lang/aethel-core
-- **Documentation**: https://docs.aethel-lang.org
+- **GitHub**: https://github.com/diotec360-lang/aethel-core
+- **Documentation**: https://docs.diotec360-lang.org
 - **Discord**: https://discord.gg/aethel
-- **Email**: support@aethel-lang.org
+- **Email**: support@diotec360-lang.org
 
 ---
 
 ## 🎉 CONCLUSION
 
-**Aethel v1.8.0 "Synchrony Protocol" is COMPLETE and PRODUCTION READY.**
+**Diotec360 v1.8.0 "Synchrony Protocol" is COMPLETE and PRODUCTION READY.**
 
 We have achieved:
 - ✅ **10-20x throughput improvement**

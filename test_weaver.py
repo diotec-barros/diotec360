@@ -1,13 +1,29 @@
-from aethel_kernel import AethelKernel
-from aethel_weaver import AethelWeaver
+"""
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+from diotec360_kernel import Diotec360Kernel
+from diotec360_weaver import Diotec360Weaver
 
 
 print("╔══════════════════════════════════════════════════════════════╗")
-print("║   AETHEL WEAVER v0.6 - COMPILADOR POLIMÓRFICO E SENSÍVEL    ║")
+print("║   DIOTEC360 WEAVER v0.6 - COMPILADOR POLIMÓRFICO E SENSÍVEL    ║")
 print("╚══════════════════════════════════════════════════════════════╝\n")
 
 # Criar kernel e compilar uma função
-kernel = AethelKernel(ai_provider="anthropic", vault_path=".aethel_vault")
+kernel = Diotec360Kernel(ai_provider="anthropic", vault_path=".diotec360_vault")
 
 code = """
 intent secure_transfer(sender: Account, receiver: Account, amount: Gold) {
@@ -45,7 +61,7 @@ print("\n" + "="*70)
 print("PASSO 2: Inicializar o Weaver")
 print("="*70)
 
-weaver = AethelWeaver(kernel.vault)
+weaver = Diotec360Weaver(kernel.vault)
 
 # Testar diferentes cenários de execução
 print("\n" + "="*70)
@@ -85,7 +101,7 @@ runtime_seconds = 60  # 1 minuto de execução
 
 print(f"\n🌍 Estimativas para {runtime_seconds}s de execução:\n")
 
-from aethel_weaver import ExecutionMode
+from diotec360_weaver import ExecutionMode
 
 for mode in ExecutionMode:
     test_strategy = {
@@ -123,7 +139,7 @@ print("   → Modo ULTRA_PERFORMANCE: todos os threads, GPU, cache máximo")
 print("\n   Cenário C: Servidor em produção, carga média")
 print("   → Modo BALANCED: threads moderados, otimizações padrão")
 
-print("\n✅ O mesmo código Aethel se adapta automaticamente!")
+print("\n✅ O mesmo código Diotec360 se adapta automaticamente!")
 
 print("\n" + "="*70)
 print("🎉 TESTE DO WEAVER CONCLUÍDO")

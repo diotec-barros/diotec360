@@ -1,4 +1,4 @@
-# Aethel v1.0 - Release Checklist
+# Diotec360 v1.0 - Release Checklist
 
 ## ✅ Pre-Release Checklist
 
@@ -49,7 +49,7 @@
 - [x] examples/finance.ae
 - [x] examples/finance_exploit.ae
 - [x] examples/global_bank.ae
-- [x] examples/aethel_sat.ae
+- [x] examples/DIOTEC360_sat.ae
 
 ### CLI
 - [x] aethel/cli/main.py
@@ -75,13 +75,13 @@ python demo_v1_final.py
 
 ### 2. Version Tagging
 ```bash
-git tag -a v1.0.0 -m "Aethel v1.0 - The Singularity"
+git tag -a v1.0.0 -m "Diotec360 v1.0 - The Singularity"
 git push origin v1.0.0
 ```
 
 ### 3. GitHub Release
 - Create release on GitHub
-- Title: "Aethel v1.0 - The Singularity"
+- Title: "Diotec360 v1.0 - The Singularity"
 - Description: Copy from V1_0_COMPLETE.md
 - Attach: SINGULARITY_REPORT.txt
 
@@ -95,7 +95,7 @@ git push origin v1.0.0
 ### 5. Social Media Announcement
 **Twitter/X Post**:
 ```
-🚀 Introducing Aethel v1.0 - The Singularity
+🚀 Introducing Diotec360 v1.0 - The Singularity
 
 The first programming language where bugs are mathematically impossible.
 
@@ -111,7 +111,7 @@ Stop testing. Start proving.
 
 **LinkedIn Post**:
 ```
-I'm excited to announce Aethel v1.0 - The Singularity, a revolutionary programming language that makes software bugs mathematically impossible.
+I'm excited to announce Diotec360 v1.0 - The Singularity, a revolutionary programming language that makes software bugs mathematically impossible.
 
 Key innovations:
 • Formal verification using Z3 SMT Solver
@@ -184,7 +184,7 @@ Open source and ready for the world.
 
 **Genesis Merkle Root**: `1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642`
 
-This hash represents the sealed state of Aethel v1.0 - the first mathematically proved programming language.
+This hash represents the sealed state of Diotec360 v1.0 - the first mathematically proved programming language.
 
 ---
 

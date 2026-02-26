@@ -1,23 +1,39 @@
 """
-Test Suite for Aethel v1.8.0 Backward Compatibility
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Suite for Diotec360 v1.8.0 Backward Compatibility
 
 Tests that single transaction execution via BatchProcessor maintains
 identical behavior to v1.7.0 for all existing use cases.
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.8.0
 Date: February 4, 2026
 """
 
 import pytest
 import time
-from aethel.core.synchrony import (
+from diotec360.core.synchrony import (
     Transaction,
     BatchResult,
     CircularDependencyError,
     ConservationViolationError
 )
-from aethel.core.batch_processor import BatchProcessor
+from diotec360.core.batch_processor import BatchProcessor
 
 
 class TestSingleTransactionExecution:
@@ -370,7 +386,7 @@ class TestAPIContractPreservation:
 def run_all_tests():
     """Run all backward compatibility tests"""
     print("\n" + "="*70)
-    print("🧪 AETHEL v1.8.0 - BACKWARD COMPATIBILITY TEST SUITE")
+    print("🧪 Diotec360 v1.8.0 - BACKWARD COMPATIBILITY TEST SUITE")
     print("="*70 + "\n")
     
     test_classes = [

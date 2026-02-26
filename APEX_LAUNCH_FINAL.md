@@ -11,7 +11,7 @@
 We're not just preventing bugs anymore.  
 **We're printing money from mathematical certainty.**
 
-Aethel v1.9.0 Apex introduces **three commercial products** that transform formal verification from academic curiosity into revenue-generating infrastructure.
+Diotec360 v1.9.0 Apex introduces **three commercial products** that transform formal verification from academic curiosity into revenue-generating infrastructure.
 
 ---
 
@@ -64,7 +64,7 @@ Aethel v1.9.0 Apex introduces **three commercial products** that transform forma
 - **Pricing**: $800-3000/month per fund
 - **ROI**: 2% annual performance improvement = $20K/year on $1M portfolio
 
-**Try it**: [Explore invariants →](./aethel/lib/trading/)
+**Try it**: [Explore invariants →](./diotec360/lib/trading/)
 
 ---
 
@@ -362,7 +362,7 @@ Thread 🧵👇
 - Expensive cyber insurance
 - Software based on "hope and test"
 
-2/ The Solution: Aethel v1.9.0 Apex
+2/ The Solution: Diotec360 v1.9.0 Apex
 Replace faith with mathematics.
 Formal proof before execution.
 Violations are MATHEMATICALLY IMPOSSIBLE.
@@ -398,8 +398,8 @@ Violations are MATHEMATICALLY IMPOSSIBLE.
 - Proven ROI in every case
 
 8/ Try it NOW:
-🎮 Playground: https://aethel-studio.vercel.app
-🔌 API: https://diotec-aethel-judge.hf.space
+🎮 Playground: https://diotec360-studio.vercel.app
+🔌 API: https://diotec-diotec360-judge.hf.space
 📚 Docs: https://github.com/diotec360/aethel
 💰 Commercial: See APEX_COMMERCIAL_STRATEGY.md
 
@@ -433,7 +433,7 @@ Financial systems lose billions because software is based on "hope and test":
 • Traditional testing cannot prove correctness
 
 THE SOLUTION:
-Aethel v1.9.0 Apex provides three commercial products:
+Diotec360 v1.9.0 Apex provides three commercial products:
 
 1️⃣ ASSURANCE CERTIFICATES ($50-500 each)
 Cryptographically signed proof that transactions are mathematically verified. Insurance companies accept these for 20-50% premium discounts.
@@ -466,7 +466,7 @@ Free 3-month trial for insurance companies and DeFi protocols. Prove ROI before 
 
 Interested? Let's talk: contact@diotec360.com
 
-Try it: https://aethel-studio.vercel.app
+Try it: https://diotec360-studio.vercel.app
 Learn more: https://github.com/diotec360/aethel
 
 #FormalVerification #Fintech #DeFi #Insurance #CyberSecurity #Innovation

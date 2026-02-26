@@ -22,7 +22,7 @@ echo Quando pedir credenciais:
 echo   Username: diotec
 echo   Password: Cole o token (nao a senha!)
 echo.
-cd aethel-judge
+cd diotec360-judge
 git push
 echo.
 if errorlevel 1 (
@@ -37,7 +37,7 @@ if errorlevel 1 (
     echo 3. O token deve ter permissao "write"
     echo.
     echo Tente novamente:
-    echo   cd aethel-judge
+    echo   cd diotec360-judge
     echo   git push
     echo.
 ) else (
@@ -47,7 +47,7 @@ if errorlevel 1 (
     echo ========================================
     echo.
     echo Seu Space esta sendo construido em:
-    echo https://huggingface.co/spaces/diotec/aethel-judge
+    echo https://huggingface.co/spaces/diotec/diotec360-judge
     echo.
     echo Aguarde 5-10 minutos para o build completar.
     echo Acompanhe os logs na aba "Logs" do Space.

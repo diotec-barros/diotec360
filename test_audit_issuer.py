@@ -1,5 +1,21 @@
 """
-Tests for Aethel Audit Issuer - Certificate of Mathematical Assurance
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Tests for Diotec360 Audit Issuer - Certificate of Mathematical Assurance
 
 Tests verify:
 - Certificate generation and signing
@@ -15,8 +31,8 @@ import json
 import tempfile
 import os
 from pathlib import Path
-from aethel.core.audit_issuer import (
-    AethelAuditIssuer,
+from diotec360.core.audit_issuer import (
+    DIOTEC360AuditIssuer,
     AssuranceCertificate,
     ProofLog,
     get_audit_issuer
@@ -30,7 +46,7 @@ class TestAuditIssuerCore:
         """Test RSA key pair generation"""
         with tempfile.TemporaryDirectory() as tmpdir:
             private_key_path = os.path.join(tmpdir, "private.pem")
-            issuer = AethelAuditIssuer(private_key_path=private_key_path)
+            issuer = DIOTEC360AuditIssuer(private_key_path=private_key_path)
             
             # Keys should be generated
             assert issuer.private_key is not None
@@ -46,11 +62,11 @@ class TestAuditIssuerCore:
             private_key_path = os.path.join(tmpdir, "private.pem")
             
             # Generate keys first time
-            issuer1 = AethelAuditIssuer(private_key_path=private_key_path)
+            issuer1 = DIOTEC360AuditIssuer(private_key_path=private_key_path)
             fingerprint1 = issuer1._get_public_key_fingerprint()
             
             # Load keys second time
-            issuer2 = AethelAuditIssuer(private_key_path=private_key_path)
+            issuer2 = DIOTEC360AuditIssuer(private_key_path=private_key_path)
             fingerprint2 = issuer2._get_public_key_fingerprint()
             
             # Should be same keys
@@ -82,8 +98,8 @@ class TestAuditIssuerCore:
         )
         
         # Verify certificate properties
-        assert certificate.certificate_id.startswith("AETHEL-CERT-")
-        assert certificate.issuer == "diotec360_aethel_nexo"
+        assert certificate.certificate_id.startswith("Diotec360-CERT-")
+        assert certificate.issuer == "diotec360_DIOTEC360_nexo"
         assert certificate.version == "v1.9.0_Apex"
         assert certificate.bundle_hash == "abc123def456"
         assert certificate.transaction_count == 10
@@ -357,11 +373,11 @@ class TestCommercialScenarios:
     
     def test_insurance_discount_scenario(self):
         """
-        Scenario: Bank gets 50% insurance discount with Aethel certificates
+        Scenario: Bank gets 50% insurance discount with Diotec360 certificates
         
         - Bank pays $10M/year in cyber insurance
-        - With Aethel: $5M/year (50% discount)
-        - Aethel fee: $100K/year enterprise license
+        - With Diotec360: $5M/year (50% discount)
+        - Diotec360 fee: $100K/year enterprise license
         - Bank saves: $4.9M/year
         """
         issuer = get_audit_issuer()
@@ -413,8 +429,8 @@ class TestCommercialScenarios:
         Scenario: DeFi protocol prevents $5M/year in flash loan attacks
         
         - Protocol loses $5M/year to attacks
-        - With Aethel: $0 losses
-        - Aethel fee: $60K/year ($5K/month)
+        - With Diotec360: $0 losses
+        - Diotec360 fee: $60K/year ($5K/month)
         - Protocol saves: $4.94M/year
         """
         issuer = get_audit_issuer()

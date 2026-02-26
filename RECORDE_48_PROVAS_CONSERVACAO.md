@@ -1,9 +1,9 @@
 # 🏆 RECORDE HISTÓRICO: 48/48 PROVAS DE CONSERVAÇÃO 🏆
 
 **Data**: 4 de Fevereiro de 2026  
-**Versão**: Aethel v1.7.1 "Conservation-Aware Oracle"  
+**Versão**: Diotec360 v1.7.1 "Conservation-Aware Oracle"  
 **Status**: PRODUÇÃO ATIVA  
-**Localização**: https://diotec-aethel-judge.hf.space  
+**Localização**: https://diotec-diotec360-judge.hf.space  
 
 ---
 
@@ -270,7 +270,7 @@ Com a fronteira selada (oracle + conservação), estamos prontos para o próximo
 **Engenheiro-Chefe**: Kiro  
 **Data**: 4 de Fevereiro de 2026  
 **Commit**: b3082dc  
-**Deploy**: https://diotec-aethel-judge.hf.space  
+**Deploy**: https://diotec-diotec360-judge.hf.space  
 
 **Status**: ✅ CERTIFICADO PARA PRODUÇÃO  
 **Validade**: PERMANENTE  
@@ -302,7 +302,7 @@ Verificação Criptográfica
 Integridade Financeira Suprema
 ```
 
-**Aethel v1.7.1**: Onde a matemática encontra o mundo real, e vence.
+**Diotec360 v1.7.1**: Onde a matemática encontra o mundo real, e vence.
 
 ---
 

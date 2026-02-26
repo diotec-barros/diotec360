@@ -1,8 +1,8 @@
-# Aethel v1.9.0 - Example Standards & Grammar Reference
+# Diotec360 v1.9.0 - Example Standards & Grammar Reference
 
 ## Executive Summary
 
-The Aethel v1.9.0 "Autonomous Sentinel" release includes **two types of examples**:
+The Diotec360 v1.9.0 "Autonomous Sentinel" release includes **two types of examples**:
 
 1. **Parseable Examples** - Clean `.ae` files that work in the Proof Viewer (frontend)
 2. **Documentation Examples** - Rich pseudo-code with comments explaining concepts
@@ -331,7 +331,7 @@ Output shows which examples pass/fail parsing.
 
 ## Summary
 
-**The Philosophy**: Aethel v1.9.0 prioritizes **mathematical correctness** over syntactic sugar. The grammar is intentionally minimal to ensure every construct can be formally verified.
+**The Philosophy**: Diotec360 v1.9.0 prioritizes **mathematical correctness** over syntactic sugar. The grammar is intentionally minimal to ensure every construct can be formally verified.
 
 **The Reality**: Some examples are "aspirational" - they show what Aethel *will* support, not what it supports *today*.
 

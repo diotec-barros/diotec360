@@ -19,7 +19,7 @@ As seguintes variáveis serão configuradas no Vercel:
 | Variável | Valor | Ambiente |
 |----------|-------|----------|
 | `NEXT_PUBLIC_API_URL` | `https://api.diotec360.com` | Production |
-| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-aethel-judge.hf.space,https://backup.diotec360.com` | Production |
+| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com` | Production |
 | `ALPHA_VANTAGE_API_KEY` | `EFQ0A2ZCKGNHFGTNAQVLOOL9,-1` | Production |
 
 ---
@@ -57,7 +57,7 @@ git push origin main
 FRONTEND (Vercel)
 └─ https://aethel.diotec360.com/
    └─ Conecta ao Triangle:
-      ├─ Node 1: https://diotec-aethel-judge.hf.space
+      ├─ Node 1: https://diotec-diotec360-judge.hf.space
       ├─ Node 2: https://api.diotec360.com ⭐ SOVEREIGN
       └─ Node 3: https://backup.diotec360.com
 ```

@@ -21,7 +21,7 @@
 Se você já tem o projeto no Vercel conectado ao GitHub:
 
 1. **Acesse**: https://vercel.com/dashboard
-2. **Vá no projeto "aethel-lang"**
+2. **Vá no projeto "diotec360-lang"**
 3. **Aguarde**: Vercel vai detectar o push e fazer deploy automático!
 4. **Ou force**: Deployments → ... → Redeploy
 
@@ -103,7 +103,7 @@ teste_aethel.bat
 ### AGORA:
 
 1. **Abra**: https://vercel.com/dashboard
-2. **Vá no projeto "aethel-lang"**
+2. **Vá no projeto "diotec360-lang"**
 3. **Verifique**: Se deploy automático iniciou
 4. **Aguarde**: 2-3 minutos
 5. **Teste**: Abra o site!
@@ -116,7 +116,7 @@ teste_aethel.bat
 Backend:  https://api.diotec360.com
 Frontend: https://aethel.diotec360.com
           (ou https://[projeto].vercel.app)
-GitHub:   https://github.com/diotec-barros/aethel-lang
+GitHub:   https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---

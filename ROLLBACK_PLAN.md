@@ -30,13 +30,13 @@ Execute rollback if any of the following occur:
 
 ```bash
 # Set environment variable to disable Sentinel
-export AETHEL_SENTINEL_ENABLED=false
+export DIOTEC360_SENTINEL_ENABLED=false
 
 # Or update configuration file
-echo "AETHEL_SENTINEL_ENABLED=false" >> .env
+echo "DIOTEC360_SENTINEL_ENABLED=false" >> .env
 
 # Restart application
-systemctl restart aethel-judge
+systemctl restart diotec360-judge
 # OR
 docker-compose restart
 # OR
@@ -231,13 +231,13 @@ Once root cause is identified and fixed:
 
 ```bash
 # Example: Increase entropy threshold
-export AETHEL_ENTROPY_THRESHOLD=0.85  # Was 0.8
+export DIOTEC360_ENTROPY_THRESHOLD=0.85  # Was 0.8
 
 # Example: Increase Crisis Mode threshold
-export AETHEL_CRISIS_ANOMALY_THRESHOLD=0.15  # Was 0.10
+export DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.15  # Was 0.10
 
 # Example: Increase quarantine capacity
-export AETHEL_QUARANTINE_CAPACITY=200  # Was 100
+export DIOTEC360_QUARANTINE_CAPACITY=200  # Was 100
 ```
 
 ### 2. Test in Staging
@@ -284,11 +284,11 @@ For automated rollback, use:
 echo "🔄 Rolling back Autonomous Sentinel..."
 
 # Disable Sentinel
-export AETHEL_SENTINEL_ENABLED=false
-echo "AETHEL_SENTINEL_ENABLED=false" >> .env
+export DIOTEC360_SENTINEL_ENABLED=false
+echo "DIOTEC360_SENTINEL_ENABLED=false" >> .env
 
 # Restart application
-systemctl restart aethel-judge
+systemctl restart diotec360-judge
 
 # Wait for restart
 sleep 5

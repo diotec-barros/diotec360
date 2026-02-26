@@ -1,4 +1,4 @@
-# 📚 AETHEL v1.9.0 "APEX" - DOCUMENTATION INDEX
+# 📚 Diotec360 v1.9.0 "APEX" - DOCUMENTATION INDEX
 
 **Version**: v1.9.0 "Apex"  
 **Release Date**: February 7, 2026  
@@ -9,8 +9,8 @@
 ## 🎯 START HERE
 
 ### For Everyone
-- **[Executive Summary](./AETHEL_V1_9_0_EXECUTIVE_SUMMARY.md)** - 5-minute overview for decision makers
-- **[Launch Manifesto](./AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md)** - The vision and mission
+- **[Executive Summary](./DIOTEC360_V1_9_0_EXECUTIVE_SUMMARY.md)** - 5-minute overview for decision makers
+- **[Launch Manifesto](./DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md)** - The vision and mission
 - **[README](./README.md)** - Quick start and overview
 
 ### For Developers
@@ -20,17 +20,17 @@
 
 ### For Business
 - **[Commercial Strategy](./APEX_COMMERCIAL_STRATEGY.md)** - Products and pricing
-- **[Pitch Deck](./AETHEL_APEX_PITCH_DECK.md)** - Investment opportunity
-- **[Launch Bundle](./AETHEL_V1_9_0_LAUNCH_BUNDLE.md)** - Complete package
+- **[Pitch Deck](./DIOTEC360_APEX_PITCH_DECK.md)** - Investment opportunity
+- **[Launch Bundle](./DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md)** - Complete package
 
 ---
 
 ## 🏛️ CORE DOCUMENTATION
 
 ### Release Documents
-- **[Final Seal](./AETHEL_V1_9_0_APEX_FINAL_SEAL.md)** - Official v1.9.0 certification
-- **[Cryptographic Seal](./AETHEL_V1_9_0_CRYPTOGRAPHIC_SEAL.md)** - Cryptographic verification
-- **[Final Status Report](./AETHEL_V1_9_0_FINAL_STATUS_REPORT.md)** - Complete status
+- **[Final Seal](./DIOTEC360_V1_9_0_APEX_FINAL_SEAL.md)** - Official v1.9.0 certification
+- **[Cryptographic Seal](./DIOTEC360_V1_9_0_CRYPTOGRAPHIC_SEAL.md)** - Cryptographic verification
+- **[Final Status Report](./DIOTEC360_V1_9_0_FINAL_STATUS_REPORT.md)** - Complete status
 - **[Release Notes](./RELEASE_NOTES_V1_9_0.md)** - What's new in v1.9.0
 - **[Changelog](./CHANGELOG.md)** - Complete version history
 
@@ -65,8 +65,8 @@
 - **[Task 14: Final Checkpoint](./TASK_14_FINAL_CHECKPOINT_COMPLETE.md)** - Integration validation
 
 ### Examples
-- **[Sentinel Demo](./aethel/examples/sentinel_demo.ae)** - Normal processing example
-- **[Adversarial Test](./aethel/examples/adversarial_test.ae)** - Attack blocking example
+- **[Sentinel Demo](./diotec360/examples/sentinel_demo.ae)** - Normal processing example
+- **[Adversarial Test](./diotec360/examples/adversarial_test.ae)** - Attack blocking example
 
 ---
 
@@ -74,7 +74,7 @@
 
 ### Core Documentation
 - **[AI-Gate Spec](./AI_GATE_SPEC.md)** - LLM safety layer specification
-- **[Plugin System Spec](./AETHEL_PLUGIN_SYSTEM_SPEC.md)** - Universal AI supervisor
+- **[Plugin System Spec](./DIOTEC360_PLUGIN_SYSTEM_SPEC.md)** - Universal AI supervisor
 - **[AI-Gate Complete](./AI_GATE_PLUGIN_SYSTEM_COMPLETE.md)** - Implementation summary
 
 ### Demos
@@ -89,14 +89,14 @@
 ## 📚 STANDARD LIBRARY v2.0.0
 
 ### Core Documentation
-- **[StdLib Spec](./AETHEL_STDLIB_V2_0_SPEC.md)** - Complete specification
+- **[StdLib Spec](./DIOTEC360_STDLIB_V2_0_SPEC.md)** - Complete specification
 - **[StdLib Demo](./demo_stdlib.py)** - Usage examples
 - **[StdLib v2.0.1 Demo](./demo_stdlib_v2_0_1.py)** - Extended examples
 
 ### Implementation
-- **[Interest Calculations](./aethel/stdlib/financial/interest.py)** - Proven interest functions
-- **[Amortization](./aethel/stdlib/financial/amortization.py)** - Loan calculations
-- **[Risk Metrics](./aethel/stdlib/financial/risk.py)** - VaR, Sharpe, etc.
+- **[Interest Calculations](./diotec360/stdlib/financial/interest.py)** - Proven interest functions
+- **[Amortization](./diotec360/stdlib/financial/amortization.py)** - Loan calculations
+- **[Risk Metrics](./diotec360/stdlib/financial/risk.py)** - VaR, Sharpe, etc.
 
 ---
 
@@ -117,9 +117,9 @@
 - **[Task 12: Atomic Batch Syntax](./TASK_12_ATOMIC_BATCH_SYNTAX_COMPLETE.md)** - Language syntax
 
 ### Examples
-- **[DeFi Exchange Parallel](./aethel/examples/defi_exchange_parallel.ae)** - Parallel trading
-- **[Payroll Parallel](./aethel/examples/payroll_parallel.ae)** - Parallel payments
-- **[Liquidation Parallel](./aethel/examples/liquidation_parallel.ae)** - Parallel liquidations
+- **[DeFi Exchange Parallel](./diotec360/examples/defi_exchange_parallel.ae)** - Parallel trading
+- **[Payroll Parallel](./diotec360/examples/payroll_parallel.ae)** - Parallel payments
+- **[Liquidation Parallel](./diotec360/examples/liquidation_parallel.ae)** - Parallel liquidations
 
 ### Demos
 - **[Synchrony Protocol Demo](./demo_synchrony_protocol.py)** - Complete demonstration
@@ -140,8 +140,8 @@
 - **[Conservation Oracle Demo](./demo_conservation_oracle.py)** - Oracle examples
 
 ### Examples
-- **[Private Compliance](./aethel/examples/private_compliance.ae)** - Privacy-preserving compliance
-- **[DeFi Liquidation Conservation](./aethel/examples/defi_liquidation_conservation.ae)** - Conservation with privacy
+- **[Private Compliance](./diotec360/examples/private_compliance.ae)** - Privacy-preserving compliance
+- **[DeFi Liquidation Conservation](./diotec360/examples/defi_liquidation_conservation.ae)** - Conservation with privacy
 
 ---
 
@@ -152,8 +152,8 @@
 - **[Overflow Sentinel](./OVERFLOW_SENTINEL_REVIEW.md)** - Overflow protection
 
 ### Implementation
-- **[Sanitizer](./aethel/core/sanitizer.py)** - Input sanitization
-- **[Overflow Protection](./aethel/core/overflow.py)** - Overflow detection
+- **[Sanitizer](./diotec360/core/sanitizer.py)** - Input sanitization
+- **[Overflow Protection](./diotec360/core/overflow.py)** - Overflow detection
 
 ### Tests
 - **[Fortress v1.5 Tests](./test_fortress_v1_5.py)** - Security tests
@@ -165,17 +165,17 @@
 
 ### Strategy Documents
 - **[Commercial Strategy](./APEX_COMMERCIAL_STRATEGY.md)** - Complete strategy
-- **[Pitch Deck](./AETHEL_APEX_PITCH_DECK.md)** - Investment deck
+- **[Pitch Deck](./DIOTEC360_APEX_PITCH_DECK.md)** - Investment deck
 - **[Launch Announcement](./APEX_LAUNCH_ANNOUNCEMENT.md)** - Public announcement
 
 ### Trading Invariants
-- **[Stop-Loss Inviolable](./aethel/lib/trading/stop_loss_inviolable.ae)** - Stop-loss protection
-- **[Flash Loan Shield](./aethel/lib/trading/flash_loan_shield.ae)** - Flash loan protection
-- **[Portfolio Rebalancing](./aethel/lib/trading/portfolio_rebalancing_enforcer.ae)** - Rebalancing enforcement
+- **[Stop-Loss Inviolable](./diotec360/lib/trading/stop_loss_inviolable.ae)** - Stop-loss protection
+- **[Flash Loan Shield](./diotec360/lib/trading/flash_loan_shield.ae)** - Flash loan protection
+- **[Portfolio Rebalancing](./diotec360/lib/trading/portfolio_rebalancing_enforcer.ae)** - Rebalancing enforcement
 - **[Trading Demo](./demo_trading_invariants.py)** - Complete demonstration
 
 ### Audit System
-- **[Audit Issuer](./aethel/core/audit_issuer.py)** - Certificate generation
+- **[Audit Issuer](./diotec360/core/audit_issuer.py)** - Certificate generation
 - **[Audit Tests](./test_audit_issuer.py)** - Test suite
 
 ---
@@ -214,9 +214,9 @@
 - **[Synchrony Protocol](./SYNCHRONY_PROTOCOL.md)** - Parallel processing
 
 ### Examples
-- **[Examples README](./aethel/examples/README.md)** - Example overview
-- **[Global Bank](./aethel/examples/global_bank.ae)** - Complete banking system
-- **[Trading Library README](./aethel/lib/trading/README.md)** - Trading examples
+- **[Examples README](./diotec360/examples/README.md)** - Example overview
+- **[Global Bank](./diotec360/examples/global_bank.ae)** - Complete banking system
+- **[Trading Library README](./diotec360/lib/trading/README.md)** - Trading examples
 
 ---
 
@@ -263,8 +263,8 @@
 ## 🌐 MARKETING & LAUNCH
 
 ### Launch Materials
-- **[Launch Manifesto](./AETHEL_V1_9_0_APEX_LAUNCH_MANIFESTO.md)** - Public manifesto
-- **[Social Media Kit](./AETHEL_V1_9_0_SOCIAL_MEDIA_ANNOUNCEMENT.md)** - Complete campaign
+- **[Launch Manifesto](./DIOTEC360_V1_9_0_APEX_LAUNCH_MANIFESTO.md)** - Public manifesto
+- **[Social Media Kit](./DIOTEC360_V1_9_0_SOCIAL_MEDIA_ANNOUNCEMENT.md)** - Complete campaign
 - **[Launch Announcement](./V1_9_0_LAUNCH_ANNOUNCEMENT.md)** - Official announcement
 
 ### Social Media
@@ -316,9 +316,9 @@
 - **[Contributors](./CONTRIBUTORS.md)** - Contributor list
 
 ### Specifications
-- **[v2.0 Consensus Spec](./AETHEL_V2_0_CONSENSUS_SPEC.md)** - Future consensus
-- **[v2.0 Launch Manifesto](./AETHEL_V2_0_LAUNCH_MANIFESTO.md)** - v2.0 vision
-- **[v2.0 Status](./AETHEL_V2_0_STATUS.md)** - v2.0 progress
+- **[v2.0 Consensus Spec](./DIOTEC360_V2_0_CONSENSUS_SPEC.md)** - Future consensus
+- **[v2.0 Launch Manifesto](./DIOTEC360_V2_0_LAUNCH_MANIFESTO.md)** - v2.0 vision
+- **[v2.0 Status](./DIOTEC360_V2_0_STATUS.md)** - v2.0 progress
 
 ---
 
@@ -350,14 +350,14 @@
 ## 🏛️ QUICK REFERENCE
 
 ### For Executives
-1. [Executive Summary](./AETHEL_V1_9_0_EXECUTIVE_SUMMARY.md)
+1. [Executive Summary](./DIOTEC360_V1_9_0_EXECUTIVE_SUMMARY.md)
 2. [Commercial Strategy](./APEX_COMMERCIAL_STRATEGY.md)
-3. [Pitch Deck](./AETHEL_APEX_PITCH_DECK.md)
+3. [Pitch Deck](./DIOTEC360_APEX_PITCH_DECK.md)
 
 ### For Developers
 1. [Getting Started](./PRIMEIROS_PASSOS_AETHEL.md)
 2. [Language Guide](./GUIA_SINTAXE_AETHEL.md)
-3. [Examples](./aethel/examples/)
+3. [Examples](./diotec360/examples/)
 
 ### For Operators
 1. [Sentinel Guide](./SENTINEL_GUIDE.md)
@@ -365,8 +365,8 @@
 3. [Rollback Plan](./ROLLBACK_PLAN.md)
 
 ### For Investors
-1. [Executive Summary](./AETHEL_V1_9_0_EXECUTIVE_SUMMARY.md)
-2. [Final Status Report](./AETHEL_V1_9_0_FINAL_STATUS_REPORT.md)
+1. [Executive Summary](./DIOTEC360_V1_9_0_EXECUTIVE_SUMMARY.md)
+2. [Final Status Report](./DIOTEC360_V1_9_0_FINAL_STATUS_REPORT.md)
 3. [Commercial Strategy](./APEX_COMMERCIAL_STRATEGY.md)
 
 ---

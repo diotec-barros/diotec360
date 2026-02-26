@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demo: LLM Options for Aethel AI-Gate
 
 Shows how to use:
@@ -9,7 +25,7 @@ Shows how to use:
 Run: python demo_llm_options.py
 """
 
-from aethel.ai.llm_config import LLMConfig, LLMPresets
+from diotec360.ai.llm_config import LLMConfig, LLMPresets
 
 
 def demo_local_llm():
@@ -233,7 +249,7 @@ def demo_quick_start():
     
     print("\n🚀 STEP 3: Test AI-Gate (1 minute)")
     print("   python")
-    print("   >>> from aethel.ai import AIGate, LLMConfig")
+    print("   >>> from diotec360.ai import AIGate, LLMConfig")
     print("   >>> config = LLMConfig.local('ollama', 'llama3')")
     print("   >>> gate = AIGate(config=config)")
     print("   >>> result = gate.voice_to_code('Transfer $100')")

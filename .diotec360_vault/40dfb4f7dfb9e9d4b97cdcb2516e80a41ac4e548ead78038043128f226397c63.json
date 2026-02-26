@@ -1,0 +1,95 @@
+{
+  "intent_name": "iniciar_tarefa",
+  "full_hash": "40dfb4f7dfb9e9d4b97cdcb2516e80a41ac4e548ead78038043128f226397c63",
+  "logic_hash": "c658969ff68d7bf112a69af4728c02e5289f389dd41effac46bc967a9d7cfbb3",
+  "ast": {
+    "params": [
+      {
+        "name": "tarefa_atual_id",
+        "type": "String",
+        "is_secret": false
+      },
+      {
+        "name": "tarefa_anterior_status",
+        "type": "Integer",
+        "is_secret": false
+      },
+      {
+        "name": "tarefa_atual_status",
+        "type": "Integer",
+        "is_secret": false
+      },
+      {
+        "name": "now_ts",
+        "type": "Integer",
+        "is_secret": false
+      },
+      {
+        "name": "deadline_ts",
+        "type": "Integer",
+        "is_secret": false
+      }
+    ],
+    "constraints": [
+      {
+        "expression": "deadline_ts > now_ts",
+        "is_secret": false,
+        "left": "deadline_ts",
+        "operator": ">",
+        "right": "now_ts"
+      },
+      {
+        "expression": "tarefa_anterior_status == 2",
+        "is_secret": false,
+        "left": "tarefa_anterior_status",
+        "operator": "==",
+        "right": "2"
+      },
+      {
+        "expression": "tarefa_atual_status == 1",
+        "is_secret": false,
+        "left": "tarefa_atual_status",
+        "operator": "==",
+        "right": "1"
+      }
+    ],
+    "ai_instructions": {
+      "priority": "productivity",
+      "target": "life_management"
+    },
+    "post_conditions": [
+      {
+        "expression": "tarefa_anterior_status == 2",
+        "is_secret": false,
+        "left": "tarefa_anterior_status",
+        "operator": "==",
+        "right": "2"
+      },
+      {
+        "expression": "tarefa_atual_status == 1",
+        "is_secret": false,
+        "left": "tarefa_atual_status",
+        "operator": "==",
+        "right": "1"
+      },
+      {
+        "expression": "deadline_ts > now_ts",
+        "is_secret": false,
+        "left": "deadline_ts",
+        "operator": ">",
+        "right": "now_ts"
+      }
+    ]
+  },
+  "code": "fn stub(){}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o consistentes e prov\u00e1veis.",
+    "timestamp": "2026-02-26T13:11:01.015811"
+  },
+  "metadata": {
+    "example": "task_flow"
+  },
+  "immutable": true,
+  "created_at": "2026-02-26T13:11:01.015844"
+}

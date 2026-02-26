@@ -1,4 +1,4 @@
-# 📊 STATUS ATUAL - Deploy Aethel v1.1
+# 📊 STATUS ATUAL - Deploy Diotec360 v1.1
 
 **Data**: 3 de Fevereiro de 2026, 12:45 PM  
 **Versão**: v1.1 "The Resonance"
@@ -14,7 +14,7 @@
 - ✅ **Endpoints funcionais**: /health, /api/verify, etc.
 
 ### Frontend (Vercel)
-- ✅ **Projeto deployado**: aethel-lang
+- ✅ **Projeto deployado**: diotec360-lang
 - ✅ **Código atualizado**: Ghost-Runner e Mirror implementados
 - ✅ **Variável de ambiente**: NEXT_PUBLIC_API_URL configurada
 
@@ -46,7 +46,7 @@
 ### 2. Configurar Domínio Frontend (5 min)
 
 **No Vercel**:
-1. Projeto aethel-lang → Settings → Domains
+1. Projeto diotec360-lang → Settings → Domains
 2. Add: `aethel.diotec360.com`
 3. Vercel configura automaticamente (domínio já é dele)
 

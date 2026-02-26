@@ -212,8 +212,8 @@ Today, with Aethel Apex, we become **titans of a new industry**.
 
 ### Production Ready
 - ✅ Deployed on Hugging Face
-- ✅ API available at diotec-aethel-judge.hf.space
-- ✅ Playground at aethel-studio.vercel.app
+- ✅ API available at diotec-diotec360-judge.hf.space
+- ✅ Playground at diotec360-studio.vercel.app
 - ✅ Comprehensive documentation
 
 ---
@@ -347,14 +347,14 @@ Today, with Aethel Apex, we become **titans of a new industry**.
 ## RESOURCES
 
 ### Try It Now
-- **Playground**: https://aethel-studio.vercel.app
-- **API**: https://diotec-aethel-judge.hf.space
-- **Documentation**: https://diotec-aethel-judge.hf.space/docs
+- **Playground**: https://diotec360-studio.vercel.app
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Documentation**: https://diotec-diotec360-judge.hf.space/docs
 
 ### Learn More
 - **Commercial Strategy**: [APEX_COMMERCIAL_STRATEGY.md](./APEX_COMMERCIAL_STRATEGY.md)
-- **Pitch Deck**: [AETHEL_APEX_PITCH_DECK.md](./AETHEL_APEX_PITCH_DECK.md)
-- **Trading Invariants**: [aethel/lib/trading/README.md](./aethel/lib/trading/README.md)
+- **Pitch Deck**: [DIOTEC360_APEX_PITCH_DECK.md](./DIOTEC360_APEX_PITCH_DECK.md)
+- **Trading Invariants**: [aethel/lib/trading/README.md](./diotec360/lib/trading/README.md)
 - **Sentinel Guide**: [SENTINEL_GUIDE.md](./SENTINEL_GUIDE.md)
 
 ### Technical Documentation
@@ -369,7 +369,7 @@ Today, with Aethel Apex, we become **titans of a new industry**.
 
 **We built the technology. Now we build the business.**
 
-Aethel v1.9.0 gave us the immune system.  
+Diotec360 v1.9.0 gave us the immune system.  
 Aethel Apex gives us the economic engine.
 
 **The transformation is complete**:
@@ -406,8 +406,8 @@ Aethel Apex gives us the economic engine.
 **Contact Information**
 
 **Website**: https://diotec360.com  
-**Demo**: https://aethel-studio.vercel.app  
-**API**: https://diotec-aethel-judge.hf.space  
+**Demo**: https://diotec360-studio.vercel.app  
+**API**: https://diotec-diotec360-judge.hf.space  
 **Email**: hello@diotec360.com  
 **Twitter**: @AethelProtocol  
 **LinkedIn**: /company/aethel-protocol

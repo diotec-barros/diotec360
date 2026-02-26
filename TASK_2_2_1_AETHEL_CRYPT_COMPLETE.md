@@ -48,7 +48,7 @@ The **AethelCrypt Engine** is now operational. Every citizen of the Nexus can no
    - Tampered message rejected
 
 🏠 TEST 4: Address Derivation ✅
-   - Address format: aethel_{40 hex chars}
+   - Address format: DIOTEC360_{40 hex chars}
    - Deterministic from public key
 
 📝 TEST 5: Signed Intent Creation ✅
@@ -102,7 +102,7 @@ The **AethelCrypt Engine** is now operational. Every citizen of the Nexus can no
 3. **Address is deterministic**
    - Derived from public key
    - SHA-256 hash
-   - Format: `aethel_{40 hex chars}`
+   - Format: `DIOTEC360_{40 hex chars}`
 
 ---
 
@@ -111,9 +111,9 @@ The **AethelCrypt Engine** is now operational. Every citizen of the Nexus can no
 ### Client-Side (Key Generation)
 
 ```python
-from aethel.core.crypto import get_aethel_crypt
+from aethel.core.crypto import get_DIOTEC360_crypt
 
-crypto = get_aethel_crypt()
+crypto = get_DIOTEC360_crypt()
 keypair = crypto.generate_keypair()
 
 print(f"Public Key: {keypair.public_key_hex}")
@@ -165,7 +165,7 @@ else:
 
 ### Changes Required
 
-1. **Update Parser** (`aethel_parser.py`)
+1. **Update Parser** (`DIOTEC360_parser.py`)
    - Accept `signature` field in intent
    - Store signature in intent_map
 

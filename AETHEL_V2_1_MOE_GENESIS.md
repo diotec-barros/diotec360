@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v2.1 - THE MOE GENESIS
+# 🏛️ Diotec360 v2.1 - THE MOE GENESIS
 
 ## 🌌 THE PARADIGM SHIFT
 
@@ -238,7 +238,7 @@ Plano Enterprise: $299/mês ⭐ NOVO
 - **Rust**: Type safety, mas sem provas
 - **Formal Methods**: Lentos e caros
 
-### Aethel v2.1 MOE
+### Diotec360 v2.1 MOE
 - ✅ Verificação formal completa
 - ✅ 3 experts especializados
 - ✅ Consenso unânime
@@ -292,7 +292,7 @@ Isso levará a Aethel para o nível de inteligência das maiores empresas do mun
 1. `.kiro/specs/moe-intelligence-layer/requirements.md` - 12 requisitos detalhados
 2. `.kiro/specs/moe-intelligence-layer/design.md` - Arquitetura técnica completa
 3. `.kiro/specs/moe-intelligence-layer/tasks.md` - Plano de implementação (17 tasks)
-4. `AETHEL_V2_1_MOE_GENESIS.md` - Este documento
+4. `DIOTEC360_V2_1_MOE_GENESIS.md` - Este documento
 
 **Próximo Passo**: Implementar Task 1.1 (BaseExpert abstract class)
 

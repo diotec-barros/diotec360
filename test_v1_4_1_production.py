@@ -1,5 +1,21 @@
 """
-Test Aethel v1.4.1 in Production - Overflow Sentinel Fix Verification
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Diotec360 v1.4.1 in Production - Overflow Sentinel Fix Verification
 
 This test verifies that the critical overflow bug fix is working in production
 on the Hugging Face Space.
@@ -12,7 +28,7 @@ The "Bit Apocalypse" test: balance = (MAX_INT - 7) + 100
 import requests
 import json
 
-API_URL = "https://diotec-aethel-judge.hf.space/api"
+API_URL = "https://diotec360-judge.hf.space/api"
 
 def test_bit_apocalypse():
     """
@@ -246,7 +262,7 @@ intent test_div_zero(account: Account) {
 
 if __name__ == '__main__':
     print("\n" + "="*60)
-    print("AETHEL v1.4.1 PRODUCTION VERIFICATION")
+    print("DIOTEC360 v1.4.1 PRODUCTION VERIFICATION")
     print("="*60)
     print(f"\nAPI: {API_URL}")
     print("Testing critical overflow bug fix...")

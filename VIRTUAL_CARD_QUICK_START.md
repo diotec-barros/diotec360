@@ -206,7 +206,7 @@ Security: Card permanently unusable
 - Customer authentication system
 
 ### For DIOTEC 360
-- Aethel Virtual Card Gateway (ready)
+- Diotec360 virtual Card Gateway (ready)
 - Billing Kernel (ready)
 - Real Forex API (ready)
 - Judge validation (ready)

@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
-Teste completo da gramática Aethel após correção.
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Teste completo da gramática Diotec360 após correção.
 """
 
 import sys
@@ -9,19 +25,19 @@ import os
 sys.path.append('.')
 
 print("=" * 70)
-print("TESTE DA GRAMÁTICA AETHEL v1.8.1 - COM SUPORTE A DECIMAIS")
+print("TESTE DA GRAMÁTICA DIOTEC360 v1.8.1 - COM SUPORTE A DECIMAIS")
 print("=" * 70)
 
 try:
-    from aethel.core.grammar import aethel_grammar
+    from diotec360.core.grammar import DIOTEC360_grammar
     from lark import Lark
-    from aethel.core.parser import AethelParser
+    from diotec360.core.parser import Diotec360Parser
     
     print("✅ Módulos importados com sucesso")
-    print(f"Versão da gramática: {aethel_grammar.split('v')[1].split(' -')[0] if 'v' in aethel_grammar else 'Desconhecida'}")
+    print(f"Versão da gramática: {DIOTEC360_grammar.split('v')[1].split(' -')[0] if 'v' in DIOTEC360_grammar else 'Desconhecida'}")
     
     # Criar parser Lark
-    parser = Lark(aethel_grammar, parser='lalr')
+    parser = Lark(DIOTEC360_grammar, parser='lalr')
     print("✅ Parser Lark criado com sucesso")
     
     # Testar casos
@@ -180,24 +196,24 @@ try:
     
     print(f"\nResultado Lark: {passed}/{len(test_cases)} passaram")
     
-    # Testar com Parser Aethel
-    print("\n\nTestando com Parser Aethel:")
+    # Testar com Parser Diotec360
+    print("\n\nTestando com Parser Diotec360:")
     print("=" * 60)
     
     try:
-        aethel_parser = AethelParser()
-        print("✅ Parser Aethel criado com sucesso")
+        diotec360_parser = Diotec360Parser()
+        print("✅ Parser Diotec360 criado com sucesso")
         
         # Testar alguns casos
-        test_cases_for_aethel = test_cases[:3]  # Testar apenas os primeiros 3
+        test_cases_for_DIOTEC360 = test_cases[:3]  # Testar apenas os primeiros 3
         
-        for test in test_cases_for_aethel:
+        for test in test_cases_for_DIOTEC360:
             print(f"\n{test['name']}:")
             print("-" * 40)
             
             try:
-                result = aethel_parser.parse(test['code'])
-                print("✅ Parse Aethel bem-sucedido")
+                result = diotec360_parser.parse(test['code'])
+                print("✅ Parse Diotec360 bem-sucedido")
                 
                 if isinstance(result, dict):
                     intent_names = list(result.keys())
@@ -221,10 +237,10 @@ try:
                         print(f"     Post-conditions: {len(post_conditions)}")
                 
             except Exception as e:
-                print(f"❌ Erro no Parser Aethel: {e}")
+                print(f"❌ Erro no Parser Diotec360: {e}")
         
     except Exception as e:
-        print(f"❌ Erro ao criar Parser Aethel: {e}")
+        print(f"❌ Erro ao criar Parser Diotec360: {e}")
         import traceback
         traceback.print_exc()
     
@@ -301,11 +317,11 @@ except Exception as e:
     traceback.print_exc()
 
 print("\n" + "=" * 70)
-print("TESTE COMPLETO - Gramática Aethel v1.8.1")
+print("TESTE COMPLETO - Gramática Diotec360 v1.8.1")
 print("=" * 70)
 print("\nResumo:")
 print(f"- Suporte a números inteiros: ✅")
 print(f"- Suporte a números decimais: ✅")
 print(f"- Suporte a números negativos: ✅")
 print(f"- Expressões aritméticas: ✅")
-print(f"- Compatibilidade com Parser Aethel: ✅")
+print(f"- Compatibilidade com Parser Diotec360: ✅")

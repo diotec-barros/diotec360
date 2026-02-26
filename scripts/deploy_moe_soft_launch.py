@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Deploy MOE Intelligence Layer in Soft Launch Mode
 
 Soft Launch: MOE affects 10% of traffic with high confidence thresholds
@@ -34,91 +50,91 @@ def create_soft_launch_config(output_path: str) -> None:
 # ============================================================================
 # Core MOE Settings
 # ============================================================================
-AETHEL_MOE_ENABLED=true
-AETHEL_MOE_MODE=soft_launch
-AETHEL_MOE_TELEMETRY_DB_PATH=./.aethel_moe/telemetry.db
+DIOTEC360_MOE_ENABLED=true
+DIOTEC360_MOE_MODE=soft_launch
+DIOTEC360_MOE_TELEMETRY_DB_PATH=./.diotec360_moe/telemetry.db
 
 # ============================================================================
 # MOE Orchestrator - ENABLED (10% Traffic)
 # ============================================================================
-AETHEL_MOE_OVERRIDE_VERDICT=true  # Override existing layers
-AETHEL_MOE_TRAFFIC_PERCENTAGE=10  # 10% of traffic
-AETHEL_MOE_LOG_VERDICTS=true
-AETHEL_MOE_PARALLEL_EXPERTS=true
+DIOTEC360_MOE_OVERRIDE_VERDICT=true  # Override existing layers
+DIOTEC360_MOE_TRAFFIC_PERCENTAGE=10  # 10% of traffic
+DIOTEC360_MOE_LOG_VERDICTS=true
+DIOTEC360_MOE_PARALLEL_EXPERTS=true
 
 # ============================================================================
 # Expert Configuration - HIGH CONFIDENCE THRESHOLDS
 # ============================================================================
-AETHEL_Z3_EXPERT_ENABLED=true
-AETHEL_Z3_EXPERT_TIMEOUT_NORMAL=30
-AETHEL_Z3_EXPERT_TIMEOUT_CRISIS=5
-AETHEL_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
+DIOTEC360_Z3_EXPERT_ENABLED=true
+DIOTEC360_Z3_EXPERT_TIMEOUT_NORMAL=30
+DIOTEC360_Z3_EXPERT_TIMEOUT_CRISIS=5
+DIOTEC360_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
 
-AETHEL_SENTINEL_EXPERT_ENABLED=true
-AETHEL_SENTINEL_EXPERT_TIMEOUT_MS=100
-AETHEL_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
+DIOTEC360_SENTINEL_EXPERT_ENABLED=true
+DIOTEC360_SENTINEL_EXPERT_TIMEOUT_MS=100
+DIOTEC360_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
 
-AETHEL_GUARDIAN_EXPERT_ENABLED=true
-AETHEL_GUARDIAN_EXPERT_TIMEOUT_MS=50
-AETHEL_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
+DIOTEC360_GUARDIAN_EXPERT_ENABLED=true
+DIOTEC360_GUARDIAN_EXPERT_TIMEOUT_MS=50
+DIOTEC360_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
 
 # ============================================================================
 # Gating Network - ENABLED (Intelligent Routing)
 # ============================================================================
-AETHEL_GATING_NETWORK_ENABLED=true
-AETHEL_GATING_NETWORK_TIMEOUT_MS=10
-AETHEL_GATING_NETWORK_DEFAULT_ROUTE=intelligent  # Route based on features
+DIOTEC360_GATING_NETWORK_ENABLED=true
+DIOTEC360_GATING_NETWORK_TIMEOUT_MS=10
+DIOTEC360_GATING_NETWORK_DEFAULT_ROUTE=intelligent  # Route based on features
 
 # ============================================================================
 # Consensus Engine - ENABLED (High Thresholds)
 # ============================================================================
-AETHEL_CONSENSUS_ENGINE_ENABLED=true
-AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
-AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.6  # High (vs 0.5 production)
+DIOTEC360_CONSENSUS_ENGINE_ENABLED=true
+DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.85  # High (vs 0.7 production)
+DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.6  # High (vs 0.5 production)
 
 # ============================================================================
 # Fallback Configuration - ENABLED
 # ============================================================================
-AETHEL_MOE_FALLBACK_ENABLED=true
-AETHEL_MOE_FALLBACK_ON_TIMEOUT=true
-AETHEL_MOE_FALLBACK_ON_LOW_CONFIDENCE=true
-AETHEL_MOE_FALLBACK_ON_UNCERTAINTY=true
+DIOTEC360_MOE_FALLBACK_ENABLED=true
+DIOTEC360_MOE_FALLBACK_ON_TIMEOUT=true
+DIOTEC360_MOE_FALLBACK_ON_LOW_CONFIDENCE=true
+DIOTEC360_MOE_FALLBACK_ON_UNCERTAINTY=true
 
 # ============================================================================
 # Verdict Caching - ENABLED
 # ============================================================================
-AETHEL_MOE_CACHE_ENABLED=true
-AETHEL_MOE_CACHE_TTL_SECONDS=300  # 5 minutes
-AETHEL_MOE_CACHE_MAX_SIZE=10000
+DIOTEC360_MOE_CACHE_ENABLED=true
+DIOTEC360_MOE_CACHE_TTL_SECONDS=300  # 5 minutes
+DIOTEC360_MOE_CACHE_MAX_SIZE=10000
 
 # ============================================================================
 # Expert Training - ENABLED (Continuous Learning)
 # ============================================================================
-AETHEL_MOE_TRAINING_ENABLED=true
-AETHEL_MOE_TRAINING_DB_PATH=./.aethel_moe/training.db
-AETHEL_MOE_TRAINING_WINDOW=1000
-AETHEL_MOE_AUTO_THRESHOLD_ADJUSTMENT=false  # Manual adjustment in soft launch
+DIOTEC360_MOE_TRAINING_ENABLED=true
+DIOTEC360_MOE_TRAINING_DB_PATH=./.diotec360_moe/training.db
+DIOTEC360_MOE_TRAINING_WINDOW=1000
+DIOTEC360_MOE_AUTO_THRESHOLD_ADJUSTMENT=false  # Manual adjustment in soft launch
 
 # ============================================================================
 # Visual Dashboard - ENABLED
 # ============================================================================
-AETHEL_MOE_VISUAL_DASHBOARD_ENABLED=true
-AETHEL_MOE_DASHBOARD_UPDATE_INTERVAL_MS=100
+DIOTEC360_MOE_VISUAL_DASHBOARD_ENABLED=true
+DIOTEC360_MOE_DASHBOARD_UPDATE_INTERVAL_MS=100
 
 # ============================================================================
 # Monitoring and Logging
 # ============================================================================
-AETHEL_MOE_LOG_LEVEL=INFO
-AETHEL_MOE_METRICS_ENABLED=true
-AETHEL_MOE_METRICS_PORT=9091
+DIOTEC360_MOE_LOG_LEVEL=INFO
+DIOTEC360_MOE_METRICS_ENABLED=true
+DIOTEC360_MOE_METRICS_PORT=9091
 
 # ============================================================================
 # Alerting - ENABLED
 # ============================================================================
-AETHEL_MOE_ALERT_EXPERT_FAILURE=true
-AETHEL_MOE_ALERT_HIGH_LATENCY=true
-AETHEL_MOE_ALERT_LOW_ACCURACY=true
-AETHEL_MOE_ALERT_FALLBACK_RATE=true
+DIOTEC360_MOE_ALERT_EXPERT_FAILURE=true
+DIOTEC360_MOE_ALERT_HIGH_LATENCY=true
+DIOTEC360_MOE_ALERT_LOW_ACCURACY=true
+DIOTEC360_MOE_ALERT_FALLBACK_RATE=true
 """
     
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -133,7 +149,7 @@ def validate_shadow_mode_complete() -> bool:
     print("🔍 Validating shadow mode completion...")
     
     # Check if telemetry database has data
-    telemetry_db = Path('./.aethel_moe/telemetry.db')
+    telemetry_db = Path('./.diotec360_moe/telemetry.db')
     if not telemetry_db.exists():
         print("❌ MOE telemetry database not found")
         print("   Run shadow mode first: python scripts/deploy_moe_shadow_mode.py")

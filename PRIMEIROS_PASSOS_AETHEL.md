@@ -1,6 +1,6 @@
 # 🚀 Primeiros Passos com Aethel
 
-**Bem-vindo ao Aethel v1.1 "The Resonance"!**
+**Bem-vindo ao Diotec360 v1.1 "The Resonance"!**
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## 📖 PASSO 1: ENTENDA O BÁSICO
 
-### Aethel é Diferente
+### Diotec360 é Diferente
 
 Aethel não é como JavaScript, Python ou Java. É uma **linguagem de verificação formal**.
 
@@ -28,7 +28,7 @@ Aethel:              Código → Prova Matemática → Certeza
 
 ### Regra de Ouro
 
-**Aethel é matemática pura. Sem comentários, sem strings, apenas lógica.**
+**Diotec360 é matemática pura. Sem comentários, sem strings, apenas lógica.**
 
 ---
 
@@ -278,7 +278,7 @@ Erros do Parser são específicos. Eles te dizem exatamente o que está errado.
 
 ### 5. Pense em Matemática
 
-Aethel é matemática. Pense em equações, não em instruções.
+Diotec360 é matemática. Pense em equações, não em instruções.
 
 ---
 

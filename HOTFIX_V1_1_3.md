@@ -377,7 +377,7 @@ Isso demonstra:
 - ✅ Documentação clara
 - ✅ Aprendizado contínuo
 
-**Aethel v1.1.3 está operacional!** 🚀
+**Diotec360 v1.1.3 está operacional!** 🚀
 
 ---
 

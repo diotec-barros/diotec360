@@ -1,10 +1,10 @@
-# Aethel v1.0 - Social Media Posts
+# Diotec360 v1.0 - Social Media Posts
 
 ## Twitter/X Post (Thread)
 
 ### Tweet 1 (Main)
 ```
-🚀 Introducing Aethel v1.0 - The Singularity
+🚀 Introducing Diotec360 v1.0 - The Singularity
 
 The first programming language where bugs are mathematically impossible.
 
@@ -14,7 +14,7 @@ The first programming language where bugs are mathematically impossible.
 
 Stop testing. Start proving.
 
-🔗 https://github.com/diotec-barros/aethel-lang
+🔗 https://github.com/diotec-barros/diotec360-lang
 
 #Aethel #FormalVerification #CorrectByConstruction
 ```
@@ -54,7 +54,7 @@ Genesis Merkle Root: 1e994337bc48d0b2...
 Aethel is open source and ready for the world.
 
 Try it:
-→ Clone: github.com/diotec-barros/aethel-lang
+→ Clone: github.com/diotec-barros/diotec360-lang
 → Read: WHITEPAPER.md
 → Build: aethel build examples/finance.ae
 
@@ -68,9 +68,9 @@ cc: @hillelwayne @vitalikbuterin @ID_AA_Carmack
 ## LinkedIn Post
 
 ```
-🚀 Introducing Aethel v1.0 - The First Mathematically Proved Programming Language
+🚀 Introducing Diotec360 v1.0 - The First Mathematically Proved Programming Language
 
-After months of development, I'm excited to announce Aethel v1.0 - a revolutionary programming language that makes software bugs mathematically impossible.
+After months of development, I'm excited to announce Diotec360 v1.0 - a revolutionary programming language that makes software bugs mathematically impossible.
 
 🎯 THE PROBLEM
 Between 2021-2024, over $2.1 billion was stolen from DeFi protocols due to logic bugs. The DAO hack ($60M), Poly Network ($611M), Wormhole ($325M) - all preventable with formal verification.
@@ -111,7 +111,7 @@ Aethel-Global-Bank (Financial System):
 🔗 OPEN SOURCE & READY
 
 Aethel is open source (Apache 2.0) and available now:
-https://github.com/diotec-barros/aethel-lang
+https://github.com/diotec-barros/diotec360-lang
 
 Read the whitepaper: "The End of the Smart Contract Hack Era"
 
@@ -144,7 +144,7 @@ Show HN: Aethel – Programming language with mathematical proof of correctness
 
 ### URL
 ```
-https://github.com/diotec-barros/aethel-lang
+https://github.com/diotec-barros/diotec360-lang
 ```
 
 ### Text (Optional Comment)
@@ -181,7 +181,7 @@ Genesis Merkle Root (sealed state): 1e994337bc48d0b2c293f9ac28b883ae68c0739e2430
 
 ### Title
 ```
-[Project] Aethel v1.0 - Programming language with formal verification and AI code generation
+[Project] Diotec360 v1.0 - Programming language with formal verification and AI code generation
 ```
 
 ### Text
@@ -228,7 +228,7 @@ The Judge proves that IF guards are true BEFORE, THEN verify is guaranteed AFTER
 - Merkle State Tree with conservation proofs
 
 **Open source**: Apache 2.0
-**Repo**: https://github.com/diotec-barros/aethel-lang
+**Repo**: https://github.com/diotec-barros/diotec360-lang
 **Whitepaper**: "The End of the Smart Contract Hack Era"
 
 The whitepaper shows how Aethel would have prevented major hacks like The DAO ($60M), Poly Network ($611M), and Wormhole ($325M).
@@ -242,7 +242,7 @@ Feedback welcome, especially from formal methods folks!
 
 ### Title
 ```
-Aethel v1.0: The First Programming Language That Refuses "Maybe"
+Diotec360 v1.0: The First Programming Language That Refuses "Maybe"
 ```
 
 ### Tags
@@ -252,13 +252,13 @@ Aethel v1.0: The First Programming Language That Refuses "Maybe"
 
 ### Content
 ```markdown
-# Aethel v1.0: The First Programming Language That Refuses "Maybe"
+# Diotec360 v1.0: The First Programming Language That Refuses "Maybe"
 
 ## TL;DR
 
 I built a programming language where bugs are mathematically impossible. It combines formal verification (Z3 Solver) with AI code generation to create "correct-by-construction" software.
 
-**Repo**: https://github.com/diotec-barros/aethel-lang
+**Repo**: https://github.com/diotec-barros/diotec360-lang
 
 ## The Problem
 
@@ -414,15 +414,15 @@ intent transfer(sender: Account, receiver: Account, amount: Balance) {
 
 ```bash
 # Clone
-git clone https://github.com/diotec-barros/aethel-lang
-cd aethel-lang
+git clone https://github.com/diotec-barros/diotec360-lang
+cd diotec360-lang
 
 # Install
 pip install -r requirements.txt
 pip install -e .
 
 # Verify your first intent
-aethel verify examples/finance.ae
+Diotec360 verify examples/finance.ae
 
 # Build with formal verification
 aethel build examples/finance.ae
@@ -449,14 +449,14 @@ aethel build examples/finance.ae
 
 The era of "test and hope" is over. The era of "prove and deploy" has begun.
 
-**Aethel v1.0 is open source and ready for the world.**
+**Diotec360 v1.0 is open source and ready for the world.**
 
 ---
 
 **Links**:
-- Repo: https://github.com/diotec-barros/aethel-lang
-- Whitepaper: [The End of the Smart Contract Hack Era](https://github.com/diotec-barros/aethel-lang/blob/main/WHITEPAPER.md)
-- Manifesto: [The Aethel Manifesto](https://github.com/diotec-barros/aethel-lang/blob/main/MANIFESTO.md)
+- Repo: https://github.com/diotec-barros/diotec360-lang
+- Whitepaper: [The End of the Smart Contract Hack Era](https://github.com/diotec-barros/diotec360-lang/blob/main/WHITEPAPER.md)
+- Manifesto: [The Aethel Manifesto](https://github.com/diotec-barros/diotec360-lang/blob/main/MANIFESTO.md)
 
 **"The future is not written in code. It is proved in theorems."**
 ```
@@ -467,7 +467,7 @@ The era of "test and hope" is over. The era of "prove and deploy" has begun.
 
 ### Subject
 ```
-Aethel v1.0: Programming Language with Mathematical Proof of Correctness
+Diotec360 v1.0: Programming Language with Mathematical Proof of Correctness
 ```
 
 ### Body
@@ -486,7 +486,7 @@ Real-world validation:
 
 The whitepaper shows how this would have prevented $2.1B+ in DeFi hacks.
 
-Repo: https://github.com/diotec-barros/aethel-lang
+Repo: https://github.com/diotec-barros/diotec360-lang
 Whitepaper: "The End of the Smart Contract Hack Era"
 
 Would love your thoughts if you have time to take a look!

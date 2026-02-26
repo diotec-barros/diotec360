@@ -38,7 +38,7 @@
   │     Environment: Production                                 │
   │                                                             │
   │  2. NEXT_PUBLIC_LATTICE_NODES                               │
-  │     Value: https://diotec-aethel-judge.hf.space,            │
+  │     Value: https://diotec-diotec360-judge.hf.space,            │
   │            https://backup.diotec360.com                     │
   │     Environment: Production                                 │
   │                                                             │
@@ -88,7 +88,7 @@
 
   2. Abra DevTools (F12) e verifique:
      ✅ Conexão com api.diotec360.com
-     ✅ Fallback para diotec-aethel-judge.hf.space
+     ✅ Fallback para diotec-diotec360-judge.hf.space
      ✅ Fallback para backup.diotec360.com
 
   3. Teste funcionalidades:
@@ -104,7 +104,7 @@
 ║  Frontend: https://aethel.diotec360.com/                         ║
 ║  └─ Conecta ao Nexo Soberano                                     ║
 ║                                                                   ║
-║  Node 1: https://diotec-aethel-judge.hf.space                    ║
+║  Node 1: https://diotec-diotec360-judge.hf.space                    ║
 ║  Node 2: https://api.diotec360.com ⭐ SOVEREIGN                  ║
 ║  Node 3: https://backup.diotec360.com                            ║
 ║                                                                   ║
@@ -120,7 +120,7 @@
      └─ Seu território soberano
 
   NEXT_PUBLIC_LATTICE_NODES
-  └─ https://diotec-aethel-judge.hf.space,
+  └─ https://diotec-diotec360-judge.hf.space,
      https://backup.diotec360.com
      └─ Triangle Resilience
 

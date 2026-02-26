@@ -1,5 +1,21 @@
 """
-Testes do Aethel v1.2 - "The Arithmetic Awakening"
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Testes do Diotec360 v1.2 - "The Arithmetic Awakening"
 Valida operadores aritméticos, números literais e comentários
 """
 
@@ -9,8 +25,8 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from aethel.core.parser import AethelParser
-from aethel.core.judge import AethelJudge
+from diotec360.core.parser import Diotec360Parser
+from diotec360.core.judge import Diotec360Judge
 
 
 def test_arithmetic_basic():
@@ -43,14 +59,14 @@ intent arithmetic_test(balance: Balance, amount: Balance) {
 }
 """
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     if not intent_map:
         print("❌ ERRO: Falha ao parsear código")
         return False
     
-    judge = AethelJudge(intent_map)
+    judge = Diotec360Judge(intent_map)
     result = judge.verify_logic('arithmetic_test')
     
     print(f"\n📊 Resultado: {result['status']}")
@@ -94,14 +110,14 @@ intent transfer_with_arithmetic(sender: Account, receiver: Account, amount: Bala
 }
 """
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     if not intent_map:
         print("❌ ERRO: Falha ao parsear código")
         return False
     
-    judge = AethelJudge(intent_map)
+    judge = Diotec360Judge(intent_map)
     result = judge.verify_logic('transfer_with_arithmetic')
     
     print(f"\n📊 Resultado: {result['status']}")
@@ -144,14 +160,14 @@ intent money_creation(sender: Account, receiver: Account) {
 }
 """
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     if not intent_map:
         print("❌ ERRO: Falha ao parsear código")
         return False
     
-    judge = AethelJudge(intent_map)
+    judge = Diotec360Judge(intent_map)
     result = judge.verify_logic('money_creation')
     
     print(f"\n📊 Resultado: {result['status']}")
@@ -198,14 +214,14 @@ intent fee_calculation(amount: Balance, rate: Balance) {
 }
 """
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     if not intent_map:
         print("❌ ERRO: Falha ao parsear código")
         return False
     
-    judge = AethelJudge(intent_map)
+    judge = Diotec360Judge(intent_map)
     result = judge.verify_logic('fee_calculation')
     
     print(f"\n📊 Resultado: {result['status']}")
@@ -247,14 +263,14 @@ intent comment_test(value: Balance) {
 }
 """
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     if not intent_map:
         print("❌ ERRO: Falha ao parsear código")
         return False
     
-    judge = AethelJudge(intent_map)
+    judge = Diotec360Judge(intent_map)
     result = judge.verify_logic('comment_test')
     
     print(f"\n📊 Resultado: {result['status']}")
@@ -270,7 +286,7 @@ intent comment_test(value: Balance) {
 
 if __name__ == "__main__":
     print("\n" + "🚀"*35)
-    print("TESTES DO AETHEL v1.2 - THE ARITHMETIC AWAKENING")
+    print("Testes do Diotec360 v1.2 - THE ARITHMETIC AWAKENING")
     print("🚀"*35)
     
     results = []
@@ -298,7 +314,7 @@ if __name__ == "__main__":
     
     if passed == total:
         print("\n🏆 TODOS OS TESTES PASSARAM!")
-        print("✅ Aethel v1.2 está funcionando perfeitamente!")
+        print("✅ Diotec360 v1.2 está funcionando perfeitamente!")
         print("✅ Operadores aritméticos: OK")
         print("✅ Números literais: OK")
         print("✅ Comentários: OK")

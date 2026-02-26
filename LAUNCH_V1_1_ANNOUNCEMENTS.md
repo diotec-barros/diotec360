@@ -1,7 +1,7 @@
-# 🚀 AETHEL v1.1 "THE RESONANCE" - LAUNCH ANNOUNCEMENTS
+# 🚀 Diotec360 v1.1 "THE RESONANCE" - LAUNCH ANNOUNCEMENTS
 
 **Data de Lançamento**: 3 de Fevereiro de 2026  
-**Versão**: Aethel v1.1 - The Resonance  
+**Versão**: Diotec360 v1.1 - The Resonance  
 **URL**: https://aethel.diotec360.com
 
 ---
@@ -14,7 +14,7 @@ Tempo é o inimigo da criação.
 
 Hoje, nós o matamos. 💀⏱️
 
-Apresento a Aethel v1.1: The Resonance.
+Apresento a Diotec360 v1.1: The Resonance.
 
 A primeira infraestrutura de programação que manifesta 
 a verdade matemática na velocidade do pensamento.
@@ -43,7 +43,7 @@ O que há de novo na v1.1? 🌌
 Por que isso muda tudo? 🧠⚡
 
 Desenvolvimento tradicional: 20 min por iteração
-Com Aethel v1.1: 2 segundos
+Com Diotec360 v1.1: 2 segundos
 
 Aumentamos a velocidade de inovação em 100x, 
 garantindo 100% de segurança via Prova Matemática (Z3).
@@ -61,7 +61,7 @@ protegido pelo Santuário WASM. 🛡️
 
 Explore a Singularidade:
 🌐 https://aethel.diotec360.com
-💻 https://github.com/diotec-barros/aethel-lang
+💻 https://github.com/diotec-barros/diotec360-lang
 
 A barreira do tempo foi quebrada. 🌌✨
 ```
@@ -71,11 +71,11 @@ A barreira do tempo foi quebrada. 🌌✨
 ## 💼 LINKEDIN POST
 
 ### Título
-**O Fim da "Era do Build": Apresentando a Aethel v1.1**
+**O Fim da "Era do Build": Apresentando a Diotec360 v1.1**
 
 ### Corpo
 ```
-Hoje, alcançamos a Singularidade Técnica com a Aethel v1.1.
+Hoje, alcançamos a Singularidade Técnica com a Diotec360 v1.1.
 
 Construímos o que chamamos de "Ressonância Cognitiva": 
 um ambiente de desenvolvimento onde o tempo entre a ideia 
@@ -110,7 +110,7 @@ Ressonância Cognitiva.
 
 Confira o que o futuro reserva:
 🌐 https://aethel.diotec360.com
-📖 https://github.com/diotec-barros/aethel-lang
+📖 https://github.com/diotec-barros/diotec360-lang
 
 #Innovation #SoftwareEngineering #AI #DevTools #FormalVerification
 ```
@@ -121,14 +121,14 @@ Confira o que o futuro reserva:
 
 ### Título
 ```
-Show HN: Aethel v1.1 – Pre-Cognitive Execution and Instant App Manifestation
+Show HN: Diotec360 v1.1 – Pre-Cognitive Execution and Instant App Manifestation
 ```
 
 ### Corpo
 ```
 Hi HN!
 
-I'm excited to share Aethel v1.1 "The Resonance" - a programming 
+I'm excited to share Diotec360 v1.1 "The Resonance" - a programming 
 language with two revolutionary features:
 
 1. **Ghost-Runner (Pre-Cognitive Execution)**
@@ -151,7 +151,7 @@ Aethel: Eliminate wrong answers, what remains IS the answer
 **Real Impact:**
 
 - Traditional dev cycle: ~20 minutes per iteration
-- Aethel v1.1: ~2 seconds
+- Diotec360 v1.1: ~2 seconds
 - 100x faster, 100% mathematically proved
 
 **Tech Stack:**
@@ -166,7 +166,7 @@ Aethel: Eliminate wrong answers, what remains IS the answer
 https://aethel.diotec360.com
 
 **Source code:**
-https://github.com/diotec-barros/aethel-lang
+https://github.com/diotec-barros/diotec360-lang
 
 Would love to hear your thoughts and feedback!
 ```
@@ -294,7 +294,7 @@ de lógica. Produção recomendada a partir da v2.0 (Epoch 4).
 ## 🌟 CITAÇÕES PARA COMPARTILHAR
 
 > "Tempo é o inimigo da criação. Hoje, nós o matamos."  
-> — Aethel v1.1 Launch
+> — Diotec360 v1.1 Launch
 
 > "O futuro não é escrito em código. Ele é manifestado em intenções."  
 > — The Resonance Manifesto
@@ -323,7 +323,7 @@ Entre em contato para saber mais sobre o futuro da computação.
 
 ### Para Pesquisadores
 ```
-Código aberto no GitHub: github.com/diotec-barros/aethel-lang
+Código aberto no GitHub: github.com/diotec-barros/diotec360-lang
 Contribua para o futuro da verificação formal.
 ```
 
@@ -334,7 +334,7 @@ Contribua para o futuro da verificação formal.
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║              AETHEL v1.1 "THE RESONANCE"                     ║
+║              Diotec360 v1.1 "THE RESONANCE"                     ║
 ║                   READY TO LAUNCH                            ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝

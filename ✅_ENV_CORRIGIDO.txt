@@ -8,9 +8,9 @@
 
 📝 O QUE FOI CORRIGIDO:
 
-1. ✅ AETHEL_LATTICE_NODES
+1. ✅ DIOTEC360_LATTICE_NODES
    Antes: https://huggingface.co/spaces/diotec/aethel
-   Agora:  https://diotec-aethel-judge.hf.space ✅
+   Agora:  https://diotec-diotec360-judge.hf.space ✅
 
 2. ✅ ALPHA_VANTAGE_API_KEY
    Antes: O3TC4CQU6GJWBNVL
@@ -34,7 +34,7 @@
 
 🔺 TRIANGLE OF TRUTH CONFIGURADO:
 
-   Node 1: https://diotec-aethel-judge.hf.space ✅
+   Node 1: https://diotec-diotec360-judge.hf.space ✅
    Node 2: https://api.diotec360.com (este servidor) ✅
    Node 3: https://backup.diotec360.com ✅
 

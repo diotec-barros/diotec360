@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\api\explorer.py
+# hypothesis_version: 6.151.5
+
+[0.89, 189, 234, 400, 456, 500, 1000, 1247, 2400000, '*', '+', '+=', '-=', '/', '/analyze', '/api/v3/explorer', '/stats', '=', 'Risco de Overflow', 'Risco de Reentrância', '\\+\\s*\\d+\\s*(?!-)', 'amount', 'analyses_today', 'balance', 'call', 'count', 'critical', 'error_rate', 'explorer', 'high', 'int', 'medium', 'python', 'return', 'solidity', 'top_violations', 'total_analyses', 'type', 'uint', 'unchecked', 'value']

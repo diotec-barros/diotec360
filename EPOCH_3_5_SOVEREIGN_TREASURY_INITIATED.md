@@ -139,7 +139,7 @@ Em vez de conectar diretamente (ilegal), fazemos parceria:
 
 1. Cliente solicita transação
    ↓
-2. Aethel valida matematicamente (Compliance Oracle)
+2. Diotec360 valida matematicamente (Compliance Oracle)
    ↓
 3. Se aprovado, envia para PSP licenciado (Stripe/Adyen)
    ↓

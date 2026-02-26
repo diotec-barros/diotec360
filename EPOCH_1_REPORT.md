@@ -8,7 +8,7 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 Date: 2026-02-01
-Version: Aethel v0.7
+Version: Diotec360 v0.7
 Mission: Transform Aethel from local compiler to global distribution system
 Result: SUCCESS
 ```
@@ -61,7 +61,7 @@ Certificates are cryptographically signed documents proving verification:
   "function_hash": "9ad9e80d...",
   "status": "PROVED",
   "message": "Code is mathematically safe...",
-  "judge_version": "Aethel_Judge_v0.6",
+  "judge_version": "DIOTEC360_Judge_v0.6",
   "z3_version": "4.12.0+",
   "timestamp": "2026-02-01T23:56:28.496230",
   "counter_examples": [],
@@ -105,16 +105,16 @@ New commands added:
 
 ```bash
 # Export function as bundle
-aethel vault export <hash> [-o output.ae_bundle]
+Diotec360 vault export <hash> [-o output.ae_bundle]
 
 # Import bundle with verification
-aethel vault import <bundle-file> [--no-verify]
+Diotec360 vault import <bundle-file> [--no-verify]
 
 # Show sync status
-aethel vault sync
+Diotec360 vault sync
 
 # Show statistics
-aethel vault stats
+Diotec360 vault stats
 ```
 
 ---
@@ -212,13 +212,13 @@ Merkle Root:          6b606a7957d904d0...
 ### Integration Testing
 
 All CLI commands tested and working:
-- ✅ `aethel vault list`
-- ✅ `aethel vault stats`
-- ✅ `aethel vault export <hash>`
-- ✅ `aethel vault import <bundle>`
-- ✅ `aethel vault sync`
+- ✅ `Diotec360 vault list`
+- ✅ `Diotec360 vault stats`
+- ✅ `Diotec360 vault export <hash>`
+- ✅ `Diotec360 vault import <bundle>`
+- ✅ `Diotec360 vault sync`
 - ✅ `aethel build <file>`
-- ✅ `aethel verify <file>`
+- ✅ `Diotec360 verify <file>`
 
 ---
 
@@ -421,7 +421,7 @@ Epoch 1 successfully transformed Aethel from a local compiler into a global trut
 ║  From Local Compiler to Global Truth Protocol               ║
 ║                                                              ║
 ║  Status: PROVED & DISTRIBUTED                                ║
-║  Version: Aethel v0.7                                        ║
+║  Version: Diotec360 v0.7                                        ║
 ║  Date: 2026-02-01                                            ║
 ╚══════════════════════════════════════════════════════════════╝
 ```

@@ -60,12 +60,12 @@ MERKLE VALIDATION ACTIVE
 ### Configuração Ativa
 ```bash
 # .env (Node 2 - diotec360.com)
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_HTTP_POLL_INTERVAL=10
-AETHEL_NODE_NAME=node2-diotec360
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_HTTP_POLL_INTERVAL=10
+DIOTEC360_NODE_NAME=node2-diotec360
+DIOTEC360_NODE_ROLE=genesis-primary
 ```
 
 ---
@@ -81,10 +81,10 @@ AETHEL_NODE_ROLE=genesis-primary
 ### Configuração Pronta
 ```bash
 # .env.node1.huggingface
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-cloud
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-cloud
 ```
 
 ### Próximos Passos
@@ -107,10 +107,10 @@ AETHEL_NODE_ROLE=genesis-cloud
 ### Configuração Pronta
 ```bash
 # .env.node3.backup
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
-AETHEL_NODE_NAME=node3-backup
-AETHEL_NODE_ROLE=genesis-backup
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com
+DIOTEC360_NODE_NAME=node3-backup
+DIOTEC360_NODE_ROLE=genesis-backup
 ```
 
 ### Próximos Passos

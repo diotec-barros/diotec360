@@ -29,7 +29,7 @@
 .\activate_node2_http.bat
 
 # Resultado:
-[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
+[SHIELD] DIOTEC360 LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
 [STARTUP] P2P disabled, using HTTP Sync only
 [STARTUP] [LUNG] HTTP Sync Heartbeat activated
 [ROCKET] LATTICE READY - Hybrid Sync Active

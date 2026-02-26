@@ -46,7 +46,7 @@ intent private_transfer(sender: Account, receiver: Account, amount: int) {
 python -m aethel.cli.main verify private_transfer.ae
 
 # Using API
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "..."}'
 ```
@@ -491,7 +491,7 @@ See the `aethel/examples/` directory:
 - **Implementation**: `aethel/core/zkp_simulator.py`
 - **Tests**: `test_zkp_simulator.py`
 - **Examples**: `aethel/examples/private_*.ae`
-- **API**: https://diotec-aethel-judge.hf.space/docs
+- **API**: https://diotec-diotec360-judge.hf.space/docs
 
 ---
 

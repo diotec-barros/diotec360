@@ -1,4 +1,4 @@
-# 📦 AETHEL v1.9.0 "APEX" - LAUNCH BUNDLE
+# 📦 Diotec360 v1.9.0 "APEX" - LAUNCH BUNDLE
 
 **Version**: v1.9.0  
 **Release Date**: February 7, 2026  
@@ -108,7 +108,7 @@ python -m aethel.cli.main hello_aethel.ae
 - **Sentinel System**: `SENTINEL_GUIDE.md`
 - **Ghost Protocol**: `ZKP_GUIDE.md`
 - **Synchrony Protocol**: `SYNCHRONY_PROTOCOL.md`
-- **Standard Library**: `AETHEL_STDLIB_V2_0_SPEC.md`
+- **Standard Library**: `DIOTEC360_STDLIB_V2_0_SPEC.md`
 
 ### API Documentation
 - **Python SDK**: `docs/python_sdk.md`
@@ -172,7 +172,7 @@ gate = AIGate()
 result = gate.voice_to_code("Transfer $100 with 2% fee")
 
 if result.verified:
-    execute(result.aethel_code)  # PROVEN: Safe to execute
+    execute(result.DIOTEC360_code)  # PROVEN: Safe to execute
 ```
 
 **Result**: 0 hallucinations in production

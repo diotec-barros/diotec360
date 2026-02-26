@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\sanitizer.py
+# hypothesis_version: 6.151.5
+
+[500, 1000, 50000, '#.*$', 'ALTO', 'BAIXO', 'BYPASS\\s+', 'CODE_EXECUTION', 'CONTROL_CHARS', 'CRÍTICO', 'DATA_EXFILTRATION', 'DYNAMIC_IMPORT', 'FILE_ACCESS', 'IGNORE\\s+PREVIOUS', 'LEAK\\s+', 'LINE_TOO_LONG', 'MÉDIO', 'NON_ASCII', 'OVERRIDE\\s+SECURITY', 'PROMPT_INJECTION', 'SIZE_LIMIT', 'SUSPICIOUS_COMMENT', 'SYSTEM\\s+PROMPT', 'SYSTEM_COMMAND', '[+\\-*/%<>=!]', '[^\\x20-\\x7E\\n\\r\\t]', '\\b__import__\\s*\\(', '\\beval\\s*\\(', '\\bexec\\s*\\(', '\\bfile\\s*\\(', '\\bopen\\s*\\(', '\\bos\\.', '\\bsubprocess\\.', '\\bsys\\.', 'blocks', 'global', 'lines', 'location', 'matched', 'operators', 'pattern', 'risk', 'size_bytes', 'type', 'utf-8', 'variables', '{']

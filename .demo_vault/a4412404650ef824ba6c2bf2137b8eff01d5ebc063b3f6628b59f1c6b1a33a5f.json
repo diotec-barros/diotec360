@@ -1,0 +1,64 @@
+{
+  "intent_name": "power_check",
+  "full_hash": "a4412404650ef824ba6c2bf2137b8eff01d5ebc063b3f6628b59f1c6b1a33a5f",
+  "logic_hash": "602bf514ba9b48062f58bce90967833111cda81b183210bb538e3bf63ea176ff",
+  "ast": {
+    "params": [
+      {
+        "name": "battery",
+        "type": "Level",
+        "is_secret": false
+      },
+      {
+        "name": "altitude",
+        "type": "Meters",
+        "is_secret": false
+      }
+    ],
+    "constraints": [
+      {
+        "expression": "battery >= min_battery",
+        "is_secret": false,
+        "left": "battery",
+        "operator": ">=",
+        "right": "min_battery"
+      },
+      {
+        "expression": "altitude > min_altitude",
+        "is_secret": false,
+        "left": "altitude",
+        "operator": ">",
+        "right": "min_altitude"
+      }
+    ],
+    "ai_instructions": {
+      "priority": "survival",
+      "target": "embedded"
+    },
+    "post_conditions": [
+      {
+        "expression": "battery >= min_battery",
+        "is_secret": false,
+        "left": "battery",
+        "operator": ">=",
+        "right": "min_battery"
+      },
+      {
+        "expression": "altitude > min_altitude",
+        "is_secret": false,
+        "left": "altitude",
+        "operator": ">",
+        "right": "min_altitude"
+      }
+    ]
+  },
+  "code": "fn power_check() { /* codigo gerado */ }",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o consistentes e prov\u00e1veis.",
+    "timestamp": "2026-02-26T13:04:53.085548"
+  },
+  "metadata": {},
+  "immutable": true,
+  "created_at": "2026-02-26T13:04:53.085592"
+}

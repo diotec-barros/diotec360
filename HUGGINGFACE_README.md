@@ -69,7 +69,7 @@ deploy_to_huggingface.bat
 ```
 
 ### 3. Monitor
-- Go to: https://huggingface.co/spaces/diotec/aethel-judge
+- Go to: https://huggingface.co/spaces/diotec/diotec360-judge
 - Check "Logs" tab
 - Wait for "Running" badge
 
@@ -81,9 +81,9 @@ python test_huggingface_deployment.py
 ## 🔗 URLs
 
 After deployment:
-- **Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
+- **Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
 
 ## 📊 What Gets Deployed
 
@@ -111,13 +111,13 @@ python test_huggingface_deployment.py
 ### Manual Testing
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Get examples
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 
 # Verify code
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { guard { x > 0; } solve { priority: security; } verify { x > 0; } }"}'
 ```
@@ -167,7 +167,7 @@ Read these in order:
 
 - **HF Docs**: https://huggingface.co/docs/hub/spaces
 - **Aethel GitHub**: https://github.com/diotec/aethel
-- **Issues**: https://github.com/diotec/aethel/issues
+- **Issues**: https://github.com/diotec/diotec360/issues
 
 ---
 

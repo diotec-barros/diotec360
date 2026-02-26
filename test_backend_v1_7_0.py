@@ -1,5 +1,21 @@
 """
-🔮 AETHEL v1.7.0 - BACKEND PRODUCTION TEST SUITE
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+🔮 Diotec360 v1.7.0 - BACKEND PRODUCTION TEST SUITE
 Oracle Sanctuary - External Data Verification
 
 Tests the deployed backend at Hugging Face with Oracle functionality.
@@ -10,7 +26,7 @@ import json
 from typing import Dict, Any
 
 # Backend URL (will be updated after deploy)
-BACKEND_URL = "https://diotec-aethel-judge.hf.space"
+BACKEND_URL = "https://diotec-Diotec360-judge.hf.space"
 
 def test_health_check():
     """Test 1: Health check and version"""
@@ -231,7 +247,7 @@ def test_conservation_with_oracle():
 def run_all_tests():
     """Run complete test suite"""
     print("\n" + "=" * 60)
-    print("🔮 AETHEL v1.7.0 - ORACLE SANCTUARY TEST SUITE")
+    print("🔮 Diotec360 v1.7.0 - ORACLE SANCTUARY TEST SUITE")
     print("=" * 60)
     print(f"Backend: {BACKEND_URL}")
     print("=" * 60)

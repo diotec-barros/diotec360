@@ -40,7 +40,7 @@ Exemplo:
 
 📋 PASSO 3: CONFIGURAR FRONTEND (Vercel)
 
-1. Vercel Dashboard → Projeto aethel-lang
+1. Vercel Dashboard → Projeto diotec360-lang
 2. Settings → Domains → Add
 3. Digite: aethel.diotec360.com
 4. Vercel mostra registros DNS

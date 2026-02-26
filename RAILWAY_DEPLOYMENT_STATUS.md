@@ -30,13 +30,13 @@ exec /opt/venv/bin/uvicorn api.main:app --host 0.0.0.0 --port $PORT
    - Format: `https://aethel-api-production.up.railway.app` (or similar)
 
 3. **Update Vercel Environment Variable**
-   - Go to Vercel dashboard → aethel-lang project
+   - Go to Vercel dashboard → diotec360-lang project
    - Settings → Environment Variables
    - Update `NEXT_PUBLIC_API_URL` with Railway URL
    - Redeploy frontend
 
 4. **Test Full Stack**
-   - Visit https://aethel-lang.vercel.app
+   - Visit https://diotec360-lang.vercel.app
    - Try loading examples
    - Try verifying code
    - Confirm backend connection works
@@ -61,7 +61,7 @@ exec /opt/venv/bin/uvicorn api.main:app --host 0.0.0.0 --port $PORT
 
 ### Update Vercel
 1. Go to https://vercel.com/dashboard
-2. Select "aethel-lang" project
+2. Select "diotec360-lang" project
 3. Go to Settings → Environment Variables
 4. Find `NEXT_PUBLIC_API_URL`
 5. Update value to Railway URL
@@ -69,7 +69,7 @@ exec /opt/venv/bin/uvicorn api.main:app --host 0.0.0.0 --port $PORT
 7. Redeploy (Vercel will prompt)
 
 ### Verify Everything Works
-1. Visit https://aethel-lang.vercel.app
+1. Visit https://diotec360-lang.vercel.app
 2. Click "Load Example" → Select "Financial Transfer"
 3. Click "Verify" button
 4. Should see proof results in right panel

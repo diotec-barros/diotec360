@@ -1,10 +1,26 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Test Distributed Vault - Export/Import Workflow
 Tests the complete cycle of certificate generation, export, and import
 """
 
-from aethel_kernel import AethelKernel
-from aethel_vault_distributed import AethelDistributedVault
+from DIOTEC360_kernel import DIOTEC360Kernel
+from DIOTEC360_vault_distributed import DIOTEC360DistributedVault
 import os
 import shutil
 
@@ -34,7 +50,7 @@ def test_complete_workflow():
     
     # Step 1: Compile with certificate generation
     print("\n[STEP 1] Compiling with certificate generation...")
-    kernel = AethelKernel(ai_provider="anthropic")
+    kernel = DIOTEC360Kernel(ai_provider="anthropic")
     result = kernel.compile(test_code, output_file="output/test_balance.rs")
     
     if result['status'] != 'SUCCESS':
@@ -47,7 +63,7 @@ def test_complete_workflow():
     
     # Step 2: Verify certificate was created
     print("\n[STEP 2] Verifying certificate...")
-    vault = AethelDistributedVault()
+    vault = DIOTEC360DistributedVault()
     cert_path = vault.certificates_path / f"{function_hash}.cert.json"
     
     if not cert_path.exists():
@@ -73,7 +89,7 @@ def test_complete_workflow():
     if os.path.exists(demo_vault_path):
         shutil.rmtree(demo_vault_path)
     
-    demo_vault = AethelDistributedVault(demo_vault_path)
+    demo_vault = DIOTEC360DistributedVault(demo_vault_path)
     
     try:
         imported_hash = demo_vault.import_bundle(bundle_path, verify_integrity=True)

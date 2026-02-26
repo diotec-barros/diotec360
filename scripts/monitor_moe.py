@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 MOE Intelligence Layer Monitoring Script
 
 Real-time monitoring of MOE expert performance, consensus quality,
@@ -24,7 +40,7 @@ from typing import Dict, List, Any
 class MOEMonitor:
     """Monitor MOE Intelligence Layer performance and health."""
     
-    def __init__(self, telemetry_db_path: str = "./.aethel_moe/telemetry.db"):
+    def __init__(self, telemetry_db_path: str = "./.diotec360_moe/telemetry.db"):
         self.telemetry_db_path = Path(telemetry_db_path)
         if not self.telemetry_db_path.exists():
             raise FileNotFoundError(f"Telemetry database not found: {telemetry_db_path}")
@@ -370,7 +386,7 @@ def main():
     )
     parser.add_argument(
         '--db-path',
-        default='./.aethel_moe/telemetry.db',
+        default='./.diotec360_moe/telemetry.db',
         help='Path to telemetry database'
     )
     

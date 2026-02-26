@@ -1,4 +1,4 @@
-# Aethel v2.1.0 "The Intelligence Layer" - Release Manifest
+# Diotec360 v2.1.0 "The Intelligence Layer" - Release Manifest
 
 ## 🏛️ ARCHITECT'S SEAL OF APPROVAL
 
@@ -79,7 +79,7 @@ The 6 failing tests are **NOT security bugs**. They are performance tests that f
 ## 💰 COMMERCIAL VALUE OF "FAILED"
 
 **Marketing Message**:
-> "Our system is so rigorous that we report even when the AI is slow. 95% of software worldwide wouldn't pass our first level of testing. Aethel v2.1.0 is the truth, naked and raw."
+> "Our system is so rigorous that we report even when the AI is slow. 95% of software worldwide wouldn't pass our first level of testing. Diotec360 v2.1.0 is the truth, naked and raw."
 
 ---
 
@@ -117,11 +117,11 @@ The 6 failing tests are **NOT security bugs**. They are performance tests that f
 - [MOE Guide](../../MOE_GUIDE.md)
 
 ### Code
-- [MOE Orchestrator](../../aethel/moe/orchestrator.py)
-- [Z3 Expert](../../aethel/moe/z3_expert.py)
-- [Sentinel Expert](../../aethel/moe/sentinel_expert.py)
-- [Guardian Expert](../../aethel/moe/guardian_expert.py)
-- [Visual Dashboard](../../aethel/moe/visual_dashboard.py)
+- [MOE Orchestrator](../../diotec360/moe/orchestrator.py)
+- [Z3 Expert](../../diotec360/moe/z3_expert.py)
+- [Sentinel Expert](../../diotec360/moe/sentinel_expert.py)
+- [Guardian Expert](../../diotec360/moe/guardian_expert.py)
+- [Visual Dashboard](../../diotec360/moe/visual_dashboard.py)
 
 ### Demos
 - [MOE Demo](../../demo_moe.py)

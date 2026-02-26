@@ -1,4 +1,4 @@
-# Aethel v1.9.0 Release Notes - "Autonomous Sentinel"
+# Diotec360 v1.9.0 Release Notes - "Autonomous Sentinel"
 
 **Release Date**: February 5, 2026  
 **Codename**: Autonomous Sentinel  
@@ -6,7 +6,7 @@
 
 ## 🎉 Overview
 
-Aethel v1.9.0 transforms the system from a passive fortress into an **autonomous self-protecting entity**. The Autonomous Sentinel introduces real-time anomaly detection, automatic Crisis Mode response, quarantine isolation, self-healing rule generation, and proactive adversarial testing—making Aethel the world's first formally verified language with autonomous defense capabilities.
+Diotec360 v1.9.0 transforms the system from a passive fortress into an **autonomous self-protecting entity**. The Autonomous Sentinel introduces real-time anomaly detection, automatic Crisis Mode response, quarantine isolation, self-healing rule generation, and proactive adversarial testing—making Aethel the world's first formally verified language with autonomous defense capabilities.
 
 ## 🚀 What's New
 
@@ -117,14 +117,14 @@ pip install --upgrade aethel
 ### Enable Sentinel (Optional)
 ```bash
 # Minimal configuration
-export AETHEL_SENTINEL_ENABLED=true
+export DIOTEC360_SENTINEL_ENABLED=true
 
 # Full configuration
-export AETHEL_SENTINEL_ENABLED=true
-export AETHEL_CRISIS_ANOMALY_THRESHOLD=0.10
-export AETHEL_CRISIS_REQUEST_THRESHOLD=1000
-export AETHEL_SELF_HEALING_ENABLED=true
-export AETHEL_VACCINE_ENABLED=false  # Enable after baseline established
+export DIOTEC360_SENTINEL_ENABLED=true
+export DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.10
+export DIOTEC360_CRISIS_REQUEST_THRESHOLD=1000
+export DIOTEC360_SELF_HEALING_ENABLED=true
+export DIOTEC360_VACCINE_ENABLED=false  # Enable after baseline established
 ```
 
 ### Initialize Databases
@@ -192,8 +192,8 @@ If issues arise, fast rollback to v1.8.0 behavior:
 
 ```bash
 # Disable Sentinel (< 1 minute)
-export AETHEL_SENTINEL_ENABLED=false
-systemctl restart aethel-judge
+export DIOTEC360_SENTINEL_ENABLED=false
+systemctl restart diotec360-judge
 
 # Or use automated script
 bash scripts/rollback_sentinel.sh
@@ -264,7 +264,7 @@ The Autonomous Sentinel was inspired by:
 ## 📞 Support
 
 - **Documentation**: https://aethel.dev/docs/sentinel
-- **GitHub Issues**: https://github.com/aethel/aethel/issues
+- **GitHub Issues**: https://github.com/diotec360/aethel/issues
 - **Community Forum**: https://forum.aethel.dev
 - **Email**: support@aethel.dev
 
@@ -284,7 +284,7 @@ python scripts/init_databases.py
 
 **Step 3: Enable Sentinel (Optional)**
 ```bash
-export AETHEL_SENTINEL_ENABLED=true
+export DIOTEC360_SENTINEL_ENABLED=true
 ```
 
 **Step 4: Deploy Gradually**
@@ -301,28 +301,28 @@ v1.8.0 configuration continues to work. New optional variables:
 
 ```bash
 # Sentinel Core
-AETHEL_SENTINEL_ENABLED=true
-AETHEL_TELEMETRY_DB_PATH=./data/telemetry.db
+DIOTEC360_SENTINEL_ENABLED=true
+DIOTEC360_TELEMETRY_DB_PATH=./data/telemetry.db
 
 # Crisis Mode
-AETHEL_CRISIS_ANOMALY_THRESHOLD=0.10
-AETHEL_CRISIS_REQUEST_THRESHOLD=1000
+DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.10
+DIOTEC360_CRISIS_REQUEST_THRESHOLD=1000
 
 # Semantic Sanitizer
-AETHEL_PATTERN_DB_PATH=./data/trojan_patterns.json
-AETHEL_ENTROPY_THRESHOLD=0.8
+DIOTEC360_PATTERN_DB_PATH=./data/trojan_patterns.json
+DIOTEC360_ENTROPY_THRESHOLD=0.8
 
 # Self-Healing
-AETHEL_SELF_HEALING_ENABLED=true
-AETHEL_RULE_EFFECTIVENESS_THRESHOLD=0.7
+DIOTEC360_SELF_HEALING_ENABLED=true
+DIOTEC360_RULE_EFFECTIVENESS_THRESHOLD=0.7
 
 # Adversarial Vaccine
-AETHEL_VACCINE_ENABLED=false  # Enable after baseline
-AETHEL_VACCINE_SCHEDULE="0 2 * * *"
+DIOTEC360_VACCINE_ENABLED=false  # Enable after baseline
+DIOTEC360_VACCINE_SCHEDULE="0 2 * * *"
 
 # Gauntlet Report
-AETHEL_GAUNTLET_DB_PATH=./data/gauntlet.db
-AETHEL_RETENTION_DAYS=90
+DIOTEC360_GAUNTLET_DB_PATH=./data/gauntlet.db
+DIOTEC360_RETENTION_DAYS=90
 ```
 
 ## 🎯 Quick Start
@@ -337,7 +337,7 @@ pip install aethel==1.9.0
 python scripts/init_databases.py
 
 # 3. Enable Sentinel
-export AETHEL_SENTINEL_ENABLED=true
+export DIOTEC360_SENTINEL_ENABLED=true
 
 # 4. Start monitoring
 python scripts/monitor_sentinel.py &

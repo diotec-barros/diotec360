@@ -1,4 +1,4 @@
-# Aethel v3.0: Proof-of-Proof Consensus
+# Diotec360 v3.0: Proof-of-Proof Consensus
 ## A Byzantine Fault-Tolerant Protocol for Decentralized Formal Verification
 
 **Technical Whitepaper**
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-We present Aethel v3.0, a novel consensus protocol that replaces meaningless computational work (proof-of-work) with meaningful logical verification (proof-of-proof). Unlike traditional blockchains that waste energy on hash computations, Aethel validators earn rewards by verifying mathematical proofs using the Z3 SMT solver. The system achieves Byzantine fault tolerance (tolerating up to 33% malicious nodes), sub-10-second finality for 1,000 nodes, and scales to 10,000+ nodes while maintaining security guarantees. We demonstrate that formal verification can be economically incentivized and distributed across a decentralized network, creating the first blockchain where every transaction is mathematically proven correct.
+We present Diotec360 v3.0, a novel consensus protocol that replaces meaningless computational work (proof-of-work) with meaningful logical verification (proof-of-proof). Unlike traditional blockchains that waste energy on hash computations, Diotec360 validators earn rewards by verifying mathematical proofs using the Z3 SMT solver. The system achieves Byzantine fault tolerance (tolerating up to 33% malicious nodes), sub-10-second finality for 1,000 nodes, and scales to 10,000+ nodes while maintaining security guarantees. We demonstrate that formal verification can be economically incentivized and distributed across a decentralized network, creating the first blockchain where every transaction is mathematically proven correct.
 
 **Key Contributions**:
 1. Novel consensus mechanism that incentivizes formal verification
@@ -421,7 +421,7 @@ Tested with various attack scenarios:
 
 ## 9. Conclusion
 
-We have presented Aethel v3.0, the first blockchain consensus protocol where mining validates logical correctness rather than computing meaningless hashes. The system achieves:
+We have presented Diotec360 v3.0, the first blockchain consensus protocol where mining validates logical correctness rather than computing meaningless hashes. The system achieves:
 
 - **Byzantine fault tolerance** (33% malicious nodes)
 - **Sub-10s finality** for 1,000 nodes
@@ -498,8 +498,8 @@ All 36 properties validated through property-based testing (Hypothesis framework
 **Lead Developer**: Dionísio Sebastião Barros  
 **License**: Apache 2.0  
 **Repository**: https://github.com/AethelLang/aethel  
-**Website**: https://aethel-lang.org  
-**Email**: contact@aethel-lang.org
+**Website**: https://diotec360-lang.org  
+**Email**: contact@diotec360-lang.org
 
 ---
 

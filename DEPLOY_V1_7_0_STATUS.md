@@ -35,7 +35,7 @@
 
 O Hugging Face Space está configurado para auto-sync com GitHub.
 
-**Verificar em**: https://huggingface.co/spaces/diotec/aethel-judge
+**Verificar em**: https://huggingface.co/spaces/diotec/diotec360-judge
 
 **Sinais de Sync**:
 - Status muda para "Building"
@@ -48,7 +48,7 @@ Após sync, o Space fará rebuild automático.
 
 **Verificar**:
 - Status muda para "Running" (verde)
-- Endpoint responde: https://diotec-aethel-judge.hf.space/health
+- Endpoint responde: https://diotec-diotec360-judge.hf.space/health
 
 ### 3. Executar Testes de Produção
 
@@ -70,13 +70,13 @@ python test_backend_v1_7_0.py
 
 ```bash
 # Version check
-curl https://diotec-aethel-judge.hf.space/
+curl https://diotec-diotec360-judge.hf.space/
 
 # Oracle list
-curl https://diotec-aethel-judge.hf.space/api/oracle/list
+curl https://diotec-diotec360-judge.hf.space/api/oracle/list
 
 # Oracle fetch
-curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 ```
 
 ---
@@ -119,7 +119,7 @@ curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 ## 🔍 MONITORAMENTO
 
 ### Logs do Hugging Face
-1. Ir para: https://huggingface.co/spaces/diotec/aethel-judge
+1. Ir para: https://huggingface.co/spaces/diotec/diotec360-judge
 2. Clicar em "Logs" (canto superior direito)
 3. Verificar mensagens de erro
 
@@ -220,7 +220,7 @@ ERROR: Build failed
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║              AETHEL v1.7.0 - DEPLOY STATUS                   ║
+║              Diotec360 v1.7.0 - DEPLOY STATUS                   ║
 ║                                                              ║
 ║  GitHub:      ✅ PUSHED (commit 8637cf4)                     ║
 ║  HF Sync:     ⏳ AGUARDANDO (2-3 min)                        ║
@@ -236,7 +236,7 @@ ERROR: Build failed
 
 **Commit**: `8637cf4`  
 **Branch**: `main`  
-**Backend**: https://diotec-aethel-judge.hf.space  
+**Backend**: https://diotec-diotec360-judge.hf.space  
 **Filosofia**: "Zero trust, pure verification"
 
 🔮✨🛡️⚡🌌

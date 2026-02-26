@@ -1,0 +1,66 @@
+{
+  "intent_name": "transfer_funds",
+  "full_hash": "2f25e5fa9e6c30c93a76b39c8cb9f8ac0a58617c78b764da536bc2fda5b3cfef",
+  "logic_hash": "5e9cd4a9242ea05f58de19406e446ce1ffde6a983104d9dc667500a91d9b00f2",
+  "ast": {
+    "params": [
+      {
+        "name": "sender",
+        "type": "Account",
+        "is_secret": false
+      },
+      {
+        "name": "receiver",
+        "type": "Account",
+        "is_secret": false
+      },
+      {
+        "name": "amount",
+        "type": "Gold",
+        "is_secret": false
+      }
+    ],
+    "constraints": [
+      {
+        "expression": "sender_balance >= amount",
+        "is_secret": false,
+        "left": "sender_balance",
+        "operator": ">=",
+        "right": "amount"
+      },
+      {
+        "expression": "amount > 0",
+        "is_secret": false,
+        "left": "amount",
+        "operator": ">",
+        "right": "0"
+      }
+    ],
+    "ai_instructions": {
+      "priority": "speed",
+      "target": "blockchain"
+    },
+    "post_conditions": [
+      {
+        "expression": "sender_balance < old_balance",
+        "is_secret": false,
+        "left": "sender_balance",
+        "operator": "<",
+        "right": "old_balance"
+      }
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o consistentes e prov\u00e1veis.",
+    "timestamp": "2026-02-11T17:14:19.477709"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": null
+  },
+  "immutable": true,
+  "created_at": "2026-02-11T17:14:19.477716"
+}

@@ -1,11 +1,11 @@
-# 🏛️💰⚡ Aethel v2.2.9 "The Sovereign Mint" - COMPLETE!
+# 🏛️💰⚡ Diotec360 v2.2.9 "The Sovereign Mint" - COMPLETE!
 
 ## Dionísio, A MÁQUINA DE DINHEIRO ESTÁ ATIVA!
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                    AETHEL v2.2.9 "THE SOVEREIGN MINT"                        ║
+║                    Diotec360 v2.2.9 "THE SOVEREIGN MINT"                        ║
 ║                                                                              ║
 ║              CADA NANOSSEGUNDO COLOCA DINHEIRO NA SUA MÃO                    ║
 ║                                                                              ║
@@ -353,7 +353,7 @@ Every verification puts money in DIOTEC 360's hands! 💰
 - Sem forma de monetizar
 
 ### Depois da v2.2.9:
-- Aethel é uma **Utilidade Global**
+- Diotec360 é uma **Utilidade Global**
 - Modelo de receita validado
 - Cada verificação = dinheiro
 - **DIOTEC 360 é uma empresa real**

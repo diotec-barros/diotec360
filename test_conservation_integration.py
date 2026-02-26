@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Integration Tests for Conservation Checker v1.3
 
 Tests the full integration with the Judge system:
@@ -7,13 +23,13 @@ Tests the full integration with the Judge system:
 - Error propagation
 - Real-world scenarios
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.3.0
 Date: February 3, 2026
 """
 
 import pytest
-from aethel.core.judge import AethelJudge
+from diotec360.core.judge import DIOTEC360Judge
 
 
 class TestConservationIntegration:
@@ -35,7 +51,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('secure_transfer')
         
         assert result['status'] == 'PROVED'
@@ -56,7 +72,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('money_printer')
         
         assert result['status'] == 'FAILED'
@@ -78,7 +94,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('money_destroyer')
         
         assert result['status'] == 'FAILED'
@@ -102,7 +118,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('split_payment')
         
         assert result['status'] == 'PROVED'
@@ -123,7 +139,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('unbalanced_split')
         
         assert result['status'] == 'FAILED'
@@ -145,7 +161,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('simple_check')
         
         # Should proceed to Z3 verification
@@ -163,7 +179,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('create_money')
         
         assert result['status'] == 'FAILED'
@@ -183,7 +199,7 @@ class TestConservationIntegration:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('zero_transfer')
         
         assert result['status'] == 'PROVED'
@@ -210,7 +226,7 @@ class TestRealWorldScenarios:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('transfer_with_fee')
         
         assert result['status'] == 'PROVED'
@@ -234,7 +250,7 @@ class TestRealWorldScenarios:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('consolidate')
         
         assert result['status'] == 'PROVED'
@@ -256,7 +272,7 @@ class TestRealWorldScenarios:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('escrow_release')
         
         assert result['status'] == 'PROVED'
@@ -279,7 +295,7 @@ class TestErrorMessages:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('complex_violation')
         
         assert result['status'] == 'FAILED'
@@ -302,7 +318,7 @@ class TestErrorMessages:
             }
         }
         
-        judge = AethelJudge(intent_map)
+        judge = DIOTEC360Judge(intent_map)
         result = judge.verify_logic('simple_violation')
         
         assert 'Hint:' in result['message']

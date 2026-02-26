@@ -11,7 +11,7 @@
 ### Código para Testar:
 
 ```aethel
-# Aethel v1.2.0 - Teste de Conservação Aritmética
+# Diotec360 v1.2.0 - Teste de Conservação Aritmética
 intent secure_transfer(sender: Account, receiver: Account, amount: Balance) {
     guard {
         old_sender_balance >= amount;

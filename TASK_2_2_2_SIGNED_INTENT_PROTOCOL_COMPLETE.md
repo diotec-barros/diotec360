@@ -41,11 +41,11 @@ The **Signed Intent Protocol** is now operational. Every transaction must now ca
 ```
 👤 Alice generates keypair
    Public Key: 65c314c02c7a80cd192483ef12b9a116...
-   Address: aethel_b41d9775df6a646bcf80a23e316134a982ddb5e1
+   Address: DIOTEC360_b41d9775df6a646bcf80a23e316134a982ddb5e1
 
 👤 Bob generates keypair
    Public Key: 635029fde5e2c779f8f2bdb114076856...
-   Address: aethel_7d8e2d14c006e8b5f056119e11c682c12f8ecfc1
+   Address: DIOTEC360_7d8e2d14c006e8b5f056119e11c682c12f8ecfc1
 
 🏦 Accounts created with public keys
    Alice: balance=1000, public_key=65c314c02c7a80cd...

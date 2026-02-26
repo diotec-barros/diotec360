@@ -1,4 +1,4 @@
-# Aethel v2.1.0 "The Intelligence Layer" - Documentation Index
+# Diotec360 v2.1.0 "The Intelligence Layer" - Documentation Index
 
 ## 🎯 START HERE
 
@@ -30,11 +30,11 @@
 ## 🔧 IMPLEMENTATION GUIDES
 
 ### For Developers
-- [MOE Orchestrator](../../aethel/moe/orchestrator.py) - Central intelligence system
-- [Z3 Expert](../../aethel/moe/z3_expert.py) - Formal verification expert
-- [Sentinel Expert](../../aethel/moe/sentinel_expert.py) - Anomaly detection expert
-- [Guardian Expert](../../aethel/moe/guardian_expert.py) - Conservation validation expert
-- [Visual Dashboard](../../aethel/moe/visual_dashboard.py) - Real-time monitoring
+- [MOE Orchestrator](../../diotec360/moe/orchestrator.py) - Central intelligence system
+- [Z3 Expert](../../diotec360/moe/z3_expert.py) - Formal verification expert
+- [Sentinel Expert](../../diotec360/moe/sentinel_expert.py) - Anomaly detection expert
+- [Guardian Expert](../../diotec360/moe/guardian_expert.py) - Conservation validation expert
+- [Visual Dashboard](../../diotec360/moe/visual_dashboard.py) - Real-time monitoring
 
 ### For Operators
 - [Monitoring Guide](../../scripts/monitor_moe.py) - How to monitor MOE in production
@@ -105,7 +105,7 @@
 ## 📞 SUPPORT & CONTACT
 
 ### For Technical Issues
-- GitHub Issues: [github.com/aethel/aethel/issues](https://github.com/aethel/aethel/issues)
+- GitHub Issues: [github.com/diotec360/diotec360/issues](https://github.com/diotec360/diotec360/issues)
 - Documentation: [docs.aethel.io](https://docs.aethel.io)
 
 ### For Commercial Inquiries
@@ -121,7 +121,7 @@
 - **Kiro AI** - Chief Engineer, Implementation Lead
 
 ### Special Thanks
-- The Aethel community for feedback and testing
+- the Diotec360 community for feedback and testing
 - The formal verification research community
 - The AI safety community
 

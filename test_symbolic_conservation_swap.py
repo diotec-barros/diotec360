@@ -1,16 +1,32 @@
+"""
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from aethel.core.parser import AethelParser
-from aethel.core.judge import AethelJudge
+from diotec360.core.parser import DIOTEC360Parser
+from diotec360.core.judge import DIOTEC360Judge
 
 
 def _run(code: str, intent_name: str) -> dict:
-    parser = AethelParser()
+    parser = DIOTEC360Parser()
     intent_map = parser.parse(code)
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     return judge.verify_logic(intent_name)
 
 

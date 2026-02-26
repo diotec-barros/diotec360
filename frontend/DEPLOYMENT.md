@@ -19,7 +19,7 @@
 2. **Deploy to Vercel**
    - Go to https://vercel.com
    - Click "New Project"
-   - Import your `aethel-lang` repository
+   - Import your `diotec360-lang` repository
    - Configure:
      - **Root Directory**: `frontend`
      - **Framework Preset**: Next.js
@@ -55,7 +55,7 @@ Open http://localhost:3000
 ## 🌐 Custom Domain
 
 1. Go to Vercel project → Settings → Domains
-2. Add your custom domain (e.g., `studio.aethel-lang.org`)
+2. Add your custom domain (e.g., `studio.diotec360-lang.org`)
 3. Follow DNS configuration instructions
 4. Wait for DNS propagation (5-30 minutes)
 

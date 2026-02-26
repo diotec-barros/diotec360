@@ -2,7 +2,7 @@
 
 ## Step 1: Configure Repository Settings
 
-Go to: https://github.com/diotec-barros/aethel-lang/settings
+Go to: https://github.com/diotec-barros/diotec360-lang/settings
 
 ### General Settings
 
@@ -13,7 +13,7 @@ The first mathematically proved sovereign programming language - Stop testing. S
 
 **Website** (optional):
 ```
-https://aethel-lang.org
+https://diotec360-lang.org
 ```
 
 **Topics** (click "Add topics"):
@@ -45,7 +45,7 @@ Enable:
 
 ## Step 2: Create GitHub Release
 
-Go to: https://github.com/diotec-barros/aethel-lang/releases/new
+Go to: https://github.com/diotec-barros/diotec360-lang/releases/new
 
 ### Release Details
 
@@ -59,13 +59,13 @@ v1.0.0 - The Singularity
 **Description** (copy from below):
 
 ```markdown
-# Aethel v1.0 - The Singularity
+# Diotec360 v1.0 - The Singularity
 
 **The first programming language where bugs are mathematically impossible.**
 
 ## 🎯 What's New
 
-Aethel v1.0 introduces a complete formal verification system that makes software bugs mathematically impossible:
+Diotec360 v1.0 introduces a complete formal verification system that makes software bugs mathematically impossible:
 
 ### Core Components
 
@@ -112,15 +112,15 @@ Aethel v1.0 introduces a complete formal verification system that makes software
 
 ```bash
 # Clone repository
-git clone https://github.com/diotec-barros/aethel-lang
-cd aethel-lang
+git clone https://github.com/diotec-barros/diotec360-lang
+cd diotec360-lang
 
 # Install dependencies
 pip install -r requirements.txt
 pip install -e .
 
 # Verify your first intent
-aethel verify examples/finance.ae
+Diotec360 verify examples/finance.ae
 
 # Build with formal verification
 aethel build examples/finance.ae
@@ -173,7 +173,7 @@ Apache License 2.0 - See [LICENSE](LICENSE) for details.
 ```
 
 **Attach files** (optional):
-- `.aethel_state/SINGULARITY_REPORT.txt`
+- `.DIOTEC360_state/SINGULARITY_REPORT.txt`
 
 **Set as latest release**: ✅ Yes
 
@@ -185,13 +185,13 @@ Click **"Publish release"**
 
 ## Step 3: Enable GitHub Discussions
 
-Go to: https://github.com/diotec-barros/aethel-lang/settings
+Go to: https://github.com/diotec-barros/diotec360-lang/settings
 
 Scroll to "Features" → Enable "Discussions"
 
 ### Create Discussion Categories
 
-Go to: https://github.com/diotec-barros/aethel-lang/discussions
+Go to: https://github.com/diotec-barros/diotec360-lang/discussions
 
 Create categories:
 1. **General** - General discussions
@@ -217,9 +217,9 @@ Aethel combines formal verification (Z3 Solver) with AI code generation to creat
 
 ## 🚀 Getting Started
 
-1. Read the [QUICKSTART.md](https://github.com/diotec-barros/aethel-lang/blob/main/QUICKSTART.md)
+1. Read the [QUICKSTART.md](https://github.com/diotec-barros/diotec360-lang/blob/main/QUICKSTART.md)
 2. Try the examples in `examples/` and `aethel/examples/`
-3. Read the [WHITEPAPER.md](https://github.com/diotec-barros/aethel-lang/blob/main/WHITEPAPER.md)
+3. Read the [WHITEPAPER.md](https://github.com/diotec-barros/diotec360-lang/blob/main/WHITEPAPER.md)
 
 ## 💬 How to Participate
 
@@ -227,7 +227,7 @@ Aethel combines formal verification (Z3 Solver) with AI code generation to creat
 - **Share Ideas**: Use the Ideas category
 - **Show Your Work**: Use Show and Tell
 - **Report Bugs**: Use Issues
-- **Contribute Code**: See [CONTRIBUTING.md](https://github.com/diotec-barros/aethel-lang/blob/main/CONTRIBUTING.md)
+- **Contribute Code**: See [CONTRIBUTING.md](https://github.com/diotec-barros/diotec360-lang/blob/main/CONTRIBUTING.md)
 
 ## 🌟 What We're Looking For
 
@@ -252,7 +252,7 @@ Welcome aboard! 🎉
 
 ## Step 4: Create GitHub Issues Templates
 
-Go to: https://github.com/diotec-barros/aethel-lang/settings
+Go to: https://github.com/diotec-barros/diotec360-lang/settings
 
 Scroll to "Features" → Click "Set up templates" next to Issues
 
@@ -292,7 +292,7 @@ Paste error output here
 **Environment**
 - OS: [e.g. Windows, macOS, Linux]
 - Python version: [e.g. 3.10]
-- Aethel version: [e.g. 1.0.0]
+- Diotec360 version: [e.g. 1.0.0]
 
 **Additional context**
 Any other context about the problem.
@@ -334,18 +334,18 @@ Any other context or screenshots.
 Update README.md to include:
 
 ```markdown
-![GitHub stars](https://img.shields.io/github/stars/diotec-barros/aethel-lang?style=social)
-![GitHub forks](https://img.shields.io/github/forks/diotec-barros/aethel-lang?style=social)
-![GitHub issues](https://img.shields.io/github/issues/diotec-barros/aethel-lang)
-![GitHub license](https://img.shields.io/github/license/diotec-barros/aethel-lang)
-![GitHub release](https://img.shields.io/github/v/release/diotec-barros/aethel-lang)
+![GitHub stars](https://img.shields.io/github/stars/diotec-barros/diotec360-lang?style=social)
+![GitHub forks](https://img.shields.io/github/forks/diotec-barros/diotec360-lang?style=social)
+![GitHub issues](https://img.shields.io/github/issues/diotec-barros/diotec360-lang)
+![GitHub license](https://img.shields.io/github/license/diotec-barros/diotec360-lang)
+![GitHub release](https://img.shields.io/github/v/release/diotec-barros/diotec360-lang)
 ```
 
 ---
 
 ## Step 6: Create GitHub Project (Optional)
 
-Go to: https://github.com/diotec-barros/aethel-lang/projects
+Go to: https://github.com/diotec-barros/diotec360-lang/projects
 
 Create project: **Aethel Roadmap**
 

@@ -26,7 +26,7 @@ deploy_to_huggingface.bat
 ```
 
 ### 2. Wait for Build
-- Visit: https://huggingface.co/spaces/diotec/aethel-judge
+- Visit: https://huggingface.co/spaces/diotec/diotec360-judge
 - Check "Logs" tab
 - Wait for green "Running" badge (~5-10 min)
 
@@ -47,19 +47,19 @@ python test_huggingface_deployment.py
 
 ## 🔗 Your URLs (After Deployment)
 
-- **Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
-- **Health**: https://diotec-aethel-judge.hf.space/health
+- **Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **Health**: https://diotec-diotec360-judge.hf.space/health
 
 ## 🧪 Quick Test
 
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Verify code
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { guard { x > 0; } solve { priority: security; } verify { x > 0; } }"}'
 ```
@@ -96,8 +96,8 @@ GET  /api/vault/list        - List vault functions
 test_docker_local.bat
 
 # Or manually
-docker build -f Dockerfile.huggingface -t aethel-judge .
-docker run -p 7860:7860 aethel-judge
+docker build -f Dockerfile.huggingface -t diotec360-judge .
+docker run -p 7860:7860 diotec360-judge
 
 # Test
 curl http://localhost:7860/health
@@ -162,7 +162,7 @@ Your formal verification system will be live in minutes! 🚀
 
 - **HF Docs**: https://huggingface.co/docs/hub/spaces
 - **Aethel GitHub**: https://github.com/diotec/aethel
-- **Issues**: https://github.com/diotec/aethel/issues
+- **Issues**: https://github.com/diotec/diotec360/issues
 
 ---
 

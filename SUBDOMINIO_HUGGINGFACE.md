@@ -8,8 +8,8 @@
 ## 🎯 OBJETIVO
 
 Criar um subdomínio `hf.diotec360.com` ou `api.diotec360.com` que aponte para:
-- **Hugging Face Space:** https://huggingface.co/spaces/diotec/aethel-judge
-- **URL direta:** https://diotec-aethel-judge.hf.space
+- **Hugging Face Space:** https://huggingface.co/spaces/diotec/diotec360-judge
+- **URL direta:** https://diotec-diotec360-judge.hf.space
 
 ---
 
@@ -19,7 +19,7 @@ Criar um subdomínio `hf.diotec360.com` ou `api.diotec360.com` que aponte para:
 ```
 Nome: api
 Tipo: CNAME
-Valor: diotec-aethel-judge.hf.space
+Valor: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -34,7 +34,7 @@ TTL: 60
 ```
 Nome: hf
 Tipo: CNAME
-Valor: diotec-aethel-judge.hf.space
+Valor: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -48,7 +48,7 @@ TTL: 60
 ```
 Nome: judge
 Tipo: CNAME
-Valor: diotec-aethel-judge.hf.space
+Valor: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -75,7 +75,7 @@ TTL: 60
 ```
 Type: CNAME
 Name: api (ou hf, ou judge)
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -98,7 +98,7 @@ TTL: 60
 nslookup api.diotec360.com
 
 # Esperado:
-# Name: diotec-aethel-judge.hf.space
+# Name: diotec-diotec360-judge.hf.space
 # Address: [IP do Hugging Face]
 ```
 
@@ -132,11 +132,11 @@ curl https://api.diotec360.com/health
 │                                                         │
 │  🌐 Subdomínio Personalizado                            │
 │  └─ https://hf.diotec360.com                            │
-│     └─ DNS: CNAME → diotec-aethel-judge.hf.space       │
+│     └─ DNS: CNAME → diotec-diotec360-judge.hf.space       │
 │                                                         │
 │  🚀 Hugging Face Space                                  │
-│  └─ https://huggingface.co/spaces/diotec/aethel-judge  │
-│     └─ URL direta: diotec-aethel-judge.hf.space        │
+│  └─ https://huggingface.co/spaces/diotec/diotec360-judge  │
+│     └─ URL direta: diotec-diotec360-judge.hf.space        │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -155,7 +155,7 @@ NEXT_PUBLIC_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.c
 ### Node 2 e Node 3
 ```env
 # Atualizar peers para usar o novo subdomínio
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,...
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,...
 ```
 
 ---
@@ -171,7 +171,7 @@ AETHEL_LATTICE_NODES=https://hf.diotec360.com,...
 5. Configure:
    - Type: `CNAME`
    - Name: `hf`
-   - Value: `diotec-aethel-judge.hf.space`
+   - Value: `diotec-diotec360-judge.hf.space`
    - TTL: `60`
 6. Clique em "Save"
 

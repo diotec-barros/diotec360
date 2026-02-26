@@ -26,7 +26,7 @@ O Node 2 foi ativado e o sistema demonstrou exatamente o comportamento esperado:
 ## 📊 LOGS DA ATIVAÇÃO
 
 ```
-[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
+[SHIELD] DIOTEC360 LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
 [STARTUP] P2P enabled, attempting to start...
 [LATTICE_P2P] waiting for peer_id... attempt 180/200
 [LATTICE_P2P] timeout: p2p_start_timeout
@@ -80,14 +80,14 @@ Para cada nó, use esta configuração:
 
 ```bash
 # Desabilitar P2P
-AETHEL_P2P_ENABLED=false
+DIOTEC360_P2P_ENABLED=false
 
 # Configurar apenas HTTP Sync
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com,https://backup.diotec360.com
 
 # Heartbeat settings
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_HTTP_POLL_INTERVAL=10
 ```
 
 ---
@@ -101,7 +101,7 @@ AETHEL_HTTP_POLL_INTERVAL=10
 # Editar .env.node1.huggingface
 # Editar .env.node2.diotec360
 # Editar .env.node3.backup
-# Mudar: AETHEL_P2P_ENABLED=false
+# Mudar: DIOTEC360_P2P_ENABLED=false
 
 # 2. Deployar todos os três nós
 # Node 1: Upload para Hugging Face Space

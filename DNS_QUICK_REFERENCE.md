@@ -9,7 +9,7 @@
 ```
 Type:  CNAME
 Name:  hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL:   60
 ```
 

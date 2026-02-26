@@ -1,9 +1,9 @@
 @echo off
 REM Activation Script for Node 2 (Primary Genesis Node)
-REM Aethel Real Lattice v3.0.4
+REM DIOTEC360 REAL LATTICE v3.0.4
 
 echo ========================================
-echo AETHEL REAL LATTICE - NODE 2 ACTIVATION
+echo DIOTEC360 REAL LATTICE - NODE 2 ACTIVATION
 echo ========================================
 echo.
 echo [INFO] Activating Primary Genesis Node
@@ -31,7 +31,7 @@ echo   - Heartbeat: 5s interval, 60s timeout
 echo.
 
 REM Start the server
-echo [STEP 3] Starting Aethel API Server...
+echo [STEP 3] Starting Diotec360 API Server...
 echo [INFO] Watch for Peer ID in the output below
 echo [INFO] Press Ctrl+C to stop the server
 echo.

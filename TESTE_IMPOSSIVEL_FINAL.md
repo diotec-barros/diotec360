@@ -157,7 +157,7 @@ Quando você completar ambos os testes:
 ║              ❌ FAILED: Rejeita código impossível           ║
 ║                                                              ║
 ║              O Juiz está funcionando perfeitamente!          ║
-║              Aethel v1.1 está COMPLETO!                      ║
+║              Diotec360 v1.1 está COMPLETO!                      ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
@@ -178,7 +178,7 @@ Quando você completar ambos os testes:
 ## 💬 POST SUGERIDO
 
 ```
-🏆 Aethel v1.1 está VIVO!
+🏆 Diotec360 v1.1 está VIVO!
 
 Acabei de validar completamente meu sistema de verificação formal:
 

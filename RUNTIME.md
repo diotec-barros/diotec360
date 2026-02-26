@@ -133,7 +133,7 @@ Create `input.json`:
 
 Execute:
 ```bash
-aethel run .aethel_vault/bundles/transfer.ae_bundle \
+aethel run .DIOTEC360_vault/bundles/transfer.ae_bundle \
   --input-file input.json \
   --vault \
   -o execution_result.json
@@ -471,6 +471,6 @@ The Aethel Runtime transforms **proved code** into **provably safe execution**. 
 ---
 
 **Status**: Phase 1 Complete ✅  
-**Version**: Aethel v0.8  
+**Version**: Diotec360 v0.8  
 **Epoch**: 2 - The Sovereign Infrastructure  
 **Date**: 2026-02-02

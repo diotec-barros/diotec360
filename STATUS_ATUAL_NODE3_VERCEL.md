@@ -79,14 +79,14 @@ Se não estiver funcionando, pode ser necessário:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL v3.0.5 - TRIANGLE OF TRUTH               │
+│         Diotec360 v3.0.5 - TRIANGLE OF TRUTH               │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  FRONTEND (Vercel)                                      │
 │  └─ https://aethel.diotec360.com/ ✅ DNS OK            │
 │                                                         │
 │  BACKEND TRIANGLE (HTTP-Only Resilience)                │
-│  ├─ Node 1: https://diotec-aethel-judge.hf.space      │
+│  ├─ Node 1: https://diotec-diotec360-judge.hf.space      │
 │  │   Status: 🚀 Pronto para deploy                     │
 │  │                                                      │
 │  ├─ Node 2: https://api.diotec360.com                  │
@@ -132,7 +132,7 @@ Se não estiver funcionando, pode ser necessário:
 ### Node 1 (Hugging Face) - Deploy
 - [ ] Executar `deploy_node1_huggingface.bat`
 - [ ] Build bem-sucedido no HF
-- [ ] Testar: `curl https://diotec-aethel-judge.hf.space/health`
+- [ ] Testar: `curl https://diotec-diotec360-judge.hf.space/health`
 - [ ] Verificar Merkle Root sincronizado
 
 ### Verificação Final

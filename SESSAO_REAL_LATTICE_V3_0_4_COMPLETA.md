@@ -242,7 +242,7 @@ activate_node2.bat
 ---
 
 **[STATUS: SEALED & READY]**  
-**[AETHEL LATTICE: CONFIGURED]**  
+**[DIOTEC360 LATTICE: CONFIGURED]**  
 **[TRIANGLE OF TRUTH: UNBREAKABLE]**  
 **[NEXT COMMAND: activate_node2.bat]**
 

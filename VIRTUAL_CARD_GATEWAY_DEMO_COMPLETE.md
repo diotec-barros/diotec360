@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Successfully created a **sales-ready demonstration** of the Aethel Virtual Card Gateway for presentation to Angolan banks (BAI, BFA, BIC).
+Successfully created a **sales-ready demonstration** of the Diotec360 virtual Card Gateway for presentation to Angolan banks (BAI, BFA, BIC).
 
 **Business Opportunity**: $3M-$10M ARR potential at $0.10 per transaction
 
@@ -303,7 +303,7 @@ Ready to revolutionize virtual card issuance in Angola! 🚀
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║               AETHEL VIRTUAL CARD GATEWAY - SALES DEMONSTRATION              ║
+║               Diotec360 vIRTUAL CARD GATEWAY - SALES DEMONSTRATION              ║
 ║                                                                              ║
 ║                     Target: Angolan Banks (BAI, BFA, BIC)                    ║
 ║                    Value Proposition: The Unbreakable Card                   ║

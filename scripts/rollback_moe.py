@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 MOE Intelligence Layer Rollback Script
 
 Automated rollback of MOE v2.1.0 to v1.9.0 behavior.
@@ -58,17 +74,17 @@ class MOERollback:
                 moe_enabled_found = False
                 with open(env_file, 'w') as f:
                     for line in lines:
-                        if line.startswith('AETHEL_MOE_ENABLED'):
-                            f.write('AETHEL_MOE_ENABLED=false\n')
+                        if line.startswith('DIOTEC360_MOE_ENABLED'):
+                            f.write('DIOTEC360_MOE_ENABLED=false\n')
                             moe_enabled_found = True
                         else:
                             f.write(line)
                     
                     if not moe_enabled_found:
-                        f.write('\nAETHEL_MOE_ENABLED=false\n')
+                        f.write('\nDIOTEC360_MOE_ENABLED=false\n')
             else:
                 with open(env_file, 'w') as f:
-                    f.write('AETHEL_MOE_ENABLED=false\n')
+                    f.write('DIOTEC360_MOE_ENABLED=false\n')
             
             self.log("MOE disabled in configuration", "SUCCESS")
             return True
@@ -84,7 +100,7 @@ class MOERollback:
         try:
             # Try systemctl first
             result = subprocess.run(
-                ['systemctl', 'restart', 'aethel-judge'],
+                ['systemctl', 'restart', 'diotec360-judge'],
                 capture_output=True,
                 text=True
             )
@@ -110,7 +126,7 @@ class MOERollback:
             
         except Exception as e:
             self.log(f"Failed to restart application: {e}", "WARNING")
-            self.log("Please restart manually: systemctl restart aethel-judge", "INFO")
+            self.log("Please restart manually: systemctl restart diotec360-judge", "INFO")
             return False
     
     def backup_databases(self) -> bool:
@@ -126,7 +142,7 @@ class MOERollback:
             self.backup_dir.mkdir(parents=True, exist_ok=True)
             
             # Backup telemetry database
-            telemetry_db = Path('./.aethel_moe/telemetry.db')
+            telemetry_db = Path('./.diotec360_moe/telemetry.db')
             if telemetry_db.exists():
                 shutil.copy2(telemetry_db, self.backup_dir / 'telemetry.db')
                 self.log(f"Backed up telemetry database", "SUCCESS")
@@ -134,7 +150,7 @@ class MOERollback:
                 self.log("Telemetry database not found", "WARNING")
             
             # Backup training database
-            training_db = Path('./.aethel_moe/training.db')
+            training_db = Path('./.diotec360_moe/training.db')
             if training_db.exists():
                 shutil.copy2(training_db, self.backup_dir / 'training.db')
                 self.log(f"Backed up training database", "SUCCESS")
@@ -176,7 +192,7 @@ class MOERollback:
                 f.write("=" * 80 + "\n")
                 f.write("ROLLBACK ACTIONS TAKEN\n")
                 f.write("=" * 80 + "\n\n")
-                f.write("1. MOE disabled via AETHEL_MOE_ENABLED=false\n")
+                f.write("1. MOE disabled via DIOTEC360_MOE_ENABLED=false\n")
                 f.write("2. Application restarted\n")
                 f.write("3. Databases backed up\n")
                 f.write("4. Reports exported\n\n")
@@ -206,7 +222,7 @@ class MOERollback:
             if env_file.exists():
                 with open(env_file, 'r') as f:
                     content = f.read()
-                    if 'AETHEL_MOE_ENABLED=false' in content:
+                    if 'DIOTEC360_MOE_ENABLED=false' in content:
                         self.log("MOE disabled in configuration ✓", "SUCCESS")
                     else:
                         self.log("MOE not disabled in configuration", "ERROR")

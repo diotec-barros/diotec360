@@ -1,4 +1,4 @@
-# 🚀 AETHEL v1.2 - "THE ARITHMETIC AWAKENING"
+# 🚀 Diotec360 v1.2 - "THE ARITHMETIC AWAKENING"
 
 **Versão Atual**: v1.1.4 "The Unified Proof"  
 **Próxima Versão**: v1.2.0 "The Arithmetic Awakening"  

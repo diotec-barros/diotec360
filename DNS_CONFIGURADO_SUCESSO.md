@@ -10,7 +10,7 @@
 ```
 Name: hf
 Type: CNAME
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 Age: 2 minutos ✅
 ```
@@ -23,7 +23,7 @@ Age: 2 minutos ✅
 
 | Subdomínio | Tipo | Destino | Status |
 |------------|------|---------|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | ✅ **ATIVO** (2m) |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | ✅ **ATIVO** (2m) |
 | `backup` | CNAME | `cname.vercel-dns.com` | ✅ ATIVO (48m) |
 | `api` | CNAME | `7m1g5de7.up.railway.app` | ✅ ATIVO (7m) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | ✅ ATIVO |
@@ -70,7 +70,7 @@ Acesse diretamente:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND                                            │

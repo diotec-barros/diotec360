@@ -45,7 +45,7 @@ async def startup_event():
 ### Opção 2: Passar variáveis via linha de comando
 
 ```bat
-set AETHEL_P2P_ENABLED=true && python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+set DIOTEC360_P2P_ENABLED=true && python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 
 ### Opção 3: Desabilitar P2P por enquanto

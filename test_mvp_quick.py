@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Teste Rápido do MVP Comercial
 Valida todos os componentes em menos de 1 minuto
 
@@ -52,7 +68,7 @@ def test_real_forex_api() -> bool:
     print("\n🌐 Testando Real Forex API...")
     
     try:
-        from aethel.core.real_forex_api import get_real_forex_oracle
+        from diotec360.core.real_forex_api import get_real_forex_oracle
         
         oracle = get_real_forex_oracle()
         print("✅ Oracle inicializado")
@@ -91,7 +107,7 @@ def test_cognitive_memory() -> bool:
     print("\n🧠 Testando Cognitive Memory...")
     
     try:
-        from aethel.core.memory import get_cognitive_memory
+        from diotec360.core.memory import get_cognitive_memory
         
         memory = get_cognitive_memory()
         print("✅ Memory System inicializado")

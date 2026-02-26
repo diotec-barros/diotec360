@@ -8,7 +8,7 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 Date: 2026-02-02
-Version: Aethel v0.8
+Version: Diotec360 v0.8
 Epoch: 2 - The Sovereign Infrastructure
 Phase: 1 - Deterministic Executor
 Status: ✅ OPERATIONAL
@@ -129,7 +129,7 @@ Runtime verification of post-conditions protects against:
 ```
 Bundle: transfer
 Certificate Status: PROVED
-Judge Version: Aethel_Judge_v0.6
+Judge Version: DIOTEC360_Judge_v0.6
 
 ✅ TEST PASSED: Certificate verified successfully
 ```
@@ -201,7 +201,7 @@ Envelope Details:
 ### Command
 
 ```bash
-aethel run .aethel_vault/bundles/transfer_3be8a8ce.ae_bundle \
+aethel run .DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle \
   --input-file test_input_transfer.json \
   --vault \
   -o execution_result.json
@@ -223,7 +223,7 @@ aethel run .aethel_vault/bundles/transfer_3be8a8ce.ae_bundle \
 🛡️  AETHEL RUNTIME - THE SANCTUARY
     Secure Execution Environment
 
-📋 [INFO] Loading bundle: .aethel_vault/bundles/transfer_3be8a8ce.ae_bundle
+📋 [INFO] Loading bundle: .DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle
 ✅ [SUCCESS] Bundle loaded: transfer
 📋 [INFO] Verifying certificate...
 ✅ [SUCCESS] Certificate verified
@@ -445,7 +445,7 @@ Phase 1 of Epoch 2 successfully created **The Sanctuary** - a secure execution e
 ║  ✅ 100% Test Coverage                                       ║
 ║                                                              ║
 ║  Status: OPERATIONAL                                         ║
-║  Version: Aethel v0.8                                        ║
+║  Version: Diotec360 v0.8                                        ║
 ║  Date: 2026-02-02                                            ║
 ╚══════════════════════════════════════════════════════════════╝
 ```

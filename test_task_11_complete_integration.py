@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Complete Integration Test for Task 11
 
 This test validates the complete integration of all Autonomous Sentinel
@@ -18,9 +34,9 @@ Date: February 5, 2026
 
 import pytest
 import time
-from aethel.core.judge import AethelJudge
-from aethel.core.sentinel_monitor import get_sentinel_monitor
-from aethel.core.adaptive_rigor import AdaptiveRigor, SystemMode
+from diotec360.core.judge import DIOTEC360Judge
+from diotec360.core.sentinel_monitor import get_sentinel_monitor
+from diotec360.core.adaptive_rigor import AdaptiveRigor, SystemMode
 
 
 def test_complete_integration_normal_transaction():
@@ -39,7 +55,7 @@ def test_complete_integration_normal_transaction():
             ]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Execute verification
     result = judge.verify_logic("test_transfer")
@@ -70,7 +86,7 @@ def test_adaptive_rigor_crisis_mode_integration():
             ]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Verify Adaptive Rigor is in normal mode initially
     assert judge.adaptive_rigor.current_mode == SystemMode.NORMAL
@@ -109,7 +125,7 @@ def test_gauntlet_report_logging():
             "post_conditions": ["x == x"]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Get initial attack count
     initial_stats = judge.gauntlet_report.get_statistics(time_window=3600)
@@ -141,7 +157,7 @@ def test_semantic_sanitizer_rejection_logging():
             "post_conditions": ["x == x"]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Manually test semantic sanitizer with malicious code
     malicious_code = "while True: pass"
@@ -175,7 +191,7 @@ def test_layer_execution_order_with_telemetry():
             ]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Execute transaction
     result = judge.verify_logic("test_transfer")
@@ -210,7 +226,7 @@ def test_crisis_mode_listener_registration():
             "post_conditions": ["x == x"]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Verify listener is registered
     sentinel = judge.sentinel_monitor
@@ -245,7 +261,7 @@ def test_graceful_degradation():
             ]
         }
     }
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     # Even if Sentinel components have issues, Judge should still work
     # This tests the fail-safe design

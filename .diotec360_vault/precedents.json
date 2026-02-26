@@ -1,0 +1,161 @@
+{
+  "v": 1,
+  "items": {
+    "53ec7c336a9feb43af34512502526e3dc1cfe66d38841db82651dec137b46af1": {
+      "v": 1,
+      "intent_name": "power_check",
+      "full_hash": "a4412404650ef824ba6c2bf2137b8eff01d5ebc063b3f6628b59f1c6b1a33a5f",
+      "logic_hash": "602bf514ba9b48062f58bce90967833111cda81b183210bb538e3bf63ea176ff",
+      "signature_hash": "602bf514ba9b48062f58bce90967833111cda81b183210bb538e3bf63ea176ff",
+      "status": "PROVED",
+      "message": "O código é matematicamente seguro. Todas as pós-condições são consistentes e prováveis.",
+      "timestamp": "2026-02-26T13:05:11.406689",
+      "tags": [
+        "intent:power_check",
+        "priority:survival",
+        "target:embedded"
+      ],
+      "tokens": [
+        "altitude",
+        "battery",
+        "min_altitude",
+        "min_battery"
+      ],
+      "signature": {
+        "constraints": [
+          "altitude > min_altitude",
+          "battery >= min_battery"
+        ],
+        "post_conditions": [
+          "altitude > min_altitude",
+          "battery >= min_battery"
+        ],
+        "ai_instructions": {
+          "priority": "survival",
+          "target": "embedded"
+        }
+      },
+      "metadata": {},
+      "record_hash": "53ec7c336a9feb43af34512502526e3dc1cfe66d38841db82651dec137b46af1"
+    },
+    "276a63a0bc732223b63760bc83fe34edcc14be1b3de4fbcb964b178cbb5b0d96": {
+      "v": 1,
+      "intent_name": "iniciar_tarefa",
+      "full_hash": "40dfb4f7dfb9e9d4b97cdcb2516e80a41ac4e548ead78038043128f226397c63",
+      "logic_hash": "c658969ff68d7bf112a69af4728c02e5289f389dd41effac46bc967a9d7cfbb3",
+      "signature_hash": "c658969ff68d7bf112a69af4728c02e5289f389dd41effac46bc967a9d7cfbb3",
+      "status": "PROVED",
+      "message": "O código é matematicamente seguro. Todas as pós-condições são consistentes e prováveis.",
+      "timestamp": "2026-02-26T13:11:01.015811",
+      "tags": [
+        "intent:iniciar_tarefa",
+        "priority:productivity",
+        "target:life_management"
+      ],
+      "tokens": [
+        "deadline_ts",
+        "now_ts",
+        "tarefa_anterior_status",
+        "tarefa_atual_status"
+      ],
+      "signature": {
+        "constraints": [
+          "deadline_ts > now_ts",
+          "tarefa_anterior_status == 2",
+          "tarefa_atual_status == 1"
+        ],
+        "post_conditions": [
+          "deadline_ts > now_ts",
+          "tarefa_anterior_status == 2",
+          "tarefa_atual_status == 1"
+        ],
+        "ai_instructions": {
+          "priority": "productivity",
+          "target": "life_management"
+        }
+      },
+      "metadata": {
+        "example": "task_flow"
+      },
+      "record_hash": "276a63a0bc732223b63760bc83fe34edcc14be1b3de4fbcb964b178cbb5b0d96"
+    },
+    "a6244ff6e90fda4aafb1f604ef63cf5e63f051f23fab10d6e9e24368ff96e5c9": {
+      "v": 1,
+      "intent_name": "concluir_tarefa",
+      "full_hash": "726802d6d9d655fb424c71dfee609c5007d5ada076d44f04cb71243baf46c269",
+      "logic_hash": "be615cfe3e8c4f5571c1605bb04c0fee2be9f628feacfa074359acd3cbe265fe",
+      "signature_hash": "be615cfe3e8c4f5571c1605bb04c0fee2be9f628feacfa074359acd3cbe265fe",
+      "status": "PROVED",
+      "message": "O código é matematicamente seguro. Todas as pós-condições são consistentes e prováveis.",
+      "timestamp": "2026-02-26T13:11:01.097568",
+      "tags": [
+        "intent:concluir_tarefa",
+        "priority:productivity",
+        "target:life_management"
+      ],
+      "tokens": [
+        "deadline_ts",
+        "now_ts",
+        "tarefa_status"
+      ],
+      "signature": {
+        "constraints": [
+          "deadline_ts > now_ts",
+          "tarefa_status == 2"
+        ],
+        "post_conditions": [
+          "deadline_ts > now_ts",
+          "tarefa_status == 2"
+        ],
+        "ai_instructions": {
+          "priority": "productivity",
+          "target": "life_management"
+        }
+      },
+      "metadata": {
+        "example": "task_flow"
+      },
+      "record_hash": "a6244ff6e90fda4aafb1f604ef63cf5e63f051f23fab10d6e9e24368ff96e5c9"
+    },
+    "0296175b44104c39951393611a799f3ec3a070d7746eb3661298ae5bf2178d8e": {
+      "v": 1,
+      "intent_name": "provar_cronograma_possivel",
+      "full_hash": "eb10206fb3ba77a670a8301a0457062f63fc5405bd68fa893e4f1a4781756f41",
+      "logic_hash": "d83f5ceaf607c93f753b28db2291e001f7d5e506a7d64651d101e7187d77c14f",
+      "signature_hash": "d83f5ceaf607c93f753b28db2291e001f7d5e506a7d64651d101e7187d77c14f",
+      "status": "PROVED",
+      "message": "O código é matematicamente seguro. Todas as pós-condições são consistentes e prováveis.",
+      "timestamp": "2026-02-26T13:11:01.274133",
+      "tags": [
+        "intent:provar_cronograma_possivel",
+        "priority:planning",
+        "target:life_management"
+      ],
+      "tokens": [
+        "available_minutes",
+        "t1_minutes",
+        "t2_minutes",
+        "t3_minutes"
+      ],
+      "signature": {
+        "constraints": [
+          "available_minutes > 0",
+          "t1_minutes > 0",
+          "t2_minutes > 0",
+          "t3_minutes > 0"
+        ],
+        "post_conditions": [
+          "((t1_minutes + t2_minutes) + t3_minutes) <= available_minutes"
+        ],
+        "ai_instructions": {
+          "priority": "planning",
+          "target": "life_management"
+        }
+      },
+      "metadata": {
+        "example": "task_flow"
+      },
+      "record_hash": "0296175b44104c39951393611a799f3ec3a070d7746eb3661298ae5bf2178d8e"
+    }
+  }
+}

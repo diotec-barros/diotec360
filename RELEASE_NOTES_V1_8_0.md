@@ -1,4 +1,4 @@
-# 🚀 Aethel v1.8.0 "Synchrony Protocol" - Release Notes
+# 🚀 Diotec360 v1.8.0 "Synchrony Protocol" - Release Notes
 
 **Release Date**: February 4, 2026  
 **Codename**: Synchrony Protocol  
@@ -8,7 +8,7 @@
 
 ## 🎯 OVERVIEW
 
-Aethel v1.8.0 introduces the **Synchrony Protocol**, a revolutionary parallel transaction processing system that achieves **10-20x throughput improvement** while maintaining mathematical correctness guarantees through formal verification.
+Diotec360 v1.8.0 introduces the **Synchrony Protocol**, a revolutionary parallel transaction processing system that achieves **10-20x throughput improvement** while maintaining mathematical correctness guarantees through formal verification.
 
 This release transforms Aethel from a serial proof system into a **high-performance parallel execution engine** capable of processing hundreds of transactions concurrently with linearizability guarantees.
 
@@ -254,7 +254,7 @@ pip install aethel==1.8.0
 ### From Source
 
 ```bash
-git clone https://github.com/aethel-lang/aethel-core.git
+git clone https://github.com/diotec360-lang/aethel-core.git
 cd aethel-core
 git checkout v1.8.0
 pip install -e .
@@ -323,10 +323,10 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📞 SUPPORT
 
-- **Documentation**: https://docs.aethel-lang.org
-- **GitHub Issues**: https://github.com/aethel-lang/aethel-core/issues
+- **Documentation**: https://docs.diotec360-lang.org
+- **GitHub Issues**: https://github.com/diotec360-lang/aethel-core/issues
 - **Discord**: https://discord.gg/aethel
-- **Email**: support@aethel-lang.org
+- **Email**: support@diotec360-lang.org
 
 ---
 
@@ -347,7 +347,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 ## 🎉 CONCLUSION
 
-Aethel v1.8.0 "Synchrony Protocol" represents a **quantum leap** in performance while maintaining the mathematical rigor that defines Aethel. With **10-20x throughput improvement** and **100% backward compatibility**, this release makes Aethel production-ready for high-performance financial applications.
+Diotec360 v1.8.0 "Synchrony Protocol" represents a **quantum leap** in performance while maintaining the mathematical rigor that defines Aethel. With **10-20x throughput improvement** and **100% backward compatibility**, this release makes Aethel production-ready for high-performance financial applications.
 
 **The future of verified parallel computing is here.** 🚀
 

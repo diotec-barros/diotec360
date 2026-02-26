@@ -1,4 +1,4 @@
-# 🎭 Aethel v1.6.0 "Ghost Protocol" - Launch Announcement
+# 🎭 Diotec360 v1.6.0 "Ghost Protocol" - Launch Announcement
 
 **Release Date**: February 4, 2026  
 **Status**: ✅ LAUNCHED
@@ -7,7 +7,7 @@
 
 ## 🎉 Introducing Ghost Protocol
 
-Today we're thrilled to announce **Aethel v1.6.0 "Ghost Protocol"** - the first formally verified language with Zero-Knowledge Proof syntax.
+Today we're thrilled to announce **Diotec360 v1.6.0 "Ghost Protocol"** - the first formally verified language with Zero-Knowledge Proof syntax.
 
 **"Prove without revealing. Verify without seeing."**
 
@@ -126,11 +126,11 @@ This release:
 ## 🎯 Try It Now
 
 ### Online Playground
-https://aethel-studio.vercel.app
+https://diotec360-studio.vercel.app
 
 ### API
 ```bash
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{
     "code": "intent private_transfer(...) { guard { secret balance >= amount; } }"
@@ -200,11 +200,11 @@ Prove age requirement without revealing birthdate.
 
 ## 📚 Resources
 
-- **Playground**: https://aethel-studio.vercel.app
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
+- **Playground**: https://diotec360-studio.vercel.app
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
 
 ---
 
@@ -214,7 +214,7 @@ We'd love to hear your feedback!
 
 - **GitHub Issues**: Report bugs or request features
 - **GitHub Discussions**: Ask questions or share ideas
-- **Twitter**: Follow [@aethel_lang](https://twitter.com/aethel_lang)
+- **Twitter**: Follow [@DIOTEC360_lang](https://twitter.com/DIOTEC360_lang)
 - **LinkedIn**: Connect with the team
 
 ---
@@ -246,13 +246,13 @@ v1.7.0 will bring real cryptographic ZKP, making Aethel the first production-rea
 **"In the shadows, truth is proven. In the light, secrets remain hidden."**
 
 🎭 Ghost Protocol - Activated  
-⚡ Aethel v1.6.0 - Live Now
+⚡ Diotec360 v1.6.0 - Live Now
 
 ---
 
 **Questions?** Open an issue on GitHub or join the discussion!
 
-**Ready to build?** Try the playground: https://aethel-studio.vercel.app
+**Ready to build?** Try the playground: https://diotec360-studio.vercel.app
 
 **Want to contribute?** See CONTRIBUTING.md
 

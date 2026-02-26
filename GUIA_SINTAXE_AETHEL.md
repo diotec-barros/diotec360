@@ -1,4 +1,4 @@
-# 📖 Guia de Sintaxe Aethel v1.1
+# 📖 Guia de Sintaxe Diotec360 v1.1
 
 **Versão**: v1.1 "The Resonance"  
 **Status**: Linguagem de Verificação Formal
@@ -7,7 +7,7 @@
 
 ## 🎯 REGRA DE OURO
 
-**Aethel é matemática pura. Cada caractere importa.**
+**Diotec360 é matemática pura. Cada caractere importa.**
 
 Como uma equação matemática, não há espaço para "comentários" ou "explicações" dentro do código. O Parser trata tudo como lógica formal.
 
@@ -176,7 +176,7 @@ intent nome(param: Tipo) {
 
 ## 🔍 POR QUE TÃO RIGOROSO?
 
-### Aethel é Matemática, Não Prosa
+### Diotec360 é Matemática, Não Prosa
 
 Imagine tentar resolver esta equação:
 ```
@@ -274,7 +274,7 @@ Antes de clicar em "Verify", verifique:
 - [ ] Sem comentários (//)
 - [ ] Sem strings ("texto")
 - [ ] Sem caracteres especiais (@, #, etc.)
-- [ ] Apenas sintaxe Aethel válida
+- [ ] Apenas sintaxe Diotec360 válida
 - [ ] Todas as chaves fechadas { }
 - [ ] Todos os pontos-e-vírgulas presentes ;
 - [ ] Nomes de variáveis consistentes
@@ -417,7 +417,7 @@ Aethel força você a pensar em termos matemáticos puros. Isso pode parecer res
 
 ```
 ✅ Código puro, sem comentários
-✅ Apenas sintaxe Aethel válida
+✅ Apenas sintaxe Diotec360 válida
 ✅ Matemática, não prosa
 ✅ Cada caractere importa
 ✅ Verificação formal rigorosa

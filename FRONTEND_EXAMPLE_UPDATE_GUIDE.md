@@ -313,7 +313,7 @@ The original examples are still in the repository, so rollback is instant.
 After implementing:
 
 1. Update `README.md` to mention only 6 examples work in Proof Viewer
-2. Add note to `AETHEL_V1_9_0_EXAMPLE_STANDARDS.md` about frontend changes
+2. Add note to `DIOTEC360_V1_9_0_EXAMPLE_STANDARDS.md` about frontend changes
 3. Update any user-facing documentation
 
 ---

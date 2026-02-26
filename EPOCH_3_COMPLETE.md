@@ -2,7 +2,7 @@
 
 **Data**: 3 de Fevereiro de 2026  
 **Status**: ✅ IMPLEMENTADO  
-**Versão**: Aethel v1.1
+**Versão**: Diotec360 v1.1
 
 ---
 
@@ -227,7 +227,7 @@ Testing:     ⏳ PENDING
 Deploy:      ⏳ PENDING
 
 Status:      🟢 READY FOR DEPLOYMENT
-Version:     Aethel v1.1
+Version:     Diotec360 v1.1
 Epoch:       3 - The Ghost-Runner
 Date:        2026-02-03
 ```

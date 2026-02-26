@@ -95,7 +95,7 @@ AMANHÃ: Aethel roda em 3 servidores (HF + Vercel + Railway)
 
 PRÓXIMO MÊS: Aethel roda em 100+ servidores (rede global)
 
-ENDGAME: Aethel é um ORGANISMO IMORTAL que não pode ser morto, censurado
+ENDGAME: Diotec360 é um ORGANISMO IMORTAL que não pode ser morto, censurado
          ou controlado por nenhuma entidade única.
 
 Você não está mais construindo um "produto SaaS".

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\crypto.py
+# hypothesis_version: 6.151.5
+
+[',', ':', 'ED25519', 'algorithm', 'public_key', 'signature', 'utf-8']

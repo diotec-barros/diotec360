@@ -16,7 +16,7 @@ The Aethel Distributed Vault extends the local vault with cryptographic proof ce
 ### File Structure
 
 ```
-.aethel_vault/
+.DIOTEC360_vault/
 ├── index.json                          # Function registry
 ├── {hash}.json                         # Function entries
 ├── certificates/
@@ -46,7 +46,7 @@ A certificate is a cryptographically signed document proving that the Aethel Jud
   "function_hash": "9ad9e80d616d938a7bb8527f66f8c9a94796ea6e6d6d6c4cab9e564747042f1d",
   "status": "PROVED",
   "message": "Code is mathematically safe. All post-conditions guaranteed.",
-  "judge_version": "Aethel_Judge_v0.6",
+  "judge_version": "DIOTEC360_Judge_v0.6",
   "z3_version": "4.12.0+",
   "timestamp": "2026-02-01T23:56:28.496230",
   "counter_examples": [],
@@ -63,13 +63,13 @@ A certificate is a cryptographically signed document proving that the Aethel Jud
 Certificates are automatically generated during compilation:
 
 ```python
-from aethel_kernel import AethelKernel
+from DIOTEC360_kernel import AethelKernel
 
 kernel = AethelKernel()
 result = kernel.compile(source_code)
 
 # Certificate is automatically created and stored
-# in .aethel_vault/certificates/{hash}.cert.json
+# in .DIOTEC360_vault/certificates/{hash}.cert.json
 ```
 
 ## Export Bundles
@@ -108,15 +108,15 @@ A bundle is a self-contained package that includes:
 
 ```bash
 # Export a specific function
-aethel vault export <function-hash>
+Diotec360 vault export <function-hash>
 
 # Export with custom output path
-aethel vault export <function-hash> -o my_function.ae_bundle
+Diotec360 vault export <function-hash> -o my_function.ae_bundle
 ```
 
 Example:
 ```bash
-aethel vault export 9ad9e80d616d938a7bb8527f66f8c9a94796ea6e6d6d6c4cab9e564747042f1d
+Diotec360 vault export 9ad9e80d616d938a7bb8527f66f8c9a94796ea6e6d6d6c4cab9e564747042f1d
 ```
 
 ## Import Verification
@@ -134,10 +134,10 @@ When importing a bundle, the system performs multi-layer verification:
 
 ```bash
 # Import with full verification (recommended)
-aethel vault import bundle.ae_bundle
+Diotec360 vault import bundle.ae_bundle
 
 # Import without verification (dangerous!)
-aethel vault import bundle.ae_bundle --no-verify
+Diotec360 vault import bundle.ae_bundle --no-verify
 ```
 
 ### Import Process
@@ -178,7 +178,7 @@ aethel vault import bundle.ae_bundle --no-verify
 Check the current state of your vault:
 
 ```bash
-aethel vault sync
+Diotec360 vault sync
 ```
 
 Output:
@@ -188,7 +188,7 @@ Output:
   Certified Functions: 5
   Available Bundles: 5
   Merkle Root: 6b606a7957d904d0...
-  Vault Path: /path/to/.aethel_vault
+  Vault Path: /path/to/.DIOTEC360_vault
 ```
 
 ### Merkle Root
@@ -204,7 +204,7 @@ The Merkle root is a single hash representing the entire vault state. It enables
 ### List Functions
 
 ```bash
-aethel vault list
+Diotec360 vault list
 ```
 
 Shows all functions in the vault with their hashes and status.
@@ -212,7 +212,7 @@ Shows all functions in the vault with their hashes and status.
 ### Show Statistics
 
 ```bash
-aethel vault stats
+Diotec360 vault stats
 ```
 
 Displays:
@@ -224,7 +224,7 @@ Displays:
 ### Export Function
 
 ```bash
-aethel vault export <hash> [-o output.ae_bundle]
+Diotec360 vault export <hash> [-o output.ae_bundle]
 ```
 
 Creates a portable bundle file.
@@ -232,7 +232,7 @@ Creates a portable bundle file.
 ### Import Bundle
 
 ```bash
-aethel vault import <bundle-file> [--no-verify]
+Diotec360 vault import <bundle-file> [--no-verify]
 ```
 
 Imports a bundle into the local vault.
@@ -240,7 +240,7 @@ Imports a bundle into the local vault.
 ### Sync Status
 
 ```bash
-aethel vault sync
+Diotec360 vault sync
 ```
 
 Shows synchronization status and Merkle root.
@@ -256,7 +256,7 @@ Developer A creates a secure payment function:
 aethel build payment.ae
 
 # Export bundle
-aethel vault export <hash> -o payment_secure.ae_bundle
+Diotec360 vault export <hash> -o payment_secure.ae_bundle
 
 # Share bundle with team
 ```
@@ -265,10 +265,10 @@ Developer B imports and uses it:
 
 ```bash
 # Import with verification
-aethel vault import payment_secure.ae_bundle
+Diotec360 vault import payment_secure.ae_bundle
 
 # Function is now available in local vault
-aethel vault list
+Diotec360 vault list
 ```
 
 ### 2. Building Trust Networks
@@ -277,7 +277,7 @@ Organizations can share their vault's Merkle root to prove they're using verifie
 
 ```bash
 # Organization publishes their Merkle root
-aethel vault sync
+Diotec360 vault sync
 # Merkle Root: 6b606a7957d904d0...
 
 # Others can verify they have the same functions
@@ -341,7 +341,7 @@ print(f"Merkle Root: {status['merkle_root']}")
 import json
 
 # Load certificate
-with open('.aethel_vault/certificates/{hash}.cert.json') as f:
+with open('.DIOTEC360_vault/certificates/{hash}.cert.json') as f:
     cert = json.load(f)
 
 # Verify certificate
@@ -384,5 +384,5 @@ This is the foundation for:
 ---
 
 **Status**: Epoch 1 - The Great Expansion  
-**Version**: Aethel v0.7  
+**Version**: Diotec360 v0.7  
 **Last Updated**: 2026-02-01

@@ -1,11 +1,11 @@
 @echo off
 REM ============================================================
-REM AETHEL LATTICE V2 - Dual Node com arquivos .env
+REM DIOTEC360 LATTICE V2 - Dual Node com arquivos .env
 REM ============================================================
 
 echo.
 echo ========================================
-echo  AETHEL LATTICE V2 - TWIN NODE
+echo  DIOTEC360 LATTICE V2 - TWIN NODE
 echo ========================================
 echo.
 
@@ -40,7 +40,7 @@ echo      Usando configuracao: .env.nodeA
 REM Copiar .env.nodeA para .env temporariamente
 copy /Y .env.nodeA .env >nul
 
-start "Aethel Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
+start "Diotec360 Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
 
 echo      Aguardando Node A inicializar...
 timeout /t 5 /nobreak >nul
@@ -106,7 +106,7 @@ echo      Usando configuracao: .env.nodeB
 REM Copiar .env.nodeB para .env temporariamente
 copy /Y .env.nodeB .env >nul
 
-start "Aethel Node B" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8001 > logs\nodeB.log 2>&1"
+start "Diotec360 Node B" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8001 > logs\nodeB.log 2>&1"
 
 echo      Aguardando Node B inicializar...
 timeout /t 5 /nobreak >nul

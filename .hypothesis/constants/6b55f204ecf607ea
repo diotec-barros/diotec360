@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\persistence.py
+# hypothesis_version: 6.151.5
+
+[b'empty', 100, '.aethel_state', '.aethel_vault', '=', 'AETHEL_AUDIT_PATH', 'AETHEL_STATE_PATH', 'AETHEL_VAULT_PATH', 'attack_type', 'attacks', 'avg_time', 'blocked_by_layer', 'bundle_path', 'bundles', 'code', 'content_hash', 'count', 'executions', 'index.json', 'intent_name', 'layer_breakdown', 'merkle_root', 'metadata', 'r', 'snapshot.json', 'state', 'status', 'status_breakdown', 'timestamp', 'total', 'total_bundles', 'total_executions', 'unknown', 'w', 'wal.log']

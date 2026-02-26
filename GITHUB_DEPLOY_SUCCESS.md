@@ -48,11 +48,11 @@ feat: Add Hugging Face deployment support
 
 ### Correções
 - `aethel/core/kernel.py` - Fix de imports
-- `.gitignore` - Adicionar aethel-judge/
+- `.gitignore` - Adicionar diotec360-judge/
 
 ## 🔗 Repositório GitHub
 
-**URL**: https://github.com/diotec-barros/aethel-lang
+**URL**: https://github.com/diotec-barros/diotec360-lang
 
 ## 📈 Branch Status
 
@@ -66,7 +66,7 @@ Commit: 900ae0c
 
 Push realizado com sucesso:
 ```
-To https://github.com/diotec-barros/aethel-lang.git
+To https://github.com/diotec-barros/diotec360-lang.git
    0f5b050..900ae0c  main -> main
 ```
 
@@ -98,13 +98,13 @@ To https://github.com/diotec-barros/aethel-lang.git
 ## 🚀 Deployments Ativos
 
 ### Hugging Face Space
-- **URL**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API**: https://diotec-aethel-judge.hf.space
+- **URL**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API**: https://diotec-diotec360-judge.hf.space
 - **Status**: ✅ Online e funcionando
 - **Testes**: 6/6 passando
 
 ### GitHub Repository
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 - **Branch**: main
 - **Status**: ✅ Atualizado
 - **Commit**: 900ae0c
@@ -159,10 +159,10 @@ git diff 0f5b050..900ae0c --stat
 
 ## 🔗 Links Importantes
 
-- **GitHub Repo**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API Live**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
+- **GitHub Repo**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API Live**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
 
 ---
 

@@ -14,7 +14,7 @@ Você fez o git push com sucesso:
 [main e7fe332] feat: Sovereign Architecture
 7 files changed, 344 insertions(+), 53 deletions(-)
 
-To https://github.com/diotec-barros/aethel-lang.git
+To https://github.com/diotec-barros/diotec360-lang.git
    02e2767..e7fe332  main -> main
 ```
 
@@ -53,7 +53,7 @@ Acesse o Vercel Dashboard:
 
 ```
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ```
 
@@ -101,7 +101,7 @@ Abra DevTools (F12) → Network:
 │  │  └─ https://api.diotec360.com                       │
 │  │                                                      │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │                                                      │
 │  └─ 🟣 Node 3: Vercel Backup                           │
 │     └─ https://backup.diotec360.com                    │
@@ -120,7 +120,7 @@ python verify_production_triangle.py
 ```
 
 **Deve verificar:**
-- ✅ Node 1: `https://diotec-aethel-judge.hf.space`
+- ✅ Node 1: `https://diotec-diotec360-judge.hf.space`
 - ✅ Node 2: `https://api.diotec360.com`
 - ✅ Node 3: `https://backup.diotec360.com`
 

@@ -1,4 +1,4 @@
-# 🌐⚖️ AETHEL v2.0 CONSENSUS PROTOCOL - "PROOF-OF-PROOF"
+# 🌐⚖️ Diotec360 v2.0 CONSENSUS PROTOCOL - "PROOF-OF-PROOF"
 
 **Version**: v2.0.0-alpha  
 **Status**: Specification Phase  
@@ -14,7 +14,7 @@
 - **Ethereum**: Validators stake money (Proof-of-Stake)
 - **Neither**: Proves that transactions are mathematically correct
 
-**Aethel v2.0 introduces Proof-of-Proof**: A consensus protocol where nodes mine mathematical proofs instead of hashes.
+**Diotec360 v2.0 introduces Proof-of-Proof**: A consensus protocol where nodes mine mathematical proofs instead of hashes.
 
 ---
 

@@ -110,7 +110,7 @@ ARQUITETURA FINAL:
 Frontend:  https://aethel.diotec360.com (Vercel)
            ↓
 API Node2: https://api.diotec360.com (Vercel - Sovereign)
-API Node1: https://diotec-aethel-judge.hf.space (Hugging Face)
+API Node1: https://diotec-diotec360-judge.hf.space (Hugging Face)
 API Node3: https://backup.diotec360.com (Vercel Backup)
 
 PRÓXIMOS PASSOS:

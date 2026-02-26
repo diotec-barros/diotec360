@@ -1,4 +1,4 @@
-# 🚀 LANÇAMENTO OFICIAL - Aethel v1.1 "The Resonance"
+# 🚀 LANÇAMENTO OFICIAL - Diotec360 v1.1 "The Resonance"
 
 **Data**: 3 de Fevereiro de 2026  
 **Hora**: 15:00 UTC  
@@ -6,12 +6,12 @@
 
 ---
 
-## 🌟 AETHEL v1.1 ESTÁ NO AR!
+## 🌟 Diotec360 v1.1 ESTÁ NO AR!
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║         🎉 AETHEL v1.1 "THE RESONANCE" IS LIVE! 🎉          ║
+║         🎉 Diotec360 v1.1 "THE RESONANCE" IS LIVE! 🎉          ║
 ║                                                              ║
 ║              The Future of Provable Software                 ║
 ║                                                              ║
@@ -25,8 +25,8 @@
 ```
 🌐 Frontend:  https://aethel.diotec360.com
 🔌 Backend:   https://api.diotec360.com
-📦 GitHub:    https://github.com/diotec-barros/aethel-lang
-📚 Docs:      https://github.com/diotec-barros/aethel-lang#readme
+📦 GitHub:    https://github.com/diotec-barros/diotec360-lang
+📚 Docs:      https://github.com/diotec-barros/diotec360-lang#readme
 ```
 
 ---
@@ -265,7 +265,7 @@ Uptime:    99.9% SLA
 
 ### Canais Oficiais:
 - **GitHub**: Issues e Discussions
-- **Twitter**: @aethel_lang (em breve)
+- **Twitter**: @DIOTEC360_lang (em breve)
 - **Discord**: Community server (em breve)
 - **Email**: contact@diotec360.com
 
@@ -363,7 +363,7 @@ Performance:             Excelente
 1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642
 ```
 
-Este hash representa o estado selado do Aethel v1.0 - prova de que software pode ser perfeito.
+Este hash representa o estado selado do Diotec360 v1.0 - prova de que software pode ser perfeito.
 
 ---
 
@@ -372,7 +372,7 @@ Este hash representa o estado selado do Aethel v1.0 - prova de que software pode
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║              🎉 AETHEL v1.1 IS LIVE! 🎉                     ║
+║              🎉 Diotec360 v1.1 IS LIVE! 🎉                     ║
 ║                                                              ║
 ║              O Ghost está ativo.                             ║
 ║              O Mirror está polido.                           ║
@@ -404,7 +404,7 @@ Este hash representa o estado selado do Aethel v1.0 - prova de que software pode
 
 ---
 
-**[AETHEL v1.1: OPERATIONAL]**  
+**[Diotec360 v1.1: OPERATIONAL]**  
 **[THE RESONANCE: ACTIVE]**  
 **[WORLD: READY]**
 

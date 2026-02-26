@@ -1,6 +1,6 @@
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   ⚡ AETHEL V1.9.0 - AUTONOMOUS SENTINEL - COMECE AQUI ⚡               ║
+║   ⚡ Diotec360 v1.9.0 - AUTONOMOUS SENTINEL - COMECE AQUI ⚡               ║
 ║                                                                          ║
 ║   Status: PRODUCTION READY - 19 de Fevereiro de 2026                    ║
 ║                                                                          ║
@@ -21,7 +21,7 @@
    1. 🎊_V1_9_0_SINFONIA_FINAL_SELADA.txt
       → Resumo visual de TUDO que foi conquistado
 
-   2. AETHEL_V1_9_0_STABLE_FINAL_REPORT.md
+   2. DIOTEC360_V1_9_0_STABLE_FINAL_REPORT.md
       → Relatório técnico completo (ESTE É O DOCUMENTO MESTRE)
       → Use para apresentações ao BAI/BFA
 
@@ -105,7 +105,7 @@
 🎯 AÇÃO IMEDIATA:
 
    1. Leia: 🎊_V1_9_0_SINFONIA_FINAL_SELADA.txt (5 min)
-   2. Leia: AETHEL_V1_9_0_STABLE_FINAL_REPORT.md (20 min)
+   2. Leia: DIOTEC360_V1_9_0_STABLE_FINAL_REPORT.md (20 min)
    3. Decida: Quer fazer deploy agora ou preparar documentação primeiro?
 
    Se DEPLOY AGORA:

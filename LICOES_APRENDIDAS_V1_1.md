@@ -1,4 +1,4 @@
-# 📚 Lições Aprendidas - Aethel v1.1
+# 📚 Lições Aprendidas - Diotec360 v1.1
 
 **Data**: 3 de Fevereiro de 2026  
 **Versão**: v1.1 "The Resonance"  

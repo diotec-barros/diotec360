@@ -1,9 +1,9 @@
 @echo off
 REM Deploy Node 3 (Backup) to Vercel
-REM Aethel v3.0.5 - Production Deployment
+REM Diotec360 v3.0.5 - Production Deployment
 
 echo ========================================
-echo AETHEL NODE 3 - VERCEL DEPLOYMENT
+echo Diotec360 Node 3 - VERCEL DEPLOYMENT
 echo ========================================
 echo.
 

@@ -8,7 +8,7 @@
 
 ## 🎯 OBJECTIVE
 
-Prepare all release artifacts for Aethel v1.8.0 "Synchrony Protocol":
+Prepare all release artifacts for Diotec360 v1.8.0 "Synchrony Protocol":
 1. Update version numbers in all files
 2. Create comprehensive release notes
 3. Create detailed changelog
@@ -224,7 +224,7 @@ description="The First Programming Language That Refuses 'Maybe' - Now with Para
 1. **PyPI**: Ready for `pip install aethel==1.8.0`
 2. **GitHub**: Ready for release tag `v1.8.0`
 3. **Docker**: Ready for `docker pull aethel/aethel:1.8.0`
-4. **Documentation Site**: Ready for docs.aethel-lang.org update
+4. **Documentation Site**: Ready for docs.diotec360-lang.org update
 
 ---
 
@@ -277,7 +277,7 @@ description="The First Programming Language That Refuses 'Maybe' - Now with Para
 
 ## 🎉 CONCLUSION
 
-**Task 20 is COMPLETE**. All release artifacts for Aethel v1.8.0 "Synchrony Protocol" have been prepared:
+**Task 20 is COMPLETE**. All release artifacts for Diotec360 v1.8.0 "Synchrony Protocol" have been prepared:
 
 ✅ **Version numbers updated** in all files  
 ✅ **Release notes created** with comprehensive details  
@@ -287,7 +287,7 @@ description="The First Programming Language That Refuses 'Maybe' - Now with Para
 ✅ **Performance validated** (10-20x improvement)  
 ✅ **Backward compatibility verified** (100% with v1.7.0)
 
-**Aethel v1.8.0 "Synchrony Protocol" is READY FOR RELEASE** 🚀
+**Diotec360 v1.8.0 "Synchrony Protocol" is READY FOR RELEASE** 🚀
 
 ---
 

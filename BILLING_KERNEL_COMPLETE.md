@@ -290,7 +290,7 @@ This is the mark of a true founder.
 ## 📈 Financial Impact
 
 ### Current State
-- **Technical Value**: Aethel v3.0 is operational
+- **Technical Value**: Diotec360 v3.0 is operational
 - **Business Value**: $0 (no revenue yet)
 
 ### After Billing Integration

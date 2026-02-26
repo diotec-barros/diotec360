@@ -109,7 +109,7 @@ All 6 tests passing:
 
 ### Hugging Face Space
 
-- **URL**: https://huggingface.co/spaces/diotec/aethel-judge
+- **URL**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Commits**:
   - `0f0d316` - Overflow fix
   - `a0b621a` - README update
@@ -118,7 +118,7 @@ All 6 tests passing:
 
 ### GitHub Repository
 
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 - **Commits**:
   - `d8ca887` - Overflow fix + tests + docs
   - `0d2f344` - README update
@@ -178,7 +178,7 @@ After v1.4.1:
 
 ### Test the Fix Live
 
-1. **Wait for HF Build**: https://huggingface.co/spaces/diotec/aethel-judge
+1. **Wait for HF Build**: https://huggingface.co/spaces/diotec/diotec360-judge
 2. **Test Overflow**: Try this code at https://aethel.diotec360.com
 
 ```aethel
@@ -338,7 +338,7 @@ Even with this bug, Conservation Guardian would catch fund creation.
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║              AETHEL v1.4.1 - PRODUCTION READY            ║
+║              Diotec360 v1.4.1 - PRODUCTION READY            ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
 ║  Triple-Layer Defense:        ✅ OPERATIONAL            ║

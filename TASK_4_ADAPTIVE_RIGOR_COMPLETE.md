@@ -240,7 +240,7 @@ O sistema agora pode:
 
 **Implementado por**: Kiro AI  
 **Validado por**: Property-Based Testing (Hypothesis)  
-**Versão**: Aethel v1.9.0 - Autonomous Sentinel  
+**Versão**: Diotec360 v1.9.0 - Autonomous Sentinel  
 **Data**: 5 de Fevereiro de 2026
 
 🚀 **De defesa passiva a defesa adaptativa. O futuro é dinâmico!** 🚀

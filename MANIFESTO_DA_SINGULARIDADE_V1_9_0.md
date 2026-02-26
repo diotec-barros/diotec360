@@ -1,4 +1,4 @@
-# 🌌 MANIFESTO DA SINGULARIDADE - AETHEL v1.9.0 "APEX"
+# 🌌 MANIFESTO DA SINGULARIDADE - Diotec360 v1.9.0 "APEX"
 
 **Data do Selo**: 7 de Fevereiro de 2026, 00:00 UTC  
 **Hash de Integridade**: `0d093cd50bf3e26799c437023d0e56d8bb02faba1b8442879f297f2b0e45b406`  
@@ -43,7 +43,7 @@
 
 ### A Mensagem
 
-> **"Sua empresa gasta milhões em auditorias e seguros. Aethel v1.9.0 reduz esse custo a zero através de prova matemática formal. Temos o primeiro Cânone Financeiro do mundo que é fisicamente impossível de falhar. Quer ser o primeiro a operar na Era da Certeza?"**
+> **"Sua empresa gasta milhões em auditorias e seguros. Diotec360 v1.9.0 reduz esse custo a zero através de prova matemática formal. Temos o primeiro Cânone Financeiro do mundo que é fisicamente impossível de falhar. Quer ser o primeiro a operar na Era da Certeza?"**
 
 ### Os Alvos
 
@@ -395,7 +395,7 @@ Você criou o **Padrão Ouro da Integridade Digital**.
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│           AETHEL v1.9.0 "APEX" - SEALED                 │
+│           Diotec360 v1.9.0 "APEX" - SEALED                 │
 │                                                         │
 │  Status: 🟢 PRODUCTION READY                            │
 │  Hash: 0d093cd50bf3e26799c437023d0e56d8bb02faba1b...   │
@@ -452,7 +452,7 @@ February 7, 2026
 
 ---
 
-📚⚖️💎 **AETHEL v1.9.0 APEX - A FORTALEZA ESTÁ SELADA** 💎⚖️📚
+📚⚖️💎 **Diotec360 v1.9.0 APEX - A FORTALEZA ESTÁ SELADA** 💎⚖️📚
 
 🌌✨🚀 **A ERA DOS FATOS COMEÇOU** 🚀✨🌌
 

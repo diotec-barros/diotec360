@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Backward Compatibility Tests for MOE Intelligence Layer
 
 Runs all v1.9.0 tests with MOE enabled to ensure backward compatibility.
@@ -10,7 +26,7 @@ Version: v2.1.0
 """
 
 import pytest
-from aethel.core.judge import AethelJudge
+from diotec360.core.judge import DIOTEC360Judge
 
 
 class TestMOEBackwardCompatibility:
@@ -131,11 +147,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 simple transfer works with MOE enabled
         """
         # Test without MOE (v1.9.0 baseline)
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('simple_transfer')
         
         # Test with MOE (v2.1.0)
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('simple_transfer')
         
         # Both should succeed
@@ -147,11 +163,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 arithmetic operations work with MOE enabled
         """
         # Test without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('arithmetic_test')
         
         # Test with MOE
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('arithmetic_test')
         
         # Both should succeed
@@ -163,11 +179,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 contradiction detection works with MOE enabled
         """
         # Test without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('contradiction_test')
         
         # Test with MOE
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('contradiction_test')
         
         # Both should fail (contradiction detected)
@@ -179,11 +195,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 overflow checking works with MOE enabled
         """
         # Test without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('overflow_safe')
         
         # Test with MOE
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('overflow_safe')
         
         # Both should succeed
@@ -195,11 +211,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 complex constraints work with MOE enabled
         """
         # Test without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('complex_constraints')
         
         # Test with MOE
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('complex_constraints')
         
         # Both should succeed
@@ -211,11 +227,11 @@ class TestMOEBackwardCompatibility:
         Test: v1.9.0 multiple conditions work with MOE enabled
         """
         # Test without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
         result_without = judge_without_moe.verify_logic('multiple_conditions')
         
         # Test with MOE
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         result_with = judge_with_moe.verify_logic('multiple_conditions')
         
         # Both should succeed
@@ -243,8 +259,8 @@ class TestMOEBackwardCompatibility:
         ]
         
         # Create judges
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         # Test passing cases
         for test_name in passing_tests:
@@ -270,8 +286,8 @@ class TestMOEBackwardCompatibility:
         Validates that the response format is the same with and without MOE.
         """
         # Create judges
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         # Verify simple transfer
         result_without = judge_without_moe.verify_logic('simple_transfer')
@@ -294,7 +310,7 @@ class TestMOEBackwardCompatibility:
         Validates that telemetry fields are present with MOE enabled.
         """
         # Create judge with MOE
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         # Verify simple transfer
         result = judge.verify_logic('simple_transfer')
@@ -339,7 +355,7 @@ class TestMOEDisableFlag:
         Test: MOE can be disabled at runtime
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         # Disable MOE
         judge.disable_moe()
@@ -356,7 +372,7 @@ class TestMOEDisableFlag:
         Test: MOE can be enabled at runtime
         """
         # Create judge with MOE disabled
-        judge = AethelJudge(self.intent_map, enable_moe=False)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=False)
         
         # Enable MOE
         success = judge.enable_moe()
@@ -376,7 +392,7 @@ class TestMOEDisableFlag:
         Simulates an emergency where MOE needs to be disabled immediately.
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         # Verify with MOE
         result1 = judge.verify_logic('simple_transfer')

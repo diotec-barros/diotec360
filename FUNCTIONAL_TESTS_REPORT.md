@@ -1,4 +1,4 @@
-# AETHEL v1.9.0 APEX - Functional Tests Report
+# Diotec360 v1.9.0 APEX - Functional Tests Report
 
 **Generated**: 2026-02-07  
 **Status**: Production Ready  
@@ -269,7 +269,7 @@ pytest test_conservation.py test_judge.py test_vault.py -v
 
 ## ✅ PRODUCTION READINESS
 
-**Verdict**: AETHEL v1.9.0 APEX is production-ready for:
+**Verdict**: Diotec360 v1.9.0 APEX is production-ready for:
 
 1. ✅ Financial calculations (StdLib v2.0.0)
 2. ✅ Conservation validation (100% detection rate)

@@ -235,7 +235,7 @@ border: 1px solid rgba(color, 0.1-0.3)
 
 ## 📚 DOCUMENTATION CREATED
 
-1. ✅ `AETHEL_APEX_DASHBOARD_V2_0_SPEC.md` - Full specification
+1. ✅ `DIOTEC360_APEX_DASHBOARD_V2_0_SPEC.md` - Full specification
 2. ✅ `CANON_DE_PRECISAO_V1_9_0_APLICADO.md` - Canon v1.9.0 fix
 3. ✅ `GUIA_RAPIDO_SOLVE_BLOCK.md` - Quick guide for solve block
 4. ✅ `CANON_V1_9_0_CERTIFICACAO_FINAL.md` - Certification document

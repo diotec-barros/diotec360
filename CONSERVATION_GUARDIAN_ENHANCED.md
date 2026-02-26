@@ -169,13 +169,13 @@ verify {
 ## 🌐 DEPLOY STATUS
 
 ### Hugging Face Space
-- **URL**: https://huggingface.co/spaces/diotec/aethel-judge
+- **URL**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Commit**: `6671dc7`
 - **Status**: ✅ Building
 - **ETA**: ~2-3 minutos
 
 ### GitHub Repository
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 - **Commit**: `d01b742`
 - **Status**: ✅ Pushed
 
@@ -190,7 +190,7 @@ verify {
 
 ### 1. Aguarde o Build
 
-Vá para: https://huggingface.co/spaces/diotec/aethel-judge
+Vá para: https://huggingface.co/spaces/diotec/diotec360-judge
 
 Aguarde o badge ficar verde (~2-3 min)
 

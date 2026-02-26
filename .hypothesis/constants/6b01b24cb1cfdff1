@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_greenlets.py
+# hypothesis_version: 6.151.5
+
+['<EventGreenlet>', '<MainGreenlet>', '<RouteGreenlet>', 'switch', 'throw']

@@ -8,9 +8,9 @@
 
 ❌ PROBLEMAS ENCONTRADOS:
 
-1. ❌ AETHEL_LATTICE_NODES está com URLs antigas:
+1. ❌ DIOTEC360_LATTICE_NODES está com URLs antigas:
    Atual: https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com
-   Correto: https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+   Correto: https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 
 2. ❌ ALPHA_VANTAGE_API_KEY está com chave antiga:
    Atual: O3TC4CQU6GJWBNVL
@@ -23,8 +23,8 @@
 
 ✅ O QUE ESTÁ CORRETO:
 
-   ✅ AETHEL_P2P_ENABLED=false (correto)
-   ✅ AETHEL_P2P_BOOTSTRAP= (vazio - correto)
+   ✅ DIOTEC360_P2P_ENABLED=false (correto)
+   ✅ DIOTEC360_P2P_BOOTSTRAP= (vazio - correto)
    ✅ Configurações de storage
    ✅ Configurações de heartbeat
    ✅ Node identity
@@ -32,14 +32,14 @@
 🔧 CORREÇÕES NECESSÁRIAS:
 
 ┌───────────────────────────────────────────────────────────────┐
-│ CORREÇÃO 1: AETHEL_LATTICE_NODES                             │
+│ CORREÇÃO 1: DIOTEC360_LATTICE_NODES                             │
 ├───────────────────────────────────────────────────────────────┤
 │                                                               │
 │ Trocar de:                                                    │
-│ AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com │
+│ DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://backup.diotec360.com │
 │                                                               │
 │ Para:                                                         │
-│ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com │
+│ DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com │
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
 
@@ -58,37 +58,37 @@
 📝 ARQUIVO .ENV CORRIGIDO COMPLETO:
 
 ```env
-# Aethel Node 2 - diotec360.com Primary Server Configuration
+# Diotec360 Node 2 - diotec360.com Primary Server Configuration
 # Production Genesis Node - Primary Production Server
 
 # P2P Configuration - DISABLED (HTTP-Only Resilience Mode)
-AETHEL_P2P_ENABLED=false
-AETHEL_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
-AETHEL_P2P_TOPIC=aethel/lattice/v1
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
+DIOTEC360_P2P_TOPIC=aethel/lattice/v1
 
 # Bootstrap Peers (Disabled in HTTP-Only mode)
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_BOOTSTRAP=
 
 # HTTP Sync Fallback Nodes (CORRIGIDO)
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 
 # Storage Directories
-AETHEL_STATE_DIR=.aethel_state
-AETHEL_VAULT_DIR=.aethel_vault
-AETHEL_SENTINEL_DIR=.aethel_sentinel
+DIOTEC360_STATE_DIR=.DIOTEC360_state
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel
 
 # Heartbeat Configuration
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_PEERLESS_TIMEOUT=60
-AETHEL_HTTP_POLL_INTERVAL=10
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_PEERLESS_TIMEOUT=60
+DIOTEC360_HTTP_POLL_INTERVAL=10
 
 # Node Identity
-AETHEL_NODE_NAME=node2-diotec360
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_NODE_NAME=node2-diotec360
+DIOTEC360_NODE_ROLE=genesis-primary
 
 # Production Settings
-AETHEL_ENVIRONMENT=production
-AETHEL_LOG_LEVEL=INFO
+DIOTEC360_ENVIRONMENT=production
+DIOTEC360_LOG_LEVEL=INFO
 
 # Alpha Vantage API Key (CORRIGIDO)
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFOL9
@@ -114,7 +114,7 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFOL9
    ┌─────────────────────────────────────────┐
    │ Variáveis CRÍTICAS que precisam corrigir│
    ├─────────────────────────────────────────┤
-   │ 1. AETHEL_LATTICE_NODES (URL antiga)   │
+   │ 1. DIOTEC360_LATTICE_NODES (URL antiga)   │
    │ 2. ALPHA_VANTAGE_API_KEY (chave antiga)│
    └─────────────────────────────────────────┘
 

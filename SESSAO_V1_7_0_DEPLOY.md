@@ -60,14 +60,14 @@ Deployar a v1.7.0 "Oracle Sanctuary" para o Hugging Face Space, trazendo a capac
 
 ### 4. Commits Realizados (100%)
 
-**Repositório Principal** (aethel-lang):
+**Repositório Principal** (diotec360-lang):
 ```
 Commit: 8637cf4
 Message: "v1.7.0 Oracle Sanctuary - DEPLOY: external keyword + oracle system + API endpoints + production tests"
 Files: 10 arquivos (oracle.py, grammar.py, examples, tests, docs)
 ```
 
-**Repositório HF Space** (aethel-judge):
+**Repositório HF Space** (diotec360-judge):
 ```
 Commit 1: 677faf7
 Message: "v1.7.0 Oracle Sanctuary - Update API with oracle endpoints"
@@ -93,7 +93,7 @@ Files: aethel/core/oracle.py, aethel/core/grammar.py
 
 ### Backend Status
 
-**URL**: https://diotec-aethel-judge.hf.space
+**URL**: https://diotec-diotec360-judge.hf.space
 
 **Version Info**:
 ```json
@@ -196,7 +196,7 @@ Error: No module named 'aethel.core.oracle'
 ### Imediato (5-10 minutos)
 
 1. **Aguardar Rebuild Completar**
-   - Verificar: https://huggingface.co/spaces/diotec/aethel-judge
+   - Verificar: https://huggingface.co/spaces/diotec/diotec360-judge
    - Status: "Running" (verde)
 
 2. **Re-executar Testes**
@@ -207,8 +207,8 @@ Error: No module named 'aethel.core.oracle'
 
 3. **Validar Endpoints**
    ```bash
-   curl https://diotec-aethel-judge.hf.space/api/oracle/list
-   curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+   curl https://diotec-diotec360-judge.hf.space/api/oracle/list
+   curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
    ```
 
 ### Após Validação (Hoje)
@@ -313,7 +313,7 @@ TOTAL:             ████████░░░░  71%
 ### O Que Pode Melhorar
 
 1. ⚠️ **Sync de Repositórios**
-   - aethel-lang e aethel-judge são separados
+   - diotec360-lang e diotec360-judge são separados
    - Requer commits duplicados
    - Solução futura: Monorepo ou submodules
 
@@ -373,7 +373,7 @@ O Santuário está quase aberto. A infraestrutura está deployada, os endpoints 
 
 ---
 
-**Backend**: https://diotec-aethel-judge.hf.space  
+**Backend**: https://diotec-diotec360-judge.hf.space  
 **Version**: 1.7.0 "Oracle Sanctuary"  
 **Status**: 🔄 71% DEPLOYED - REBUILD EM PROGRESSO  
 **Filosofia**: "Zero trust, pure verification"

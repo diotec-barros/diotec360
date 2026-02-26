@@ -6,7 +6,7 @@
 
 1. **Infraestrutura Dual-Node HTTP**
    - Node A (porta 8000) e Node B (porta 8001) sobem corretamente
-   - Persistência isolada (`.aethel_state_nodeA` / `nodeB`) funcionando
+   - Persistência isolada (`.DIOTEC360_state_nodeA` / `nodeB`) funcionando
    - FastAPI/Uvicorn operacionais
 
 2. **Verificação Formal (Judge)**
@@ -176,7 +176,7 @@ Testa:
 
 1. Verificar que Node B tem `BOOTSTRAP` correto:
    ```cmd
-   echo %AETHEL_P2P_BOOTSTRAP%
+   echo %DIOTEC360_P2P_BOOTSTRAP%
    ```
    Deve ser: `/ip4/127.0.0.1/tcp/9000/p2p/QmXXX...`
 

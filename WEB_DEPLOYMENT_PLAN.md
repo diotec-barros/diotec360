@@ -1,15 +1,15 @@
-# Aethel-Studio - Web Deployment Plan
+# diotec360-studio - Web Deployment Plan
 
 ## 🎯 Vision
 
-Create **Aethel-Studio** - an interactive web playground where anyone can:
+Create **diotec360-studio** - an interactive web playground where anyone can:
 1. Write Aethel code in the browser
 2. See the Judge verify it in real-time
 3. Watch WASM execution
 4. Visualize the Merkle State Tree
 5. Share proved code with a link
 
-**URL**: `aethel-lang.vercel.app` or `studio.aethel-lang.org`
+**URL**: `diotec360-lang.vercel.app` or `studio.diotec360-lang.org`
 
 ---
 
@@ -21,7 +21,7 @@ Create **Aethel-Studio** - an interactive web playground where anyone can:
 ┌─────────────────────────────────────────────────────────┐
 │                    USER BROWSER                         │
 │  ┌──────────────────────────────────────────────────┐  │
-│  │         Aethel-Studio (React/Next.js)            │  │
+│  │         diotec360-studio (React/Next.js)            │  │
 │  │  - Monaco Editor (VS Code in browser)            │  │
 │  │  - Merkle Tree Visualization                     │  │
 │  │  - Real-time Proof Display                       │  │
@@ -50,7 +50,7 @@ Create **Aethel-Studio** - an interactive web playground where anyone can:
 │  │  - /api/vault - Vault operations                 │  │
 │  └──────────────────────────────────────────────────┘  │
 │  ┌──────────────────────────────────────────────────┐  │
-│  │         Aethel Core (Python)                     │  │
+│  │         Diotec360 core (Python)                     │  │
 │  │  - Parser, Judge, Bridge, Kernel                 │  │
 │  │  - Vault, Weaver, Runtime                        │  │
 │  │  - State Manager, Lens                           │  │
@@ -63,7 +63,7 @@ Create **Aethel-Studio** - an interactive web playground where anyone can:
 ## 📁 Project Structure
 
 ```
-aethel-lang/
+diotec360-lang/
 ├── web/                          # New web frontend
 │   ├── package.json
 │   ├── next.config.js
@@ -287,7 +287,7 @@ Features:
 ## 🚀 Launch Strategy
 
 ### Soft Launch (Week 1)
-1. Deploy MVP to `aethel-lang.vercel.app`
+1. Deploy MVP to `diotec360-lang.vercel.app`
 2. Share with close community
 3. Gather feedback
 4. Fix critical bugs
@@ -340,6 +340,6 @@ Features:
 
 ---
 
-**Ready to build the Aethel-Studio?**
+**Ready to build the diotec360-studio?**
 
 This will be the moment when Aethel goes from "interesting project" to "try it now" - lowering the barrier to entry from "install Python" to "click this link".

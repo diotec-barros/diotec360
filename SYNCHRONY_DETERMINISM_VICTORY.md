@@ -35,7 +35,7 @@ We didn't just write tests. We **PROVED MATHEMATICALLY** that Aethel's parallel 
 - Debugging is a nightmare
 - Auditing is impossible
 
-**Aethel v1.8.0**:
+**Diotec360 v1.8.0**:
 - Uses transaction IDs → Deterministic
 - Race conditions IMPOSSIBLE
 - Works the same EVERYWHERE

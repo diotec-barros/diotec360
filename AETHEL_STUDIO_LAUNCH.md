@@ -37,7 +37,7 @@
                           │
                           ▼
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL CORE (13 Modules)                        │
+│         Diotec360 core (13 Modules)                        │
 │  ✅ Parser, Judge, Bridge, Kernel                       │
 │  ✅ Vault, Weaver, Runtime, State                       │
 │  ✅ Lens, Architect, WASM Compiler                      │
@@ -72,7 +72,7 @@ frontend/
 ### Documentation
 ```
 ├── FRONTEND_COMPLETE.md      ✅ Frontend completion report
-├── AETHEL_STUDIO_LAUNCH.md   ✅ This file
+├── DIOTEC360_STUDIO_LAUNCH.md   ✅ This file
 └── README.md                 ✅ Updated with web playground info
 ```
 
@@ -136,14 +136,14 @@ Then open http://localhost:3000 and click "Verify"!
 1. Go to https://railway.app
 2. Sign in with GitHub
 3. "New Project" → "Deploy from GitHub repo"
-4. Select `aethel-lang`
+4. Select `diotec360-lang`
 5. Railway auto-detects `api/Dockerfile`
 6. Deploy! (takes 5 minutes)
 7. Copy URL: `https://aethel-api.up.railway.app`
 
 #### Step 2: Deploy Frontend to Vercel
 1. Go to https://vercel.com
-2. "New Project" → Import `aethel-lang`
+2. "New Project" → Import `diotec360-lang`
 3. Configure:
    - **Root Directory**: `frontend`
    - **Framework**: Next.js (auto-detected)
@@ -151,7 +151,7 @@ Then open http://localhost:3000 and click "Verify"!
      - Name: `NEXT_PUBLIC_API_URL`
      - Value: `https://aethel-api.up.railway.app`
 4. Deploy! (takes 3 minutes)
-5. Live at: `https://aethel-lang.vercel.app`
+5. Live at: `https://diotec360-lang.vercel.app`
 
 ---
 
@@ -359,9 +359,9 @@ No bugs. No vulnerabilities. No compromises.
 ## 📞 Resources
 
 ### Live URLs (After Deployment)
-- **Frontend**: https://aethel-lang.vercel.app
+- **Frontend**: https://diotec360-lang.vercel.app
 - **Backend**: https://aethel-api.up.railway.app
-- **Repository**: https://github.com/diotec-barros/aethel-lang
+- **Repository**: https://github.com/diotec-barros/diotec360-lang
 
 ### Local URLs (Now)
 - **Frontend**: http://localhost:3000 ✅ Running

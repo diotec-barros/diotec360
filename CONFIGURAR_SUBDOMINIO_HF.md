@@ -7,8 +7,8 @@
 
 ## 🎯 SUBDOMÍNIO PARA HUGGING FACE
 
-**Space:** https://huggingface.co/spaces/diotec/aethel-judge  
-**URL Atual:** https://diotec-aethel-judge.hf.space  
+**Space:** https://huggingface.co/spaces/diotec/diotec360-judge  
+**URL Atual:** https://diotec-diotec360-judge.hf.space  
 **Novo Subdomínio:** https://hf.diotec360.com
 
 ---
@@ -20,7 +20,7 @@
 ```
 Tipo: CNAME
 Nome: hf
-Valor: diotec-aethel-judge.hf.space
+Valor: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -33,7 +33,7 @@ TTL: 60
 5. Preencha:
    - Type: `CNAME`
    - Name: `hf`
-   - Value: `diotec-aethel-judge.hf.space`
+   - Value: `diotec-diotec360-judge.hf.space`
    - TTL: `60`
 6. Clique em "Save"
 
@@ -44,11 +44,11 @@ TTL: 60
 Após a configuração DNS (propagação em 2-5 minutos):
 
 **Antes:**
-- https://diotec-aethel-judge.hf.space
+- https://diotec-diotec360-judge.hf.space
 
 **Depois:**
 - https://hf.diotec360.com ✅ (seu domínio personalizado)
-- https://diotec-aethel-judge.hf.space (ainda funciona)
+- https://diotec-diotec360-judge.hf.space (ainda funciona)
 
 ---
 
@@ -56,7 +56,7 @@ Após a configuração DNS (propagação em 2-5 minutos):
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel)                                   │
@@ -66,8 +66,8 @@ Após a configuração DNS (propagação em 2-5 minutos):
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
 │  │  ├─ URL Personalizada: https://hf.diotec360.com    │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space  │
-│  │  └─ URL Original: diotec-aethel-judge.hf.space    │
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space  │
+│  │  └─ URL Original: diotec-diotec360-judge.hf.space    │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Diotec360 (Principal)                   │
 │  │  ├─ URL: https://node2.diotec360.com                │
@@ -100,7 +100,7 @@ curl https://hf.diotec360.com/health
 
 | Nome | Tipo | Valor | TTL | Função |
 |------|------|-------|-----|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | 60 | Node 1 (HF) |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | Node 1 (HF) |
 | `node2` | A | `[IP servidor]` | 60 | Node 2 (Local) |
 | `backup` | CNAME | `cname.vercel-dns.com` | 60 | Node 3 (Vercel) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | Frontend |
@@ -119,7 +119,7 @@ NEXT_PUBLIC_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.c
 
 ### Node 2 e Node 3
 ```env
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,...
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,...
 ```
 
 ---
@@ -133,7 +133,7 @@ AETHEL_LATTICE_NODES=https://hf.diotec360.com,...
 3. Vá em "DNS"
 4. Adicione o registro CNAME:
    - Nome: `hf`
-   - Valor: `diotec-aethel-judge.hf.space`
+   - Valor: `diotec-diotec360-judge.hf.space`
    - TTL: 60
 
 **Depois compartilhe o resultado!**

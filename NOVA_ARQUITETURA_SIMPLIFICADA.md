@@ -31,8 +31,8 @@
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
 │  │  ├─ URL: https://api.diotec360.com                  │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │  │  └─ Porta: 8000                                     │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Vercel Serverless (Principal)           │
@@ -59,7 +59,7 @@
 ```
 Type: CNAME
 Name: api
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -95,7 +95,7 @@ TTL: 60
 
 | Nome | Tipo | Valor | TTL | Função |
 |------|------|-------|-----|--------|
-| `api` | CNAME | `diotec-aethel-judge.hf.space` | 60 | Node 1 (HF) |
+| `api` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | Node 1 (HF) |
 | `node2` | CNAME | `cname.vercel-dns.com` | 60 | Node 2 (Vercel) |
 | `backup` | CNAME | `cname.vercel-dns.com` | 60 | Node 3 (Vercel) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | Frontend |
@@ -109,7 +109,7 @@ TTL: 60
 **Adicionar 2 novos registros:**
 
 ```
-1. api.diotec360.com → diotec-aethel-judge.hf.space
+1. api.diotec360.com → diotec-diotec360-judge.hf.space
 2. node2.diotec360.com → cname.vercel-dns.com
 ```
 
@@ -128,7 +128,7 @@ TTL: 60
 deploy_node1_huggingface.bat
 
 # Aguarde build (5-10 min)
-# Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+# Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 ```
 
 ---
@@ -194,7 +194,7 @@ python verify_production_triangle.py
 1. Adicione o registro DNS:
    - Nome: `api`
    - Tipo: CNAME
-   - Valor: `diotec-aethel-judge.hf.space`
+   - Valor: `diotec-diotec360-judge.hf.space`
    - TTL: 60
 
 2. Adicione o registro DNS:

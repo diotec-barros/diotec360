@@ -1,9 +1,9 @@
 @echo off
 REM HTTP-Only Activation Script for Node 2 (Primary Genesis Node)
-REM Aethel Real Lattice v3.0.4 - HTTP Resilience Mode
+REM DIOTEC360 REAL LATTICE v3.0.4 - HTTP Resilience Mode
 
 echo ========================================
-echo AETHEL TRIANGLE - NODE 2 HTTP ACTIVATION
+echo DIOTEC360 TRIANGLE - NODE 2 HTTP ACTIVATION
 echo ========================================
 echo.
 echo [INFO] Activating Primary Genesis Node (HTTP-Only Mode)
@@ -34,7 +34,7 @@ echo   - HTTP Poll: 10s interval
 echo.
 
 REM Start the server
-echo [STEP 3] Starting Aethel API Server (HTTP-Only Mode)...
+echo [STEP 3] Starting Diotec360 API Server (HTTP-Only Mode)...
 echo [INFO] System will use HTTP Sync for all synchronization
 echo [INFO] Press Ctrl+C to stop the server
 echo.

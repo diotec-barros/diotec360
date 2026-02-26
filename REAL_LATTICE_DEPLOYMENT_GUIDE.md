@@ -7,7 +7,7 @@ This guide walks through deploying the Aethel Hybrid Sync Protocol v3.0.3 to a p
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│              AETHEL REAL LATTICE v3.0.4                  │
+│              DIOTEC360 REAL LATTICE v3.0.4                  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────┐  │
@@ -80,13 +80,13 @@ Once you have all peer IDs, update the `.env` files:
 
 ```bash
 # In .env.node1.huggingface
-AETHEL_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2PeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/QmNode3PeerID
+DIOTEC360_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2PeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/QmNode3PeerID
 
 # In .env.node2.diotec360
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/QmNode1PeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/QmNode3PeerID
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/QmNode1PeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/QmNode3PeerID
 
 # In .env.node3.backup
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/QmNode1PeerID,/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2PeerID
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/QmNode1PeerID,/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2PeerID
 ```
 
 ### Phase 2: Staged Deployment
@@ -184,7 +184,7 @@ python scripts/test_lattice_connectivity.py
 #### 3.3 Test State Synchronization
 ```bash
 # Create a transaction on Node 1
-curl -X POST https://huggingface.co/spaces/diotec/aethel/api/verify \
+curl -X POST https://huggingface.co/spaces/diotec/diotec360/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent transfer { from: Alice, to: Bob, amount: 100 }"}'
 
@@ -219,7 +219,7 @@ npm run deploy
 curl https://api.diotec360.com/api/lattice/health
 
 # Check P2P status on all nodes
-curl https://huggingface.co/spaces/diotec/aethel/api/lattice/p2p/status
+curl https://huggingface.co/spaces/diotec/diotec360/api/lattice/p2p/status
 curl https://api.diotec360.com/api/lattice/p2p/status
 curl https://backup.diotec360.com/api/lattice/p2p/status
 ```
@@ -257,7 +257,7 @@ tail -f logs/nodeA.log | grep "P2P_HEARTBEAT\|HTTP_SYNC"
 **Symptoms**: No HTTP sync after 60s without peers
 
 **Solutions**:
-1. Check `AETHEL_LATTICE_NODES` is configured
+1. Check `DIOTEC360_LATTICE_NODES` is configured
 2. Verify HTTP endpoints are accessible
 3. Check heartbeat monitor is running
 4. Review logs for errors

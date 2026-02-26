@@ -1,23 +1,39 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Integration tests for Conservation Checker + Oracle System
 
 Tests the integration between the Conservation Checker and Oracle Sanctuary,
 validating that external oracle data doesn't break conservation of value.
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.7.1
 Date: February 4, 2026
 """
 
 import pytest
 import time
-from aethel.core.conservation import (
+from diotec360.core.conservation import (
     ConservationChecker,
     BalanceChange,
     ConservationResult,
     SlippageValidator
 )
-from aethel.core.oracle import (
+from diotec360.core.oracle import (
     OracleProof,
     OracleStatus,
     get_oracle_registry,
@@ -256,7 +272,7 @@ class TestOracleConservationIntegration:
         registry = get_oracle_registry()
         oracle_config = registry.get_oracle("chainlink_btc_usd")
         
-        from aethel.core.oracle import OracleVerifier
+        from diotec360.core.oracle import OracleVerifier
         verifier = OracleVerifier(registry)
         
         stale_proof = OracleProof(

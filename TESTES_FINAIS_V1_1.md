@@ -1,4 +1,4 @@
-# 🧪 TESTES FINAIS - Aethel v1.1 "The Resonance"
+# 🧪 TESTES FINAIS - Diotec360 v1.1 "The Resonance"
 
 **Data**: 3 de Fevereiro de 2026  
 **Versão**: v1.1  
@@ -380,7 +380,7 @@ Verificar que o sistema é rápido.
 ## 📝 TEMPLATE DE RELATÓRIO
 
 ```markdown
-# Relatório de Testes - Aethel v1.1
+# Relatório de Testes - Diotec360 v1.1
 
 **Data**: [DATA]
 **Testador**: [NOME]

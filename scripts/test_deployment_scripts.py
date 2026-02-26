@@ -1,9 +1,25 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Test deployment scripts to verify they are correctly structured.
 
 This script performs basic validation of deployment scripts without
-requiring the full aethel package to be installed.
+requiring the full diotec360 package to be installed.
 """
 
 import sys
@@ -131,7 +147,7 @@ def main():
     if all_passed:
         print("✓ All deployment scripts and configs validated successfully!")
         print("=" * 60)
-        print("\nNote: To run the scripts, first install the aethel package:")
+        print("\nNote: To run the scripts, first install the diotec360 package:")
         print("  pip install -e .")
         return 0
     else:

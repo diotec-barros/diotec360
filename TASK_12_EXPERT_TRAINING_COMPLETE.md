@@ -216,7 +216,7 @@ Implemented 24 comprehensive unit tests:
 ### Database Structure
 
 ```
-.aethel_moe/training.db
+.DIOTEC360_moe/training.db
 ├── ground_truth          # Expert verdicts vs actual outcomes
 ├── expert_models         # Model version registry
 ├── model_performance     # Historical performance metrics

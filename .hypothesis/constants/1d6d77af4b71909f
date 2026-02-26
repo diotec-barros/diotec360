@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\z3_expert.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.5, 0.7, 1.0, 100, 200, 1000, ' and ', ' or ', '#.*$', '&&', 'APPROVE', 'ERROR', 'FAILED', 'PROVED', 'REJECT', 'TIMEOUT', 'Verification timeout', 'Z3_Expert', 'and', 'complexity', 'complexity_violation', 'else', 'error', 'error_type', 'eval', 'false', 'guard\\s*\\{([^}]+)\\}', 'if', 'max_constraints', 'max_variables', 'message', 'model', 'not', 'note', 'or', 'status', 'then', 'timeout', 'true', 'verify\\s*\\{([^}]+)\\}', '||']

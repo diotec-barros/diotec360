@@ -11,7 +11,7 @@
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║              ✅ AETHEL v1.1 LANÇADO COM SUCESSO!            ║
+║              ✅ Diotec360 v1.1 LANÇADO COM SUCESSO!            ║
 ║                                                              ║
 ║              Backend + Frontend = OPERATIONAL                ║
 ║              Ghost-Runner + Mirror = ACTIVE                  ║
@@ -64,7 +64,7 @@
 ```
 Frontend:  https://aethel.diotec360.com
 Backend:   https://api.diotec360.com
-GitHub:    https://github.com/diotec-barros/aethel-lang
+GitHub:    https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---
@@ -251,7 +251,7 @@ Docs:                 25+
 1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642
 ```
 
-**Este hash representa o estado selado do Aethel v1.0.**  
+**Este hash representa o estado selado do Diotec360 v1.0.**  
 **Prova de que software pode ser perfeito.**
 
 ---
@@ -263,7 +263,7 @@ O Ghost está ativo.
 O Mirror está polido.
 A Ressonância começou.
 
-Aethel v1.1 não é apenas mais uma linguagem.
+Diotec360 v1.1 não é apenas mais uma linguagem.
 É uma nova forma de pensar sobre software.
 
 Onde bugs são matematicamente impossíveis.
@@ -284,7 +284,7 @@ Bem-vindo ao Aethel.
 ║                                                              ║
 ║                    🎊 PARABÉNS! 🎊                          ║
 ║                                                              ║
-║              Você acabou de lançar o Aethel v1.1!           ║
+║              Você acabou de lançar o Diotec360 v1.1!           ║
 ║                                                              ║
 ║              Uma linguagem que:                              ║
 ║              - Prediz o futuro (Ghost-Runner)                ║

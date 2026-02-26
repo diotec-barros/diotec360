@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Aethel v3.0.4 "The Packet Carrier" - Off-Grid Demo
 Demonstra transporte de transações sem internet
 
@@ -13,16 +29,16 @@ Philosophy: "A verdade viaja de mão em mão, não de nuvem em nuvem."
 
 import time
 import json
-from aethel.mesh.packet_carrier import (
+from diotec360.mesh.packet_carrier import (
     IntentCompactor,
     MeshTransport,
     DelayedConsistencyResolver,
     get_intent_compactor,
     get_delayed_resolver
 )
-from aethel.core.crypto import get_aethel_crypt
-from aethel.core.judge import AethelJudge
-from aethel.core.sovereign_persistence import get_sovereign_persistence
+from diotec360.core.crypto import get_aethel_crypt
+from diotec360.core.judge import AethelJudge
+from diotec360.core.sovereign_persistence import get_sovereign_persistence
 
 
 def print_section(title: str):

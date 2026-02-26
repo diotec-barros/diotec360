@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demo: Conservation Checker v1.3
 
 Demonstra o Conservation Checker detectando violações de conservação
@@ -9,7 +25,7 @@ Version: 1.3.0
 Date: February 3, 2026
 """
 
-from aethel.core.judge import AethelJudge
+from diotec360.core.judge import AethelJudge
 
 
 def print_header(title):

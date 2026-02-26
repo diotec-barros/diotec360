@@ -1,8 +1,24 @@
-from aethel_generator import AethelGenerator
+"""
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+from DIOTEC360_generator import DIOTEC360Generator
 
 
-# Código Aethel de exemplo
-aethel_code = """
+# Código Diotec360 de exemplo
+DIOTEC360_code = """
 intent transfer_funds(sender: Account, receiver: Account, amount: Gold) {
     guard {
         sender_balance >= amount;
@@ -19,11 +35,11 @@ intent transfer_funds(sender: Account, receiver: Account, amount: Gold) {
 """
 
 # Criar o gerador com verificação formal habilitada
-generator = AethelGenerator(ai_provider="anthropic", enable_verification=True)
+generator = DIOTEC360Generator(ai_provider="anthropic", enable_verification=True)
 
-# Compilar o código Aethel
+# Compilar o código Diotec360
 result = generator.compile(
-    aethel_code, 
+    DIOTEC360_code, 
     intent_name="transfer_funds",
     output_file="output/transfer_funds.rs"
 )

@@ -6,7 +6,7 @@
 
 ## Overview
 
-Aethel v1.8.0 introduces the **Synchrony Protocol** for parallel transaction processing. This guide helps you migrate from v1.7.0 and leverage the new capabilities.
+Diotec360 v1.8.0 introduces the **Synchrony Protocol** for parallel transaction processing. This guide helps you migrate from v1.7.0 and leverage the new capabilities.
 
 **Good News**: v1.8.0 is **100% backward compatible**. Your existing code works without modification!
 
@@ -148,7 +148,7 @@ atomic_batch monthly_payroll {
 ```python
 # Parse and execute
 parser = AethelParser()
-ast = parser.parse(aethel_code)
+ast = parser.parse(DIOTEC360_code)
 result = processor.execute_atomic_batch(ast[0])
 ```
 
@@ -454,7 +454,7 @@ except Exception as e:
 ## Resources
 
 - [Synchrony Protocol Documentation](./SYNCHRONY_PROTOCOL.md)
-- [Example Programs](./aethel/examples/)
+- [Example Programs](./diotec360/examples/)
 - [Demonstration Scripts](./demo_synchrony_protocol.py)
 - [Performance Benchmarks](./benchmark_synchrony.py)
 - [Task Completion Reports](./TASK_14_BACKWARD_COMPATIBILITY_COMPLETE.md)
@@ -467,7 +467,7 @@ If you encounter issues during migration:
 
 1. Check [Troubleshooting](#troubleshooting) section
 2. Run [demonstration scripts](#step-4-run-demonstrations)
-3. Review [example programs](./aethel/examples/)
+3. Review [example programs](./diotec360/examples/)
 4. Open an issue on GitHub
 
 ---

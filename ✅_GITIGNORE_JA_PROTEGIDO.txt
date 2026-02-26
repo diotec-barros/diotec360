@@ -46,7 +46,7 @@ SEGURANÇA: 🔒 MÁXIMA
 
 O arquivo .env contém:
 - ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFOL9
-- AETHEL_LATTICE_NODES com URLs dos nós
+- DIOTEC360_LATTICE_NODES com URLs dos nós
 - Outras configurações sensíveis
 
 Todos esses dados estão SEGUROS e NÃO serão commitados ao Git.

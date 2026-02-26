@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 AETHEL - DEMONSTRACAO FINAL
 Epoch 0 - Mission Complete
 """
@@ -10,7 +26,7 @@ print()
 
 # Teste 1: Parser
 print("[1/4] PARSER - Lendo codigo Aethel...")
-from aethel.core.parser import AethelParser
+from diotec360.core.parser import AethelParser
 
 code = """
 intent power_check(battery: Level, altitude: Meters) {
@@ -37,7 +53,7 @@ print()
 
 # Teste 2: Judge
 print("[2/4] JUDGE - Verificacao formal com Z3...")
-from aethel.core.judge import AethelJudge
+from diotec360.core.judge import AethelJudge
 
 judge = AethelJudge(ast)
 result = judge.verify_logic("power_check")
@@ -47,7 +63,7 @@ print()
 
 # Teste 3: Vault
 print("[3/4] VAULT - Armazenamento imutavel...")
-from aethel.core.vault import AethelVault
+from diotec360.core.vault import AethelVault
 
 vault = AethelVault(".demo_vault")
 function_hash = vault.store(
@@ -62,7 +78,7 @@ print()
 
 # Teste 4: Weaver
 print("[4/4] WEAVER - Adaptacao ao hardware...")
-from aethel.core.weaver import AethelWeaver
+from diotec360.core.weaver import AethelWeaver
 
 weaver = AethelWeaver(vault)
 env = weaver.probe_environment()

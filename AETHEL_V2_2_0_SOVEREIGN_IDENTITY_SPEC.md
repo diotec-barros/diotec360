@@ -1,4 +1,4 @@
-# 🔐 Aethel v2.2.0 - SOVEREIGN IDENTITY SPECIFICATION
+# 🔐 Diotec360 v2.2.0 - SOVEREIGN IDENTITY SPECIFICATION
 
 **"As Chaves do Império"**
 
@@ -168,7 +168,7 @@ class AethelCrypt:
         Philosophy: Address is deterministic from public key
         """
         address_hash = hashlib.sha256(public_key_hex.encode()).hexdigest()
-        return f"aethel_{address_hash[:40]}"
+        return f"DIOTEC360_{address_hash[:40]}"
     
     @staticmethod
     def create_signed_intent(
@@ -201,12 +201,12 @@ class AethelCrypt:
 
 
 # Global singleton for easy access
-_aethel_crypt = AethelCrypt()
+_DIOTEC360_crypt = AethelCrypt()
 
 
-def get_aethel_crypt() -> AethelCrypt:
+def get_DIOTEC360_crypt() -> AethelCrypt:
     """Get global AethelCrypt instance"""
-    return _aethel_crypt
+    return _DIOTEC360_crypt
 ```
 
 #### Test Suite
@@ -218,7 +218,7 @@ Create `test_crypto.py`:
 Test Aethel Cryptographic Engine
 """
 
-from aethel.core.crypto import AethelCrypt, get_aethel_crypt
+from aethel.core.crypto import AethelCrypt, get_DIOTEC360_crypt
 import json
 
 
@@ -226,7 +226,7 @@ def test_keypair_generation():
     """Test ED25519 key pair generation"""
     print("\n🔐 TEST 1: Key Pair Generation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     assert keypair.private_key is not None
@@ -241,7 +241,7 @@ def test_message_signing():
     """Test message signing"""
     print("\n🖋️ TEST 2: Message Signing")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     message = "transfer:alice->bob:100"
@@ -258,7 +258,7 @@ def test_signature_verification():
     """Test signature verification"""
     print("\n✅ TEST 3: Signature Verification")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     message = "transfer:alice->bob:100"
@@ -298,13 +298,13 @@ def test_address_derivation():
     """Test address derivation from public key"""
     print("\n🏠 TEST 4: Address Derivation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     address = crypto.derive_address(keypair.public_key_hex)
     
-    assert address.startswith("aethel_")
-    assert len(address) == 47  # "aethel_" + 40 hex chars
+    assert address.startswith("DIOTEC360_")
+    assert len(address) == 47  # "DIOTEC360_" + 40 hex chars
     
     print(f"   ✅ Public Key: {keypair.public_key_hex[:16]}...")
     print(f"   ✅ Address: {address}")
@@ -315,7 +315,7 @@ def test_signed_intent():
     """Test creating signed intent"""
     print("\n📝 TEST 5: Signed Intent Creation")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     keypair = crypto.generate_keypair()
     
     intent_data = {
@@ -350,7 +350,7 @@ def test_security_properties():
     """Test security properties"""
     print("\n🛡️ TEST 6: Security Properties")
     
-    crypto = get_aethel_crypt()
+    crypto = get_DIOTEC360_crypt()
     
     # Property 1: Different keys produce different signatures
     keypair1 = crypto.generate_keypair()
@@ -401,11 +401,11 @@ if __name__ == "__main__":
 
 #### Changes Required
 
-1. **Update Parser** (`aethel_parser.py`):
+1. **Update Parser** (`DIOTEC360_parser.py`):
    - Accept `signature` field in intent
    - Store signature in intent_map
 
-2. **Update Judge** (`aethel_judge.py`):
+2. **Update Judge** (`DIOTEC360_judge.py`):
    - Extract public key from sender account
    - Verify signature before Z3 proof
    - Reject if signature invalid

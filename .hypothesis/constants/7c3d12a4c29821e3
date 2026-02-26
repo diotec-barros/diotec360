@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\adaptive_timeout.py
+# hypothesis_version: 6.151.5
+
+[0.1, 0.3, 1.5, 2.0, 5.0, 10.0, 120.0, 500.0, 1000.0, 100, 'adjustment_count', 'backoff_factor', 'backoff_multiplier', 'backoff_reset', 'base_timeout', 'current_timeout', 'latency', 'latency_adjustment', 'latency_threshold', 'max_timeout', 'min_timeout', 'new_timeout', 'old_timeout', 'reason', 'timeout', 'timestamp', 'view_change_backoff', 'view_change_count']

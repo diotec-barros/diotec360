@@ -300,7 +300,7 @@ Remove-Item -Recurse -Force aethel/core/__pycache__
 python -B demo_symbiont_simple.py
 ```
 
-### Erro: "FileNotFoundError: .aethel_state"
+### Erro: "FileNotFoundError: .DIOTEC360_state"
 ```bash
 # Inicializar persistence
 python -c "from aethel.core.persistence import AethelPersistenceLayer; AethelPersistenceLayer()"
@@ -319,7 +319,7 @@ pip install z3-solver
 Se encontrar problemas:
 
 1. **Verificar logs:** Procure por `[MEMORY]`, `[ORACLE]`, `[WHATSAPP]` na saída
-2. **Verificar arquivos:** `.aethel_state/`, `.aethel_vault/`, `.aethel_vigilance/`
+2. **Verificar arquivos:** `.DIOTEC360_state/`, `.DIOTEC360_vault/`, `.DIOTEC360_vigilance/`
 3. **Limpar cache:** `Remove-Item -Recurse -Force aethel/**/__pycache__`
 4. **Reinstalar:** `pip install -e .`
 

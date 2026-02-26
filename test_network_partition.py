@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Network Partition Handling Tests - Task 23.2
 
 This module tests the consensus protocol's behavior during network partitions.
@@ -13,12 +29,12 @@ import time
 import hashlib
 from hypothesis import given, settings, strategies as st
 
-from aethel.consensus.consensus_engine import ConsensusEngine
-from aethel.consensus.proof_verifier import ProofVerifier
-from aethel.consensus.state_store import StateStore
-from aethel.consensus.proof_mempool import ProofMempool
-from aethel.consensus.mock_network import MockP2PNetwork
-from aethel.consensus.data_models import (
+from diotec360.consensus.consensus_engine import ConsensusEngine
+from diotec360.consensus.proof_verifier import ProofVerifier
+from diotec360.consensus.state_store import StateStore
+from diotec360.consensus.proof_mempool import ProofMempool
+from diotec360.consensus.mock_network import MockP2PNetwork
+from diotec360.consensus.data_models import (
     ProofBlock,
     PrePrepareMessage,
     PrepareMessage,
@@ -26,15 +42,15 @@ from aethel.consensus.data_models import (
     MessageType,
     PeerInfo,
 )
-from aethel.consensus.byzantine_node import ByzantineNode
+from diotec360.consensus.byzantine_node import ByzantineNode
 
-from aethel.consensus.byzantine_node import (
+from diotec360.consensus.byzantine_node import (
     ByzantineNode,
     ByzantineAttackStrategy,
     create_byzantine_network,
 )
-from aethel.consensus.consensus_engine import ConsensusEngine
-from aethel.consensus.data_models import (
+from diotec360.consensus.consensus_engine import ConsensusEngine
+from diotec360.consensus.data_models import (
     ProofBlock,
     PrePrepareMessage,
     PrepareMessage,
@@ -43,8 +59,8 @@ from aethel.consensus.data_models import (
     BlockVerificationResult,
     VerificationResult,
 )
-from aethel.consensus.proof_mempool import ProofMempool
-from aethel.consensus.test_strategies import proof_blocks
+from diotec360.consensus.proof_mempool import ProofMempool
+from diotec360.consensus.test_strategies import proof_blocks
 
 
 class TestByzantineFaultToleranceProperty:

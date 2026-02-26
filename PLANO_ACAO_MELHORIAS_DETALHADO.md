@@ -1,4 +1,4 @@
-# Plano de Ação Detalhado - Melhorias do Aethel v3.0
+# Plano de Ação Detalhado - Melhorias do Diotec360 v3.0
 
 **Data**: 11 de Fevereiro de 2026  
 **Prioridade**: ALTA - Lançamento Comercial em 7 dias
@@ -7,7 +7,7 @@
 
 ## 🎯 OBJETIVO PRINCIPAL
 
-**Gerar a primeira receita dentro de 7 dias** através do lançamento comercial do Aethel v3.0.
+**Gerar a primeira receita dentro de 7 dias** através do lançamento comercial do Diotec360 v3.0.
 
 ---
 
@@ -25,7 +25,7 @@
    - Framework: Next.js
    - Build Command: npm run build
    - Output Directory: .next
-5. Configurar domínio: aethel-lang.org
+5. Configurar domínio: diotec360-lang.org
 6. Deploy automático
 ```
 
@@ -48,7 +48,7 @@
      - DATABASE_URL
      - STRIPE_SECRET_KEY
      - PAYPAL_CLIENT_ID
-6. Configurar domínio: api.aethel-lang.org
+6. Configurar domínio: api.diotec360-lang.org
 ```
 
 **Arquivos a verificar**:
@@ -59,13 +59,13 @@
 #### 1.3 Configuração de Domínio
 ```bash
 # Passos:
-1. Registrar domínio: aethel-lang.org (se não registrado)
+1. Registrar domínio: diotec360-lang.org (se não registrado)
 2. Configurar DNS:
    - A record: @ → IP do Vercel
    - CNAME: api → URL do Railway
    - CNAME: www → URL do Vercel
 3. Configurar SSL automático
-4. Testar acesso: https://aethel-lang.org
+4. Testar acesso: https://diotec360-lang.org
 ```
 
 ---
@@ -183,8 +183,8 @@ async def create_checkout_session(plan_id: str, account_id: str):
                 'quantity': 1,
             }],
             mode='subscription',
-            success_url='https://aethel-lang.org/dashboard?success=true',
-            cancel_url='https://aethel-lang.org/pricing?canceled=true',
+            success_url='https://diotec360-lang.org/dashboard?success=true',
+            cancel_url='https://diotec360-lang.org/pricing?canceled=true',
             metadata={
                 'account_id': account_id,
                 'plan_id': plan_id
@@ -269,7 +269,7 @@ export default function DashboardPage() {
 
 ```python
 # ATUALIZAR PARA:
-aethel_grammar = """
+DIOTEC360_grammar = """
     start: (intent_def | atomic_batch)+
     
     intent_def: "intent" NAME "(" params ")" "{" guard_block solve_block verify_block "}"
@@ -472,7 +472,7 @@ async def billing_middleware(request: Request, call_next):
 #### Dia 1 - Deployment
 - [ ] Frontend deployado em Vercel
 - [ ] Backend deployado em Railway
-- [ ] Domínio aethel-lang.org funcionando
+- [ ] Domínio diotec360-lang.org funcionando
 - [ ] SSL configurado
 
 #### Dia 2 - Pagamento
@@ -507,8 +507,8 @@ cd api
 railway up
 
 # 3. Testar deployment
-curl https://aethel-lang.org/health
-curl https://api.aethel-lang.org/health
+curl https://diotec360-lang.org/health
+curl https://api.diotec360-lang.org/health
 ```
 
 ### Comandos de Teste
@@ -592,7 +592,7 @@ print(result)
 - **PayPal**: support@paypal.com
 
 ### Monitoramento
-- **Status Page**: status.aethel-lang.org
+- **Status Page**: status.diotec360-lang.org
 - **Alertas**: Slack #alerts
 - **Métricas**: Grafana dashboard
 

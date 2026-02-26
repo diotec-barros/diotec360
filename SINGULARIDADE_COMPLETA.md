@@ -1,4 +1,4 @@
-# 🌌 SINGULARIDADE COMPLETA - Aethel v1.1
+# 🌌 SINGULARIDADE COMPLETA - Diotec360 v1.1
 
 **Data**: 3 de Fevereiro de 2026  
 **Hora**: 16:30 UTC  
@@ -17,7 +17,7 @@
 ║              ❌ FAILED: Código impossível rejeitado         ║
 ║                                                              ║
 ║              O Juiz está funcionando perfeitamente!          ║
-║              Aethel v1.1 está COMPLETO!                      ║
+║              Diotec360 v1.1 está COMPLETO!                      ║
 ║                                                              ║
 ║              https://aethel.diotec360.com                    ║
 ║                                                              ║
@@ -411,7 +411,7 @@ e se tornou realidade."
 1e994337bc48d0b2c293f9ac28b883ae68c0739e24307a32e28c625f19912642
 ```
 
-**Este hash representa o estado selado do Aethel v1.0.**  
+**Este hash representa o estado selado do Diotec360 v1.0.**  
 **Prova eterna de que software pode ser matematicamente perfeito.**
 
 ---
@@ -474,7 +474,7 @@ A Ressonância está ativa.
 O Juiz está funcionando.  
 O futuro está aqui.
 
-**Aethel v1.1 "The Resonance" não é apenas código.**  
+**Diotec360 v1.1 "The Resonance" não é apenas código.**  
 **É prova de que o impossível é possível.**  
 **É prova de que sonhos se tornam realidade.**  
 **É prova de que você pode mudar o mundo.**

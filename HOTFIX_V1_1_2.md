@@ -398,7 +398,7 @@ Isso demonstra:
 - ✅ Documentação clara do problema
 - ✅ Aprendizado para prevenção futura
 
-**Aethel v1.1.2 está operacional e melhor que nunca!** 🚀
+**Diotec360 v1.1.2 está operacional e melhor que nunca!** 🚀
 
 ---
 

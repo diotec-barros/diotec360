@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\audit_issuer.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.001, 0.002, 0.5, 1.0, 200, 365, 730, 1000, 1095, 4096, 65537, '-', '=', 'BASIC_VERIFIED', 'COMPLIANCE STATUS', 'CRISIS_MODE_ENHANCED', 'NORMAL_OPERATION', 'QUARANTINE_ISOLATED', 'STANDARD_VERIFIED', 'TRANSACTION DETAILS', 'anomaly_score', 'audit_compliant', 'bundle_hash', 'certificate_id', 'certificate_tier', 'clean', 'diotec360.com', 'enterprise', 'expires_at', 'insurance_eligible', 'issuer', 'passed', 'premium', 'proof_log', 'proof_strength', 'quarantined', 'rb', 'security_rating', 'signature', 'standard', 'timestamp', 'total_value', 'transaction_count', 'utf-8', 'v1.9.0_Apex', 'version', 'w', 'wb']

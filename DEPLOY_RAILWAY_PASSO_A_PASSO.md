@@ -47,7 +47,7 @@ git push origin main
 ### 3.1 Novo Projeto
 1. No Railway dashboard, clique em **"New Project"**
 2. Selecione **"Deploy from GitHub repo"**
-3. Escolha o repositório **"aethel-lang"** (ou o nome do seu repo)
+3. Escolha o repositório **"diotec360-lang"** (ou o nome do seu repo)
 4. Railway vai detectar automaticamente o Dockerfile
 
 ### 3.2 Configuração Automática
@@ -112,7 +112,7 @@ curl -X POST https://[SUA-URL].up.railway.app/api/verify \
 
 ### 5.1 Acessar Vercel
 - Vá para: https://vercel.com/dashboard
-- Encontre o projeto "aethel-lang"
+- Encontre o projeto "diotec360-lang"
 
 ### 5.2 Atualizar Variável de Ambiente
 1. Clique no projeto
@@ -134,7 +134,7 @@ curl -X POST https://[SUA-URL].up.railway.app/api/verify \
 ## 📋 PASSO 6: TESTAR TUDO JUNTO
 
 ### 6.1 Acessar Frontend
-- Vá para: https://aethel-lang.vercel.app (ou sua URL)
+- Vá para: https://diotec360-lang.vercel.app (ou sua URL)
 
 ### 6.2 Testar Funcionalidades
 1. **Carregar Exemplo**:
@@ -208,7 +208,7 @@ Se todos os testes passaram, seu deploy está completo!
 
 **URLs:**
 - Backend: `https://[sua-url].up.railway.app`
-- Frontend: `https://aethel-lang.vercel.app`
+- Frontend: `https://diotec360-lang.vercel.app`
 
 **Próximos passos:**
 1. Compartilhar nas redes sociais

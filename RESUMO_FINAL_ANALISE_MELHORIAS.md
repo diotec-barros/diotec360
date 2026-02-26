@@ -93,8 +93,8 @@ Identificadas **8 áreas prioritárias**:
 **Objetivo**: Gerar receita em 7 dias
 
 1. **Deployment em Produção** (30-60 min)
-   - Frontend: Vercel (`aethel-lang.org`)
-   - Backend: Railway (`api.aethel-lang.org`)
+   - Frontend: Vercel (`diotec360-lang.org`)
+   - Backend: Railway (`api.diotec360-lang.org`)
    - Domínio e SSL
 
 2. **Integração Stripe** (2 horas)
@@ -205,7 +205,7 @@ Identificadas **8 áreas prioritárias**:
 
 ## 🎉 RECOMENDAÇÃO FINAL
 
-**Dionísio, o projeto Aethel v3.0 está em estado EXCEPCIONAL.**
+**Dionísio, o projeto Diotec360 v3.0 está em estado EXCEPCIONAL.**
 
 ### Pontos Fortes:
 1. **Tecnologia avançada**: Proof-of-Proof consensus único

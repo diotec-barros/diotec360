@@ -71,7 +71,7 @@ gate = AIGate(config=config)
 # Usar normalmente
 result = gate.voice_to_code("Transfer $100 with 2% fee")
 print(f"Verified: {result.verified}")
-print(f"Code: {result.aethel_code}")
+print(f"Code: {result.DIOTEC360_code}")
 ```
 
 ### Vantagens

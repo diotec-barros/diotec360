@@ -1,4 +1,4 @@
-# 📡 AETHEL_P2P_BOOTSTRAP - O QUE COLOCAR?
+# 📡 DIOTEC360_P2P_BOOTSTRAP - O QUE COLOCAR?
 
 **Data:** 2026-02-12  
 **Contexto:** Triangle of Truth - HTTP-Only Resilience Mode
@@ -10,7 +10,7 @@
 **Para a arquitetura atual (HTTP-Only):**
 
 ```env
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_BOOTSTRAP=
 ```
 
 **Deixe VAZIO!** ✅
@@ -21,22 +21,22 @@ AETHEL_P2P_BOOTSTRAP=
 
 A arquitetura atual do Triangle of Truth usa **HTTP-Only Resilience Mode**, onde:
 
-- ✅ `AETHEL_P2P_ENABLED=false` (P2P desabilitado)
-- ✅ `AETHEL_LATTICE_NODES` (HTTP sync entre nós)
-- ✅ `AETHEL_P2P_BOOTSTRAP=` (vazio, não usado)
+- ✅ `DIOTEC360_P2P_ENABLED=false` (P2P desabilitado)
+- ✅ `DIOTEC360_LATTICE_NODES` (HTTP sync entre nós)
+- ✅ `DIOTEC360_P2P_BOOTSTRAP=` (vazio, não usado)
 
 **O P2P está desabilitado por design**, então não precisamos de bootstrap peers.
 
 ---
 
-## 📚 O QUE É AETHEL_P2P_BOOTSTRAP?
+## 📚 O QUE É DIOTEC360_P2P_BOOTSTRAP?
 
-`AETHEL_P2P_BOOTSTRAP` é uma lista de **endereços P2P de nós iniciais** que um novo nó usa para se conectar à rede P2P.
+`DIOTEC360_P2P_BOOTSTRAP` é uma lista de **endereços P2P de nós iniciais** que um novo nó usa para se conectar à rede P2P.
 
 ### Formato (quando P2P está habilitado):
 
 ```env
-AETHEL_P2P_BOOTSTRAP=/ip4/192.168.1.100/tcp/9000/p2p/12D3KooWABC123...,/ip4/10.0.0.50/tcp/9000/p2p/12D3KooWXYZ789...
+DIOTEC360_P2P_BOOTSTRAP=/ip4/192.168.1.100/tcp/9000/p2p/12D3KooWABC123...,/ip4/10.0.0.50/tcp/9000/p2p/12D3KooWXYZ789...
 ```
 
 **Componentes:**
@@ -54,29 +54,29 @@ AETHEL_P2P_BOOTSTRAP=/ip4/192.168.1.100/tcp/9000/p2p/12D3KooWABC123...,/ip4/10.0
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🔵 Node 2: api.diotec360.com                          │
-│     AETHEL_P2P_ENABLED=false                           │
-│     AETHEL_P2P_BOOTSTRAP=                              │
-│     AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com │
+│     DIOTEC360_P2P_ENABLED=false                           │
+│     DIOTEC360_P2P_BOOTSTRAP=                              │
+│     DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com │
 │                                                         │
-│  🟢 Node 1: diotec-aethel-judge.hf.space              │
-│     AETHEL_P2P_ENABLED=false                           │
-│     AETHEL_P2P_BOOTSTRAP=                              │
-│     AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com │
+│  🟢 Node 1: diotec-diotec360-judge.hf.space              │
+│     DIOTEC360_P2P_ENABLED=false                           │
+│     DIOTEC360_P2P_BOOTSTRAP=                              │
+│     DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com │
 │                                                         │
 │  🟣 Node 3: backup.diotec360.com                       │
-│     AETHEL_P2P_ENABLED=false                           │
-│     AETHEL_P2P_BOOTSTRAP=                              │
-│     AETHEL_LATTICE_NODES=https://api.diotec360.com,https://diotec-aethel-judge.hf.space │
+│     DIOTEC360_P2P_ENABLED=false                           │
+│     DIOTEC360_P2P_BOOTSTRAP=                              │
+│     DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://diotec-diotec360-judge.hf.space │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
-**Sincronização:** HTTP Sync via `AETHEL_LATTICE_NODES`  
+**Sincronização:** HTTP Sync via `DIOTEC360_LATTICE_NODES`  
 **P2P:** Desabilitado (não precisa de bootstrap)
 
 ---
 
-## 🚀 QUANDO USAR AETHEL_P2P_BOOTSTRAP?
+## 🚀 QUANDO USAR DIOTEC360_P2P_BOOTSTRAP?
 
 ### Cenário 1: P2P Habilitado (Futuro)
 
@@ -84,9 +84,9 @@ Se você habilitar P2P no futuro:
 
 ```env
 # Node 2 (Primary)
-AETHEL_P2P_ENABLED=true
-AETHEL_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
-AETHEL_P2P_BOOTSTRAP=/ip4/node1.example.com/tcp/9001/p2p/12D3KooWNode1ABC,/ip4/node3.example.com/tcp/9002/p2p/12D3KooWNode3XYZ
+DIOTEC360_P2P_ENABLED=true
+DIOTEC360_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
+DIOTEC360_P2P_BOOTSTRAP=/ip4/node1.example.com/tcp/9001/p2p/12D3KooWNode1ABC,/ip4/node3.example.com/tcp/9002/p2p/12D3KooWNode3XYZ
 ```
 
 **Aqui você precisa:**
@@ -101,8 +101,8 @@ Se você quiser que novos nós se conectem à sua rede:
 
 ```env
 # Novo nó se conectando à rede existente
-AETHEL_P2P_ENABLED=true
-AETHEL_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/12D3KooWPrimaryNode,/ip4/backup.diotec360.com/tcp/9002/p2p/12D3KooWBackupNode
+DIOTEC360_P2P_ENABLED=true
+DIOTEC360_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/12D3KooWPrimaryNode,/ip4/backup.diotec360.com/tcp/9002/p2p/12D3KooWBackupNode
 ```
 
 ---
@@ -143,35 +143,35 @@ INFO: Listening on: /ip4/0.0.0.0/tcp/9000
 
 ```env
 # P2P Configuration - DISABLED
-AETHEL_P2P_ENABLED=false
-AETHEL_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
-AETHEL_P2P_TOPIC=aethel/lattice/v1
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_P2P_LISTEN=/ip4/0.0.0.0/tcp/9000
+DIOTEC360_P2P_TOPIC=aethel/lattice/v1
+DIOTEC360_P2P_BOOTSTRAP=
 
 # HTTP Sync (ATIVO)
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ```
 
 ### Node 1 (Hugging Face)
 
 ```env
 # P2P Configuration - DISABLED
-AETHEL_P2P_ENABLED=false
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_P2P_BOOTSTRAP=
 
 # HTTP Sync (ATIVO)
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
 ```
 
 ### Node 3 (Backup)
 
 ```env
 # P2P Configuration - DISABLED
-AETHEL_P2P_ENABLED=false
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_P2P_BOOTSTRAP=
 
 # HTTP Sync (ATIVO)
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://diotec-aethel-judge.hf.space
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://diotec-diotec360-judge.hf.space
 ```
 
 ---
@@ -180,19 +180,19 @@ AETHEL_LATTICE_NODES=https://api.diotec360.com,https://diotec-aethel-judge.hf.sp
 
 | Variável | Valor Atual | Quando Usar |
 |----------|-------------|-------------|
-| `AETHEL_P2P_ENABLED` | `false` | HTTP-Only mode (atual) |
-| `AETHEL_P2P_BOOTSTRAP` | `` (vazio) | P2P desabilitado |
-| `AETHEL_LATTICE_NODES` | URLs HTTP | Sincronização ativa |
+| `DIOTEC360_P2P_ENABLED` | `false` | HTTP-Only mode (atual) |
+| `DIOTEC360_P2P_BOOTSTRAP` | `` (vazio) | P2P desabilitado |
+| `DIOTEC360_LATTICE_NODES` | URLs HTTP | Sincronização ativa |
 
 **Para a arquitetura atual:**
-- ✅ Deixe `AETHEL_P2P_BOOTSTRAP` vazio
-- ✅ Use `AETHEL_LATTICE_NODES` para sincronização
+- ✅ Deixe `DIOTEC360_P2P_BOOTSTRAP` vazio
+- ✅ Use `DIOTEC360_LATTICE_NODES` para sincronização
 - ✅ P2P permanece desabilitado
 
 **Para habilitar P2P no futuro:**
-1. Mude `AETHEL_P2P_ENABLED=true`
+1. Mude `DIOTEC360_P2P_ENABLED=true`
 2. Obtenha os Peer IDs de cada nó
-3. Configure `AETHEL_P2P_BOOTSTRAP` com os endereços completos
+3. Configure `DIOTEC360_P2P_BOOTSTRAP` com os endereços completos
 
 ---
 
@@ -211,9 +211,9 @@ AETHEL_LATTICE_NODES=https://api.diotec360.com,https://diotec-aethel-judge.hf.sp
 
 ## 📝 CHECKLIST
 
-- [x] `AETHEL_P2P_ENABLED=false` em todos os nós
-- [x] `AETHEL_P2P_BOOTSTRAP=` (vazio) em todos os nós
-- [x] `AETHEL_LATTICE_NODES` configurado com URLs HTTP
+- [x] `DIOTEC360_P2P_ENABLED=false` em todos os nós
+- [x] `DIOTEC360_P2P_BOOTSTRAP=` (vazio) em todos os nós
+- [x] `DIOTEC360_LATTICE_NODES` configurado com URLs HTTP
 - [x] HTTP Sync operacional
 - [x] Triangle sincronizado (Merkle Root: 5df3daee...)
 

@@ -15,8 +15,8 @@
 ### Backend Triangle
 
 #### Node 1 (Hugging Face - Público)
-- **URL:** https://diotec-aethel-judge.hf.space
-- **Space:** https://huggingface.co/spaces/diotec/aethel-judge
+- **URL:** https://diotec-diotec360-judge.hf.space
+- **Space:** https://huggingface.co/spaces/diotec/diotec360-judge
 - **Função:** Ponto de acesso público
 - **Status:** 🚀 Pronto para deploy
 
@@ -45,7 +45,7 @@
 │  └─ https://aethel.diotec360.com/                      │
 │                                                         │
 │  BACKEND TRIANGLE (HTTP-Only Resilience)                │
-│  ├─ Node 1: https://diotec-aethel-judge.hf.space      │
+│  ├─ Node 1: https://diotec-diotec360-judge.hf.space      │
 │  ├─ Node 2: https://api.diotec360.com (Railway)       │
 │  └─ Node 3: https://backup.diotec360.com (Vercel)     │
 │                                                         │
@@ -62,28 +62,28 @@
 ### Frontend (Vercel)
 ```env
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ```
 
 ### Node 1 (Hugging Face)
 ```env
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-public
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-public
 ```
 
 ### Node 2 (Railway API)
 ```env
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
-AETHEL_NODE_NAME=node2-diotec360
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node2-diotec360
+DIOTEC360_NODE_ROLE=genesis-primary
 ```
 
 ### Node 3 (Vercel Backup)
 ```env
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://api.diotec360.com
-AETHEL_NODE_NAME=node3-backup
-AETHEL_NODE_ROLE=genesis-backup
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://api.diotec360.com
+DIOTEC360_NODE_NAME=node3-backup
+DIOTEC360_NODE_ROLE=genesis-backup
 ```
 
 ---
@@ -97,10 +97,10 @@ AETHEL_NODE_ROLE=genesis-backup
 deploy_node1_huggingface.bat
 
 # Aguarde o build no Hugging Face (5-10 min)
-# Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+# Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 
 # Teste o endpoint
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 **Esperado:**
@@ -126,10 +126,10 @@ curl https://api.diotec360.com/health
 2. Selecione o projeto Aethel
 3. Vá em "Variables"
 4. Adicione/atualize:
-   - `AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com`
-   - `AETHEL_NODE_NAME=node2-diotec360`
-   - `AETHEL_NODE_ROLE=genesis-primary`
-   - `AETHEL_P2P_ENABLED=false`
+   - `DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com`
+   - `DIOTEC360_NODE_NAME=node2-diotec360`
+   - `DIOTEC360_NODE_ROLE=genesis-primary`
+   - `DIOTEC360_P2P_ENABLED=false`
 5. Railway fará redeploy automático
 
 ---
@@ -174,7 +174,7 @@ python verify_production_triangle.py
 
 PHASE 1: HEALTH CHECKS
 ------------------------------------------------------------
-[TEST] Node 1 (Hugging Face): https://diotec-aethel-judge.hf.space
+[TEST] Node 1 (Hugging Face): https://diotec-diotec360-judge.hf.space
   ✅ Status: healthy
 
 [TEST] Node 2 (Railway API): https://api.diotec360.com
@@ -310,8 +310,8 @@ sudo systemctl reload nginx
 
 ```bash
 # Node 1 (Hugging Face)
-curl https://diotec-aethel-judge.hf.space/health
-curl https://diotec-aethel-judge.hf.space/api/lattice/state
+curl https://diotec-diotec360-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/api/lattice/state
 
 # Node 2 (Railway API)
 curl https://api.diotec360.com/health
@@ -326,7 +326,7 @@ curl https://backup.diotec360.com/api/lattice/state
 
 ```bash
 # Verificar Merkle Roots
-curl https://diotec-aethel-judge.hf.space/api/lattice/state | jq .merkle_root
+curl https://diotec-diotec360-judge.hf.space/api/lattice/state | jq .merkle_root
 curl https://api.diotec360.com/api/lattice/state | jq .merkle_root
 curl https://backup.diotec360.com/api/lattice/state | jq .merkle_root
 
@@ -364,7 +364,7 @@ echo ""
 
 # Check Node 1
 echo "[Node 1] Hugging Face"
-curl -s https://diotec-aethel-judge.hf.space/health | jq .status
+curl -s https://diotec-diotec360-judge.hf.space/health | jq .status
 
 # Check Node 2
 echo "[Node 2] api.diotec360.com"
@@ -426,7 +426,7 @@ deploy_node1_huggingface.bat
 python verify_production_triangle.py
 
 # Verificação rápida
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 curl https://api.diotec360.com/health
 curl https://backup.diotec360.com/health
 

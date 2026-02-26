@@ -30,7 +30,7 @@ Status: ✅ VALID
 ### Phase 2: Attack Execution (T+2s)
 ```
 💀 Attacker gains root access
-💀 Attacker locates: .aethel_state/snapshot.json
+💀 Attacker locates: .DIOTEC360_state/snapshot.json
 💀 Attacker modifies Alice's balance: 1,000 → 1,000,000
 💀 Attacker saves corrupted file
 💀 Attacker believes they succeeded
@@ -292,7 +292,7 @@ Generate detailed forensic reports for every corruption attempt:
 
 ## 🏁 Conclusion
 
-The **Aethel Persistence Layer v2.1.0** successfully detected and blocked a sophisticated database corruption attack. The Merkle Tree cryptographic seal makes it **mathematically impossible** to tamper with the database without detection.
+The **DIOTEC360 PERSISTENCE Layer v2.1.0** successfully detected and blocked a sophisticated database corruption attack. The Merkle Tree cryptographic seal makes it **mathematically impossible** to tamper with the database without detection.
 
 **Key Achievements**:
 - ✅ 100% detection rate

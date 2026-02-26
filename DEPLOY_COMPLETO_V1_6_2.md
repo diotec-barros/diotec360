@@ -1,4 +1,4 @@
-# ✅ DEPLOY COMPLETO - AETHEL v1.6.2
+# ✅ DEPLOY COMPLETO - Diotec360 v1.6.2
 
 **Data**: 4 de Fevereiro de 2026  
 **Versão**: v1.6.2 "Ghost Protocol Expansion"  
@@ -10,12 +10,12 @@
 
 ### O QUE É AETHEL?
 
-**Aethel é o primeiro motor de verificação formal com privacidade nativa para sistemas financeiros críticos.**
+**Diotec360 é o primeiro motor de verificação formal com privacidade nativa para sistemas financeiros críticos.**
 
 #### Problema Resolvido
 - **$2.1 bilhões** roubados de contratos inteligentes (2021-2024)
 - Bugs de lógica, overflow, reentrancy, double-spending
-- **Aethel torna esses exploits matematicamente impossíveis**
+- **Diotec360 torna esses exploits matematicamente impossíveis**
 
 #### Diferencial Único
 1. **Verificação Formal Automática** - Z3 Theorem Prover
@@ -35,7 +35,7 @@
 
 ### Backend Hugging Face
 
-**URL**: https://diotec-aethel-judge.hf.space  
+**URL**: https://diotec-diotec360-judge.hf.space  
 **Status**: ✅ ONLINE  
 **Uptime**: 99.9%  
 **Latency**: <100ms
@@ -108,15 +108,15 @@ python test_backend_production.py
 ## 🔗 LINKS IMPORTANTES
 
 ### Produção
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
-- **Health**: https://diotec-aethel-judge.hf.space/health
-- **Frontend**: https://aethel-studio.vercel.app
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **Health**: https://diotec-diotec360-judge.hf.space/health
+- **Frontend**: https://diotec360-studio.vercel.app
 
 ### Desenvolvimento
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
-- **HF Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **Issues**: https://github.com/diotec-barros/aethel-lang/issues
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
+- **HF Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **Issues**: https://github.com/diotec-barros/diotec360-lang/issues
 
 ### Documentação
 - **README**: [README.md](./README.md)
@@ -154,7 +154,7 @@ python test_backend_production.py
 2. ⏳ **Atualizar Frontend**
    ```bash
    # Vercel environment variable
-   NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
+   NEXT_PUBLIC_API_URL=https://diotec-diotec360-judge.hf.space
    ```
 3. ⏳ **Anunciar Lançamento**
    - Twitter/X
@@ -183,7 +183,7 @@ python test_backend_production.py
 
 ### Twitter/X (280 chars)
 ```
-🎭 Aethel v1.6.2 is LIVE!
+🎭 Diotec360 v1.6.2 is LIVE!
 
 First formally verified language with native `secret` keyword.
 
@@ -192,14 +192,14 @@ First formally verified language with native `secret` keyword.
 🏥 HIPAA ready
 🏦 Banking compliant
 
-Try it: https://diotec-aethel-judge.hf.space
+Try it: https://diotec-diotec360-judge.hf.space
 
 #Aethel #ZeroKnowledge #Privacy
 ```
 
 ### LinkedIn (Resumido)
 ```
-Excited to announce Aethel v1.6.2 - Ghost Protocol Expansion! 🎭
+Excited to announce Diotec360 v1.6.2 - Ghost Protocol Expansion! 🎭
 
 Key Innovation: Native `secret` keyword for privacy-preserving formal verification.
 
@@ -208,7 +208,7 @@ Real-World Applications:
 • Banking: Prove solvency without revealing balances
 • Voting: Secret ballot with verifiable results
 
-Try it live: https://diotec-aethel-judge.hf.space
+Try it live: https://diotec-diotec360-judge.hf.space
 
 #Blockchain #Privacy #ZeroKnowledge #FormalVerification
 ```
@@ -275,13 +275,13 @@ Com v1.6.2, Aethel se torna a primeira linguagem onde privacidade não é um add
 ### Testar Backend
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Examples
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 
 # Verify code
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { ... }"}'
 
@@ -293,23 +293,23 @@ python test_backend_production.py
 ```bash
 # Vercel dashboard
 # Settings → Environment Variables
-# NEXT_PUBLIC_API_URL = https://diotec-aethel-judge.hf.space
+# NEXT_PUBLIC_API_URL = https://diotec-diotec360-judge.hf.space
 # Redeploy
 ```
 
 ### Monitorar
 ```bash
 # HF Space logs
-# https://huggingface.co/spaces/diotec/aethel-judge
+# https://huggingface.co/spaces/diotec/diotec360-judge
 
 # GitHub Actions
-# https://github.com/diotec-barros/aethel-lang/actions
+# https://github.com/diotec-barros/diotec360-lang/actions
 ```
 
 ---
 
 **Status**: ✅ DEPLOY 100% COMPLETO  
-**URL**: https://diotec-aethel-judge.hf.space  
+**URL**: https://diotec-diotec360-judge.hf.space  
 **Versão**: v1.6.2 "Ghost Protocol Expansion"  
 **Testes**: 8/8 passando (100%)  
 **Data**: 4 de Fevereiro de 2026  

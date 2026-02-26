@@ -51,7 +51,7 @@
     Demo 1: Gerar Identidade Soberana
     ├─ Keypair gerado em ~363ms
     ├─ Chave pública: fbfb0f50188011951b5dd85cb24c054d...
-    └─ Endereço: aethel_da41696b7a4e91050da1201536b912b7c736f89a
+    └─ Endereço: DIOTEC360_da41696b7a4e91050da1201536b912b7c736f89a
     
     Demo 2: Criar Transação Sem Assinatura
     ├─ Transação criada SEM assinatura

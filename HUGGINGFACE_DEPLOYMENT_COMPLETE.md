@@ -58,8 +58,8 @@ deploy_to_huggingface.bat
 
 ```bash
 # 1. Clone your Space
-git clone https://huggingface.co/spaces/diotec/aethel-judge
-cd aethel-judge
+git clone https://huggingface.co/spaces/diotec/diotec360-judge
+cd diotec360-judge
 
 # 2. Copy files
 xcopy /E /I /Y ..\aethel aethel
@@ -70,8 +70,8 @@ copy ..\README_HF.md README.md
 copy ..\.dockerignore .dockerignore
 
 # 3. Create vault directories
-mkdir .aethel_vault\bundles
-mkdir .aethel_vault\certificates
+mkdir .DIOTEC360_vault\bundles
+mkdir .DIOTEC360_vault\certificates
 
 # 4. Deploy
 git add .
@@ -88,15 +88,15 @@ After deployment (wait 2-3 minutes for build):
 python test_huggingface_deployment.py
 
 # Or test manually
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 ## 🔗 Your URLs
 
-- **Space Dashboard**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API Endpoint**: https://diotec-aethel-judge.hf.space
-- **API Docs**: https://diotec-aethel-judge.hf.space/docs
-- **Health Check**: https://diotec-aethel-judge.hf.space/health
+- **Space Dashboard**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API Endpoint**: https://diotec-diotec360-judge.hf.space
+- **API Docs**: https://diotec-diotec360-judge.hf.space/docs
+- **Health Check**: https://diotec-diotec360-judge.hf.space/health
 
 ## 📊 API Endpoints
 
@@ -117,7 +117,7 @@ curl https://diotec-aethel-judge.hf.space/health
 ### Verify Code
 
 ```bash
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{
     "code": "intent transfer(sender: Account, receiver: Account, amount: Balance) { guard { sender_balance >= amount; amount > 0; } solve { priority: security; } verify { sender_balance == old_sender_balance - amount; receiver_balance == old_receiver_balance + amount; total_supply == old_total_supply; } }"
@@ -127,13 +127,13 @@ curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
 ### Get Examples
 
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 ```
 
 ### Ghost-Runner Prediction
 
 ```bash
-curl -X POST https://diotec-aethel-judge.hf.space/api/ghost/predict \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/ghost/predict \
   -H "Content-Type: application/json" \
   -d '{"code": "intent check() { guard { x > 0; } solve { priority: security; } verify { x > 0; } }"}'
 ```
@@ -160,7 +160,7 @@ app_port: 7860
 Update your frontend `.env.local`:
 
 ```bash
-NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
+NEXT_PUBLIC_API_URL=https://diotec-diotec360-judge.hf.space
 ```
 
 ## 📈 Monitoring
@@ -188,7 +188,7 @@ NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
 **Common fixes:**
 ```bash
 # Rebuild from scratch
-cd aethel-judge
+cd diotec360-judge
 git rm -rf .
 git commit -m "Clean slate"
 # Then re-run deployment script
@@ -203,7 +203,7 @@ git commit -m "Clean slate"
 
 **Test:**
 ```bash
-curl -v https://diotec-aethel-judge.hf.space/health
+curl -v https://diotec-diotec360-judge.hf.space/health
 ```
 
 ### Import Errors
@@ -216,7 +216,7 @@ curl -v https://diotec-aethel-judge.hf.space/health
 **Fix:**
 ```bash
 # Verify structure
-cd aethel-judge
+cd diotec360-judge
 ls -R aethel/
 ls -R api/
 ```
@@ -306,8 +306,8 @@ ENV HF_TOKEN=$HF_TOKEN
 
 ## 📞 Support
 
-- **Issues**: https://github.com/diotec/aethel/issues
-- **Discussions**: https://huggingface.co/spaces/diotec/aethel-judge/discussions
+- **Issues**: https://github.com/diotec/diotec360/issues
+- **Discussions**: https://huggingface.co/spaces/diotec/diotec360-judge/discussions
 - **HF Support**: https://huggingface.co/support
 
 ---

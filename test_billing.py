@@ -1,5 +1,21 @@
 """
-Test suite for Aethel Billing Kernel v3.0
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test suite for Diotec360 Billing Kernel v3.0
 =========================================
 
 Validates the financial engine that powers DIOTEC 360's business model.
@@ -9,7 +25,7 @@ import pytest
 from datetime import datetime, timedelta
 from decimal import Decimal
 
-from aethel.core.billing import (
+from diotec360.core.billing import (
     BillingKernel,
     BillingTier,
     OperationType,

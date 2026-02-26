@@ -145,7 +145,7 @@
 │                         FILE STRUCTURE                                   │
 └─────────────────────────────────────────────────────────────────────────┘
 
-    aethel-judge/                    (HF Space Repository)
+    diotec360-judge/                    (HF Space Repository)
     │
     ├── Dockerfile                   (from Dockerfile.huggingface)
     ├── README.md                    (from README_HF.md)
@@ -170,7 +170,7 @@
     │   ├── main.py                 (API endpoints)
     │   └── requirements.txt        (API dependencies)
     │
-    └── .aethel_vault/              (certified storage)
+    └── .DIOTEC360_vault/              (certified storage)
         ├── bundles/
         └── certificates/
 
@@ -190,7 +190,7 @@
 └─────────────────────────────────────────────────────────────────────────┘
 
     Space Dashboard
-    └─> https://huggingface.co/spaces/diotec/aethel-judge
+    └─> https://huggingface.co/spaces/diotec/diotec360-judge
         │
         ├─> Logs Tab
         │   └─> Build logs, runtime logs, errors
@@ -206,7 +206,7 @@
 └─────────────────────────────────────────────────────────────────────────┘
 
     Frontend (Aethel Studio)
-    └─> NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
+    └─> NEXT_PUBLIC_API_URL=https://diotec-diotec360-judge.hf.space
         │
         ├─> Editor sends code to /api/verify
         ├─> Ghost-Runner calls /api/ghost/predict
@@ -227,8 +227,8 @@
 
 Deploy:     deploy_to_huggingface.bat
 Test:       python test_huggingface_deployment.py
-Monitor:    https://huggingface.co/spaces/diotec/aethel-judge
-API:        https://diotec-aethel-judge.hf.space
-Health:     https://diotec-aethel-judge.hf.space/health
+Monitor:    https://huggingface.co/spaces/diotec/diotec360-judge
+API:        https://diotec-diotec360-judge.hf.space
+Health:     https://diotec-diotec360-judge.hf.space/health
 
 ╚════════════════════════════════════════════════════════════════════════════╝

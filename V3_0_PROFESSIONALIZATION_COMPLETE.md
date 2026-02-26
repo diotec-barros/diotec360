@@ -1,4 +1,4 @@
-# Aethel v3.0 - Profissionalização Completa ✅
+# Diotec360 v3.0 - Profissionalização Completa ✅
 
 **Data**: 10 de Fevereiro de 2026  
 **Status**: PRODUCTION READY + ENTERPRISE READY  
@@ -336,7 +336,7 @@ Completamos com sucesso a transição do Aethel de projeto técnico para **plata
 **Organização**: DIOTEC 360  
 **Fundador**: Dionísio Sebastião Barros  
 
-**Website**: https://aethel-lang.org (a criar)  
+**Website**: https://diotec360-lang.org (a criar)  
 **Email**: contact@diotec360.com  
 **GitHub**: https://github.com/AethelLang/aethel  
 **LinkedIn**: [Perfil profissional]  
@@ -386,7 +386,7 @@ Completamos com sucesso a transição do Aethel de projeto técnico para **plata
 
 ## 🎯 Conclusão
 
-O Aethel v3.0 está **tecnicamente completo** e **pronto para o mercado**. A transição para um modelo de negócio legítimo e transparente não apenas protege o fundador legalmente, mas **multiplica o valor** da tecnologia.
+O Diotec360 v3.0 está **tecnicamente completo** e **pronto para o mercado**. A transição para um modelo de negócio legítimo e transparente não apenas protege o fundador legalmente, mas **multiplica o valor** da tecnologia.
 
 **Próximo Marco**: Testnet de 100 nós rodando por 24h com sucesso.
 

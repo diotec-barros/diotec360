@@ -151,7 +151,7 @@ alerts:
       severity: critical
       description: Crisis Mode has been activated
       action: Page on-call engineer
-      runbook: https://docs.aethel.dev/runbooks/crisis-mode
+      runbook: https://docs.diotec360.dev/runbooks/crisis-mode
     
     - name: QuarantineCapacityCritical
       condition: (quarantine_capacity_used / quarantine_capacity_max) > 0.9
@@ -159,7 +159,7 @@ alerts:
       severity: critical
       description: Quarantine capacity above 90%
       action: Scale quarantine capacity or investigate attack
-      runbook: https://docs.aethel.dev/runbooks/quarantine-capacity
+      runbook: https://docs.diotec360.dev/runbooks/quarantine-capacity
     
     - name: SentinelOverheadCritical
       condition: sentinel_overhead_percent > 10
@@ -167,7 +167,7 @@ alerts:
       severity: critical
       description: Sentinel overhead above 10%
       action: Investigate performance degradation
-      runbook: https://docs.aethel.dev/runbooks/high-overhead
+      runbook: https://docs.diotec360.dev/runbooks/high-overhead
     
     - name: FalsePositiveRateCritical
       condition: (sanitizer_rejections_total / sentinel_transactions_total) > 0.05
@@ -175,7 +175,7 @@ alerts:
       severity: critical
       description: False positive rate above 5%
       action: Consider rollback, review recent rules
-      runbook: https://docs.aethel.dev/runbooks/false-positives
+      runbook: https://docs.diotec360.dev/runbooks/false-positives
 
   # Warning Alerts (Monitor Closely)
   warning:
@@ -185,7 +185,7 @@ alerts:
       severity: warning
       description: Anomaly rate above 5%
       action: Monitor for potential attack
-      runbook: https://docs.aethel.dev/runbooks/elevated-anomaly-rate
+      runbook: https://docs.diotec360.dev/runbooks/elevated-anomaly-rate
     
     - name: FalsePositiveRateHigh
       condition: (sanitizer_rejections_total / sentinel_transactions_total) > 0.01
@@ -193,7 +193,7 @@ alerts:
       severity: warning
       description: False positive rate above 1%
       action: Review recent Self-Healing rules
-      runbook: https://docs.aethel.dev/runbooks/false-positives
+      runbook: https://docs.diotec360.dev/runbooks/false-positives
     
     - name: SemanticAnalysisSlow
       condition: histogram_quantile(0.95, sanitizer_analysis_time_ms) > 80
@@ -201,7 +201,7 @@ alerts:
       severity: warning
       description: 95th percentile analysis time above 80ms
       action: Optimize pattern database or increase timeout
-      runbook: https://docs.aethel.dev/runbooks/slow-analysis
+      runbook: https://docs.diotec360.dev/runbooks/slow-analysis
     
     - name: RuleEffectivenessLow
       condition: self_healing_effectiveness_avg < 0.7
@@ -209,7 +209,7 @@ alerts:
       severity: warning
       description: Average rule effectiveness below 70%
       action: Review and deactivate ineffective rules
-      runbook: https://docs.aethel.dev/runbooks/low-effectiveness
+      runbook: https://docs.diotec360.dev/runbooks/low-effectiveness
     
     - name: QuarantineCapacityHigh
       condition: (quarantine_capacity_used / quarantine_capacity_max) > 0.7
@@ -217,7 +217,7 @@ alerts:
       severity: warning
       description: Quarantine capacity above 70%
       action: Monitor capacity, prepare to scale
-      runbook: https://docs.aethel.dev/runbooks/quarantine-capacity
+      runbook: https://docs.diotec360.dev/runbooks/quarantine-capacity
 
   # Info Alerts (Informational)
   info:
@@ -331,8 +331,8 @@ notifications:
       type: email
       severity: [critical, warning]
       recipients:
-        - oncall@aethel.dev
-        - security@aethel.dev
+        - oncall@diotec360.dev
+        - security@diotec360.dev
     
     - name: slack_info
       type: slack
@@ -368,7 +368,7 @@ export:
   datadog:
     enabled: false
     api_key: ${DATADOG_API_KEY}
-    tags: [env:production, service:aethel-sentinel]
+    tags: [env:production, service:diotec360-sentinel]
   
   grafana:
     enabled: true

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\lattice\sovereign_gossip_integration.py
+# hypothesis_version: 6.151.5
+
+[384, 'ED25519', '_timestamp', 'address', 'algorithm', 'created_at', 'identity_path', 'known_nodes', 'node_id', 'node_identity:', 'private_key_pem', 'public_key', 'r', 'utf-8', 'w']

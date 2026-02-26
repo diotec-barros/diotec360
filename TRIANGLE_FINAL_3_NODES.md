@@ -31,8 +31,8 @@
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
 │  │  ├─ URL: https://hf.diotec360.com                   │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │  │  └─ Porta: 8000                                     │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Local Principal                         │
@@ -67,7 +67,7 @@ TTL: 3600
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -100,26 +100,26 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 
 ### Node 1 - Hugging Face
 ```env
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-public
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-public
 ```
 
 ### Node 2 - Local Principal
 ```env
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node2-local
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node2-local
+DIOTEC360_NODE_ROLE=genesis-primary
 ```
 
 ### Node 3 - Local Backup
 ```env
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
-AETHEL_NODE_NAME=node3-backup
-AETHEL_NODE_ROLE=genesis-backup
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://node2.diotec360.com
+DIOTEC360_NODE_NAME=node3-backup
+DIOTEC360_NODE_ROLE=genesis-backup
 ```
 
 ---
@@ -133,7 +133,7 @@ AETHEL_NODE_ROLE=genesis-backup
 ```
 1. hf.diotec360.com
    Tipo: CNAME
-   Valor: diotec-aethel-judge.hf.space
+   Valor: diotec-diotec360-judge.hf.space
    TTL: 60
 
 2. node2.diotec360.com
@@ -156,7 +156,7 @@ AETHEL_NODE_ROLE=genesis-backup
 deploy_node1_huggingface.bat
 
 # Aguarde build (5-10 min)
-# Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+# Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 
 # Teste
 curl https://hf.diotec360.com/health

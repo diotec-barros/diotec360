@@ -1,10 +1,26 @@
 """
-Test Aethel Persistence Layer v2.1.0
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Diotec360 Persistence Layer v2.1.0
 Demonstrates the three-tier sovereign memory architecture.
 """
 
 import time
-from aethel.core.persistence import (
+from diotec360.core.persistence import (
     get_persistence_layer,
     ExecutionRecord,
     AttackRecord
@@ -14,7 +30,7 @@ from aethel.core.persistence import (
 def test_persistence_layer():
     """Test complete persistence layer"""
     print("\n" + "="*70)
-    print("🧪 TESTING AETHEL PERSISTENCE LAYER v2.1.0")
+    print("🧪 TESTING Diotec360 PERSISTENCE LAYER v2.1.0")
     print("="*70 + "\n")
     
     # Initialize persistence layer

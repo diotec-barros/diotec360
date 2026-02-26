@@ -127,7 +127,7 @@ npm run build
 
 ## 📚 Learn More
 
-- [Aethel Documentation](https://github.com/diotec-barros/aethel-lang)
+- [Aethel Documentation](https://github.com/diotec-barros/diotec360-lang)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 

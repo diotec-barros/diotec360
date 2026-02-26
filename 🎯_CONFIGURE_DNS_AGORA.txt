@@ -39,7 +39,7 @@
   │                                                             │
   │  Type:  CNAME                                               │
   │  Name:  hf                                                  │
-  │  Value: diotec-aethel-judge.hf.space                        │
+  │  Value: diotec-diotec360-judge.hf.space                        │
   │  TTL:   60                                                  │
   │                                                             │
   └─────────────────────────────────────────────────────────────┘
@@ -117,7 +117,7 @@
 ═══════════════════════════════════════════════════════════════════
 
   [ ] Acessar Vercel Dashboard
-  [ ] Adicionar registro CNAME: hf → diotec-aethel-judge.hf.space
+  [ ] Adicionar registro CNAME: hf → diotec-diotec360-judge.hf.space
   [ ] Aguardar 2-5 minutos
   [ ] Testar: curl https://hf.diotec360.com/health
   [ ] Executar: python verify_production_triangle.py

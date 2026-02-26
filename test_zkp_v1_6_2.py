@@ -1,6 +1,22 @@
 """
-Aethel v1.6.2 - Ghost Protocol Expansion Tests
-===============================================
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Diotec360 v1.6.2 - Ghost Protocol Expansion Tests
+==================================================
 
 Tests for Zero-Knowledge Proof functionality:
 - Secret keyword parsing
@@ -8,7 +24,7 @@ Tests for Zero-Knowledge Proof functionality:
 - Conservation proofs without revelation
 - Private transfers, voting, compliance
 
-Author: Aethel Team
+Author: Diotec360 Team
 Date: February 4, 2026
 Version: 1.6.2
 """
@@ -19,9 +35,9 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from aethel.core.parser import AethelParser
-from aethel.core.zkp_simulator import get_zkp_simulator, ZKPSimulator
-from aethel.core.judge import AethelJudge
+from diotec360.core.parser import Diotec360Parser
+from diotec360.core.zkp_simulator import get_zkp_simulator, ZKPSimulator
+from diotec360.core.judge import Diotec360Judge
 
 
 def test_zkp_engine():
@@ -59,7 +75,7 @@ def test_parser_secret_keyword():
     print("TEST 2: PARSER - SECRET KEYWORD SUPPORT")
     print("="*70)
     
-    parser = AethelParser()
+    parser = Diotec360Parser()
     
     code = """
     intent private_transfer(secret sender_balance: Balance, amount: Balance) {
@@ -156,7 +172,7 @@ def test_private_transfer_example():
     print("="*70)
     
     # Read example file
-    example_path = Path(__file__).parent / "aethel" / "examples" / "private_transfer.ae"
+    example_path = Path(__file__).parent / "diotec360" / "examples" / "private_transfer.ae"
     
     if not example_path.exists():
         print("⚠️  Example file not found, skipping test")
@@ -166,7 +182,7 @@ def test_private_transfer_example():
         code = f.read()
     
     print("\n📝 Parsing private_transfer.ae...")
-    parser = AethelParser()
+    parser = Diotec360Parser()
     intent_map = parser.parse(code)
     
     print(f"✅ Intent parsed: {list(intent_map.keys())[0]}")
@@ -216,7 +232,7 @@ def test_zkp_summary():
 def run_all_tests():
     """Run all ZKP tests"""
     print("\n" + "="*70)
-    print("AETHEL v1.6.2 - GHOST PROTOCOL EXPANSION TESTS")
+    print("DIOTEC360 v1.6.2 - GHOST PROTOCOL EXPANSION TESTS")
     print("="*70)
     print("\nTesting Zero-Knowledge Proof functionality...")
     print("Proving without revealing. Verifying without seeing.")

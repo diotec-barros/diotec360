@@ -42,7 +42,7 @@ Expected: `"http_sync_enabled": true` (HTTP fallback activated)
 ### T+0s: Server Starts
 ```
 [STARTUP] Loading environment variables...
-[STARTUP] Initializing Aethel Lattice Streams...
+[STARTUP] Initializing DIOTEC360 LATTICE Streams...
 ```
 
 ### T+2s: P2P Initialization
@@ -104,13 +104,13 @@ Copy this ID.
 **Update `.env.node1.huggingface`**:
 ```bash
 # Replace PEER_ID_2 with actual Node 2 Peer ID
-AETHEL_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2ActualPeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
+DIOTEC360_P2P_BOOTSTRAP=/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2ActualPeerID,/ip4/backup.diotec360.com/tcp/9000/p2p/PEER_ID_3
 ```
 
 **Update `.env.node3.backup`**:
 ```bash
 # Replace PEER_ID_2 with actual Node 2 Peer ID
-AETHEL_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2ActualPeerID
+DIOTEC360_P2P_BOOTSTRAP=/ip4/huggingface.co/tcp/9000/p2p/PEER_ID_1,/ip4/api.diotec360.com/tcp/9000/p2p/QmNode2ActualPeerID
 ```
 
 ### Step 3: Activate Node 1 and Node 3
@@ -179,9 +179,9 @@ netstat -an | findstr 9000
 ```
 
 ### Issue: HTTP Fallback Not Activating
-**Solution**: Verify `AETHEL_LATTICE_NODES` is set in .env
+**Solution**: Verify `DIOTEC360_LATTICE_NODES` is set in .env
 ```bash
-echo %AETHEL_LATTICE_NODES%
+echo %DIOTEC360_LATTICE_NODES%
 ```
 
 ### Issue: Server Won't Start

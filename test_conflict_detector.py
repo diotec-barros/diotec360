@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Unit Tests for ConflictDetector - Synchrony Protocol v1.8.0
 
 Tests the ConflictDetector class methods:
@@ -6,15 +22,15 @@ Tests the ConflictDetector class methods:
 - resolve_conflicts() to determine execution order
 - Deterministic resolution strategy (transaction ID ordering)
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.8.0
 Date: February 4, 2026
 """
 
 import pytest
-from aethel.core.conflict_detector import ConflictDetector, ResolutionStrategy
-from aethel.core.synchrony import Transaction, ConflictType
-from aethel.core.dependency_graph import DependencyGraph
+from diotec360.core.conflict_detector import ConflictDetector, ResolutionStrategy
+from diotec360.core.synchrony import Transaction, ConflictType
+from diotec360.core.dependency_graph import DependencyGraph
 
 
 class TestConflictDetection:
@@ -257,7 +273,7 @@ class TestConflictResolution:
         """Resolution with single conflict"""
         detector = ConflictDetector()
         
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         conflict = Conflict(
             type=ConflictType.RAW,
             transaction_1="t1",
@@ -280,7 +296,7 @@ class TestConflictResolution:
         """Resolution uses deterministic transaction ID ordering"""
         detector = ConflictDetector()
         
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         
         # Create conflicts in different order
         conflicts = [
@@ -299,7 +315,7 @@ class TestConflictResolution:
         """Resolution with conflicts on multiple resources"""
         detector = ConflictDetector()
         
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         
         conflicts = [
             Conflict(ConflictType.WAW, "t1", "t2", "alice", "enforce_order"),
@@ -335,7 +351,7 @@ class TestConflictDetectorUtilities:
         """Summary with various conflict types"""
         detector = ConflictDetector()
         
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         
         detector.detected_conflicts = [
             Conflict(ConflictType.RAW, "t1", "t2", "alice", "enforce_order"),
@@ -355,7 +371,7 @@ class TestConflictDetectorUtilities:
         """Clear detected conflicts"""
         detector = ConflictDetector()
         
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         
         detector.detected_conflicts = [
             Conflict(ConflictType.RAW, "t1", "t2", "alice", "enforce_order"),
@@ -371,7 +387,7 @@ class TestResolutionStrategyConversion:
     
     def test_resolution_strategy_to_dict(self):
         """Test dictionary conversion"""
-        from aethel.core.synchrony import Conflict
+        from diotec360.core.synchrony import Conflict
         
         conflicts = [
             Conflict(ConflictType.RAW, "t1", "t2", "alice", "enforce_order"),
@@ -478,7 +494,7 @@ class TestProperty13ConflictDetectionCompleteness:
         t1, t2, shared_account = txn_data
         
         # Build dependency graph (required by conflict detector)
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         analyzer = DependencyAnalyzer()
         try:
             graph = analyzer.analyze([t1, t2])
@@ -635,7 +651,7 @@ class TestProperty14ConflictResolutionDeterminism:
         - No randomness, no race conditions
         - Fully reproducible results
         """
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         
         # Build dependency graph
         analyzer = DependencyAnalyzer()
@@ -779,7 +795,7 @@ class TestProperty14ConflictResolutionDeterminism:
             verify_conditions=[]
         )
         
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         
         # Test with order: [t1, t2, t3]
         analyzer1 = DependencyAnalyzer()
@@ -854,7 +870,7 @@ class TestProperty14ConflictResolutionDeterminism:
             ),
         ]
         
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         analyzer = DependencyAnalyzer()
         try:
             graph = analyzer.analyze(transactions)
@@ -906,7 +922,7 @@ class TestProperty14ConflictResolutionDeterminism:
             ),
         ]
         
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         analyzer = DependencyAnalyzer()
         graph = analyzer.analyze(transactions)
         
@@ -965,8 +981,8 @@ class TestProperty15ConflictReportingCompleteness:
         - Conflicts are accessible via multiple interfaces
         - No information is lost during reporting
         """
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
-        from aethel.core.synchrony import BatchResult
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.synchrony import BatchResult
         
         # Build dependency graph
         analyzer = DependencyAnalyzer()
@@ -1132,7 +1148,7 @@ class TestProperty15ConflictReportingCompleteness:
             verify_conditions=[]
         )
         
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         analyzer = DependencyAnalyzer()
         try:
             graph = analyzer.analyze([t1, t2, t3])
@@ -1176,7 +1192,7 @@ class TestProperty15ConflictReportingCompleteness:
             verify_conditions=[]
         )
         
-        from aethel.core.dependency_analyzer import DependencyAnalyzer
+        from diotec360.core.dependency_analyzer import DependencyAnalyzer
         analyzer = DependencyAnalyzer()
         try:
             graph = analyzer.analyze([t1, t2])

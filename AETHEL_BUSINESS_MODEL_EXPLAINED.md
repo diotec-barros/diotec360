@@ -72,7 +72,7 @@ Banco XYZ quer certificar sistema de pagamentos
 - Dashboard em tempo real
 
 **Como Funciona**:
-1. Empresa se cadastra no portal: `compliance.aethel-lang.org`
+1. Empresa se cadastra no portal: `compliance.diotec360-lang.org`
 2. Integra API da Aethel no sistema deles
 3. Paga mensalidade baseada em volume
 4. Recebe relatórios automáticos de compliance
@@ -88,7 +88,7 @@ Fintech ABC processa 10K transações/dia
 ```
 
 **Preço no Frontend**: SIM
-- Página de pricing: `https://aethel-lang.org/pricing`
+- Página de pricing: `https://diotec360-lang.org/pricing`
 - Planos claros:
   - Starter: $1K/mês (até 1K transações/dia)
   - Professional: $10K/mês (até 10K transações/dia)
@@ -120,7 +120,7 @@ Hedge Fund XYZ gerencia $100M
 ```
 
 **Preço no Frontend**: SIM
-- Página específica: `https://aethel-lang.org/trading`
+- Página específica: `https://diotec360-lang.org/trading`
 - Planos:
   - Individual: $500/mês
   - Team: $1K/mês (até 5 traders)
@@ -152,7 +152,7 @@ Empresa de saúde usa GPT para diagnósticos
 ```
 
 **Preço no Frontend**: SIM
-- Página: `https://aethel-lang.org/ai-safe`
+- Página: `https://diotec360-lang.org/ai-safe`
 - Planos:
   - Startup: $1K/mês (até 10K requests/mês)
   - Growth: $10K/mês (até 100K requests/mês)
@@ -185,7 +185,7 @@ Banco Central quer usar Aethel para CBDC
 ```
 
 **Preço no Frontend**: SIM
-- Página: `https://aethel-lang.org/support`
+- Página: `https://diotec360-lang.org/support`
 - Planos:
   - Basic: $1K/mês (email, 48h resposta)
   - Professional: $10K/mês (Slack, 4h resposta)
@@ -196,7 +196,7 @@ Banco Central quer usar Aethel para CBDC
 ## 3. Fluxo de Receita Completo
 
 ### Mês 1-3: Setup
-1. Criar website profissional: `https://aethel-lang.org`
+1. Criar website profissional: `https://diotec360-lang.org`
 2. Adicionar páginas de pricing
 3. Integrar sistema de pagamento (Stripe)
 4. Configurar portal de clientes
@@ -224,7 +224,7 @@ Banco Central quer usar Aethel para CBDC
 ## 4. Estrutura do Website
 
 ```
-https://aethel-lang.org/
+https://diotec360-lang.org/
 ├── Home
 │   ├── Hero: "Elimine Bugs com Matemática"
 │   ├── Demo interativo
@@ -374,7 +374,7 @@ Fundador, DIOTEC 360
 
 **Semana 1**: Descoberta
 - CTO da fintech lê artigo no blog da Aethel
-- Visita `https://aethel-lang.org`
+- Visita `https://diotec360-lang.org`
 - Testa demo interativo no frontend
 - Impressionado com verificação formal
 
@@ -461,7 +461,7 @@ Fundador, DIOTEC 360
 ## 9. Próximos Passos Imediatos
 
 ### Semana 1-2: Website
-- [ ] Registrar domínio: `aethel-lang.org`
+- [ ] Registrar domínio: `diotec360-lang.org`
 - [ ] Deploy frontend existente
 - [ ] Adicionar páginas de pricing
 - [ ] Integrar Stripe

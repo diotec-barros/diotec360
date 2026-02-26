@@ -1,6 +1,6 @@
-# Aethel-Studio Frontend Setup
+# diotec360-studio Frontend Setup
 
-Complete guide to set up and deploy the Aethel-Studio frontend.
+Complete guide to set up and deploy the diotec360-studio frontend.
 
 ---
 
@@ -8,7 +8,7 @@ Complete guide to set up and deploy the Aethel-Studio frontend.
 
 ```bash
 # Navigate to project root
-cd aethel-lang
+cd diotec360-lang
 
 # Create Next.js app
 npx create-next-app@latest frontend --typescript --tailwind --app --no-src-dir
@@ -145,7 +145,7 @@ vercel --prod
 1. Go to https://vercel.com
 2. Sign in with GitHub
 3. "New Project"
-4. Import `aethel-lang` repository
+4. Import `diotec360-lang` repository
 5. Set root directory to `frontend`
 6. Add environment variable: `NEXT_PUBLIC_API_URL`
 7. Deploy!

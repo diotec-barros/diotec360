@@ -1,7 +1,7 @@
 # 🚀 VERCEL DEPLOYMENT GUIDE - AETHEL STUDIO
 
 **Date:** 2026-02-12  
-**Version:** Aethel v3.0.5  
+**Version:** Diotec360 v3.0.5  
 **Frontend:** Next.js 14 + TypeScript
 
 ---
@@ -89,7 +89,7 @@ https://your-project-name.vercel.app
 
 Example:
 ```
-https://aethel-studio.vercel.app
+https://diotec360-studio.vercel.app
 ```
 
 ---
@@ -99,7 +99,7 @@ https://aethel-studio.vercel.app
 After deployment, your stack will be:
 
 **Frontend (Vercel):**
-- https://aethel-studio.vercel.app
+- https://diotec360-studio.vercel.app
 
 **Backend Triangle:**
 - Node 1 (HF): https://diotec-aethel.hf.space
@@ -112,7 +112,7 @@ After deployment, your stack will be:
 
 ### Test 1: Frontend Loads
 ```bash
-curl https://aethel-studio.vercel.app
+curl https://diotec360-studio.vercel.app
 ```
 **Expected:** HTML page loads successfully
 
@@ -123,7 +123,7 @@ Open browser console on your Vercel URL and check:
 - Examples load correctly
 
 ### Test 3: Code Verification
-1. Go to https://aethel-studio.vercel.app
+1. Go to https://diotec360-studio.vercel.app
 2. Click "Examples" → Select an example
 3. Click "Verify"
 4. Should see proof result
@@ -222,7 +222,7 @@ git push origin main
 
 Every pull request gets a preview URL:
 ```
-https://aethel-studio-git-feature-branch.vercel.app
+https://diotec360-studio-git-feature-branch.vercel.app
 ```
 
 ---
@@ -319,7 +319,7 @@ Vercel automatically optimizes for mobile:
 
 Test on mobile:
 ```
-https://aethel-studio.vercel.app
+https://diotec360-studio.vercel.app
 ```
 
 ---

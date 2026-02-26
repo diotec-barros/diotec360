@@ -1,4 +1,4 @@
-# Aethel v3.0 - Resumo Executivo Completo
+# Diotec360 v3.0 - Resumo Executivo Completo
 
 **Data**: 10 de Fevereiro de 2026  
 **Status**: ✅ PRODUCTION READY + ENTERPRISE READY  
@@ -9,7 +9,7 @@
 
 ## 🎯 Visão Geral
 
-O Aethel v3.0 está **100% completo** e pronto para lançamento comercial. Completamos com sucesso:
+O Diotec360 v3.0 está **100% completo** e pronto para lançamento comercial. Completamos com sucesso:
 
 1. ✅ **Implementação Técnica**: 27/27 tasks do Proof-of-Proof Consensus
 2. ✅ **Validação**: 36 propriedades de correção testadas
@@ -445,7 +445,7 @@ python scripts/deploy_testnet.py --nodes 100 --duration 24 --output data/testnet
 **Organização**: DIOTEC 360  
 **Fundador**: Dionísio Sebastião Barros  
 
-**Website**: https://aethel-lang.org (a criar)  
+**Website**: https://diotec360-lang.org (a criar)  
 **Email**: contact@diotec360.com  
 **GitHub**: https://github.com/AethelLang/aethel  
 
@@ -495,7 +495,7 @@ python scripts/deploy_testnet.py --nodes 100 --duration 24 --output data/testnet
 
 ## 🎯 Conclusão
 
-O Aethel v3.0 está **tecnicamente completo** e **pronto para o mercado**. 
+O Diotec360 v3.0 está **tecnicamente completo** e **pronto para o mercado**. 
 
 ### O Que Foi Alcançado
 
@@ -550,7 +550,7 @@ O Aethel não é apenas uma tecnologia - é um movimento para eliminar bugs de s
 
 ---
 
-**Documento**: Aethel v3.0 Complete Summary  
+**Documento**: Diotec360 v3.0 Complete Summary  
 **Versão**: 1.0  
 **Data**: 10 de Fevereiro de 2026  
 **Status**: ✅ PRODUCTION READY + ENTERPRISE READY

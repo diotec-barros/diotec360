@@ -133,14 +133,14 @@ Se NÃO vê mensagens `[LATTICE_P2P]`:
 **Solução:**
 ```cmd
 # Criar .env.nodeA manualmente
-echo AETHEL_P2P_ENABLED=true > .env.nodeA
-echo AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000 >> .env.nodeA
-echo AETHEL_P2P_TOPIC=aethel/lattice/v1 >> .env.nodeA
-echo AETHEL_P2P_BOOTSTRAP= >> .env.nodeA
-echo AETHEL_LATTICE_NODES= >> .env.nodeA
-echo AETHEL_STATE_DIR=.aethel_state_nodeA >> .env.nodeA
-echo AETHEL_VAULT_DIR=.aethel_vault_nodeA >> .env.nodeA
-echo AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeA >> .env.nodeA
+echo DIOTEC360_P2P_ENABLED=true > .env.nodeA
+echo DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000 >> .env.nodeA
+echo DIOTEC360_P2P_TOPIC=aethel/lattice/v1 >> .env.nodeA
+echo DIOTEC360_P2P_BOOTSTRAP= >> .env.nodeA
+echo DIOTEC360_LATTICE_NODES= >> .env.nodeA
+echo DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeA >> .env.nodeA
+echo DIOTEC360_VAULT_DIR=.DIOTEC360_vault_nodeA >> .env.nodeA
+echo DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_nodeA >> .env.nodeA
 ```
 
 ### P2P inicia mas não há gossip
@@ -158,7 +158,7 @@ echo AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeA >> .env.nodeA
    ```cmd
    type .env.nodeB | findstr BOOTSTRAP
    ```
-   Deve ser: `AETHEL_P2P_BOOTSTRAP=/ip4/127.0.0.1/tcp/9000/p2p/QmXXX...`
+   Deve ser: `DIOTEC360_P2P_BOOTSTRAP=/ip4/127.0.0.1/tcp/9000/p2p/QmXXX...`
 
 3. Testar publicação manual:
    ```cmd

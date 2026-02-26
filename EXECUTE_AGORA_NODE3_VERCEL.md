@@ -87,10 +87,10 @@ Depois de executar, você terá:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL v3.0.5 - TRIANGLE OPERATIONAL            │
+│         Diotec360 v3.0.5 - TRIANGLE OPERATIONAL            │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  Node 1: https://diotec-aethel-judge.hf.space          │
+│  Node 1: https://diotec-diotec360-judge.hf.space          │
 │  Node 2: https://aethel.diotec360.com                  │
 │  Node 3: https://backup.diotec360.com ✨ VERCEL        │
 │                                                         │

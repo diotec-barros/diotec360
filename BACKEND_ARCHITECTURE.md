@@ -1,15 +1,15 @@
-# 🏗️ Arquitetura Backend - Aethel v3.0.3
+# 🏗️ Arquitetura Backend - Diotec360 v3.0.3
 
 ## 📋 Visão Geral
 
-O Aethel possui **2 backends complementares** com funções distintas:
+O Diotec360 possui **2 backends complementares** com funções distintas:
 
 ---
 
 ## 1️⃣ API Backend (api/main.py) - SERVIDOR PRINCIPAL
 
 ### Função
-Servidor FastAPI que expõe todos os serviços do Aethel via REST API.
+Servidor FastAPI que expõe todos os serviços do Diotec360 via REST API.
 
 ### Responsabilidades
 - ✅ Verificação formal (Z3 Solver)
@@ -43,9 +43,9 @@ GET  /api/oracle/list           # Listar oracles
 PORT=8000
 
 # Variáveis de ambiente necessárias
-AETHEL_LATTICE_NODES=http://node1:8000,http://node2:8000
-AETHEL_P2P_ENABLED=true
-AETHEL_P2P_BOOTSTRAP_PEERS=/ip4/...
+DIOTEC360_LATTICE_NODES=http://node1:8000,http://node2:8000
+DIOTEC360_P2P_ENABLED=true
+DIOTEC360_P2P_BOOTSTRAP_PEERS=/ip4/...
 ```
 
 ### Como Executar
@@ -59,7 +59,7 @@ uvicorn api.main:app --host 0.0.0.0 --port 8000
 
 ---
 
-## 2️⃣ Generator Backend (aethel_generator.py) - FERRAMENTA CLI
+## 2️⃣ Generator Backend (DIOTEC360_generator.py) - FERRAMENTA CLI
 
 ### Função
 Compilador standalone que transforma código Aethel em Rust verificado.
@@ -74,7 +74,7 @@ Compilador standalone que transforma código Aethel em Rust verificado.
 
 ### Uso
 ```python
-from aethel_generator import AethelGenerator
+from DIOTEC360_generator import AethelGenerator
 
 # Criar gerador
 gen = AethelGenerator(
@@ -84,7 +84,7 @@ gen = AethelGenerator(
 
 # Compilar código
 result = gen.compile(
-    aethel_code=code,
+    DIOTEC360_code=code,
     intent_name="transfer",
     output_file="output.rs"
 )
@@ -123,9 +123,9 @@ Frontend (Next.js) → API Backend (api/main.py)
 
 ### Cenário 2: Desenvolvimento Local
 ```
-Developer → Generator (aethel_generator.py) → Rust Artifacts
+Developer → Generator (DIOTEC360_generator.py) → Rust Artifacts
 ```
-**Usar**: `aethel_generator.py` como ferramenta CLI
+**Usar**: `DIOTEC360_generator.py` como ferramenta CLI
 
 ### Cenário 3: Lattice Triangle (3 Nós)
 ```
@@ -139,7 +139,7 @@ Node 3 (Backup)      → api/main.py:8002
 
 ## 📊 Comparação Rápida
 
-| Característica | api/main.py | aethel_generator.py |
+| Característica | api/main.py | DIOTEC360_generator.py |
 |----------------|-------------|---------------------|
 | Tipo | Servidor Web | CLI Tool |
 | Protocolo | HTTP/REST | Python API |
@@ -158,10 +158,10 @@ Node 3 (Backup)      → api/main.py:8002
 **USE**: `api/main.py` em todos os 3 nós
 
 ### Para Desenvolvimento
-**USE**: `aethel_generator.py` para compilar contratos localmente
+**USE**: `DIOTEC360_generator.py` para compilar contratos localmente
 
 ### Integração
-O `api/main.py` pode chamar `aethel_generator.py` internamente quando precisar de geração de código completa com IA.
+O `api/main.py` pode chamar `DIOTEC360_generator.py` internamente quando precisar de geração de código completa com IA.
 
 ---
 

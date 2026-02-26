@@ -194,7 +194,7 @@ New Ghost Identity (v2.2.3):
 
 1. Create `TASK_2_2_3_GHOST_IDENTITY_COMPLETE.md`
 2. Update `README.md` with v2.2.3 info
-3. Create `AETHEL_V2_2_3_EXECUTIVE_SUMMARY.md`
+3. Create `DIOTEC360_V2_2_3_EXECUTIVE_SUMMARY.md`
 4. Create final session report
 
 ---
@@ -270,7 +270,7 @@ Layer 1: Formal Verification (v1.9.0)
 1. `V1_6_0_GHOST_PROTOCOL_SPEC.md` - Original Ghost Protocol spec
 2. `V1_6_2_GHOST_PROTOCOL_EXPANSION.md` - Ghost Protocol expansion
 3. `ZKP_GUIDE.md` - Zero-Knowledge Proof guide
-4. `AETHEL_V2_2_0_SOVEREIGN_IDENTITY_SPEC.md` - Current spec
+4. `DIOTEC360_V2_2_0_SOVEREIGN_IDENTITY_SPEC.md` - Current spec
 
 ---
 

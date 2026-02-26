@@ -9,7 +9,7 @@
 │ PROJECT STATUS                                                               │
 ├──────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
-│  Version:        Aethel v0.8                                                 │
+│  Version:        Diotec360 v0.8                                                 │
 │  Epoch:          2 - The Sovereign Infrastructure                            │
 │  Phase:          1 - Deterministic Executor                                  │
 │  Status:         🟢 OPERATIONAL                                              │
@@ -245,7 +245,7 @@
 ║  The Runtime proves it stays safe.                                           ║
 ║                                                                              ║
 ║  Status: 🟢 OPERATIONAL                                                      ║
-║  Version: Aethel v0.8                                                        ║
+║  Version: Diotec360 v0.8                                                        ║
 ║  Epoch: 2 - The Sovereign Infrastructure                                     ║
 ║  Phase: 1 - Deterministic Executor                                           ║
 ║  Date: 2026-02-02                                                            ║

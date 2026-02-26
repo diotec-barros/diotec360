@@ -186,7 +186,7 @@ Implementar:
 
 ### Longo Prazo: Integração com Lattice
 ```python
-# Integrar Sovereign Treasury com Aethel Lattice
+# Integrar Sovereign Treasury com DIOTEC360 LATTICE
 
 1. Distribuir compliance checks pela rede P2P
 2. Sincronizar relatórios entre nós

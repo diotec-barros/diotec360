@@ -1,4 +1,4 @@
-# Aethel v1.0 - Progress Report
+# Diotec360 v1.0 - Progress Report
 
 **Date**: February 2, 2026  
 **Session**: Context Transfer Continuation  
@@ -9,7 +9,7 @@
 ## 🎯 Mission Accomplished
 
 ### What Was Requested
-Continue the Aethel v1.0 project and proceed with web deployment ("AVANÇA").
+Continue the Diotec360 v1.0 project and proceed with web deployment ("AVANÇA").
 
 ### What Was Delivered
 ✅ **Complete web-based IDE (Aethel Studio)** - Production-ready frontend application
@@ -44,7 +44,7 @@ Continue the Aethel v1.0 project and proceed with web deployment ("AVANÇA").
 - ✅ `frontend/README.md` - Setup and development guide
 - ✅ `frontend/DEPLOYMENT.md` - Vercel deployment instructions
 - ✅ `FRONTEND_COMPLETE.md` - Technical completion report
-- ✅ `AETHEL_STUDIO_LAUNCH.md` - Launch readiness document
+- ✅ `DIOTEC360_STUDIO_LAUNCH.md` - Launch readiness document
 - ✅ `CURRENT_STATUS.md` - Project status overview
 - ✅ `FRONTEND_SETUP.md` - Detailed setup instructions
 - ✅ `PROGRESS_REPORT.md` - This file
@@ -61,7 +61,7 @@ Continue the Aethel v1.0 project and proceed with web deployment ("AVANÇA").
 ### 4. Git Repository
 **Commits**:
 - ✅ Committed 29 files (8,803 insertions)
-- ✅ Pushed to GitHub: https://github.com/diotec-barros/aethel-lang
+- ✅ Pushed to GitHub: https://github.com/diotec-barros/diotec360-lang
 - ✅ Commit message: "feat: Add Aethel Studio web frontend"
 
 ---
@@ -270,7 +270,7 @@ python -m uvicorn main:app --reload
 3. **CURRENT_STATUS.md** - Project status overview
 
 ### Launch-Facing
-1. **AETHEL_STUDIO_LAUNCH.md** - Launch readiness document
+1. **DIOTEC360_STUDIO_LAUNCH.md** - Launch readiness document
 2. **PROGRESS_REPORT.md** - This progress report
 
 ---
@@ -301,7 +301,7 @@ python -m uvicorn main:app --reload
 ## 🌟 Impact
 
 ### Before This Session
-- ✅ Aethel v1.0 core complete
+- ✅ Diotec360 v1.0 core complete
 - ✅ 13 modules implemented
 - ✅ 9 test suites passing
 - ✅ Documentation written
@@ -310,7 +310,7 @@ python -m uvicorn main:app --reload
 - ❌ No web interface
 
 ### After This Session
-- ✅ Aethel v1.0 core complete
+- ✅ Diotec360 v1.0 core complete
 - ✅ 13 modules implemented
 - ✅ 9 test suites passing
 - ✅ Documentation written
@@ -348,9 +348,9 @@ python -m uvicorn main:app --reload
 ## 📞 Resources
 
 ### Live URLs (After Deployment)
-- **Frontend**: https://aethel-lang.vercel.app (pending)
+- **Frontend**: https://diotec360-lang.vercel.app (pending)
 - **Backend**: https://aethel-api.up.railway.app (pending)
-- **Repository**: https://github.com/diotec-barros/aethel-lang ✅
+- **Repository**: https://github.com/diotec-barros/diotec360-lang ✅
 
 ### Local URLs (Now)
 - **Frontend**: http://localhost:3000 ✅ Running
@@ -360,7 +360,7 @@ python -m uvicorn main:app --reload
 - **Setup**: frontend/README.md
 - **Deployment**: frontend/DEPLOYMENT.md
 - **Status**: CURRENT_STATUS.md
-- **Launch**: AETHEL_STUDIO_LAUNCH.md
+- **Launch**: DIOTEC360_STUDIO_LAUNCH.md
 
 ---
 

@@ -387,7 +387,7 @@ O que você acabou de testemunhar é o primeiro passo da transformação da Aeth
 - **Hoje**: Aethel roda em 1 servidor (Hugging Face)
 - **Amanhã**: Aethel roda em 3 servidores (HF + Vercel + Railway)
 - **Próximo Mês**: Aethel roda em 100+ servidores (global)
-- **Endgame**: Aethel é um organismo imortal que não pode ser morto
+- **Endgame**: Diotec360 é um organismo imortal que não pode ser morto
 
 ### O Valor Comercial
 

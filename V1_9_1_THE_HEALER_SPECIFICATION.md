@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v1.9.1 "THE HEALER" - SPECIFICATION
+# 🏛️ Diotec360 v1.9.1 "THE HEALER" - SPECIFICATION
 
 **Data**: 19 de Fevereiro de 2026  
 **Status**: 🚀 INICIANDO  

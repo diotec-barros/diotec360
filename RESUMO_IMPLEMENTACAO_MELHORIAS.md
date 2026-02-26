@@ -1,4 +1,4 @@
-# Resumo da Implementação - Melhorias do Aethel v3.0
+# Resumo da Implementação - Melhorias do Diotec360 v3.0
 
 **Data**: 11 de Fevereiro de 2026  
 **Status**: ✅ 2/8 Melhorias Implementadas  
@@ -39,7 +39,7 @@
 **Ações**:
 1. Deploy frontend em Vercel
 2. Deploy backend em Railway
-3. Configurar domínio `aethel-lang.org`
+3. Configurar domínio `diotec360-lang.org`
 4. Configurar SSL
 
 **Tempo Estimado**: 30-60 minutos
@@ -84,7 +84,7 @@
 **Status**: PENDENTE  
 **Ações**:
 1. Gerar OpenAPI spec
-2. Publicar em `docs.aethel-lang.org`
+2. Publicar em `docs.diotec360-lang.org`
 3. Criar quickstart guides
 
 **Tempo Estimado**: 3 horas

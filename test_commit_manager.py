@@ -1,9 +1,25 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Unit Tests for Commit Manager - Synchrony Protocol v1.8.0
 
 Tests atomic commit/rollback functionality with comprehensive validation.
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.8.0
 Date: February 4, 2026
 """
@@ -12,8 +28,8 @@ import pytest
 import time
 from typing import Dict, List, Any
 
-from aethel.core.commit_manager import CommitManager
-from aethel.core.synchrony import (
+from diotec360.core.commit_manager import CommitManager
+from diotec360.core.synchrony import (
     Transaction,
     ExecutionResult,
     ExecutionEvent,
@@ -23,7 +39,7 @@ from aethel.core.synchrony import (
     ConservationViolationError,
     OracleValidationError
 )
-from aethel.core.conservation import ConservationResult
+from diotec360.core.conservation import ConservationResult
 
 
 # ============================================================================

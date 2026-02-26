@@ -1,4 +1,4 @@
-# 🌌 AETHEL v1.9.0 "APEX" - GENESIS RELEASE
+# 🌌 Diotec360 v1.9.0 "APEX" - GENESIS RELEASE
 
 **Release Date**: February 7, 2026  
 **Codename**: APEX (The Age of Facts)  
@@ -13,7 +13,7 @@
 
 For 70 years, humanity has accepted that software has bugs. We test, we audit, we hope. But hope is not a strategy. Testing is not proof. Audits are not guarantees.
 
-**Aethel v1.9.0 "Apex" is the first production system where bugs are mathematically impossible.**
+**Diotec360 v1.9.0 "Apex" is the first production system where bugs are mathematically impossible.**
 
 ---
 
@@ -160,7 +160,7 @@ Demonstrates:
 
 We will approach 5 specific companies with this message:
 
-> **"Your company spends millions on audits and insurance. Aethel v1.9.0 reduces that cost to zero through formal mathematical proof. We have the first Financial Core that is physically impossible to fail. Want to be the first to operate in the Age of Certainty?"**
+> **"Your company spends millions on audits and insurance. Diotec360 v1.9.0 reduces that cost to zero through formal mathematical proof. We have the first Financial Core that is physically impossible to fail. Want to be the first to operate in the Age of Certainty?"**
 
 ### Target Companies
 
@@ -300,7 +300,7 @@ aethel --version  # v1.9.0 "Apex"
 Start writing code that cannot have bugs.
 
 ### For Companies
-Email: team@aethel-lang.org  
+Email: team@diotec360-lang.org  
 Subject: "Pioneer Program - [Company Name]"
 
 Be one of the first 5 companies to operate in the Age of Facts.
@@ -317,7 +317,7 @@ We welcome scrutiny. Truth fears no investigation.
 
 ## 💎 THE VERDICT
 
-**Aethel v1.9.0 "Apex" is production-ready.**
+**Diotec360 v1.9.0 "Apex" is production-ready.**
 
 - ✅ 50,000+ lines of proven code
 - ✅ 145 tests passing
@@ -333,7 +333,7 @@ We welcome scrutiny. Truth fears no investigation.
 
 ## 🌌 THE VISION
 
-**Today**: Aethel v1.9.0 launches  
+**Today**: Diotec360 v1.9.0 launches  
 **2026**: 1,000 companies use Aethel  
 **2027**: Aethel blockchain launches (v2.0.0)  
 **2028**: $10B+ locked in Aethel protocols  
@@ -373,15 +373,15 @@ We believe:
 
 ---
 
-📚⚖️💎 **AETHEL v1.9.0 APEX - THE FIRST STONE OF THE EMPIRE** 💎⚖️📚
+📚⚖️💎 **Diotec360 v1.9.0 APEX - THE FIRST STONE OF THE EMPIRE** 💎⚖️📚
 
 ---
 
 ## 🔗 LINKS
 
-- **GitHub**: https://github.com/aethel-lang/aethel-core
-- **Documentation**: https://docs.aethel-lang.org
-- **Website**: https://aethel-lang.org
+- **GitHub**: https://github.com/diotec360-lang/aethel-core
+- **Documentation**: https://docs.diotec360-lang.org
+- **Website**: https://diotec360-lang.org
 - **Twitter**: @AethelLang
 - **Discord**: https://discord.gg/aethel
 

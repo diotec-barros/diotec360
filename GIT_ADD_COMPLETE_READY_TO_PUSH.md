@@ -41,7 +41,7 @@ All deployment files, configurations, and documentation are staged and ready to 
 - ✅ `PRODUCTION_DEPLOY_READY.md` - Deployment readiness
 
 ### Core Features
-- ✅ Aethel v3.0.5 core updates
+- ✅ Diotec360 v3.0.5 core updates
 - ✅ HTTP-Only Resilience Mode
 - ✅ Hybrid Sync Protocol
 - ✅ Merkle State Store
@@ -56,7 +56,7 @@ All deployment files, configurations, and documentation are staged and ready to 
 
 ```bash
 # Commit all staged files
-git commit -m "feat: Deploy Aethel v3.0.5 - Complete Stack with Triangle Backend"
+git commit -m "feat: Deploy Diotec360 v3.0.5 - Complete Stack with Triangle Backend"
 
 # Push to GitHub
 git push origin main
@@ -101,7 +101,7 @@ python verify_production_triangle.py
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  FRONTEND (Vercel)                                      │
-│  └─ https://aethel-studio.vercel.app                   │
+│  └─ https://diotec360-studio.vercel.app                   │
 │                                                         │
 │  BACKEND TRIANGLE (HTTP-Only Resilience)                │
 │  ├─ Node 1: https://diotec-aethel.hf.space            │
@@ -166,7 +166,7 @@ python verify_production_triangle.py
 
 ### Commit & Push
 ```bash
-git commit -m "feat: Deploy Aethel v3.0.5 - Complete Stack"
+git commit -m "feat: Deploy Diotec360 v3.0.5 - Complete Stack"
 git push origin main
 ```
 
@@ -191,7 +191,7 @@ curl https://api.diotec360.com/health
 curl https://backup.diotec360.com/health
 
 # Frontend
-curl https://aethel-studio.vercel.app
+curl https://diotec360-studio.vercel.app
 
 # Complete verification
 python verify_production_triangle.py
@@ -260,7 +260,7 @@ Once deployment is complete:
 
 ```bash
 # 1. Commit & Push
-git commit -m "feat: Deploy Aethel v3.0.5 - Complete Stack with Triangle Backend"
+git commit -m "feat: Deploy Diotec360 v3.0.5 - Complete Stack with Triangle Backend"
 git push origin main
 
 # 2. Deploy Backend (follow prompts)

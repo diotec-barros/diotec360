@@ -236,13 +236,13 @@ The Overflow Sentinel v1.4.1 correctly detects:
 ### Hugging Face Space
 
 ```bash
-cd aethel-judge
+cd diotec360-judge
 git add aethel/core/overflow.py
 git commit -m "HOTFIX v1.4.1: Fix overflow detection to check operation results"
 git push
 ```
 
-**URL**: https://huggingface.co/spaces/diotec/aethel-judge
+**URL**: https://huggingface.co/spaces/diotec/diotec360-judge
 **Status**: Deploying...
 
 ### GitHub Repository
@@ -253,7 +253,7 @@ git commit -m "HOTFIX v1.4.1: Critical overflow detection fix"
 git push origin main
 ```
 
-**URL**: https://github.com/diotec-barros/aethel-lang
+**URL**: https://github.com/diotec-barros/diotec360-lang
 
 ---
 

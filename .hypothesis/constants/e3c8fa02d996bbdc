@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\moe\data_models.py
+# hypothesis_version: 6.151.5
+
+[0.0, 'APPROVE', 'ExpertVerdict', 'MOEResult', 'REJECT', 'activated_experts', 'consensus', 'expert_verdicts', 'overall_confidence', 'total_latency_ms', 'transaction_id']

@@ -20,7 +20,7 @@
 ═══════════════════════════════════════════════════════════════════
 
   Node 1 (Hugging Face):
-  └─ https://diotec-aethel-judge.hf.space
+  └─ https://diotec-diotec360-judge.hf.space
      └─ Infraestrutura Elite Global
 
   Node 2 (SOVEREIGN API): ⭐
@@ -53,7 +53,7 @@
      curl https://api.diotec360.com/health
 
   3. Testar Node 1 (Hugging Face):
-     curl https://diotec-aethel-judge.hf.space/health
+     curl https://diotec-diotec360-judge.hf.space/health
 
   4. Testar Node 3 (Backup):
      curl https://backup.diotec360.com/health
@@ -70,10 +70,10 @@
      └─ NEXT_PUBLIC_API_URL=https://api.diotec360.com
 
   ✅ .env.node2.local
-     └─ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,...
+     └─ DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,...
 
   ✅ .env.node3.backup
-     └─ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,...
+     └─ DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,...
 
   ✅ verify_production_triangle.py
      └─ NODES = [("Node 2 (Sovereign API)", "https://api.diotec360.com")]

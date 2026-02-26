@@ -1,4 +1,4 @@
-# 🏛️ AETHEL v1.9.0 "THE GUARD" - Executive Pitch
+# 🏛️ Diotec360 v1.9.0 "THE GUARD" - Executive Pitch
 
 **Para**: Conselho de Administração - BAI/BFA  
 **De**: DIOTEC 360 - Soberania Tecnológica  
@@ -33,7 +33,7 @@ transfer(account_A, account_B, $1M)
 
 ---
 
-## 💡 A SOLUÇÃO: AETHEL v1.9.0 "THE GUARD"
+## 💡 A SOLUÇÃO: Diotec360 v1.9.0 "THE GUARD"
 
 ### A Única Plataforma que Prova Matematicamente que Seu Código é Seguro
 
@@ -466,7 +466,7 @@ Email: kiro@diotec360.com
 - Custo operacional de $18M/ano
 - Compliance manual
 
-✅ **Adotar Aethel v1.9.0**:
+✅ **Adotar Diotec360 v1.9.0**:
 - Risco matematicamente ZERO
 - Overhead de 0.6-2.8%
 - Custo operacional de $550K/ano

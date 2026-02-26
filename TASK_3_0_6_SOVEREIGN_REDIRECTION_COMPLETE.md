@@ -27,7 +27,7 @@
 
 **2. Transparência Técnica**
 - URL direta do HF Space mostra distribuição real
-- Aethel é uma rede distribuída que utiliza infraestruturas de elite
+- Diotec360 é uma rede distribuída que utiliza infraestruturas de elite
 - Honestidade sobre a arquitetura gera confiança
 
 **3. Resiliência Real**
@@ -41,7 +41,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│      AETHEL TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE  │
+│      DIOTEC360 TRIANGLE OF TRUTH - SOVEREIGN ARCHITECTURE  │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel)                                   │
@@ -51,7 +51,7 @@
 │  🔺 BACKEND TRIANGLE (HTTP-Only Resilience)             │
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Prova Distribuída)        │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │     └─ Infraestrutura Elite Global                 │
 │  │                                                      │
 │  ├─ 🔵 Node 2: SOVEREIGN API (Nexo Central) ⭐         │
@@ -82,7 +82,7 @@
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
 
 # Triangle of Truth - Distributed Resilience
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ```
 
 **Mudança:** Frontend agora conecta ao domínio soberano `api.diotec360.com`
@@ -94,7 +94,7 @@ NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.di
 
 ```env
 # HTTP Sync Fallback Nodes (Triangle Resilience)
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ```
 
 **Mudança:** Node 2 sincroniza com HF e Backup usando URLs nativas
@@ -106,7 +106,7 @@ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec3
 
 ```env
 # HTTP Sync Fallback Nodes (Triangle Resilience)
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://api.diotec360.com
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://api.diotec360.com
 ```
 
 **Mudança:** Node 3 sincroniza com HF e API Soberana
@@ -118,7 +118,7 @@ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://api.diotec360.
 
 ```python
 NODES = [
-    ("Node 1 (Hugging Face)", "https://diotec-aethel-judge.hf.space"),
+    ("Node 1 (Hugging Face)", "https://diotec-diotec360-judge.hf.space"),
     ("Node 2 (Sovereign API)", "https://api.diotec360.com"),
     ("Node 3 (Vercel Backup)", "https://backup.diotec360.com")
 ]
@@ -203,7 +203,7 @@ curl https://api.diotec360.com/health
 
 ### 3. Testar Node 1 (Hugging Face)
 ```bash
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 **Esperado:**
@@ -282,7 +282,7 @@ Se um caminho falha, os outros continuam operando.
 
 Usar a URL nativa do HF não é fraqueza - é honestidade.
 
-Mostra que Aethel é uma rede verdadeiramente distribuída que utiliza o melhor de cada provedor.
+Mostra que Diotec360 é uma rede verdadeiramente distribuída que utiliza o melhor de cada provedor.
 
 ---
 
@@ -299,7 +299,7 @@ Mostra que Aethel é uma rede verdadeiramente distribuída que utiliza o melhor 
 ### Depois (Arquitetura Soberana)
 ```
 ✅ api.diotec360.com → Seu domínio soberano
-✅ diotec-aethel-judge.hf.space → URL nativa confiável
+✅ diotec-diotec360-judge.hf.space → URL nativa confiável
 ✅ backup.diotec360.com → Redundância real
 ✅ Diversidade de caminhos
 ✅ Transparência técnica
@@ -316,7 +316,7 @@ Mostra que Aethel é uma rede verdadeiramente distribuída que utiliza o melhor 
 - [x] Atualizar `verify_production_triangle.py`
 - [ ] Verificar DNS: `api.diotec360.com`
 - [ ] Testar Node 2: `curl https://api.diotec360.com/health`
-- [ ] Testar Node 1: `curl https://diotec-aethel-judge.hf.space/health`
+- [ ] Testar Node 1: `curl https://diotec-diotec360-judge.hf.space/health`
 - [ ] Testar Node 3: `curl https://backup.diotec360.com/health`
 - [ ] Executar: `python verify_production_triangle.py`
 - [ ] Confirmar: Triangle sincronizado ✅

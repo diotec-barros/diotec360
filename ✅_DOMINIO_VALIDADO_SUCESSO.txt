@@ -6,7 +6,7 @@ STATUS VERCEL:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ aethel.diotec360.com → Valid Configuration → Production
-✅ aethel-lang.vercel.app → Valid Configuration → Production
+✅ diotec360-lang.vercel.app → Valid Configuration → Production
 
 CONQUISTAS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -26,7 +26,7 @@ ARQUITETURA TRIANGLE OF TRUTH COMPLETA:
 │  ✅ https://aethel.diotec360.com                            │
 │                                                             │
 │  Triangle of Truth (3 Nodes):                               │
-│  ✅ Node 1: https://diotec-aethel-judge.hf.space            │
+│  ✅ Node 1: https://diotec-diotec360-judge.hf.space            │
 │  ✅ Node 2: https://api.diotec360.com (Sovereign)           │
 │  ✅ Node 3: https://backup.diotec360.com (Backup)           │
 │                                                             │
@@ -52,7 +52,7 @@ O frontend deve conectar automaticamente com:
 3️⃣ TESTAR TRIANGLE OF TRUTH
 ────────────────────────────────────────────────────────────────
 Verificar se os 3 nodes estão respondendo:
-• Node 1 (HF): https://diotec-aethel-judge.hf.space/health
+• Node 1 (HF): https://diotec-diotec360-judge.hf.space/health
 • Node 2 (Sovereign): https://api.diotec360.com/health
 • Node 3 (Backup): https://backup.diotec360.com/health
 
@@ -83,7 +83,7 @@ ARQUITETURA FINAL:
 Frontend:  https://aethel.diotec360.com (Vercel) ✅
            ↓ conecta com ↓
 API Node2: https://api.diotec360.com (Sovereign) ✅
-API Node1: https://diotec-aethel-judge.hf.space (HF) ✅
+API Node1: https://diotec-diotec360-judge.hf.space (HF) ✅
 API Node3: https://backup.diotec360.com (Backup) ✅
 
 ═══════════════════════════════════════════════════════════════

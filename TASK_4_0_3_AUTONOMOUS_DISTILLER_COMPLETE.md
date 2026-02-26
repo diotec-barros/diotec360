@@ -47,7 +47,7 @@ Where:
 ```
 
 ### Response Type Detection
-- AETHEL_CODE: Código Aethel com provas
+- DIOTEC360_CODE: Código Aethel com provas
 - PYTHON_CODE: Código Python
 - MATHEMATICAL: Equações matemáticas
 - LOGICAL: Lógica formal
@@ -93,7 +93,7 @@ python demo_autonomous_distiller.py
    └─ Teacher APIs (GPT-4, Claude, DeepSeek)
 
 2. Detect Response Type
-   ├─ AETHEL_CODE
+   ├─ DIOTEC360_CODE
    ├─ PYTHON_CODE
    ├─ MATHEMATICAL
    ├─ LOGICAL

@@ -107,14 +107,14 @@ frontend/
 1. Go to https://railway.app
 2. Sign in with GitHub
 3. "New Project" → "Deploy from GitHub repo"
-4. Select `aethel-lang` repository
+4. Select `diotec360-lang` repository
 5. Railway auto-detects Dockerfile in `api/`
 6. Deploy!
 7. Copy the URL (e.g., `https://aethel-api.up.railway.app`)
 
 #### Deploy Frontend (Vercel)
 1. Go to https://vercel.com
-2. "New Project" → Import `aethel-lang`
+2. "New Project" → Import `diotec360-lang`
 3. Set **Root Directory**: `frontend`
 4. Add environment variable:
    - `NEXT_PUBLIC_API_URL` = `https://aethel-api.up.railway.app`
@@ -252,7 +252,7 @@ The frontend is fully functional and ready for deployment.
 - [WEB_DEPLOYMENT_PLAN.md](WEB_DEPLOYMENT_PLAN.md) - Architecture
 
 ### Links
-- **Repository**: https://github.com/diotec-barros/aethel-lang
+- **Repository**: https://github.com/diotec-barros/diotec360-lang
 - **Frontend**: http://localhost:3000 (local)
 - **Backend**: http://localhost:8000 (local)
 - **Railway**: https://railway.app

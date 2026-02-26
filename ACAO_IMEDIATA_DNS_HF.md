@@ -25,7 +25,7 @@ Vá para: https://vercel.com/dashboard
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -39,11 +39,11 @@ Após 2-5 minutos de propagação DNS:
 
 **Antes:**
 - ❌ https://hf.diotec360.com (não funciona)
-- ✅ https://diotec-aethel-judge.hf.space (funciona)
+- ✅ https://diotec-diotec360-judge.hf.space (funciona)
 
 **Depois:**
 - ✅ https://hf.diotec360.com (funciona - SEU DOMÍNIO!)
-- ✅ https://diotec-aethel-judge.hf.space (ainda funciona)
+- ✅ https://diotec-diotec360-judge.hf.space (ainda funciona)
 
 ---
 
@@ -51,7 +51,7 @@ Após 2-5 minutos de propagação DNS:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel)                                   │
@@ -61,8 +61,8 @@ Após 2-5 minutos de propagação DNS:
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
 │  │  ├─ URL: https://hf.diotec360.com ⭐ NOVO!          │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  └─ Space: diotec/aethel-judge                     │
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  └─ Space: diotec/diotec360-judge                     │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Diotec360 (Principal)                   │
 │  │  ├─ URL: https://node2.diotec360.com                │
@@ -83,7 +83,7 @@ Após 2-5 minutos de propagação DNS:
 
 | Nome | Tipo | Valor | TTL | Status | Função |
 |------|------|-------|-----|--------|--------|
-| `hf` | CNAME | `diotec-aethel-judge.hf.space` | 60 | ⏳ PENDENTE | Node 1 (HF) |
+| `hf` | CNAME | `diotec-diotec360-judge.hf.space` | 60 | ⏳ PENDENTE | Node 1 (HF) |
 | `node2` | A | `[IP servidor]` | 60 | ✅ OK | Node 2 (Local) |
 | `backup` | CNAME | `cname.vercel-dns.com` | 60 | ✅ OK | Node 3 (Vercel) |
 | `aethel` | CNAME | `cname.vercel-dns.com` | 3600 | ✅ OK | Frontend |
@@ -150,7 +150,7 @@ curl https://backup.diotec360.com/api/lattice/state
 ## 🎯 CHECKLIST
 
 - [ ] Acessar Vercel Dashboard
-- [ ] Adicionar registro CNAME: `hf` → `diotec-aethel-judge.hf.space`
+- [ ] Adicionar registro CNAME: `hf` → `diotec-diotec360-judge.hf.space`
 - [ ] Aguardar 2-5 minutos (propagação DNS)
 - [ ] Testar: `curl https://hf.diotec360.com/health`
 - [ ] Executar: `python verify_production_triangle.py`
@@ -162,7 +162,7 @@ curl https://backup.diotec360.com/api/lattice/state
 
 **Benefícios do subdomínio personalizado:**
 
-1. **Branding Profissional**: `hf.diotec360.com` vs `diotec-aethel-judge.hf.space`
+1. **Branding Profissional**: `hf.diotec360.com` vs `diotec-diotec360-judge.hf.space`
 2. **Controle Total**: Você controla o DNS, pode mudar o backend quando quiser
 3. **Consistência**: Todos os nós usam `*.diotec360.com`
 4. **Confiança**: Domínio próprio passa mais credibilidade
@@ -191,7 +191,7 @@ A: Não! O CNAME funciona automaticamente. O HF aceita qualquer domínio apontan
 A: 2-5 minutos com TTL 60. Pode levar até 1 hora em casos raros.
 
 **Q: Posso usar os dois URLs?**  
-A: Sim! Tanto `hf.diotec360.com` quanto `diotec-aethel-judge.hf.space` funcionarão.
+A: Sim! Tanto `hf.diotec360.com` quanto `diotec-diotec360-judge.hf.space` funcionarão.
 
 **Q: E se eu quiser mudar depois?**  
 A: Basta atualizar o registro CNAME no Vercel para apontar para outro servidor.
@@ -208,7 +208,7 @@ A: Basta atualizar o registro CNAME no Vercel para apontar para outro servidor.
 4. Adicione:
    - Type: `CNAME`
    - Name: `hf`
-   - Value: `diotec-aethel-judge.hf.space`
+   - Value: `diotec-diotec360-judge.hf.space`
    - TTL: `60`
 5. Clique em "Save"
 

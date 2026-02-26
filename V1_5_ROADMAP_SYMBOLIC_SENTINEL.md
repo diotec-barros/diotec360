@@ -1,4 +1,4 @@
-# 🔮 Aethel v1.5.0 - The Symbolic Sentinel
+# 🔮 Diotec360 v1.5.0 - The Symbolic Sentinel
 
 ## EPOCH 5: Prova Simbólica de Overflow
 
@@ -485,7 +485,7 @@ class AutoFixEngine:
 
 ---
 
-**🔮 O futuro é simbólico. O futuro é provado. O futuro é Aethel v1.5.**
+**🔮 O futuro é simbólico. O futuro é provado. O futuro é Diotec360 v1.5.**
 
 **Target**: Q2 2026  
 **Status**: 📋 Planning → 🔨 Implementation (March 2026)

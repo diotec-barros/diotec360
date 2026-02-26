@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Test Fortress v1.5 - Sanitizer & Z3 Timeout
 
 Tests the new security layers:
@@ -6,8 +22,8 @@ Tests the new security layers:
 - v1.5.2: Z3 Timeout (anti-DoS)
 """
 
-from aethel.core.sanitizer import AethelSanitizer
-from aethel.core.judge import AethelJudge
+from diotec360.core.sanitizer import DIOTEC360Sanitizer
+from diotec360.core.judge import DIOTEC360Judge
 
 
 def test_sanitizer_prompt_injection():
@@ -18,7 +34,7 @@ def test_sanitizer_prompt_injection():
     print("TEST 1: Prompt Injection Detection")
     print("="*60)
     
-    sanitizer = AethelSanitizer()
+    sanitizer = DIOTEC360Sanitizer()
     
     # Código malicioso com prompt injection
     malicious_code = """
@@ -61,7 +77,7 @@ def test_sanitizer_system_commands():
     print("TEST 2: System Command Detection")
     print("="*60)
     
-    sanitizer = AethelSanitizer()
+    sanitizer = DIOTEC360Sanitizer()
     
     # Código com comandos de sistema
     malicious_code = """
@@ -100,7 +116,7 @@ def test_sanitizer_safe_code():
     print("TEST 3: Safe Code Passes")
     print("="*60)
     
-    sanitizer = AethelSanitizer()
+    sanitizer = DIOTEC360Sanitizer()
     
     # Código seguro
     safe_code = """
@@ -140,7 +156,7 @@ def test_complexity_check():
     print("TEST 4: Complexity Check")
     print("="*60)
     
-    sanitizer = AethelSanitizer()
+    sanitizer = DIOTEC360Sanitizer()
     
     # Código com muitas variáveis (simulando DoS)
     complex_code = """
@@ -190,7 +206,7 @@ def test_z3_timeout_simulation():
         }
     }
     
-    judge = AethelJudge(intent_map)
+    judge = DIOTEC360Judge(intent_map)
     
     print(f"\nZ3 Timeout configured: {judge.Z3_TIMEOUT_MS}ms")
     print(f"Max variables: {judge.MAX_VARIABLES}")

@@ -136,7 +136,7 @@ This session focused on:
 - **Secondary**: `APEX_DASHBOARD_INTEGRATION_TEST.md` - Detailed test scenarios
 
 ### For Understanding
-- **Architecture**: `AETHEL_APEX_DASHBOARD_V2_0_SPEC.md` - Full specification
+- **Architecture**: `DIOTEC360_APEX_DASHBOARD_V2_0_SPEC.md` - Full specification
 - **Status**: `APEX_DASHBOARD_STATUS_FINAL.md` - Current status
 - **Progress**: `NEXUS_COMPLETE_24H_REPORT.md` - 24-hour report
 

@@ -9,7 +9,7 @@
 
 ## 🎯 MISSÃO IMPOSSÍVEL CUMPRIDA
 
-O núcleo do Aethel Lattice está completo. A rede não é mais um conjunto de servidores isolados - ela é agora um **organismo vivo**, com:
+O núcleo do DIOTEC360 LATTICE está completo. A rede não é mais um conjunto de servidores isolados - ela é agora um **organismo vivo**, com:
 
 - 👁️ **Visão** (Discovery Service)
 - 🗣️ **Voz** (Gossip Protocol)  
@@ -141,7 +141,7 @@ python demo_lattice_discovery.py
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   AETHEL LATTICE                        │
+│                   DIOTEC360 LATTICE                        │
 │              "The Decentralized Truth Network"          │
 └─────────────────────────────────────────────────────────┘
                            │
@@ -313,10 +313,10 @@ Agora: Rede se auto-cura, impossível de derrubar
 ## 🔐 ASSINATURA DO ENGENHEIRO-CHEFE
 
 **Kiro AI**  
-Engenheiro-Chefe, Aethel Lattice  
+Engenheiro-Chefe, DIOTEC360 LATTICE  
 Epoch 3.0.4 "Triangle of Truth"
 
-**Veredito**: O núcleo do Aethel Lattice está completo e operacional. A rede possui:
+**Veredito**: O núcleo do DIOTEC360 LATTICE está completo e operacional. A rede possui:
 - ✅ Visão (Discovery)
 - ✅ Voz (Gossip)
 - ✅ Memória (State Sync)

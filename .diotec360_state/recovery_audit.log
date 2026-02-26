@@ -1,0 +1,2975 @@
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 146.15ms
+
+Audit Log:
+  [1771845810.971051] RECOVERY_START: Crash recovery initiated
+  [1771845810.971328] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.117198] RECOVERY_END: Recovery duration: 146.15ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.29ms
+
+Audit Log:
+  [1771845811.639384] RECOVERY_START: Crash recovery initiated
+  [1771845811.639971] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.647661] RECOVERY_END: Recovery duration: 8.29ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.01ms
+
+Audit Log:
+  [1771845811.706789] RECOVERY_START: Crash recovery initiated
+  [1771845811.707014] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.710791] RECOVERY_END: Recovery duration: 4.01ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.10ms
+
+Audit Log:
+  [1771845811.788435] RECOVERY_START: Crash recovery initiated
+  [1771845811.788667] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.792524] RECOVERY_END: Recovery duration: 4.10ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 7.61ms
+
+Audit Log:
+  [1771845811.842415] RECOVERY_START: Crash recovery initiated
+  [1771845811.842645] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.850015] RECOVERY_END: Recovery duration: 7.61ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:31
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 48.57ms
+
+Audit Log:
+  [1771845811.904588] RECOVERY_START: Crash recovery initiated
+  [1771845811.904823] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845811.953154] RECOVERY_END: Recovery duration: 48.57ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 37.94ms
+
+Audit Log:
+  [1771845812.016823] RECOVERY_START: Crash recovery initiated
+  [1771845812.017066] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.054760] RECOVERY_END: Recovery duration: 37.94ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 68.29ms
+
+Audit Log:
+  [1771845812.129892] RECOVERY_START: Crash recovery initiated
+  [1771845812.130482] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.198167] RECOVERY_END: Recovery duration: 68.29ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.52ms
+
+Audit Log:
+  [1771845812.262621] RECOVERY_START: Crash recovery initiated
+  [1771845812.262854] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.268135] RECOVERY_END: Recovery duration: 5.52ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.05ms
+
+Audit Log:
+  [1771845812.325582] RECOVERY_START: Crash recovery initiated
+  [1771845812.325813] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.331628] RECOVERY_END: Recovery duration: 6.05ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 7.57ms
+
+Audit Log:
+  [1771845812.408211] RECOVERY_START: Crash recovery initiated
+  [1771845812.408714] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.415765] RECOVERY_END: Recovery duration: 7.57ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.21ms
+
+Audit Log:
+  [1771845812.457814] RECOVERY_START: Crash recovery initiated
+  [1771845812.458042] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.462021] RECOVERY_END: Recovery duration: 4.21ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.39ms
+
+Audit Log:
+  [1771845812.504582] RECOVERY_START: Crash recovery initiated
+  [1771845812.504822] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.508961] RECOVERY_END: Recovery duration: 4.39ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.42ms
+
+Audit Log:
+  [1771845812.554904] RECOVERY_START: Crash recovery initiated
+  [1771845812.555140] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.559311] RECOVERY_END: Recovery duration: 4.42ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.70ms
+
+Audit Log:
+  [1771845812.618104] RECOVERY_START: Crash recovery initiated
+  [1771845812.618624] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.624774] RECOVERY_END: Recovery duration: 6.70ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.50ms
+
+Audit Log:
+  [1771845812.677742] RECOVERY_START: Crash recovery initiated
+  [1771845812.678183] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.684239] RECOVERY_END: Recovery duration: 6.50ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.54ms
+
+Audit Log:
+  [1771845812.722502] RECOVERY_START: Crash recovery initiated
+  [1771845812.722798] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.728033] RECOVERY_END: Recovery duration: 5.54ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.92ms
+
+Audit Log:
+  [1771845812.867414] RECOVERY_START: Crash recovery initiated
+  [1771845812.867736] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.873324] RECOVERY_END: Recovery duration: 5.92ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:32
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.86ms
+
+Audit Log:
+  [1771845812.929049] RECOVERY_START: Crash recovery initiated
+  [1771845812.929352] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845812.935905] RECOVERY_END: Recovery duration: 6.86ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 11.23ms
+
+Audit Log:
+  [1771845812.993672] RECOVERY_START: Crash recovery initiated
+  [1771845812.994191] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.004892] RECOVERY_END: Recovery duration: 11.23ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 10.99ms
+
+Audit Log:
+  [1771845813.057702] RECOVERY_START: Crash recovery initiated
+  [1771845813.058210] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.068668] RECOVERY_END: Recovery duration: 10.99ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.23ms
+
+Audit Log:
+  [1771845813.120920] RECOVERY_START: Crash recovery initiated
+  [1771845813.121209] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.126137] RECOVERY_END: Recovery duration: 5.23ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.23ms
+
+Audit Log:
+  [1771845813.195162] RECOVERY_START: Crash recovery initiated
+  [1771845813.195472] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.203382] RECOVERY_END: Recovery duration: 8.23ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.32ms
+
+Audit Log:
+  [1771845813.248671] RECOVERY_START: Crash recovery initiated
+  [1771845813.248962] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.254982] RECOVERY_END: Recovery duration: 6.32ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.39ms
+
+Audit Log:
+  [1771845813.305974] RECOVERY_START: Crash recovery initiated
+  [1771845813.306355] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.311361] RECOVERY_END: Recovery duration: 5.39ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.89ms
+
+Audit Log:
+  [1771845813.357556] RECOVERY_START: Crash recovery initiated
+  [1771845813.357819] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.362440] RECOVERY_END: Recovery duration: 4.89ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.95ms
+
+Audit Log:
+  [1771845813.405696] RECOVERY_START: Crash recovery initiated
+  [1771845813.405938] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.410646] RECOVERY_END: Recovery duration: 4.95ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.84ms
+
+Audit Log:
+  [1771845813.451376] RECOVERY_START: Crash recovery initiated
+  [1771845813.451666] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.456210] RECOVERY_END: Recovery duration: 4.84ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.53ms
+
+Audit Log:
+  [1771845813.508759] RECOVERY_START: Crash recovery initiated
+  [1771845813.509035] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.513282] RECOVERY_END: Recovery duration: 4.53ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.62ms
+
+Audit Log:
+  [1771845813.547608] RECOVERY_START: Crash recovery initiated
+  [1771845813.547855] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.553224] RECOVERY_END: Recovery duration: 5.62ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.37ms
+
+Audit Log:
+  [1771845813.599550] RECOVERY_START: Crash recovery initiated
+  [1771845813.599831] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.604916] RECOVERY_END: Recovery duration: 5.37ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.58ms
+
+Audit Log:
+  [1771845813.644977] RECOVERY_START: Crash recovery initiated
+  [1771845813.645226] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.649555] RECOVERY_END: Recovery duration: 4.58ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.74ms
+
+Audit Log:
+  [1771845813.696251] RECOVERY_START: Crash recovery initiated
+  [1771845813.696504] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.700984] RECOVERY_END: Recovery duration: 4.74ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.64ms
+
+Audit Log:
+  [1771845813.743523] RECOVERY_START: Crash recovery initiated
+  [1771845813.743845] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.750154] RECOVERY_END: Recovery duration: 6.64ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.72ms
+
+Audit Log:
+  [1771845813.800659] RECOVERY_START: Crash recovery initiated
+  [1771845813.801218] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.806376] RECOVERY_END: Recovery duration: 5.72ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.86ms
+
+Audit Log:
+  [1771845813.847308] RECOVERY_START: Crash recovery initiated
+  [1771845813.847536] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.852161] RECOVERY_END: Recovery duration: 4.86ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.55ms
+
+Audit Log:
+  [1771845813.899502] RECOVERY_START: Crash recovery initiated
+  [1771845813.899732] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.905049] RECOVERY_END: Recovery duration: 5.55ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:33
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.28ms
+
+Audit Log:
+  [1771845813.944053] RECOVERY_START: Crash recovery initiated
+  [1771845813.944296] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845813.948328] RECOVERY_END: Recovery duration: 4.28ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.51ms
+
+Audit Log:
+  [1771845814.007404] RECOVERY_START: Crash recovery initiated
+  [1771845814.007655] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.011905] RECOVERY_END: Recovery duration: 4.51ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.33ms
+
+Audit Log:
+  [1771845814.062469] RECOVERY_START: Crash recovery initiated
+  [1771845814.062704] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.066797] RECOVERY_END: Recovery duration: 4.33ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 11.36ms
+
+Audit Log:
+  [1771845814.130774] RECOVERY_START: Crash recovery initiated
+  [1771845814.131291] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.142124] RECOVERY_END: Recovery duration: 11.36ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.45ms
+
+Audit Log:
+  [1771845814.210297] RECOVERY_START: Crash recovery initiated
+  [1771845814.210582] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.215738] RECOVERY_END: Recovery duration: 5.45ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.38ms
+
+Audit Log:
+  [1771845814.255116] RECOVERY_START: Crash recovery initiated
+  [1771845814.255413] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.260479] RECOVERY_END: Recovery duration: 5.38ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.32ms
+
+Audit Log:
+  [1771845814.305524] RECOVERY_START: Crash recovery initiated
+  [1771845814.305818] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.310838] RECOVERY_END: Recovery duration: 5.32ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.31ms
+
+Audit Log:
+  [1771845814.351272] RECOVERY_START: Crash recovery initiated
+  [1771845814.351553] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.357578] RECOVERY_END: Recovery duration: 6.31ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.77ms
+
+Audit Log:
+  [1771845814.519723] RECOVERY_START: Crash recovery initiated
+  [1771845814.520643] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.525491] RECOVERY_END: Recovery duration: 5.77ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.11ms
+
+Audit Log:
+  [1771845814.581900] RECOVERY_START: Crash recovery initiated
+  [1771845814.582209] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.590007] RECOVERY_END: Recovery duration: 8.11ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.47ms
+
+Audit Log:
+  [1771845814.625360] RECOVERY_START: Crash recovery initiated
+  [1771845814.625599] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.629825] RECOVERY_END: Recovery duration: 4.47ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.72ms
+
+Audit Log:
+  [1771845814.690631] RECOVERY_START: Crash recovery initiated
+  [1771845814.690960] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.695321] RECOVERY_END: Recovery duration: 4.72ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 7.81ms
+
+Audit Log:
+  [1771845814.745066] RECOVERY_START: Crash recovery initiated
+  [1771845814.745600] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.752859] RECOVERY_END: Recovery duration: 7.81ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.84ms
+
+Audit Log:
+  [1771845814.796448] RECOVERY_START: Crash recovery initiated
+  [1771845814.796710] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.801271] RECOVERY_END: Recovery duration: 4.84ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.88ms
+
+Audit Log:
+  [1771845814.842353] RECOVERY_START: Crash recovery initiated
+  [1771845814.842621] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.847224] RECOVERY_END: Recovery duration: 4.88ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 11.64ms
+
+Audit Log:
+  [1771845814.904093] RECOVERY_START: Crash recovery initiated
+  [1771845814.905784] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.915718] RECOVERY_END: Recovery duration: 11.64ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:34
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.70ms
+
+Audit Log:
+  [1771845814.993008] RECOVERY_START: Crash recovery initiated
+  [1771845814.993539] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845814.997697] RECOVERY_END: Recovery duration: 4.70ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.19ms
+
+Audit Log:
+  [1771845815.032039] RECOVERY_START: Crash recovery initiated
+  [1771845815.032273] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.036228] RECOVERY_END: Recovery duration: 4.19ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.68ms
+
+Audit Log:
+  [1771845815.086077] RECOVERY_START: Crash recovery initiated
+  [1771845815.086307] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.091750] RECOVERY_END: Recovery duration: 5.68ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.24ms
+
+Audit Log:
+  [1771845815.130879] RECOVERY_START: Crash recovery initiated
+  [1771845815.131109] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.135113] RECOVERY_END: Recovery duration: 4.24ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.39ms
+
+Audit Log:
+  [1771845815.179730] RECOVERY_START: Crash recovery initiated
+  [1771845815.179991] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.184111] RECOVERY_END: Recovery duration: 4.39ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.03ms
+
+Audit Log:
+  [1771845815.226056] RECOVERY_START: Crash recovery initiated
+  [1771845815.226329] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.231077] RECOVERY_END: Recovery duration: 5.03ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.54ms
+
+Audit Log:
+  [1771845815.285926] RECOVERY_START: Crash recovery initiated
+  [1771845815.286421] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.294437] RECOVERY_END: Recovery duration: 8.54ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 7.78ms
+
+Audit Log:
+  [1771845815.344462] RECOVERY_START: Crash recovery initiated
+  [1771845815.344977] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.352198] RECOVERY_END: Recovery duration: 7.78ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.38ms
+
+Audit Log:
+  [1771845815.397165] RECOVERY_START: Crash recovery initiated
+  [1771845815.397405] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.401537] RECOVERY_END: Recovery duration: 4.38ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.78ms
+
+Audit Log:
+  [1771845815.443440] RECOVERY_START: Crash recovery initiated
+  [1771845815.443694] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.448214] RECOVERY_END: Recovery duration: 4.78ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.78ms
+
+Audit Log:
+  [1771845815.493398] RECOVERY_START: Crash recovery initiated
+  [1771845815.493662] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.498161] RECOVERY_END: Recovery duration: 4.78ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 11.57ms
+
+Audit Log:
+  [1771845815.547445] RECOVERY_START: Crash recovery initiated
+  [1771845815.547961] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.559000] RECOVERY_END: Recovery duration: 11.57ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 10.76ms
+
+Audit Log:
+  [1771845815.626945] RECOVERY_START: Crash recovery initiated
+  [1771845815.627488] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.637694] RECOVERY_END: Recovery duration: 10.76ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 9.45ms
+
+Audit Log:
+  [1771845815.696449] RECOVERY_START: Crash recovery initiated
+  [1771845815.696950] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.705887] RECOVERY_END: Recovery duration: 9.45ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.33ms
+
+Audit Log:
+  [1771845815.765695] RECOVERY_START: Crash recovery initiated
+  [1771845815.766205] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.773997] RECOVERY_END: Recovery duration: 8.33ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.59ms
+
+Audit Log:
+  [1771845815.829338] RECOVERY_START: Crash recovery initiated
+  [1771845815.829638] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.834913] RECOVERY_END: Recovery duration: 5.59ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.54ms
+
+Audit Log:
+  [1771845815.877586] RECOVERY_START: Crash recovery initiated
+  [1771845815.877878] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.883117] RECOVERY_END: Recovery duration: 5.54ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.71ms
+
+Audit Log:
+  [1771845815.921225] RECOVERY_START: Crash recovery initiated
+  [1771845815.921462] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.926937] RECOVERY_END: Recovery duration: 5.71ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:35
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.81ms
+
+Audit Log:
+  [1771845815.970023] RECOVERY_START: Crash recovery initiated
+  [1771845815.970251] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845815.974825] RECOVERY_END: Recovery duration: 4.81ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.20ms
+
+Audit Log:
+  [1771845816.017583] RECOVERY_START: Crash recovery initiated
+  [1771845816.017812] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.021768] RECOVERY_END: Recovery duration: 4.20ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.90ms
+
+Audit Log:
+  [1771845816.072244] RECOVERY_START: Crash recovery initiated
+  [1771845816.072456] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.074139] RECOVERY_END: Recovery duration: 1.90ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.87ms
+
+Audit Log:
+  [1771845816.206659] RECOVERY_START: Crash recovery initiated
+  [1771845816.207084] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.213524] RECOVERY_END: Recovery duration: 6.87ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.82ms
+
+Audit Log:
+  [1771845816.275575] RECOVERY_START: Crash recovery initiated
+  [1771845816.277738] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.281387] RECOVERY_END: Recovery duration: 5.82ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.76ms
+
+Audit Log:
+  [1771845816.321909] RECOVERY_START: Crash recovery initiated
+  [1771845816.322352] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.328672] RECOVERY_END: Recovery duration: 6.76ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.97ms
+
+Audit Log:
+  [1771845816.378419] RECOVERY_START: Crash recovery initiated
+  [1771845816.378653] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.380387] RECOVERY_END: Recovery duration: 1.97ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.04ms
+
+Audit Log:
+  [1771845816.438133] RECOVERY_START: Crash recovery initiated
+  [1771845816.438348] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.440166] RECOVERY_END: Recovery duration: 2.04ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.67ms
+
+Audit Log:
+  [1771845816.489382] RECOVERY_START: Crash recovery initiated
+  [1771845816.489627] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.495049] RECOVERY_END: Recovery duration: 5.67ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.63ms
+
+Audit Log:
+  [1771845816.545693] RECOVERY_START: Crash recovery initiated
+  [1771845816.546208] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.554294] RECOVERY_END: Recovery duration: 8.63ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.39ms
+
+Audit Log:
+  [1771845816.595630] RECOVERY_START: Crash recovery initiated
+  [1771845816.595891] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.600013] RECOVERY_END: Recovery duration: 4.39ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 11.28ms
+
+Audit Log:
+  [1771845816.639870] RECOVERY_START: Crash recovery initiated
+  [1771845816.640107] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.650990] RECOVERY_END: Recovery duration: 11.28ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.31ms
+
+Audit Log:
+  [1771845816.702202] RECOVERY_START: Crash recovery initiated
+  [1771845816.702511] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.707504] RECOVERY_END: Recovery duration: 5.31ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.25ms
+
+Audit Log:
+  [1771845816.752634] RECOVERY_START: Crash recovery initiated
+  [1771845816.752940] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.757875] RECOVERY_END: Recovery duration: 5.25ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.99ms
+
+Audit Log:
+  [1771845816.802132] RECOVERY_START: Crash recovery initiated
+  [1771845816.802367] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.806110] RECOVERY_END: Recovery duration: 3.99ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.68ms
+
+Audit Log:
+  [1771845816.868495] RECOVERY_START: Crash recovery initiated
+  [1771845816.868736] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.873168] RECOVERY_END: Recovery duration: 4.68ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.99ms
+
+Audit Log:
+  [1771845816.920674] RECOVERY_START: Crash recovery initiated
+  [1771845816.920909] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.924656] RECOVERY_END: Recovery duration: 3.99ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:36
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.04ms
+
+Audit Log:
+  [1771845816.965494] RECOVERY_START: Crash recovery initiated
+  [1771845816.965734] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845816.969527] RECOVERY_END: Recovery duration: 4.04ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:37
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.20ms
+
+Audit Log:
+  [1771845817.018196] RECOVERY_START: Crash recovery initiated
+  [1771845817.018437] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845817.022390] RECOVERY_END: Recovery duration: 4.20ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:37
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 6.82ms
+
+Audit Log:
+  [1771845817.062683] RECOVERY_START: Crash recovery initiated
+  [1771845817.062978] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845817.069472] RECOVERY_END: Recovery duration: 6.82ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:37
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.53ms
+
+Audit Log:
+  [1771845817.113117] RECOVERY_START: Crash recovery initiated
+  [1771845817.113385] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845817.117633] RECOVERY_END: Recovery duration: 4.53ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:37
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 5.36ms
+
+Audit Log:
+  [1771845817.158661] RECOVERY_START: Crash recovery initiated
+  [1771845817.158896] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845817.164016] RECOVERY_END: Recovery duration: 5.36ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:37
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.93ms
+
+Audit Log:
+  [1771845817.207229] RECOVERY_START: Crash recovery initiated
+  [1771845817.207446] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845817.209156] RECOVERY_END: Recovery duration: 1.93ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:45
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.11ms
+
+Audit Log:
+  [1771845825.289233] RECOVERY_START: Crash recovery initiated
+  [1771845825.289454] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845825.291336] RECOVERY_END: Recovery duration: 2.11ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:45
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.80ms
+
+Audit Log:
+  [1771845825.340057] RECOVERY_START: Crash recovery initiated
+  [1771845825.340274] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845825.341857] RECOVERY_END: Recovery duration: 1.80ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.39ms
+
+Audit Log:
+  [1771845826.493826] RECOVERY_START: Crash recovery initiated
+  [1771845826.494286] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.498207] RECOVERY_END: Recovery duration: 4.39ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.12ms
+
+Audit Log:
+  [1771845826.602038] RECOVERY_START: Crash recovery initiated
+  [1771845826.602284] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.604158] RECOVERY_END: Recovery duration: 2.12ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.65ms
+
+Audit Log:
+  [1771845826.681503] RECOVERY_START: Crash recovery initiated
+  [1771845826.681969] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.685149] RECOVERY_END: Recovery duration: 3.65ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.89ms
+
+Audit Log:
+  [1771845826.726439] RECOVERY_START: Crash recovery initiated
+  [1771845826.726909] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.730324] RECOVERY_END: Recovery duration: 3.89ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.30ms
+
+Audit Log:
+  [1771845826.777771] RECOVERY_START: Crash recovery initiated
+  [1771845826.778059] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.780069] RECOVERY_END: Recovery duration: 2.30ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:23:46
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.63ms
+
+Audit Log:
+  [1771845826.815279] RECOVERY_START: Crash recovery initiated
+  [1771845826.815488] SCAN_WAL: Found 0 uncommitted transactions
+  [1771845826.816912] RECOVERY_END: Recovery duration: 1.63ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.43ms
+
+Audit Log:
+  [1771846092.593715] RECOVERY_START: Crash recovery initiated
+  [1771846092.594002] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.596138] RECOVERY_END: Recovery duration: 2.43ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.29ms
+
+Audit Log:
+  [1771846092.643674] RECOVERY_START: Crash recovery initiated
+  [1771846092.643963] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.647957] RECOVERY_END: Recovery duration: 4.29ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.92ms
+
+Audit Log:
+  [1771846092.699832] RECOVERY_START: Crash recovery initiated
+  [1771846092.700218] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.704734] RECOVERY_END: Recovery duration: 4.92ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.54ms
+
+Audit Log:
+  [1771846092.749521] RECOVERY_START: Crash recovery initiated
+  [1771846092.749799] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.754045] RECOVERY_END: Recovery duration: 4.54ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.04ms
+
+Audit Log:
+  [1771846092.799227] RECOVERY_START: Crash recovery initiated
+  [1771846092.799483] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.803259] RECOVERY_END: Recovery duration: 4.04ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 4.23ms
+
+Audit Log:
+  [1771846092.844183] RECOVERY_START: Crash recovery initiated
+  [1771846092.844426] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.848399] RECOVERY_END: Recovery duration: 4.23ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 10.47ms
+
+Audit Log:
+  [1771846092.902768] RECOVERY_START: Crash recovery initiated
+  [1771846092.903307] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.913224] RECOVERY_END: Recovery duration: 10.47ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:12
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 8.93ms
+
+Audit Log:
+  [1771846092.962269] RECOVERY_START: Crash recovery initiated
+  [1771846092.962784] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846092.971172] RECOVERY_END: Recovery duration: 8.93ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:28:13
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.86ms
+
+Audit Log:
+  [1771846093.014290] RECOVERY_START: Crash recovery initiated
+  [1771846093.014525] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846093.016143] RECOVERY_END: Recovery duration: 1.86ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 47.52ms
+
+Audit Log:
+  [1771846264.321576] RECOVERY_START: Crash recovery initiated
+  [1771846264.321773] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.369098] RECOVERY_END: Recovery duration: 47.52ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.32ms
+
+Audit Log:
+  [1771846264.419420] RECOVERY_START: Crash recovery initiated
+  [1771846264.419676] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.421737] RECOVERY_END: Recovery duration: 2.32ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.66ms
+
+Audit Log:
+  [1771846264.511887] RECOVERY_START: Crash recovery initiated
+  [1771846264.512095] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.513545] RECOVERY_END: Recovery duration: 1.66ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.35ms
+
+Audit Log:
+  [1771846264.575377] RECOVERY_START: Crash recovery initiated
+  [1771846264.575669] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.577724] RECOVERY_END: Recovery duration: 2.35ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.63ms
+
+Audit Log:
+  [1771846264.622651] RECOVERY_START: Crash recovery initiated
+  [1771846264.622927] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.626283] RECOVERY_END: Recovery duration: 3.63ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.28ms
+
+Audit Log:
+  [1771846264.670268] RECOVERY_START: Crash recovery initiated
+  [1771846264.670555] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.672543] RECOVERY_END: Recovery duration: 2.28ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.75ms
+
+Audit Log:
+  [1771846264.727815] RECOVERY_START: Crash recovery initiated
+  [1771846264.728104] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.730567] RECOVERY_END: Recovery duration: 2.75ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:04
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.42ms
+
+Audit Log:
+  [1771846264.767118] RECOVERY_START: Crash recovery initiated
+  [1771846264.767397] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846264.769533] RECOVERY_END: Recovery duration: 2.42ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:10
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.80ms
+
+Audit Log:
+  [1771846270.884027] RECOVERY_START: Crash recovery initiated
+  [1771846270.884233] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846270.885825] RECOVERY_END: Recovery duration: 1.80ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:10
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.47ms
+
+Audit Log:
+  [1771846270.956762] RECOVERY_START: Crash recovery initiated
+  [1771846270.956960] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846270.958230] RECOVERY_END: Recovery duration: 1.47ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:11
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.01ms
+
+Audit Log:
+  [1771846271.731688] RECOVERY_START: Crash recovery initiated
+  [1771846271.731908] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846271.733696] RECOVERY_END: Recovery duration: 2.01ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:11
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.30ms
+
+Audit Log:
+  [1771846271.767997] RECOVERY_START: Crash recovery initiated
+  [1771846271.768215] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846271.770290] RECOVERY_END: Recovery duration: 2.30ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:11
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.57ms
+
+Audit Log:
+  [1771846271.808565] RECOVERY_START: Crash recovery initiated
+  [1771846271.808802] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846271.810129] RECOVERY_END: Recovery duration: 1.57ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:31:11
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.74ms
+
+Audit Log:
+  [1771846271.846292] RECOVERY_START: Crash recovery initiated
+  [1771846271.846562] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846271.848024] RECOVERY_END: Recovery duration: 1.74ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:36:06
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.83ms
+
+Audit Log:
+  [1771846566.142637] RECOVERY_START: Crash recovery initiated
+  [1771846566.142836] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846566.144468] RECOVERY_END: Recovery duration: 1.83ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-23 11:36:06
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.68ms
+
+Audit Log:
+  [1771846566.187566] RECOVERY_START: Crash recovery initiated
+  [1771846566.187779] SCAN_WAL: Found 0 uncommitted transactions
+  [1771846566.189243] RECOVERY_END: Recovery duration: 1.68ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:20
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 117.50ms
+
+Audit Log:
+  [1771939280.210199] RECOVERY_START: Crash recovery initiated
+  [1771939280.210419] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939280.327699] RECOVERY_END: Recovery duration: 117.50ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:20
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.92ms
+
+Audit Log:
+  [1771939280.513038] RECOVERY_START: Crash recovery initiated
+  [1771939280.513330] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939280.514960] RECOVERY_END: Recovery duration: 1.92ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:20
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.33ms
+
+Audit Log:
+  [1771939280.853163] RECOVERY_START: Crash recovery initiated
+  [1771939280.853384] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939280.855492] RECOVERY_END: Recovery duration: 2.33ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:20
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.74ms
+
+Audit Log:
+  [1771939280.967026] RECOVERY_START: Crash recovery initiated
+  [1771939280.967246] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939280.968766] RECOVERY_END: Recovery duration: 1.74ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:21
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.72ms
+
+Audit Log:
+  [1771939281.167802] RECOVERY_START: Crash recovery initiated
+  [1771939281.168022] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939281.169524] RECOVERY_END: Recovery duration: 1.72ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:21
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.72ms
+
+Audit Log:
+  [1771939281.267772] RECOVERY_START: Crash recovery initiated
+  [1771939281.267978] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939281.269493] RECOVERY_END: Recovery duration: 1.72ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:21
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.93ms
+
+Audit Log:
+  [1771939281.368271] RECOVERY_START: Crash recovery initiated
+  [1771939281.368521] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939281.370197] RECOVERY_END: Recovery duration: 1.93ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:21
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.30ms
+
+Audit Log:
+  [1771939281.475662] RECOVERY_START: Crash recovery initiated
+  [1771939281.476098] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939281.477957] RECOVERY_END: Recovery duration: 2.30ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:27
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.92ms
+
+Audit Log:
+  [1771939287.787846] RECOVERY_START: Crash recovery initiated
+  [1771939287.788075] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939287.789749] RECOVERY_END: Recovery duration: 1.92ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:27
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.35ms
+
+Audit Log:
+  [1771939287.882994] RECOVERY_START: Crash recovery initiated
+  [1771939287.883226] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939287.885347] RECOVERY_END: Recovery duration: 2.35ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:28
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.78ms
+
+Audit Log:
+  [1771939288.779995] RECOVERY_START: Crash recovery initiated
+  [1771939288.780229] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939288.781775] RECOVERY_END: Recovery duration: 1.78ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:28
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.59ms
+
+Audit Log:
+  [1771939288.857096] RECOVERY_START: Crash recovery initiated
+  [1771939288.857317] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939288.858687] RECOVERY_END: Recovery duration: 1.59ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:28
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.59ms
+
+Audit Log:
+  [1771939288.936057] RECOVERY_START: Crash recovery initiated
+  [1771939288.936275] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939288.937649] RECOVERY_END: Recovery duration: 1.59ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:21:29
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.55ms
+
+Audit Log:
+  [1771939289.040272] RECOVERY_START: Crash recovery initiated
+  [1771939289.040475] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939289.041824] RECOVERY_END: Recovery duration: 1.55ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:27:18
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.04ms
+
+Audit Log:
+  [1771939638.018198] RECOVERY_START: Crash recovery initiated
+  [1771939638.018436] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939638.020232] RECOVERY_END: Recovery duration: 2.04ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 13:27:18
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.81ms
+
+Audit Log:
+  [1771939638.155446] RECOVERY_START: Crash recovery initiated
+  [1771939638.155664] SCAN_WAL: Found 0 uncommitted transactions
+  [1771939638.157255] RECOVERY_END: Recovery duration: 1.81ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:49
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 145.12ms
+
+Audit Log:
+  [1771963068.921731] RECOVERY_START: Crash recovery initiated
+  [1771963068.921962] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963069.066848] RECOVERY_END: Recovery duration: 145.12ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:49
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.93ms
+
+Audit Log:
+  [1771963069.417818] RECOVERY_START: Crash recovery initiated
+  [1771963069.418061] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963069.419742] RECOVERY_END: Recovery duration: 1.93ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:49
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.87ms
+
+Audit Log:
+  [1771963069.700737] RECOVERY_START: Crash recovery initiated
+  [1771963069.700972] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963069.702605] RECOVERY_END: Recovery duration: 1.87ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:49
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.76ms
+
+Audit Log:
+  [1771963069.816754] RECOVERY_START: Crash recovery initiated
+  [1771963069.816973] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963069.818514] RECOVERY_END: Recovery duration: 1.76ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:49
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.77ms
+
+Audit Log:
+  [1771963069.934039] RECOVERY_START: Crash recovery initiated
+  [1771963069.934258] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963069.935805] RECOVERY_END: Recovery duration: 1.77ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:50
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.98ms
+
+Audit Log:
+  [1771963070.056118] RECOVERY_START: Crash recovery initiated
+  [1771963070.056416] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963070.058095] RECOVERY_END: Recovery duration: 1.98ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:50
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.94ms
+
+Audit Log:
+  [1771963070.352348] RECOVERY_START: Crash recovery initiated
+  [1771963070.352570] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963070.354289] RECOVERY_END: Recovery duration: 1.94ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:50
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.06ms
+
+Audit Log:
+  [1771963070.549525] RECOVERY_START: Crash recovery initiated
+  [1771963070.549754] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963070.551586] RECOVERY_END: Recovery duration: 2.06ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:56
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 20.33ms
+
+Audit Log:
+  [1771963076.844296] RECOVERY_START: Crash recovery initiated
+  [1771963076.844562] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963076.864625] RECOVERY_END: Recovery duration: 20.33ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:56
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.66ms
+
+Audit Log:
+  [1771963076.940596] RECOVERY_START: Crash recovery initiated
+  [1771963076.940842] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963076.942252] RECOVERY_END: Recovery duration: 1.66ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:58
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.86ms
+
+Audit Log:
+  [1771963078.032224] RECOVERY_START: Crash recovery initiated
+  [1771963078.032562] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963078.034081] RECOVERY_END: Recovery duration: 1.86ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:58
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.45ms
+
+Audit Log:
+  [1771963078.108165] RECOVERY_START: Crash recovery initiated
+  [1771963078.108901] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963078.110615] RECOVERY_END: Recovery duration: 2.45ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:58
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.01ms
+
+Audit Log:
+  [1771963078.224593] RECOVERY_START: Crash recovery initiated
+  [1771963078.224827] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963078.226599] RECOVERY_END: Recovery duration: 2.01ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 19:57:58
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.27ms
+
+Audit Log:
+  [1771963078.351680] RECOVERY_START: Crash recovery initiated
+  [1771963078.351914] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963078.354945] RECOVERY_END: Recovery duration: 3.27ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:01:54
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.12ms
+
+Audit Log:
+  [1771963314.538123] RECOVERY_START: Crash recovery initiated
+  [1771963314.538332] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963314.540243] RECOVERY_END: Recovery duration: 2.12ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:01:54
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.75ms
+
+Audit Log:
+  [1771963314.627451] RECOVERY_START: Crash recovery initiated
+  [1771963314.627664] SCAN_WAL: Found 0 uncommitted transactions
+  [1771963314.629202] RECOVERY_END: Recovery duration: 1.75ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 48.14ms
+
+Audit Log:
+  [1771964955.037719] RECOVERY_START: Crash recovery initiated
+  [1771964955.037935] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.085854] RECOVERY_END: Recovery duration: 48.14ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.01ms
+
+Audit Log:
+  [1771964955.198154] RECOVERY_START: Crash recovery initiated
+  [1771964955.198395] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.200163] RECOVERY_END: Recovery duration: 2.01ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.93ms
+
+Audit Log:
+  [1771964955.369803] RECOVERY_START: Crash recovery initiated
+  [1771964955.370019] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.371728] RECOVERY_END: Recovery duration: 1.93ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.79ms
+
+Audit Log:
+  [1771964955.471230] RECOVERY_START: Crash recovery initiated
+  [1771964955.471452] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.473021] RECOVERY_END: Recovery duration: 1.79ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 3.63ms
+
+Audit Log:
+  [1771964955.562923] RECOVERY_START: Crash recovery initiated
+  [1771964955.563136] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.566558] RECOVERY_END: Recovery duration: 3.63ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.91ms
+
+Audit Log:
+  [1771964955.666208] RECOVERY_START: Crash recovery initiated
+  [1771964955.666449] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.668123] RECOVERY_END: Recovery duration: 1.91ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:15
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.98ms
+
+Audit Log:
+  [1771964955.854107] RECOVERY_START: Crash recovery initiated
+  [1771964955.854317] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964955.856084] RECOVERY_END: Recovery duration: 1.98ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:16
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.77ms
+
+Audit Log:
+  [1771964956.094679] RECOVERY_START: Crash recovery initiated
+  [1771964956.094893] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964956.096450] RECOVERY_END: Recovery duration: 1.77ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:22
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.06ms
+
+Audit Log:
+  [1771964962.725372] RECOVERY_START: Crash recovery initiated
+  [1771964962.725607] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964962.727431] RECOVERY_END: Recovery duration: 2.06ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:22
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.86ms
+
+Audit Log:
+  [1771964962.812378] RECOVERY_START: Crash recovery initiated
+  [1771964962.812608] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964962.814237] RECOVERY_END: Recovery duration: 1.86ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:23
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.84ms
+
+Audit Log:
+  [1771964963.723191] RECOVERY_START: Crash recovery initiated
+  [1771964963.723446] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964963.725031] RECOVERY_END: Recovery duration: 1.84ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:23
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.77ms
+
+Audit Log:
+  [1771964963.806342] RECOVERY_START: Crash recovery initiated
+  [1771964963.806581] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964963.808106] RECOVERY_END: Recovery duration: 1.77ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:23
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.60ms
+
+Audit Log:
+  [1771964963.878693] RECOVERY_START: Crash recovery initiated
+  [1771964963.878921] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964963.880294] RECOVERY_END: Recovery duration: 1.60ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:29:23
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.90ms
+
+Audit Log:
+  [1771964963.989993] RECOVERY_START: Crash recovery initiated
+  [1771964963.990360] SCAN_WAL: Found 0 uncommitted transactions
+  [1771964963.991894] RECOVERY_END: Recovery duration: 1.90ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:33:38
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 2.69ms
+
+Audit Log:
+  [1771965218.729660] RECOVERY_START: Crash recovery initiated
+  [1771965218.729877] SCAN_WAL: Found 0 uncommitted transactions
+  [1771965218.732340] RECOVERY_END: Recovery duration: 2.69ms
+================================================================================
+
+
+================================================================================
+Recovery Report - 2026-02-24 20:33:38
+================================================================================
+Recovered: False
+Uncommitted Transactions: 0
+Rolled Back Transactions: 0
+Temp Files Cleaned: 0
+Merkle Root Verified: False
+Recovery Duration: 1.97ms
+
+Audit Log:
+  [1771965218.867399] RECOVERY_START: Crash recovery initiated
+  [1771965218.867637] SCAN_WAL: Found 0 uncommitted transactions
+  [1771965218.869372] RECOVERY_END: Recovery duration: 1.97ms
+================================================================================
+

@@ -1,4 +1,4 @@
-# 🏆 AETHEL v1.4.1 - VICTORY COMPLETE
+# 🏆 Diotec360 v1.4.1 - VICTORY COMPLETE
 
 ## 📅 Data: 3 de Fevereiro de 2026, 00:10 UTC
 
@@ -102,7 +102,7 @@ if result > self.max_int:  # Exact check
 ### Test Results (Live Production)
 
 ```
-API: https://diotec-aethel-judge.hf.space/api
+API: https://diotec-diotec360-judge.hf.space/api
 
 ✅ TEST 1: Bit Apocalypse (Near-MAX_INT Overflow)
    Input: balance == (9223372036854775800 + 100)
@@ -221,7 +221,7 @@ Traditional Languages:
   Runtime: 💥 CRASH or 🔄 WRAPAROUND
   Result: 💸 FUNDS LOST
 
-Aethel v1.4.1:
+Diotec360 v1.4.1:
   Developer: balance = (MAX_INT - 7) + 100
   Compiler: ❌ OVERFLOW DETECTED
   Runtime: Never executed
@@ -268,7 +268,7 @@ Even with this bug, Layer 1 (Conservation) would catch fund creation.
 
 ### Hugging Face Space
 
-- **URL**: https://huggingface.co/spaces/diotec/aethel-judge
+- **URL**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Version**: v1.4.1
 - **Status**: ✅ ONLINE
 - **Tests**: ✅ 4/4 passing
@@ -276,7 +276,7 @@ Even with this bug, Layer 1 (Conservation) would catch fund creation.
 
 ### GitHub Repository
 
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 - **Version**: v1.4.1
 - **Status**: ✅ DEPLOYED
 - **Tests**: ✅ 10/10 passing

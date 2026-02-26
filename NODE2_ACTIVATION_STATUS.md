@@ -30,10 +30,10 @@ Tentamos ativar o Node 2 para capturar o Peer ID, mas encontramos um problema:
 ### Logs Completos
 
 ```
-[SHIELD] AETHEL LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
+[SHIELD] DIOTEC360 LATTICE v3.0.3 - HYBRID SYNC PROTOCOL
 [STARTUP] Environment variables reloaded
-[MERKLE DB] Snapshot loaded: .aethel_state\snapshot.json
-[VAULT DB] Initialized at: .aethel_vault
+[MERKLE DB] Snapshot loaded: .DIOTEC360_state\snapshot.json
+[VAULT DB] Initialized at: .DIOTEC360_vault
 [STARTUP] Persistence layer initialized
 [STARTUP] Lattice streams initialized
 [STARTUP] P2P enabled, attempting to start...
@@ -99,7 +99,7 @@ O Hybrid Sync Protocol está operacional! O sistema detectou que P2P não está 
 1. Desabilitar P2P temporariamente:
 ```bash
 # Em .env.node2.diotec360
-AETHEL_P2P_ENABLED=false
+DIOTEC360_P2P_ENABLED=false
 ```
 
 2. Sistema usará apenas HTTP Sync (que já está funcionando)
@@ -227,10 +227,10 @@ print(f"Node 3 Peer ID: {node3_id}")
 ```bash
 # 1. Atualizar configurações para HTTP-Only
 # Em .env.node1.huggingface, .env.node2.diotec360, .env.node3.backup:
-AETHEL_P2P_ENABLED=false
+DIOTEC360_P2P_ENABLED=false
 
 # 2. Manter apenas HTTP Sync nodes
-AETHEL_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_LATTICE_NODES=https://huggingface.co/spaces/diotec/aethel,https://api.diotec360.com,https://backup.diotec360.com
 
 # 3. Deployar todos os três nós
 

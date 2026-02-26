@@ -132,7 +132,7 @@ Resultado esperado: "ALL DEMOS COMPLETE" + "Roots match: True"
 
 **Status**: ✅ LATTICE CORE COMPLETO
 
-Todos os 4 componentes core do Aethel Lattice foram implementados, testados e validados. A rede agora possui:
+Todos os 4 componentes core do DIOTEC360 LATTICE foram implementados, testados e validados. A rede agora possui:
 - 👁️ Visão (Discovery)
 - 🗣️ Voz (Gossip)
 - 🧠 Memória (State Sync)

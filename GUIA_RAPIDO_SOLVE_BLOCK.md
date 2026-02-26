@@ -278,4 +278,4 @@ Antes de compilar seu código, verifique:
 
 ---
 
-**🏛️ Aethel v1.9.0 - O Compilador Implacável ⚖️**
+**🏛️ Diotec360 v1.9.0 - O Compilador Implacável ⚖️**

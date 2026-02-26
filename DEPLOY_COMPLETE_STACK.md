@@ -1,4 +1,4 @@
-# 🚀 COMPLETE STACK DEPLOYMENT - AETHEL v3.0.5
+# 🚀 COMPLETE STACK DEPLOYMENT - Diotec360 v3.0.5
 
 **Date:** 2026-02-12  
 **Status:** READY TO DEPLOY
@@ -13,7 +13,7 @@
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  FRONTEND (Vercel)                                      │
-│  ├─ https://aethel-studio.vercel.app                   │
+│  ├─ https://diotec360-studio.vercel.app                   │
 │  ├─ Next.js 14 + TypeScript                            │
 │  ├─ Monaco Editor                                       │
 │  └─ Tailwind CSS                                        │
@@ -127,10 +127,10 @@ This will:
 Once deployed:
 ```bash
 # Test frontend loads
-curl https://aethel-studio.vercel.app
+curl https://diotec360-studio.vercel.app
 
 # Test in browser
-# 1. Open https://aethel-studio.vercel.app
+# 1. Open https://diotec360-studio.vercel.app
 # 2. Click "Examples"
 # 3. Select an example
 # 4. Click "Verify"
@@ -153,10 +153,10 @@ curl https://backup.diotec360.com/health
 python verify_production_triangle.py
 
 # 3. Frontend Loads
-curl https://aethel-studio.vercel.app
+curl https://diotec360-studio.vercel.app
 
 # 4. End-to-End Test
-# Open browser: https://aethel-studio.vercel.app
+# Open browser: https://diotec360-studio.vercel.app
 # Verify code example
 # Check network tab for API calls
 ```
@@ -191,7 +191,7 @@ curl https://aethel-studio.vercel.app
 ## 📊 PRODUCTION URLS
 
 ### Frontend
-- **Vercel:** https://aethel-studio.vercel.app
+- **Vercel:** https://diotec360-studio.vercel.app
 - **Custom Domain (optional):** https://studio.diotec360.com
 
 ### Backend Triangle
@@ -216,7 +216,7 @@ echo "Monitoring Aethel Complete Stack..."
 python verify_production_triangle.py
 
 # Check frontend
-curl -s https://aethel-studio.vercel.app > /dev/null
+curl -s https://diotec360-studio.vercel.app > /dev/null
 if [ $? -eq 0 ]; then
   echo "✅ Frontend: OK"
 else

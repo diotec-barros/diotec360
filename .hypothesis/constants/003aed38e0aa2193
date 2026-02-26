@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\ai\ai_gate.py
+# hypothesis_version: 6.151.5
+
+[0.0, 100, 1000, '\n\nCONSTRAINTS:\n', 'ACCEPTED', 'Max retries exceeded', 'REJECTED', 'Verification failed', 'anthropic', 'attempt', 'cache_hits', 'cached', 'cost_usd', 'errors', 'failed_validations', 'feedback_sent', 'gemini', 'generated_code', 'generation_time_ms', 'gpt-4', 'llama_local', 'model', 'openai', 'proof', 'provider', 'reason', 'requirement', 'success_rate_percent', 'total_cost_usd', 'total_queries', 'validation_time_ms', 'verdict', 'w']

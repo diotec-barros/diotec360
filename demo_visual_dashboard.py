@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Visual Dashboard Demo - MOE Intelligence Layer
 
 Demonstrates the visual dashboard with real-time expert status updates.
@@ -9,8 +25,8 @@ Version: v2.1.0
 """
 
 import time
-from aethel.moe.visual_dashboard import VisualDashboard, DashboardManager
-from aethel.moe.data_models import ExpertVerdict, MOEResult
+from diotec360.moe.visual_dashboard import VisualDashboard, DashboardManager
+from diotec360.moe.data_models import ExpertVerdict, MOEResult
 
 
 def demo_basic_dashboard():

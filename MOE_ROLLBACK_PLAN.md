@@ -34,13 +34,13 @@ Execute rollback if any of the following occur:
 
 ```bash
 # Set environment variable to disable MOE
-export AETHEL_MOE_ENABLED=false
+export DIOTEC360_MOE_ENABLED=false
 
 # Or update configuration file
-echo "AETHEL_MOE_ENABLED=false" >> .env
+echo "DIOTEC360_MOE_ENABLED=false" >> .env
 
 # Restart application
-systemctl restart aethel-judge
+systemctl restart diotec360-judge
 # OR
 docker-compose restart
 # OR
@@ -107,10 +107,10 @@ python scripts/monitor_system.py --duration 120
 mkdir -p ./backups/moe_$(date +%Y%m%d_%H%M%S)
 
 # Backup telemetry database
-cp ./.aethel_moe/telemetry.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/telemetry.db
+cp ./.DIOTEC360_moe/telemetry.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/telemetry.db
 
 # Backup training database
-cp ./.aethel_moe/training.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/training.db
+cp ./.DIOTEC360_moe/training.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/training.db
 
 # Backup configuration
 cp ./config/moe_*.env ./backups/moe_$(date +%Y%m%d_%H%M%S)/
@@ -265,18 +265,18 @@ Once root cause is identified and fixed:
 
 ```bash
 # Example: Adjust expert confidence thresholds
-export AETHEL_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
-export AETHEL_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
-export AETHEL_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
+export DIOTEC360_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
+export DIOTEC360_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
+export DIOTEC360_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
 
 # Example: Increase expert timeouts
-export AETHEL_Z3_EXPERT_TIMEOUT_NORMAL=40  # Was 30
-export AETHEL_SENTINEL_EXPERT_TIMEOUT_MS=150  # Was 100
-export AETHEL_GUARDIAN_EXPERT_TIMEOUT_MS=75  # Was 50
+export DIOTEC360_Z3_EXPERT_TIMEOUT_NORMAL=40  # Was 30
+export DIOTEC360_SENTINEL_EXPERT_TIMEOUT_MS=150  # Was 100
+export DIOTEC360_GUARDIAN_EXPERT_TIMEOUT_MS=75  # Was 50
 
 # Example: Adjust consensus thresholds
-export AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
-export AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.6  # Was 0.5
+export DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.75  # Was 0.7
+export DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.6  # Was 0.5
 ```
 
 ### 2. Test in Staging
@@ -324,11 +324,11 @@ For automated rollback, use:
 echo "🔄 Rolling back MOE Intelligence Layer..."
 
 # Disable MOE
-export AETHEL_MOE_ENABLED=false
-echo "AETHEL_MOE_ENABLED=false" >> .env
+export DIOTEC360_MOE_ENABLED=false
+echo "DIOTEC360_MOE_ENABLED=false" >> .env
 
 # Restart application
-systemctl restart aethel-judge
+systemctl restart diotec360-judge
 
 # Wait for restart
 sleep 5
@@ -338,8 +338,8 @@ python scripts/test_moe_rollback.py
 
 # Backup databases
 mkdir -p ./backups/moe_$(date +%Y%m%d_%H%M%S)
-cp ./.aethel_moe/telemetry.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/telemetry.db
-cp ./.aethel_moe/training.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/training.db
+cp ./.DIOTEC360_moe/telemetry.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/telemetry.db
+cp ./.DIOTEC360_moe/training.db ./backups/moe_$(date +%Y%m%d_%H%M%S)/training.db
 
 # Export reports
 python scripts/export_moe_report.py \

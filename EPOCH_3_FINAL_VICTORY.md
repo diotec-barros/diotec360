@@ -116,7 +116,7 @@ Dia 3: ✅ VALIDAÇÃO COMPLETA
 
 ---
 
-## 🎯 O QUE AETHEL v1.1.4 PODE FAZER
+## 🎯 O QUE Diotec360 v1.1.4 PODE FAZER
 
 ### Verificação Formal:
 - ✅ Detecta contradições matemáticas

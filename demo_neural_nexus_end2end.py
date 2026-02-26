@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 AETHEL NEURAL NEXUS - END-TO-END DISTILLATION DEMO
 A Refinaria de Consciência em Ação
 
@@ -23,13 +39,13 @@ from pathlib import Path
 
 # Importar componentes do Neural Nexus
 try:
-    from aethel.ai.local_engine import LocalEngine, LocalInferenceRequest
-    from aethel.ai.teacher_apis import TeacherAPIs, TeacherConfig
-    from aethel.ai.autonomous_distiller import AutonomousDistiller, DistillationRequest
-    from aethel.ai.cognitive_persistence import CognitivePersistence, VerifiedExample
-    from aethel.ai.lora_trainer import LoRATrainer, TrainingConfig
-    from aethel.core.judge import Judge
-    from aethel.core.sentinel_monitor import SentinelMonitor
+    from diotec360.ai.local_engine import LocalEngine, LocalInferenceRequest
+    from diotec360.ai.teacher_apis import TeacherAPIs, TeacherConfig
+    from diotec360.ai.autonomous_distiller import AutonomousDistiller, DistillationRequest
+    from diotec360.ai.cognitive_persistence import CognitivePersistence, VerifiedExample
+    from diotec360.ai.lora_trainer import LoRATrainer, TrainingConfig
+    from diotec360.core.judge import Judge
+    from diotec360.core.sentinel_monitor import SentinelMonitor
 except ImportError as e:
     print(f"[ERROR] Falha ao importar componentes: {e}")
     print("[INFO] Alguns componentes podem não estar disponíveis ainda")

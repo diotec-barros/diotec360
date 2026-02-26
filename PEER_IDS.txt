@@ -1,4 +1,4 @@
-AETHEL LATTICE - GENESIS NODE PEER IDs
+DIOTEC360 LATTICE - GENESIS NODE PEER IDs
 ============================================================
 
 NODE1 (node1-huggingface):

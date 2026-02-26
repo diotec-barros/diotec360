@@ -1,9 +1,9 @@
-# Próximos Passos - Deploy Aethel v1.0
+# Próximos Passos - Deploy Diotec360 v1.0
 
 ## ✅ O Que Já Está Feito
 
 1. **Frontend Vercel** - FUNCIONANDO
-   - URL: https://aethel-lang.vercel.app
+   - URL: https://diotec360-lang.vercel.app
    - Interface completa com editor e visualizador de provas
    - Exemplos carregando corretamente
 
@@ -44,7 +44,7 @@ https://web-production-xxxx.up.railway.app
 
 ### Passo 2: Atualizar Vercel
 1. Vá para https://vercel.com/dashboard
-2. Clique no projeto "aethel-lang"
+2. Clique no projeto "diotec360-lang"
 3. Vá em **Settings** → **Environment Variables**
 4. Encontre `NEXT_PUBLIC_API_URL`
 5. Clique em **Edit**
@@ -54,7 +54,7 @@ https://web-production-xxxx.up.railway.app
 
 ### Passo 3: Testar Tudo
 1. Aguarde o redeploy da Vercel (1-2 minutos)
-2. Acesse https://aethel-lang.vercel.app
+2. Acesse https://diotec360-lang.vercel.app
 3. Clique em "Load Example"
 4. Selecione "Financial Transfer"
 5. Clique no botão "Verify"

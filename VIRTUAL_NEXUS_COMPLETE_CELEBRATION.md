@@ -5,7 +5,7 @@
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                    AETHEL v2.2.7-2.2.8 "VIRTUAL NEXUS"                       ║
+║                    Diotec360 v2.2.7-2.2.8 "VIRTUAL NEXUS"                       ║
 ║                                                                              ║
 ║              DO SANTUÁRIO MATEMÁTICO AO CRÉDITO SOBERANO                     ║
 ║                                                                              ║

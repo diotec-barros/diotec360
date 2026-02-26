@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\self_healing.py
+# hypothesis_version: 6.151.5
+
+[0.7, 0.8, 1.0, 1000, 'active_rules', 'ast_pattern', 'attack_type', 'code_hash', 'features', 'has_base_case', 'has_break', 'has_recursion', 'inactive_rules', 'r', 'string_match', 'total_rules', 'type', 'unbounded_loop', 'w']

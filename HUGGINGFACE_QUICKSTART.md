@@ -8,7 +8,7 @@ deploy_to_huggingface.bat
 ```
 
 ### Step 2: Wait for Build
-- Go to: https://huggingface.co/spaces/diotec/aethel-judge
+- Go to: https://huggingface.co/spaces/diotec/diotec360-judge
 - Check "Logs" tab for build progress
 - Wait for green "Running" badge
 
@@ -21,8 +21,8 @@ python test_huggingface_deployment.py
 
 ```bash
 # Clone your Space
-git clone https://huggingface.co/spaces/diotec/aethel-judge
-cd aethel-judge
+git clone https://huggingface.co/spaces/diotec/diotec360-judge
+cd diotec360-judge
 
 # Copy files
 xcopy /E /I /Y ..\aethel aethel
@@ -32,8 +32,8 @@ copy ..\Dockerfile.huggingface Dockerfile
 copy ..\README_HF.md README.md
 
 # Create vault
-mkdir .aethel_vault\bundles
-mkdir .aethel_vault\certificates
+mkdir .DIOTEC360_vault\bundles
+mkdir .DIOTEC360_vault\certificates
 
 # Deploy
 git add .
@@ -45,19 +45,19 @@ git push
 
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Verify code
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { guard { x > 0; } solve { priority: security; } verify { x > 0; } }"}'
 ```
 
 ## 🔗 Your Space URLs
 
-- **Space**: https://huggingface.co/spaces/diotec/aethel-judge
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://diotec-aethel-judge.hf.space/docs
+- **Space**: https://huggingface.co/spaces/diotec/diotec360-judge
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://diotec-diotec360-judge.hf.space/docs
 
 ## 📊 Key Files
 
@@ -104,7 +104,7 @@ app_port: 7860
 
 - [HF Spaces Docs](https://huggingface.co/docs/hub/spaces)
 - [Aethel GitHub](https://github.com/diotec/aethel)
-- [Issues](https://github.com/diotec/aethel/issues)
+- [Issues](https://github.com/diotec/diotec360/issues)
 
 ## ✅ Checklist
 

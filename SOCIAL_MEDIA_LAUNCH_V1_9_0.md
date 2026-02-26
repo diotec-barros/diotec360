@@ -1,10 +1,10 @@
-# 🚀 Social Media Launch Posts - Aethel v1.9.0 "The Guard"
+# 🚀 Social Media Launch Posts - Diotec360 v1.9.0 "The Guard"
 
 ## 🐦 Twitter/X Thread
 
 ### Tweet 1 (Main Announcement)
 ```
-🛡️ BREAKING: Aethel v1.9.0 "The Guard" is LIVE
+🛡️ BREAKING: Diotec360 v1.9.0 "The Guard" is LIVE
 
 The world's first formally verified language with an AUTONOMOUS IMMUNE SYSTEM
 
@@ -27,7 +27,7 @@ We react to threats AFTER damage is done
 
 Today, that era ends.
 
-Aethel v1.9.0 introduces the Autonomous Sentinel 🤖
+Diotec360 v1.9.0 introduces the Autonomous Sentinel 🤖
 ```
 
 ### Tweet 3 (The Solution)
@@ -78,7 +78,7 @@ Real-world applications:
 🔐 Security Research: Adversarial testing
 ⚡ High-Frequency Trading: Non-blocking quarantine
 
-Try it now: https://huggingface.co/spaces/diotec/aethel-judge
+Try it now: https://huggingface.co/spaces/diotec/diotec360-judge
 ```
 
 ### Tweet 7 (Technical Deep Dive)
@@ -99,9 +99,9 @@ Full docs: [link to SENTINEL_GUIDE.md]
 The age of passive software is over.
 The age of autonomous defense has begun.
 
-🚀 Try Aethel v1.9.0 "The Guard" now:
-• Playground: https://aethel-studio.vercel.app
-• API: https://diotec-aethel-judge.hf.space
+🚀 Try Diotec360 v1.9.0 "The Guard" now:
+• Playground: https://diotec360-studio.vercel.app
+• API: https://diotec-diotec360-judge.hf.space
 • Docs: [GitHub link]
 
 The software that defends itself has arrived. 🛡️⚖️
@@ -112,15 +112,15 @@ The software that defends itself has arrived. 🛡️⚖️
 ## 💼 LinkedIn Post
 
 ```
-🛡️ Announcing Aethel v1.9.0 "The Guard" - The World's First Self-Defending Formally Verified Language
+🛡️ Announcing Diotec360 v1.9.0 "The Guard" - The World's First Self-Defending Formally Verified Language
 
-I'm excited to share a major milestone in secure software engineering: Aethel v1.9.0 introduces the Autonomous Sentinel, the first autonomous immune system for formally verified code.
+I'm excited to share a major milestone in secure software engineering: Diotec360 v1.9.0 introduces the Autonomous Sentinel, the first autonomous immune system for formally verified code.
 
 🎯 THE PROBLEM
 For decades, security has been reactive. We patch vulnerabilities after exploitation, respond to threats after damage, and rely on human intervention for defense.
 
 💡 THE SOLUTION
-Aethel v1.9.0 transforms this paradigm with 5 autonomous defense layers:
+Diotec360 v1.9.0 transforms this paradigm with 5 autonomous defense layers:
 
 1. 🔍 Sentinel Monitor - Real-time telemetry and anomaly detection
 2. 🧬 Semantic Sanitizer - Pre-execution intent analysis
@@ -154,7 +154,7 @@ This is not incremental improvement. This is a fundamental shift in how we think
 
 The age of passive software is over. The age of autonomous defense has begun.
 
-Try it now: https://huggingface.co/spaces/diotec/aethel-judge
+Try it now: https://huggingface.co/spaces/diotec/diotec360-judge
 
 #SoftwareEngineering #Cybersecurity #FormalVerification #DeFi #FinTech #Innovation
 ```
@@ -165,12 +165,12 @@ Try it now: https://huggingface.co/spaces/diotec/aethel-judge
 
 ### Title
 ```
-[Release] Aethel v1.9.0 "The Guard" - First formally verified language with autonomous defense system
+[Release] Diotec360 v1.9.0 "The Guard" - First formally verified language with autonomous defense system
 ```
 
 ### Body
 ```
-Hey everyone! I'm excited to share Aethel v1.9.0 "The Guard", which introduces something I haven't seen before: an autonomous immune system for formally verified code.
+Hey everyone! I'm excited to share Diotec360 v1.9.0 "The Guard", which introduces something I haven't seen before: an autonomous immune system for formally verified code.
 
 ## What is Aethel?
 
@@ -196,7 +196,7 @@ The **Autonomous Sentinel** - a 5-layer defense system that detects and responds
 
 ## Why This Matters
 
-Traditional security is reactive: patch after exploit, respond after damage. Aethel v1.9.0 is **proactive**: it detects anomalies in real-time, activates Crisis Mode automatically, quarantines suspicious transactions without blocking legitimate ones, and trains against attack scenarios continuously.
+Traditional security is reactive: patch after exploit, respond after damage. Diotec360 v1.9.0 is **proactive**: it detects anomalies in real-time, activates Crisis Mode automatically, quarantines suspicious transactions without blocking legitimate ones, and trains against attack scenarios continuously.
 
 ## Technical Deep Dive
 
@@ -212,9 +212,9 @@ Traditional security is reactive: patch after exploit, respond after damage. Aet
 
 ## Try It Now
 
-- **Playground**: https://aethel-studio.vercel.app
-- **API**: https://diotec-aethel-judge.hf.space
-- **Docs**: https://huggingface.co/spaces/diotec/aethel-judge
+- **Playground**: https://diotec360-studio.vercel.app
+- **API**: https://diotec-diotec360-judge.hf.space
+- **Docs**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **GitHub**: [link]
 
 ## Example Code
@@ -251,14 +251,14 @@ The age of passive software is over. 🛡️
 
 ### Title
 ```
-Aethel v1.9.0: The First Self-Defending Programming Language
+Diotec360 v1.9.0: The First Self-Defending Programming Language
 ```
 
 ### Description
 ```
-Aethel v1.9.0 "The Guard" introduces the Autonomous Sentinel - the world's first autonomous immune system for formally verified code. Learn how it detects attacks in real-time, activates Crisis Mode automatically, and trains against adversarial scenarios.
+Diotec360 v1.9.0 "The Guard" introduces the Autonomous Sentinel - the world's first autonomous immune system for formally verified code. Learn how it detects attacks in real-time, activates Crisis Mode automatically, and trains against adversarial scenarios.
 
-🔗 Try it: https://huggingface.co/spaces/diotec/aethel-judge
+🔗 Try it: https://huggingface.co/spaces/diotec/diotec360-judge
 📚 Docs: [GitHub link]
 💬 Discord: [link]
 
@@ -307,20 +307,20 @@ Timestamps:
 
 ### Subject Line
 ```
-🛡️ Aethel v1.9.0 "The Guard" - Software That Defends Itself
+🛡️ Diotec360 v1.9.0 "The Guard" - Software That Defends Itself
 ```
 
 ### Body
 ```
 Hi [Name],
 
-I'm excited to announce Aethel v1.9.0 "The Guard" - a major milestone in secure software engineering.
+I'm excited to announce Diotec360 v1.9.0 "The Guard" - a major milestone in secure software engineering.
 
 For the first time, formally verified code has an autonomous immune system.
 
 **What This Means**
 
-Aethel v1.9.0 doesn't just verify correctness—it actively defends against attacks:
+Diotec360 v1.9.0 doesn't just verify correctness—it actively defends against attacks:
 
 • Real-time anomaly detection
 • Automatic Crisis Mode activation
@@ -337,8 +337,8 @@ Aethel v1.9.0 doesn't just verify correctness—it actively defends against atta
 
 **Try It Now**
 
-Playground: https://aethel-studio.vercel.app
-API: https://diotec-aethel-judge.hf.space
+Playground: https://diotec360-studio.vercel.app
+API: https://diotec-diotec360-judge.hf.space
 Docs: [GitHub link]
 
 **What's Next**

@@ -6,7 +6,7 @@
 ═══════════════════════════════════════════════════════════════
 
 [ ] Hugging Face account created
-[ ] Space created: diotec/aethel-judge
+[ ] Space created: diotec/diotec360-judge
 [ ] Git configured with HF credentials
 [ ] Docker installed (for local testing)
 [ ] Python 3.11+ installed
@@ -31,7 +31,7 @@
 [ ] Run: test_docker_local.bat
 [ ] Verify: http://localhost:7860/health
 [ ] Test: python test_huggingface_deployment.py http://localhost:7860
-[ ] Stop container: docker stop aethel-judge-test
+[ ] Stop container: docker stop diotec360-judge-test
 
 🚀 DEPLOYMENT
 ═══════════════════════════════════════════════════════════════
@@ -44,7 +44,7 @@
 🔍 BUILD MONITORING
 ═══════════════════════════════════════════════════════════════
 
-[ ] Go to: https://huggingface.co/spaces/diotec/aethel-judge
+[ ] Go to: https://huggingface.co/spaces/diotec/diotec360-judge
 [ ] Click "Logs" tab
 [ ] Watch build progress
 [ ] Wait for "Running" badge (green)
@@ -55,8 +55,8 @@
 
 [ ] Run: python test_huggingface_deployment.py
 [ ] All tests pass (6/6)
-[ ] Health check: curl https://diotec-aethel-judge.hf.space/health
-[ ] Examples: curl https://diotec-aethel-judge.hf.space/api/examples
+[ ] Health check: curl https://diotec-diotec360-judge.hf.space/health
+[ ] Examples: curl https://diotec-diotec360-judge.hf.space/api/examples
 [ ] Verify endpoint works
 [ ] Ghost-Runner endpoint works
 
@@ -100,10 +100,10 @@
 🎉 DEPLOYMENT COMPLETE!
 
 Your Aethel Judge is now live at:
-https://huggingface.co/spaces/diotec/aethel-judge
+https://huggingface.co/spaces/diotec/diotec360-judge
 
 API Endpoint:
-https://diotec-aethel-judge.hf.space
+https://diotec-diotec360-judge.hf.space
 
 ═══════════════════════════════════════════════════════════════
 

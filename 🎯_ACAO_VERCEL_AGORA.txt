@@ -63,7 +63,7 @@
 │    Ambiente: Production                                       │
 │                                                               │
 │    Nome: NEXT_PUBLIC_LATTICE_NODES                            │
-│    Valor: https://diotec-aethel-judge.hf.space,https://backup.diotec360.com │
+│    Valor: https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com │
 │    Ambiente: Production                                       │
 │                                                               │
 │    Nome: ALPHA_VANTAGE_API_KEY                                │
@@ -107,7 +107,7 @@
 │ python verify_production_triangle.py                          │
 │                                                               │
 │ Deve verificar os 3 nós:                                      │
-│ ✅ Node 1: https://diotec-aethel-judge.hf.space              │
+│ ✅ Node 1: https://diotec-diotec360-judge.hf.space              │
 │ ✅ Node 2: https://api.diotec360.com                         │
 │ ✅ Node 3: https://backup.diotec360.com                      │
 │                                                               │
@@ -123,7 +123,7 @@
    │  https://api.diotec360.com              │
    │           ↓                             │
    │  🟢 Node 1 (Hugging Face)               │
-   │  https://diotec-aethel-judge.hf.space  │
+   │  https://diotec-diotec360-judge.hf.space  │
    │           ↓                             │
    │  🟣 Node 3 (Backup)                     │
    │  https://backup.diotec360.com           │

@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demo: Aethel Cognitive Persistence - Memória de Destilação
 Demonstra armazenamento e gerenciamento de respostas verificadas.
 
@@ -10,7 +26,7 @@ Date: February 18, 2026
 import sys
 import time
 from pathlib import Path
-from aethel.ai.cognitive_persistence import (
+from diotec360.ai.cognitive_persistence import (
     CognitivePersistence,
     StoredResponse,
     create_persistence_from_env
@@ -27,7 +43,7 @@ def demo_1_basic_storage():
     persistence = CognitivePersistence("./demo_cognitive_1.db")
     
     # Criar resposta mock
-    from aethel.ai.autonomous_distiller import DistilledResponse, ResponseType
+    from diotec360.ai.autonomous_distiller import DistilledResponse, ResponseType
     
     mock_response = DistilledResponse(
         text="def is_prime(n):\n    if n < 2: return False\n    return all(n % i != 0 for i in range(2, int(n**0.5)+1))",
@@ -63,7 +79,7 @@ def demo_2_categories():
     persistence = CognitivePersistence("./demo_cognitive_2.db")
     
     # Criar respostas de diferentes categorias
-    from aethel.ai.autonomous_distiller import DistilledResponse, ResponseType
+    from diotec360.ai.autonomous_distiller import DistilledResponse, ResponseType
     
     categories_examples = [
         ("code", ResponseType.PYTHON_CODE, "def factorial(n): return 1 if n <= 1 else n * factorial(n-1)"),
@@ -270,8 +286,8 @@ def demo_8_integration():
     
     print("\n📝 Exemplo de código:")
     print("""
-    from aethel.ai.autonomous_distiller import create_distiller_from_env
-    from aethel.ai.cognitive_persistence import create_persistence_from_env
+    from diotec360.ai.autonomous_distiller import create_distiller_from_env
+    from diotec360.ai.cognitive_persistence import create_persistence_from_env
     
     # Criar componentes
     distiller = create_distiller_from_env()

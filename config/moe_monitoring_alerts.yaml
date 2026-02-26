@@ -246,7 +246,7 @@ alerts:
       severity: critical
       description: Expert failure rate above 5%
       action: Investigate expert failures, consider rollback
-      runbook: https://docs.aethel.dev/runbooks/moe-expert-failure
+      runbook: https://docs.diotec360.dev/runbooks/moe-expert-failure
     
     - name: MOEAccuracyDegraded
       condition: z3_expert_accuracy < 0.999 OR sentinel_expert_accuracy < 0.999 OR guardian_expert_accuracy < 0.999
@@ -254,7 +254,7 @@ alerts:
       severity: critical
       description: Expert accuracy below 99.9%
       action: Investigate accuracy degradation, consider rollback
-      runbook: https://docs.aethel.dev/runbooks/moe-accuracy-degradation
+      runbook: https://docs.diotec360.dev/runbooks/moe-accuracy-degradation
     
     - name: MOEOverheadCritical
       condition: histogram_quantile(0.95, moe_overhead_ms) > 10
@@ -262,7 +262,7 @@ alerts:
       severity: critical
       description: MOE overhead above 10ms (95th percentile)
       action: Investigate performance bottleneck
-      runbook: https://docs.aethel.dev/runbooks/moe-high-overhead
+      runbook: https://docs.diotec360.dev/runbooks/moe-high-overhead
     
     - name: MOEThroughputDegraded
       condition: moe_throughput_tps < 1000
@@ -270,7 +270,7 @@ alerts:
       severity: critical
       description: Throughput below 1000 tx/s
       action: Investigate throughput degradation
-      runbook: https://docs.aethel.dev/runbooks/moe-low-throughput
+      runbook: https://docs.diotec360.dev/runbooks/moe-low-throughput
     
     - name: MOEFallbackRateCritical
       condition: rate(moe_fallback_activations_total[5m]) > 0.1
@@ -278,7 +278,7 @@ alerts:
       severity: critical
       description: Fallback rate above 10%
       action: Investigate why MOE is falling back frequently
-      runbook: https://docs.aethel.dev/runbooks/moe-high-fallback
+      runbook: https://docs.diotec360.dev/runbooks/moe-high-fallback
 
   # Warning Alerts (Monitor Closely)
   warning:
@@ -288,7 +288,7 @@ alerts:
       severity: warning
       description: Z3 Expert latency above 30s (95th percentile)
       action: Monitor Z3 Expert performance
-      runbook: https://docs.aethel.dev/runbooks/z3-expert-slow
+      runbook: https://docs.diotec360.dev/runbooks/z3-expert-slow
     
     - name: SentinelExpertLatencyHigh
       condition: histogram_quantile(0.95, sentinel_expert_latency_ms) > 100
@@ -296,7 +296,7 @@ alerts:
       severity: warning
       description: Sentinel Expert latency above 100ms (95th percentile)
       action: Monitor Sentinel Expert performance
-      runbook: https://docs.aethel.dev/runbooks/sentinel-expert-slow
+      runbook: https://docs.diotec360.dev/runbooks/sentinel-expert-slow
     
     - name: GuardianExpertLatencyHigh
       condition: histogram_quantile(0.95, guardian_expert_latency_ms) > 50
@@ -304,7 +304,7 @@ alerts:
       severity: warning
       description: Guardian Expert latency above 50ms (95th percentile)
       action: Monitor Guardian Expert performance
-      runbook: https://docs.aethel.dev/runbooks/guardian-expert-slow
+      runbook: https://docs.diotec360.dev/runbooks/guardian-expert-slow
     
     - name: MOEUncertaintyRateHigh
       condition: rate(moe_verdicts_uncertain[10m]) / rate(moe_transactions_total[10m]) > 0.01
@@ -312,7 +312,7 @@ alerts:
       severity: warning
       description: Uncertainty rate above 1%
       action: Review consensus thresholds
-      runbook: https://docs.aethel.dev/runbooks/moe-high-uncertainty
+      runbook: https://docs.diotec360.dev/runbooks/moe-high-uncertainty
     
     - name: MOEFallbackRateElevated
       condition: rate(moe_fallback_activations_total[10m]) > 0.05
@@ -320,7 +320,7 @@ alerts:
       severity: warning
       description: Fallback rate above 5%
       action: Monitor fallback reasons
-      runbook: https://docs.aethel.dev/runbooks/moe-elevated-fallback
+      runbook: https://docs.diotec360.dev/runbooks/moe-elevated-fallback
     
     - name: CacheHitRateLow
       condition: verdict_cache_hit_rate < 0.5
@@ -328,7 +328,7 @@ alerts:
       severity: warning
       description: Cache hit rate below 50%
       action: Review cache configuration
-      runbook: https://docs.aethel.dev/runbooks/moe-low-cache-hit
+      runbook: https://docs.diotec360.dev/runbooks/moe-low-cache-hit
     
     - name: GatingNetworkLatencyHigh
       condition: histogram_quantile(0.95, gating_network_routing_latency_ms) > 10
@@ -336,7 +336,7 @@ alerts:
       severity: warning
       description: Gating network latency above 10ms
       action: Optimize gating network
-      runbook: https://docs.aethel.dev/runbooks/gating-network-slow
+      runbook: https://docs.diotec360.dev/runbooks/gating-network-slow
     
     - name: ConsensusEngineLatencyHigh
       condition: histogram_quantile(0.95, consensus_engine_latency_ms) > 1000
@@ -344,7 +344,7 @@ alerts:
       severity: warning
       description: Consensus engine latency above 1s
       action: Investigate consensus bottleneck
-      runbook: https://docs.aethel.dev/runbooks/consensus-engine-slow
+      runbook: https://docs.diotec360.dev/runbooks/consensus-engine-slow
 
   # Info Alerts (Informational)
   info:
@@ -566,8 +566,8 @@ notifications:
       type: email
       severity: [critical, warning]
       recipients:
-        - moe-oncall@aethel.dev
-        - ai-team@aethel.dev
+        - moe-oncall@diotec360.dev
+        - ai-team@diotec360.dev
     
     - name: slack_moe_info
       type: slack
@@ -603,7 +603,7 @@ export:
   datadog:
     enabled: false
     api_key: ${DATADOG_API_KEY}
-    tags: [env:production, service:aethel-moe]
+    tags: [env:production, service:diotec360-moe]
   
   grafana:
     enabled: true

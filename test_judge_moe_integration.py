@@ -1,7 +1,23 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Integration Tests for Judge + MOE Intelligence Layer
 
-Tests the integration between AethelJudge and MOE Intelligence Layer:
+Tests the integration between DIOTEC360Judge and MOE Intelligence Layer:
 - MOE approval → existing layers
 - MOE rejection → skip existing layers
 - MOE failure → fallback to existing layers
@@ -13,7 +29,7 @@ Version: v2.1.0
 
 import pytest
 import os
-from aethel.core.judge import AethelJudge
+from diotec360.core.judge import DIOTEC360Judge
 
 
 class TestJudgeMOEIntegration:
@@ -82,7 +98,7 @@ class TestJudgeMOEIntegration:
         WHEN MOE approves, THE system SHALL proceed to existing layers
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge.moe_enabled:
             pytest.skip("MOE not available")
@@ -104,7 +120,7 @@ class TestJudgeMOEIntegration:
         WHEN MOE rejects, THE system SHALL skip existing layers and reject immediately
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge.moe_enabled:
             pytest.skip("MOE not available")
@@ -127,7 +143,7 @@ class TestJudgeMOEIntegration:
         WHEN MOE fails, THE system SHALL fall back to existing layers
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge.moe_enabled:
             pytest.skip("MOE not available")
@@ -149,7 +165,7 @@ class TestJudgeMOEIntegration:
         THE system SHALL support MOE disable flag for emergency rollback
         """
         # Create judge with MOE disabled
-        judge = AethelJudge(self.intent_map, enable_moe=False)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=False)
         
         # Verify simple transfer (should use existing layers only)
         result = judge.verify_logic('simple_transfer')
@@ -168,7 +184,7 @@ class TestJudgeMOEIntegration:
         THE system SHALL support MOE disable flag for emergency rollback
         """
         # Create judge with MOE disabled
-        judge = AethelJudge(self.intent_map, enable_moe=False)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=False)
         
         # Enable MOE
         success = judge.enable_moe()
@@ -190,7 +206,7 @@ class TestJudgeMOEIntegration:
         THE system SHALL maintain backward compatibility with all v1.9.0 APIs
         """
         # Create judge without MOE (v1.9.0 behavior)
-        judge = AethelJudge(self.intent_map, enable_moe=False)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=False)
         
         # Verify simple transfer
         result = judge.verify_logic('simple_transfer')
@@ -209,10 +225,10 @@ class TestJudgeMOEIntegration:
         THE system SHALL support gradual MOE rollout
         """
         # Set environment variable
-        os.environ['AETHEL_ENABLE_MOE'] = 'true'
+        os.environ['DIOTEC360_ENABLE_MOE'] = 'true'
         
         # Create judge (should read from env var)
-        judge = AethelJudge(self.intent_map)
+        judge = DIOTEC360Judge(self.intent_map)
         
         # Check if MOE is enabled (depends on availability)
         # If MOE is available, it should be enabled
@@ -220,7 +236,7 @@ class TestJudgeMOEIntegration:
         assert isinstance(judge.moe_enabled, bool)
         
         # Clean up
-        os.environ['AETHEL_ENABLE_MOE'] = 'false'
+        os.environ['DIOTEC360_ENABLE_MOE'] = 'false'
     
     def test_moe_with_conservation_violation(self):
         """
@@ -229,7 +245,7 @@ class TestJudgeMOEIntegration:
         Validates that Guardian Expert catches conservation violations
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge.moe_enabled:
             pytest.skip("MOE not available")
@@ -248,7 +264,7 @@ class TestJudgeMOEIntegration:
         THE MOE layer SHALL execute before existing Layers 0-4
         """
         # Create judge with MOE enabled
-        judge = AethelJudge(self.intent_map, enable_moe=True)
+        judge = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge.moe_enabled:
             pytest.skip("MOE not available")
@@ -300,8 +316,8 @@ class TestJudgeMOEPerformance:
         import time
         
         # Create judges with and without MOE
-        judge_without_moe = AethelJudge(self.intent_map, enable_moe=False)
-        judge_with_moe = AethelJudge(self.intent_map, enable_moe=True)
+        judge_without_moe = DIOTEC360Judge(self.intent_map, enable_moe=False)
+        judge_with_moe = DIOTEC360Judge(self.intent_map, enable_moe=True)
         
         if not judge_with_moe.moe_enabled:
             pytest.skip("MOE not available")

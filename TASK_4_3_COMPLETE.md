@@ -209,7 +209,7 @@ Property 14 ensures that Aethel's conflict resolution is not just correct, but *
 - Race conditions possible
 - Flaky behavior under load
 
-**Aethel v1.8.0**:
+**Diotec360 v1.8.0**:
 - Uses transaction IDs (deterministic)
 - No race conditions possible
 - Consistent behavior always
@@ -276,7 +276,7 @@ The implementation demonstrates that:
 
 > "A system that cannot reproduce its own behavior is not a system - it's a lottery."
 
-With Property 14 proven, Aethel v1.8.0 has achieved **TEMPORAL SOVEREIGNTY** - the ability to control time itself through deterministic execution. No race conditions. No surprises. Only mathematical certainty.
+With Property 14 proven, Diotec360 v1.8.0 has achieved **TEMPORAL SOVEREIGNTY** - the ability to control time itself through deterministic execution. No race conditions. No surprises. Only mathematical certainty.
 
 **The Synchrony Protocol is no longer just parallel - it's PREDICTABLY parallel.**
 

@@ -224,7 +224,7 @@ NUMBER: /[0-9]+/
 ### Infrastructure
 - **Local Backend**: http://localhost:8000
 - **Local Frontend**: http://localhost:3000
-- **Repository**: https://github.com/diotec-barros/aethel-lang
+- **Repository**: https://github.com/diotec-barros/diotec360-lang
 - **Deployment**: Railway + Vercel (pending)
 
 ---

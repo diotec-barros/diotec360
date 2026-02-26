@@ -1,4 +1,4 @@
-# 🎭 Aethel v1.6.0 - Ghost Protocol Specification
+# 🎭 Diotec360 v1.6.0 - Ghost Protocol Specification
 
 **Codename**: Ghost Protocol  
 **Version**: 1.6.0  
@@ -462,7 +462,7 @@ Now includes ZKP info:
 ## 💡 Marketing Messages
 
 ### Tagline
-**"Aethel v1.6.0: Prove without revealing"**
+**"Diotec360 v1.6.0: Prove without revealing"**
 
 ### Key Messages
 
@@ -482,21 +482,21 @@ Now includes ZKP info:
 
 **Twitter**:
 ```
-🎭 Aethel v1.6.0 "Ghost Protocol" is here!
+🎭 Diotec360 v1.6.0 "Ghost Protocol" is here!
 
 New `secret` keyword enables Zero-Knowledge Proofs:
 ✅ Prove balance >= amount WITHOUT revealing balance
 ✅ Verify compliance WITHOUT seeing data
 ✅ ZKP-Ready architecture
 
-Try it: https://aethel-studio.vercel.app
+Try it: https://diotec360-studio.vercel.app
 
 #ZeroKnowledge #Privacy #FormalVerification
 ```
 
 **LinkedIn**:
 ```
-Excited to announce Aethel v1.6.0 "Ghost Protocol"!
+Excited to announce Diotec360 v1.6.0 "Ghost Protocol"!
 
 We've added Zero-Knowledge Proof syntax to our formally verified language.
 

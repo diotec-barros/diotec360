@@ -1,6 +1,6 @@
-# 🚀 README - Deploy Aethel v1.1
+# 🚀 README - Deploy Diotec360 v1.1
 
-> **Guia rápido para lançar o Aethel v1.1 "The Resonance"**
+> **Guia rápido para lançar o Diotec360 v1.1 "The Resonance"**
 
 ---
 
@@ -161,7 +161,7 @@ Quando tudo estiver pronto:
 ```
 🌐 Frontend: https://aethel.diotec360.com
 🔌 Backend:  https://api.diotec360.com
-📦 GitHub:   https://github.com/diotec-barros/aethel-lang
+📦 GitHub:   https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---
@@ -224,7 +224,7 @@ Cobertura:              100%
 
 Quando terminar:
 
-- ✅ Aethel v1.1 no ar
+- ✅ Diotec360 v1.1 no ar
 - ✅ Domínios profissionais configurados
 - ✅ Ghost-Runner funcionando
 - ✅ Mirror funcionando

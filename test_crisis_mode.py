@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Unit Tests for Crisis Mode Detection Logic
 Testing the implementation of task 1.4 from the Autonomous Sentinel spec.
 
@@ -9,7 +25,7 @@ Date: February 4, 2026
 
 import pytest
 import time
-from aethel.core.sentinel_monitor import SentinelMonitor, TransactionMetrics
+from diotec360.core.sentinel_monitor import SentinelMonitor, TransactionMetrics
 
 
 def test_crisis_mode_activation_by_anomaly_rate():

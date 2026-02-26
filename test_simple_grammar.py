@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
-Teste simples da gramática Aethel.
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Teste simples da gramática Diotec360.
 """
 
 import sys
@@ -11,9 +27,9 @@ sys.path.append('.')
 
 # Testar importação
 try:
-    from aethel.core.grammar import aethel_grammar
+    from diotec360.core.grammar import DIOTEC360_grammar
     print("✅ Gramática importada com sucesso")
-    print(f"Tamanho da gramática: {len(aethel_grammar)} caracteres")
+    print(f"Tamanho da gramática: {len(DIOTEC360_grammar)} caracteres")
 except ImportError as e:
     print(f"❌ Erro ao importar gramática: {e}")
     sys.exit(1)
@@ -23,7 +39,7 @@ try:
     from lark import Lark
     
     # Criar parser
-    parser = Lark(aethel_grammar, parser='lalr')
+    parser = Lark(DIOTEC360_grammar, parser='lalr')
     print("✅ Parser Lark criado com sucesso")
     
     # Testar código simples com números
@@ -99,18 +115,18 @@ try:
     except Exception as e:
         print(f"❌ Erro: {e}")
     
-    # Testar o parser Aethel completo
-    print("\n\nTestando Parser Aethel completo:")
+    # Testar o parser Diotec360 completo
+    print("\n\nTestando Parser Diotec360 completo:")
     print("=" * 50)
     
     try:
-        from aethel.core.parser import AethelParser
-        aethel_parser = AethelParser()
-        print("✅ Parser Aethel criado com sucesso")
+        from diotec360.core.parser import DIOTEC360Parser
+        DIOTEC360_parser = DIOTEC360Parser()
+        print("✅ Parser Diotec360 criado com sucesso")
         
         # Testar com código simples
-        result = aethel_parser.parse(test_code_1)
-        print(f"✅ Parse Aethel bem-sucedido!")
+        result = DIOTEC360_parser.parse(test_code_1)
+        print(f"✅ Parse Diotec360 bem-sucedido!")
         print(f"   Resultado tipo: {type(result)}")
         
         if isinstance(result, dict):
@@ -122,7 +138,7 @@ try:
                 print(f"     Post-conditions: {len(intent_data.get('post_conditions', []))}")
         
     except Exception as e:
-        print(f"❌ Erro no Parser Aethel: {e}")
+        print(f"❌ Erro no Parser Diotec360: {e}")
         import traceback
         traceback.print_exc()
     

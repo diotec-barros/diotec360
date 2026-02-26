@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\network_monitor.py
+# hypothesis_version: 6.151.5
+
+[-1.0, 0.0, 0.001, 1.0, 2.0, 5.0, 500.0, 100, 1000, 'average_latency', 'healthy_peers', 'high_latency', 'peer_stats', 'ping', 'timestamp', 'total_peers', 'type']

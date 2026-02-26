@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\dependency_graph.py
+# hypothesis_version: 6.151.5
+
+['DependencyGraph', 'TransactionNode', 'dependencies', 'dependents', 'edge_count', 'edges', 'node_count', 'nodes', 'transaction_id']

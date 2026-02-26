@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\sovereign_persistence.py
+# hypothesis_version: 6.151.5
+
+[100, 500, 1000, '.aethel_state', '.aethel_vault', '=', 'AETHEL_AUDIT_PATH', 'AETHEL_STATE_PATH', 'AETHEL_VAULT_PATH', 'DELETE', 'PUT', 'a', 'block_height', 'empty', 'meets_target', 'merkle_root', 'operations_count', 'path', 'pending', 'r', 'recovery_count', 'sequence_number', 'snapshots', 'snapshots_index.json', 'timestamp', 'w', 'wal.log', 'wal_sequence']

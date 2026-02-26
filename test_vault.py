@@ -1,12 +1,28 @@
-from aethel_kernel import AethelKernel
+"""
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+from diotec360_kernel import Diotec360Kernel
 
 
 print("╔══════════════════════════════════════════════════════════════╗")
-print("║     AETHEL VAULT v0.5 - CONTENT-ADDRESSABLE CODE TEST       ║")
+print("║     DIOTEC360 VAULT v0.5 - CONTENT-ADDRESSABLE CODE TEST       ║")
 print("╚══════════════════════════════════════════════════════════════╝\n")
 
 # Criar kernel com vault
-kernel = AethelKernel(ai_provider="anthropic", vault_path=".aethel_vault")
+kernel = Diotec360Kernel(ai_provider="anthropic", vault_path=".diotec360_vault")
 
 # Teste 1: Compilar e armazenar primeira função
 print("\n" + "="*70)
@@ -90,8 +106,8 @@ if result3['status'] == 'SUCCESS':
     print(f"\n✅ Função armazenada com hash: {result3['vault_hash'][:16]}...")
     
     # Verificar se a lógica é reconhecida como similar
-    from aethel.core.parser import AethelParser
-    parser = AethelParser()
+    from diotec360.core.parser import Diotec360Parser
+    parser = Diotec360Parser()
     ast3 = parser.parse(code3)
     
     matches = kernel.vault.find_by_logic(ast3['pay'])

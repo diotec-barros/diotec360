@@ -1,5 +1,21 @@
 """
-Test script to verify Aethel API integration
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test script to verify Diotec360 API integration
 """
 
 import requests
@@ -56,7 +72,7 @@ def test_verify():
     print("✅ Verification endpoint passed")
 
 def main():
-    print("🚀 Aethel API Integration Test\n")
+    print("🚀 Diotec360 API Integration Test\n")
     print("=" * 50)
     
     try:
@@ -68,7 +84,7 @@ def main():
         print("🎉 All tests passed!")
         print("\n✅ Backend API is working correctly")
         print("✅ Frontend can now connect to http://localhost:8000")
-        print("\n🌐 Open http://localhost:3000 to test Aethel Studio")
+        print("\n🌐 Open http://localhost:3000 to test Diotec360 Studio")
         
     except Exception as e:
         print(f"\n❌ Test failed: {e}")

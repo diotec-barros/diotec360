@@ -3,7 +3,7 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                    AETHEL v0.7 - DISTRIBUTED                 ║
+║                    Diotec360 v0.7 - DISTRIBUTED                 ║
 ║              The Global Truth Protocol                       ║
 ╚══════════════════════════════════════════════════════════════╝
 
@@ -250,7 +250,7 @@ intent secure_payment(user: Account, merchant: Account, amount: Gold) {
 
 ## Conclusão
 
-A Aethel v0.7 está **completa e operacional**. Todos os componentes principais foram implementados, testados, e agora incluem capacidades de distribuição global. O sistema demonstra:
+A Diotec360 v0.7 está **completa e operacional**. Todos os componentes principais foram implementados, testados, e agora incluem capacidades de distribuição global. O sistema demonstra:
 
 1. ✅ **Verificação Formal**: Provas matemáticas funcionando
 2. ✅ **Autocorreção**: Feedback loop operacional

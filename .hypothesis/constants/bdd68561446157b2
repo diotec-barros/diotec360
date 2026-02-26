@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\quarantine_system.py
+# hypothesis_version: 6.151.5
+
+[0.0, 0.01, 0.7, 100, 'PROVED', 'anomaly_score', 'capacity', 'cleared', 'code', 'hash', 'id', 'quarantined', 'reason', 'rejected', 'status', 'timestamp', 'total_entries', 'transaction_id', 'utilization']

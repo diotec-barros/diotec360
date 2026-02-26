@@ -12,7 +12,7 @@ O registro DNS foi adicionado no Vercel:
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 Age: 2 minutos ✅
 ```
@@ -58,7 +58,7 @@ Como o Hugging Face Spaces não suporta domínios personalizados nativamente, a 
 
 **Atualizar configurações para usar:**
 ```
-https://diotec-aethel-judge.hf.space
+https://diotec-diotec360-judge.hf.space
 ```
 
 **Vantagens:**
@@ -90,7 +90,7 @@ Se você realmente precisa de `hf.diotec360.com`, precisaria:
 Vamos reverter para usar a URL direta do Hugging Face Space, que é mais simples e confiável:
 
 ```
-Node 1: https://diotec-aethel-judge.hf.space
+Node 1: https://diotec-diotec360-judge.hf.space
 ```
 
 **Benefícios:**
@@ -106,7 +106,7 @@ Node 1: https://diotec-aethel-judge.hf.space
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL TRIANGLE OF TRUTH - PRODUCTION           │
+│         DIOTEC360 TRIANGLE OF TRUTH - PRODUCTION           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  🌐 FRONTEND (Vercel)                                   │
@@ -115,7 +115,7 @@ Node 1: https://diotec-aethel-judge.hf.space
 │  🔺 BACKEND TRIANGLE (HTTP-Only Resilience)             │
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Diotec360 Primary                       │
 │  │  └─ https://node2.diotec360.com                     │
@@ -136,18 +136,18 @@ Vamos atualizar os arquivos para usar a URL direta do HF:
 
 **Frontend** (`frontend/.env.production`):
 ```env
-NEXT_PUBLIC_API_URL=https://diotec-aethel-judge.hf.space
+NEXT_PUBLIC_API_URL=https://diotec-diotec360-judge.hf.space
 NEXT_PUBLIC_LATTICE_NODES=https://node2.diotec360.com,https://backup.diotec360.com
 ```
 
 **Node 2** (`.env.node2.local`):
 ```env
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space
 ```
 
 **Node 3** (`.env.node3.backup`):
 ```env
-AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://node2.diotec360.com
+DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://node2.diotec360.com
 ```
 
 ---
@@ -164,7 +164,7 @@ Ou manter para uso futuro (não causa problemas).
 
 ```bash
 # Teste a URL direta do HF
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Deve retornar
 {"status":"healthy","version":"3.0.5"}
@@ -194,7 +194,7 @@ api.diotec360.com → Node 2 (seu servidor local)
 
 | Opção | URL | SSL | Configuração | Recomendado |
 |-------|-----|-----|--------------|-------------|
-| URL Direta HF | `diotec-aethel-judge.hf.space` | ✅ Auto | ✅ Zero | ✅ SIM |
+| URL Direta HF | `diotec-diotec360-judge.hf.space` | ✅ Auto | ✅ Zero | ✅ SIM |
 | Subdomínio HF | `hf.diotec360.com` | ❌ Complexo | ❌ Proxy | ❌ NÃO |
 | Subdomínio Node2 | `api.diotec360.com` | ✅ Fácil | ✅ Simples | ✅ SIM |
 

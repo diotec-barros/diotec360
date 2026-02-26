@@ -8,7 +8,7 @@ echo ========================================
 echo.
 
 echo Building Docker image...
-docker build -f Dockerfile.huggingface -t aethel-judge-test .
+docker build -f Dockerfile.huggingface -t diotec360-judge-test .
 
 if errorlevel 1 (
     echo.
@@ -22,7 +22,7 @@ echo.
 echo ✅ Docker build successful!
 echo.
 echo Starting container on port 7860...
-docker run -d -p 7860:7860 --name aethel-judge-test aethel-judge-test
+docker run -d -p 7860:7860 --name diotec360-judge-test diotec360-judge-test
 
 if errorlevel 1 (
     echo.
@@ -57,7 +57,7 @@ echo Or run the full test suite:
 echo   python test_huggingface_deployment.py http://localhost:7860
 echo.
 echo To stop the container:
-echo   docker stop aethel-judge-test
-echo   docker rm aethel-judge-test
+echo   docker stop diotec360-judge-test
+echo   docker rm diotec360-judge-test
 echo.
 pause

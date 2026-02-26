@@ -1,12 +1,12 @@
-# Aethel-Studio Deployment Guide
+# diotec360-studio Deployment Guide
 
-Complete guide to deploy Aethel-Studio to the web.
+Complete guide to deploy diotec360-studio to the web.
 
 ---
 
 ## 🎯 Overview
 
-**Aethel-Studio** consists of two parts:
+**diotec360-studio** consists of two parts:
 1. **Backend API** (Python/FastAPI) → Railway or Render
 2. **Frontend** (Next.js) → Vercel
 
@@ -40,7 +40,7 @@ Complete guide to deploy Aethel-Studio to the web.
 2. **Create New Project**
    - Click "New Project"
    - Select "Deploy from GitHub repo"
-   - Choose `aethel-lang` repository
+   - Choose `diotec360-lang` repository
    - Railway will auto-detect the Dockerfile
 
 3. **Configure Environment**
@@ -72,7 +72,7 @@ Complete guide to deploy Aethel-Studio to the web.
 2. **Create New Web Service**
    - Click "New +" → "Web Service"
    - Connect your GitHub repository
-   - Select `aethel-lang`
+   - Select `diotec360-lang`
 
 3. **Configure Service**
    - **Name**: `aethel-api`
@@ -193,7 +193,7 @@ Update `api/main.py` for production:
 ```python
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://aethel-lang.vercel.app"],  # Your frontend domain
+    allow_origins=["https://diotec360-lang.vercel.app"],  # Your frontend domain
     allow_credentials=True,
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
@@ -281,8 +281,8 @@ app.add_middleware(
 
 ## 📞 Support
 
-- **GitHub Issues**: https://github.com/diotec-barros/aethel-lang/issues
-- **Discussions**: https://github.com/diotec-barros/aethel-lang/discussions
+- **GitHub Issues**: https://github.com/diotec-barros/diotec360-lang/issues
+- **Discussions**: https://github.com/diotec-barros/diotec360-lang/discussions
 - **Railway Docs**: https://docs.railway.app
 - **Render Docs**: https://render.com/docs
 
@@ -290,4 +290,4 @@ app.add_middleware(
 
 **Ready to deploy? Start with Part 1 (Backend API) now!**
 
-The Aethel-Studio will make formal verification accessible to everyone with just a web browser.
+The diotec360-studio will make formal verification accessible to everyone with just a web browser.

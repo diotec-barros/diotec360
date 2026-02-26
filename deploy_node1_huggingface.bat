@@ -1,12 +1,12 @@
 @echo off
 REM ========================================
-REM Aethel v3.0.5 - Node 1 Deployment
+REM Diotec360 v3.0.5 - Node 1 Deployment
 REM Target: Hugging Face Space
 REM ========================================
 
 echo.
 echo ========================================
-echo   AETHEL v3.0.5 - NODE 1 DEPLOYMENT
+echo   Diotec360 v3.0.5 - NODE 1 DEPLOYMENT
 echo   Target: Hugging Face Space
 echo ========================================
 echo.
@@ -43,21 +43,21 @@ copy /Y .env.node1.huggingface aethel-hf-space\.env
 
 echo.
 echo [4/7] Creating vault directories...
-if not exist "aethel-hf-space\.aethel_vault\bundles" mkdir aethel-hf-space\.aethel_vault\bundles
-if not exist "aethel-hf-space\.aethel_vault\certificates" mkdir aethel-hf-space\.aethel_vault\certificates
-if not exist "aethel-hf-space\.aethel_state" mkdir aethel-hf-space\.aethel_state
-if not exist "aethel-hf-space\.aethel_sentinel" mkdir aethel-hf-space\.aethel_sentinel
+if not exist "aethel-hf-space\.DIOTEC360_vault\bundles" mkdir aethel-hf-space\.DIOTEC360_vault\bundles
+if not exist "aethel-hf-space\.DIOTEC360_vault\certificates" mkdir aethel-hf-space\.DIOTEC360_vault\certificates
+if not exist "aethel-hf-space\.DIOTEC360_state" mkdir aethel-hf-space\.DIOTEC360_state
+if not exist "aethel-hf-space\.DIOTEC360_sentinel" mkdir aethel-hf-space\.DIOTEC360_sentinel
 
 echo.
 echo [5/7] Copying genesis state...
-xcopy /E /I /Y .aethel_vault aethel-hf-space\.aethel_vault
-xcopy /E /I /Y .aethel_state aethel-hf-space\.aethel_state
+xcopy /E /I /Y .DIOTEC360_vault aethel-hf-space\.DIOTEC360_vault
+xcopy /E /I /Y .DIOTEC360_state aethel-hf-space\.DIOTEC360_state
 
 echo.
 echo [6/7] Updating Dockerfile for HF Spaces (port 7860)...
 cd aethel-hf-space
 (
-echo # Aethel v3.0.5 - Hugging Face Space Dockerfile
+echo # Diotec360 v3.0.5 - Hugging Face Space Dockerfile
 echo FROM python:3.11-slim
 echo.
 echo WORKDIR /app
@@ -72,11 +72,11 @@ echo COPY api ./api
 echo COPY .env .env
 echo.
 echo # Copy genesis state
-echo COPY .aethel_vault ./.aethel_vault
-echo COPY .aethel_state ./.aethel_state
+echo COPY .DIOTEC360_vault ./.DIOTEC360_vault
+echo COPY .DIOTEC360_state ./.DIOTEC360_state
 echo.
 echo # Create directories
-echo RUN mkdir -p .aethel_sentinel
+echo RUN mkdir -p .DIOTEC360_sentinel
 echo.
 echo # Expose HF Spaces port
 echo EXPOSE 7860
@@ -88,7 +88,7 @@ echo CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
 echo.
 echo [7/7] Committing and pushing to Hugging Face...
 git add .
-git commit -m "Deploy Aethel v3.0.5 - Triangle of Truth Node 1"
+git commit -m "Deploy Diotec360 v3.0.5 - Triangle of Truth Node 1"
 git push
 
 if errorlevel 1 (

@@ -2,7 +2,7 @@
 
 ## Status Atual ✅
 
-**Aethel v1.9.0 "Autonomous Sentinel" está COMPLETO e PRONTO PARA LANÇAMENTO!**
+**Diotec360 v1.9.0 "Autonomous Sentinel" está COMPLETO e PRONTO PARA LANÇAMENTO!**
 
 - ✅ 7 componentes implementados (Sentinel Monitor, Semantic Sanitizer, Adaptive Rigor, Quarantine, Self-Healing, Adversarial Vaccine, Gauntlet Report)
 - ✅ 145 testes (98.6% passando)
@@ -118,7 +118,7 @@ Sistema de identidade soberana com criptografia:
 - Ghost Identity para privacidade
 - Chaves Ed25519 para assinaturas
 
-**Arquivos**: `AETHEL_V2_2_0_SOVEREIGN_IDENTITY_SPEC.md`
+**Arquivos**: `DIOTEC360_V2_2_0_SOVEREIGN_IDENTITY_SPEC.md`
 
 #### E. Lattice Core (v3.0)
 **Status**: COMPLETO ✅
@@ -160,7 +160,7 @@ Preparar Aethel para uso comercial:
    - Documentação para clientes
    - Estratégia de go-to-market
 
-   **Status**: Pitch deck criado (`AETHEL_APEX_PITCH_DECK.md`)
+   **Status**: Pitch deck criado (`DIOTEC360_APEX_PITCH_DECK.md`)
 
 ---
 

@@ -1,4 +1,4 @@
-# Crop Insurance Example - Aethel v1.9.0
+# Crop Insurance Example - Diotec360 v1.9.0
 
 ## 🌾 Your Original Request
 
@@ -258,4 +258,4 @@ Reason: Oracle verification failed
 
 ---
 
-**🌾 Aethel v1.9.0 - Protecting Farmers with Mathematics 🌾**
+**🌾 Diotec360 v1.9.0 - Protecting Farmers with Mathematics 🌾**

@@ -1,9 +1,9 @@
 @echo off
 REM Local Simulation - Node 1 Activation Script
-REM Aethel Real Lattice v3.0.4 - HTTP Resilience Mode
+REM DIOTEC360 REAL LATTICE v3.0.4 - HTTP Resilience Mode
 
 echo ========================================
-echo AETHEL TRIANGLE - NODE 1 LOCAL SIMULATION
+echo DIOTEC360 TRIANGLE - NODE 1 LOCAL SIMULATION
 echo ========================================
 echo.
 echo [INFO] Activating Node 1 (Hugging Face Simulation)
@@ -14,37 +14,37 @@ echo.
 REM Create local config
 echo [STEP 1] Creating local configuration...
 (
-echo # Aethel Node 1 - Local Simulation
+echo # Diotec360 Node 1 - Local Simulation
 echo # Simulating Hugging Face Space
 echo.
 echo # P2P Configuration - DISABLED
-echo AETHEL_P2P_ENABLED=false
-echo AETHEL_P2P_LISTEN=/ip4/0.0.0.0/tcp/9001
-echo AETHEL_P2P_TOPIC=aethel/lattice/v1
+echo DIOTEC360_P2P_ENABLED=false
+echo DIOTEC360_P2P_LISTEN=/ip4/0.0.0.0/tcp/9001
+echo DIOTEC360_P2P_TOPIC=aethel/lattice/v1
 echo.
 echo # Bootstrap Peers
-echo AETHEL_P2P_BOOTSTRAP=
+echo DIOTEC360_P2P_BOOTSTRAP=
 echo.
 echo # HTTP Sync Fallback Nodes
-echo AETHEL_LATTICE_NODES=http://localhost:8000,http://localhost:8002
+echo DIOTEC360_LATTICE_NODES=http://localhost:8000,http://localhost:8002
 echo.
 echo # Storage Directories
-echo AETHEL_STATE_DIR=.aethel_state_node1
-echo AETHEL_VAULT_DIR=.aethel_vault_node1
-echo AETHEL_SENTINEL_DIR=.aethel_sentinel_node1
+echo DIOTEC360_STATE_DIR=.DIOTEC360_state_node1
+echo DIOTEC360_VAULT_DIR=.DIOTEC360_vault_node1
+echo DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_node1
 echo.
 echo # Heartbeat Configuration
-echo AETHEL_HEARTBEAT_INTERVAL=5
-echo AETHEL_PEERLESS_TIMEOUT=60
-echo AETHEL_HTTP_POLL_INTERVAL=10
+echo DIOTEC360_HEARTBEAT_INTERVAL=5
+echo DIOTEC360_PEERLESS_TIMEOUT=60
+echo DIOTEC360_HTTP_POLL_INTERVAL=10
 echo.
 echo # Node Identity
-echo AETHEL_NODE_NAME=node1-huggingface-local
-echo AETHEL_NODE_ROLE=genesis-cloud
+echo DIOTEC360_NODE_NAME=node1-huggingface-local
+echo DIOTEC360_NODE_ROLE=genesis-cloud
 echo.
 echo # Production Settings
-echo AETHEL_ENVIRONMENT=development
-echo AETHEL_LOG_LEVEL=INFO
+echo DIOTEC360_ENVIRONMENT=development
+echo DIOTEC360_LOG_LEVEL=INFO
 ) > .env.node1.local
 
 echo [OK] Local configuration created
@@ -62,7 +62,7 @@ echo   - Peer Nodes: localhost:8000, localhost:8002
 echo.
 
 REM Start the server
-echo [STEP 3] Starting Aethel API Server on PORT 8001...
+echo [STEP 3] Starting Diotec360 API Server on PORT 8001...
 echo [INFO] This simulates Hugging Face Space locally
 echo [INFO] Press Ctrl+C to stop the server
 echo.

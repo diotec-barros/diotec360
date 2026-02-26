@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\core\web_oracle.py
+# hypothesis_version: 6.151.5
+
+[0.0, 1.0, 100, 1000, 'ask', 'authenticity_seal', 'bid', 'confidence', 'crypto_api', 'custom', 'data', 'feed_id', 'feeds_captured', 'feeds_rejected', 'feeds_validated', 'forex_api', 'metadata', 'news_api', 'oracle', 'pair', 'price', 'source', 'source_type', 'stock_api', 'symbol', 'timestamp', 'validation_rate', 'weather_api', 'web_scraper']

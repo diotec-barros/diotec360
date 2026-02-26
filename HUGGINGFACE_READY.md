@@ -229,7 +229,7 @@ Quando o Space estiver rodando:
 ║                                                              ║
 ║         🚀 HUGGING FACE DEPLOY - READY! 🚀                  ║
 ║                                                              ║
-║              Aethel v1.3.1 "Conservation Guardian"          ║
+║              Diotec360 v1.3.1 "Conservation Guardian"          ║
 ║                                                              ║
 ║              ✅ Arquivos criados                             ║
 ║              ✅ Dockerfile otimizado                         ║

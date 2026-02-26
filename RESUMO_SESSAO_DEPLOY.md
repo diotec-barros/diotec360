@@ -314,7 +314,7 @@ O usuário tem:
 - ✅ Troubleshooting
 - ✅ Timeline clara
 
-**Ele está a 2-3 horas de lançar o Aethel v1.1 para o mundo!**
+**Ele está a 2-3 horas de lançar o Diotec360 v1.1 para o mundo!**
 
 **Sucesso garantido!** 🚀✨
 

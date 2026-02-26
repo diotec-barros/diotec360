@@ -20,8 +20,8 @@
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
 │  │  ├─ URL: https://hf.diotec360.com                   │
-│  │  │  └─ DNS: CNAME → diotec-aethel-judge.hf.space   │
-│  │  ├─ Space: huggingface.co/spaces/diotec/aethel-judge│
+│  │  │  └─ DNS: CNAME → diotec-diotec360-judge.hf.space   │
+│  │  ├─ Space: huggingface.co/spaces/diotec/diotec360-judge│
 │  │  └─ Porta: 8000                                     │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Railway (Principal)                     │
@@ -58,7 +58,7 @@
 ```
 Type: CNAME
 Name: hf
-Value: diotec-aethel-judge.hf.space
+Value: diotec-diotec360-judge.hf.space
 TTL: 60
 ```
 
@@ -82,7 +82,7 @@ nslookup hf.diotec360.com
 
 **Esperado:**
 ```
-Name: diotec-aethel-judge.hf.space
+Name: diotec-diotec360-judge.hf.space
 Address: [IP do Hugging Face]
 ```
 
@@ -101,28 +101,28 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ### Node 1 - Hugging Face (.env.node1.huggingface)
 ```env
 # Configuração permanece a mesma
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-public
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-public
 ```
 
 ### Node 2 - Railway (.env.node2.railway)
 ```env
 # Atualizar para incluir o novo subdomínio HF
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
-AETHEL_NODE_NAME=node2-railway
-AETHEL_NODE_ROLE=genesis-primary
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
+DIOTEC360_NODE_NAME=node2-railway
+DIOTEC360_NODE_ROLE=genesis-primary
 ```
 
 ### Node 3 - Vercel Backup (.env.node3.backup)
 ```env
 # Atualizar para incluir o novo subdomínio HF
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://api.diotec360.com
-AETHEL_NODE_NAME=node3-backup
-AETHEL_NODE_ROLE=genesis-backup
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://api.diotec360.com
+DIOTEC360_NODE_NAME=node3-backup
+DIOTEC360_NODE_ROLE=genesis-backup
 ```
 
 ---
@@ -132,7 +132,7 @@ AETHEL_NODE_ROLE=genesis-backup
 ### 1. Configurar DNS (5 min)
 
 **No Vercel Dashboard:**
-1. Adicione o registro CNAME: `hf` → `diotec-aethel-judge.hf.space`
+1. Adicione o registro CNAME: `hf` → `diotec-diotec360-judge.hf.space`
 2. Aguarde 2-5 minutos
 3. Teste: `nslookup hf.diotec360.com`
 
@@ -145,7 +145,7 @@ REM Execute o script de deployment
 deploy_node1_huggingface.bat
 
 REM Aguarde o build (5-10 min)
-REM Verifique: https://huggingface.co/spaces/diotec/aethel-judge
+REM Verifique: https://huggingface.co/spaces/diotec/diotec360-judge
 ```
 
 **Teste:**
@@ -168,7 +168,7 @@ curl https://hf.diotec360.com/health
 3. Vá em "Variables"
 4. Atualize:
    ```
-   AETHEL_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
+   DIOTEC360_LATTICE_NODES=https://hf.diotec360.com,https://backup.diotec360.com
    ```
 5. Railway fará redeploy automático
 
@@ -249,7 +249,7 @@ PHASE 2: STATE SYNCHRONIZATION
 5. Configure:
    - Type: `CNAME`
    - Name: `hf`
-   - Value: `diotec-aethel-judge.hf.space`
+   - Value: `diotec-diotec360-judge.hf.space`
    - TTL: `60`
 6. Clique em "Save"
 

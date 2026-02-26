@@ -1,4 +1,4 @@
-# 🔐 COMECE AQUI - AETHEL v2.2.0 SOVEREIGN IDENTITY
+# 🔐 COMECE AQUI - Diotec360 v2.2.0 SOVEREIGN IDENTITY
 
 **Status**: ✅ 66.7% COMPLETE (2/3 tasks)  
 **Date**: 2026-02-08
@@ -44,7 +44,7 @@
 
 ### Documentação
 - `SESSAO_V2_2_0_SOVEREIGN_IDENTITY_COMPLETE.md` - Relatório da sessão
-- `AETHEL_V2_2_0_EXECUTIVE_SUMMARY.md` - Sumário executivo
+- `DIOTEC360_V2_2_0_EXECUTIVE_SUMMARY.md` - Sumário executivo
 - `PROXIMOS_PASSOS_V2_2_3.md` - Plano detalhado próxima task
 
 ---

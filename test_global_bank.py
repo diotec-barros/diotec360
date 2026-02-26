@@ -1,9 +1,25 @@
 """
-Aethel Global Bank - The Ultimate Test
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Diotec360 Global Bank - The Ultimate Test
 Tests state management with 1,000 accounts and conservation proofs
 """
 
-from aethel.core.state import AethelStateManager
+from diotec360.core.state import Diotec360StateManager
 import random
 from datetime import datetime
 
@@ -16,7 +32,7 @@ def test_initialize_global_bank():
     print("="*70)
     
     # Create state manager
-    state_mgr = AethelStateManager()
+    state_mgr = Diotec360StateManager()
     
     # Create 1,000 accounts with random balances
     # Total supply: 1,000,000
@@ -259,7 +275,7 @@ def test_state_persistence(state_mgr):
     
     # Create new state manager and load snapshot
     print(f"\nCreating new state manager...")
-    new_state_mgr = AethelStateManager()
+    new_state_mgr = Diotec360StateManager()
     
     print(f"Loading snapshot...")
     success = new_state_mgr.load_snapshot()
@@ -293,7 +309,7 @@ def run_all_tests():
     """Run all global bank tests"""
     
     print("\n" + "╔" + "="*68 + "╗")
-    print("║" + " "*18 + "AETHEL GLOBAL BANK TEST SUITE" + " "*21 + "║")
+    print("║" + " "*18 + "DIOTEC360 GLOBAL BANK TEST SUITE" + " "*18 + "║")
     print("║" + " "*20 + "The Ultimate State Test" + " "*25 + "║")
     print("╚" + "="*68 + "╝\n")
     
@@ -339,7 +355,7 @@ def run_all_tests():
     print("\n" + "="*70)
     print("🟢 ALL TESTS PASSED")
     print("="*70)
-    print("\nThe Aethel Global Bank is operational.")
+    print("\nThe Diotec360 Global Bank is operational.")
     print("Conservation law maintained across all operations.")
     print("State is eternal. State is proved.")
     print("="*70 + "\n")

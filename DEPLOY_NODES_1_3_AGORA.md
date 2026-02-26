@@ -63,18 +63,18 @@ README_HF.md              # README (já existe)
 No Space criado, vá em "Settings" → "Variables and secrets" e adicione:
 
 ```bash
-AETHEL_P2P_ENABLED=false
-AETHEL_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
-AETHEL_STATE_DIR=.aethel_state
-AETHEL_VAULT_DIR=.aethel_vault
-AETHEL_SENTINEL_DIR=.aethel_sentinel
-AETHEL_HEARTBEAT_INTERVAL=5
-AETHEL_PEERLESS_TIMEOUT=60
-AETHEL_HTTP_POLL_INTERVAL=10
-AETHEL_NODE_NAME=node1-huggingface
-AETHEL_NODE_ROLE=genesis-cloud
-AETHEL_ENVIRONMENT=production
-AETHEL_LOG_LEVEL=INFO
+DIOTEC360_P2P_ENABLED=false
+DIOTEC360_LATTICE_NODES=https://api.diotec360.com,https://backup.diotec360.com
+DIOTEC360_STATE_DIR=.DIOTEC360_state
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel
+DIOTEC360_HEARTBEAT_INTERVAL=5
+DIOTEC360_PEERLESS_TIMEOUT=60
+DIOTEC360_HTTP_POLL_INTERVAL=10
+DIOTEC360_NODE_NAME=node1-huggingface
+DIOTEC360_NODE_ROLE=genesis-cloud
+DIOTEC360_ENVIRONMENT=production
+DIOTEC360_LOG_LEVEL=INFO
 ```
 
 ### Passo 4: Upload via Git (Recomendado)
@@ -85,16 +85,16 @@ git clone https://huggingface.co/spaces/diotec/aethel
 cd aethel
 
 # Copiar arquivos do projeto Aethel
-cp -r /caminho/para/aethel/aethel ./
-cp -r /caminho/para/aethel/api ./
-cp /caminho/para/aethel/requirements.txt ./
-cp /caminho/para/aethel/Dockerfile.huggingface ./Dockerfile
-cp /caminho/para/aethel/.env.node1.huggingface ./.env
-cp /caminho/para/aethel/README_HF.md ./README.md
+cp -r /caminho/para/diotec360/aethel ./
+cp -r /caminho/para/diotec360/api ./
+cp /caminho/para/diotec360/requirements.txt ./
+cp /caminho/para/diotec360/Dockerfile.huggingface ./Dockerfile
+cp /caminho/para/diotec360/.env.node1.huggingface ./.env
+cp /caminho/para/diotec360/README_HF.md ./README.md
 
 # Commit e push
 git add .
-git commit -m "Deploy Aethel Node 1 - HTTP-Only Resilience Mode"
+git commit -m "Deploy Diotec360 Node 1 - HTTP-Only Resilience Mode"
 git push
 ```
 
@@ -220,7 +220,7 @@ Se você não tem acesso aos servidores externos agora, pode simular os 3 nós l
 ```bash
 # Terminal 1
 cp .env.node1.huggingface .env.node1.local
-# Editar .env.node1.local e mudar AETHEL_LATTICE_NODES para localhost:8000,localhost:8002
+# Editar .env.node1.local e mudar DIOTEC360_LATTICE_NODES para localhost:8000,localhost:8002
 python -m uvicorn api.main:app --host 0.0.0.0 --port 8001 --env-file .env.node1.local
 ```
 
@@ -233,7 +233,7 @@ python -m uvicorn api.main:app --host 0.0.0.0 --port 8001 --env-file .env.node1.
 ```bash
 # Terminal 3
 cp .env.node3.backup .env.node3.local
-# Editar .env.node3.local e mudar AETHEL_LATTICE_NODES para localhost:8000,localhost:8001
+# Editar .env.node3.local e mudar DIOTEC360_LATTICE_NODES para localhost:8000,localhost:8001
 python -m uvicorn api.main:app --host 0.0.0.0 --port 8002 --env-file .env.node3.local
 ```
 

@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\bot\simons_strategy.py
+# hypothesis_version: 6.151.5
+
+[0.002, 0.98, 100, '0.001', '0.05', '100', '10000', 'BTC/USD', 'ETH/USD', 'EUR/USD', 'GBP/USD', 'USD/JPY', 'arbitrage', 'exchange_a', 'exchange_b', 'exchange_c', 'simons']

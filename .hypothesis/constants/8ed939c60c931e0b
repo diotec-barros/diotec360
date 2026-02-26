@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\api\autopilot.py
+# hypothesis_version: 6.151.5
+
+[0.25, 45.2, 123.5, 100, 250, 429, 503, 1000, '/api/autopilot', '/health', '/stats', '/suggestions', 'Code to insert', 'Higher = shown first', 'Line number of issue', 'List of suggestions', 'List of violations', 'Longer explanation', 'Short description', 'Suggested code fix', 'Type of violation', '__dict__', 'active_clients', 'amount > 0', 'analysis_time', 'analyzing', 'autopilot', 'code', 'corrections', 'cursor_position', 'detail', 'error', 'error or warning', 'example', 'guard', 'healthy', 'insert_text', 'intent payment {\n  ', 'kind', 'label', 'priority', 'rate_limit', 'rate_window', 'safe', 'safety_status', 'selection', 'service', 'status', 'suggestions', 'timestamp', 'total_requests', 'unknown', 'violations']

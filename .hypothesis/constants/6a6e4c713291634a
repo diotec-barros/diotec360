@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\atomic_commit.py
+# hypothesis_version: 6.151.5
+
+[0.0, 1000, 'CLEANUP_ORPHANS', 'CORRUPTED_STATE', 'CREATE_EMPTY', 'CREATE_STATE', 'DELETE_ORPHAN', 'DELETE_TEMP', 'LOAD_STATE', 'MERKLE_MISMATCH', 'RECOVERY_END', 'RECOVERY_ERROR', 'RECOVERY_START', 'RECOVERY_SUCCESS', 'RESTORE_CHECKPOINT', 'ROLLBACK_TX', 'SCAN_WAL', 'SKIP_MERKLE', 'VERIFY_MERKLE', 'a', 'changes', 'committed', 'pending', 'r', 'recovery_audit.log', 'rolled_back', 'state.*.tmp', 'state.json', 'timestamp', 'tx_id', 'w', 'wal.log', 'wal.log.tmp']

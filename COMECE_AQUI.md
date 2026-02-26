@@ -1,4 +1,4 @@
-# 🚀 COMECE AQUI - Deploy Aethel v1.1
+# 🚀 COMECE AQUI - Deploy Diotec360 v1.1
 
 **Data**: 3 de Fevereiro de 2026  
 **Você está a**: 2-3 horas do lançamento! 🌟
@@ -139,7 +139,7 @@ Quando tudo estiver pronto:
 ```
 Frontend: https://aethel.diotec360.com
 Backend:  https://api.diotec360.com
-GitHub:   https://github.com/diotec-barros/aethel-lang
+GitHub:   https://github.com/diotec-barros/diotec360-lang
 ```
 
 ---
@@ -225,7 +225,7 @@ Total: 2-3 horas até lançamento completo
 
 Quando terminar, você terá:
 
-- ✅ Aethel v1.1 no ar
+- ✅ Diotec360 v1.1 no ar
 - ✅ Domínios profissionais
 - ✅ Ghost-Runner funcionando
 - ✅ Mirror funcionando

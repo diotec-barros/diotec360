@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Deploy MOE Intelligence Layer in Shadow Mode
 
 Shadow Mode: MOE runs in parallel but doesn't affect verdicts
@@ -33,72 +49,72 @@ def create_shadow_mode_config(output_path: str) -> None:
 # ============================================================================
 # Core MOE Settings
 # ============================================================================
-AETHEL_MOE_ENABLED=true
-AETHEL_MOE_MODE=shadow
-AETHEL_MOE_TELEMETRY_DB_PATH=./.aethel_moe/telemetry.db
+DIOTEC360_MOE_ENABLED=true
+DIOTEC360_MOE_MODE=shadow
+DIOTEC360_MOE_TELEMETRY_DB_PATH=./.diotec360_moe/telemetry.db
 
 # ============================================================================
 # MOE Orchestrator - ENABLED (Shadow Mode)
 # ============================================================================
-AETHEL_MOE_OVERRIDE_VERDICT=false  # Don't override existing layers
-AETHEL_MOE_LOG_VERDICTS=true  # Log all MOE verdicts for analysis
-AETHEL_MOE_PARALLEL_EXPERTS=true  # Execute experts in parallel
+DIOTEC360_MOE_OVERRIDE_VERDICT=false  # Don't override existing layers
+DIOTEC360_MOE_LOG_VERDICTS=true  # Log all MOE verdicts for analysis
+DIOTEC360_MOE_PARALLEL_EXPERTS=true  # Execute experts in parallel
 
 # ============================================================================
 # Expert Configuration - ALL ENABLED
 # ============================================================================
-AETHEL_Z3_EXPERT_ENABLED=true
-AETHEL_Z3_EXPERT_TIMEOUT_NORMAL=30
-AETHEL_Z3_EXPERT_TIMEOUT_CRISIS=5
-AETHEL_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_Z3_EXPERT_ENABLED=true
+DIOTEC360_Z3_EXPERT_TIMEOUT_NORMAL=30
+DIOTEC360_Z3_EXPERT_TIMEOUT_CRISIS=5
+DIOTEC360_Z3_EXPERT_CONFIDENCE_THRESHOLD=0.7
 
-AETHEL_SENTINEL_EXPERT_ENABLED=true
-AETHEL_SENTINEL_EXPERT_TIMEOUT_MS=100
-AETHEL_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_SENTINEL_EXPERT_ENABLED=true
+DIOTEC360_SENTINEL_EXPERT_TIMEOUT_MS=100
+DIOTEC360_SENTINEL_EXPERT_CONFIDENCE_THRESHOLD=0.7
 
-AETHEL_GUARDIAN_EXPERT_ENABLED=true
-AETHEL_GUARDIAN_EXPERT_TIMEOUT_MS=50
-AETHEL_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_GUARDIAN_EXPERT_ENABLED=true
+DIOTEC360_GUARDIAN_EXPERT_TIMEOUT_MS=50
+DIOTEC360_GUARDIAN_EXPERT_CONFIDENCE_THRESHOLD=0.7
 
 # ============================================================================
 # Gating Network - ENABLED (Route to all experts)
 # ============================================================================
-AETHEL_GATING_NETWORK_ENABLED=true
-AETHEL_GATING_NETWORK_TIMEOUT_MS=10
-AETHEL_GATING_NETWORK_DEFAULT_ROUTE=all  # Route to all experts in shadow mode
+DIOTEC360_GATING_NETWORK_ENABLED=true
+DIOTEC360_GATING_NETWORK_TIMEOUT_MS=10
+DIOTEC360_GATING_NETWORK_DEFAULT_ROUTE=all  # Route to all experts in shadow mode
 
 # ============================================================================
 # Consensus Engine - ENABLED (Log consensus)
 # ============================================================================
-AETHEL_CONSENSUS_ENGINE_ENABLED=true
-AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
-AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
+DIOTEC360_CONSENSUS_ENGINE_ENABLED=true
+DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
 
 # ============================================================================
 # Verdict Caching - DISABLED (Collect fresh data)
 # ============================================================================
-AETHEL_MOE_CACHE_ENABLED=false
-AETHEL_MOE_CACHE_TTL_SECONDS=300
+DIOTEC360_MOE_CACHE_ENABLED=false
+DIOTEC360_MOE_CACHE_TTL_SECONDS=300
 
 # ============================================================================
 # Expert Training - ENABLED (Collect ground truth)
 # ============================================================================
-AETHEL_MOE_TRAINING_ENABLED=true
-AETHEL_MOE_TRAINING_DB_PATH=./.aethel_moe/training.db
-AETHEL_MOE_TRAINING_WINDOW=1000
+DIOTEC360_MOE_TRAINING_ENABLED=true
+DIOTEC360_MOE_TRAINING_DB_PATH=./.diotec360_moe/training.db
+DIOTEC360_MOE_TRAINING_WINDOW=1000
 
 # ============================================================================
 # Visual Dashboard - ENABLED
 # ============================================================================
-AETHEL_MOE_VISUAL_DASHBOARD_ENABLED=true
-AETHEL_MOE_DASHBOARD_UPDATE_INTERVAL_MS=100
+DIOTEC360_MOE_VISUAL_DASHBOARD_ENABLED=true
+DIOTEC360_MOE_DASHBOARD_UPDATE_INTERVAL_MS=100
 
 # ============================================================================
 # Monitoring and Logging
 # ============================================================================
-AETHEL_MOE_LOG_LEVEL=INFO
-AETHEL_MOE_METRICS_ENABLED=true
-AETHEL_MOE_METRICS_PORT=9091
+DIOTEC360_MOE_LOG_LEVEL=INFO
+DIOTEC360_MOE_METRICS_ENABLED=true
+DIOTEC360_MOE_METRICS_PORT=9091
 """
     
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -113,14 +129,14 @@ def validate_prerequisites() -> bool:
     print("🔍 Validating prerequisites...")
     
     # Check if MOE telemetry database directory exists
-    moe_dir = Path('./.aethel_moe')
+    moe_dir = Path('./.diotec360_moe')
     if not moe_dir.exists():
         print(f"📁 Creating MOE directory: {moe_dir}")
         moe_dir.mkdir(parents=True, exist_ok=True)
     
     # Check if existing layers are operational
     try:
-        from aethel.core.judge import Judge
+        from diotec360.core.judge import Judge
         judge = Judge()
         print("✅ Existing Judge layers operational")
     except Exception as e:
@@ -129,7 +145,7 @@ def validate_prerequisites() -> bool:
     
     # Check if MOE components exist
     try:
-        from aethel.moe.orchestrator import MOEOrchestrator
+        from diotec360.moe.orchestrator import MOEOrchestrator
         print("✅ MOE components available")
     except Exception as e:
         print(f"❌ MOE components not found: {e}")

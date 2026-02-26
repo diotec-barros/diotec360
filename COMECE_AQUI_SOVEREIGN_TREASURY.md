@@ -188,7 +188,7 @@ Phase 4: Enterprise Dashboard       📋 PLANEJADO
 **R**: Sim! 100% legal. Não escondemos transações, provamos que são legais.
 
 ### P: Qual a diferença para blockchain?
-**R**: Blockchain é descentralizado mas lento. Aethel é centralizado mas com provas matemáticas. Melhor dos dois mundos.
+**R**: Blockchain é descentralizado mas lento. Diotec360 é centralizado mas com provas matemáticas. Melhor dos dois mundos.
 
 ### P: Reguladores vão aceitar?
 **R**: Sim! Relatórios seguem padrões FATF, BNA, etc. Formato aceito por auditores.

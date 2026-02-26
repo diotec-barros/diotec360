@@ -54,7 +54,7 @@ git add .
 git commit -m "Release v1.9.0 'The Guard' - Autonomous Sentinel"
 
 # Create version tag
-git tag -a v1.9.0 -m "Aethel v1.9.0 - The Guard: Autonomous Sentinel with self-defending capabilities"
+git tag -a v1.9.0 -m "Diotec360 v1.9.0 - The Guard: Autonomous Sentinel with self-defending capabilities"
 
 # Push to GitHub
 git push origin main
@@ -88,8 +88,8 @@ git push origin v1.9.0
 #### 2.3 Test Space Deployment
 ```bash
 # Test API endpoints
-curl https://diotec-aethel-judge.hf.space/health
-curl https://diotec-aethel-judge.hf.space/docs
+curl https://diotec-diotec360-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/docs
 
 # Test Sentinel features
 # Submit test transaction with telemetry
@@ -282,7 +282,7 @@ python scripts/monitor_sentinel.py
 #### Immediate Rollback (< 5 minutes)
 ```bash
 # Disable Sentinel via environment variable
-export AETHEL_SENTINEL_ENABLED=false
+export DIOTEC360_SENTINEL_ENABLED=false
 
 # Restart services
 # System falls back to v1.8.0 Layers 0-4

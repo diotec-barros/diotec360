@@ -109,42 +109,42 @@ The Autonomous Sentinel v1.9.0 transforms Aethel from a passive fortress into an
 
 ```bash
 # Core Sentinel Settings
-AETHEL_SENTINEL_ENABLED=true
-AETHEL_SENTINEL_DB_PATH=./data/telemetry.db
+DIOTEC360_SENTINEL_ENABLED=true
+DIOTEC360_SENTINEL_DB_PATH=./data/telemetry.db
 
 # Crisis Mode Thresholds
-AETHEL_CRISIS_ANOMALY_THRESHOLD=0.10      # 10% anomaly rate
-AETHEL_CRISIS_REQUEST_THRESHOLD=1000      # 1000 req/s
-AETHEL_CRISIS_COOLDOWN_SECONDS=120        # 2 minutes
+DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.10      # 10% anomaly rate
+DIOTEC360_CRISIS_REQUEST_THRESHOLD=1000      # 1000 req/s
+DIOTEC360_CRISIS_COOLDOWN_SECONDS=120        # 2 minutes
 
 # Semantic Sanitizer
-AETHEL_PATTERN_DB_PATH=./data/trojan_patterns.json
-AETHEL_ENTROPY_THRESHOLD=0.8              # 0.0-1.0
-AETHEL_SEMANTIC_TIMEOUT_MS=100            # 100ms max
+DIOTEC360_PATTERN_DB_PATH=./data/trojan_patterns.json
+DIOTEC360_ENTROPY_THRESHOLD=0.8              # 0.0-1.0
+DIOTEC360_SEMANTIC_TIMEOUT_MS=100            # 100ms max
 
 # Adaptive Rigor
-AETHEL_NORMAL_Z3_TIMEOUT=30               # 30 seconds
-AETHEL_CRISIS_Z3_TIMEOUT=5                # 5 seconds
-AETHEL_POW_BASE_DIFFICULTY=4              # 4 leading zeros
-AETHEL_POW_MAX_DIFFICULTY=8               # 8 leading zeros
+DIOTEC360_NORMAL_Z3_TIMEOUT=30               # 30 seconds
+DIOTEC360_CRISIS_Z3_TIMEOUT=5                # 5 seconds
+DIOTEC360_POW_BASE_DIFFICULTY=4              # 4 leading zeros
+DIOTEC360_POW_MAX_DIFFICULTY=8               # 8 leading zeros
 
 # Quarantine System
-AETHEL_QUARANTINE_CAPACITY=100            # Max 100 concurrent
-AETHEL_QUARANTINE_THRESHOLD=0.7           # Anomaly score threshold
+DIOTEC360_QUARANTINE_CAPACITY=100            # Max 100 concurrent
+DIOTEC360_QUARANTINE_THRESHOLD=0.7           # Anomaly score threshold
 
 # Self-Healing
-AETHEL_SELF_HEALING_ENABLED=true
-AETHEL_RULE_EFFECTIVENESS_THRESHOLD=0.7   # 70% effectiveness
-AETHEL_HISTORICAL_TX_LIMIT=1000           # For false positive testing
+DIOTEC360_SELF_HEALING_ENABLED=true
+DIOTEC360_RULE_EFFECTIVENESS_THRESHOLD=0.7   # 70% effectiveness
+DIOTEC360_HISTORICAL_TX_LIMIT=1000           # For false positive testing
 
 # Adversarial Vaccine
-AETHEL_VACCINE_ENABLED=false              # Disabled by default
-AETHEL_VACCINE_SCHEDULE="0 2 * * *"       # Daily at 2 AM
-AETHEL_VACCINE_SCENARIOS=1000             # 1000 scenarios per session
+DIOTEC360_VACCINE_ENABLED=false              # Disabled by default
+DIOTEC360_VACCINE_SCHEDULE="0 2 * * *"       # Daily at 2 AM
+DIOTEC360_VACCINE_SCENARIOS=1000             # 1000 scenarios per session
 
 # Gauntlet Report
-AETHEL_GAUNTLET_DB_PATH=./data/gauntlet.db
-AETHEL_RETENTION_DAYS=90                  # 90-day retention
+DIOTEC360_GAUNTLET_DB_PATH=./data/gauntlet.db
+DIOTEC360_RETENTION_DAYS=90                  # 90-day retention
 ```
 
 ### Configuration Files
@@ -446,7 +446,7 @@ The Adversarial Vaccine generates 1000 attack scenarios to test defenses:
 
 ```bash
 # Cron format: "minute hour day month weekday"
-AETHEL_VACCINE_SCHEDULE="0 2 * * *"  # Daily at 2 AM
+DIOTEC360_VACCINE_SCHEDULE="0 2 * * *"  # Daily at 2 AM
 ```
 
 ### Manual Training
@@ -635,7 +635,7 @@ python -m pytest test_properties_performance.py -v
 
 For additional support:
 - Documentation: https://aethel.dev/docs/sentinel
-- GitHub Issues: https://github.com/aethel/aethel/issues
+- GitHub Issues: https://github.com/diotec360/aethel/issues
 - Community Forum: https://forum.aethel.dev
 - Email: support@aethel.dev
 

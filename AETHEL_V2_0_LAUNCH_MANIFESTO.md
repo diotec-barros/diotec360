@@ -1,4 +1,4 @@
-# 🏛️⚖️ AETHEL v2.0 "EMPIRE" - LAUNCH MANIFESTO
+# 🏛️⚖️ Diotec360 v2.0 "EMPIRE" - LAUNCH MANIFESTO
 
 **Date**: February 7, 2026  
 **From**: The Architect + Engineer-Chief Kiro  
@@ -18,7 +18,7 @@ For 70 years, the software industry has operated on hope:
 
 **Hope is not a strategy. Mathematics is.**
 
-With Aethel v1.9.0 "Apex" sealed and v2.0.0 "Empire" beginning, we offer the world a choice:
+With Diotec360 v1.9.0 "Apex" sealed and v2.0.0 "Empire" beginning, we offer the world a choice:
 
 **Continue trusting faith, or adopt facts.**
 

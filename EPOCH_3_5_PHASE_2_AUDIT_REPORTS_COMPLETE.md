@@ -316,7 +316,7 @@ Agora: Custo de $0.001 por prova
 
 ## 🌟 CITAÇÃO FINAL
 
-> **"Um relatório de auditoria tradicional é uma promessa de que algo está correto. Um relatório Aethel é uma prova matemática de que algo está correto. A diferença? Promessas podem ser quebradas. Provas matemáticas não."**
+> **"Um relatório de auditoria tradicional é uma promessa de que algo está correto. Um relatório Diotec360 é uma prova matemática de que algo está correto. A diferença? Promessas podem ser quebradas. Provas matemáticas não."**
 
 ---
 

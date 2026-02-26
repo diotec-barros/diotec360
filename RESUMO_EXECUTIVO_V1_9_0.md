@@ -1,4 +1,4 @@
-# Resumo Executivo - Aethel v1.9.0 "Autonomous Sentinel"
+# Resumo Executivo - Diotec360 v1.9.0 "Autonomous Sentinel"
 
 **Data**: 5 de Fevereiro de 2026  
 **Status**: ✅ PRONTO PARA LANÇAMENTO
@@ -335,7 +335,7 @@
 
 ## 🚀 Conclusão
 
-**Aethel v1.9.0 "Autonomous Sentinel" está PRONTO PARA LANÇAMENTO**
+**Diotec360 v1.9.0 "Autonomous Sentinel" está PRONTO PARA LANÇAMENTO**
 
 O sistema transforma Aethel de uma fortaleza passiva em uma entidade autônoma auto-protetora. Todos os componentes críticos estão implementados, testados e documentados. As pontas soltas identificadas (Self-Healing e Gauntlet Report completos) são não-bloqueantes e podem ser completadas em v1.9.1.
 

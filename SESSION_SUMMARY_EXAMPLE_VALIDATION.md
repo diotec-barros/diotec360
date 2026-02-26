@@ -20,7 +20,7 @@ The examples in `aethel/examples/` contained two types of code:
 1. **Production-ready Aethel code** - Parseable by the backend
 2. **Documentation pseudo-code** - Rich examples showing concepts with syntax not yet supported
 
-The Proof Viewer frontend used a simplified grammar (`aethel_grammar.py`) that didn't match the production grammar (`aethel/core/grammar.py`), causing parse errors.
+The Proof Viewer frontend used a simplified grammar (`DIOTEC360_grammar.py`) that didn't match the production grammar (`aethel/core/grammar.py`), causing parse errors.
 
 ### Specific Issues
 
@@ -35,7 +35,7 @@ The Proof Viewer frontend used a simplified grammar (`aethel_grammar.py`) that d
    - Control flow (`if`, `for`, `while`)
    - Function calls in examples
 
-3. **Parser Implementation**: `aethel_parser.py` was too rigid and expected old grammar structure
+3. **Parser Implementation**: `DIOTEC360_parser.py` was too rigid and expected old grammar structure
 
 ---
 
@@ -43,7 +43,7 @@ The Proof Viewer frontend used a simplified grammar (`aethel_grammar.py`) that d
 
 ### 1. Grammar Alignment ✅
 
-**Updated `aethel_grammar.py`** to match production grammar:
+**Updated `DIOTEC360_grammar.py`** to match production grammar:
 - Copied grammar from `aethel/core/grammar.py` (v1.8.0 Synchrony base)
 - Added support for `atomic_batch` constructs
 - Added support for `secret` and `external` keywords
@@ -53,7 +53,7 @@ The Proof Viewer frontend used a simplified grammar (`aethel_grammar.py`) that d
 
 ### 2. Parser Refactoring ✅
 
-**Updated `aethel_parser.py`** to handle new grammar:
+**Updated `DIOTEC360_parser.py`** to handle new grammar:
 - Added support for `atomic_batch` parsing
 - Improved expression tree traversal
 - Added proper handling of `secret` and `external` keywords
@@ -82,7 +82,7 @@ Created **6 new production-ready examples** that work in the Proof Viewer:
 
 ### 5. Documentation ✅
 
-**Created `AETHEL_V1_9_0_EXAMPLE_STANDARDS.md`**:
+**Created `DIOTEC360_V1_9_0_EXAMPLE_STANDARDS.md`**:
 - Defines "Golden Standard" for parseable examples
 - Documents supported vs unsupported syntax
 - Provides templates for each example type
@@ -162,12 +162,12 @@ These demonstrate concepts but aren't parseable yet:
 - `aethel/examples/defi_liquidation.ae` - New parseable example
 - `aethel/examples/batch_transfer.ae` - New parseable example
 - `aethel/examples/secret_payment.ae` - New parseable example
-- `AETHEL_V1_9_0_EXAMPLE_STANDARDS.md` - Grammar reference
+- `DIOTEC360_V1_9_0_EXAMPLE_STANDARDS.md` - Grammar reference
 - `SESSION_SUMMARY_EXAMPLE_VALIDATION.md` - This document
 
 ### Modified
-- `aethel_grammar.py` - Aligned with production grammar
-- `aethel_parser.py` - Refactored for new grammar
+- `DIOTEC360_grammar.py` - Aligned with production grammar
+- `DIOTEC360_parser.py` - Refactored for new grammar
 - `validate_examples.py` - Already existed, now working correctly
 
 ---
@@ -218,7 +218,7 @@ These demonstrate concepts but aren't parseable yet:
 
 **The Architect's Principle**: "A language of precision must have examples of precision. Every example must parse, prove, and execute flawlessly."
 
-**The Reality**: Aethel v1.9.0 prioritizes **mathematical correctness** over syntactic sugar. The grammar is intentionally minimal to ensure every construct can be formally verified.
+**The Reality**: Diotec360 v1.9.0 prioritizes **mathematical correctness** over syntactic sugar. The grammar is intentionally minimal to ensure every construct can be formally verified.
 
 **The Solution**: Separate parseable examples (for Proof Viewer) from documentation examples (for learning). Both serve important purposes.
 

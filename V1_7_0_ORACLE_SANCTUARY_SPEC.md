@@ -1,4 +1,4 @@
-# 🔮 Aethel v1.7.0 - The Oracle Sanctuary
+# 🔮 Diotec360 v1.7.0 - The Oracle Sanctuary
 
 **Codename**: "The Oracle Sanctuary"  
 **Release Target**: Q2 2026  
@@ -376,7 +376,7 @@ Layer 5: Oracle Verifier (external data) ⭐ NEW v1.7.0
 
 **Title**: "Formally Verified Oracle Integration: Bridging On-Chain and Off-Chain Worlds"
 
-**Abstract**: We present Aethel v1.7.0, the first formally verified language with native oracle support, enabling provably correct smart contracts that interact with external data sources.
+**Abstract**: We present Diotec360 v1.7.0, the first formally verified language with native oracle support, enabling provably correct smart contracts that interact with external data sources.
 
 ---
 
@@ -432,7 +432,7 @@ We want YOUR input on v1.7.0!
 **Contribute**:
 - GitHub Discussions
 - Discord Server (coming soon)
-- Twitter: @aethel_lang
+- Twitter: @DIOTEC360_lang
 
 ---
 

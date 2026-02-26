@@ -15,7 +15,7 @@ O arquivo `frontend/.env.production` já está configurado com a Arquitetura Sob
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
 
 # Triangle of Truth - Distributed Resilience
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 
 # Alpha Vantage API Key (for Forex data)
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
@@ -28,13 +28,13 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ### Opção 1: Deploy via Dashboard (RECOMENDADO)
 
 1. **Acesse:** https://vercel.com/dashboard
-2. **Selecione o projeto:** `aethel-studio` (ou seu projeto frontend)
+2. **Selecione o projeto:** `diotec360-studio` (ou seu projeto frontend)
 3. **Vá em:** Settings → Environment Variables
 4. **Adicione as variáveis:**
 
 ```
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 ```
 
@@ -94,7 +94,7 @@ git push origin main
 │  │     └─ Portal para Bancos e Traders                │
 │  │                                                      │
 │  ├─ 🟢 Node 1: Hugging Face (Prova Distribuída)        │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │     └─ Infraestrutura Elite Global                 │
 │  │                                                      │
 │  └─ 🟣 Node 3: Vercel Backup (Redundância)             │
@@ -154,7 +154,7 @@ Após o deploy, verifique no Vercel Dashboard:
 | Nome | Valor | Ambiente |
 |------|-------|----------|
 | `NEXT_PUBLIC_API_URL` | `https://api.diotec360.com` | Production |
-| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-aethel-judge.hf.space,https://backup.diotec360.com` | Production |
+| `NEXT_PUBLIC_LATTICE_NODES` | `https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com` | Production |
 | `ALPHA_VANTAGE_API_KEY` | `EFQ0A2ZCKGNHFGTNAQVLOOL9,-1` | Production |
 
 ---

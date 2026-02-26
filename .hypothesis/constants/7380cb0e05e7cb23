@@ -1,0 +1,4 @@
+# file: C:\Users\DIOTEC\AETHEL\aethel\consensus\p2p_network.py
+# hypothesis_version: 6.151.5
+
+[1.0, 2.0, 30.0, 60.0, 300, 'GossipMessage', 'connected_peers', 'message_id', 'message_type', 'messages_dropped', 'messages_received', 'messages_sent', 'payload', 'seen_by', 'seen_messages', 'sender_id', 'sequence', 'signature', 'timestamp', 'ttl', 'view']

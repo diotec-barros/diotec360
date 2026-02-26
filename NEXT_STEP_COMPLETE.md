@@ -276,7 +276,7 @@ python test_api_integration.py
 
 ### For This Session
 - `PROGRESS_REPORT.md` - Session progress
-- `AETHEL_STUDIO_LAUNCH.md` - Launch readiness
+- `DIOTEC360_STUDIO_LAUNCH.md` - Launch readiness
 - `NEXT_STEP_COMPLETE.md` - This file
 
 ---
@@ -288,7 +288,7 @@ python test_api_integration.py
 # 1. Go to https://railway.app
 # 2. Sign in with GitHub
 # 3. New Project → Deploy from GitHub
-# 4. Select aethel-lang repository
+# 4. Select diotec360-lang repository
 # 5. Railway auto-detects Dockerfile
 # 6. Deploy!
 # 7. Copy URL: https://aethel-api.up.railway.app
@@ -297,12 +297,12 @@ python test_api_integration.py
 ### Deploy Frontend (Vercel)
 ```bash
 # 1. Go to https://vercel.com
-# 2. New Project → Import aethel-lang
+# 2. New Project → Import diotec360-lang
 # 3. Set Root Directory: frontend
 # 4. Add Environment Variable:
 #    NEXT_PUBLIC_API_URL=https://aethel-api.up.railway.app
 # 5. Deploy!
-# 6. Live at: https://aethel-lang.vercel.app
+# 6. Live at: https://diotec360-lang.vercel.app
 ```
 
 ---
@@ -338,12 +338,12 @@ python test_api_integration.py
 ### Live URLs (Local)
 - **Frontend**: http://localhost:3000 ✅ Running
 - **Backend**: http://localhost:8000 ✅ Running
-- **Repository**: https://github.com/diotec-barros/aethel-lang ✅
+- **Repository**: https://github.com/diotec-barros/diotec360-lang ✅
 
 ### Documentation
 - **Test Results**: INTEGRATION_TEST_RESULTS.md
 - **Progress**: PROGRESS_REPORT.md
-- **Launch**: AETHEL_STUDIO_LAUNCH.md
+- **Launch**: DIOTEC360_STUDIO_LAUNCH.md
 - **Status**: CURRENT_STATUS.md
 
 ### Deployment

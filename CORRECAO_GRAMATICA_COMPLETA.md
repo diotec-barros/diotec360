@@ -9,7 +9,7 @@
 
 ## 🎯 PROBLEMA IDENTIFICADO
 
-A gramática Aethel v1.8.0 não suportava números decimais, apenas inteiros.
+A gramática Diotec360 v1.8.0 não suportava números decimais, apenas inteiros.
 
 **Regex antiga**: `/-?[0-9]+/`
 - ✅ Suportava: `0`, `100`, `-50`
@@ -48,9 +48,9 @@ A gramática Aethel v1.8.0 não suportava números decimais, apenas inteiros.
 ### Teste 1: Parser Lark
 ```python
 from lark import Lark
-from aethel.core.grammar import aethel_grammar
+from aethel.core.grammar import DIOTEC360_grammar
 
-parser = Lark(aethel_grammar, parser='lalr')
+parser = Lark(DIOTEC360_grammar, parser='lalr')
 
 # Código de teste
 code = """

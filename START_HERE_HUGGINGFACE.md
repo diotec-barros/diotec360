@@ -18,7 +18,7 @@ The script will ask: "Would you like to commit and push now? (Y/N)"
 Type `Y` and press Enter.
 
 ### Step 3: Wait 5-10 Minutes
-Go to https://huggingface.co/spaces/diotec/aethel-judge and watch the build.
+Go to https://huggingface.co/spaces/diotec/diotec360-judge and watch the build.
 
 ### Step 4: Test It
 ```bash
@@ -69,10 +69,10 @@ python test_huggingface_deployment.py
 
 | What | URL |
 |------|-----|
-| Space Dashboard | https://huggingface.co/spaces/diotec/aethel-judge |
-| API Endpoint | https://diotec-aethel-judge.hf.space |
-| API Docs | https://diotec-aethel-judge.hf.space/docs |
-| Health Check | https://diotec-aethel-judge.hf.space/health |
+| Space Dashboard | https://huggingface.co/spaces/diotec/diotec360-judge |
+| API Endpoint | https://diotec-diotec360-judge.hf.space |
+| API Docs | https://diotec-diotec360-judge.hf.space/docs |
+| Health Check | https://diotec-diotec360-judge.hf.space/health |
 
 ---
 
@@ -135,17 +135,17 @@ python test_huggingface_deployment.py
 
 ### Check Health
 ```bash
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 ### Get Examples
 ```bash
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/api/examples
 ```
 
 ### Verify Code
 ```bash
-curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
+curl -X POST https://diotec-diotec360-judge.hf.space/api/verify \
   -H "Content-Type: application/json" \
   -d '{"code": "intent test() { guard { x > 0; } solve { priority: security; } verify { x > 0; } }"}'
 ```
@@ -155,7 +155,7 @@ curl -X POST https://diotec-aethel-judge.hf.space/api/verify \
 ## 🐛 Common Issues
 
 ### "git clone failed"
-→ Make sure you have access to the Space: https://huggingface.co/spaces/diotec/aethel-judge
+→ Make sure you have access to the Space: https://huggingface.co/spaces/diotec/diotec360-judge
 
 ### "Build failed"
 → Check the Logs tab in your Space dashboard
@@ -222,7 +222,7 @@ python test_huggingface_deployment.py
 - **Full Guide**: `HUGGINGFACE_DEPLOYMENT_COMPLETE.md`
 - **Checklist**: `DEPLOYMENT_CHECKLIST.txt`
 - **HF Docs**: https://huggingface.co/docs/hub/spaces
-- **Issues**: https://github.com/diotec/aethel/issues
+- **Issues**: https://github.com/diotec/diotec360/issues
 
 ---
 

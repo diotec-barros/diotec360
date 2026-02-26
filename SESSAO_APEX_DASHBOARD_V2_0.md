@@ -38,18 +38,18 @@
 4. `test_canon_v1_9_0.py` - Teste de conformidade
 5. `test_parser_v1_9_0.py` - Teste de parsing
 6. `test_grammar_simple.py` - Teste de gramática
-7. `AETHEL_APEX_DASHBOARD_V2_0_SPEC.md` - Especificação completa
+7. `DIOTEC360_APEX_DASHBOARD_V2_0_SPEC.md` - Especificação completa
 8. `frontend/components/LayerSidebar.tsx` - Componente sidebar
 9. `frontend/components/Tooltip.tsx` - Componente tooltip
 10. `frontend/components/ArchitectChat.tsx` - Componente chat
-11. `AETHEL_APEX_DASHBOARD_IMPLEMENTATION.md` - Guia de implementação
+11. `DIOTEC360_APEX_DASHBOARD_IMPLEMENTATION.md` - Guia de implementação
 12. `SESSAO_APEX_DASHBOARD_V2_0.md` - Este documento
 
 ### Arquivos Modificados
 1. `api/main.py` - 3 exemplos corrigidos
 2. `aethel/examples/defi_liquidation_conservation.ae` - Bloco solve adicionado
-3. `aethel_grammar.py` - Operador `==>` e números decimais
-4. `aethel_parser.py` - Suporte a implicações
+3. `DIOTEC360_grammar.py` - Operador `==>` e números decimais
+4. `DIOTEC360_parser.py` - Suporte a implicações
 5. `CROP_INSURANCE_EXAMPLE.md` - Documentação atualizada
 
 ### Linhas de Código

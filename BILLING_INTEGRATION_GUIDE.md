@@ -581,7 +581,7 @@ if __name__ == "__main__":
 # .env
 STRIPE_SECRET_KEY=sk_live_...
 STRIPE_WEBHOOK_SECRET=whsec_...
-BILLING_DB_PATH=/var/lib/aethel/billing.db
+BILLING_DB_PATH=/var/lib/diotec360/billing.db
 ```
 
 ---

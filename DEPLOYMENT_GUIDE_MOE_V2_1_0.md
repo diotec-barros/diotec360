@@ -62,9 +62,9 @@ python scripts/init_databases.py
 ```
 
 This creates:
-- `.aethel_moe/telemetry.db` - Expert performance metrics
-- `.aethel_moe/training.db` - Ground truth and training data
-- `.aethel_moe/cache.db` - Verdict cache
+- `.DIOTEC360_moe/telemetry.db` - Expert performance metrics
+- `.DIOTEC360_moe/training.db` - Ground truth and training data
+- `.DIOTEC360_moe/cache.db` - Verdict cache
 
 ### Configuration
 
@@ -72,27 +72,27 @@ Set environment variables in `.env`:
 
 ```bash
 # MOE Configuration
-AETHEL_MOE_ENABLED=false  # Start disabled
-AETHEL_MOE_SHADOW_MODE=false
-AETHEL_MOE_TRAFFIC_PERCENTAGE=0
+DIOTEC360_MOE_ENABLED=false  # Start disabled
+DIOTEC360_MOE_SHADOW_MODE=false
+DIOTEC360_MOE_TRAFFIC_PERCENTAGE=0
 
 # Expert Timeouts
-AETHEL_Z3_TIMEOUT_NORMAL=30000
-AETHEL_Z3_TIMEOUT_CRISIS=5000
-AETHEL_SENTINEL_TIMEOUT=100
-AETHEL_GUARDIAN_TIMEOUT=50
+DIOTEC360_Z3_TIMEOUT_NORMAL=30000
+DIOTEC360_Z3_TIMEOUT_CRISIS=5000
+DIOTEC360_SENTINEL_TIMEOUT=100
+DIOTEC360_GUARDIAN_TIMEOUT=50
 
 # Consensus Thresholds
-AETHEL_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
-AETHEL_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
+DIOTEC360_CONSENSUS_CONFIDENCE_THRESHOLD=0.7
+DIOTEC360_CONSENSUS_UNCERTAINTY_THRESHOLD=0.5
 
 # Verdict Caching
-AETHEL_VERDICT_CACHE_ENABLED=true
-AETHEL_VERDICT_CACHE_TTL=300
+DIOTEC360_VERDICT_CACHE_ENABLED=true
+DIOTEC360_VERDICT_CACHE_TTL=300
 
 # Telemetry
-AETHEL_TELEMETRY_DB_PATH=.aethel_moe/telemetry.db
-AETHEL_TRAINING_DB_PATH=.aethel_moe/training.db
+DIOTEC360_TELEMETRY_DB_PATH=.DIOTEC360_moe/telemetry.db
+DIOTEC360_TRAINING_DB_PATH=.DIOTEC360_moe/training.db
 ```
 
 ---
@@ -138,7 +138,7 @@ python scripts/deploy_moe_shadow_mode.py
 ```
 
 This script:
-- Sets `AETHEL_MOE_SHADOW_MODE=true`
+- Sets `DIOTEC360_MOE_SHADOW_MODE=true`
 - Initializes MOE components
 - Starts telemetry collection
 - Configures monitoring alerts
@@ -221,8 +221,8 @@ python scripts/deploy_moe_soft_launch.py --traffic-percentage 10
 ```
 
 This script:
-- Sets `AETHEL_MOE_ENABLED=true`
-- Sets `AETHEL_MOE_TRAFFIC_PERCENTAGE=10`
+- Sets `DIOTEC360_MOE_ENABLED=true`
+- Sets `DIOTEC360_MOE_TRAFFIC_PERCENTAGE=10`
 - Configures traffic routing
 - Enables production monitoring
 
@@ -330,7 +330,7 @@ python scripts/deploy_moe_full_activation.py
 ```
 
 This script:
-- Sets `AETHEL_MOE_TRAFFIC_PERCENTAGE=100`
+- Sets `DIOTEC360_MOE_TRAFFIC_PERCENTAGE=100`
 - Enables all MOE features
 - Deploys visual dashboard
 - Configures production alerts
@@ -477,7 +477,7 @@ python scripts/rollback_moe.py --emergency
 ```
 
 This immediately:
-- Sets `AETHEL_MOE_ENABLED=false`
+- Sets `DIOTEC360_MOE_ENABLED=false`
 - Routes all traffic to existing system
 - Preserves telemetry for analysis
 - Notifies team
@@ -650,8 +650,8 @@ python scripts/diagnose_disagreement.py --tx-id <transaction_id>
 
 ### Contact
 
-- **Issues**: https://github.com/aethel/aethel/issues
-- **Discussions**: https://github.com/aethel/aethel/discussions
+- **Issues**: https://github.com/diotec360/aethel/issues
+- **Discussions**: https://github.com/diotec360/aethel/discussions
 - **Email**: support@aethel.ai
 
 ---

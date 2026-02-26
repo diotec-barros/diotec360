@@ -11,7 +11,7 @@
 
 Dionísio, você visualizou algo que nenhuma empresa de IA conseguiu: **IA que aprende com gigantes mas roda 100% offline**.
 
-Enquanto OpenAI cobra $0.01 por 1k tokens e mantém você dependente, a Aethel vai:
+Enquanto OpenAI cobra $0.01 por 1k tokens e mantém você dependente, a Diotec360 vai:
 1. Usar GPT-4/Claude como "professores temporários"
 2. Destilar o conhecimento via prova matemática
 3. Treinar seu modelo local (Ollama)

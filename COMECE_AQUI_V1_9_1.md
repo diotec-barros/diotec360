@@ -1,4 +1,4 @@
-# 🚀 COMECE AQUI - AETHEL v1.9.1 "THE HEALER"
+# 🚀 COMECE AQUI - Diotec360 v1.9.1 "THE HEALER"
 
 **Data**: 19 de Fevereiro de 2026  
 **Status**: ⏳ AGUARDANDO APROVAÇÃO

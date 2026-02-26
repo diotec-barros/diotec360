@@ -1,10 +1,10 @@
 ╔═══════════════════════════════════════════════════════════════╗
 ║                                                               ║
-║         🔗 AETHEL_P2P_BOOTSTRAP - RESPOSTA RÁPIDA 🔗          ║
+║         🔗 DIOTEC360_P2P_BOOTSTRAP - RESPOSTA RÁPIDA 🔗          ║
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 
-❓ PERGUNTA: O que deve ser colocado em AETHEL_P2P_BOOTSTRAP?
+❓ PERGUNTA: O que deve ser colocado em DIOTEC360_P2P_BOOTSTRAP?
 
 ✅ RESPOSTA: NADA! Deixe vazio.
 
@@ -13,13 +13,13 @@
 ├───────────────────────────────────────────────────────────────┤
 │                                                               │
 │ # P2P está DESABILITADO (HTTP-Only Mode)                     │
-│ AETHEL_P2P_ENABLED=false                                      │
+│ DIOTEC360_P2P_ENABLED=false                                      │
 │                                                               │
 │ # Bootstrap não é necessário                                 │
-│ AETHEL_P2P_BOOTSTRAP=                                         │
+│ DIOTEC360_P2P_BOOTSTRAP=                                         │
 │                                                               │
 │ # Você usa HTTP Sync ao invés de P2P                         │
-│ AETHEL_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com │
+│ DIOTEC360_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com │
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
 
@@ -45,7 +45,7 @@
 
    Se no futuro você ativar P2P, você preencheria assim:
 
-   AETHEL_P2P_BOOTSTRAP=/ip4/203.0.113.1/tcp/9000/p2p/QmPeerID1,/ip4/203.0.113.2/tcp/9000/p2p/QmPeerID2
+   DIOTEC360_P2P_BOOTSTRAP=/ip4/203.0.113.1/tcp/9000/p2p/QmPeerID1,/ip4/203.0.113.2/tcp/9000/p2p/QmPeerID2
 
    Formato: /ip4/IP/tcp/PORTA/p2p/PEER_ID
 
@@ -62,8 +62,8 @@
    │    │                  │                 │
    │    └────HTTP──► Node 3 ◄───HTTP────┘   │
    │                                         │
-   │  ✅ AETHEL_P2P_BOOTSTRAP = (vazio)     │
-   │  ✅ AETHEL_LATTICE_NODES = URLs HTTP   │
+   │  ✅ DIOTEC360_P2P_BOOTSTRAP = (vazio)     │
+   │  ✅ DIOTEC360_LATTICE_NODES = URLs HTTP   │
    │                                         │
    └─────────────────────────────────────────┘
 

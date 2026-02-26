@@ -23,11 +23,11 @@
 
 ### 3. Commits Realizados
 
-**Repositório Principal** (aethel-lang):
+**Repositório Principal** (diotec360-lang):
 - ✅ Commit `8637cf4` - Oracle implementation + tests + docs
 - ✅ Pushed para GitHub main branch
 
-**Repositório HF Space** (aethel-judge):
+**Repositório HF Space** (diotec360-judge):
 - ✅ Commit `677faf7` - API update com oracle endpoints
 - ✅ Commit `cef179b` - oracle.py + grammar.py adicionados
 - ✅ Pushed para Hugging Face Space
@@ -100,7 +100,7 @@ Error: No module named 'aethel.core.oracle'
 ### Imediato (5-10 minutos)
 
 1. **Aguardar Rebuild Completar**
-   - Verificar: https://huggingface.co/spaces/diotec/aethel-judge
+   - Verificar: https://huggingface.co/spaces/diotec/diotec360-judge
    - Status deve mudar para "Running" (verde)
    - Logs devem mostrar "Application startup complete"
 
@@ -112,16 +112,16 @@ Error: No module named 'aethel.core.oracle'
 
 3. **Validar Endpoints Oracle**
    ```bash
-   curl https://diotec-aethel-judge.hf.space/api/oracle/list
-   curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
-   curl https://diotec-aethel-judge.hf.space/api/oracle/stats
+   curl https://diotec-diotec360-judge.hf.space/api/oracle/list
+   curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+   curl https://diotec-diotec360-judge.hf.space/api/oracle/stats
    ```
 
 ### Após Validação (Hoje)
 
 1. **Atualizar Documentação**
    - Marcar v1.7.0 como FULLY DEPLOYED
-   - Atualizar README.md do aethel-judge
+   - Atualizar README.md do diotec360-judge
    - Criar tag de release no GitHub
 
 2. **Iniciar Passo B**
@@ -233,13 +233,13 @@ O módulo `oracle.py` está implementado mas ainda não está sendo importado co
 ### Verificar Status do HF Space
 ```bash
 # Health check
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Version
-curl https://diotec-aethel-judge.hf.space/
+curl https://diotec-diotec360-judge.hf.space/
 
 # Oracle list (deve funcionar após rebuild)
-curl https://diotec-aethel-judge.hf.space/api/oracle/list
+curl https://diotec-diotec360-judge.hf.space/api/oracle/list
 ```
 
 ### Re-executar Testes
@@ -248,7 +248,7 @@ curl https://diotec-aethel-judge.hf.space/api/oracle/list
 python test_backend_v1_7_0.py
 
 # Teste específico Oracle
-curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
+curl https://diotec-diotec360-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 ```
 
 ---
@@ -285,7 +285,7 @@ curl https://diotec-aethel-judge.hf.space/api/oracle/fetch/chainlink_btc_usd
 - Main: `8637cf4`
 - HF Space: `677faf7`, `cef179b`
 
-**Backend**: https://diotec-aethel-judge.hf.space  
+**Backend**: https://diotec-diotec360-judge.hf.space  
 **Version**: 1.7.0 "Oracle Sanctuary"  
 **Status**: 🔄 REBUILD EM PROGRESSO
 

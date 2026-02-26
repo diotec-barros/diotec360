@@ -1,11 +1,27 @@
 """
-Test Aethel WASM Compiler and Runtime
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Diotec360 WASM Compiler and Runtime
 Tests compilation to WAT and execution in isolated sandbox
 """
 
-from aethel.core.wasm_compiler import AethelWasmCompiler
-from aethel.core.wasm_runtime import AethelWasmRuntime, GasExhaustedException, SandboxViolationException
-from aethel.core.vault_distributed import AethelDistributedVault
+from diotec360.core.wasm_compiler import Diotec360WasmCompiler
+from diotec360.core.wasm_runtime import Diotec360WasmRuntime, GasExhaustedException, SandboxViolationException
+from diotec360.core.vault_distributed import Diotec360DistributedVault
 import json
 from pathlib import Path
 
@@ -18,7 +34,7 @@ def test_compile_transfer_to_wat():
     print("="*70)
     
     # Load transfer bundle
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".diotec360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
@@ -28,7 +44,7 @@ def test_compile_transfer_to_wat():
         bundle = json.load(f)
     
     # Compile to WAT
-    compiler = AethelWasmCompiler(bundle)
+    compiler = Diotec360WasmCompiler(bundle)
     wat_code = compiler.compile()
     
     # Validate
@@ -74,7 +90,7 @@ def test_wasm_transfer_execution():
     print("="*70)
     
     # Load transfer bundle
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".diotec360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
@@ -84,11 +100,11 @@ def test_wasm_transfer_execution():
         bundle = json.load(f)
     
     # Compile to WAT
-    compiler = AethelWasmCompiler(bundle)
+    compiler = Diotec360WasmCompiler(bundle)
     wat_code = compiler.compile()
     
     # Execute in WASM runtime
-    runtime = AethelWasmRuntime(wat_code, gas_limit=10000)
+    runtime = Diotec360WasmRuntime(wat_code, gas_limit=10000)
     
     inputs = {
         'sender_balance': 500,
@@ -146,14 +162,14 @@ def test_vote_system():
     }
     
     # Compile to WAT
-    compiler = AethelWasmCompiler(vote_bundle)
+    compiler = Diotec360WasmCompiler(vote_bundle)
     wat_code = compiler.compile()
     
     # Save WAT
     compiler.save_wat("output/vote.wat")
     
     # Execute vote
-    runtime = AethelWasmRuntime(wat_code, gas_limit=5000)
+    runtime = Diotec360WasmRuntime(wat_code, gas_limit=5000)
     
     inputs = {
         'votes': 100,
@@ -206,12 +222,12 @@ def test_vote_exploit_attempt():
     }
     
     # Compile to WAT
-    compiler = AethelWasmCompiler(malicious_bundle)
+    compiler = Diotec360WasmCompiler(malicious_bundle)
     wat_code = compiler.compile()
     
     # Try to execute with malicious logic
     # We'll simulate this by manually checking post-condition
-    runtime = AethelWasmRuntime(wat_code, gas_limit=5000)
+    runtime = Diotec360WasmRuntime(wat_code, gas_limit=5000)
     
     inputs = {
         'votes': 100,
@@ -271,7 +287,7 @@ def test_sandbox_violation():
     print("Expected: Runtime should detect sandbox violation")
     
     try:
-        runtime = AethelWasmRuntime(malicious_wat, gas_limit=5000)
+        runtime = Diotec360WasmRuntime(malicious_wat, gas_limit=5000)
         envelope = runtime.execute_safely('vote', {'votes': 100})
         
         print(f"\n❌ TEST FAILED: Sandbox violation not detected")
@@ -308,11 +324,11 @@ def test_gas_exhaustion():
     }
     
     # Compile
-    compiler = AethelWasmCompiler(bundle)
+    compiler = Diotec360WasmCompiler(bundle)
     wat_code = compiler.compile()
     
     # Execute with very low gas limit
-    runtime = AethelWasmRuntime(wat_code, gas_limit=50)  # Very low limit
+    runtime = Diotec360WasmRuntime(wat_code, gas_limit=50)  # Very low limit
     
     inputs = {
         'sender_balance': 500,
@@ -342,7 +358,7 @@ def run_all_tests():
     """Run all WASM tests"""
     
     print("\n" + "╔" + "="*68 + "╗")
-    print("║" + " "*22 + "AETHEL WASM TEST SUITE" + " "*24 + "║")
+    print("║" + " "*22 + "DIOTEC360 WASM TEST SUITE" + " "*24 + "║")
     print("║" + " "*20 + "The Silicon Armor Tests" + " "*25 + "║")
     print("╚" + "="*68 + "╝\n")
     

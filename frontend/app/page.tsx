@@ -1,3 +1,19 @@
+/**
+ * Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -11,6 +27,13 @@ import SentinelRadar from '@/components/SentinelRadar';
 import ExecutionLog from '@/components/ExecutionLog';
 import OracleAtlas from '@/components/OracleAtlas';
 import SovereignIdentity from '@/components/SovereignIdentity';
+import { getDiotec360Engine } from '@/lib/diotec360Engine';
+import { getDiotec360JudgeWasm } from '@/lib/diotec360Judge';
+import { spawnAgentFromFrontend } from '@/lib/agentNexus';
+import SovereignControlPanel from '@/components/SovereignControlPanel';
+import ProofBundleVisualizer from '@/components/ProofBundleVisualizer';
+import AgentTelemetry, { type TelemetryEntry } from '@/components/AgentTelemetry';
+import IdentityVault from '@/components/IdentityVault';
 
 // Dynamically import Editor to avoid SSR issues with Monaco
 const Editor = dynamic(() => import('@/components/Editor'), { ssr: false });
@@ -40,6 +63,18 @@ export default function Home() {
   const [code, setCode] = useState(DEFAULT_CODE);
   const [result, setResult] = useState<VerifyResponse | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
+  const [brainStatus, setBrainStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [brainOutput, setBrainOutput] = useState<string>('');
+  const [judgeStatus, setJudgeStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [judgeOutput, setJudgeOutput] = useState<string>('');
+  const [isSpawning, setIsSpawning] = useState(false);
+  const [sovereignProofHash, setSovereignProofHash] = useState('');
+  const [sovereignPublicKeyHex, setSovereignPublicKeyHex] = useState('');
+  const [sovereignSignatureHex, setSovereignSignatureHex] = useState('');
+  const [sovereignZ3Verified, setSovereignZ3Verified] = useState(false);
+  const [telemetry, setTelemetry] = useState<TelemetryEntry[]>([]);
+  const [activeAgentId, setActiveAgentId] = useState<string | null>(null);
+  const [spawnError, setSpawnError] = useState<string>('');
   const [activeLayer, setActiveLayer] = useState('judge');
   const [chatOpen, setChatOpen] = useState(false);
   const [ghostMode, setGhostMode] = useState(false);
@@ -146,6 +181,112 @@ export default function Home() {
     }
   };
 
+  const handleSpawnSovereignAgent = async () => {
+    setIsSpawning(true);
+    setSpawnError('');
+    setTelemetry([]);
+    setActiveAgentId(null);
+    setSovereignProofHash('');
+    setSovereignPublicKeyHex('');
+    setSovereignSignatureHex('');
+    setSovereignZ3Verified(false);
+
+    const start = Date.now();
+    const push = (source: TelemetryEntry['source'], message: string) => {
+      setTelemetry((prev) => [...prev, { t: Date.now() - start, source, message }]);
+    };
+
+    try {
+      push('system', 'Sovereign Gate: begin');
+      const agentId = `agent-${Date.now()}`;
+
+      const res = await spawnAgentFromFrontend({
+        agentId,
+        name: 'Sovereign Agent',
+        mission: 'Execute proven DIOTEC 360 IA intent',
+        invariants: { tickIntervalMs: 1000 },
+        proven: { proofHash: 'pending', judgeVersion: 'pending' },
+        // IMPORTANT: bind to editor code (Option A)
+        dslCode: code,
+      } as any);
+
+      setActiveAgentId(agentId);
+      setSovereignProofHash(res.proofHash);
+      setSovereignPublicKeyHex(res.publicKeyHex);
+      setSovereignSignatureHex(res.signatureHex);
+      setSovereignZ3Verified(Boolean(res.z3Verified));
+
+      push('system', `ProofHash sealed: ${res.proofHash}`);
+      push('system', 'Spawning worker…');
+
+      const unsubscribe = res.spawned.onMessage((evt) => {
+        const msg = evt.data || {};
+        if (msg.type) {
+          push('agent', `${msg.type} ${msg.payload ? JSON.stringify(msg.payload) : ''}`);
+        } else {
+          push('agent', JSON.stringify(msg));
+        }
+      });
+
+      push('system', 'Agent online');
+
+      // Ensure we can cleanup listener if user kills agent
+      (window as any).__aethelActiveAgent = { res, unsubscribe };
+    } catch (e: any) {
+      const m = e?.message ? String(e.message) : String(e);
+      setSpawnError(m);
+    } finally {
+      setIsSpawning(false);
+    }
+  };
+
+  const handleKillSwitch = () => {
+    try {
+      const active = (window as any).__aethelActiveAgent;
+      if (active?.unsubscribe) active.unsubscribe();
+      if (active?.res?.spawned) active.res.spawned.stop();
+    } finally {
+      (window as any).__aethelActiveAgent = null;
+      setActiveAgentId(null);
+      setTelemetry((prev) => [...prev, { t: 0, source: 'system', message: 'Kill-switch activated' }]);
+    }
+  };
+
+  const handleJudgeWasm = async () => {
+    setJudgeStatus('loading');
+    setJudgeOutput('');
+
+    try {
+      const judge = getDiotec360JudgeWasm();
+      await judge.init();
+      setJudgeStatus('ready');
+
+      const verdict = await judge.verifyLocally(code);
+      setJudgeOutput(JSON.stringify(verdict, null, 2));
+    } catch (e: any) {
+      setJudgeStatus('error');
+      setJudgeOutput(e?.message ? String(e.message) : String(e));
+    }
+  };
+
+  const handleBrain = async () => {
+    setBrainStatus('loading');
+    setBrainOutput('');
+
+    try {
+      const engine = getDiotec360Engine();
+      await engine.init({ device: 'webgpu' });
+      setBrainStatus('ready');
+
+      const prompt = `You are DIOTEC 360 IA. Produce a concise intent improvement suggestion for this DSL code:\n\n${code}\n\nReturn only the suggestion.`;
+      const out = await engine.generateText(prompt, { maxNewTokens: 96, temperature: 0.2 });
+      setBrainOutput(out);
+    } catch (e: any) {
+      setBrainStatus('error');
+      setBrainOutput(e?.message ? String(e.message) : String(e));
+    }
+  };
+
   const handleExampleSelect = (exampleCode: string) => {
     setCode(exampleCode);
     setResult(null);
@@ -168,7 +309,7 @@ export default function Home() {
         {/* Header with Run Verify and AI Chat */}
         <header className="border-b border-gray-800 bg-gray-900 px-6 py-3">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold">Aethel Studio</h1>
+            <h1 className="text-xl font-bold">DIOTEC 360 IA Studio</h1>
             <div className="flex items-center gap-3">
               <button
                 onClick={handleVerify}
@@ -191,6 +332,20 @@ export default function Home() {
                     Run Verify
                   </>
                 )}
+              </button>
+              <button
+                onClick={handleBrain}
+                disabled={brainStatus === 'loading'}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-700 disabled:cursor-not-allowed rounded-lg font-medium transition-colors flex items-center gap-2"
+              >
+                {brainStatus === 'loading' ? 'Brain: loading…' : 'Brain: WebGPU'}
+              </button>
+              <button
+                onClick={handleJudgeWasm}
+                disabled={judgeStatus === 'loading'}
+                className="px-4 py-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-700 disabled:cursor-not-allowed rounded-lg font-medium transition-colors flex items-center gap-2"
+              >
+                {judgeStatus === 'loading' ? 'Judge: loading…' : 'Judge: WASM'}
               </button>
               <button
                 onClick={() => setChatOpen(!chatOpen)}
@@ -237,6 +392,45 @@ export default function Home() {
               </div>
               <div className="flex-1 overflow-auto p-4 space-y-4 min-h-0">
                 <ProofViewer result={result} isVerifying={isVerifying} />
+
+                <SovereignControlPanel
+                  onSpawn={handleSpawnSovereignAgent}
+                  onKill={handleKillSwitch}
+                  isSpawning={isSpawning}
+                  canKill={Boolean(activeAgentId)}
+                />
+
+                <IdentityVault />
+
+                <ProofBundleVisualizer
+                  proofHash={sovereignProofHash}
+                  z3Verified={sovereignZ3Verified}
+                  signed={Boolean(sovereignSignatureHex)}
+                  publicKeyHex={sovereignPublicKeyHex}
+                  signatureHex={sovereignSignatureHex}
+                />
+
+                {spawnError ? (
+                  <div className="bg-red-900/20 border border-red-700/40 rounded-lg p-4 text-sm text-red-200">
+                    {spawnError}
+                  </div>
+                ) : null}
+
+                <AgentTelemetry entries={telemetry} />
+
+                {brainOutput ? (
+                  <div className="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                    <div className="text-xs font-semibold text-gray-400 mb-2">BROWSER BRAIN OUTPUT</div>
+                    <pre className="whitespace-pre-wrap text-sm text-gray-200">{brainOutput}</pre>
+                  </div>
+                ) : null}
+
+                {judgeOutput ? (
+                  <div className="bg-gray-900 border border-gray-800 rounded-lg p-4">
+                    <div className="text-xs font-semibold text-gray-400 mb-2">BROWSER JUDGE (Z3 WASM) OUTPUT</div>
+                    <pre className="whitespace-pre-wrap text-sm text-gray-200">{judgeOutput}</pre>
+                  </div>
+                ) : null}
                 
                 {/* Sentinel Radar */}
                 {activeLayer === 'sentinel' && (

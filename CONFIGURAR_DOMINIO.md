@@ -59,7 +59,7 @@ CNAME   api   →   aethel-api-production.up.railway.app
 
 ### 2.1 No Vercel Dashboard
 
-1. Acesse o projeto "aethel-lang" no Vercel
+1. Acesse o projeto "diotec360-lang" no Vercel
 2. Vá em **"Settings"** → **"Domains"**
 3. Clique em **"Add"**
 4. Digite: `aethel.diotec360.com` (ou `diotec360.com`)
@@ -166,7 +166,7 @@ Backend:  https://api.diotec360.com
 **Vantagens**:
 - URL mais curta
 - Mais profissional
-- Aethel é o projeto principal
+- Diotec360 é o projeto principal
 
 ---
 

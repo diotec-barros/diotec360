@@ -1,10 +1,26 @@
 """
-Test Aethel Runtime - The Sanctuary
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Diotec360 Runtime - The Sanctuary
 Tests secure execution of bundles with certificate verification
 """
 
-from aethel.core.runtime import AethelRuntime, SecurityError
-from aethel.core.vault_distributed import AethelDistributedVault
+from diotec360.core.runtime import DIOTEC360Runtime, SecurityError
+from diotec360.core.vault_distributed import DIOTEC360DistributedVault
 import json
 from pathlib import Path
 
@@ -17,15 +33,15 @@ def test_transfer_execution():
     print("="*70)
     
     # Find transfer bundle
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found at {bundle_path}")
         return True
     
     # Initialize runtime with vault
-    vault = AethelDistributedVault()
-    runtime = AethelRuntime(vault=vault)
+    vault = DIOTEC360DistributedVault()
+    runtime = DIOTEC360Runtime(vault=vault)
     
     # Test inputs
     inputs = {
@@ -77,13 +93,13 @@ def test_insufficient_balance():
     print("TEST 2: Transfer with Insufficient Balance (Should Panic)")
     print("="*70)
     
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
         return True
     
-    runtime = AethelRuntime()
+    runtime = DIOTEC360Runtime()
     
     # Test inputs with insufficient balance
     inputs = {
@@ -121,13 +137,13 @@ def test_check_balance_execution():
     print("TEST 3: Check Balance Execution")
     print("="*70)
     
-    bundle_path = ".aethel_vault/bundles/check_balance_9ad9e80d.ae_bundle"
+    bundle_path = ".DIOTEC360_vault/bundles/check_balance_9ad9e80d.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
         return True
     
-    runtime = AethelRuntime()
+    runtime = DIOTEC360Runtime()
     
     # Test inputs
     inputs = {
@@ -165,7 +181,7 @@ def test_certificate_verification():
     print("TEST 4: Certificate Verification")
     print("="*70)
     
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
@@ -179,7 +195,7 @@ def test_certificate_verification():
     print(f"Certificate Status: {bundle['certificate']['status']}")
     print(f"Judge Version: {bundle['certificate']['judge_version']}")
     
-    runtime = AethelRuntime()
+    runtime = DIOTEC360Runtime()
     
     # Verify certificate
     try:
@@ -204,13 +220,13 @@ def test_execution_envelope():
     print("TEST 5: Execution Envelope Sealing")
     print("="*70)
     
-    bundle_path = ".aethel_vault/bundles/transfer_3be8a8ce.ae_bundle"
+    bundle_path = ".DIOTEC360_vault/bundles/transfer_3be8a8ce.ae_bundle"
     
     if not Path(bundle_path).exists():
         print(f"SKIPPED: Bundle not found")
         return True
     
-    runtime = AethelRuntime()
+    runtime = DIOTEC360Runtime()
     
     inputs = {
         'sender_balance': 500,
@@ -249,7 +265,7 @@ def run_all_tests():
     """Run all runtime tests"""
     
     print("\n" + "╔" + "="*68 + "╗")
-    print("║" + " "*20 + "AETHEL RUNTIME TEST SUITE" + " "*23 + "║")
+    print("║" + " "*20 + "Diotec360 RUNTIME TEST SUITE" + " "*23 + "║")
     print("║" + " "*24 + "The Sanctuary Tests" + " "*25 + "║")
     print("╚" + "="*68 + "╝\n")
     

@@ -91,7 +91,7 @@ ALPHA_VANTAGE_API_KEY="ABC123XYZ456"
 NEXT_PUBLIC_API_URL=https://api.diotec360.com
 
 # Triangle of Truth - Distributed Resilience
-NEXT_PUBLIC_LATTICE_NODES=https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+NEXT_PUBLIC_LATTICE_NODES=https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 
 # Alpha Vantage API Key (for Forex data)
 ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
@@ -111,7 +111,7 @@ Valor: https://api.diotec360.com
 Ambiente: Production
 
 Nome: NEXT_PUBLIC_LATTICE_NODES
-Valor: https://diotec-aethel-judge.hf.space,https://backup.diotec360.com
+Valor: https://diotec-diotec360-judge.hf.space,https://backup.diotec360.com
 Ambiente: Production
 
 Nome: ALPHA_VANTAGE_API_KEY
@@ -121,7 +121,7 @@ Ambiente: Production
 
 **Como verificar:**
 1. Acesse: https://vercel.com/dashboard
-2. Selecione o projeto: aethel-lang (ou nome do seu projeto)
+2. Selecione o projeto: diotec360-lang (ou nome do seu projeto)
 3. Vá em: Settings → Environment Variables
 4. Verifique se as 3 variáveis existem
 
@@ -142,7 +142,7 @@ Ambiente: Production
 [main e7fe332] feat: Sovereign Architecture
 7 files changed, 344 insertions(+), 53 deletions(-)
 
-To https://github.com/diotec-barros/aethel-lang.git
+To https://github.com/diotec-barros/diotec360-lang.git
    02e2767..e7fe332  main -> main
 ```
 
@@ -225,7 +225,7 @@ python verify_production_triangle.py
 ```
 
 **Deve verificar:**
-- ✅ Node 1: `https://diotec-aethel-judge.hf.space`
+- ✅ Node 1: `https://diotec-diotec360-judge.hf.space`
 - ✅ Node 2: `https://api.diotec360.com`
 - ✅ Node 3: `https://backup.diotec360.com`
 
@@ -249,7 +249,7 @@ python verify_production_triangle.py
 │  │     └─ SEU TERRITÓRIO SOBERANO                      │
 │  │                                                      │
 │  ├─ 🟢 Node 1: Hugging Face                            │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │     └─ Infraestrutura Elite Global                 │
 │  │                                                      │
 │  └─ 🟣 Node 3: Vercel Backup                           │
@@ -342,11 +342,11 @@ ALPHA_VANTAGE_API_KEY=EFQ0A2ZCKGNHFGTNAQVLOOL9,-1
 
 **O ponto `.` NÃO faz parte da chave!**
 
-### 2. AETHEL_P2P_BOOTSTRAP
+### 2. DIOTEC360_P2P_BOOTSTRAP
 
 ```env
 # ✅ CORRETO (vazio - P2P desabilitado)
-AETHEL_P2P_BOOTSTRAP=
+DIOTEC360_P2P_BOOTSTRAP=
 ```
 
 **Deixe vazio! Você usa HTTP-Only Mode.**

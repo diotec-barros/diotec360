@@ -264,5 +264,5 @@ Agora o frontend tem um menu dropdown funcional que carrega exemplos Canon v1.9.
 ---
 **Arquiteto**: Kiro  
 **Versão**: Aethel Studio v2.0 Apex Dashboard  
-**Backend**: Aethel v1.7.0 Oracle Sanctuary  
+**Backend**: Diotec360 v1.7.0 Oracle Sanctuary  
 **Canon**: v1.9.0

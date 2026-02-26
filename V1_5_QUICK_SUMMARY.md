@@ -28,8 +28,8 @@
 
 | Platform | Status | Commit | URL |
 |----------|--------|--------|-----|
-| GitHub | ✅ Deployed | `ebdfd85` | [Link](https://github.com/diotec-barros/aethel-lang) |
-| Hugging Face | 🔄 Building | `bb8915e` | [Link](https://huggingface.co/spaces/diotec/aethel-judge) |
+| GitHub | ✅ Deployed | `ebdfd85` | [Link](https://github.com/diotec-barros/diotec360-lang) |
+| Hugging Face | 🔄 Building | `bb8915e` | [Link](https://huggingface.co/spaces/diotec/diotec360-judge) |
 
 ## Architecture
 

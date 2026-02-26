@@ -51,7 +51,7 @@ Implementar a integração do sistema de identidade soberana (ED25519) com o Jud
 ```
 Keypair Generation: 363.83ms
 Public Key: fbfb0f50188011951b5dd85cb24c054d...
-Account Address: aethel_da41696b7a4e91050da1201536b912b7c736f89a
+Account Address: DIOTEC360_da41696b7a4e91050da1201536b912b7c736f89a
 ```
 
 ### Assinatura de Transação
@@ -249,19 +249,19 @@ python demo_sovereign_handshake.py
 
 ### Usar em Produção
 ```python
-from aethel.core.crypto import get_aethel_crypt
+from aethel.core.crypto import get_DIOTEC360_crypt
 from aethel.core.judge import AethelJudge
 from aethel.core.sovereign_persistence import get_sovereign_persistence
 import json
 
 # 1. Gerar keypair para usuário
-crypto = get_aethel_crypt()
+crypto = get_DIOTEC360_crypt()
 keypair = crypto.generate_keypair()
 
 # 2. Criar transação assinada
 transaction_data = {
     'sender': crypto.derive_address(keypair.public_key_hex),
-    'receiver': 'aethel_treasury',
+    'receiver': 'DIOTEC360_treasury',
     'amount': 1000000,
     'public_key': keypair.public_key_hex
 }

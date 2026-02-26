@@ -106,11 +106,11 @@ No code changes required! v1.9.0 is fully backward compatible.
 
 Optional: Enable Sentinel features via environment variables:
 ```bash
-AETHEL_SENTINEL_ENABLED=true
-AETHEL_CRISIS_ANOMALY_THRESHOLD=0.10
-AETHEL_CRISIS_REQUEST_THRESHOLD=1000
-AETHEL_SELF_HEALING_ENABLED=true
-AETHEL_VACCINE_ENABLED=false  # Enable after monitoring baseline
+DIOTEC360_SENTINEL_ENABLED=true
+DIOTEC360_CRISIS_ANOMALY_THRESHOLD=0.10
+DIOTEC360_CRISIS_REQUEST_THRESHOLD=1000
+DIOTEC360_SELF_HEALING_ENABLED=true
+DIOTEC360_VACCINE_ENABLED=false  # Enable after monitoring baseline
 ```
 
 See `SENTINEL_GUIDE.md` for complete configuration options.
@@ -362,16 +362,16 @@ See `SENTINEL_GUIDE.md` for complete configuration options.
 
 ---
 
-[1.8.0]: https://github.com/aethel-lang/aethel-core/compare/v1.7.0...v1.8.0
-[1.7.0]: https://github.com/aethel-lang/aethel-core/compare/v1.6.2...v1.7.0
-[1.6.2]: https://github.com/aethel-lang/aethel-core/compare/v1.5.0...v1.6.2
-[1.5.0]: https://github.com/aethel-lang/aethel-core/compare/v1.4.1...v1.5.0
-[1.4.1]: https://github.com/aethel-lang/aethel-core/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/aethel-lang/aethel-core/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/aethel-lang/aethel-core/compare/v1.2.0...v1.3.0
-[1.2.0]: https://github.com/aethel-lang/aethel-core/compare/v1.1.4...v1.2.0
-[1.1.4]: https://github.com/aethel-lang/aethel-core/compare/v1.1.3...v1.1.4
-[1.1.3]: https://github.com/aethel-lang/aethel-core/compare/v1.1.2...v1.1.3
-[1.1.2]: https://github.com/aethel-lang/aethel-core/compare/v1.1.0...v1.1.2
-[1.1.0]: https://github.com/aethel-lang/aethel-core/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/aethel-lang/aethel-core/releases/tag/v1.0.0
+[1.8.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.7.0...v1.8.0
+[1.7.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.6.2...v1.7.0
+[1.6.2]: https://github.com/diotec360-lang/aethel-core/compare/v1.5.0...v1.6.2
+[1.5.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.4.1...v1.5.0
+[1.4.1]: https://github.com/diotec360-lang/aethel-core/compare/v1.4.0...v1.4.1
+[1.4.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.2.0...v1.3.0
+[1.2.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.1.4...v1.2.0
+[1.1.4]: https://github.com/diotec360-lang/aethel-core/compare/v1.1.3...v1.1.4
+[1.1.3]: https://github.com/diotec360-lang/aethel-core/compare/v1.1.2...v1.1.3
+[1.1.2]: https://github.com/diotec360-lang/aethel-core/compare/v1.1.0...v1.1.2
+[1.1.0]: https://github.com/diotec360-lang/aethel-core/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/diotec360-lang/aethel-core/releases/tag/v1.0.0

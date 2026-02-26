@@ -1,4 +1,4 @@
-# 🎯 AETHEL v1.9.0 "APEX" - O QUE FALTA
+# 🎯 Diotec360 v1.9.0 "APEX" - O QUE FALTA
 
 **Data**: 7 de Fevereiro de 2026  
 **Status**: Análise Crítica Final  
@@ -43,7 +43,7 @@
 ```bash
 git add -A
 git commit -m "v1.9.0 Apex - The Foundation is Eternal"
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun"
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun"
 git push origin main --tags
 ```
 
@@ -59,9 +59,9 @@ git push origin main --tags
 **Ação Necessária**:
 1. Ir para GitHub → Releases → New Release
 2. Tag: v1.9.0-apex
-3. Title: "Aethel v1.9.0 Apex - The Age of Facts Has Begun"
+3. Title: "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun"
 4. Body: Copiar de `RELEASE_NOTES_V1_9_0.md`
-5. Anexar: `AETHEL_V1_9_0_LAUNCH_BUNDLE.md`
+5. Anexar: `DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md`
 6. Publish release
 
 **Tempo**: 5 minutos  
@@ -313,7 +313,7 @@ This release represents the culmination of a vision to replace
 The age of faith is over. The age of facts has begun."
 
 # 2. Tag release
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun"
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun"
 
 # 3. Push
 git push origin main --tags
@@ -415,7 +415,7 @@ Depois disso, o release está oficialmente lançado e você pode fazer o resto a
 
 git add -A
 git commit -m "v1.9.0 Apex - The Foundation is Eternal"
-git tag -a v1.9.0-apex -m "Aethel v1.9.0 Apex - The Age of Facts Has Begun"
+git tag -a v1.9.0-apex -m "Diotec360 v1.9.0 Apex - The Age of Facts Has Begun"
 git push origin main --tags
 
 # Depois:

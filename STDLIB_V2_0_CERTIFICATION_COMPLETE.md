@@ -129,7 +129,7 @@ sharpe = sharpe_ratio(returns, 200)  # 2% taxa livre de risco
 **Status**: SPECIFICATION PHASE
 
 **Arquivo Verificado**:
-- ✅ `AETHEL_V2_0_CONSENSUS_SPEC.md` - Especificação completa (3000+ linhas)
+- ✅ `DIOTEC360_V2_0_CONSENSUS_SPEC.md` - Especificação completa (3000+ linhas)
 - ❌ Implementação em código: NÃO EXISTE
 
 **O Que Foi Especificado**:

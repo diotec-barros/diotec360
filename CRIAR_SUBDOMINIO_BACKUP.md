@@ -135,7 +135,7 @@ sudo nano /etc/nginx/sites-available/aethel-backup
 ### Adicionar esta configuração:
 
 ```nginx
-# Aethel Node 3 - Backup Server
+# Diotec360 Node 3 - Backup Server
 server {
     listen 80;
     server_name backup.diotec360.com;
@@ -212,7 +212,7 @@ sudo nano /etc/systemd/system/aethel-backup.service
 
 ```ini
 [Unit]
-Description=Aethel Lattice Node 3 (Backup)
+Description=DIOTEC360 LATTICE Node 3 (Backup)
 After=network.target
 
 [Service]

@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
-Test Aethel Backend Production Deployment
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Test Diotec360 Backend Production Deployment
 Tests all critical endpoints on Hugging Face Space
 """
 
@@ -10,7 +26,7 @@ import time
 from typing import Dict, Any
 
 # Production URL
-BASE_URL = "https://diotec-aethel-judge.hf.space"
+BASE_URL = "https://diotec-Diotec360-judge.hf.space"
 
 def test_health() -> bool:
     """Test health endpoint"""
@@ -35,7 +51,7 @@ def test_root() -> bool:
         response = requests.get(f"{BASE_URL}/", timeout=10)
         if response.status_code == 200:
             data = response.json()
-            if data.get("name") == "Aethel API":
+            if data.get("name") == "Diotec360 API":
                 print(f"✅ Root endpoint passed - Version: {data.get('version')}")
                 return True
         print(f"❌ Root endpoint failed: {response.status_code}")
@@ -230,7 +246,7 @@ def test_vault_list() -> bool:
 def run_all_tests():
     """Run all tests and report results"""
     print("=" * 60)
-    print("🚀 AETHEL BACKEND PRODUCTION TESTS")
+    print("🚀 Diotec360 BACKEND PRODUCTION TESTS")
     print("=" * 60)
     print(f"📍 Testing: {BASE_URL}")
     print(f"⏰ Time: {time.strftime('%Y-%m-%d %H:%M:%S')}")

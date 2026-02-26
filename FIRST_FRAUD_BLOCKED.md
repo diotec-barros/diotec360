@@ -75,15 +75,15 @@ Z3 Theorem Prover Analysis:
 │      Status: ✅ Online                                  │
 │                                                          │
 │  🧠 MENTE (Backend)                                     │
-│  └─> Hugging Face: diotec-aethel-judge.hf.space       │
+│  └─> Hugging Face: diotec-diotec360-judge.hf.space       │
 │      Status: ✅ Online                                  │
 │                                                          │
 │  ⚖️ ESPÍRITO (Lógica)                                   │
-│  └─> Aethel v1.3.1: Z3 + Conservation Checker         │
+│  └─> Diotec360 v1.3.1: Z3 + Conservation Checker         │
 │      Status: ✅ Vigilante                               │
 │                                                          │
 │  🔗 CÓDIGO (Repository)                                 │
-│  └─> GitHub: diotec-barros/aethel-lang                │
+│  └─> GitHub: diotec-barros/diotec360-lang                │
 │      Status: ✅ Atualizado                              │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -213,7 +213,7 @@ verify {
 
 ```
 ===== Application Startup at 2026-02-03 22:59:54 =====
-Vault inicializado em: /app/.aethel_vault
+Vault inicializado em: /app/.DIOTEC360_vault
 Funcoes no cofre: 0
 INFO: Started server process [1]
 INFO: Waiting for application startup.
@@ -230,9 +230,9 @@ INFO: Verdict: FAILED - Contradição global detectada
 ### URLs de Verificação
 
 - **Live Demo**: https://aethel.diotec360.com
-- **API Endpoint**: https://diotec-aethel-judge.hf.space/api/verify
-- **Health Check**: https://diotec-aethel-judge.hf.space/health
-- **GitHub**: https://github.com/diotec-barros/aethel-lang
+- **API Endpoint**: https://diotec-diotec360-judge.hf.space/api/verify
+- **Health Check**: https://diotec-diotec360-judge.hf.space/health
+- **GitHub**: https://github.com/diotec-barros/diotec360-lang
 
 ---
 

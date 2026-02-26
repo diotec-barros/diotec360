@@ -1,4 +1,4 @@
-# 🏛️⚖️ AETHEL v1.9.0 "APEX" - THE LAUNCH MANIFESTO
+# 🏛️⚖️ Diotec360 v1.9.0 "APEX" - THE LAUNCH MANIFESTO
 
 **Release Date**: February 7, 2026  
 **Version**: v1.9.0 "Apex"  
@@ -17,7 +17,7 @@ For decades, the software industry has operated on faith:
 - Faith that the auditor found all the vulnerabilities
 - Faith that the system won't fail when it matters most
 
-**Aethel v1.9.0 "Apex" replaces faith with mathematical facts.**
+**Diotec360 v1.9.0 "Apex" replaces faith with mathematical facts.**
 
 ---
 
@@ -76,7 +76,7 @@ gate = AIGate()
 result = gate.voice_to_code("Transfer $100 with 2% fee")
 
 if result.verified:
-    execute(result.aethel_code)  # PROVEN safe
+    execute(result.DIOTEC360_code)  # PROVEN safe
 ```
 
 **Impact**: 0 hallucinations in production, 10x efficiency gain
@@ -189,7 +189,7 @@ gate = AIGate()
 result = gate.voice_to_code("Transfer $100 with 2% fee")
 
 if result.verified:
-    execute(result.aethel_code)  # PROVEN: Safe to execute
+    execute(result.DIOTEC360_code)  # PROVEN: Safe to execute
 ```
 
 **Result**: 0 hallucinations in production
@@ -261,7 +261,7 @@ if result.verified:
 
 | Product | Target Market | Pricing | Status |
 |---------|--------------|---------|--------|
-| **Aethel Core** | Developers | Free (Open Source) | ✅ Live |
+| **Diotec360 core** | Developers | Free (Open Source) | ✅ Live |
 | **Trading Invariants** | Trading Firms | $500-2K/month | ✅ Live |
 | **AI-Safe Wrapper** | AI Companies | $1K-50K/month | ✅ Live |
 | **Voice-to-Verified-Code** | Developers | $200-1K/month | ✅ Live |
@@ -376,12 +376,12 @@ python -m aethel.cli.main hello_aethel.ae
 - **Sentinel System**: [SENTINEL_GUIDE.md](SENTINEL_GUIDE.md)
 - **Ghost Protocol**: [ZKP_GUIDE.md](ZKP_GUIDE.md)
 - **Synchrony Protocol**: [SYNCHRONY_PROTOCOL.md](SYNCHRONY_PROTOCOL.md)
-- **Standard Library**: [AETHEL_STDLIB_V2_0_SPEC.md](AETHEL_STDLIB_V2_0_SPEC.md)
+- **Standard Library**: [DIOTEC360_STDLIB_V2_0_SPEC.md](DIOTEC360_STDLIB_V2_0_SPEC.md)
 
 ### Commercial Documentation
-- **Pitch Deck**: [AETHEL_APEX_PITCH_DECK.md](AETHEL_APEX_PITCH_DECK.md)
+- **Pitch Deck**: [DIOTEC360_APEX_PITCH_DECK.md](DIOTEC360_APEX_PITCH_DECK.md)
 - **Commercial Strategy**: [APEX_COMMERCIAL_STRATEGY.md](APEX_COMMERCIAL_STRATEGY.md)
-- **Launch Bundle**: [AETHEL_V1_9_0_LAUNCH_BUNDLE.md](AETHEL_V1_9_0_LAUNCH_BUNDLE.md)
+- **Launch Bundle**: [DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md](DIOTEC360_V1_9_0_LAUNCH_BUNDLE.md)
 
 ---
 
@@ -561,7 +561,7 @@ For too long, the software industry has accepted "good enough" as the standard. 
 
 We believe that software can be perfect. We believe that every program can be proven correct. We believe that the era of faith is over and the era of facts has begun.
 
-**Aethel v1.9.0 "Apex" is not just a release. It's a declaration:**
+**Diotec360 v1.9.0 "Apex" is not just a release. It's a declaration:**
 
 **The age of "probably correct" is over.**  
 **The age of "provably correct" has begun.**

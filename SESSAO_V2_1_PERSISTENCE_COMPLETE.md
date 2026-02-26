@@ -135,7 +135,7 @@ Success Rate: 100%
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│         AETHEL PERSISTENCE LAYER v2.1.0                 │
+│         DIOTEC360 PERSISTENCE LAYER v2.1.0                 │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐ │
@@ -197,7 +197,7 @@ Success Rate: 100%
    - Demonstração de todas as capacidades
    - Simulação de disaster recovery
 
-3. **`AETHEL_V2_1_PERSISTENCE_LAYER.md`**
+3. **`DIOTEC360_V2_1_PERSISTENCE_LAYER.md`**
    - Especificação completa
    - Exemplos de uso
    - Filosofia e arquitetura
@@ -283,7 +283,7 @@ export function PersistenceMonitor() {
 
 > **"Um banco de dados que pode ser alterado fora do sistema não é um banco de dados. É uma vulnerabilidade."**
 
-Bancos de dados tradicionais são **mutáveis** - podem ser alterados sem prova. A Camada de Persistência da Aethel é **imutável** - cada mudança requer prova matemática.
+Bancos de dados tradicionais são **mutáveis** - podem ser alterados sem prova. A Camada de Persistência da Diotec360 é **imutável** - cada mudança requer prova matemática.
 
 Isso transforma a Aethel de um "site" em uma **Infraestrutura de Estado** - um sistema onde:
 - Estado não é armazenado, estado é **provado**
@@ -306,7 +306,7 @@ Isso transforma a Aethel de um "site" em uma **Infraestrutura de Estado** - um s
 
 ## 🏁 Conclusão
 
-A **Aethel v2.1.0 - Persistence Layer** está completa e testada. O Santuário agora tem **memória eterna**:
+A **Diotec360 v2.1.0 - Persistence Layer** está completa e testada. O Santuário agora tem **memória eterna**:
 
 ✅ Cada prova é lembrada  
 ✅ Cada ataque é registrado  

@@ -31,7 +31,7 @@
 │  🔺 BACKEND TRIANGLE (HTTP-Only Resilience)             │
 │                                                         │
 │  ├─ 🟢 Node 1: Hugging Face (Público)                  │
-│  │  └─ https://diotec-aethel-judge.hf.space           │
+│  │  └─ https://diotec-diotec360-judge.hf.space           │
 │  │                                                      │
 │  ├─ 🔵 Node 2: Railway (Principal)                     │
 │  │  └─ https://api.diotec360.com                       │
@@ -89,7 +89,7 @@ curl https://api.diotec360.com/health
 curl https://backup.diotec360.com/health
 
 # Teste Node 1 (Hugging Face)
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # Teste Frontend
 curl https://aethel.diotec360.com
@@ -119,7 +119,7 @@ python verify_production_triangle.py
 
 PHASE 1: HEALTH CHECKS
 ------------------------------------------------------------
-[TEST] Node 1 (Hugging Face): https://diotec-aethel-judge.hf.space
+[TEST] Node 1 (Hugging Face): https://diotec-diotec360-judge.hf.space
   ✅ Status: healthy
 
 [TEST] Node 2 (Railway API): https://api.diotec360.com
@@ -178,7 +178,7 @@ nslookup aethel.diotec360.com
 ```bash
 curl https://api.diotec360.com/health
 curl https://backup.diotec360.com/health
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 ```
 
 ### Verificação Completa
@@ -239,7 +239,7 @@ python verify_production_triangle.py
 3. Firewall bloqueando comunicação
 
 **Solução:**
-1. Verificar variáveis `AETHEL_LATTICE_NODES` em cada nó
+1. Verificar variáveis `DIOTEC360_LATTICE_NODES` em cada nó
 2. Testar conectividade entre nós
 3. Aguardar ciclo de sincronização (30-60 segundos)
 4. Verificar logs de cada nó
@@ -272,7 +272,7 @@ nslookup backup.diotec360.com
 # 2. Testar endpoints
 curl https://api.diotec360.com/health
 curl https://backup.diotec360.com/health
-curl https://diotec-aethel-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/health
 
 # 3. Verificar Triangle
 python verify_production_triangle.py

@@ -1,9 +1,25 @@
 """
-Integration tests for consensus core components with existing Aethel systems.
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
+Integration tests for consensus core components with existing Diotec360 systems.
 
 This test suite verifies that:
-1. ProofVerifier integrates correctly with AethelJudge
-2. StateStore integrates correctly with AethelPersistenceLayer
+1. ProofVerifier integrates correctly with DIOTEC360Judge
+2. StateStore integrates correctly with DIOTEC360PersistenceLayer
 3. All core components work together end-to-end
 """
 
@@ -12,18 +28,18 @@ import tempfile
 import os
 from pathlib import Path
 
-from aethel.core.judge import AethelJudge
-from aethel.core.persistence import AethelPersistenceLayer
-from aethel.consensus.proof_verifier import ProofVerifier
-from aethel.consensus.state_store import StateStore
-from aethel.consensus.data_models import ProofBlock, StateTransition, StateChange
+from diotec360.core.judge import DIOTEC360Judge
+from diotec360.core.persistence import DIOTEC360PersistenceLayer
+from diotec360.consensus.proof_verifier import ProofVerifier
+from diotec360.consensus.state_store import StateStore
+from diotec360.consensus.data_models import ProofBlock, StateTransition, StateChange
 
 
 class TestProofVerifierIntegration:
-    """Test ProofVerifier integration with AethelJudge."""
+    """Test ProofVerifier integration with DIOTEC360Judge."""
     
-    def test_verifier_with_aethel_judge(self):
-        """Test that ProofVerifier can use AethelJudge for real proof verification."""
+    def test_verifier_with_DIOTEC360_judge(self):
+        """Test that ProofVerifier can use DIOTEC360Judge for real proof verification."""
         # Create a simple intent map for testing
         intent_map = {
             'test_intent': {
@@ -32,8 +48,8 @@ class TestProofVerifierIntegration:
             }
         }
         
-        # Create AethelJudge instance
-        judge = AethelJudge(intent_map=intent_map)
+        # Create DIOTEC360Judge instance
+        judge = DIOTEC360Judge(intent_map=intent_map)
         
         # Create ProofVerifier with judge
         verifier = ProofVerifier(judge=judge)
@@ -101,14 +117,14 @@ class TestProofVerifierIntegration:
 
 
 class TestStateStoreIntegration:
-    """Test StateStore integration with AethelPersistenceLayer."""
+    """Test StateStore integration with DIOTEC360PersistenceLayer."""
     
     def test_state_store_with_persistence(self):
-        """Test that StateStore can persist state using AethelPersistenceLayer."""
+        """Test that StateStore can persist state using DIOTEC360PersistenceLayer."""
         # Create temporary directory for persistence
         with tempfile.TemporaryDirectory() as tmpdir:
             # Create persistence layer
-            persistence = AethelPersistenceLayer(vault_path=tmpdir)
+            persistence = DIOTEC360PersistenceLayer(vault_path=tmpdir)
             
             # Create state store with persistence
             store = StateStore(persistence_layer=persistence)
@@ -181,7 +197,7 @@ class TestStateStoreIntegration:
         }
         
         # Calculate expected root hash
-        from aethel.consensus.merkle_tree import MerkleTree
+        from diotec360.consensus.merkle_tree import MerkleTree
         temp_tree = MerkleTree()
         for key, value in peer_state.items():
             temp_tree.update(key, value)
@@ -222,7 +238,7 @@ class TestEndToEndIntegration:
         """Test complete flow: proof verification -> state transition -> persistence."""
         with tempfile.TemporaryDirectory() as tmpdir:
             # Create components
-            persistence = AethelPersistenceLayer(vault_path=tmpdir)
+            persistence = DIOTEC360PersistenceLayer(vault_path=tmpdir)
             verifier = ProofVerifier()
             store = StateStore(persistence_layer=persistence)
             

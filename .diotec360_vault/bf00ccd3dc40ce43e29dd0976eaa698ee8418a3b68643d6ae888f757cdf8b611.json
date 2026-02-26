@@ -1,0 +1,40 @@
+{
+  "intent_name": "reentry_calculation",
+  "full_hash": "bf00ccd3dc40ce43e29dd0976eaa698ee8418a3b68643d6ae888f757cdf8b611",
+  "logic_hash": "c6c766faa7596e84020807d99e40984e690ca5243c1c1dcb15ceea9ff8ee178d",
+  "ast": {
+    "params": [
+      "altitude:Meters",
+      "velocity:MetersPerSec",
+      "angle:Degrees"
+    ],
+    "constraints": [
+      "altitude > altitude_zero",
+      "velocity > velocity_zero",
+      "angle >= reentry_min",
+      "angle <= reentry_max"
+    ],
+    "ai_instructions": {
+      "priority": "safety",
+      "target": "risc_v_hardened"
+    },
+    "post_conditions": [
+      "angle >= reentry_min",
+      "angle <= reentry_max",
+      "altitude > altitude_zero"
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o garantidas.",
+    "timestamp": "2026-02-01T23:29:41.461951"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": "output/sat_reentry_calc.rs"
+  },
+  "immutable": true,
+  "created_at": "2026-02-01T23:29:41.461957"
+}

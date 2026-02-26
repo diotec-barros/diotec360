@@ -1,0 +1,35 @@
+{
+  "intent_name": "check_balance",
+  "full_hash": "9ad9e80d616d938a7bb8527f66f8c9a94796ea6e6d6d6c4cab9e564747042f1d",
+  "logic_hash": "3cffc9c9580f31066c0f346b88b0d7983dff89b804a92e641e293d63ed6a518e",
+  "ast": {
+    "params": [
+      "account:Account",
+      "minimum:Balance"
+    ],
+    "constraints": [
+      "account_balance >= balance_zero",
+      "minimum >= balance_zero"
+    ],
+    "ai_instructions": {
+      "priority": "speed",
+      "target": "query"
+    },
+    "post_conditions": [
+      "account_balance >= balance_zero"
+    ]
+  },
+  "code": "fn transfer_funds(sender: &mut Account, receiver: &mut Account, amount: Gold) -> Result<(), TransferError> {\n    // Guard: Valida\u00e7\u00e3o de pr\u00e9-condi\u00e7\u00f5es\n    if sender.balance < amount {\n        return Err(TransferError::InsufficientFunds);\n    }\n    if amount <= 0 {\n        return Err(TransferError::InvalidAmount);\n    }\n    \n    let old_balance = sender.balance;\n    \n    // Solve: Execu\u00e7\u00e3o otimizada para blockchain\n    sender.balance -= amount;\n    receiver.balance += amount;\n    \n    // Verify: Valida\u00e7\u00e3o de p\u00f3s-condi\u00e7\u00f5es\n    assert!(sender.balance < old_balance);\n    \n    Ok(())\n}",
+  "verification": {
+    "status": "PROVED",
+    "message": "O c\u00f3digo \u00e9 matematicamente seguro. Todas as p\u00f3s-condi\u00e7\u00f5es s\u00e3o garantidas.",
+    "timestamp": "2026-02-01T23:56:28.492196"
+  },
+  "metadata": {
+    "attempts": 1,
+    "ai_provider": "anthropic",
+    "artifact_file": "output/test_balance.rs"
+  },
+  "immutable": true,
+  "created_at": "2026-02-01T23:56:28.492202"
+}

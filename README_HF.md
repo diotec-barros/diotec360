@@ -64,7 +64,7 @@ intent transfer(sender: Account, receiver: Account, amount: Balance) {
 ### Verify Code
 
 ```bash
-curl -X POST https://huggingface.co/spaces/diotec/aethel-judge/api/verify \
+curl -X POST https://huggingface.co/spaces/diotec/diotec360-judge/api/verify \
   -H "Content-Type: application/json" \
   -d '{
     "code": "intent transfer(...) { ... }"
@@ -104,8 +104,8 @@ Response:
 ## 📚 Documentation
 
 - [Full Documentation](https://github.com/diotec/aethel)
-- [Whitepaper](https://github.com/diotec/aethel/blob/main/WHITEPAPER.md)
-- [Examples](https://github.com/diotec/aethel/tree/main/aethel/examples)
+- [Whitepaper](https://github.com/diotec/diotec360/blob/main/WHITEPAPER.md)
+- [Examples](https://github.com/diotec/diotec360/tree/main/diotec360/examples)
 
 ## 🛠️ Technology Stack
 
@@ -120,7 +120,7 @@ Response:
 Zero-latency prediction engine that manifests truth by eliminating impossible states.
 
 ```bash
-curl -X POST https://huggingface.co/spaces/diotec/aethel-judge/api/ghost/predict \
+curl -X POST https://huggingface.co/spaces/diotec/diotec360-judge/api/ghost/predict \
   -H "Content-Type: application/json" \
   -d '{"code": "..."}'
 ```
@@ -129,7 +129,7 @@ curl -X POST https://huggingface.co/spaces/diotec/aethel-judge/api/ghost/predict
 Create instant manifestations of verified code without build or deploy.
 
 ```bash
-curl -X POST https://huggingface.co/spaces/diotec/aethel-judge/api/mirror/manifest \
+curl -X POST https://huggingface.co/spaces/diotec/diotec360-judge/api/mirror/manifest \
   -H "Content-Type: application/json" \
   -d '{"code": "..."}'
 ```
@@ -153,16 +153,16 @@ All code is formally verified before execution. The Z3 theorem prover provides m
 
 ## 📄 License
 
-MIT License - See [LICENSE](https://github.com/diotec/aethel/blob/main/LICENSE)
+MIT License - See [LICENSE](https://github.com/diotec/diotec360/blob/main/LICENSE)
 
 ## 🤝 Contributing
 
-Contributions welcome! See [CONTRIBUTING.md](https://github.com/diotec/aethel/blob/main/CONTRIBUTING.md)
+Contributions welcome! See [CONTRIBUTING.md](https://github.com/diotec/diotec360/blob/main/CONTRIBUTING.md)
 
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/diotec/aethel)
-- [Aethel Studio](https://aethel-studio.vercel.app)
+- [Aethel Studio](https://diotec360-studio.vercel.app)
 - [Documentation](https://github.com/diotec/aethel#readme)
 
 ---

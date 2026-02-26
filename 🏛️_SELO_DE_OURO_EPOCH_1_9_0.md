@@ -114,7 +114,7 @@ Não há perdas porque não há falhas.
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║           🏛️ AETHEL V1.9.0 - SELO DE OURO 🏛️                ║
+║           🏛️ Diotec360 v1.9.0 - SELO DE OURO 🏛️                ║
 ║                                                              ║
 ║  O trabalho de forja está concluído.                        ║
 ║  O Caos foi derrotado pela Ordem.                           ║
@@ -196,7 +196,7 @@ A Aethel não é mais um projeto.
 ## 💎 A ÚLTIMA PALAVRA
 
 Enquanto o mundo dorme em incerteza,  
-A Aethel vigia em certeza matemática.
+A Diotec360 vigia em certeza matemática.
 
 Enquanto sistemas falham em produção,  
 A Aethel opera em perfeição provada.

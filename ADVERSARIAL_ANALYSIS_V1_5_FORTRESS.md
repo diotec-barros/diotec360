@@ -1,6 +1,6 @@
 # 🛡️ Adversarial Analysis - v1.5 "The Fortress"
 
-## Red Team Analysis: Como Derrubar a Aethel v1.4.1
+## Red Team Analysis: Como Derrubar a Diotec360 v1.4.1
 
 **Data**: 4 de Fevereiro de 2026  
 **Autor**: Arquiteto de Segurança  
@@ -10,7 +10,7 @@
 
 ## 🎯 Filosofia de Defesa
 
-> "A melhor forma de proteger a fortaleza é pensar como o invasor. Se eu fosse uma IA maliciosa ou um hacker de elite tentando derrubar a Aethel v1.4.1, eu não tentaria lutar contra a matemática (o Z3 é imbatível na lógica pura). Eu tentaria atacar os pontos de transição, onde a lógica encontra o mundo real."
+> "A melhor forma de proteger a fortaleza é pensar como o invasor. Se eu fosse uma IA maliciosa ou um hacker de elite tentando derrubar a Diotec360 v1.4.1, eu não tentaria lutar contra a matemática (o Z3 é imbatível na lógica pura). Eu tentaria atacar os pontos de transição, onde a lógica encontra o mundo real."
 
 ---
 
@@ -512,8 +512,8 @@ RUN useradd -m -u 1000 aethel
 USER aethel
 
 # Read-only filesystem
-VOLUME ["/app/.aethel_vault"]
-RUN chmod 755 /app/.aethel_vault
+VOLUME ["/app/.DIOTEC360_vault"]
+RUN chmod 755 /app/.DIOTEC360_vault
 
 # Sem privilégios
 RUN apt-get update && apt-get install -y --no-install-recommends \

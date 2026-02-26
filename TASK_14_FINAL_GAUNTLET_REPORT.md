@@ -8,7 +8,7 @@
 
 ## 🎯 MISSÃO: THE GAUNTLET
 
-Submeter a Aethel v1.9.0 ao "Corredor Polonês" de todos os testes integrados para validar que todos os componentes funcionam em harmonia.
+Submeter a Diotec360 v1.9.0 ao "Corredor Polonês" de todos os testes integrados para validar que todos os componentes funcionam em harmonia.
 
 ---
 

@@ -216,7 +216,7 @@ Traceback ...
 ```cmd
 @echo off
 echo ========================================
-echo TESTANDO AETHEL v1.1
+echo TESTANDO Diotec360 v1.1
 echo ========================================
 echo.
 

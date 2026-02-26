@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Demonstração Completa: Agente Soberano Autônomo Aethel
 
 Esta demonstração integra TODOS os quatro pilares da visão do Arquiteto:
@@ -24,11 +40,11 @@ import json
 from datetime import datetime
 
 # Importações dos quatro pilares
-from aethel.core.memory import CognitiveMemory, get_cognitive_memory
-from aethel.core.whatsapp_gate import WhatsAppGate, create_whatsapp_message, demo_whatsapp_gate
+from diotec360.core.memory import CognitiveMemory, get_cognitive_memory
+from diotec360.core.whatsapp_gate import WhatsAppGate, create_whatsapp_message, demo_whatsapp_gate
 from demo_forex_memory import ForexTradingAgent, ForexOracleSimulator
-from aethel.core.conservation_validator import ConservationValidator
-from aethel.core.crypto import AethelCrypt
+from diotec360.core.conservation_validator import ConservationValidator
+from diotec360.core.crypto import AethelCrypt
 
 
 class SovereignAutonomousAgent:

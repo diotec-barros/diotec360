@@ -1,4 +1,4 @@
-# 🛡️ Aethel v1.5.0 "The Fortress" - Launch Complete
+# 🛡️ Diotec360 v1.5.0 "The Fortress" - Launch Complete
 
 **Date**: February 4, 2026  
 **Version**: 1.5.0  
@@ -127,13 +127,13 @@ Run `python test_fortress_production.py` after HF Space rebuild completes.
 - **Commit**: `7b88fbf`
 - **Message**: "feat: Add Fortress v1.5 - Sanitizer and Z3 Timeout"
 - **Status**: ✅ Pushed to main
-- **URL**: https://github.com/diotec-barros/aethel-lang
+- **URL**: https://github.com/diotec-barros/diotec360-lang
 
 ### Hugging Face
 - **Commit**: `bb8915e`
 - **Message**: "feat: Add Fortress v1.5 - Sanitizer and Z3 Timeout"
 - **Status**: ✅ Pushed to main
-- **Space**: https://huggingface.co/spaces/diotec/aethel-judge
+- **Space**: https://huggingface.co/spaces/diotec/diotec360-judge
 - **Build Status**: 🔄 Building (5-10 minutes)
 
 ---
@@ -150,8 +150,8 @@ Run `python test_fortress_production.py` after HF Space rebuild completes.
 2. `README.md` - Updated to v1.5.0 with new features
 
 ### Deployment Files
-1. `aethel-judge/aethel/core/sanitizer.py` - Copied for HF deployment
-2. `aethel-judge/aethel/core/judge.py` - Copied for HF deployment
+1. `diotec360-judge/diotec360/core/sanitizer.py` - Copied for HF deployment
+2. `diotec360-judge/diotec360/core/judge.py` - Copied for HF deployment
 
 ---
 
@@ -236,8 +236,8 @@ eval('malicious_code')
 - [V1.5 Roadmap](./V1_5_ROADMAP_SYMBOLIC_SENTINEL.md) - Future plans
 
 ### For Developers
-- [Sanitizer Code](./aethel/core/sanitizer.py) - Implementation details
-- [Judge Code](./aethel/core/judge.py) - Integration with other layers
+- [Sanitizer Code](./diotec360/core/sanitizer.py) - Implementation details
+- [Judge Code](./diotec360/core/judge.py) - Integration with other layers
 - [Unit Tests](./test_fortress_v1_5.py) - Test suite
 
 ---
@@ -283,7 +283,7 @@ eval('malicious_code')
 
 ## 🌟 The Fortress Stands Strong!
 
-Aethel v1.5.0 is now the most secure formal verification system in production:
+Diotec360 v1.5.0 is now the most secure formal verification system in production:
 
 ✅ **Prompt Injection**: BLOCKED  
 ✅ **System Commands**: BLOCKED  

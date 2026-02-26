@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Unit Tests for ParallelExecutor - Synchrony Protocol v1.8.0
 
 Tests the ParallelExecutor class methods:
@@ -8,7 +24,7 @@ Tests the ParallelExecutor class methods:
 - Thread safety
 - Execution tracing
 
-Author: Aethel Team
+Author: Diotec360 Team
 Version: 1.8.0
 Date: February 4, 2026
 """
@@ -16,10 +32,10 @@ Date: February 4, 2026
 import pytest
 import time
 import copy
-from aethel.core.parallel_executor import ParallelExecutor, ExecutionContext
-from aethel.core.synchrony import Transaction, EventType, TimeoutError
-from aethel.core.dependency_graph import DependencyGraph
-from aethel.core.dependency_analyzer import DependencyAnalyzer
+from diotec360.core.parallel_executor import ParallelExecutor, ExecutionContext
+from diotec360.core.synchrony import Transaction, EventType, TimeoutError
+from diotec360.core.dependency_graph import DependencyGraph
+from diotec360.core.dependency_analyzer import DependencyAnalyzer
 
 
 class TestParallelExecutorBasics:
@@ -62,7 +78,7 @@ class TestParallelExecutorBasics:
         """Test event recording is thread-safe"""
         executor = ParallelExecutor()
         
-        from aethel.core.synchrony import ExecutionEvent
+        from diotec360.core.synchrony import ExecutionEvent
         
         event1 = ExecutionEvent(
             timestamp=time.time(),

@@ -1,4 +1,20 @@
 """
+Copyright 2024 Dionísio Sebastião Barros / DIOTEC 360
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
+"""
 Payment Gateway Demo - PayPal + Multicaixa Express
 ==================================================
 
@@ -6,7 +22,7 @@ Demonstrates how DIOTEC 360 receives real money from customers.
 """
 
 from decimal import Decimal
-from aethel.core.payment_gateway import (
+from diotec360.core.payment_gateway import (
     PaymentGateway,
     PaymentMethod,
     Currency,
@@ -205,7 +221,7 @@ def demo_integration_example():
     
     code = '''
 # 1. Inicializar Payment Gateway
-from aethel.core.payment_gateway import initialize_payment_gateway, PaymentMethod, Currency
+from diotec360.core.payment_gateway import initialize_payment_gateway, PaymentMethod, Currency
 
 config = {
     "paypal": {
@@ -257,7 +273,7 @@ complete_result = gateway.complete_payment(result["transaction_id"])
 
 if complete_result["success"]:
     # Adicionar créditos à conta
-    from aethel.core.billing import get_billing_kernel
+    from diotec360.core.billing import get_billing_kernel
     
     billing = get_billing_kernel()
     billing.purchase_credits(account_id, package_name)

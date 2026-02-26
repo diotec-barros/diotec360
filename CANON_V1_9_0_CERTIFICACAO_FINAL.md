@@ -2,7 +2,7 @@
 
 **Data**: 8 de Fevereiro de 2026  
 **Status**: ✅ **COMPLETO E CERTIFICADO**  
-**Versão**: Aethel v1.9.0 "Autonomous Sentinel"
+**Versão**: Diotec360 v1.9.0 "Autonomous Sentinel"
 
 ---
 
@@ -24,13 +24,13 @@ O **Cânone de Precisão v1.9.0** foi aplicado com sucesso em todos os component
 ### 2. Exemplos .ae (aethel/examples/)
 - ✅ **defi_liquidation_conservation.ae**: Bloco `solve` adicionado
 
-### 3. Gramática (aethel_grammar.py)
+### 3. Gramática (DIOTEC360_grammar.py)
 - ✅ Bloco `solve` obrigatório na estrutura `intent`
 - ✅ Operador `IMPLIES` (`==>`) adicionado
 - ✅ Suporte a números decimais (`NUMBER: /-?[0-9]+(\.[0-9]+)?/`)
 - ✅ Regra de implicação: `(expr OPERATOR expr) ==> (expr OPERATOR expr)`
 
-### 4. Parser (aethel_parser.py)
+### 4. Parser (DIOTEC360_parser.py)
 - ✅ Método `_expr_to_string` atualizado para implicações
 - ✅ Método `_get_conditions` atualizado para implicações
 - ✅ Extração de `ai_instructions` (bloco `solve`)
@@ -117,7 +117,7 @@ O **Cânone de Precisão v1.9.0** foi aplicado com sucesso em todos os component
 
 ## 🔧 MUDANÇAS TÉCNICAS IMPLEMENTADAS
 
-### 1. Gramática (aethel_grammar.py)
+### 1. Gramática (DIOTEC360_grammar.py)
 
 **Antes**:
 ```python
@@ -135,7 +135,7 @@ IMPLIES: "==>"
 NUMBER: /-?[0-9]+(\.[0-9]+)?/
 ```
 
-### 2. Parser (aethel_parser.py)
+### 2. Parser (DIOTEC360_parser.py)
 
 **Adicionado**:
 ```python
@@ -207,8 +207,8 @@ intent check_liquidation(...) {
 ### Modificados
 1. `api/main.py` - 3 exemplos corrigidos
 2. `aethel/examples/defi_liquidation_conservation.ae` - Bloco solve adicionado
-3. `aethel_grammar.py` - Operador `==>` e números decimais
-4. `aethel_parser.py` - Suporte a implicações
+3. `DIOTEC360_grammar.py` - Operador `==>` e números decimais
+4. `DIOTEC360_parser.py` - Suporte a implicações
 5. `CROP_INSURANCE_EXAMPLE.md` - Documentação atualizada
 
 ---
@@ -246,7 +246,7 @@ Este documento certifica que:
 
 **ASSINATURA DIGITAL**:
 ```
-SHA-256: aethel_v1_9_0_canon_precision_seal
+SHA-256: DIOTEC360_v1_9_0_canon_precision_seal
 Timestamp: 2026-02-08T00:00:00Z
 Status: CERTIFIED ✅
 ```
@@ -267,5 +267,5 @@ Status: CERTIFIED ✅
 
 ---
 
-**Aethel v1.9.0 - O Compilador Implacável**  
+**Diotec360 v1.9.0 - O Compilador Implacável**  
 **Onde a Matemática Encontra a Segurança** 🌌✨

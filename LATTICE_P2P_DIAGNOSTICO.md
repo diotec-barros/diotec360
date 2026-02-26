@@ -31,9 +31,9 @@ Se o P2P estivesse funcionando, veríamos:
 O `.bat` define as variáveis de ambiente **ANTES** de iniciar o processo:
 
 ```bat
-set AETHEL_P2P_ENABLED=true
-set AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
-start "Aethel Node A" cmd /c "python -m uvicorn api.main:app ..."
+set DIOTEC360_P2P_ENABLED=true
+set DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
+start "Diotec360 Node A" cmd /c "python -m uvicorn api.main:app ..."
 ```
 
 **MAS** o `start` cria um novo processo CMD que **NÃO herda** as variáveis de ambiente do processo pai no Windows.
@@ -50,26 +50,26 @@ O Python pode ler variáveis de um arquivo `.env` usando `python-dotenv`.
 
 **`.env.nodeA`:**
 ```env
-AETHEL_P2P_ENABLED=true
-AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
-AETHEL_P2P_TOPIC=aethel/lattice/v1
-AETHEL_P2P_BOOTSTRAP=
-AETHEL_LATTICE_NODES=
-AETHEL_STATE_DIR=.aethel_state_nodeA
-AETHEL_VAULT_DIR=.aethel_vault_nodeA
-AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeA
+DIOTEC360_P2P_ENABLED=true
+DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
+DIOTEC360_P2P_TOPIC=aethel/lattice/v1
+DIOTEC360_P2P_BOOTSTRAP=
+DIOTEC360_LATTICE_NODES=
+DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeA
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault_nodeA
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_nodeA
 ```
 
 **`.env.nodeB`:**
 ```env
-AETHEL_P2P_ENABLED=true
-AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9001
-AETHEL_P2P_TOPIC=aethel/lattice/v1
-AETHEL_P2P_BOOTSTRAP=/ip4/127.0.0.1/tcp/9000/p2p/{PEER_ID_DO_NODE_A}
-AETHEL_LATTICE_NODES=http://127.0.0.1:8000
-AETHEL_STATE_DIR=.aethel_state_nodeB
-AETHEL_VAULT_DIR=.aethel_vault_nodeB
-AETHEL_SENTINEL_DIR=.aethel_sentinel_nodeB
+DIOTEC360_P2P_ENABLED=true
+DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9001
+DIOTEC360_P2P_TOPIC=aethel/lattice/v1
+DIOTEC360_P2P_BOOTSTRAP=/ip4/127.0.0.1/tcp/9000/p2p/{PEER_ID_DO_NODE_A}
+DIOTEC360_LATTICE_NODES=http://127.0.0.1:8000
+DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeB
+DIOTEC360_VAULT_DIR=.DIOTEC360_vault_nodeB
+DIOTEC360_SENTINEL_DIR=.DIOTEC360_sentinel_nodeB
 ```
 
 **Passo 2:** Modificar `api/main.py` para carregar `.env`
@@ -85,7 +85,7 @@ load_dotenv()
 **Passo 3:** Modificar `.bat` para usar `--env-file`
 
 ```bat
-start "Aethel Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --env-file .env.nodeA > logs\nodeA.log 2>&1"
+start "Diotec360 Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --env-file .env.nodeA > logs\nodeA.log 2>&1"
 ```
 
 ---
@@ -95,7 +95,7 @@ start "Aethel Node A" cmd /c "python -m uvicorn api.main:app --host 127.0.0.1 --
 Usar `set` dentro do mesmo comando:
 
 ```bat
-start "Aethel Node A" cmd /c "set AETHEL_P2P_ENABLED=true && set AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000 && python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
+start "Diotec360 Node A" cmd /c "set DIOTEC360_P2P_ENABLED=true && set DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000 && python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 > logs\nodeA.log 2>&1"
 ```
 
 **Problema:** Linha muito longa e difícil de manter.
@@ -113,13 +113,13 @@ import subprocess
 
 def start_node(port, p2p_port, bootstrap=None):
     env = os.environ.copy()
-    env['AETHEL_P2P_ENABLED'] = 'true'
-    env['AETHEL_P2P_LISTEN'] = f'/ip4/127.0.0.1/tcp/{p2p_port}'
-    env['AETHEL_P2P_TOPIC'] = 'aethel/lattice/v1'
-    env['AETHEL_P2P_BOOTSTRAP'] = bootstrap or ''
-    env['AETHEL_STATE_DIR'] = f'.aethel_state_node{port}'
-    env['AETHEL_VAULT_DIR'] = f'.aethel_vault_node{port}'
-    env['AETHEL_SENTINEL_DIR'] = f'.aethel_sentinel_node{port}'
+    env['DIOTEC360_P2P_ENABLED'] = 'true'
+    env['DIOTEC360_P2P_LISTEN'] = f'/ip4/127.0.0.1/tcp/{p2p_port}'
+    env['DIOTEC360_P2P_TOPIC'] = 'aethel/lattice/v1'
+    env['DIOTEC360_P2P_BOOTSTRAP'] = bootstrap or ''
+    env['DIOTEC360_STATE_DIR'] = f'.DIOTEC360_state_node{port}'
+    env['DIOTEC360_VAULT_DIR'] = f'.DIOTEC360_vault_node{port}'
+    env['DIOTEC360_SENTINEL_DIR'] = f'.DIOTEC360_sentinel_node{port}'
     
     subprocess.run([
         'python', '-m', 'uvicorn', 'api.main:app',
@@ -136,7 +136,7 @@ if __name__ == '__main__':
 
 Usar no `.bat`:
 ```bat
-start "Aethel Node A" python start_node.py 8000 9000
+start "Diotec360 Node A" python start_node.py 8000 9000
 ```
 
 ---
@@ -167,9 +167,9 @@ Para testar se o P2P está funcionando:
 
 ```cmd
 # Terminal 1 - Node A
-set AETHEL_P2P_ENABLED=true
-set AETHEL_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
-set AETHEL_STATE_DIR=.aethel_state_nodeA
+set DIOTEC360_P2P_ENABLED=true
+set DIOTEC360_P2P_LISTEN=/ip4/127.0.0.1/tcp/9000
+set DIOTEC360_STATE_DIR=.DIOTEC360_state_nodeA
 python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 

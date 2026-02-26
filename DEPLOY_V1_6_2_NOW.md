@@ -36,7 +36,7 @@ deploy_to_huggingface.bat
 ### Opção 2: Manual
 
 ```bash
-cd aethel-judge
+cd diotec360-judge
 git add .
 git commit -m "v1.6.2 - Ghost Protocol Expansion: Native privacy keyword"
 git push
@@ -72,8 +72,8 @@ git push
 ### Testes Automáticos
 ```bash
 # Após deploy, testar:
-curl https://diotec-aethel-judge.hf.space/health
-curl https://diotec-aethel-judge.hf.space/api/examples
+curl https://diotec-diotec360-judge.hf.space/health
+curl https://diotec-diotec360-judge.hf.space/api/examples
 ```
 
 ---
@@ -84,7 +84,7 @@ curl https://diotec-aethel-judge.hf.space/api/examples
 
 **Twitter/X**:
 ```
-🎭 Aethel v1.6.2 "Ghost Protocol Expansion" is LIVE!
+🎭 Diotec360 v1.6.2 "Ghost Protocol Expansion" is LIVE!
 
 ✨ First formally verified language with native `secret` keyword
 🔒 Privacy-preserving proofs
@@ -92,14 +92,14 @@ curl https://diotec-aethel-judge.hf.space/api/examples
 🏦 Banking compliance
 🗳️ Secret ballot voting
 
-Try it: https://diotec-aethel-judge.hf.space
+Try it: https://diotec-diotec360-judge.hf.space
 
 #Aethel #ZeroKnowledge #Privacy #FormalVerification
 ```
 
 **LinkedIn**:
 ```
-Excited to announce Aethel v1.6.2 - Ghost Protocol Expansion! 🎭
+Excited to announce Diotec360 v1.6.2 - Ghost Protocol Expansion! 🎭
 
 We've achieved something unprecedented: the first formally verified programming language with native privacy support.
 
@@ -112,7 +112,7 @@ Real-World Applications:
 
 This bridges the gap between transparency (needed for audits) and privacy (required by regulations).
 
-Try it live: https://diotec-aethel-judge.hf.space
+Try it live: https://diotec-diotec360-judge.hf.space
 
 #Blockchain #Privacy #ZeroKnowledge #FormalVerification #Innovation
 ```
@@ -146,7 +146,7 @@ Try it live: https://diotec-aethel-judge.hf.space
 
 2. **Testar Endpoints** ✅
    ```bash
-   curl https://diotec-aethel-judge.hf.space/health
+   curl https://diotec-diotec360-judge.hf.space/health
    ```
 
 3. **Post em Redes Sociais** ⏳
